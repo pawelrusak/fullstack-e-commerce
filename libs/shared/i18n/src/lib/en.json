@@ -1,1 +1,38 @@
-{}
+{
+  "GLOBAL": {
+    "LOCATION": {
+      "CITY": "Anytown",
+      "COUNTRY": "USA",
+      "STREET": "123 Main Street"
+    },
+    "CONTACT_ADDRESS": {
+      "TELEPHONE": "+1 (555) 123-4567"
+    }
+  },
+  "NAV_BAR": {
+    "BRAND": "e-shop",
+    "CART": "Cart",
+    "ACCOUNT": "User",
+    "DEFAULT_ACCOUNT": "Login",
+    "SOCIAL_MEDIA": {
+      "FACEBOOK": "Facebook",
+      "TWITTER": "Twitter",
+      "INSTAGRAM": "Instagram"
+    },
+    "FORM": {
+      "SEARCH_BAR": {
+        "LABEL": "Search",
+        "PLACEHOLDER": "Search Products..."
+      }
+    },
+    "MENU_BAR": {
+      "CATEGORIES_HAMBURGER": "All Categories",
+      "PRODUCTS_DROPDOWN": "Products",
+      "BLOG": "Blog",
+      "CONTACT": "Contact",
+      "LIMITED_SALE": "Limited Sale",
+      "BEST_SELLER": "BEST_SELLER",
+      "NEW_ARRIVAL": "New Arrival"
+    }
+  }
+}
