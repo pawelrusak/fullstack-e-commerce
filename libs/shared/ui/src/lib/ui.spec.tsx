@@ -1,16 +1,11 @@
-import { render, screen } from '@testing-library/react';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { render, screen } from '@e-shop/test-utils';
 
 import Ui from './ui';
-import { ThemeProvider } from 'styled-components';
-import { theme } from './theme';
 
 describe('Ui', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Ui />, {
-      wrapper: ({ children }) => (
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
-      ),
-    });
+    const { baseElement } = render(<Ui />);
     expect(baseElement).toBeTruthy();
 
     expect(screen.getByText(/welcome/i)).toBeInTheDocument();
