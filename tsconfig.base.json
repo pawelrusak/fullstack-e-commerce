@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@e-shop/i18n": ["libs/shared/i18n/src/index.ts"]
+      "@e-shop/i18n": ["libs/shared/i18n/src/index.ts"],
+      "@e-shop/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
