@@ -15,6 +15,8 @@ const GlobalStyle = createGlobalStyle`
   html {
     // css happy rems
     font-size: 62.5%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
   }
 
   body {
