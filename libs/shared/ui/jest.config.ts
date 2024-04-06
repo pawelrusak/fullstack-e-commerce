@@ -1,3 +1,5 @@
+import { Config } from 'jest';
+
 /* eslint-disable */
 export default {
   displayName: 'ui',
@@ -8,4 +10,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../../coverage/libs/shared/ui',
-};
+  setupFilesAfterEnv: ['@testing-library/jest-dom'],
+} satisfies Config;
