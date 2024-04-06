@@ -1,9 +1,9 @@
 import { Preview } from '@storybook/react';
 
-import { GlobalStyleDecorator } from './decorators';
+import { ThemeDecorator, GlobalStyleDecorator } from './decorators';
 
 const preview: Preview = {
-  decorators: [GlobalStyleDecorator],
+  decorators: [ThemeDecorator, GlobalStyleDecorator],
 };
 
 export default preview;
