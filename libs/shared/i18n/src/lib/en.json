@@ -1,5 +1,6 @@
 {
   "GLOBAL": {
+    "BRAND_NAME": "e-shop",
     "LOCATION": {
       "CITY": "Anytown",
       "COUNTRY": "USA",
@@ -10,7 +11,6 @@
     }
   },
   "NAV_BAR": {
-    "BRAND": "e-shop",
     "CART": "Cart",
     "ACCOUNT": "User",
     "DEFAULT_ACCOUNT": "Login",
