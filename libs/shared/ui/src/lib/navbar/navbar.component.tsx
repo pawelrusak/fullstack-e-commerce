@@ -1,14 +1,14 @@
 import * as Styled from './navbar.styled';
-import { FacebookIcon, TwitterIcon, InstagramIcon } from '../icons';
-import { EN } from '@e-shop/i18n';
-import { VisuallyHidden } from '@reach/visually-hidden';
-/* eslint-disable-next-line */
-export interface NavbarProps {}
+// import { FacebookIcon, TwitterIcon, InstagramIcon } from '../icons';
+// import { VisuallyHidden } from '@reach/visually-hidden';
+import ContactBar from './partials/contact-bar';
+import ProductNavBar from './partials/product-nav-bar';
 
-export function Navbar(props: NavbarProps) {
+export function Navbar() {
   return (
     <Styled.Header>
-      <Styled.ContactBar>
+      <ContactBar />
+      {/* <Styled.ContactBar>
         <Styled.BarContainer>
           <Styled.ContactList>
             <Styled.ContactItem>
@@ -55,7 +55,7 @@ export function Navbar(props: NavbarProps) {
             </Styled.ContactItem>
           </Styled.ContactList>
         </Styled.BarContainer>
-      </Styled.ContactBar>
+      </Styled.ContactBar> */}
 
       {/* User Bar  */}
 
@@ -65,7 +65,8 @@ export function Navbar(props: NavbarProps) {
 
       {/* Product Bar */}
 
-      <Styled.ProductNavBar>
+      <ProductNavBar />
+      {/* <Styled.ProductNavBar>
         <Styled.BarContainer>
           <Styled.ProductNavList>
             <Styled.ProductNavItem>
@@ -113,7 +114,7 @@ export function Navbar(props: NavbarProps) {
             </Styled.ProductNavItem>
           </Styled.ProductNavList>
         </Styled.BarContainer>
-      </Styled.ProductNavBar>
+      </Styled.ProductNavBar> */}
     </Styled.Header>
   );
 }

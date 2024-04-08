@@ -5,12 +5,7 @@ import Navbar from './navbar.component';
 import { EN } from '@e-shop/i18n';
 
 describe('Navbar', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<Navbar />);
-    expect(baseElement).toBeTruthy();
-  });
-
-  test('renders without crashing', () => {
+  test('should render successfully', () => {
     render(<Navbar />);
     expect(screen.getByRole('banner')).toBeInTheDocument();
   });
