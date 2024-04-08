@@ -1,7 +1,10 @@
 import 'styled-components';
+import { Theme as SystemTheme } from 'styled-system';
+
+type AppSystemTheme = Required<Pick<SystemTheme, 'space'>>;
 
 declare module 'styled-components' {
-  export interface DefaultTheme {
+  export interface DefaultTheme extends AppSystemTheme {
     color: {
       primary: string;
       secondary: string;

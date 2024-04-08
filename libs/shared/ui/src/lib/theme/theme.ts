@@ -16,6 +16,7 @@ const theme: DefaultTheme = {
     regular: 400,
     semiBold: 600,
   },
+  space: [0, 0.2, 0.4, 0.8, 1.6, 3.2],
 };
 
 export default theme;
