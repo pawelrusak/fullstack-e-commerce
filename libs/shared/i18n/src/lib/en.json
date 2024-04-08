@@ -6,8 +6,8 @@
       "COUNTRY": "USA",
       "STREET": "123 Main Street"
     },
-    "CONTACT_ADDRESS": {
-      "TELEPHONE": "+1 (555) 123-4567"
+    "CONTACT": {
+      "PHONE": "+1 (555) 123-4567"
     }
   },
   "NAV_BAR": {
@@ -31,7 +31,7 @@
       "BLOG": "Blog",
       "CONTACT": "Contact",
       "LIMITED_SALE": "Limited Sale",
-      "BEST_SELLER": "BEST_SELLER",
+      "BEST_SELLER": "Best Seller",
       "NEW_ARRIVAL": "New Arrival"
     }
   }
