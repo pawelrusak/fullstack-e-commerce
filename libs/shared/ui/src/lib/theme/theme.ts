@@ -1,3 +1,5 @@
+'use client';
+
 import { DefaultTheme } from 'styled-components';
 
 const theme: DefaultTheme = {
@@ -15,6 +17,7 @@ const theme: DefaultTheme = {
   fontWeight: {
     regular: 400,
     semiBold: 600,
+    bold: 700,
   },
   space: [0, 0.2, 0.4, 0.8, 1.6, 3.2],
 };
