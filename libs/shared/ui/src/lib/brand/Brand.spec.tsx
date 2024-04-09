@@ -11,9 +11,7 @@ describe('Brand', () => {
   });
 
   it('should contain brand name', () => {
-    const { debug } = render(<Brand />);
-
-    debug();
+    render(<Brand />);
 
     expect(screen.getByText(EN.GLOBAL.BRAND_NAME)).toBeInTheDocument();
   });
