@@ -13,7 +13,7 @@
   "NAV_BAR": {
     "CART": "Cart",
     "ACCOUNT": "User",
-    "DEFAULT_ACCOUNT": "Login",
+    "DEFAULT_LOGOUT": "Login",
     "SOCIAL_MEDIA": {
       "FACEBOOK": "Facebook",
       "TWITTER": "Twitter",

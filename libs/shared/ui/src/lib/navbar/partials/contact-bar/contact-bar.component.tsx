@@ -46,6 +46,7 @@ export function ContactBar() {
               href="https://www.instagram.com/"
               target="_blank"
               rel="noopener"
+              pr={0}
             >
               <InstagramIcon aria-hidden />
               <VisuallyHidden>Instagram</VisuallyHidden>

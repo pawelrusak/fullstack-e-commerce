@@ -74,6 +74,7 @@ export const ContactLink = styled.a`
   }
 `;
 
-export const ContactSocialLink = styled(ContactLink)`
+export const ContactSocialLink = styled(ContactLink)<PaddingProps>`
   padding: 0.8rem 1.2rem;
+  ${padding}
 `;
