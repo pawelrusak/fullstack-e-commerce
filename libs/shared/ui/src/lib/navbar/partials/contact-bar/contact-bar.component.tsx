@@ -6,7 +6,7 @@ import { VisuallyHidden } from '@reach/visually-hidden';
 
 export function ContactBar() {
   return (
-    <Styled.ContactBar>
+    <Styled.ContactBar data-testid="navbar-contact-bar">
       <SharedStyled.BarContainer>
         <Styled.ContactList>
           <Styled.ContactItem>

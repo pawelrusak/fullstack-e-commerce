@@ -4,10 +4,13 @@ import { Brand } from '../../../brand';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import { EN } from '@e-shop/i18n';
 import { CardIcon, UserIcon } from '../../../icons';
+import type { UserBarWrapperProps } from './user-bar.styled';
 
-export function UserBar() {
+export type UserBarProps = UserBarWrapperProps;
+
+export function UserBar({ hasBorder }: UserBarProps) {
   return (
-    <Styled.UserBarWrapper>
+    <Styled.UserBarWrapper data-testid="navbar-user-bar" hasBorder={hasBorder}>
       <SharedStyled.BarContainer>
         <Styled.BrandHeading>
           <Styled.BrandLink href="/">

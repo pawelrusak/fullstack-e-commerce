@@ -11,3 +11,13 @@ type Story = StoryObj<typeof Navbar>;
 export const Complete: Story = {
   args: {},
 };
+
+export const WithoutProductBar: Story = {
+  args: {},
+  render: (args) => (
+    <Navbar {...args}>
+      <Navbar.ContactBar />
+      <Navbar.UserBar hasBorder />
+    </Navbar>
+  ),
+};

@@ -10,6 +10,35 @@ describe('Navbar', () => {
     expect(screen.getByRole('banner')).toBeInTheDocument();
   });
 
+  test('should contains all the partials', () => {
+    render(<Navbar />);
+
+    const userBar = screen.getByTestId('navbar-user-bar');
+    const contactBar = screen.getByTestId('navbar-contact-bar');
+    const productNavBar = screen.queryByTestId('navbar-product-nav-bar');
+
+    expect(userBar).toBeInTheDocument();
+    expect(contactBar).toBeInTheDocument();
+    expect(productNavBar).toBeInTheDocument();
+  });
+
+  test('should contains only specified partials', () => {
+    render(
+      <Navbar>
+        <Navbar.ContactBar />
+        <Navbar.UserBar />
+      </Navbar>
+    );
+
+    const userBar = screen.getByTestId('navbar-user-bar');
+    const contactBar = screen.getByTestId('navbar-contact-bar');
+    const productNavBar = screen.queryByTestId('navbar-product-nav-bar');
+
+    expect(userBar).toBeInTheDocument();
+    expect(contactBar).toBeInTheDocument();
+    expect(productNavBar).not.toBeInTheDocument();
+  });
+
   test('should contains the correct links', () => {
     render(<Navbar />);
 

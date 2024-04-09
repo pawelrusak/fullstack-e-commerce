@@ -3,8 +3,19 @@
 import styled, { css } from 'styled-components';
 import * as helper from 'polished';
 
-export const UserBarWrapper = styled.div`
+export type UserBarWrapperProps = {
+  hasBorder?: boolean;
+};
+
+export const UserBarWrapper = styled.div<UserBarWrapperProps>`
   padding: 2.4rem 0;
+
+  ${({ hasBorder }: UserBarWrapperProps) =>
+    hasBorder &&
+    css`
+      border-bottom: 1px solid
+        ${({ theme }) => helper.transparentize(0.75, theme.color.text)};
+    `}
 `;
 
 export const BrandHeading = styled.h1`

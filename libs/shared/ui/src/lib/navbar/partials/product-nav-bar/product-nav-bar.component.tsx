@@ -5,7 +5,7 @@ import Hamburger from '../hamburger';
 
 export function ProductNavBar() {
   return (
-    <Styled.ProductNavBar>
+    <Styled.ProductNavBar data-testid="navbar-product-nav-bar">
       <SharedStyled.BarContainer>
         <Styled.ProductNavList>
           <Styled.ProductNavItem>
