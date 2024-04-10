@@ -1,4 +1,5 @@
 import { StyledComponentsRegistry } from './registry';
+import { theme, ThemeProvider, GlobalStyle, Navbar } from '@e-shop/ui';
 
 export const metadata = {
   title: 'Welcome to demo2',
@@ -13,7 +14,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            <Navbar />
+            {children}
+          </ThemeProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
