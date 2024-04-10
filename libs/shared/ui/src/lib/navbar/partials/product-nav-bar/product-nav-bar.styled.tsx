@@ -6,7 +6,12 @@ import { padding } from 'styled-system';
 import type { PaddingProps } from 'styled-system';
 
 export const ProductNavBar = styled.nav`
-  background-color: ${({ theme }) => theme.color.primary};
+  display: none;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+    display: block;
+    background-color: ${({ theme }) => theme.color.primary};
+  }
 `;
 
 export const ProductNavLink = styled.a<PaddingProps>`

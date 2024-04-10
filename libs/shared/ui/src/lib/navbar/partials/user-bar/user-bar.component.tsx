@@ -1,12 +1,12 @@
 import * as Styled from './user-bar.styled';
-import * as SharedStyled from '../../navbar.styled';
+import { EN } from '@e-shop/i18n';
 import { Brand } from '../../../brand';
 import { VisuallyHidden } from '@reach/visually-hidden';
-import { EN } from '@e-shop/i18n';
+import * as SharedStyled from '../../navbar.styled';
 import { CardIcon, UserIcon } from '../../../icons';
-import type { UserBarWrapperProps } from './user-bar.styled';
+import type { HasBorderProps } from './user-bar.styled';
 
-export type UserBarProps = UserBarWrapperProps;
+export type UserBarProps = HasBorderProps;
 
 export function UserBar({ hasBorder }: UserBarProps) {
   return (
@@ -19,7 +19,7 @@ export function UserBar({ hasBorder }: UserBarProps) {
         </Styled.BrandHeading>
 
         <Styled.UserSection>
-          <search>
+          <Styled.Search as="search">
             <form action="">
               <p>
                 <VisuallyHidden as="label" htmlFor="navbar-search">
@@ -32,26 +32,26 @@ export function UserBar({ hasBorder }: UserBarProps) {
                 />
               </p>
             </form>
-          </search>
+          </Styled.Search>
           <Styled.UserList>
             <Styled.UserItem>
-              <Styled.UserCartButton>
+              <Styled.UserCartButton data-testid="cart-button">
                 <Styled.UserItemIcon as={CardIcon} />
-                <span>
+                <Styled.UserItemTextWrapper>
                   <Styled.UserItemText>{EN.NAV_BAR.CART}</Styled.UserItemText>
                   <Styled.UserItemStrong>$150,00</Styled.UserItemStrong>
-                </span>
+                </Styled.UserItemTextWrapper>
               </Styled.UserCartButton>
             </Styled.UserItem>
             <Styled.UserItem>
               <Styled.UserLoginLink href="/">
                 <Styled.UserItemIcon as={UserIcon} />
-                <span>
+                <Styled.UserItemTextWrapper>
                   <Styled.UserItemText>
                     {EN.NAV_BAR.ACCOUNT}
                   </Styled.UserItemText>
                   <Styled.UserItemStrong>Account</Styled.UserItemStrong>
-                </span>
+                </Styled.UserItemTextWrapper>
               </Styled.UserLoginLink>
             </Styled.UserItem>
           </Styled.UserList>

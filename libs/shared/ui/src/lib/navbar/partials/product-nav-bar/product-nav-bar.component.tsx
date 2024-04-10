@@ -9,7 +9,11 @@ export function ProductNavBar() {
       <SharedStyled.BarContainer>
         <Styled.ProductNavList>
           <Styled.ProductNavItem>
-            <Styled.HamburgerButton as={'button'} pl={0}>
+            <Styled.HamburgerButton
+              as={'button'}
+              pl={0}
+              data-testid="products-hamburger"
+            >
               <Hamburger />
               {EN.NAV_BAR.MENU_BAR.CATEGORIES_HAMBURGER}
             </Styled.HamburgerButton>

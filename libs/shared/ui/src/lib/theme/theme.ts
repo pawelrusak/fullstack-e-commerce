@@ -20,6 +20,13 @@ const theme: DefaultTheme = {
     bold: 700,
   },
   space: [0, 0.2, 0.4, 0.8, 1.6, 3.2],
+  screens: {
+    sm: '640px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
+    xxl: '1536px',
+  },
 };
 
 export default theme;

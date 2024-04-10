@@ -21,5 +21,12 @@ declare module 'styled-components' {
       semiBold: number;
       bold: number;
     };
+    screens: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      xxl: string;
+    };
   }
 }

@@ -17,8 +17,13 @@ const borderColor = ({ theme }: { theme: DefaultTheme }) =>
   helper.transparentize(0.75, theme.color.text);
 
 export const ContactBar = styled.div`
-  border-bottom: 1px solid ${borderColor};
-  padding: 1.6rem 0 1.5rem;
+  display: none;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+    display: block;
+    border-bottom: 1px solid ${borderColor};
+    padding: 1.6rem 0 1.5rem;
+  }
 `;
 
 export const ContactList = styled.ul`

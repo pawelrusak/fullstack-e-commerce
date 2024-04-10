@@ -3,19 +3,24 @@
 import styled, { css } from 'styled-components';
 import * as helper from 'polished';
 
-export type UserBarWrapperProps = {
+export type HasBorderProps = {
   hasBorder?: boolean;
 };
 
-export const UserBarWrapper = styled.div<UserBarWrapperProps>`
-  padding: 2.4rem 0;
+const borderBottomCSS = css<HasBorderProps>`
+  border-bottom: 1px solid
+    ${({ theme }) => helper.transparentize(0.75, theme.color.text)};
+`;
 
-  ${({ hasBorder }: UserBarWrapperProps) =>
-    hasBorder &&
-    css`
-      border-bottom: 1px solid
-        ${({ theme }) => helper.transparentize(0.75, theme.color.text)};
-    `}
+export const UserBarWrapper = styled.div<HasBorderProps>`
+  padding: 1.5rem 0;
+  ${borderBottomCSS}
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+    padding: 2.4rem 0;
+    border-bottom: none;
+    ${({ hasBorder }) => hasBorder && borderBottomCSS}
+  }
 `;
 
 export const BrandHeading = styled.h1`
@@ -29,7 +34,13 @@ export const UserSection = styled.section`
   display: flex;
 `;
 
-export const Search = styled.div``;
+export const Search = styled.div`
+  display: none;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+    display: block;
+  }
+`;
 
 export const SearchInput = styled.input`
   all: unset;
@@ -104,5 +115,16 @@ export const UserItemStrong = styled.strong`
 
 export const UserItemIcon = styled.svg`
   display: inline-block;
-  margin-right: 2.4rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+    margin-right: 2.4rem;
+  }
+`;
+
+export const UserItemTextWrapper = styled.span`
+  display: none;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+    display: initial;
+  }
 `;
