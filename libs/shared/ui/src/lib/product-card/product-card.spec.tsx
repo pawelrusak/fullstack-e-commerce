@@ -10,15 +10,13 @@ describe('ProductCard', () => {
   });
 
   it('should contains the correct text in action buttons', () => {
-    const { debug } = render(
+    render(
       <ProductCard>
         <ProductCard.AddToCartButton />
         <ProductCard.AddToWishlistButton />
         <ProductCard.ShareButton />
       </ProductCard>
     );
-
-    debug();
 
     const addToCartButton = screen.getByRole('button', {
       name: /add to cart/i,
