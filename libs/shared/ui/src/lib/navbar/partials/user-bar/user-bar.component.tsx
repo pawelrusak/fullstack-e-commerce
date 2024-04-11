@@ -3,7 +3,7 @@ import { EN } from '@e-shop/i18n';
 import { Brand } from '../../../brand';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import * as SharedStyled from '../../navbar.styled';
-import { CardIcon, UserIcon } from '../../../icons';
+import { CardIconWithDot, UserIcon } from '../../../icons';
 import type { HasBorderProps } from './user-bar.styled';
 
 export type UserBarProps = HasBorderProps;
@@ -36,7 +36,7 @@ export function UserBar({ hasBorder }: UserBarProps) {
           <Styled.UserList>
             <Styled.UserItem>
               <Styled.UserCartButton data-testid="cart-button">
-                <Styled.UserItemIcon as={CardIcon} />
+                <Styled.UserItemIcon as={CardIconWithDot} />
                 <Styled.UserItemTextWrapper>
                   <Styled.UserItemText>{EN.NAV_BAR.CART}</Styled.UserItemText>
                   <Styled.UserItemStrong>$150,00</Styled.UserItemStrong>

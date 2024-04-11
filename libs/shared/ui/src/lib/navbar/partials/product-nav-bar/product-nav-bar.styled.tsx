@@ -27,7 +27,8 @@ export const ProductNavLink = styled.a<PaddingProps>`
 
   :hover,
   :focus {
-    color: ${({ theme }) => helper.transparentize(0.3, theme.color.background)};
+    color: ${({ theme }) =>
+      helper.transparentize(0.25, theme.color.background)};
   }
 `;
 
