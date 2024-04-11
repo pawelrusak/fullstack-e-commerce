@@ -34,5 +34,10 @@
       "BEST_SELLER": "Best Seller",
       "NEW_ARRIVAL": "New Arrival"
     }
+  },
+  "PRODUCT_CARD": {
+    "ADD_TO_CART": "Add to Cart",
+    "WISHLIST": "Add to wishlist",
+    "SHARE": "Share"
   }
 }
