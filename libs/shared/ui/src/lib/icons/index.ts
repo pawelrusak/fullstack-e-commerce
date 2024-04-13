@@ -1,8 +1,10 @@
 export { default as CardIconWithDot } from './card-icon-with-dot.svg';
 export { default as InstagramIcon } from './instagram-icon.svg';
+export { default as EyeSlashIcon } from './eye-slash-icon.svg';
 export { default as LocationIcon } from './location-icon.svg';
 export { default as FacebookIcon } from './facebook-icon.svg';
 export { default as TwitterIcon } from './twitter-icon.svg';
+export { default as CheckIcon } from './check-icon.svg';
 export { default as PhoneIcon } from './phone-icon.svg';
 export { default as ShareIcon } from './share-icon.svg';
 export { default as HeartIcon } from './heart-icon.svg';
