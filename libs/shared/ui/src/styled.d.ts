@@ -11,6 +11,7 @@ declare module 'styled-components' {
       text: string;
       background: string;
       border: string;
+      error: string;
     };
     fontFamily: {
       poppins: string;

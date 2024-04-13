@@ -9,6 +9,7 @@ const theme: DefaultTheme = {
     text: '#303030',
     background: '#FFFFFF',
     border: '#F4F4F4',
+    error: '#dc143c',
   },
   fontFamily: {
     poppins: ['Poppins', 'sans-serif'].join(', '),
