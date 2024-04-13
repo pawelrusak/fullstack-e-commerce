@@ -37,4 +37,6 @@ describe('Field', () => {
     expect(queryIconLeft()).toBeInTheDocument();
     expect(queryIconRight()).toBeInTheDocument();
   });
+
+  // TODO write tests for the valid and contentId props of Field component
 });

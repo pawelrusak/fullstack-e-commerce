@@ -43,6 +43,7 @@ export const Container = styled.div<StyledFieldProps>`
 
       ${Input} {
         border-color: ${({ theme }) => theme.color.error};
+        color: ${({ theme }) => theme.color.error};
 
         ::placeholder {
           color: ${({ theme }) => theme.color.error};
@@ -134,10 +135,21 @@ export const ControlIcon = styled.span<StyledControlIconProps>`
     `}
 `;
 
-export const Help = styled.small`
+const helpCss = css`
   display: inline-block;
 
   margin-top: 0.8rem;
   font-size: 1.6rem;
   line-height: 2.4rem;
+`;
+
+export const Help = styled.small`
+  ${helpCss}
+`;
+
+export const Error = styled.strong<MarginProps>`
+  ${helpCss}
+  color: ${({ theme }) => theme.color.error};
+
+  ${margin}
 `;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Field } from './field.component';
 import styled from 'styled-components';
 import { CheckIcon, EyeSlashIcon } from '../icons';
-import type { FieldControlInputProps } from './field.component';
+import type { FieldControlInputProps, FieldProps } from './field.component';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const Container = styled.div`
@@ -22,6 +22,20 @@ export default {
 } satisfies Meta<typeof Field>;
 
 type Story<TField = typeof Field> = StoryObj<TField>;
+
+export const Simple: Story<FieldControlInputProps> = {
+  args: {
+    type: 'text',
+    value: 'ameliawatson',
+    placeholder: 'ameliawatson',
+  },
+  render: (args: FieldControlInputProps) => (
+    <Field>
+      <Field.Label>Username</Field.Label>
+      <Field.ControlInput type="text" {...args} />
+    </Field>
+  ),
+};
 
 export const Complete: Story<FieldControlInputProps> = {
   args: {
@@ -75,4 +89,18 @@ export const Password: Story<FieldControlInputProps> = {
     value: 'secret password',
   },
   render: (args: FieldControlInputProps) => <PasswordTemplate {...args} />,
+};
+
+export const InValid: Story<FieldProps> = {
+  args: {
+    valid: false,
+    controlId: 'username',
+  },
+  render: (args: FieldProps) => (
+    <Field {...args}>
+      <Field.Label>Username</Field.Label>
+      <Field.ControlInput type="text" value="Wrong value" />
+      <Field.Error>Some error message</Field.Error>
+    </Field>
+  ),
 };
