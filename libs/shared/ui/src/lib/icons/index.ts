@@ -1,3 +1,4 @@
+export { default as ArrowLongRightIcon } from './arrow-long-right.svg';
 export { default as CardIconWithDot } from './card-icon-with-dot.svg';
 export { default as InstagramIcon } from './instagram-icon.svg';
 export { default as EyeSlashIcon } from './eye-slash-icon.svg';
