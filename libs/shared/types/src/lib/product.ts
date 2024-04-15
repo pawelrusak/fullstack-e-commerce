@@ -18,4 +18,5 @@ export type Product = Id &
     images: string[];
     size: Size;
     subCategory: SubCategory;
+    isFeatured: boolean;
   };
