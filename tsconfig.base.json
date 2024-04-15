@@ -17,6 +17,7 @@
     "paths": {
       "@e-shop/i18n": ["libs/shared/i18n/src/index.ts"],
       "@e-shop/test-utils": ["libs/shared/test-utils/src/index.ts"],
+      "@e-shop/types": ["libs/shared/types/src/index.ts"],
       "@e-shop/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
