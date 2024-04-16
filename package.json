@@ -25,6 +25,7 @@
     "@babel/preset-react": "^7.14.5",
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
+    "@faker-js/faker": "^8.4.1",
     "@nx/cypress": "18.2.2",
     "@nx/eslint": "18.2.2",
     "@nx/eslint-plugin": "18.2.2",
