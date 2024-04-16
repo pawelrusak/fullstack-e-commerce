@@ -39,5 +39,9 @@
     "ADD_TO_CART": "Add to Cart",
     "WISHLIST": "Add to wishlist",
     "SHARE": "Share"
+  },
+  "BREADCRUMB": {
+    "HOME": "Home",
+    "NAV_LABEL": "Breadcrumb"
   }
 }
