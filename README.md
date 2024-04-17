@@ -13,7 +13,7 @@
 </p>
 
 > [!IMPORTANT]
-> The project is at an early stage of development so it currently only contains a lib with UI components.
+> The project is at an early stage of development so it currently only contains a UI components library.
 > You can view the UI components using Storybook, to do this go to the [Storybook](#storybook) section.
 
 ## Table of Contents
@@ -44,6 +44,7 @@ In addition, the project uses technologies like (or will be):
 - [React Hook Form](https://react-hook-form.com/) _(planned for future use)_
 - [Styled Components](https://styled-components.com/)
 - [Storybook](https://storybook.js.org/)
+- [Base UI](https://mui.com/base-ui/) or [React Aria](https://react-spectrum.adobe.com/react-aria/) _(planned for future use)_
 - [Jest](https://jestjs.io/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Cypress](https://www.cypress.io/)
@@ -52,7 +53,7 @@ In addition, the project uses technologies like (or will be):
 
 ### Storybook
 
-To browse the UI component library in the project's root directory, use the command
+To browse the UI component library in the project's root directory, use the command below:
 
 ```bash
 npx nx storybook ui
