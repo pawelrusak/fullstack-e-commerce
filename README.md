@@ -13,7 +13,7 @@
 </p>
 
 > [!IMPORTANT]
-> The project is at an early stage of development rally so it currently only contains a lib with UI components.
+> The project is at an early stage of development so it currently only contains a lib with UI components.
 > You can view the UI components using Storybook, to do this go to the [Storybook](#storybook) section.
 
 ## Table of Contents
