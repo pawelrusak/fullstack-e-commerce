@@ -41,6 +41,16 @@ In addition, the project uses technologies like (or will be):
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Cypress](https://www.cypress.io/)
 
+## Getting Started
+
+### Storybook
+
+To browse the UI component library in the project's root directory, use the command
+
+```bash
+npx nx storybook ui
+```
+
 ## License
 
 Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
