@@ -1,9 +1,9 @@
-<h1 align="center">e-shop. - The e-commerce platform built using MENN stack</h1>
+<h1 align="center">e-shop. - The e-commerce platform</h1>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./docs/assets/logo-dark.svg" width="286" height="74">
-    <img alt="e-shop" src="./docs/assets/logo-light.svg" width="286" height="74">
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/assets/logo-light.svg" width="286" height="74">
+    <img alt="e-shop" src="./docs/assets/logo-dark.svg" width="286" height="74">
   </picture>
   <br />
   <em>E-shop is a e-commerce platform to sell electronics goods online
