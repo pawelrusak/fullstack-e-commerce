@@ -18,11 +18,21 @@
 
 ## Table of Contents
 
-- [About The Project](#about-the-project)
-  - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Storybook](#storybook)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
 - [License](#license)
+
+## Getting Started
+
+### Storybook
+
+To browse the UI component library in the project's root directory, use the command below:
+
+```bash
+npx nx storybook ui
+```
 
 ## About The Project
 
@@ -46,19 +56,10 @@ In addition, the project uses technologies like (or will be):
 - [Styled Components](https://styled-components.com/)
 - [Storybook](https://storybook.js.org/)
 - [Base UI](https://mui.com/base-ui/) or [React Aria](https://react-spectrum.adobe.com/react-aria/) _(planned for future use)_
+- [Stripe](https://stripe.com/) or [Paypal](https://www.paypal.com/) _(planned for future use)_
 - [Jest](https://jestjs.io/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Cypress](https://www.cypress.io/)
-
-## Getting Started
-
-### Storybook
-
-To browse the UI component library in the project's root directory, use the command below:
-
-```bash
-npx nx storybook ui
-```
 
 ## License
 
