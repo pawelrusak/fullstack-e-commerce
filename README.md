@@ -74,6 +74,9 @@ This project is a full-stack e-commerce platform designed to sell electronic goo
 
 ### Built With
 
+> [!TIP]
+> Next.js includes its own server implementation that allows interaction with databases and more. However, I have chosen to use Express alongside Next.js because, in my opinion, Express is more scalable and powerful.
+
 This project is developed using the <abbr title="MongoDB, Express.js, Next.js, and Node.js JavaScript software stack">MENN</abbr> stack. A common variant, the <abbr title="MongoDB, Express.js, React.js, and Node.js JavaScript software stack">MERN</abbr> stack, replaces Next.js with vanilla React to enhance SEO optimization and accelerate project development. Key technologies employed in this project include:
 
 - [Next.js](https://nextjs.org/) (a [React.js](https://reactjs.org/) framework )
