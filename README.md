@@ -19,16 +19,50 @@
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-  - [Storybook](#storybook)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+    - [Development server](#development-server)
+    - [Storybook](#storybook)
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [License](#license)
 
 ## Getting Started
 
-### Storybook
+### Prerequisites
 
-To browse the UI component library in the project's root directory, use the command below:
+Before starting work on the project, ensure the following requirements are installed on your computer:
+
+- [Node.js](https://nodejs.org/): Version 18 or higher
+- [NPM](https://www.npmjs.com/): Version 18 or higher
+
+You will also need to install [Git](https://github.com/git-guides/install-git) to clone the repository.
+
+### Installation
+
+First, clone the repository to your local machine using the command:
+
+```bash
+git clone https://github.com/pawelrusak/fullstack-e-commerce.git
+```
+
+Then, install the project dependencies by running the following command in the project's root directory:
+
+```bash
+npm ci
+```
+
+#### Development
+
+To start the development server, run the following command in the project's root directory:
+
+```bash
+npm start
+```
+
+#### Storybook
+
+To browse the UI component library, run the following command in the project's root directory:
 
 ```bash
 npx nx storybook ui
