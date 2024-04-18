@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky",
-    "commit": "cz"
+    "commit": "cz",
+    "start": "npx nx run-many -t dev -p frontend"
   },
   "private": false,
   "dependencies": {
