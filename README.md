@@ -18,14 +18,44 @@
 
 ## Table of Contents
 
+- [About The Project](#about-the-project)
+  - [Tech stack](#tech-stack)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
     - [Development server](#development-server)
     - [Storybook](#storybook)
-- [About The Project](#about-the-project)
-  - [Built With](#built-with)
 - [License](#license)
+
+## About The Project
+
+This project is a full-stack e-commerce platform designed to sell electronic goods online. It follows the <abbr title="Minimum Viable Product">MVP</abbr> development strategy, which means that initially, only the most relevant features are implemented to make the platform usable. Additional features will be added gradually in the future. The design is based on a paid [Figma project](https://www.creativefabrica.com/pl/product/e-shop-e-commerce-website-design-ui/) and adheres to a Pixel Perfect approach and incorporates <abbr title="Responsive Web Design">RWD</abbr> to ensure optimal work across all devices. As mentioned earlier, the use of an MVP approach is the primary reason why some elements from the Figma project are not currently included in the project. These elements will be implemented in future updates.
+
+### Tech stack
+
+> [!NOTE]
+> Next.js includes its own server implementation that allows interaction with databases and more. However, I have chosen to use Express alongside Next.js because, in my opinion, Express is more scalable and powerful.
+
+This project is developed using the <abbr title="MongoDB, Express.js, Next.js, and Node.js JavaScript software stack">MENN</abbr> stack. A common variant, the <abbr title="MongoDB, Express.js, React.js, and Node.js JavaScript software stack">MERN</abbr> stack, replaces Next.js with vanilla React to enhance SEO optimization and accelerate project development. Key technologies employed in this project include:
+
+- [Next.js](https://nextjs.org/) (a [React.js](https://reactjs.org/) framework)
+- [TypeScript](https://www.typescriptlang.org/),
+- [Express](https://expressjs.com/) _(planned for future use)_
+- [Mongoose](https://mongoosejs.com/) (a ODM for [MongoDB](https://www.mongodb.com/)) _(planned for future use)_
+- [Node.js](https://nodejs.org/)
+- [Nx](https://nx.dev/)
+
+In addition, the project uses technologies like (or will be):
+
+- [Zod](https://zod.dev/) _(planned for future use)_
+- [React Hook Form](https://react-hook-form.com/) _(planned for future use)_
+- [Styled Components](https://styled-components.com/)
+- [Storybook](https://storybook.js.org/)
+- [Base UI](https://mui.com/base-ui/) or [React Aria](https://react-spectrum.adobe.com/react-aria/) _(planned for future use)_
+- [Stripe](https://stripe.com/) or [Paypal](https://www.paypal.com/) _(planned for future use)_
+- [Jest](https://jestjs.io/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Cypress](https://www.cypress.io/)
 
 ## Getting Started
 
@@ -67,36 +97,6 @@ To browse the UI component library, run the following command in the project's r
 ```bash
 npx nx storybook ui
 ```
-
-## About The Project
-
-This project is a full-stack e-commerce platform designed to sell electronic goods online. It follows the <abbr title="Minimum Viable Product">MVP</abbr> development strategy, which means that initially, only the most relevant features are implemented to make the platform usable. Additional features will be added gradually in the future. The design is based on a paid [Figma project](https://www.creativefabrica.com/pl/product/e-shop-e-commerce-website-design-ui/) and adheres to a Pixel Perfect approach and incorporates <abbr title="Responsive Web Design">RWD</abbr> to ensure optimal work across all devices. As mentioned earlier, the use of an MVP approach is the primary reason why some elements from the Figma project are not currently included in the project. These elements will be implemented in future updates.
-
-### Built With
-
-> [!TIP]
-> Next.js includes its own server implementation that allows interaction with databases and more. However, I have chosen to use Express alongside Next.js because, in my opinion, Express is more scalable and powerful.
-
-This project is developed using the <abbr title="MongoDB, Express.js, Next.js, and Node.js JavaScript software stack">MENN</abbr> stack. A common variant, the <abbr title="MongoDB, Express.js, React.js, and Node.js JavaScript software stack">MERN</abbr> stack, replaces Next.js with vanilla React to enhance SEO optimization and accelerate project development. Key technologies employed in this project include:
-
-- [Next.js](https://nextjs.org/) (a [React.js](https://reactjs.org/) framework )
-- [TypeScript](https://www.typescriptlang.org/),
-- [Express](https://expressjs.com/) _(planned for future use)_
-- [Mongoose](https://mongoosejs.com/) (a ODM for [MongoDB](https://www.mongodb.com/)) _(planned for future use)_
-- [Node.js](https://nodejs.org/)
-- [Nx](https://nx.dev/)
-
-In addition, the project uses technologies like (or will be):
-
-- [Zod](https://zod.dev/) _(planned for future use)_
-- [React Hook Form](https://react-hook-form.com/) _(planned for future use)_
-- [Styled Components](https://styled-components.com/)
-- [Storybook](https://storybook.js.org/)
-- [Base UI](https://mui.com/base-ui/) or [React Aria](https://react-spectrum.adobe.com/react-aria/) _(planned for future use)_
-- [Stripe](https://stripe.com/) or [Paypal](https://www.paypal.com/) _(planned for future use)_
-- [Jest](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-- [Cypress](https://www.cypress.io/)
 
 ## License
 
