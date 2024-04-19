@@ -10,8 +10,8 @@ const Configuration: UserConfig = {
       'always',
       [
         'backend',
-        'data',
         'database',
+        'fixtures',
         'frontend',
         'i18n',
         'root',
