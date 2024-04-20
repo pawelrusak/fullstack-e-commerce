@@ -11,6 +11,8 @@ export default [
     isFeatured: true,
     size: { width: 7.6, height: 14.7, depth: 0.8 },
     brand: 'Apple',
+    createdAt: '2023-04-10T08:00:00.000Z',
+    updatedAt: '2023-04-11T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced01',
       name: 'Phone',
@@ -28,6 +30,8 @@ export default [
     isFeatured: true,
     size: { width: 15, height: 20, depth: 5 },
     brand: 'Sony',
+    createdAt: '2023-04-05T08:00:00.000Z',
+    updatedAt: '2023-04-06T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -45,6 +49,8 @@ export default [
     isFeatured: true,
     size: { width: 35, height: 24, depth: 2 },
     brand: 'Samsung',
+    createdAt: '2023-04-02T08:00:00.000Z',
+    updatedAt: '2023-04-03T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -62,6 +68,8 @@ export default [
     isFeatured: true,
     size: { width: 10, height: 7, depth: 6 },
     brand: 'Panasonic',
+    createdAt: '2023-04-04T08:00:00.000Z',
+    updatedAt: '2023-04-05T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced04',
       name: 'Camera',
@@ -79,6 +87,8 @@ export default [
     isFeatured: true,
     size: { width: 145, height: 83, depth: 20 },
     brand: 'LG',
+    createdAt: '2023-04-01T08:00:00.000Z',
+    updatedAt: '2023-04-02T08:00:00.000Z',
     subCategory: {
       name: 'Television',
       _id: '5f43ba27320000271ced05',
@@ -96,6 +106,8 @@ export default [
     isFeatured: false,
     size: { width: 5, height: 5, depth: 1.2 },
     brand: 'Samsung',
+    createdAt: '2023-04-15T08:00:00.000Z',
+    updatedAt: '2023-04-16T08:00:00.000Z',
     subCategory: {
       name: 'Watch',
       _id: '5f43ba27320000271ced06',
@@ -113,6 +125,8 @@ export default [
     isFeatured: false,
     size: { width: 28, height: 20, depth: 1.5 },
     brand: 'Dell',
+    createdAt: '2023-04-15T08:00:00.000Z',
+    updatedAt: '2023-04-16T08:00:00.000Z',
     subCategory: {
       name: 'Tablet',
       _id: '5f43ba27320000271ced07',
@@ -130,6 +144,8 @@ export default [
     isFeatured: false,
     size: { width: 33, height: 23, depth: 2 },
     brand: 'Microsoft',
+    createdAt: '2023-04-10T08:00:00.000Z',
+    updatedAt: '2023-04-11T08:00:00.000Z',
     subCategory: {
       name: 'Laptop',
       _id: '5f43ba27320000271ced03',
@@ -147,6 +163,8 @@ export default [
     isFeatured: false,
     size: { width: 15, height: 10, depth: 9 },
     brand: 'Canon',
+    createdAt: '2023-04-15T08:00:00.000Z',
+    updatedAt: '2023-04-16T08:00:00.000Z',
     subCategory: {
       name: 'Camera',
       _id: '5f43ba27320000271ced04',
@@ -164,6 +182,8 @@ export default [
     isFeatured: false,
     size: { width: 97, height: 56, depth: 15 },
     brand: 'LG',
+    createdAt: '2023-04-05T08:00:00.000Z',
+    updatedAt: '2023-04-06T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -181,6 +201,8 @@ export default [
     isFeatured: false,
     size: { width: 40, height: 40, depth: 10 },
     brand: 'Sony',
+    createdAt: '2023-04-10T08:00:00.000Z',
+    updatedAt: '2023-04-11T08:00:00.000Z',
     subCategory: {
       name: 'Camera',
       _id: '5f43ba27320000271ced04',
@@ -198,6 +220,8 @@ export default [
     isFeatured: false,
     size: { width: 25, height: 15, depth: 12 },
     brand: 'Sony',
+    createdAt: '2023-04-05T08:00:00.000Z',
+    updatedAt: '2023-04-06T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -215,6 +239,8 @@ export default [
     isFeatured: false,
     size: { width: 29, height: 18, depth: 0.8 },
     brand: 'Lenovo',
+    createdAt: '2023-04-05T08:00:00.000Z',
+    updatedAt: '2023-04-06T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -232,6 +258,8 @@ export default [
     isFeatured: false,
     size: { width: 4.5, height: 4.5, depth: 1.1 },
     brand: 'Samsung',
+    createdAt: '2023-04-10T08:00:00.000Z',
+    updatedAt: '2023-04-11T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -249,6 +277,8 @@ export default [
     isFeatured: false,
     size: { width: 7.5, height: 15.5, depth: 0.7 },
     brand: 'Apple',
+    createdAt: '2023-04-05T08:00:00.000Z',
+    updatedAt: '2023-04-06T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced01',
       name: 'Phone',
@@ -266,6 +296,8 @@ export default [
     isFeatured: false,
     size: { width: 36, height: 25, depth: 2.2 },
     brand: 'Asus',
+    createdAt: '2023-04-02T08:00:00.000Z',
+    updatedAt: '2023-04-03T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -283,6 +315,8 @@ export default [
     isFeatured: false,
     size: { width: 60, height: 85, depth: 65 },
     brand: 'LG',
+    createdAt: '2023-04-04T08:00:00.000Z',
+    updatedAt: '2023-04-05T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced08',
       name: 'Home',
@@ -300,6 +334,8 @@ export default [
     isFeatured: false,
     size: { width: 17, height: 20, depth: 6 },
     brand: 'Bose',
+    createdAt: '2023-04-10T08:00:00.000Z',
+    updatedAt: '2023-04-11T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -317,6 +353,8 @@ export default [
     isFeatured: false,
     size: { width: 4.8, height: 4.8, depth: 1.3 },
     brand: 'Samsung',
+    createdAt: '2023-04-15T08:00:00.000Z',
+    updatedAt: '2023-04-16T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -334,6 +372,8 @@ export default [
     isFeatured: false,
     size: { width: 20, height: 15, depth: 10 },
     brand: 'Canon',
+    createdAt: '2023-04-15T08:00:00.000Z',
+    updatedAt: '2023-04-16T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced04',
       name: 'Camera',
@@ -351,6 +391,8 @@ export default [
     isFeatured: false,
     size: { width: 29, height: 20, depth: 0.85 },
     brand: 'Apple',
+    createdAt: '2023-04-10T08:00:00.000Z',
+    updatedAt: '2023-04-11T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -368,6 +410,8 @@ export default [
     isFeatured: false,
     size: { width: 146, height: 84, depth: 20 },
     brand: 'LG',
+    createdAt: '2023-04-10T08:00:00.000Z',
+    updatedAt: '2023-04-11T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -385,6 +429,8 @@ export default [
     isFeatured: false,
     size: { width: 112, height: 65, depth: 15 },
     brand: 'Sony',
+    createdAt: '2023-04-02T08:00:00.000Z',
+    updatedAt: '2023-04-03T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -402,6 +448,8 @@ export default [
     isFeatured: false,
     size: { width: 30, height: 20, depth: 1 },
     brand: 'Acer',
+    createdAt: '2023-04-01T08:00:00.000Z',
+    updatedAt: '2023-04-02T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -419,6 +467,8 @@ export default [
     isFeatured: false,
     size: { width: 20, height: 20, depth: 7 },
     brand: 'Sony',
+    createdAt: '2023-04-02T08:00:00.000Z',
+    updatedAt: '2023-04-03T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -436,6 +486,8 @@ export default [
     isFeatured: false,
     size: { width: 55, height: 15, depth: 45 },
     brand: 'Sony',
+    createdAt: '2023-04-05T08:00:00.000Z',
+    updatedAt: '2023-04-06T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced09',
       name: 'Gaming',
@@ -453,6 +505,8 @@ export default [
     isFeatured: false,
     size: { width: 39, height: 27, depth: 2.5 },
     brand: 'Asus',
+    createdAt: '2023-04-05T08:00:00.000Z',
+    updatedAt: '2023-04-06T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -470,6 +524,8 @@ export default [
     isFeatured: false,
     size: { width: 32, height: 23, depth: 1.8 },
     brand: 'HP',
+    createdAt: '2023-04-04T08:00:00.000Z',
+    updatedAt: '2023-04-05T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -487,6 +543,8 @@ export default [
     isFeatured: false,
     size: { width: 4.5, height: 4.5, depth: 1.1 },
     brand: 'Apple',
+    createdAt: '2023-04-01T08:00:00.000Z',
+    updatedAt: '2023-04-02T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -504,6 +562,8 @@ export default [
     isFeatured: false,
     size: { width: 97, height: 57, depth: 15 },
     brand: 'LG',
+    createdAt: '2023-04-10T08:00:00.000Z',
+    updatedAt: '2023-04-11T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -521,6 +581,8 @@ export default [
     isFeatured: false,
     size: { width: 30, height: 10, depth: 5 },
     brand: 'Acer',
+    createdAt: '2023-04-05T08:00:00.000Z',
+    updatedAt: '2023-04-06T08:00:00.000Z',
     subCategory: {
       _id: '5f43ba27320000271ced09',
       name: 'Gaming',
