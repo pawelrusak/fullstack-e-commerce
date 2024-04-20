@@ -10,6 +10,7 @@ export default [
     price: 999.0,
     isFeatured: true,
     size: { width: 7.6, height: 14.7, depth: 0.8 },
+    brand: 'Apple',
     subCategory: {
       _id: '5f43ba27320000271ced01',
       name: 'Phone',
@@ -26,6 +27,7 @@ export default [
     price: 59.0,
     isFeatured: true,
     size: { width: 15, height: 20, depth: 5 },
+    brand: 'Sony',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -42,6 +44,7 @@ export default [
     price: 1199.0,
     isFeatured: true,
     size: { width: 35, height: 24, depth: 2 },
+    brand: 'Samsung',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -58,6 +61,7 @@ export default [
     price: 79.0,
     isFeatured: true,
     size: { width: 10, height: 7, depth: 6 },
+    brand: 'Panasonic',
     subCategory: {
       _id: '5f43ba27320000271ced04',
       name: 'Camera',
@@ -74,6 +78,7 @@ export default [
     price: 2799.0,
     isFeatured: true,
     size: { width: 145, height: 83, depth: 20 },
+    brand: 'LG',
     subCategory: {
       name: 'Television',
       _id: '5f43ba27320000271ced05',
@@ -90,6 +95,7 @@ export default [
     price: 959.99,
     isFeatured: false,
     size: { width: 5, height: 5, depth: 1.2 },
+    brand: 'Samsung',
     subCategory: {
       name: 'Watch',
       _id: '5f43ba27320000271ced06',
@@ -106,6 +112,7 @@ export default [
     price: 799.0,
     isFeatured: false,
     size: { width: 28, height: 20, depth: 1.5 },
+    brand: 'Dell',
     subCategory: {
       name: 'Tablet',
       _id: '5f43ba27320000271ced07',
@@ -122,6 +129,7 @@ export default [
     price: 2399.99,
     isFeatured: false,
     size: { width: 33, height: 23, depth: 2 },
+    brand: 'Microsoft',
     subCategory: {
       name: 'Laptop',
       _id: '5f43ba27320000271ced03',
@@ -138,6 +146,7 @@ export default [
     price: 1499.99,
     isFeatured: false,
     size: { width: 15, height: 10, depth: 9 },
+    brand: 'Canon',
     subCategory: {
       name: 'Camera',
       _id: '5f43ba27320000271ced04',
@@ -154,6 +163,7 @@ export default [
     price: 4599.0,
     isFeatured: false,
     size: { width: 97, height: 56, depth: 15 },
+    brand: 'LG',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -170,6 +180,7 @@ export default [
     price: 819.0,
     isFeatured: false,
     size: { width: 40, height: 40, depth: 10 },
+    brand: 'Sony',
     subCategory: {
       name: 'Camera',
       _id: '5f43ba27320000271ced04',
@@ -186,6 +197,7 @@ export default [
     price: 1199.0,
     isFeatured: false,
     size: { width: 25, height: 15, depth: 12 },
+    brand: 'Sony',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -202,6 +214,7 @@ export default [
     price: 129.0,
     isFeatured: false,
     size: { width: 29, height: 18, depth: 0.8 },
+    brand: 'Lenovo',
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -218,6 +231,7 @@ export default [
     price: 999.0,
     isFeatured: false,
     size: { width: 4.5, height: 4.5, depth: 1.1 },
+    brand: 'Samsung',
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -234,6 +248,7 @@ export default [
     price: 999.0,
     isFeatured: false,
     size: { width: 7.5, height: 15.5, depth: 0.7 },
+    brand: 'Apple',
     subCategory: {
       _id: '5f43ba27320000271ced01',
       name: 'Phone',
@@ -250,6 +265,7 @@ export default [
     price: 1659.0,
     isFeatured: false,
     size: { width: 36, height: 25, depth: 2.2 },
+    brand: 'Asus',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -266,6 +282,7 @@ export default [
     price: 5699.0,
     isFeatured: false,
     size: { width: 60, height: 85, depth: 65 },
+    brand: 'LG',
     subCategory: {
       _id: '5f43ba27320000271ced08',
       name: 'Home',
@@ -282,6 +299,7 @@ export default [
     price: 329.99,
     isFeatured: false,
     size: { width: 17, height: 20, depth: 6 },
+    brand: 'Bose',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -298,6 +316,7 @@ export default [
     price: 959.99,
     isFeatured: false,
     size: { width: 4.8, height: 4.8, depth: 1.3 },
+    brand: 'Samsung',
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -314,6 +333,7 @@ export default [
     price: 1499.99,
     isFeatured: false,
     size: { width: 20, height: 15, depth: 10 },
+    brand: 'Canon',
     subCategory: {
       _id: '5f43ba27320000271ced04',
       name: 'Camera',
@@ -330,6 +350,7 @@ export default [
     price: 129.0,
     isFeatured: false,
     size: { width: 29, height: 20, depth: 0.85 },
+    brand: 'Apple',
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -346,6 +367,7 @@ export default [
     price: 2799.0,
     isFeatured: false,
     size: { width: 146, height: 84, depth: 20 },
+    brand: 'LG',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -362,6 +384,7 @@ export default [
     price: 8199.0,
     isFeatured: false,
     size: { width: 112, height: 65, depth: 15 },
+    brand: 'Sony',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -378,6 +401,7 @@ export default [
     price: 259.0,
     isFeatured: false,
     size: { width: 30, height: 20, depth: 1 },
+    brand: 'Acer',
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -394,6 +418,7 @@ export default [
     price: 29.0,
     isFeatured: false,
     size: { width: 20, height: 20, depth: 7 },
+    brand: 'Sony',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -410,6 +435,7 @@ export default [
     price: 5299.99,
     isFeatured: false,
     size: { width: 55, height: 15, depth: 45 },
+    brand: 'Sony',
     subCategory: {
       _id: '5f43ba27320000271ced09',
       name: 'Gaming',
@@ -426,6 +452,7 @@ export default [
     price: 2999.99,
     isFeatured: false,
     size: { width: 39, height: 27, depth: 2.5 },
+    brand: 'Asus',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -442,6 +469,7 @@ export default [
     price: 1659.0,
     isFeatured: false,
     size: { width: 32, height: 23, depth: 1.8 },
+    brand: 'HP',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -458,6 +486,7 @@ export default [
     price: 999.0,
     isFeatured: false,
     size: { width: 4.5, height: 4.5, depth: 1.1 },
+    brand: 'Apple',
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -474,6 +503,7 @@ export default [
     price: 2299.0,
     isFeatured: false,
     size: { width: 97, height: 57, depth: 15 },
+    brand: 'LG',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -490,6 +520,7 @@ export default [
     price: 109.0,
     isFeatured: false,
     size: { width: 30, height: 10, depth: 5 },
+    brand: 'Acer',
     subCategory: {
       _id: '5f43ba27320000271ced09',
       name: 'Gaming',
