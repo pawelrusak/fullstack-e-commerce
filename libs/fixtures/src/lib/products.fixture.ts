@@ -1,6 +1,6 @@
 import { Product } from '@e-shop/types';
 
-type ProductBase = Partial<Product>;
+type ProductBase = Product;
 
 export default [
   // 1
@@ -13,6 +13,11 @@ export default [
     brand: 'Apple',
     createdAt: '2023-04-10T08:00:00.000Z',
     updatedAt: '2023-04-11T08:00:00.000Z',
+    description:
+      'This high-performance smartphone features top-tier camera capabilities, offering the ultimate value in mobile photography. Perfect for capturing all your moments in stunning clarity.',
+    thumbnail: undefined,
+    images: [],
+    stock: 20,
     subCategory: {
       _id: '5f43ba27320000271ced01',
       name: 'Phone',
@@ -32,6 +37,11 @@ export default [
     brand: 'Sony',
     createdAt: '2023-04-05T08:00:00.000Z',
     updatedAt: '2023-04-06T08:00:00.000Z',
+    description:
+      'Experience exceptional sound quality with advanced noise cancellation technology, designed to deliver the best audio experience on the go.',
+    thumbnail: undefined,
+    images: [],
+    stock: 100,
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -51,6 +61,11 @@ export default [
     brand: 'Samsung',
     createdAt: '2023-04-02T08:00:00.000Z',
     updatedAt: '2023-04-03T08:00:00.000Z',
+    description:
+      'Featuring an Ultra HD LED screen, this latest model of our laptop range offers vibrant visuals and cutting-edge performance for professionals and creatives.',
+    thumbnail: undefined,
+    images: [],
+    stock: 15,
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -70,6 +85,11 @@ export default [
     brand: 'Panasonic',
     createdAt: '2023-04-04T08:00:00.000Z',
     updatedAt: '2023-04-05T08:00:00.000Z',
+    description:
+      'This compact Polaroid camera comes with a built-in flash, perfect for capturing instant memories in any lighting condition. Ideal for young photographers.',
+    thumbnail: undefined,
+    images: [],
+    stock: 95,
     subCategory: {
       _id: '5f43ba27320000271ced04',
       name: 'Camera',
@@ -89,6 +109,11 @@ export default [
     brand: 'LG',
     createdAt: '2023-04-01T08:00:00.000Z',
     updatedAt: '2023-04-02T08:00:00.000Z',
+    description:
+      'Immerse yourself in the stunning picture quality of our new 4K Smart OLED TV, perfect for any home theater setup. Experience vivid colors and detailed images like never before.',
+    thumbnail: undefined,
+    images: [],
+    stock: 10,
     subCategory: {
       name: 'Television',
       _id: '5f43ba27320000271ced05',
@@ -108,6 +133,11 @@ export default [
     brand: 'Samsung',
     createdAt: '2023-04-15T08:00:00.000Z',
     updatedAt: '2023-04-16T08:00:00.000Z',
+    description:
+      'Stay on top of your health with the Orange Watch 12, featuring advanced sensors to monitor your vital signs. Ideal for fitness enthusiasts and health-conscious individuals.',
+    thumbnail: undefined,
+    images: [],
+    stock: 25,
     subCategory: {
       name: 'Watch',
       _id: '5f43ba27320000271ced06',
@@ -127,6 +157,11 @@ export default [
     brand: 'Dell',
     createdAt: '2023-04-15T08:00:00.000Z',
     updatedAt: '2023-04-16T08:00:00.000Z',
+    description:
+      'Get the best of productivity and entertainment with our Ultra Tablet Qwerty HD. Featuring a responsive keyboard and a stunning HD display, this tablet is a great value for anyone.',
+    thumbnail: undefined,
+    images: [],
+    stock: 50,
     subCategory: {
       name: 'Tablet',
       _id: '5f43ba27320000271ced07',
@@ -146,6 +181,11 @@ export default [
     brand: 'Microsoft',
     createdAt: '2023-04-10T08:00:00.000Z',
     updatedAt: '2023-04-11T08:00:00.000Z',
+    description:
+      'Our latest Surface Laptop 4 XPS 13 Plus offers the perfect blend of power and portability. Featuring a 64GB i7 processor and a touch screen for intuitive control, this laptop is ideal for professionals on the move.',
+    thumbnail: undefined,
+    images: [],
+    stock: 15,
     subCategory: {
       name: 'Laptop',
       _id: '5f43ba27320000271ced03',
@@ -165,6 +205,11 @@ export default [
     brand: 'Canon',
     createdAt: '2023-04-15T08:00:00.000Z',
     updatedAt: '2023-04-16T08:00:00.000Z',
+    description:
+      'The CamPro HERO10 Black offers sleek design and superior 4K video capabilities, making it an essential tool for any videographer looking to elevate their craft.',
+    thumbnail: undefined,
+    images: [],
+    stock: 15,
     subCategory: {
       name: 'Camera',
       _id: '5f43ba27320000271ced04',
@@ -184,6 +229,11 @@ export default [
     brand: 'LG',
     createdAt: '2023-04-05T08:00:00.000Z',
     updatedAt: '2023-04-06T08:00:00.000Z',
+    description:
+      'The LP78245 offers an unmatched viewing experience with its 4K HD OLED display and dynamic color enhancer. Enjoy your favorite movies in stunning detail with USB playback capabilities.',
+    thumbnail: undefined,
+    images: [],
+    stock: 12,
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -203,6 +253,11 @@ export default [
     brand: 'Sony',
     createdAt: '2023-04-10T08:00:00.000Z',
     updatedAt: '2023-04-11T08:00:00.000Z',
+    description:
+      'Explore new heights with the VBI Mini 2 Drone, featuring a 4K Pro PTZ camera and a range of up to 5 km. Perfect for capturing breathtaking aerial footage and photography.',
+    thumbnail: undefined,
+    images: [],
+    stock: 30,
     subCategory: {
       name: 'Camera',
       _id: '5f43ba27320000271ced04',
@@ -222,6 +277,11 @@ export default [
     brand: 'Sony',
     createdAt: '2023-04-05T08:00:00.000Z',
     updatedAt: '2023-04-06T08:00:00.000Z',
+    description:
+      "Take your music anywhere with this portable Bluetooth speaker. Offering superior sound quality and robust wireless connectivity, it's perfect for any occasion.",
+    thumbnail: undefined,
+    images: [],
+    stock: 20,
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -241,6 +301,11 @@ export default [
     brand: 'Lenovo',
     createdAt: '2023-04-05T08:00:00.000Z',
     updatedAt: '2023-04-06T08:00:00.000Z',
+    description:
+      'Maximize your productivity with the Tablet Pro. It boasts a 128 GB HD, 8 GB RAM, and a stunning 4K display. Ideal for both work and entertainment.',
+    thumbnail: undefined,
+    images: [],
+    stock: 70,
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -260,6 +325,11 @@ export default [
     brand: 'Samsung',
     createdAt: '2023-04-10T08:00:00.000Z',
     updatedAt: '2023-04-11T08:00:00.000Z',
+    description:
+      'Stay connected on the go with the Mobile Watch A Series. Featuring GPS tracking and a stylish red design, this smartwatch is perfect for the active and style-conscious individual.',
+    thumbnail: undefined,
+    images: [],
+    stock: 20,
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -279,6 +349,11 @@ export default [
     brand: 'Apple',
     createdAt: '2023-04-05T08:00:00.000Z',
     updatedAt: '2023-04-06T08:00:00.000Z',
+    description:
+      'This stylish LT Phone in rose gold features 256 GB of storage and 16 GB of RAM, ensuring a smooth and responsive user experience. Guaranteed quality for the discerning customer.',
+    thumbnail: undefined,
+    images: [],
+    stock: 20,
     subCategory: {
       _id: '5f43ba27320000271ced01',
       name: 'Phone',
@@ -298,6 +373,11 @@ export default [
     brand: 'Asus',
     createdAt: '2023-04-02T08:00:00.000Z',
     updatedAt: '2023-04-03T08:00:00.000Z',
+    description:
+      'Elevate your gaming experience with the ZDY Gaming Laptop, featuring a 15.6-inch display, 512 GB of storage, and high-performance VGA capabilities for the most demanding games.',
+    thumbnail: undefined,
+    images: [],
+    stock: 15,
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -317,6 +397,11 @@ export default [
     brand: 'LG',
     createdAt: '2023-04-04T08:00:00.000Z',
     updatedAt: '2023-04-05T08:00:00.000Z',
+    description:
+      'This high-capacity 11 KG front-loading wash machine features a steam cycle, offering efficient and effective cleaning. Perfect for large households.',
+    thumbnail: undefined,
+    images: [],
+    stock: 10,
     subCategory: {
       _id: '5f43ba27320000271ced08',
       name: 'Home',
@@ -336,6 +421,11 @@ export default [
     brand: 'Bose',
     createdAt: '2023-04-10T08:00:00.000Z',
     updatedAt: '2023-04-11T08:00:00.000Z',
+    description:
+      'Enjoy unmatched audio quality with the QuietComfort 45 headphones, featuring advanced noise-cancelling technology. Perfect for music lovers who need peace and quiet.',
+    thumbnail: undefined,
+    images: [],
+    stock: 40,
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -355,6 +445,11 @@ export default [
     brand: 'Samsung',
     createdAt: '2023-04-15T08:00:00.000Z',
     updatedAt: '2023-04-16T08:00:00.000Z',
+    description:
+      'The Orange Watch 12 is equipped with advanced health sensors and tracking capabilities, providing vital health insights and fitness tracking in a sleek and stylish design.',
+    thumbnail: undefined,
+    images: [],
+    stock: 25,
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -374,6 +469,11 @@ export default [
     brand: 'Canon',
     createdAt: '2023-04-15T08:00:00.000Z',
     updatedAt: '2023-04-16T08:00:00.000Z',
+    description:
+      'Capture your world in stunning 4K Ultra HD with the CamPro HERO10. Its sleek design and advanced features make it the perfect choice for serious photographers and videographers.',
+    thumbnail: undefined,
+    images: [],
+    stock: 15,
     subCategory: {
       _id: '5f43ba27320000271ced04',
       name: 'Camera',
@@ -393,6 +493,11 @@ export default [
     brand: 'Apple',
     createdAt: '2023-04-10T08:00:00.000Z',
     updatedAt: '2023-04-11T08:00:00.000Z',
+    description:
+      "Experience high-performance computing with the Tablet Pro, featuring 128 GB storage and 8 GB RAM. It's ideal for professionals and gamers alike, thanks to its advanced graphics and large, vibrant display.",
+    thumbnail: undefined,
+    images: [],
+    stock: 70,
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -412,6 +517,11 @@ export default [
     brand: 'LG',
     createdAt: '2023-04-10T08:00:00.000Z',
     updatedAt: '2023-04-11T08:00:00.000Z',
+    description:
+      'This next-generation AG OLED TV offers unparalleled visuals with its 4K Smart OLED display, bringing stunning resolution and color depth to your entertainment space.',
+    thumbnail: undefined,
+    images: [],
+    stock: 10,
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -431,6 +541,11 @@ export default [
     brand: 'Sony',
     createdAt: '2023-04-02T08:00:00.000Z',
     updatedAt: '2023-04-03T08:00:00.000Z',
+    description:
+      'The Crystal 4K Smart TV features a large 50-inch LED display with high-definition resolution, providing crystal-clear visuals and vibrant colors for an exceptional viewing experience.',
+    thumbnail: undefined,
+    images: [],
+    stock: 5,
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -450,6 +565,11 @@ export default [
     brand: 'Acer',
     createdAt: '2023-04-01T08:00:00.000Z',
     updatedAt: '2023-04-02T08:00:00.000Z',
+    description:
+      "Explore new possibilities with the Mini Tablet Pro, featuring a 16-inch HD display and 128 GB of storage. It's designed for users who need a powerful device in a compact form.",
+    thumbnail: undefined,
+    images: [],
+    stock: 50,
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -469,6 +589,11 @@ export default [
     brand: 'Sony',
     createdAt: '2023-04-02T08:00:00.000Z',
     updatedAt: '2023-04-03T08:00:00.000Z',
+    description:
+      'Enjoy the best sound with the 134S Wireless Max HiFi Stereo Headphones. Designed for audiophiles, these headphones offer high-fidelity sound in a comfortable, wireless design.',
+    thumbnail: undefined,
+    images: [],
+    stock: 120,
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -488,6 +613,11 @@ export default [
     brand: 'Sony',
     createdAt: '2023-04-05T08:00:00.000Z',
     updatedAt: '2023-04-06T08:00:00.000Z',
+    description:
+      'Unleash the ultimate gaming experience with the Game Station 15 Disc Edition. This console comes with a full set, providing everything you need for endless hours of entertainment.',
+    thumbnail: undefined,
+    images: [],
+    stock: 12,
     subCategory: {
       _id: '5f43ba27320000271ced09',
       name: 'Gaming',
@@ -507,6 +637,11 @@ export default [
     brand: 'Asus',
     createdAt: '2023-04-05T08:00:00.000Z',
     updatedAt: '2023-04-06T08:00:00.000Z',
+    description:
+      'Dominate your gaming world with the NexSUS ROCK Strix Scar 17. This high-performance gaming laptop is equipped with cutting-edge hardware to handle the most demanding games.',
+    thumbnail: undefined,
+    images: [],
+    stock: 10,
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -526,6 +661,11 @@ export default [
     brand: 'HP',
     createdAt: '2023-04-04T08:00:00.000Z',
     updatedAt: '2023-04-05T08:00:00.000Z',
+    description:
+      'Maximize your productivity with the 2019 Smart Laptop. It features a Pro Chip Core, 1 TB HD SSD, and 256 GB of storage, making it perfect for professional use.',
+    thumbnail: undefined,
+    images: [],
+    stock: 15,
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -545,6 +685,11 @@ export default [
     brand: 'Apple',
     createdAt: '2023-04-01T08:00:00.000Z',
     updatedAt: '2023-04-02T08:00:00.000Z',
+    description:
+      'The Mobile Watch A Series comes with advanced GPS capabilities and a stylish red rubber band, making it a must-have for active individuals who need precise location tracking.',
+    thumbnail: undefined,
+    images: [],
+    stock: 20,
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -564,6 +709,11 @@ export default [
     brand: 'LG',
     createdAt: '2023-04-10T08:00:00.000Z',
     updatedAt: '2023-04-11T08:00:00.000Z',
+    description:
+      'This LP78245 Smart TV features a 43-inch OLED screen with 4K HD resolution and dynamic color technology, providing high-quality visuals for an immersive viewing experience.',
+    thumbnail: undefined,
+    images: [],
+    stock: 15,
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -583,6 +733,11 @@ export default [
     brand: 'Acer',
     createdAt: '2023-04-05T08:00:00.000Z',
     updatedAt: '2023-04-06T08:00:00.000Z',
+    description:
+      'The Console Game Stick offers a seamless gaming experience with HD graphics and wireless Bluetooth connectivity, perfect for gamers looking for flexibility and high performance.',
+    thumbnail: undefined,
+    images: [],
+    stock: 90,
     subCategory: {
       _id: '5f43ba27320000271ced09',
       name: 'Gaming',
