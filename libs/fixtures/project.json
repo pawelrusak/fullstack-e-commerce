@@ -1,7 +1,7 @@
 {
   "name": "fixtures",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "lib/fixtures/src",
+  "sourceRoot": "libs/fixtures/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,10 +9,10 @@
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/lib/fixtures",
-        "main": "lib/fixtures/src/index.ts",
-        "tsConfig": "lib/fixtures/tsconfig.lib.json",
-        "assets": ["lib/fixtures/*.md"]
+        "outputPath": "dist/libs/fixtures",
+        "main": "libs/fixtures/src/index.ts",
+        "tsConfig": "libs/fixtures/tsconfig.lib.json",
+        "assets": ["libs/fixtures/*.md"]
       }
     }
   }
