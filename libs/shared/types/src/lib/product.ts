@@ -14,7 +14,7 @@ export type Product = Id &
     brand: string;
     price: number;
     stock: number;
-    thumbnail: string;
+    thumbnail?: string;
     images: string[];
     size: Size;
     subCategory: SubCategory;
