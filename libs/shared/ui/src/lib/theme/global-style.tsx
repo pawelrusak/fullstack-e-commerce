@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-size: 1.6rem;
   }
+
+  .products-carousel {
+    display: flex;
+  }
 `;
 
 export default GlobalStyle;
