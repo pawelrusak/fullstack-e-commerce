@@ -13,9 +13,9 @@
 </p>
 
 <p align="center">
-  ![GitHub last commit](https://img.shields.io/github/last-commit/pawelrusak/fullstack-e-commerce?style=flat-square)
-  ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/pawelrusak/fullstack-e-commerce?style=flat-square)
-  ![GitHub License](https://img.shields.io/github/license/pawelrusak/fullstack-e-commerce?style=flat-square)
+  <img src="https://img.shields.io/github/last-commit/pawelrusak/fullstack-e-commerce?style=flat-square" alt="GitHub last commit" />
+  <img src="https://img.shields.io/github/commit-activity/w/pawelrusak/fullstack-e-commerce?style=flat-square" alt="GitHub commit activity" />
+  <img src="https://img.shields.io/github/license/pawelrusak/fullstack-e-commerce?style=flat-square" alt="GitHub License" />
   <br />
 </p>
 
