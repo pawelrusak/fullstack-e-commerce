@@ -1,7 +1,5 @@
 import { Product } from '@e-shop/types';
 
-type ProductBase = Product;
-
 export default [
   // 1
   {
@@ -747,4 +745,4 @@ export default [
       },
     },
   },
-] satisfies ProductBase[];
+] satisfies Product[];
