@@ -43,5 +43,9 @@
   "BREADCRUMB": {
     "HOME": "Home",
     "NAV_LABEL": "Breadcrumb"
+  },
+  "CAROUSEL": {
+    "NEXT": "Next",
+    "PREV": "Previous"
   }
 }
