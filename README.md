@@ -6,7 +6,6 @@
     <img alt="e-shop" src="./docs/assets/logo-dark.svg" width="286" height="74">
   </picture>
   <br />
-  <br />
   <em>E-shop is a e-commerce platform to sell electronics goods online
   <br /> using TypeScript, MERN/MENN stack and other leading technologies.</em>
   <br />  
