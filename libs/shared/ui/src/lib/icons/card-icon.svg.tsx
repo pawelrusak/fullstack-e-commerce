@@ -22,11 +22,6 @@ export default function CardIcon(props: React.SVGProps<SVGSVGElement>) {
           fill="currentColor"
         />
       </g>
-      <defs>
-        <clipPath id="clip0_30_2620">
-          <rect width="20" height="20" fill="white" />
-        </clipPath>
-      </defs>
     </svg>
   );
 }
