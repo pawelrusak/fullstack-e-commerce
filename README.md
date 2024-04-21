@@ -12,6 +12,13 @@
   <br />  
 </p>
 
+<p align="center">
+  ![GitHub last commit](https://img.shields.io/github/last-commit/pawelrusak/fullstack-e-commerce?style=flat-square)
+  ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/pawelrusak/fullstack-e-commerce?style=flat-square)
+  ![GitHub License](https://img.shields.io/github/license/pawelrusak/fullstack-e-commerce?style=flat-square)
+  <br />
+</p>
+
 > [!IMPORTANT]
 > The project is at an early stage of development so it currently only contains a UI components library.
 > You can view the UI components using Storybook, to do this go to the [Storybook](#storybook) section.
