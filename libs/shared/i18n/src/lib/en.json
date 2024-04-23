@@ -47,5 +47,24 @@
   "CAROUSEL": {
     "NEXT": "Next",
     "PREV": "Previous"
+  },
+  "VALUES": {
+    "TITLE": "Our Values",
+    "RESPONSIVE": {
+      "TITLE": "Responsive",
+      "DESCRIPTION": "Customer service available 24/7"
+    },
+    "SECURE": {
+      "TITLE": "Secure",
+      "DESCRIPTION": "Certified marketplace since 2017"
+    },
+    "SHIPPING": {
+      "TITLE": "Shipping",
+      "DESCRIPTION": "Free, fast and reliable worldwide"
+    },
+    "TRANSPARENT": {
+      "TITLE": "Transparent",
+      "DESCRIPTION": "Hassle-free return policy"
+    }
   }
 }
