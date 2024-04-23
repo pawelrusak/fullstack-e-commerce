@@ -11,6 +11,7 @@ export type Product = Id &
   Timestamp & {
     name: string;
     description: string;
+    slug?: string;
     brand: string;
     price: number;
     stock: number;
