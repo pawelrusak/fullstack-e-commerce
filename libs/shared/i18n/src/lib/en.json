@@ -66,5 +66,10 @@
       "TITLE": "Transparent",
       "DESCRIPTION": "Hassle-free return policy"
     }
+  },
+  "HERO": {
+    "TITLE": "Your One-Stop \nElectronic Market",
+    "DESCRIPTION": "Welcome to e-shop, a place where you can buy \neverything about electronics. Sale every day!",
+    "CTA_BUTTON": "Shop Now"
   }
 }
