@@ -11,6 +11,7 @@
   "dependencies": {
     "@reach/visually-hidden": "^0.18.0",
     "@types/styled-system": "^5.1.22",
+    "express": "^4.18.1",
     "next": "14.0.4",
     "polished": "^4.3.1",
     "react": "18.2.0",
@@ -32,6 +33,7 @@
     "@nx/cypress": "18.2.2",
     "@nx/eslint": "18.2.2",
     "@nx/eslint-plugin": "18.2.2",
+    "@nx/express": "^18.2.2",
     "@nx/jest": "18.2.2",
     "@nx/js": "18.2.2",
     "@nx/next": "18.2.2",
