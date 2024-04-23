@@ -16,6 +16,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 20,
+    slug: 'jphone-13-high-quality-value-buy-best-camera-performance',
     subCategory: {
       _id: '5f43ba27320000271ced01',
       name: 'Phone',
@@ -40,6 +41,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 100,
+    slug: 'wh-1000xm4-wireless-headphones-high-quality',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -64,6 +66,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 15,
+    slug: 's21-laptop-ultra-hd-led-screen-feature-2023-latest-model',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -88,6 +91,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 95,
+    slug: 'mini-polaroid-camera-for-girls-with-flash-light',
     subCategory: {
       _id: '5f43ba27320000271ced04',
       name: 'Camera',
@@ -112,6 +116,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 10,
+    slug: 'ag-oled65cxpua-4k-smart-oled-tv-new-model',
     subCategory: {
       name: 'Television',
       _id: '5f43ba27320000271ced05',
@@ -136,6 +141,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 25,
+    slug: 'orange-watch-12-high-quality-health-sensors',
     subCategory: {
       name: 'Watch',
       _id: '5f43ba27320000271ced06',
@@ -160,6 +166,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 50,
+    slug: 'ultra-tablet-qwerty-hd-10765-series-low-price',
     subCategory: {
       name: 'Tablet',
       _id: '5f43ba27320000271ced07',
@@ -184,6 +191,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 15,
+    slug: 'surface-laptop-4-xps-13-plus-64gb-i7-touch-screen',
     subCategory: {
       name: 'Laptop',
       _id: '5f43ba27320000271ced03',
@@ -208,6 +216,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 15,
+    slug: 'campro-hero10-black-sleek-design-2023-4k-video',
     subCategory: {
       name: 'Camera',
       _id: '5f43ba27320000271ced04',
@@ -232,6 +241,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 12,
+    slug: 'lp78245-smart-tv-oled-43-inch-4k-hd-dynamic-color-enhancer-usb-movie-playback',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -256,6 +266,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 30,
+    slug: 'vbi-mini-2-fly-more-combo-drone-sjrc-f22s-4k-pro-ptz-5-km-version-alpha-edition',
     subCategory: {
       name: 'Camera',
       _id: '5f43ba27320000271ced04',
@@ -280,6 +291,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 20,
+    slug: 'wireless-bluetooth-speaker-portable-sound-system',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -304,6 +316,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 70,
+    slug: 'tablet-pro-128-gb-hd-ram-8-gb-i8-1080p-4k-display',
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -328,6 +341,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 20,
+    slug: 'mobile-watch-a-series-gps-7-144-45-mm-red-design',
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -352,6 +366,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 20,
+    slug: 'lt-phone-ram-16-256-gb-rose-gold-guaranteed-quality',
     subCategory: {
       _id: '5f43ba27320000271ced01',
       name: 'Phone',
@@ -376,6 +391,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 15,
+    slug: 'gaming-laptop-zdy-15-6-inch-512-gb-vga-high-performance',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -400,6 +416,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 10,
+    slug: 'wash-machine-11-kg-front-loading-steam-cycle-feature',
     subCategory: {
       _id: '5f43ba27320000271ced08',
       name: 'Home',
@@ -424,6 +441,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 40,
+    slug: 'quietcomfort-45-wireless-headphones-advanced-noise-cancelling',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -448,6 +466,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 25,
+    slug: 'orange-watch-12-high-quality-health-sensor-advanced-tracking',
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -472,6 +491,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 15,
+    slug: 'campro-hero10-black-sleek-design-2023-4k-ultra-hd',
     subCategory: {
       _id: '5f43ba27320000271ced04',
       name: 'Camera',
@@ -496,6 +516,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 70,
+    slug: 'tablet-pro-128-gb-hd-ram-8-gb-i8-1080p-4k-advanced-graphics',
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -520,6 +541,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 10,
+    slug: 'ag-oled65cxpua-4k-smart-oled-tv-new-generation',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -544,6 +566,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 5,
+    slug: 'crystal-4k-smart-50-black-led-tv-hd-quality-high-definition',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -568,6 +591,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 50,
+    slug: 'mini-tablet-pro-16-inch-hd-pencil-128-gb-system-ram-28-gb',
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
@@ -592,6 +616,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 120,
+    slug: '134s-wireless-max-hifi-stereo-headphones-best-sound',
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
@@ -616,6 +641,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 12,
+    slug: 'game-station-15-disc-edition-with-console-full-set',
     subCategory: {
       _id: '5f43ba27320000271ced09',
       name: 'Gaming',
@@ -640,6 +666,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 10,
+    slug: 'nexus-rock-strix-scar-17-gaming-laptop-high-performance',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -664,6 +691,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 15,
+    slug: '2019-smart-laptop-256-gb-13-inch-pro-chip-core-1-tb-hd-ssd-performance',
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
@@ -688,6 +716,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 20,
+    slug: 'mobile-watch-a-series-gps-7-144-45-mm-red-rubber-band-advanced',
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
@@ -712,6 +741,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 15,
+    slug: 'lp78245-smart-tv-oled-43-inch-4k-hd-dynamic-color-usb-hq-visual',
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -736,6 +766,7 @@ export default [
     thumbnail: undefined,
     images: [],
     stock: 90,
+    slug: 'console-game-stick-hd-wireless-bluetooth-connect-gaming-experience',
     subCategory: {
       _id: '5f43ba27320000271ced09',
       name: 'Gaming',
