@@ -46,8 +46,8 @@ This project is developed using the <abbr title="MongoDB, Express.js, Next.js, a
 
 - [Next.js](https://nextjs.org/) (a [React.js](https://reactjs.org/) framework)
 - [TypeScript](https://www.typescriptlang.org/),
-- [Express](https://expressjs.com/) _(planned for future use)_
-- [Mongoose](https://mongoosejs.com/) (a ODM for [MongoDB](https://www.mongodb.com/)) _(planned for future use)_
+- [Express](https://expressjs.com/)
+- [Mongoose](https://mongoosejs.com/) (a ODM for [MongoDB](https://www.mongodb.com/))
 - [Node.js](https://nodejs.org/)
 - [Nx](https://nx.dev/)
 
