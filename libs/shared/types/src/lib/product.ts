@@ -1,5 +1,7 @@
 import type { Id, Timestamp } from './shared';
-import type { SubCategory } from './category';
+import type { SubCategory, SubCategorySchema } from './category';
+import type { Types } from 'mongoose';
+import type { Modify, Prettify } from './utils';
 
 export type Size = {
   width: number;
@@ -21,3 +23,14 @@ export type Product = Id &
     subCategory: SubCategory;
     isFeatured: boolean;
   };
+
+export type ProductSchema = Prettify<
+  Modify<
+    Product,
+    {
+      _id: Types.ObjectId;
+      subCategory: Types.Subdocument<SubCategorySchema>;
+      images: Types.Array<string>;
+    }
+  >
+>;
