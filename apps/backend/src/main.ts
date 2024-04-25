@@ -6,6 +6,9 @@
 import express from 'express';
 import * as path from 'path';
 import productRouter from './routers/products.router';
+import { connectDB } from '@e-shop/database';
+
+connectDB(process.env.DATABASE_URI);
 
 const app = express();
 
