@@ -1,6 +1,8 @@
 import { Controller } from '@e-shop/types';
+import { Product } from '@e-shop/database/models';
 
-const HTTP_STATUS_CODE = Object.freeze({
+const STATUS_CODE = Object.freeze({
+  OK: 200,
   NOT_IMPLEMENTED: 501,
 });
 
@@ -12,9 +14,12 @@ export default {
    * @access Public
    */
   async findAll(_, response) {
-    response
-      .status(HTTP_STATUS_CODE.NOT_IMPLEMENTED)
-      .send({ message: 'This action returns all products' });
+    const products = await Product.find().populate({
+      path: 'subCategory',
+      populate: { path: 'category' },
+    });
+
+    response.status(STATUS_CODE.OK).send(products);
   },
 
   /**
@@ -24,7 +29,7 @@ export default {
    * @access Public
    */
   async findOne(request, response) {
-    response.status(HTTP_STATUS_CODE.NOT_IMPLEMENTED).send({
+    response.status(STATUS_CODE.NOT_IMPLEMENTED).send({
       message: `This action returns a #${request.params.slug} product`,
     });
   },
@@ -37,7 +42,7 @@ export default {
    */
   async create(_, response) {
     response
-      .status(HTTP_STATUS_CODE.NOT_IMPLEMENTED)
+      .status(STATUS_CODE.NOT_IMPLEMENTED)
       .send({ message: 'This action create a new product' });
   },
 
@@ -48,7 +53,7 @@ export default {
    * @access Private/Admin
    */
   async update(request, response) {
-    response.status(HTTP_STATUS_CODE.NOT_IMPLEMENTED).send({
+    response.status(STATUS_CODE.NOT_IMPLEMENTED).send({
       message: `This action updates a #${request.params.slug} product`,
     });
   },
@@ -60,7 +65,7 @@ export default {
    * @access Private/Admin
    */
   async remove(request, response) {
-    response.status(HTTP_STATUS_CODE.NOT_IMPLEMENTED).send({
+    response.status(STATUS_CODE.NOT_IMPLEMENTED).send({
       message: `This action removes a #${request.params.slug} product`,
     });
   },
