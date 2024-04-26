@@ -1,0 +1,24 @@
+{
+  "name": "seed",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tools/seed/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "seed:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "seed:build:development"
+        },
+        "production": {
+          "buildTarget": "seed:build:production"
+        }
+      }
+    }
+  }
+}
