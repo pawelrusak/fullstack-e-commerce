@@ -8,7 +8,7 @@ import { SubCategory as TSubCategory } from '@e-shop/types';
 /**
  * @todo Refactor this function
  */
-async function seedData() {
+export async function seedData() {
   try {
     await mongoose.connect(process.env.DATABASE_URI);
 
