@@ -5,7 +5,7 @@
   "scripts": {
     "prepare": "husky",
     "commit": "cz",
-    "start": "npx nx run-many -t serve dev -p backend frontend",
+    "start": "npx nx run-many --parallel --target=dev,serve --projects=frontend,backend",
     "seed": "npx nx run seed:serve"
   },
   "private": false,
