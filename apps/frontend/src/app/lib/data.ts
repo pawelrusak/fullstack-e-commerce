@@ -1,5 +1,6 @@
-import { Product } from '@e-shop/types';
+import qs from 'qs';
 import { unstable_noStore as noStore } from 'next/cache';
+import { Product } from '@e-shop/types';
 
 export async function fetchFeaturedProducts(): Promise<Product[]> {
   /**
@@ -8,16 +9,15 @@ export async function fetchFeaturedProducts(): Promise<Product[]> {
   noStore();
 
   try {
-    const dataProducts = await fetch('http://localhost:3333/api/v1/products');
+    const queryString = qs.stringify({
+      isFeatured: true,
+    } satisfies Partial<Product>);
 
-    const products: Product[] = await dataProducts.json();
+    const dataProducts = await fetch(
+      `http://localhost:3333/api/v1/products?${queryString}`
+    );
 
-    /**
-     * @todo remove this after implementing filters on the corresponding backend endpoint
-     */
-    const featuredProducts = products.filter((product) => product.isFeatured);
-
-    return featuredProducts;
+    return await dataProducts.json();
   } catch (error) {
     console.error('Server Error:', error);
     throw new Error('Failed to fetch revenue data.');
