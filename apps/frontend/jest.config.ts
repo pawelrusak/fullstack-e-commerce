@@ -1,3 +1,4 @@
+import { Config } from 'jest';
 /* eslint-disable */
 export default {
   displayName: 'frontend',
@@ -8,4 +9,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/frontend',
-};
+  setupFiles: ['<rootDir>/setup-tests.ts'],
+} satisfies Config;
