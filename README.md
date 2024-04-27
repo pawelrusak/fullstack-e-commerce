@@ -35,10 +35,11 @@
 
 ## About The Project
 
-<figure align="center" styles="margin: 20px;">
-  <img src="./docs/assets/screenshot/homepage-screenshot.png" style="max-width: 800px; border-radius: 10px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;" alt="Project homepage with navbar, hero, values section and featured product section" />
-  <figcaption>Homepage screenshot</figcaption>
-</figure>
+<p align="center">
+  <br />
+  <img src="./docs/assets/screenshot/homepage-screenshot.png" alt="Project homepage with navbar, hero, values section and featured product section" />
+  <br />
+</p>
 
 This project is a full-stack e-commerce platform designed to sell electronic goods online. It follows the <abbr title="Minimum Viable Product">MVP</abbr> development strategy, which means that initially, only the most relevant features are implemented to make the platform usable. Additional features will be added gradually in the future. The design is based on a paid [Figma project](https://www.creativefabrica.com/pl/product/e-shop-e-commerce-website-design-ui/) and adheres to a Pixel Perfect approach and incorporates <abbr title="Responsive Web Design">RWD</abbr> to ensure optimal work across all devices. As mentioned earlier, the use of an MVP approach is the primary reason why some elements from the Figma project are not currently included in the project. These elements will be implemented in future updates.
 
