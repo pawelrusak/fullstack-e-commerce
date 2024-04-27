@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 
 export const Header = styled.header`
   color: ${({ theme }) => theme.color.text};
+  margin-bottom: 3rem;
 `;
 
 export const barContainerCss = css`
