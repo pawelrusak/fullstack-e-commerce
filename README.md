@@ -29,8 +29,8 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-    - [Development server](#development-server)
-    - [Storybook](#storybook)
+  - [Run Locally](#run-locally)
+  - [Storybook](#storybook)
 - [License](#license)
 
 ## About The Project
@@ -78,32 +78,51 @@ Before starting work on the project, ensure the following requirements are insta
 - [NPM](https://www.npmjs.com/): Version 18 or higher
 
 You will also need to install [Git](https://github.com/git-guides/install-git) to clone the repository.
+Also, you will need [MongoDB Connection Strings](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string)
 
 ### Installation
 
-First, clone the repository to your local machine using the command:
+Clone the project
 
 ```bash
 git clone https://github.com/pawelrusak/fullstack-e-commerce.git
 ```
 
-Then, install the project dependencies by running the following command in the project's root directory:
+Go to the project directory
+
+```bash
+cd fullstack-e-commerce
+```
+
+Install dependencies
 
 ```bash
 npm ci
 ```
 
-#### Development
+### Run Locally
 
-To start the development server, run the following command in the project's root directory:
+After [installation](#installation), create a `.env` file
+
+```bash
+cp ./apps/backend/.env.example ./apps/backend/.env
+```
+
+In the `./apps/backend/.env` file, add your [MongoDB Connection Strings](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string) to the `DATABASE_URI` variable
+
+```bash
+DATABASE_URI="your-mangodb-connection-string"
+```
+
+Start the server
 
 ```bash
 npm start
 ```
 
-#### Storybook
+### Storybook
 
-To browse the UI component library, run the following command in the project's root directory:
+After [installation](#installation), start the component explorer:
 
 ```bash
 npx nx storybook ui
