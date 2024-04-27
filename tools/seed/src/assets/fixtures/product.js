@@ -15,6 +15,7 @@ export default [
     description:
       'This high-performance smartphone features top-tier camera capabilities, offering the ultimate value in mobile photography. Perfect for capturing all your moments in stunning clarity.',
     images: [],
+    thumbnail: '/assets/images/products/placeholder-1.png',
     stock: 20,
     slug: 'jphone-13-high-quality-value-buy-best-camera-performance',
     subCategory: '5f43ba27320000271ced01',
@@ -35,6 +36,7 @@ export default [
     description:
       'Experience exceptional sound quality with advanced noise cancellation technology, designed to deliver the best audio experience on the go.',
     images: [],
+    thumbnail: '/assets/images/products/placeholder-2.png',
     stock: 100,
     slug: 'wh-1000xm4-wireless-headphones-high-quality',
     subCategory: '5f43ba27320000271ced02',
@@ -55,6 +57,7 @@ export default [
     description:
       'Featuring an Ultra HD LED screen, this latest model of our laptop range offers vibrant visuals and cutting-edge performance for professionals and creatives.',
     images: [],
+    thumbnail: '/assets/images/products/placeholder-3.png',
     stock: 15,
     slug: 's21-laptop-ultra-hd-led-screen-feature-2023-latest-model',
     subCategory: '5f43ba27320000271ced03',
@@ -75,6 +78,7 @@ export default [
     description:
       'This compact Polaroid camera comes with a built-in flash, perfect for capturing instant memories in any lighting condition. Ideal for young photographers.',
     images: [],
+    thumbnail: '/assets/images/products/placeholder-4.png',
     stock: 95,
     slug: 'mini-polaroid-camera-for-girls-with-flash-light',
     subCategory: '5f43ba27320000271ced04',
@@ -95,6 +99,7 @@ export default [
     description:
       'Immerse yourself in the stunning picture quality of our new 4K Smart OLED TV, perfect for any home theater setup. Experience vivid colors and detailed images like never before.',
     images: [],
+    thumbnail: '/assets/images/products/placeholder-5.png',
     stock: 10,
     slug: 'ag-oled65cxpua-4k-smart-oled-tv-new-model',
     subCategory: '5f43ba27320000271ced05',
@@ -115,6 +120,7 @@ export default [
     description:
       'Stay on top of your health with the Orange Watch 12, featuring advanced sensors to monitor your vital signs. Ideal for fitness enthusiasts and health-conscious individuals.',
     images: [],
+    thumbnail: '/assets/images/products/placeholder-6.png',
     stock: 25,
     slug: 'orange-watch-12-high-quality-health-sensors',
     subCategory: '5f43ba27320000271ced06',
@@ -135,6 +141,7 @@ export default [
     description:
       'Get the best of productivity and entertainment with our Ultra Tablet Qwerty HD. Featuring a responsive keyboard and a stunning HD display, this tablet is a great value for anyone.',
     images: [],
+    thumbnail: '/assets/images/products/placeholder-7.png',
     stock: 50,
     slug: 'ultra-tablet-qwerty-hd-10765-series-low-price',
     subCategory: '5f43ba27320000271ced07',
@@ -143,7 +150,7 @@ export default [
     _id: '5f43ba27320000271cee0008',
     name: 'Surface Laptop 4 XPS 13 Plus 64GB i7 Touch Screen',
     price: 2399.99,
-    isFeatured: false,
+    isFeatured: true,
     size: {
       width: 33,
       height: 23,
@@ -155,6 +162,7 @@ export default [
     description:
       'Our latest Surface Laptop 4 XPS 13 Plus offers the perfect blend of power and portability. Featuring a 64GB i7 processor and a touch screen for intuitive control, this laptop is ideal for professionals on the move.',
     images: [],
+    thumbnail: '/assets/images/products/placeholder-8.png',
     stock: 15,
     slug: 'surface-laptop-4-xps-13-plus-64gb-i7-touch-screen',
     subCategory: '5f43ba27320000271ced03',
@@ -175,6 +183,7 @@ export default [
     description:
       'The CamPro HERO10 Black offers sleek design and superior 4K video capabilities, making it an essential tool for any videographer looking to elevate their craft.',
     images: [],
+    thumbnail: '/assets/images/products/placeholder-9.png',
     stock: 15,
     slug: 'campro-hero10-black-sleek-design-2023-4k-video',
     subCategory: '5f43ba27320000271ced04',
@@ -183,7 +192,7 @@ export default [
     _id: '5f43ba27320000271cee0010',
     name: 'LP78245 Smart TV OLED 43 Inch 4K HD Dynamic Color Enhancer USB Movie Playback',
     price: 4599,
-    isFeatured: false,
+    isFeatured: true,
     size: {
       width: 97,
       height: 56,
@@ -195,6 +204,7 @@ export default [
     description:
       'The LP78245 offers an unmatched viewing experience with its 4K HD OLED display and dynamic color enhancer. Enjoy your favorite movies in stunning detail with USB playback capabilities.',
     images: [],
+    thumbnail: '/assets/images/products/placeholder-10.png',
     stock: 12,
     slug: 'lp78245-smart-tv-oled-43-inch-4k-hd-dynamic-color-enhancer-usb-movie-playback',
     subCategory: '5f43ba27320000271ced05',
@@ -263,7 +273,7 @@ export default [
     _id: '5f43ba27320000271cee0014',
     name: 'Mobile Watch A Series GPS 7/144 45 mm Red Design',
     price: 999,
-    isFeatured: false,
+    isFeatured: true,
     size: {
       width: 4.5,
       height: 4.5,
@@ -343,7 +353,7 @@ export default [
     _id: '5f43ba27320000271cee0018',
     name: 'QuietComfort 45 Wireless Headphones Advanced Noise Cancelling',
     price: 329.99,
-    isFeatured: false,
+    isFeatured: true,
     size: {
       width: 17,
       height: 20,
@@ -443,7 +453,7 @@ export default [
     _id: '5f43ba27320000271cee0023',
     name: 'Crystal 4K Smart 50” Black LED TV HD Quality High Definition',
     price: 8199,
-    isFeatured: false,
+    isFeatured: true,
     size: {
       width: 112,
       height: 65,
@@ -583,7 +593,7 @@ export default [
     _id: '5f43ba27320000271cee0030',
     name: 'LP78245 Smart TV OLED 43 Inch 4K HD Dynamic Color USB HQ Visual',
     price: 2299,
-    isFeatured: false,
+    isFeatured: true,
     size: {
       width: 97,
       height: 57,
