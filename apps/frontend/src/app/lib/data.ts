@@ -20,6 +20,6 @@ export async function fetchFeaturedProducts(): Promise<Product[]> {
     return await dataProducts.json();
   } catch (error) {
     console.error('Server Error:', error);
-    throw new Error('Failed to fetch revenue data.');
+    throw new Error('Failed to fetch featured products data.');
   }
 }
