@@ -11,4 +11,5 @@ export default {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../../coverage/libs/shared/ui',
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
+  setupFiles: ['<rootDir>/setup-tests.ts'],
 } satisfies Config;
