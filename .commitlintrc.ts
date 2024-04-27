@@ -16,6 +16,7 @@ const Configuration: UserConfig = {
         'i18n',
         'root',
         'state',
+        'seeder',
         'test-utils',
         'types',
         'ui',
