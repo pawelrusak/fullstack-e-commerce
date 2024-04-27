@@ -78,8 +78,7 @@ Before starting work on the project, ensure the following requirements are insta
 - [Node.js](https://nodejs.org/): Version 18 or higher
 - [NPM](https://www.npmjs.com/): Version 18 or higher
 
-You will also need to install [Git](https://github.com/git-guides/install-git) to clone the repository.
-Also, you will need [MongoDB Connection Strings](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string)
+You will also need to install [Git](https://github.com/git-guides/install-git) to clone the repository and you will need [MongoDB Connection Strings](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string).
 
 ### Installation
 
@@ -116,7 +115,7 @@ DATABASE_URI="your-mangodb-connection-string"
 ```
 
 > [!TIP]
-> You can add sample data to your app using seeder. Read more about it in the [Add sample data](#add-sample-data) section.
+> You can add sample data to your app using _seeder_. Read more about it in the "[Add sample data](#add-sample-data)" section.
 
 Start the server:
 
