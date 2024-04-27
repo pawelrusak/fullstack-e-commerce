@@ -36,7 +36,6 @@
 ## About The Project
 
 <p align="center">
-  <br />
   <img src="./docs/assets/screenshot/homepage-screenshot.png" alt="Project homepage with navbar, hero, values section and featured product section" />
   <br />
 </p>
