@@ -38,6 +38,11 @@ export const Thumbnail = styled.img`
   height: 21.4rem;
   display: block;
   object-fit: contain;
+
+  &[src$='placeholder-view.svg'] {
+    background-color: #d0d0d0;
+    border-radius: 1rem;
+  }
 `;
 
 export const ThumbnailContainer = styled.div`
