@@ -23,7 +23,7 @@ function removePropertiesWithObject(obj: object): object {
  *
  * @see {@link https://docs.strapi.io/dev-docs/api/rest/sort-pagination#example-sort-using-2-fields-and-set-the-order}
  */
-function sortQueryToObject(sortQuery: string | string[]) {
+function sortQueryToObject(sortQuery: unknown) {
   const sort = {};
 
   if (sortQuery && typeof sortQuery === 'string') {
@@ -53,12 +53,7 @@ export function getProductsQueryAndSort(
   /**
    * Sort
    */
-  if (request.query.sort && typeof request.query.sort === 'string') {
-    response.locals.sort = sortQueryToObject(request.query.sort);
-    next();
-  }
-
-  response.locals.sort = {};
+  response.locals.sort = sortQueryToObject(request.query.sort);
 
   next();
 }
