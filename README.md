@@ -30,6 +30,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Run Locally](#run-locally)
+  - [Add sample data](#add-sample-data)
   - [Storybook](#storybook)
 - [License](#license)
 
@@ -82,19 +83,19 @@ Also, you will need [MongoDB Connection Strings](https://www.mongodb.com/resourc
 
 ### Installation
 
-Clone the project
+Clone the project:
 
 ```bash
 git clone https://github.com/pawelrusak/fullstack-e-commerce.git
 ```
 
-Go to the project directory
+Go to the project directory:
 
 ```bash
 cd fullstack-e-commerce
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
 npm ci
@@ -102,22 +103,47 @@ npm ci
 
 ### Run Locally
 
-After [installation](#installation), create a `.env` file
+After [installation](#installation), create a `./apps/backend/.env` file:
 
 ```bash
 cp ./apps/backend/.env.example ./apps/backend/.env
 ```
 
-In the `./apps/backend/.env` file, add your [MongoDB Connection Strings](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string) to the `DATABASE_URI` variable
+Open the `./apps/backend/.env` file and add your [MongoDB Connection Strings](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string) to the `DATABASE_URI` variable:
 
 ```bash
 DATABASE_URI="your-mangodb-connection-string"
 ```
 
-Start the server
+> [!TIP]
+> You can add sample data to your app using seeder. Read more about it in the [Add sample data](#add-sample-data) section.
+
+Start the server:
 
 ```bash
 npm start
+```
+
+### Add sample data
+
+To populate your application with sample data, use the provided seeder tool.
+
+After [installation](#installation), create a `./tools/seed/.env` file:
+
+```bash
+cp ./tools/seed/.env.example ./tools/seed/.env
+```
+
+Open the `./tools/seed/.env` file and add your [MongoDB Connection Strings](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string) to the `DATABASE_URI` variable:
+
+```bash
+DATABASE_URI="your-mangodb-connection-string"
+```
+
+Add sample data to your database:
+
+```bash
+npm run seed
 ```
 
 ### Storybook
