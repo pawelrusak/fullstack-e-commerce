@@ -1,10 +1,11 @@
 import { Router } from 'express';
 import { catchAsync } from '../middlewares/async.middleware';
 import productsController from '../controllers/products.controller';
+import { getProductsQueryAndSort } from '../middlewares/queries/products';
 
 const router = Router();
 
-router.get('/', productsController.findAll);
+router.get('/', getProductsQueryAndSort, productsController.findAll);
 router.get('/:slug', productsController.findOne);
 
 /**

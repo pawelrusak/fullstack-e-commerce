@@ -14,10 +14,12 @@ export default {
    * @access Public
    */
   async findAll(_, response) {
-    const products = await Product.find().populate({
-      path: 'subCategory',
-      populate: { path: 'category' },
-    });
+    const products = await Product.find(response.locals.query)
+      .populate({
+        path: 'subCategory',
+        populate: { path: 'category' },
+      })
+      .sort(response.locals.sort);
 
     response.status(STATUS_CODE.OK).send(products);
   },
