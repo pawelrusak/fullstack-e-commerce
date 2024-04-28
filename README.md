@@ -32,6 +32,7 @@
   - [Run Locally](#run-locally)
   - [Add sample data](#add-sample-data)
   - [Storybook](#storybook)
+- [Known issues](#known-issues)
 - [License](#license)
 
 ## About The Project
@@ -152,6 +153,18 @@ After [installation](#installation), start the component explorer:
 ```bash
 npx nx storybook ui
 ```
+
+## Known issues
+
+Below is a list of the most important known issues from a user and developer perspective:
+
+- **Search Functionality**: Not yet implemented. [Downshift library](https://www.downshift-js.com/) or [Base UI autocomplete](https://mui.com/base-ui/react-autocomplete/) library will probably be used.
+- **Navigation Hamburger Menu**: Not yet implemented.
+- **SPA Routing**: Does not work as expected. Currently using JSX [Anchor Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) because the [Next.js Link component](https://nextjs.org/docs/pages/api-reference/components/link) throws an error when used with Styled-components. This issue is probably related to the NX UI library and will be fixed in future updates.
+- **Storybook raw SVG Import error**: Storybook throws an error with [NX raw SVG imports](https://nx.dev/recipes/react/adding-assets-react#adding-svgs). The Storybook webpack configuration probably needs adjustment to handle SVG files properly. I currently use SVG-based components.
+- **Asset Sources**: Missing the "[single source of truth](https://en.wikipedia.org/wiki/Single_source_of_truth)" for project assets.
+- **Responsive Styles**: Styles for small devices need improvement (It work, but I am not satisfied with the final result).
+- **Backend tests fails**: Need to remember to start the server (run: `npx nx serve backend`) before running the tests. Express server configuration must be exported and added to the tests setup - it will be fixed in future updates.
 
 ## License
 
