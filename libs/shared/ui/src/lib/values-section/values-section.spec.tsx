@@ -1,4 +1,3 @@
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { render, screen } from '@e-shop/test-utils';
 
 import ValuesSection from './values-section.component';

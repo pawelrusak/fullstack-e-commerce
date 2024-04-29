@@ -1,4 +1,3 @@
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { render } from '@e-shop/test-utils';
 
 import HeroSection from './hero-section.component';
