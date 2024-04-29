@@ -1,8 +1,9 @@
-import * as Styled from './products-carousel.styled';
 import Slider, { Settings } from 'react-slick';
 import { VisuallyHidden } from '@reach/visually-hidden';
-import { ArrowShortLeft, ArrowShortRight } from '../icons';
 import { EN } from '@e-shop/i18n';
+import * as Styled from './products-carousel.styled';
+import styles from './products-carousel.module.css';
+import { ArrowShortLeft, ArrowShortRight } from '../icons';
 
 type ArrowButtonProps = Omit<React.ComponentPropsWithRef<'button'>, 'children'>;
 
@@ -81,7 +82,7 @@ export function ProductsCarousel({
     <Slider
       {...settings}
       {...props}
-      className={`products-carousel ${className}`}
+      className={`${styles['slider-container']} ${className}`}
     >
       {children}
     </Slider>
