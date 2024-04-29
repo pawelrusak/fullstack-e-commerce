@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import * as polished from 'polished';
-import theme from '../theme/theme';
+import { theme } from '@e-shop/theme';
 
 export type ButtonProps = {
   variant?: 'outline' | 'solid';
