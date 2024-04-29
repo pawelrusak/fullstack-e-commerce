@@ -1,5 +1,6 @@
+import { Navbar } from '@e-shop/ui';
+import { GlobalStyle, AppThemeProvider } from '@e-shop/theme';
 import { StyledComponentsRegistry } from './registry';
-import { theme, ThemeProvider, GlobalStyle, Navbar } from '@e-shop/ui';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -17,11 +18,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body>
         <StyledComponentsRegistry>
-          <ThemeProvider theme={theme}>
+          <AppThemeProvider>
             <GlobalStyle />
             <Navbar />
             {children}
-          </ThemeProvider>
+          </AppThemeProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
