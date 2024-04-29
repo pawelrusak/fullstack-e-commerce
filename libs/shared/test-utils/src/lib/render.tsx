@@ -1,14 +1,12 @@
 import { render as rtlRender, RenderOptions } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { theme } from '@e-shop/ui';
+import { AppThemeProvider } from '@e-shop/theme';
 
 type WrapperProps = {
   children: React.ReactNode;
 };
 
 const Wrapper = ({ children }: WrapperProps) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return <AppThemeProvider>{children}</AppThemeProvider>;
 };
 
 const render = (
