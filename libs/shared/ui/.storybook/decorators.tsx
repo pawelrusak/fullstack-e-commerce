@@ -1,5 +1,4 @@
-import { GlobalStyle, theme } from '../src';
-import { ThemeProvider } from 'styled-components';
+import { GlobalStyle, AppThemeProvider } from '@e-shop/theme';
 import { Decorator } from '@storybook/react';
 
 export const GlobalStyleDecorator: Decorator = (Story) => {
@@ -13,8 +12,8 @@ export const GlobalStyleDecorator: Decorator = (Story) => {
 
 export const ThemeDecorator: Decorator = (Story) => {
   return (
-    <ThemeProvider theme={theme}>
+    <AppThemeProvider>
       <Story />
-    </ThemeProvider>
+    </AppThemeProvider>
   );
 };
