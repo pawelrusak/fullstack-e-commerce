@@ -18,6 +18,7 @@ const Configuration: UserConfig = {
         'state',
         'seeder',
         'test-utils',
+        'theme',
         'types',
         'ui',
       ],
