@@ -1,7 +1,7 @@
 import { VisuallyHidden } from '@reach/visually-hidden';
 import { EN } from '@e-shop/i18n';
 import * as Styled from './product-card.styled';
-import { CardIcon, HeartIcon, ShareIcon } from '../icons';
+import { CardIcon, HeartIcon, ShareIcon } from '@e-shop/icons';
 
 type ProductCardProps = React.ComponentPropsWithRef<'button'>;
 

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { CardsSection } from './cards-section.component';
-import { ArrowLongRightIcon } from '../icons';
+import { ArrowLongRightIcon } from '@e-shop/icons';
 import { StripeInner } from '../../.././.storybook/utils-components';
 
 export default {

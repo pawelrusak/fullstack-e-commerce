@@ -1,7 +1,7 @@
 import React from 'react';
 import { Field } from './field.component';
 import styled from 'styled-components';
-import { CheckIcon, EyeSlashIcon } from '../icons';
+import { CheckIcon, EyeSlashIcon } from '@e-shop/icons';
 import type { FieldControlInputProps, FieldProps } from './field.component';
 import type { Meta, StoryObj } from '@storybook/react';
 

@@ -3,7 +3,7 @@ import { VisuallyHidden } from '@reach/visually-hidden';
 import { EN } from '@e-shop/i18n';
 import * as Styled from './products-carousel.styled';
 import styles from './products-carousel.module.css';
-import { ArrowShortLeft, ArrowShortRight } from '../icons';
+import { ArrowShortLeft, ArrowShortRight } from '@e-shop/icons';
 
 type ArrowButtonProps = Omit<React.ComponentPropsWithRef<'button'>, 'children'>;
 

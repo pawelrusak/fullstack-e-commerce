@@ -6,7 +6,7 @@ import {
   SecurityIcon,
   DeliveryIcon,
   ReturnIcon,
-} from '../icons';
+} from '@e-shop/icons';
 
 export default {
   component: ValuesSection,

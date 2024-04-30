@@ -1,7 +1,7 @@
 import { render, screen } from '@e-shop/test-utils';
 
 import ValuesSection from './values-section.component';
-import { HeadphoneIcon } from '../icons';
+import { HeadphoneIcon } from '@e-shop/icons';
 import { faker } from '@faker-js/faker';
 
 describe('ValuesSection', () => {

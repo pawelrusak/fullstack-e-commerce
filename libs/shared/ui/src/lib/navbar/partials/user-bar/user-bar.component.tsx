@@ -3,7 +3,7 @@ import { EN } from '@e-shop/i18n';
 import { Brand } from '../../../brand';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import * as SharedStyled from '../../navbar.styled';
-import { CardIconWithDot, UserIcon } from '../../../icons';
+import { CardIconWithDot, UserIcon } from '@e-shop/icons';
 import type { HasBorderProps } from './user-bar.styled';
 
 export type UserBarProps = HasBorderProps;

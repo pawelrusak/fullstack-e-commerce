@@ -4,7 +4,7 @@ import styled, { css, DefaultTheme } from 'styled-components';
 import {
   LocationIcon as RawLocationIcon,
   PhoneIcon as RawPhoneIcon,
-} from '../../../icons';
+} from '@e-shop/icons';
 import * as helper from 'polished';
 import { padding } from 'styled-system';
 import type { PaddingProps } from 'styled-system';

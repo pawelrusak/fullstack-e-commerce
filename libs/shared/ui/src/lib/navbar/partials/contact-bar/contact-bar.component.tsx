@@ -1,6 +1,6 @@
 import * as Styled from './contact-bar.styled';
 import * as SharedStyled from '../../navbar.styled';
-import { FacebookIcon, TwitterIcon, InstagramIcon } from '../../../icons';
+import { FacebookIcon, TwitterIcon, InstagramIcon } from '@e-shop/icons';
 import { EN } from '@e-shop/i18n';
 import { VisuallyHidden } from '@reach/visually-hidden';
 
