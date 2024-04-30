@@ -19,6 +19,7 @@
       "@e-shop/database/models": ["libs/shared/database/src/models.ts"],
       "@e-shop/fixtures": ["libs/fixtures/src/index.ts"],
       "@e-shop/i18n": ["libs/shared/i18n/src/index.ts"],
+      "@e-shop/icons": ["libs/shared/icons/src/index.ts"],
       "@e-shop/test-utils": ["libs/shared/test-utils/src/index.ts"],
       "@e-shop/theme": ["libs/shared/theme/src/index.ts"],
       "@e-shop/theme/server": ["libs/shared/theme/src/server.ts"],
