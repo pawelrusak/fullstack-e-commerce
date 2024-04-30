@@ -1,11 +1,7 @@
 'use client';
 
-import {
-  CardsSection,
-  ArrowLongRightIcon,
-  ProductCard,
-  ProductsCarousel,
-} from '@e-shop/ui';
+import { CardsSection, ProductCard, ProductsCarousel } from '@e-shop/ui';
+import { ArrowLongRightIcon } from '@e-shop/icons';
 import { Product } from '@e-shop/types';
 import { EN } from '@e-shop/i18n';
 

@@ -1,12 +1,12 @@
 'use client';
 
+import { ValuesSection as ValuesInfo } from '@e-shop/ui';
 import {
-  ValuesSection as ValuesInfo,
   SecurityIcon,
   HeadphoneIcon,
   DeliveryIcon,
   ReturnIcon,
-} from '@e-shop/ui';
+} from '@e-shop/icons';
 import { EN } from '@e-shop/i18n';
 
 const OUR_VALUES = [
