@@ -14,6 +14,7 @@ const Configuration: UserConfig = {
         'fixtures',
         'frontend',
         'i18n',
+        'icons',
         'root',
         'state',
         'seeder',
