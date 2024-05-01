@@ -1,9 +1,16 @@
 'use client';
 
+import NextLink from 'next/link';
+import styled from 'styled-components';
 import { CardsSection, ProductCard, ProductsCarousel } from '@e-shop/ui';
 import { ArrowLongRightIcon } from '@e-shop/icons';
 import { Product } from '@e-shop/types';
 import { EN } from '@e-shop/i18n';
+
+// @todo create ui component for this
+const Link = styled(NextLink)`
+  text-decoration: none;
+`;
 
 type FeaturedProductsSectionProps = {
   products: Product[];
@@ -16,7 +23,7 @@ export default function FeaturedProductsSection({
     <CardsSection>
       <CardsSection.Header>
         <CardsSection.Title>{EN.FEATURED_PRODUCTS.TITLE}</CardsSection.Title>
-        <CardsSection.Link href="#">
+        <CardsSection.Link as={Link} href="/products">
           {EN.FEATURED_PRODUCTS.LINK} &nbsp;&nbsp;
           <ArrowLongRightIcon aria-hidden />
         </CardsSection.Link>
@@ -25,32 +32,34 @@ export default function FeaturedProductsSection({
       <CardsSection.Body>
         <ProductsCarousel>
           {products.map((product) => (
-            <ProductCard key={product._id}>
-              <ProductCard.ThumbnailContainer>
-                <ProductCard.Thumbnail
-                  src={
-                    product.thumbnail || '/assets/images/placeholder-view.svg'
-                  }
-                  width={236}
-                  height={214}
-                  alt=""
-                />
-              </ProductCard.ThumbnailContainer>
-              <ProductCard.Category>
-                {product.subCategory.name}
-              </ProductCard.Category>
-              <ProductCard.Header>
-                <ProductCard.Title>{product.name}</ProductCard.Title>
-              </ProductCard.Header>
-              <ProductCard.PriceContainer>
-                <ProductCard.CurrentPrice>
-                  {new Intl.NumberFormat('en-US', {
-                    style: 'currency',
-                    currency: 'USD',
-                  }).format(product.price)}
-                </ProductCard.CurrentPrice>
-              </ProductCard.PriceContainer>
-            </ProductCard>
+            <Link key={product._id} href={`/products/${product.slug}`}>
+              <ProductCard>
+                <ProductCard.ThumbnailContainer>
+                  <ProductCard.Thumbnail
+                    src={
+                      product.thumbnail || '/assets/images/placeholder-view.svg'
+                    }
+                    width={236}
+                    height={214}
+                    alt=""
+                  />
+                </ProductCard.ThumbnailContainer>
+                <ProductCard.Category>
+                  {product.subCategory.name}
+                </ProductCard.Category>
+                <ProductCard.Header>
+                  <ProductCard.Title>{product.name}</ProductCard.Title>
+                </ProductCard.Header>
+                <ProductCard.PriceContainer>
+                  <ProductCard.CurrentPrice>
+                    {new Intl.NumberFormat('en-US', {
+                      style: 'currency',
+                      currency: 'USD',
+                    }).format(product.price)}
+                  </ProductCard.CurrentPrice>
+                </ProductCard.PriceContainer>
+              </ProductCard>
+            </Link>
           ))}
         </ProductsCarousel>
       </CardsSection.Body>
