@@ -4,6 +4,7 @@ export * from './lib/brand';
 export * from './lib/field';
 export * from './lib/button';
 export * from './lib/navbar';
+export * from './lib/heading';
 export * from './lib/breadcrumb';
 export * from './lib/hero-section';
 export * from './lib/product-card';
