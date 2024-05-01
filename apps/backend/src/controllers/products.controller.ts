@@ -31,9 +31,16 @@ export default {
    * @access Public
    */
   async findOne(request, response) {
-    response.status(STATUS_CODE.NOT_IMPLEMENTED).send({
-      message: `This action returns a #${request.params.slug} product`,
-    });
+    const slug = request.params.slug;
+
+    const product = await Product.findOne({ slug })
+      .populate({
+        path: 'subCategory',
+        populate: { path: 'category' },
+      })
+      .orFail();
+
+    response.status(STATUS_CODE.OK).send(product);
   },
 
   /**
