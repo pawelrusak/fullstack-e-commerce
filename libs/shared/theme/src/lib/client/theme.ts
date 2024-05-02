@@ -18,7 +18,7 @@ const theme: DefaultTheme = {
     semiBold: 600,
     bold: 700,
   },
-  space: [0, 0.2, 0.4, 0.8, 1.6, 3.2],
+  space: [0, 0.2, 0.4, 0.8, 1.6, 2.4, 3.2],
   screens: {
     sm: '640px',
     md: '768px',
