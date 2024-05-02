@@ -75,5 +75,19 @@
   "FEATURED_PRODUCTS": {
     "TITLE": "Featured Products",
     "LINK": "View All"
+  },
+  "SPECIFICATION": {
+    "PROPERTY": {
+      "BRAND": "Brand",
+      "SIZE": "Size",
+      "WEIGHT": "Weight",
+      "DELIVERY": "Delivery",
+      "VARIANT": "Variant"
+    },
+    "SIZE": {
+      "DIMENSIONS": "W x D x H",
+      "UNIT": "centimeters"
+    },
+    "UNKNOWN_PROPERTY": "Unknown"
   }
 }
