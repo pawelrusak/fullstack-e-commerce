@@ -8,6 +8,7 @@ export * from './lib/heading';
 export * from './lib/breadcrumb';
 export * from './lib/hero-section';
 export * from './lib/product-card';
+export * from './lib/specification';
 export * from './lib/cards-section';
 export * from './lib/layout-wrapper';
 export * from './lib/values-section';
