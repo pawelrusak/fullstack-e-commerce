@@ -62,6 +62,7 @@ export type StyledHeadingProps = {
 };
 
 export const Heading = styled.h1<StyledHeadingProps>`
+  display: block;
   ${({ level = 1 }) => headingLevelExtra[level]}
 
   ${margin}
