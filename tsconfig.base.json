@@ -24,7 +24,8 @@
       "@e-shop/theme": ["libs/shared/theme/src/index.ts"],
       "@e-shop/theme/server": ["libs/shared/theme/src/server.ts"],
       "@e-shop/types": ["libs/shared/types/src/index.ts"],
-      "@e-shop/ui": ["libs/shared/ui/src/index.ts"]
+      "@e-shop/ui": ["libs/shared/ui/src/index.ts"],
+      "@e-shop/utils": ["libs/shared/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
