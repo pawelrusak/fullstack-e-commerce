@@ -22,6 +22,7 @@ const Configuration: UserConfig = {
         'theme',
         'types',
         'ui',
+        'utils',
       ],
     ],
   },
