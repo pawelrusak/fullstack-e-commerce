@@ -6,6 +6,7 @@ import { CardsSection, ProductCard, ProductsCarousel } from '@e-shop/ui';
 import { ArrowLongRightIcon } from '@e-shop/icons';
 import { Product } from '@e-shop/types';
 import { EN } from '@e-shop/i18n';
+import { getCurrencyFormat } from '@e-shop/utils';
 
 // @todo create ui component for this
 const Link = styled(NextLink)`
@@ -52,10 +53,7 @@ export default function FeaturedProductsSection({
                 </ProductCard.Header>
                 <ProductCard.PriceContainer>
                   <ProductCard.CurrentPrice>
-                    {new Intl.NumberFormat('en-US', {
-                      style: 'currency',
-                      currency: 'USD',
-                    }).format(product.price)}
+                    {getCurrencyFormat(product.price)}
                   </ProductCard.CurrentPrice>
                 </ProductCard.PriceContainer>
               </ProductCard>
