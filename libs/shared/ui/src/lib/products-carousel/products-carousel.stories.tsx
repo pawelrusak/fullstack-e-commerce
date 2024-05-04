@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ProductsCarousel } from './products-carousel.component';
 import { ProductCard } from '../product-card';
 import { products } from '@e-shop/fixtures';
+import { getCurrencyFormat } from '@e-shop/utils';
+
 import image1 from './storybook-assets/placeholder-1.png';
 import image2 from './storybook-assets/placeholder-2.png';
 import image3 from './storybook-assets/placeholder-3.png';
@@ -61,10 +63,7 @@ export default {
             </ProductCard.Header>
             <ProductCard.PriceContainer>
               <ProductCard.CurrentPrice>
-                {new Intl.NumberFormat('en-US', {
-                  style: 'currency',
-                  currency: 'USD',
-                }).format(product.price)}
+                {getCurrencyFormat(product.price)}
               </ProductCard.CurrentPrice>
             </ProductCard.PriceContainer>
           </ProductCard>
