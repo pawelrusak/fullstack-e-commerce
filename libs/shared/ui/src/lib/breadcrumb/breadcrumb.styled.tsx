@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Nav = styled.nav`
-  margin-bottom: 4.8rem;
-`;
+export const Nav = styled.nav``;
 
 export type StyledLinkProps = {
   isCurrent?: boolean;
