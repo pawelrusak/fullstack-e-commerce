@@ -5,17 +5,24 @@ import * as helper from 'polished';
 
 export const ContainerSection = styled.section`
   max-width: 83.3rem;
+  width: 100%;
 `;
 
 export const SelectedImage = styled.img`
-  aspect-ratio: 541/833;
+  aspect-ratio: 833/541;
   border-radius: 2.5rem;
+  width: 100%;
+  object-fit: contain;
 `;
 
 export const List = styled.ul`
   list-style: none;
   display: flex;
   gap: 2.4rem;
+
+  &:has(li) {
+    margin-top: 3.2rem;
+  }
 `;
 
 export const ListItem = styled.li``;
