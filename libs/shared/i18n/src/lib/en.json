@@ -89,5 +89,11 @@
       "UNIT": "centimeters"
     },
     "UNKNOWN_PROPERTY": "Unknown"
+  },
+  "QUANTITY_SELECTION": {
+    "FIELDSET": "Product Quantity",
+    "INPUT_LABEL": "Quantity",
+    "INCREASE": "increase quantity",
+    "DECREASE": "decrease quantity"
   }
 }
