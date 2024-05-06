@@ -36,10 +36,14 @@ export const Button = styled.button<StyledButtonProps>`
 
   transition: all 0.2s ease-in;
 
-  &:hover,
-  &:focus {
+  &:hover:enabled,
+  &:focus:enabled {
     background-color: ${({ theme }) => theme.color.primary};
     color: ${({ theme }) => theme.color.background};
+  }
+
+  &:disabled {
+    cursor: not-allowed;
   }
 `;
 
