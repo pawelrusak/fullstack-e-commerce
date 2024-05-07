@@ -1,4 +1,4 @@
-export type Options = {
+type Options = {
   max?: number;
   min?: number;
 };

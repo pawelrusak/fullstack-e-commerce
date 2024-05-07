@@ -1,4 +1,4 @@
-export type Options = {
+type Options = {
   locales: Intl.LocalesArgument;
 } & Omit<Intl.NumberFormatOptions, 'style'>;
 
