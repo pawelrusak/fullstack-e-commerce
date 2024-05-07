@@ -33,22 +33,7 @@ export function QuantitySelection({
     return quantity;
   });
 
-  const increaseButtonRef = React.useRef<HTMLButtonElement>(null);
-  const decreaseButtonRef = React.useRef<HTMLButtonElement>(null);
-
   React.useEffect(() => {
-    if (initialQuantity === 0 && decreaseButtonRef.current) {
-      decreaseButtonRef.current.disabled = true;
-    }
-
-    if (
-      maxQuantity &&
-      initialQuantity === maxQuantity &&
-      increaseButtonRef.current
-    ) {
-      increaseButtonRef.current.disabled = true;
-    }
-
     setQuantity(initialQuantity);
   }, [initialQuantity, maxQuantity]);
 
@@ -62,14 +47,6 @@ export function QuantitySelection({
 
       return currentQuantity;
     });
-
-    if (increaseButtonRef.current) {
-      increaseButtonRef.current.disabled = false;
-    }
-
-    if (quantity === 0 && decreaseButtonRef.current) {
-      decreaseButtonRef.current.disabled = true;
-    }
   };
 
   const handleClickIncrease = () => {
@@ -84,37 +61,10 @@ export function QuantitySelection({
 
       return prevQuantity + 1;
     });
-
-    if (quantity === maxQuantity && increaseButtonRef.current) {
-      increaseButtonRef.current.disabled = true;
-    }
-
-    if (decreaseButtonRef.current) {
-      decreaseButtonRef.current.disabled = false;
-    }
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.valueAsNumber;
-
-    if (
-      inputValue === 0 &&
-      decreaseButtonRef.current &&
-      increaseButtonRef.current
-    ) {
-      decreaseButtonRef.current.disabled = true;
-      increaseButtonRef.current.disabled = false;
-    }
-
-    if (
-      maxQuantity &&
-      inputValue === maxQuantity &&
-      increaseButtonRef.current &&
-      decreaseButtonRef.current
-    ) {
-      increaseButtonRef.current.disabled = true;
-      decreaseButtonRef.current.disabled = false;
-    }
 
     // @todo create a function to return a value from a specified range
     let inputQuantity = Math.max(0, inputValue);
@@ -140,9 +90,9 @@ export function QuantitySelection({
         <Styled.Button
           type="button"
           onClick={handleClickDecrease}
-          ref={decreaseButtonRef}
           aria-controls={inputId}
           data-testid={DATA_TEST_ID.DECREASE}
+          disabled={quantity === 0}
         >
           <VisuallyHidden>{EN.QUANTITY_SELECTION.DECREASE}</VisuallyHidden>
           <MinusIcon aria-hidden />
@@ -152,9 +102,9 @@ export function QuantitySelection({
           backgroundColor="#f4f4f4"
           order="3"
           onClick={handleClickIncrease}
-          ref={increaseButtonRef}
           aria-controls={inputId}
           data-testid={DATA_TEST_ID.INCREASE}
+          disabled={quantity === maxQuantity}
         >
           <VisuallyHidden>{EN.QUANTITY_SELECTION.INCREASE}</VisuallyHidden>
           <PlusIcon aria-hidden />
