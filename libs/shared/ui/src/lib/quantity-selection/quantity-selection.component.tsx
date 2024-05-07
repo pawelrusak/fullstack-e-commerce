@@ -1,10 +1,10 @@
 import React from 'react';
 import { EN } from '@e-shop/i18n';
 import { Product } from '@e-shop/types';
-import { getValueInRange } from '@e-shop/utils';
 import { PlusIcon, MinusIcon } from '@e-shop/icons';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import * as Styled from './quantity-selection.styled';
+import { useQuantityInRange } from './quantity-selection.hooks';
 
 type Quantity = Product['stock'];
 
@@ -26,57 +26,11 @@ export function QuantitySelection({
   onChangeQuantity,
 }: QuantitySelectionProps) {
   const inputId = React.useId();
-  const [quantity, setQuantity] = React.useState<Quantity>(() =>
-    getValueInRange(initialQuantity, { min: 0, max: maxQuantity })
-  );
-
-  React.useEffect(() => {
-    setQuantity(() =>
-      getValueInRange(initialQuantity, { min: 0, max: maxQuantity })
-    );
-  }, [initialQuantity, maxQuantity]);
-
-  const handleClickDecrease = () => {
-    const updatedQuantity = getValueInRange(quantity - 1, {
-      min: 0,
+  const { quantity, handleDecrease, handleIncrease, handleInputChange } =
+    useQuantityInRange(initialQuantity, {
       max: maxQuantity,
+      onChangeQuantity,
     });
-
-    setQuantity(updatedQuantity);
-
-    if (onChangeQuantity) {
-      onChangeQuantity(updatedQuantity);
-    }
-  };
-
-  const handleClickIncrease = () => {
-    const updatedQuantity = getValueInRange(quantity + 1, {
-      min: 0,
-      max: maxQuantity,
-    });
-
-    setQuantity(updatedQuantity);
-
-    if (onChangeQuantity) {
-      onChangeQuantity(updatedQuantity);
-    }
-  };
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const inputValue = event.currentTarget.valueAsNumber;
-    let updatedQuantity = isNaN(inputValue) ? 0 : inputValue;
-
-    updatedQuantity = getValueInRange(inputValue, {
-      min: 0,
-      max: maxQuantity,
-    });
-
-    setQuantity(updatedQuantity);
-
-    if (onChangeQuantity) {
-      onChangeQuantity(updatedQuantity);
-    }
-  };
 
   return (
     <Styled.Fieldset>
@@ -86,7 +40,7 @@ export function QuantitySelection({
       <Styled.Wrapper>
         <Styled.Button
           type="button"
-          onClick={handleClickDecrease}
+          onClick={handleDecrease}
           aria-controls={inputId}
           data-testid={DATA_TEST_ID.DECREASE}
           disabled={quantity === 0}
@@ -98,7 +52,7 @@ export function QuantitySelection({
           type="button"
           backgroundColor="#f4f4f4"
           order="3"
-          onClick={handleClickIncrease}
+          onClick={handleIncrease}
           aria-controls={inputId}
           data-testid={DATA_TEST_ID.INCREASE}
           disabled={quantity === maxQuantity}
@@ -115,7 +69,7 @@ export function QuantitySelection({
             name="quantity"
             id={inputId}
             value={quantity}
-            onChange={handleChange}
+            onChange={handleInputChange}
             min={0}
             max={maxQuantity}
             data-testid={DATA_TEST_ID.INPUT}
