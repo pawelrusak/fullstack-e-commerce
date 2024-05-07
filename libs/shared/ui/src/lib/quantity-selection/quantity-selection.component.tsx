@@ -1,6 +1,7 @@
 import React from 'react';
 import { EN } from '@e-shop/i18n';
 import { Product } from '@e-shop/types';
+import { getValueInRange } from '@e-shop/utils';
 import { PlusIcon, MinusIcon } from '@e-shop/icons';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import * as Styled from './quantity-selection.styled';
@@ -25,59 +26,55 @@ export function QuantitySelection({
   onChangeQuantity,
 }: QuantitySelectionProps) {
   const inputId = React.useId();
-  const [quantity, setQuantity] = React.useState<Quantity>(() => {
-    const quantity = Math.max(0, initialQuantity);
-    if (maxQuantity && 0 < maxQuantity) {
-      return Math.min(maxQuantity, quantity);
-    }
-    return quantity;
-  });
+  const [quantity, setQuantity] = React.useState<Quantity>(() =>
+    getValueInRange(initialQuantity, { min: 0, max: maxQuantity })
+  );
 
   React.useEffect(() => {
-    setQuantity(initialQuantity);
+    setQuantity(() =>
+      getValueInRange(initialQuantity, { min: 0, max: maxQuantity })
+    );
   }, [initialQuantity, maxQuantity]);
 
   const handleClickDecrease = () => {
-    setQuantity((prevQuantity) => {
-      const currentQuantity = Math.max(0, prevQuantity - 1);
-
-      if (onChangeQuantity) {
-        onChangeQuantity(currentQuantity);
-      }
-
-      return currentQuantity;
+    const updatedQuantity = getValueInRange(quantity - 1, {
+      min: 0,
+      max: maxQuantity,
     });
+
+    setQuantity(updatedQuantity);
+
+    if (onChangeQuantity) {
+      onChangeQuantity(updatedQuantity);
+    }
   };
 
   const handleClickIncrease = () => {
-    setQuantity((prevQuantity) => {
-      if (maxQuantity) {
-        return Math.min(maxQuantity, prevQuantity + 1);
-      }
-
-      if (onChangeQuantity) {
-        onChangeQuantity(prevQuantity + 1);
-      }
-
-      return prevQuantity + 1;
+    const updatedQuantity = getValueInRange(quantity + 1, {
+      min: 0,
+      max: maxQuantity,
     });
+
+    setQuantity(updatedQuantity);
+
+    if (onChangeQuantity) {
+      onChangeQuantity(updatedQuantity);
+    }
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const inputValue = event.target.valueAsNumber;
+    const inputValue = event.currentTarget.valueAsNumber;
+    let updatedQuantity = isNaN(inputValue) ? 0 : inputValue;
 
-    // @todo create a function to return a value from a specified range
-    let inputQuantity = Math.max(0, inputValue);
+    updatedQuantity = getValueInRange(inputValue, {
+      min: 0,
+      max: maxQuantity,
+    });
 
-    if (maxQuantity && 0 < maxQuantity) {
-      inputQuantity = Math.min(maxQuantity, inputQuantity);
-    }
-
-    setQuantity(inputQuantity);
+    setQuantity(updatedQuantity);
 
     if (onChangeQuantity) {
-      inputQuantity = isNaN(inputQuantity) ? initialQuantity : inputQuantity;
-      onChangeQuantity(inputQuantity);
+      onChangeQuantity(updatedQuantity);
     }
   };
 
