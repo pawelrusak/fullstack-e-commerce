@@ -8,5 +8,5 @@ export const Divider = styled.hr`
   border: none;
   border-top: 1px solid
     ${({ theme }) => helper.transparentize(0.75, theme.color.text)};
-  margin: 16px 0;
+  margin: 1.6rem 0;
 `;
