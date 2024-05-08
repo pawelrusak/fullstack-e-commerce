@@ -1,5 +1,11 @@
 import { Product } from '@e-shop/types';
-import { LayoutWrapper, Heading, Divider, Gallery } from '@e-shop/ui';
+import {
+  LayoutWrapper,
+  Heading,
+  Divider,
+  Gallery,
+  Paragraph,
+} from '@e-shop/ui';
 import { getCurrencyFormat } from '@e-shop/utils';
 import { fetchProductDetails } from '../../lib/data';
 import ProductDetailsBreadcrumb from '../../components/product-details-breadcrumb.component';
@@ -48,7 +54,7 @@ export default async function ProductDetailsPage({
               <ProductDetailsControls />
             </form>
           }
-          details={product.description}
+          details={<Paragraph>{product.description}</Paragraph>}
         />
         <Divider style={{ margin: '8rem 0 6.4rem' }} />
         <aside>
