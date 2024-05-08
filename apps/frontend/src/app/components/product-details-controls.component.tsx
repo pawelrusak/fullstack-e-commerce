@@ -8,10 +8,22 @@ import { EN } from '@e-shop/i18n';
 
 import styled from 'styled-components';
 
-const Container = styled.div`
-  display: flex;
+const ControlsContainer = styled.div`
+  /* display: flex;
   justify-content: space-between;
+  align-items: center; */
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
   align-items: center;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+    /* display: flex; */
+    justify-content: space-between;
+    flex-direction: row;
+    /* align-items: center; */
+  }
 `;
 
 const ButtonsWrapper = styled.div`
@@ -47,7 +59,7 @@ export default function ProductDetailsControls() {
   };
 
   return (
-    <Container>
+    <ControlsContainer>
       <QuantitySelection onChangeQuantity={handleChangeQuantity} />
       <ButtonsWrapper>
         <Button type="submit" onClick={handleClickBuyNow}>
@@ -64,6 +76,6 @@ export default function ProductDetailsControls() {
           </VisuallyHidden>
         </CardButton>
       </ButtonsWrapper>
-    </Container>
+    </ControlsContainer>
   );
 }

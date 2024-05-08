@@ -1,5 +1,6 @@
 'use client';
 
+import styled from 'styled-components';
 import { Specification } from '@e-shop/ui';
 import { EN } from '@e-shop/i18n';
 import { Product } from '@e-shop/types';
@@ -7,6 +8,10 @@ import { Product } from '@e-shop/types';
 type ProductSpecificationExcerptProps = {
   product: Pick<Product, 'brand' | 'size'>;
 };
+
+const ItalicSpecificationDetails = styled(Specification.Details)`
+  font-style: italic;
+`;
 
 export default function ProductSpecificationExcerpt({
   product,
@@ -29,16 +34,16 @@ export default function ProductSpecificationExcerpt({
       <Specification.Property>
         {EN.SPECIFICATION.PROPERTY.WEIGHT}
       </Specification.Property>
-      <Specification.Details style={{ fontStyle: 'italic' }}>
+      <ItalicSpecificationDetails>
         {EN.SPECIFICATION.UNKNOWN_PROPERTY}
-      </Specification.Details>
+      </ItalicSpecificationDetails>
 
       <Specification.Property>
         {EN.SPECIFICATION.PROPERTY.DELIVERY}
       </Specification.Property>
-      <Specification.Details style={{ fontStyle: 'italic' }}>
+      <ItalicSpecificationDetails>
         {EN.SPECIFICATION.UNKNOWN_PROPERTY}
-      </Specification.Details>
+      </ItalicSpecificationDetails>
     </Specification>
   );
 }

@@ -4,12 +4,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Divider } from '@e-shop/ui';
 
+// @todo improve styles for 1366x768px
 const LayoutArticle = styled.article``;
 
 const SummaryContainer = styled.div`
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.4rem;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+    margin-bottom: 1.6rem;
     display: grid;
     grid-template-columns: 54.8% 41.5%;
     grid-template-rows: repeat(4, fit-content);
@@ -68,19 +70,34 @@ const GalleryWrapper = styled.div`
 
 const MiddleContainer = styled.div`
   margin-bottom: 2.4rem;
+
   @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
     display: grid;
-    grid-template-columns: 51.25% 42.57%;
+    grid-template-columns: 50% 47%;
     grid-template-areas: 'values  form';
     justify-content: space-between;
     align-items: end;
     margin-bottom: 10rem;
   }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.xxl}) {
+    grid-template-columns: 51.25% 42.57%;
+  }
 `;
 
 const ValuesWrapper = styled.div`
+  display: none;
+  margin-bottom: 2.4rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+    display: block;
+    /* grid-area: values; */
+    /* margin-bottom: 0; */
+  }
+
   @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
     grid-area: values;
+    margin-bottom: 0;
   }
 `;
 
