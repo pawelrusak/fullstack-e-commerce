@@ -111,6 +111,10 @@
         "TITLE": "Return Available",
         "DESCRIPTION": "See return policy"
       }
+    },
+    "BUYING_FORM": {
+      "ADD_TO_CART": "Add to Cart",
+      "BUY_NOW": "Buy Now"
     }
   }
 }
