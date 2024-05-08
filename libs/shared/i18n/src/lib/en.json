@@ -95,5 +95,22 @@
     "INPUT_LABEL": "Quantity",
     "INCREASE": "increase quantity",
     "DECREASE": "decrease quantity"
+  },
+  "PRODUCT_DETAIL": {
+    "VALUES": {
+      "TITLE": "Product Values",
+      "SHIPPING": {
+        "TITLE": "Free Shipping",
+        "DESCRIPTION": "Worldwide available"
+      },
+      "SECURE": {
+        "TITLE": "100% Guaranteed",
+        "DESCRIPTION": "Receive product first"
+      },
+      "TRANSPARENT": {
+        "TITLE": "Return Available",
+        "DESCRIPTION": "See return policy"
+      }
+    }
   }
 }
