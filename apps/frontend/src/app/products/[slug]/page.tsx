@@ -51,7 +51,7 @@ export default async function ProductDetailsPage({
           values={<ProductDetailsValuesSection />}
           form={
             <form>
-              <ProductDetailsControls />
+              <ProductDetailsControls product={product} />
             </form>
           }
           details={<Paragraph>{product.description}</Paragraph>}

@@ -4,7 +4,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Divider } from '@e-shop/ui';
 
-// @todo improve styles for 1366x768px
 const LayoutArticle = styled.article``;
 
 const SummaryContainer = styled.div`
@@ -91,8 +90,6 @@ const ValuesWrapper = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
     display: block;
-    /* grid-area: values; */
-    /* margin-bottom: 0; */
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {

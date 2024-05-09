@@ -5,24 +5,19 @@ import { QuantitySelection, Button } from '@e-shop/ui';
 import { CardIcon } from '@e-shop/icons';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import { EN } from '@e-shop/i18n';
+import { Product } from '@e-shop/types';
 
 import styled from 'styled-components';
 
 const ControlsContainer = styled.div`
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
-
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
   align-items: center;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
-    /* display: flex; */
     justify-content: space-between;
     flex-direction: row;
-    /* align-items: center; */
   }
 `;
 
@@ -40,8 +35,16 @@ const CardButton = styled(Button)`
   align-items: center;
 `;
 
-export default function ProductDetailsControls() {
-  const [quantity, setQuantity] = React.useState<number>(0);
+type ProductDetailsControlsProps = {
+  product: Product;
+};
+
+const INITIAL_QUANTITY = 1;
+
+export default function ProductDetailsControls({
+  product,
+}: ProductDetailsControlsProps) {
+  const [quantity, setQuantity] = React.useState<number>(INITIAL_QUANTITY);
 
   const handleChangeQuantity = (quantity: number) => {
     setQuantity(quantity);
@@ -60,15 +63,24 @@ export default function ProductDetailsControls() {
 
   return (
     <ControlsContainer>
-      <QuantitySelection onChangeQuantity={handleChangeQuantity} />
+      <QuantitySelection
+        onChangeQuantity={handleChangeQuantity}
+        initialQuantity={INITIAL_QUANTITY}
+        maxQuantity={product.stock}
+      />
       <ButtonsWrapper>
-        <Button type="submit" onClick={handleClickBuyNow}>
+        <Button
+          type="submit"
+          onClick={handleClickBuyNow}
+          disabled={quantity === 0}
+        >
           {EN.PRODUCT_DETAIL.BUYING_FORM.BUY_NOW}
         </Button>
         <CardButton
           variant="outline"
           type="button"
           onClick={() => handleClickAddToCart(quantity)}
+          disabled={quantity === 0}
         >
           <CardIcon />
           <VisuallyHidden>
