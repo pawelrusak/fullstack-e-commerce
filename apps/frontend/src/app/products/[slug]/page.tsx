@@ -25,42 +25,34 @@ export default async function ProductDetailsPage({
 
   return (
     <LayoutWrapper>
-      <main>
-        <ProductDetailsLayout
-          breadcrumb={<ProductDetailsBreadcrumb product={product} />}
-          heading={
-            <Heading as="h2" level={2}>
-              {product.name}
-            </Heading>
-          }
-          price={
-            <Heading as="strong" level={1} style={{ color: '#FF624C' }}>
-              {getCurrencyFormat(product.price)}
-            </Heading>
-          }
-          gallery={
-            <Gallery
-              images={
-                [product.thumbnail, ...product.images].filter(
-                  Boolean
-                ) as string[]
-              }
-            />
-          }
-          specification={<ProductSpecificationExcerpt product={product} />}
-          values={<ProductDetailsValuesSection />}
-          form={
-            <form>
-              <ProductDetailsControls product={product} />
-            </form>
-          }
-          details={<Paragraph>{product.description}</Paragraph>}
-        />
-        <Divider style={{ margin: '8rem 0 6.4rem' }} />
-        <aside>
-          <h3>Related products</h3>
-        </aside>
-      </main>
+      <ProductDetailsLayout
+        breadcrumb={<ProductDetailsBreadcrumb product={product} />}
+        heading={
+          <Heading as="h2" level={2}>
+            {product.name}
+          </Heading>
+        }
+        price={
+          <Heading as="strong" level={1} style={{ color: '#FF624C' }}>
+            {getCurrencyFormat(product.price)}
+          </Heading>
+        }
+        gallery={
+          <Gallery
+            images={
+              [product.thumbnail, ...product.images].filter(Boolean) as string[]
+            }
+          />
+        }
+        specification={<ProductSpecificationExcerpt product={product} />}
+        values={<ProductDetailsValuesSection />}
+        form={
+          <form>
+            <ProductDetailsControls product={product} />
+          </form>
+        }
+        details={<Paragraph>{product.description}</Paragraph>}
+      />
     </LayoutWrapper>
   );
 }
