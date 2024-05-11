@@ -6,6 +6,10 @@ import { getProductsQueryAndSort } from '../middlewares/queries/products';
 const router = Router();
 
 router.get('/', getProductsQueryAndSort, productsController.findAll);
+router.get(
+  '/by-categories',
+  productsController.findAllByCategoryAndSubCategory
+);
 router.get('/:slug', productsController.findOne);
 
 /**
