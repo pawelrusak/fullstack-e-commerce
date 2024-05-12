@@ -1,11 +1,5 @@
 import { Product } from '@e-shop/types';
-import {
-  LayoutWrapper,
-  Heading,
-  Divider,
-  Gallery,
-  Paragraph,
-} from '@e-shop/ui';
+import { LayoutWrapper, Heading, Gallery, Paragraph } from '@e-shop/ui';
 import { getCurrencyFormat } from '@e-shop/utils';
 import { fetchProductDetails } from '../../lib/data';
 import ProductDetailsBreadcrumb from '../../components/product-details-breadcrumb.component';
