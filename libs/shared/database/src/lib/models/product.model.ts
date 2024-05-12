@@ -7,26 +7,35 @@ export const productSchema = new mongoose.Schema<ProductSchema>(
       type: String,
       required: true,
       trim: true,
+      minLength: 3,
+      maxLength: 300,
     },
     description: {
       type: String,
       required: true,
+      minLength: 3,
     },
     slug: {
       type: String,
       unique: true,
+      index: true,
+      trim: true,
+      minLength: 3,
     },
     brand: {
       type: String,
       required: true,
+      trim: true,
     },
     price: {
       type: Number,
       required: true,
+      min: 0,
     },
     stock: {
       type: Number,
       required: true,
+      min: 0,
     },
     thumbnail: {
       type: String,
@@ -40,14 +49,17 @@ export const productSchema = new mongoose.Schema<ProductSchema>(
       width: {
         type: Number,
         required: true,
+        min: 0,
       },
       height: {
         type: Number,
         required: true,
+        min: 0,
       },
       depth: {
         type: Number,
         required: true,
+        min: 0,
       },
     },
     subCategory: {
