@@ -1,6 +1,5 @@
 import { Controller } from '@e-shop/types';
 import { Product } from '@e-shop/database/models';
-import { Product as TProduct } from '@e-shop/types';
 
 const STATUS_CODE = Object.freeze({
   OK: 200,
@@ -41,65 +40,9 @@ export default {
   async findAllByCategoryAndSubCategory(request, response) {
     const query = request.query;
 
-    const queryEntires = Object.entries(query).map(([key, value]) => {
-      if (key.includes('subCategory.category.')) {
-        key = key.replace('subCategory.category.', '_subCategory._category.');
-        return [key, value];
-      }
+    const limit = parseInt(query?.limit as string, 10) || 1000;
 
-      if (key.includes('subCategory.')) {
-        key = key.replace('subCategory.', '_subCategory.');
-        return [key, value];
-      }
-
-      return [key, value];
-    });
-
-    const newQuery = Object.fromEntries(queryEntires);
-
-    const limit = parseInt(newQuery.limit, 10) || 10;
-
-    const products = await Product.aggregate<TProduct>([
-      {
-        $lookup: {
-          from: 'subcategories',
-          localField: 'subCategory',
-          foreignField: '_id',
-          as: '_subCategory',
-        },
-      },
-      { $unwind: '$_subCategory' },
-      {
-        $lookup: {
-          from: 'categories',
-          localField: '_subCategory.category',
-          foreignField: '_id',
-          as: '_subCategory._category',
-        },
-      },
-      { $unwind: '$_subCategory._category' },
-
-      {
-        $match: newQuery,
-      },
-      {
-        $addFields: {
-          subCategory: {
-            _id: '$_subCategory._id',
-            name: '$_subCategory.name',
-            category: {
-              _id: '$_subCategory._category._id',
-              name: '$_subCategory._category.name',
-            },
-          },
-        },
-      },
-      {
-        $project: {
-          _subCategory: 0,
-        },
-      },
-    ]).limit(limit);
+    const products = await Product.findAllWithCategories(query).limit(limit);
 
     response.status(STATUS_CODE.OK).send(products);
   },
