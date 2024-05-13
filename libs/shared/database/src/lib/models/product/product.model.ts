@@ -1,7 +1,14 @@
 import mongoose from 'mongoose';
 import type { ProductSchema } from '@e-shop/types';
+import {
+  ProductFindAllWithCategories,
+  findAllWithCategories,
+} from './product.statics';
 
-export const productSchema = new mongoose.Schema<ProductSchema>(
+type ProductModel = mongoose.Model<ProductSchema> &
+  ProductFindAllWithCategories;
+
+export const productSchema = new mongoose.Schema<ProductSchema, ProductModel>(
   {
     name: {
       type: String,
@@ -75,4 +82,9 @@ export const productSchema = new mongoose.Schema<ProductSchema>(
   { timestamps: true }
 );
 
-export const Product = mongoose.model<ProductSchema>('Product', productSchema);
+productSchema.statics['findAllWithCategories'] = findAllWithCategories;
+
+export const Product = mongoose.model<ProductSchema, ProductModel>(
+  'Product',
+  productSchema
+);
