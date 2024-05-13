@@ -1,10 +1,6 @@
 import { Controller } from '@e-shop/types';
 import { Product } from '@e-shop/database/models';
-
-const STATUS_CODE = Object.freeze({
-  OK: 200,
-  NOT_IMPLEMENTED: 501,
-});
+import { STATUS_CODE } from '@e-shop/utils';
 
 export default {
   /**
