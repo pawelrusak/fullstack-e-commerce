@@ -4,6 +4,7 @@ import type { Modify, Prettify } from './utils';
 
 export type Category = Id & {
   name: string;
+  slug?: string;
 };
 
 export type SubCategory = Category & {
