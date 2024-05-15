@@ -1,6 +1,9 @@
 import mongoose from 'mongoose';
 import { ProductSchema } from '@e-shop/types';
-import { renameFilterKeysRelatedToCategories } from './product.utils';
+import {
+  renameFilterKeysRelatedToCategories,
+  validateAndConvertFilterData,
+} from './product.utils';
 
 export type ProductFindAllWithCategories = {
   findAllWithCategories(filter: unknown): mongoose.Aggregate<ProductSchema[]>;
@@ -8,10 +11,11 @@ export type ProductFindAllWithCategories = {
 
 export function findAllWithCategories(
   this: mongoose.Model<ProductSchema>,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  filter: any
+  filter: unknown
 ) {
-  const match = renameFilterKeysRelatedToCategories(filter);
+  const validatedFilter = validateAndConvertFilterData(filter);
+
+  const match = renameFilterKeysRelatedToCategories(validatedFilter);
 
   const aggregationSteps: mongoose.PipelineStage[] = [
     {
