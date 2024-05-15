@@ -7,6 +7,12 @@ export const subcategorySchema = new mongoose.Schema<SubCategorySchema>({
     required: true,
     trim: true,
   },
+  slug: {
+    type: String,
+    required: false,
+    unique: true,
+    trim: true,
+  },
   category: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Category',
