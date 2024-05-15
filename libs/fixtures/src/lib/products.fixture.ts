@@ -20,9 +20,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced01',
       name: 'Phone',
+      slug: 'phone',
       category: {
         _id: '5f43ba27320000271ced100',
         name: 'Mobile & Accessories',
+        slug: 'mobile-accessories',
       },
     },
   },
@@ -45,9 +47,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
+      slug: 'audio',
       category: {
         _id: '5f43ba27320000271ced101',
         name: 'Audio & Headphones',
+        slug: 'audio-headphones',
       },
     },
   },
@@ -70,9 +74,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
+      slug: 'laptop',
       category: {
         _id: '5f43ba27320000271ced102',
         name: 'Computers & Tablets',
+        slug: 'computers-tablets',
       },
     },
   },
@@ -95,9 +101,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced04',
       name: 'Camera',
+      slug: 'camera',
       category: {
         _id: '5f43ba27320000271ced103',
         name: 'Cameras & Camcorders',
+        slug: 'cameras-camcorders',
       },
     },
   },
@@ -118,11 +126,13 @@ export default [
     stock: 10,
     slug: 'ag-oled65cxpua-4k-smart-oled-tv-new-model',
     subCategory: {
-      name: 'Television',
       _id: '5f43ba27320000271ced05',
+      name: 'Television',
+      slug: 'television',
       category: {
-        name: 'TV & Home Theater',
         _id: '5f43ba27320000271ced104',
+        name: 'TV & Home Theater',
+        slug: 'tv-home-theater',
       },
     },
   },
@@ -143,11 +153,13 @@ export default [
     stock: 25,
     slug: 'orange-watch-12-high-quality-health-sensors',
     subCategory: {
-      name: 'Watch',
       _id: '5f43ba27320000271ced06',
+      name: 'Watch',
+      slug: 'watch',
       category: {
-        name: 'Mobile & Accessories',
         _id: '5f43ba27320000271ced100',
+        name: 'Mobile & Accessories',
+        slug: 'mobile-accessories',
       },
     },
   },
@@ -168,11 +180,13 @@ export default [
     stock: 50,
     slug: 'ultra-tablet-qwerty-hd-10765-series-low-price',
     subCategory: {
-      name: 'Tablet',
       _id: '5f43ba27320000271ced07',
+      name: 'Tablet',
+      slug: 'tablet',
       category: {
-        name: 'Computers & Tablets',
         _id: '5f43ba27320000271ced102',
+        name: 'Computers & Tablets',
+        slug: 'computers-tablets',
       },
     },
   },
@@ -193,11 +207,13 @@ export default [
     stock: 15,
     slug: 'surface-laptop-4-xps-13-plus-64gb-i7-touch-screen',
     subCategory: {
-      name: 'Laptop',
       _id: '5f43ba27320000271ced03',
+      name: 'Laptop',
+      slug: 'laptop',
       category: {
-        name: 'Computers & Tablets',
         _id: '5f43ba27320000271ced102',
+        name: 'Computers & Tablets',
+        slug: 'computers-tablets',
       },
     },
   },
@@ -218,11 +234,13 @@ export default [
     stock: 15,
     slug: 'campro-hero10-black-sleek-design-2023-4k-video',
     subCategory: {
-      name: 'Camera',
       _id: '5f43ba27320000271ced04',
+      name: 'Camera',
+      slug: 'camera',
       category: {
-        name: 'Cameras & Camcorders',
         _id: '5f43ba27320000271ced103',
+        name: 'Cameras & Camcorders',
+        slug: 'cameras-camcorders',
       },
     },
   },
@@ -245,9 +263,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
+      slug: 'television',
       category: {
         _id: '5f43ba27320000271ced104',
         name: 'TV & Home Theater',
+        slug: 'tv-home-theater',
       },
     },
   },
@@ -268,11 +288,13 @@ export default [
     stock: 30,
     slug: 'vbi-mini-2-fly-more-combo-drone-sjrc-f22s-4k-pro-ptz-5-km-version-alpha-edition',
     subCategory: {
-      name: 'Camera',
       _id: '5f43ba27320000271ced04',
+      name: 'Camera',
+      slug: 'camera',
       category: {
-        name: 'Cameras & Camcorders',
         _id: '5f43ba27320000271ced103',
+        name: 'Cameras & Camcorders',
+        slug: 'cameras-camcorders',
       },
     },
   },
@@ -295,9 +317,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
+      slug: 'audio',
       category: {
         _id: '5f43ba27320000271ced101',
         name: 'Audio & Headphones',
+        slug: 'audio-headphones',
       },
     },
   },
@@ -320,9 +344,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
+      slug: 'tablet',
       category: {
         _id: '5f43ba27320000271ced102',
         name: 'Computers & Tablets',
+        slug: 'computers-tablets',
       },
     },
   },
@@ -345,9 +371,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
+      slug: 'watch',
       category: {
         _id: '5f43ba27320000271ced100',
         name: 'Mobile & Accessories',
+        slug: 'mobile-accessories',
       },
     },
   },
@@ -370,9 +398,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced01',
       name: 'Phone',
+      slug: 'phone',
       category: {
         _id: '5f43ba27320000271ced100',
         name: 'Mobile & Accessories',
+        slug: 'mobile-accessories',
       },
     },
   },
@@ -395,9 +425,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
+      slug: 'laptop',
       category: {
         _id: '5f43ba27320000271ced102',
         name: 'Computers & Tablets',
+        slug: 'computers-tablets',
       },
     },
   },
@@ -420,9 +452,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced08',
       name: 'Home',
+      slug: 'home',
       category: {
         _id: '5f43ba27320000271ced105',
         name: 'Home Appliances',
+        slug: 'home-appliances',
       },
     },
   },
@@ -445,9 +479,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
+      slug: 'audio',
       category: {
         _id: '5f43ba27320000271ced101',
         name: 'Audio & Headphones',
+        slug: 'audio-headphones',
       },
     },
   },
@@ -470,9 +506,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
+      slug: 'watch',
       category: {
         _id: '5f43ba27320000271ced100',
         name: 'Mobile & Accessories',
+        slug: 'mobile-accessories',
       },
     },
   },
@@ -495,9 +533,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced04',
       name: 'Camera',
+      slug: 'camera',
       category: {
         _id: '5f43ba27320000271ced103',
         name: 'Cameras & Camcorders',
+        slug: 'cameras-camcorders',
       },
     },
   },
@@ -520,9 +560,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
+      slug: 'tablet',
       category: {
         _id: '5f43ba27320000271ced102',
         name: 'Computers & Tablets',
+        slug: 'computers-tablets',
       },
     },
   },
@@ -545,9 +587,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
+      slug: 'television',
       category: {
         _id: '5f43ba27320000271ced104',
         name: 'TV & Home Theater',
+        slug: 'tv-home-theater',
       },
     },
   },
@@ -570,9 +614,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
+      slug: 'television',
       category: {
         _id: '5f43ba27320000271ced104',
         name: 'TV & Home Theater',
+        slug: 'tv-home-theater',
       },
     },
   },
@@ -595,9 +641,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced07',
       name: 'Tablet',
+      slug: 'tablet',
       category: {
         _id: '5f43ba27320000271ced102',
         name: 'Computers & Tablets',
+        slug: 'computers-tablets',
       },
     },
   },
@@ -620,9 +668,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced02',
       name: 'Audio',
+      slug: 'audio',
       category: {
         _id: '5f43ba27320000271ced101',
         name: 'Audio & Headphones',
+        slug: 'audio-headphones',
       },
     },
   },
@@ -645,9 +695,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced09',
       name: 'Gaming',
+      slug: 'gaming',
       category: {
         _id: '5f43ba27320000271ced106',
         name: 'Gaming Equipment',
+        slug: 'gaming-equipment',
       },
     },
   },
@@ -670,9 +722,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
+      slug: 'laptop',
       category: {
         _id: '5f43ba27320000271ced102',
         name: 'Computers & Tablets',
+        slug: 'computers-tablets',
       },
     },
   },
@@ -695,9 +749,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced03',
       name: 'Laptop',
+      slug: 'laptop',
       category: {
         _id: '5f43ba27320000271ced102',
         name: 'Computers & Tablets',
+        slug: 'computers-tablets',
       },
     },
   },
@@ -720,9 +776,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced06',
       name: 'Watch',
+      slug: 'watch',
       category: {
         _id: '5f43ba27320000271ced100',
         name: 'Mobile & Accessories',
+        slug: 'mobile-accessories',
       },
     },
   },
@@ -745,9 +803,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
+      slug: 'television',
       category: {
         _id: '5f43ba27320000271ced104',
         name: 'TV & Home Theater',
+        slug: 'tv-home-theater',
       },
     },
   },
@@ -770,9 +830,11 @@ export default [
     subCategory: {
       _id: '5f43ba27320000271ced09',
       name: 'Gaming',
+      slug: 'gaming',
       category: {
         _id: '5f43ba27320000271ced106',
         name: 'Gaming Equipment',
+        slug: 'gaming-equipment',
       },
     },
   },
