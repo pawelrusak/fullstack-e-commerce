@@ -3,7 +3,6 @@ import categoriesFixture from './assets/fixtures/category';
 import subCategoriesFixture from './assets/fixtures/subCategory';
 import productsFixture from './assets/fixtures/product';
 import { Product, Category, SubCategory } from '@e-shop/database/models';
-import { SubCategory as TSubCategory } from '@e-shop/types';
 
 /**
  * @todo Refactor this function
@@ -13,7 +12,7 @@ export async function seedData() {
     await mongoose.connect(process.env.DATABASE_URI);
 
     const categoriesWithoutId = categoriesFixture.map((category) => {
-      return { name: category.name };
+      return { name: category.name, slug: category.slug };
     });
 
     /**
@@ -34,8 +33,9 @@ export async function seedData() {
 
       return {
         name: subCategory.name,
+        slug: subCategory.slug,
         category: parentCategoryObjectId,
-      } as Omit<TSubCategory, '_id'>;
+      };
     });
 
     const subCategoriesDatabase = await SubCategory.insertMany(
