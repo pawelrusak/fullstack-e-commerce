@@ -8,6 +8,12 @@ export const categorySchema = new mongoose.Schema<CategorySchema>({
     unique: true,
     trim: true,
   },
+  slug: {
+    type: String,
+    required: false,
+    unique: true,
+    trim: true,
+  },
 });
 
 export const Category = mongoose.model<CategorySchema>(
