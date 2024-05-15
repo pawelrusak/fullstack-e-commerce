@@ -23,6 +23,7 @@ const Configuration: UserConfig = {
         'types',
         'ui',
         'utils',
+        'validations',
       ],
     ],
   },
