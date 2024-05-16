@@ -1,6 +1,7 @@
 import { LayoutWrapper } from '@e-shop/ui';
 import RelatedProductSection from '../../components/related-products-section.component';
 import PageDivider from '../../components/page-divider.component';
+import UpToDateHeroSection from '../../components/up-to-date-hero-section.component';
 import { fetchRelatedProductsAndSubCategorySlug } from '../../lib/data';
 
 type ProductDetailsLayoutProps = {
@@ -28,6 +29,8 @@ export default async function ProductDetailsLayout({
             subCategorySlug={subCategorySlug}
           />
         </aside>
+
+        <UpToDateHeroSection />
       </LayoutWrapper>
     </main>
   );
