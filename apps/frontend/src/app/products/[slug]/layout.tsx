@@ -1,21 +1,32 @@
-import { LayoutWrapper, Divider } from '@e-shop/ui';
+import { LayoutWrapper } from '@e-shop/ui';
+import RelatedProductSection from '../../components/related-products-section.component';
+import PageDivider from '../../components/page-divider.component';
+import { fetchRelatedProductsAndSubCategorySlug } from '../../lib/data';
 
 type ProductDetailsLayoutProps = {
   children: React.ReactNode;
+  params: { slug: string };
 };
 
-export default function ProductDetailsLayout({
+export default async function ProductDetailsLayout({
   children,
+  params,
 }: ProductDetailsLayoutProps) {
+  const { products, subCategorySlug } =
+    await fetchRelatedProductsAndSubCategorySlug(params.slug);
+
   return (
     <main>
       {children}
 
       <LayoutWrapper>
-        <Divider style={{ margin: '8rem 0 6.4rem' }} />
+        <PageDivider />
 
         <aside>
-          <h3>Related products</h3>
+          <RelatedProductSection
+            products={products}
+            subCategorySlug={subCategorySlug}
+          />
         </aside>
       </LayoutWrapper>
     </main>
