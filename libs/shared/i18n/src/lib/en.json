@@ -116,5 +116,9 @@
       "ADD_TO_CART": "Add to Cart",
       "BUY_NOW": "Buy Now"
     }
+  },
+  "RELATED_PRODUCTS": {
+    "TITLE": "Related Products",
+    "LINK": "View All"
   }
 }
