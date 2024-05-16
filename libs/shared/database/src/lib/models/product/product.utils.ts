@@ -1,20 +1,24 @@
 import { z } from 'zod';
 import { productBaseSchema } from '@e-shop/validations';
+import { Paths, Product } from '@e-shop/types';
+
+type ProductPaths = Paths<Product>;
+
+type FilterSchema = Partial<Record<ProductPaths, z.ZodString>>;
 
 function getFilterSchema() {
-  /**
-   * @todo Create this schema to be more dynamic. To by build from mongoose Product model
-   */
-  const subCategoryDotSchema = z.object({
-    'subCategory.category.name': z.string(),
-    'subCategory.category.slug': z.string(),
+  const filterNestedPaths = {
     'subCategory.name': z.string(),
     'subCategory.slug': z.string(),
-  });
+    'subCategory.category.slug': z.string(),
+    'subCategory.category.name': z.string(),
+  } satisfies FilterSchema;
+
+  const filterNestedPathsSchema = z.object(filterNestedPaths);
 
   return productBaseSchema
     .omit({ subCategory: true })
-    .merge(subCategoryDotSchema)
+    .merge(filterNestedPathsSchema)
     .deepPartial();
 }
 
