@@ -8,6 +8,12 @@ export default {
    *
    * @route GET /api/v1/products
    * @access Public
+   * @example
+   * ```javascript
+   * GET /api/v1/products/by-categories?subCategory.category.slug=audio-headphones
+   *
+   * GET /api/v1/products/by-categories?subCategory.name=camera&limit=5
+   * ```
    */
   async findAll(_, response) {
     // @todo use repository pattern?
