@@ -7,42 +7,19 @@ export default {
    * This action returns all products
    *
    * @route GET /api/v1/products
-   * @access Public
    * @example
    * ```javascript
    * GET /api/v1/products/by-categories?subCategory.category.slug=audio-headphones
    *
    * GET /api/v1/products/by-categories?subCategory.name=camera&limit=5
    * ```
+   * @access Public
    */
   async findAll(_, response) {
     // @todo use repository pattern?
     const products = await Product.findAllWithCategories(response.locals.query)
       .sort(response.locals.sort)
       .limit(response.locals.limit);
-
-    response.status(STATUS_CODE.OK).send(products);
-  },
-
-  /**
-   * This action returns all products by category and subCategory
-   *
-   * @todo refactor this action to use findAll
-   * @deprecated this is a temporary solution, and will be replaced by findAll
-   * @example ```http
-   * GET /api/v1/products/by-categories?subCategory.category.name=Cameras%20%26%20Camcorders
-   *
-   * GET /api/v1/products/by-categories?subCategory.name=Camera&limit=5
-   * ```
-   * @route GET /api/v1/products/category
-   * @access Public
-   */
-  async findAllByCategoryAndSubCategory(request, response) {
-    const query = request.query;
-
-    const limit = parseInt(query?.limit as string, 10) || 1000;
-
-    const products = await Product.findAllWithCategories(query).limit(limit);
 
     response.status(STATUS_CODE.OK).send(products);
   },
