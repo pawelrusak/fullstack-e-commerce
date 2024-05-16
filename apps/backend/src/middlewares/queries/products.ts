@@ -1,6 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
 import { Product } from '@e-shop/database/models';
+import { getSchemaPaths } from '@e-shop/database/utils';
 import { pickBy, isPlainObject } from 'lodash';
+
+type RequestQuery = Request['query'];
 
 const ALLOWED_SORT_DIRECTION = ['asc', 'desc'];
 
@@ -35,6 +38,26 @@ function sortQueryToObject(sortQuery: unknown) {
   return sort;
 }
 
+function getSortObject(sortQuery: unknown) {
+  const sortObject = sortQueryToObject(sortQuery);
+
+  // this is a hack to get default mongoose sort
+  const fakeSortObject = { __foo: '' };
+
+  return Object.keys(sortObject).length ? sortObject : fakeSortObject;
+}
+
+// @todo think about rename to getFilters
+function getProductFilter(requestQuery: RequestQuery) {
+  const queryWithNestedObjects = removeUnknownProperties(
+    requestQuery,
+    getSchemaPaths(Product.schema)
+  );
+
+  return removePropertiesWithObject(queryWithNestedObjects);
+}
+
+// @todo rename this function
 export function getProductsQueryAndSort(
   request: Request,
   response: Response,
@@ -43,17 +66,21 @@ export function getProductsQueryAndSort(
   /**
    * Query
    */
-  const queryWithNestedObjects = removeUnknownProperties(
-    request.query,
-    Object.keys(Product.schema.paths)
-  );
-
-  response.locals.query = removePropertiesWithObject(queryWithNestedObjects);
+  response.locals.query = getProductFilter(request.query);
 
   /**
    * Sort
    */
-  response.locals.sort = sortQueryToObject(request.query.sort);
+  response.locals.sort = getSortObject(request.query.sort);
+
+  /**
+   * Limit
+   */
+  // @todo use nodeEnv? or other way to set default limit
+  response.locals.limit = parseInt(
+    (request.query.limit as string | undefined) || '1000',
+    10
+  );
 
   next();
 }
