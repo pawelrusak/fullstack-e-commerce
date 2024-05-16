@@ -1,6 +1,6 @@
 import { Controller } from '@e-shop/types';
-import { Product } from '@e-shop/database/models';
 import { STATUS_CODE } from '@e-shop/utils';
+import { Product } from '@e-shop/database/models';
 
 export default {
   /**
@@ -10,12 +10,10 @@ export default {
    * @access Public
    */
   async findAll(_, response) {
-    const products = await Product.find(response.locals.query)
-      .populate({
-        path: 'subCategory',
-        populate: { path: 'category' },
-      })
-      .sort(response.locals.sort);
+    // @todo use repository pattern?
+    const products = await Product.findAllWithCategories(response.locals.query)
+      .sort(response.locals.sort)
+      .limit(response.locals.limit);
 
     response.status(STATUS_CODE.OK).send(products);
   },
