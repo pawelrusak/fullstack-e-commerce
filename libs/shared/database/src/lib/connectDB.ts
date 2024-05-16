@@ -1,5 +1,6 @@
 import mongoose, { ConnectOptions } from 'mongoose';
 
+// @todo move this to utils folder adn export it libs/shared/database/src/utils.ts
 export function connectDB(
   databaseUri: string,
   connectOptions?: ConnectOptions

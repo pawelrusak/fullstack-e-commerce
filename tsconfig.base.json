@@ -17,6 +17,7 @@
     "paths": {
       "@e-shop/database": ["libs/shared/database/src/index.ts"],
       "@e-shop/database/models": ["libs/shared/database/src/models.ts"],
+      "@e-shop/database/utils": ["libs/shared/database/src/utils.ts"],
       "@e-shop/fixtures": ["libs/fixtures/src/index.ts"],
       "@e-shop/i18n": ["libs/shared/i18n/src/index.ts"],
       "@e-shop/icons": ["libs/shared/icons/src/index.ts"],
