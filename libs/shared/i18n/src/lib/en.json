@@ -72,6 +72,11 @@
     "DESCRIPTION": "Welcome to e-shop, a place where you can buy \neverything about electronics. Sale every day!",
     "CTA_BUTTON": "Shop Now"
   },
+  "UP_TO_DATE_HERO": {
+    "TITLE": "Get Up-to-Date \nGadget Technology",
+    "DESCRIPTION": "Browse our wide selection of electronics and \nfind the perfect promo for you from newsletter.",
+    "CTA_BUTTON": "Shop Now"
+  },
   "FEATURED_PRODUCTS": {
     "TITLE": "Featured Products",
     "LINK": "View All"
