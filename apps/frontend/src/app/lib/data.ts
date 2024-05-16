@@ -1,6 +1,6 @@
 import qs from 'qs';
 import { unstable_noStore as noStore } from 'next/cache';
-import { Product } from '@e-shop/types';
+import { Product, SubCategory, Paths, Prettify } from '@e-shop/types';
 
 export async function fetchFeaturedProducts(): Promise<Product[]> {
   /**
@@ -39,5 +39,73 @@ export async function fetchProductDetails(
   } catch (error) {
     console.error('Server Error:', error);
     throw new Error('Failed to fetch product details data.');
+  }
+}
+
+export async function fetchProductsBySubCategory(
+  subCategorySlug: Required<Product['subCategory']>['slug'],
+  limit = 6
+): Promise<Product[]> {
+  /**
+   * @todo improve cache management
+   */
+  noStore();
+
+  type ProductQueryStringFields = Paths<Product>;
+  type LimitQueryStringField = { limit: number };
+
+  type AllQueryStrings = Prettify<
+    Record<ProductQueryStringFields, string> & LimitQueryStringField
+  >;
+
+  type QueryString = Partial<AllQueryStrings>;
+
+  try {
+    const queryString = qs.stringify({
+      'subCategory.slug': subCategorySlug,
+      limit,
+    } satisfies QueryString);
+
+    const data = await fetch(
+      `http://localhost:3333/api/v1/products?${queryString}`
+    );
+
+    return await data.json();
+  } catch (error) {
+    console.error('Server Error:', error);
+    throw new Error('Failed to fetch products by category data.');
+  }
+}
+
+export async function fetchRelatedProductsAndSubCategorySlug(
+  slug: Product['slug']
+): Promise<{ products: Product[]; subCategorySlug: SubCategory['slug'] }> {
+  /**
+   * @todo improve cache management
+   */
+  noStore();
+
+  try {
+    const productDetails = await fetchProductDetails(slug);
+
+    const subCategorySlug = productDetails.subCategory.slug;
+
+    const relatedProducts = await fetchProductsBySubCategory(
+      subCategorySlug || ''
+    );
+
+    const relatedProductWithoutRepetition = relatedProducts.filter(
+      (relatedProduct) => relatedProduct.slug !== slug
+    );
+
+    const products =
+      relatedProductWithoutRepetition.length > 5
+        ? relatedProductWithoutRepetition.slice(0, 5)
+        : relatedProductWithoutRepetition;
+
+    return { products, subCategorySlug };
+  } catch (error) {
+    console.error('Server Error:', error);
+    throw new Error('Failed to fetch related products data.');
   }
 }
