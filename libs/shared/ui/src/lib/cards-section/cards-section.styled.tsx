@@ -7,9 +7,17 @@ export const Section = styled.section`
 
 export const Header = styled.header`
   display: flex;
-  justify-content: space-between;
-  align-items: end;
-  margin-bottom: 4.8rem;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 4.8rem;
+  }
 `;
 
 export const Title = styled.h2`
@@ -25,6 +33,11 @@ export const Link = styled.a`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   text-decoration: none;
   vertical-align: middle;
+  align-self: end;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+    align-self: auto;
+  }
 `;
 
 export const Body = styled.div``;
