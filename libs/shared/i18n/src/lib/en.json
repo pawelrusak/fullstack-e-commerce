@@ -4,10 +4,12 @@
     "LOCATION": {
       "CITY": "Anytown",
       "COUNTRY": "USA",
+      "SUITE": "Suite 105",
       "STREET": "123 Main Street"
     },
     "CONTACT": {
-      "PHONE": "+1 (555) 123-4567"
+      "PHONE": "+1 (555) 123-4567",
+      "EMAIL": "information@eshop.com.pl"
     }
   },
   "NAV_BAR": {
@@ -33,6 +35,68 @@
       "LIMITED_SALE": "Limited Sale",
       "BEST_SELLER": "Best Seller",
       "NEW_ARRIVAL": "New Arrival"
+    }
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Copyright © :year: E-Shop. All Rights Reserved.",
+    "NAVIGATION": {
+      "LINKS_LIST": {
+        "TITLE": "Links",
+        "ITEM": {
+          "PRODUCT_LIST": "Products List",
+          "ORDER_TRACKING": "Order Tracking",
+          "PRODUCT_GUIDE": "Products Guide",
+          "CART": "Shopping Cart",
+          "BLOG": "Tech Blog"
+        }
+      },
+      "SUPPORTS_LIST": {
+        "TITLE": "Supports",
+        "ITEM": {
+          "ABOUT": "About Us",
+          "PRIVACY": "Privacy Policy",
+          "RETURN": "Return Policy",
+          "HELP_CENTRE": "Help Centre",
+          "STORE_LOCATIONS": "Store Locations",
+          "CAREERS": "Careers"
+        }
+      },
+      "CATEGORIES_LIST": {
+        "TITLE": "Categories",
+        "ITEM": {
+          "COMPUTERS_TABLETS": "Computers & Tablets",
+          "MOBILE_PHONES_ACCESSORIES": "Mobile Phones & Accessories",
+          "TV_HOME_THEATER": "TV & Home Theater",
+          "AUDIO_HEADPHONES": "Audio & Headphones",
+          "CAMERAS_CAMCORDERS": "Cameras & Camcorders",
+          "GAMING_EQUIPMENT": "Gaming Equipment",
+          "HOME_APPLIANCES": "Home Appliances"
+        }
+      },
+      "PAYMENTS_LIST": {
+        "TITLE": "Payments",
+        "ITEM": {
+          "VISA": "Visa",
+          "MASTERCARD": "MasterCard",
+          "APPLE_PAY": "Apple Pay",
+          "PAYPAL": "PayPal"
+        }
+      },
+      "FOLLOW_US_LIST": {
+        "TITLE": "Follow Us",
+        "ITEM": {
+          "TWITTER": "Twitter",
+          "INSTAGRAM": "Instagram",
+          "FACEBOOK": "Facebook"
+        }
+      }
+    },
+    "REST_LIST": {
+      "ITEM": {
+        "PRIVACY": "Privacy Policy",
+        "TERMS": "Terms & Condition",
+        "SITEMAP": "Sitemap"
+      }
     }
   },
   "PRODUCT_CARD": {
