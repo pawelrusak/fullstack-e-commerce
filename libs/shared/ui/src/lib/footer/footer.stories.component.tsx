@@ -28,7 +28,7 @@ export function FooterStory() {
             <Footer.NavSectionListItem>
               <a href="/#">
                 <Footer.NavSectionListItemIcon as={PinSolidIcon} />
-                {EN.GLOBAL.LOCATION.STREET} {EN.GLOBAL.LOCATION.SUITE}
+                {EN.GLOBAL.LOCATION.STREET}, {EN.GLOBAL.LOCATION.SUITE},{' '}
                 {EN.GLOBAL.LOCATION.CITY} {EN.GLOBAL.LOCATION.COUNTRY}
               </a>
             </Footer.NavSectionListItem>
