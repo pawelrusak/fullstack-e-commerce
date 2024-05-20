@@ -1,6 +1,7 @@
 import { Navbar } from '@e-shop/ui';
 import { GlobalStyle, AppThemeProvider } from '@e-shop/theme';
 import { StyledComponentsRegistry } from './registry';
+import Footer from './components/footer.component';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <GlobalStyle />
             <Navbar />
             {children}
+            <Footer />
           </AppThemeProvider>
         </StyledComponentsRegistry>
       </body>
