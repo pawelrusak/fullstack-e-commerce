@@ -8,7 +8,7 @@ import { Product } from '@e-shop/types';
 import { EN } from '@e-shop/i18n';
 import { getCurrencyFormat } from '@e-shop/utils';
 
-// @todo create ui component for this
+// TODO create ui component for this
 const Link = styled(NextLink)`
   text-decoration: none;
 `;
@@ -21,7 +21,7 @@ export default function FeaturedProductsSection({
   products,
 }: FeaturedProductsSectionProps) {
   return (
-    <CardsSection>
+    <CardsSection mb={0}>
       <CardsSection.Header>
         <CardsSection.Title>{EN.FEATURED_PRODUCTS.TITLE}</CardsSection.Title>
         <CardsSection.Link as={Link} href="/products">
