@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import { margin } from 'styled-system';
+import type { MarginProps } from 'styled-system';
 
-export const Section = styled.section`
+export type StyledSectionProps = MarginProps;
+
+export const Section = styled.section<StyledSectionProps>`
   margin-bottom: 8rem;
+  ${margin}
   color: ${({ theme }) => theme.color.text};
 `;
 

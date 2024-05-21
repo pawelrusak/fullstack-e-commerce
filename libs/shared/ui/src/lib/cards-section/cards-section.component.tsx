@@ -1,6 +1,8 @@
 import * as Styled from './cards-section.styled';
+import type { StyledSectionProps } from './cards-section.styled';
 
-type CardsSectionProps = React.ComponentPropsWithRef<'section'>;
+type CardsSectionProps = React.ComponentPropsWithRef<'section'> &
+  StyledSectionProps;
 
 export function CardsSection(props: CardsSectionProps) {
   return <Styled.Section {...props} />;
