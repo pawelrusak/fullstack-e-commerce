@@ -5,7 +5,7 @@ import { EN } from '@e-shop/i18n';
 
 export default function UpToDateHeroSection() {
   return (
-    <Hero imageSrc="/assets/images/get-up-to-date-placeholder.png">
+    <Hero imageSrc="/assets/images/get-up-to-date-placeholder.png" mb={0}>
       <Hero.TextWrapper>
         <Hero.Title>{EN.UP_TO_DATE_HERO.TITLE}</Hero.Title>
         <Hero.Description>{EN.UP_TO_DATE_HERO.DESCRIPTION}</Hero.Description>
