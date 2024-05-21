@@ -1,9 +1,9 @@
 import * as Styled from './hero-section.styled';
-import type { ContainerSectionProps } from './hero-section.styled';
+import type { StyledContainerSectionProps } from './hero-section.styled';
 
 export type HeroSectionProps = {
   children?: React.ReactNode;
-} & ContainerSectionProps &
+} & StyledContainerSectionProps &
   React.ComponentPropsWithRef<'section'>;
 
 export function HeroSection({

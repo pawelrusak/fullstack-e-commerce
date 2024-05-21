@@ -1,10 +1,14 @@
+'use client';
+
 import styled from 'styled-components';
+import { margin } from 'styled-system';
+import type { MarginProps } from 'styled-system';
 
-export type ContainerSectionProps = {
+export type StyledContainerSectionProps = {
   imageSrc: string;
-};
+} & MarginProps;
 
-export const ContainerSection = styled.section<ContainerSectionProps>`
+export const ContainerSection = styled.section<StyledContainerSectionProps>`
   background-color: ${({ theme }) => theme.color.border};
   background-image: url(${({ imageSrc }) => imageSrc});
   background-position: center;
@@ -19,6 +23,7 @@ export const ContainerSection = styled.section<ContainerSectionProps>`
   height: fit-content;
   padding: 6.4rem 2.4rem;
   margin-bottom: 8rem;
+  ${margin}
 
   @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
     height: 60rem;
