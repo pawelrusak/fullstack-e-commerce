@@ -10,7 +10,7 @@ import { Product } from '@e-shop/types';
 type ProductCategorySlug = Product['subCategory']['category']['slug'];
 
 function getProductByCategoryUrl(ProductCategorySlug: ProductCategorySlug) {
-  return `/products=${getCategoryQueryString(ProductCategorySlug)}`;
+  return `/products?${getCategoryQueryString(ProductCategorySlug)}`;
 }
 
 type ListItem = {
