@@ -109,3 +109,27 @@ export async function fetchRelatedProductsAndSubCategorySlug(
     throw new Error('Failed to fetch related products data.');
   }
 }
+
+type ProductFilters = Partial<Record<Paths<Product>, string>>;
+
+export async function fetchProductsByFilters(
+  productFilters?: ProductFilters
+): Promise<Product[]> {
+  /**
+   * @todo improve cache management
+   */
+  noStore();
+
+  try {
+    const queryString = qs.stringify(productFilters);
+
+    const data = await fetch(
+      `http://localhost:3333/api/v1/products?${queryString}`
+    );
+
+    return await data.json();
+  } catch (error) {
+    console.error('Server Error:', error);
+    throw new Error('Failed to fetch products by filters data.');
+  }
+}
