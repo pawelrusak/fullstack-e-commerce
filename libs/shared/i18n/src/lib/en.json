@@ -145,6 +145,9 @@
     "TITLE": "Featured Products",
     "LINK": "View All"
   },
+  "PRODUCTS_GRID": {
+    "TITLE": "Products"
+  },
   "SPECIFICATION": {
     "PROPERTY": {
       "BRAND": "Brand",
