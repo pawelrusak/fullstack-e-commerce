@@ -154,7 +154,7 @@ export function Footer() {
           </BaseFooter.NavSectionTitle>
           <BaseFooter.NavSectionList>
             {ListItems.linksList.map(({ label, href }) => (
-              <BaseFooter.NavSectionListItem key={href}>
+              <BaseFooter.NavSectionListItem key={label}>
                 <Link href={href}>{label}</Link>
               </BaseFooter.NavSectionListItem>
             ))}
@@ -168,7 +168,7 @@ export function Footer() {
           </BaseFooter.NavSectionTitle>
           <BaseFooter.NavSectionList>
             {ListItems.supportsList.map(({ label, href }) => (
-              <BaseFooter.NavSectionListItem key={href}>
+              <BaseFooter.NavSectionListItem key={label}>
                 <Link href={href}>{label}</Link>
               </BaseFooter.NavSectionListItem>
             ))}
@@ -182,7 +182,7 @@ export function Footer() {
           </BaseFooter.NavSectionTitle>
           <BaseFooter.NavSectionList>
             {ListItems.categoriesList.map(({ label, href }) => (
-              <BaseFooter.NavSectionListItem key={href}>
+              <BaseFooter.NavSectionListItem key={label}>
                 <Link href={href}>{label}</Link>
               </BaseFooter.NavSectionListItem>
             ))}
@@ -204,7 +204,7 @@ export function Footer() {
 
             <BaseFooter.NavSectionList>
               {ListItems.followUsList.map(({ label, href }) => (
-                <BaseFooter.NavSectionListItem key={href}>
+                <BaseFooter.NavSectionListItem key={label}>
                   <Link href={href}>{label}</Link>
                 </BaseFooter.NavSectionListItem>
               ))}
