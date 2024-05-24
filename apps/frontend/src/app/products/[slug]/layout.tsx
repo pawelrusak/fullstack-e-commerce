@@ -13,7 +13,7 @@ export default async function ProductDetailsLayout({
   children,
   params,
 }: ProductDetailsLayoutProps) {
-  const { products, subCategorySlug } =
+  const { products, categorySlug } =
     await fetchRelatedProductsAndSubCategorySlug(params.slug);
 
   return (
@@ -26,7 +26,7 @@ export default async function ProductDetailsLayout({
         <aside>
           <RelatedProductSection
             products={products}
-            subCategorySlug={subCategorySlug}
+            categorySlug={categorySlug}
           />
         </aside>
 

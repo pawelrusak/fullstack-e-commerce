@@ -22,15 +22,16 @@ const CardsSectionBody = styled(CardsSection.Body)`
 
 type RelatedProductsSectionProps = {
   products: Product[];
-  subCategorySlug: SubCategory['slug'];
+  categorySlug: SubCategory['category']['slug'];
 };
 
 export default function RelatedProductsSection({
   products,
-  subCategorySlug,
+  categorySlug,
 }: RelatedProductsSectionProps) {
   const queryString = qs.stringify({
-    'subCategory.slug': subCategorySlug,
+    'subCategory.category.slug': categorySlug,
+    // TODO add types
   });
 
   const relatedProductUrl = `/products?${queryString}`;

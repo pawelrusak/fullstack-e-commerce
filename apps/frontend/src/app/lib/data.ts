@@ -1,6 +1,6 @@
 import qs from 'qs';
 import { unstable_noStore as noStore } from 'next/cache';
-import { Product, SubCategory, Paths, Prettify } from '@e-shop/types';
+import { Product, Category, Paths, Prettify } from '@e-shop/types';
 
 export async function fetchFeaturedProducts(): Promise<Product[]> {
   /**
@@ -42,8 +42,8 @@ export async function fetchProductDetails(
   }
 }
 
-export async function fetchProductsBySubCategory(
-  subCategorySlug: Required<Product['subCategory']>['slug'],
+export async function fetchProductsByCategory(
+  categorySlug: Required<Product['subCategory']>['slug'],
   limit = 6
 ): Promise<Product[]> {
   /**
@@ -62,7 +62,7 @@ export async function fetchProductsBySubCategory(
 
   try {
     const queryString = qs.stringify({
-      'subCategory.slug': subCategorySlug,
+      'subCategory.category.slug': categorySlug,
       limit,
     } satisfies QueryString);
 
@@ -79,7 +79,7 @@ export async function fetchProductsBySubCategory(
 
 export async function fetchRelatedProductsAndSubCategorySlug(
   slug: Product['slug']
-): Promise<{ products: Product[]; subCategorySlug: SubCategory['slug'] }> {
+): Promise<{ products: Product[]; categorySlug: Category['slug'] }> {
   /**
    * @todo improve cache management
    */
@@ -88,11 +88,9 @@ export async function fetchRelatedProductsAndSubCategorySlug(
   try {
     const productDetails = await fetchProductDetails(slug);
 
-    const subCategorySlug = productDetails.subCategory.slug;
+    const categorySlug = productDetails.subCategory.category.slug;
 
-    const relatedProducts = await fetchProductsBySubCategory(
-      subCategorySlug || ''
-    );
+    const relatedProducts = await fetchProductsByCategory(categorySlug || '');
 
     const relatedProductWithoutRepetition = relatedProducts.filter(
       (relatedProduct) => relatedProduct.slug !== slug
@@ -103,7 +101,7 @@ export async function fetchRelatedProductsAndSubCategorySlug(
         ? relatedProductWithoutRepetition.slice(0, 5)
         : relatedProductWithoutRepetition;
 
-    return { products, subCategorySlug };
+    return { products, categorySlug };
   } catch (error) {
     console.error('Server Error:', error);
     throw new Error('Failed to fetch related products data.');
