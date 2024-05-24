@@ -1,12 +1,17 @@
 import mongoose from 'mongoose';
 import type { ProductSchema } from '@e-shop/types';
 import {
-  ProductFindAllWithCategories,
   findAllWithCategories,
+  findAllBrandsAndCount,
+} from './product.statics';
+import type {
+  ProductFindAllWithCategories,
+  ProductFindAllBrandsAndCount,
 } from './product.statics';
 
 type ProductModel = mongoose.Model<ProductSchema> &
-  ProductFindAllWithCategories;
+  ProductFindAllWithCategories &
+  ProductFindAllBrandsAndCount;
 
 export const productSchema = new mongoose.Schema<ProductSchema, ProductModel>(
   {
@@ -29,6 +34,7 @@ export const productSchema = new mongoose.Schema<ProductSchema, ProductModel>(
       trim: true,
       minLength: 3,
     },
+    // TODO create brand model
     brand: {
       type: String,
       required: true,
@@ -83,6 +89,7 @@ export const productSchema = new mongoose.Schema<ProductSchema, ProductModel>(
 );
 
 productSchema.statics['findAllWithCategories'] = findAllWithCategories;
+productSchema.statics['findAllBrandsAndCount'] = findAllBrandsAndCount;
 
 export const Product = mongoose.model<ProductSchema, ProductModel>(
   'Product',

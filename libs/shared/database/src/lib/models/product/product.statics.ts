@@ -66,3 +66,27 @@ export function findAllWithCategories(
 
   return this.aggregate<ProductSchema>(aggregationSteps);
 }
+
+export type ProductFindAllBrandsAndCount = {
+  findAllBrandsAndCount(): mongoose.Aggregate<ProductSchema[]>;
+};
+
+export function findAllBrandsAndCount(this: mongoose.Model<ProductSchema>) {
+  const aggregationSteps: mongoose.PipelineStage[] = [
+    {
+      $group: {
+        _id: '$brand',
+        count: { $sum: 1 },
+      },
+    },
+    {
+      $project: {
+        _id: '$_id',
+        brand: '$_id',
+        count: 1,
+      },
+    },
+  ];
+
+  return this.aggregate<ProductSchema>(aggregationSteps);
+}
