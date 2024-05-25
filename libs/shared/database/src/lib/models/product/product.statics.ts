@@ -82,7 +82,7 @@ export function findAllBrandsAndCount(this: mongoose.Model<ProductSchema>) {
     {
       $project: {
         _id: '$_id',
-        brand: '$_id',
+        name: '$_id',
         count: 1,
       },
     },
