@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { ProductSchema } from '@e-shop/types';
+import { ProductSchema, Brand } from '@e-shop/types';
 import {
   renameFilterKeysRelatedToCategories,
   validateAndConvertFilterData,
@@ -68,7 +68,7 @@ export function findAllWithCategories(
 }
 
 export type ProductFindAllBrandsAndCount = {
-  findAllBrandsAndCount(): mongoose.Aggregate<ProductSchema[]>;
+  findAllBrandsAndCount(): mongoose.Aggregate<Brand[]>;
 };
 
 export function findAllBrandsAndCount(this: mongoose.Model<ProductSchema>) {
