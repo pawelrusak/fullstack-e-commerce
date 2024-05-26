@@ -1,6 +1,6 @@
 import qs from 'qs';
 import { unstable_noStore as noStore } from 'next/cache';
-import { Product, Category, Paths, Prettify } from '@e-shop/types';
+import { Product, Category, Paths, Prettify, Brand } from '@e-shop/types';
 
 export async function fetchFeaturedProducts(): Promise<Product[]> {
   // TODO improve cache management
@@ -133,5 +133,19 @@ export async function fetchCategories(): Promise<Category[]> {
   } catch (error) {
     console.error('Server Error:', error);
     throw new Error('Failed to fetch categories data.');
+  }
+}
+
+export async function fetchBrands(): Promise<Brand[]> {
+  // TODO improve cache management
+  noStore();
+
+  try {
+    const data = await fetch('http://localhost:3333/api/v1/brands');
+
+    return await data.json();
+  } catch (error) {
+    console.error('Server Error:', error);
+    throw new Error('Failed to fetch brands data.');
   }
 }
