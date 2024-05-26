@@ -2,6 +2,7 @@ import express from 'express';
 import * as path from 'path';
 import productsRouter from './routers/products.router';
 import categoriesRouter from './routers/categories.router';
+import brandsRouter from './routers/brands.router';
 import { connectDB } from '@e-shop/database';
 
 connectDB(process.env.DATABASE_URI);
@@ -21,6 +22,7 @@ app.get('/api', (req, res) => {
 
 app.use('/api/v1/products', productsRouter);
 app.use('/api/v1/categories', categoriesRouter);
+app.use('/api/v1/brands', brandsRouter);
 
 const port = process.env.PORT || 3333;
 const server = app.listen(port, () => {
