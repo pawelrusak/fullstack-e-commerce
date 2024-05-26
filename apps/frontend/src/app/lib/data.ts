@@ -3,9 +3,7 @@ import { unstable_noStore as noStore } from 'next/cache';
 import { Product, Category, Paths, Prettify } from '@e-shop/types';
 
 export async function fetchFeaturedProducts(): Promise<Product[]> {
-  /**
-   * @todo improve cache management
-   */
+  // TODO improve cache management
   noStore();
 
   try {
@@ -27,9 +25,7 @@ export async function fetchFeaturedProducts(): Promise<Product[]> {
 export async function fetchProductDetails(
   slug: Product['slug']
 ): Promise<Product> {
-  /**
-   * @todo improve cache management
-   */
+  // TODO improve cache management
   noStore();
 
   try {
@@ -46,9 +42,7 @@ export async function fetchProductsByCategory(
   categorySlug: Required<Product['subCategory']>['slug'],
   limit = 6
 ): Promise<Product[]> {
-  /**
-   * @todo improve cache management
-   */
+  // TODO improve cache management
   noStore();
 
   type ProductQueryStringFields = Paths<Product>;
@@ -80,9 +74,7 @@ export async function fetchProductsByCategory(
 export async function fetchRelatedProductsAndSubCategorySlug(
   slug: Product['slug']
 ): Promise<{ products: Product[]; categorySlug: Category['slug'] }> {
-  /**
-   * @todo improve cache management
-   */
+  // TODO improve cache management
   noStore();
 
   try {
@@ -113,9 +105,7 @@ type ProductFilters = Partial<Record<Paths<Product>, string>>;
 export async function fetchProductsByFilters(
   productFilters?: ProductFilters
 ): Promise<Product[]> {
-  /**
-   * @todo improve cache management
-   */
+  // TODO improve cache management
   noStore();
 
   try {
@@ -129,5 +119,19 @@ export async function fetchProductsByFilters(
   } catch (error) {
     console.error('Server Error:', error);
     throw new Error('Failed to fetch products by filters data.');
+  }
+}
+
+export async function fetchCategories(): Promise<Category[]> {
+  // TODO improve cache management
+  noStore();
+
+  try {
+    const data = await fetch('http://localhost:3333/api/v1/categories');
+
+    return await data.json();
+  } catch (error) {
+    console.error('Server Error:', error);
+    throw new Error('Failed to fetch categories data.');
   }
 }
