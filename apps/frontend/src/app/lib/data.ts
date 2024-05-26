@@ -149,3 +149,46 @@ export async function fetchBrands(): Promise<Brand[]> {
     throw new Error('Failed to fetch brands data.');
   }
 }
+
+export async function fetchFilterData(): Promise<{
+  categories: Category[];
+  brands: Brand[];
+}> {
+  // TODO improve cache management
+  noStore();
+
+  try {
+    const [categories, brands] = await Promise.all([
+      fetchCategories(),
+      fetchBrands(),
+    ]);
+
+    return { categories, brands };
+  } catch (error) {
+    console.error('Server Error:', error);
+    throw new Error('Failed to fetch filter data.');
+  }
+}
+
+export async function fetchProductGridData(
+  productFilters?: ProductFilters
+): Promise<{
+  products: Product[];
+  categories: Category[];
+  brands: Brand[];
+}> {
+  // TODO improve cache management
+  noStore();
+
+  try {
+    const [products, { categories, brands }] = await Promise.all([
+      fetchProductsByFilters(productFilters),
+      fetchFilterData(),
+    ]);
+
+    return { products, categories, brands };
+  } catch (error) {
+    console.error('Server Error:', error);
+    throw new Error('Failed to fetch product grid data.');
+  }
+}
