@@ -1,0 +1,19 @@
+{
+  "name": "factories",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/factories/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/factories",
+        "main": "libs/shared/factories/src/index.ts",
+        "tsConfig": "libs/shared/factories/tsconfig.lib.json",
+        "assets": ["libs/shared/factories/*.md"]
+      }
+    }
+  }
+}
