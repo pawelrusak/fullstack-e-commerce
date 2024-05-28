@@ -11,6 +11,7 @@ const Configuration: UserConfig = {
       [
         'backend',
         'database',
+        'factories',
         'fixtures',
         'frontend',
         'i18n',
