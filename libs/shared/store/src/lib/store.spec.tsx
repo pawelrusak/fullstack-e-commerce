@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render } from '@e-shop/test-utils';
 
 import Store from './store';
 
