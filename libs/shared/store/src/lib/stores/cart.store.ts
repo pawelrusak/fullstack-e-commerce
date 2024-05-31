@@ -23,6 +23,13 @@ export class CartStore {
     return this._cartItems.reduce((acc, item) => acc + item.quantity, 0);
   }
 
+  get totalPrice() {
+    return this._cartItems.reduce(
+      (acc, item) => acc + item.cartItemsTotalPrice,
+      0
+    );
+  }
+
   public addToCartOrUpdate(CartItemPayload: CartItemPayload) {
     const itemIndex = this._cartItems.findIndex(
       (item) => item.productId === CartItemPayload.product._id

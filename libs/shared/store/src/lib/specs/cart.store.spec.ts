@@ -91,4 +91,23 @@ describe('CartStore', () => {
 
     expect(cartStore.itemsCount).toBe(totalItems);
   });
+
+  it('should count total price of all items in cart', () => {
+    const cartStore = new CartStore();
+
+    const firstCartItem = createNewCartItem();
+    const secondCartItem = createNewCartItem();
+    const thirdCartItem = createNewCartItem();
+
+    cartStore.addToCartOrUpdate(firstCartItem);
+    cartStore.addToCartOrUpdate(secondCartItem);
+    cartStore.addToCartOrUpdate(thirdCartItem);
+
+    const totalItemsPrice =
+      firstCartItem.product.price * firstCartItem.quantity +
+      secondCartItem.product.price * secondCartItem.quantity +
+      thirdCartItem.product.price * thirdCartItem.quantity;
+
+    expect(cartStore.totalPrice).toBe(totalItemsPrice);
+  });
 });
