@@ -2,6 +2,13 @@ import { CartStore } from '../stores/cart.store';
 import { faker } from '@faker-js/faker';
 import { productFactory } from '@e-shop/factories';
 
+function createNewCartItem() {
+  return {
+    product: productFactory(),
+    quantity: faker.number.int({ min: 1, max: 10 }),
+  };
+}
+
 describe('CartStore', () => {
   it('should add new item to cart', () => {
     const cartStore = new CartStore();
@@ -66,5 +73,22 @@ describe('CartStore', () => {
         cartItemsTotalPrice: updatedCartItem.product.price * totalQuantity,
       },
     ]);
+  });
+
+  it('should count total price of all items in cart', () => {
+    const cartStore = new CartStore();
+
+    const firstCartItem = createNewCartItem();
+    const secondCartItem = createNewCartItem();
+    const thirdCartItem = createNewCartItem();
+
+    cartStore.addToCartOrUpdate(firstCartItem);
+    cartStore.addToCartOrUpdate(secondCartItem);
+    cartStore.addToCartOrUpdate(thirdCartItem);
+
+    const totalItems =
+      firstCartItem.quantity + secondCartItem.quantity + thirdCartItem.quantity;
+
+    expect(cartStore.itemsCount).toBe(totalItems);
   });
 });

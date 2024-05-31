@@ -14,8 +14,13 @@ export type CartItemPayload = Pick<CartItem, 'product' | 'quantity'>;
 export class CartStore {
   public _cartItems: CartItem[] = [];
 
+  // TODO rename this getter to items (?)
   get cartItems() {
     return this._cartItems;
+  }
+
+  get itemsCount() {
+    return this._cartItems.reduce((acc, item) => acc + item.quantity, 0);
   }
 
   public addToCartOrUpdate(CartItemPayload: CartItemPayload) {
@@ -49,8 +54,8 @@ export class CartStore {
   ) {
     const previousQuantity = this._cartItems[itemIndex].quantity;
     const updatedQuantity = previousQuantity + quantity;
-    this._cartItems[itemIndex].quantity = updatedQuantity;
 
+    this._cartItems[itemIndex].quantity = updatedQuantity;
     this._cartItems[itemIndex].cartItemsTotalPrice =
       this._cartItems[itemIndex].currentPrice *
       this._cartItems[itemIndex].quantity;
