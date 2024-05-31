@@ -1,3 +1,4 @@
+import { makeObservable, action, observable, computed } from 'mobx';
 import { Product } from '@e-shop/types';
 
 export type CartItem = {
@@ -13,6 +14,18 @@ export type CartItemPayload = Pick<CartItem, 'product' | 'quantity'>;
 
 export class CartStore {
   public _cartItems: CartItem[] = [];
+
+  constructor() {
+    makeObservable(this, {
+      _cartItems: observable,
+      cartItems: computed,
+      items: computed,
+      itemsCount: computed,
+      totalPrice: computed,
+      addToCartOrUpdate: action,
+      replaceQuantityOrRemove: action,
+    });
+  }
 
   /**
    * @deprecated Use `items` instead
