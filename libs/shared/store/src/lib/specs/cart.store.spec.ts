@@ -110,4 +110,70 @@ describe('CartStore', () => {
 
     expect(cartStore.totalPrice).toBe(totalItemsPrice);
   });
+
+  it("should return false when item to replace don't exist in cart", () => {
+    const cartStore = new CartStore();
+    const product = createNewCartItem();
+
+    expect(cartStore.replaceQuantityOrRemove(product)).toBe(false);
+  });
+
+  it('should return true when item to replace exist in cart', () => {
+    const cartStore = new CartStore();
+    const product = createNewCartItem();
+
+    cartStore.addToCartOrUpdate(product);
+
+    expect(cartStore.replaceQuantityOrRemove(product)).toBe(true);
+  });
+
+  it('should remove item from cart when quantity is 0', () => {
+    const cartStore = new CartStore();
+    const product = createNewCartItem();
+
+    cartStore.addToCartOrUpdate(product);
+
+    expect(cartStore.items.length).toBe(1);
+
+    cartStore.replaceQuantityOrRemove({
+      product: product.product,
+      quantity: 0,
+    });
+
+    expect(cartStore.items.length).toBe(0);
+  });
+
+  it('should remove item from cart when quantity is less than 0', () => {
+    const cartStore = new CartStore();
+    const product = createNewCartItem();
+
+    cartStore.addToCartOrUpdate(product);
+
+    expect(cartStore.items.length).toBe(1);
+
+    cartStore.replaceQuantityOrRemove({
+      product: product.product,
+      quantity: -1,
+    });
+
+    expect(cartStore.items.length).toBe(0);
+  });
+
+  it('should update item quantity in cart', () => {
+    const cartStore = new CartStore();
+    const product = createNewCartItem();
+
+    cartStore.addToCartOrUpdate(product);
+
+    expect(cartStore.items[0].quantity).toBe(product.quantity);
+
+    const newQuantity = faker.number.int({ min: 1, max: 50 });
+
+    cartStore.replaceQuantityOrRemove({
+      product: product.product,
+      quantity: newQuantity,
+    });
+
+    expect(cartStore.items[0].quantity).toBe(newQuantity);
+  });
 });

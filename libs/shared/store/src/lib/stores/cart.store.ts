@@ -73,6 +73,35 @@ export class CartStore {
       this._cartItems[itemIndex].currentPrice *
       this._cartItems[itemIndex].quantity;
   }
+
+  public replaceQuantityOrRemove({ product, quantity }: CartItemPayload) {
+    const itemIndex = this._cartItems.findIndex(
+      (item) => item.productId === product._id
+    );
+
+    if (itemIndex === -1) {
+      return false;
+    }
+
+    if (quantity <= 0) {
+      this._cartItems.splice(itemIndex, 1);
+      return true;
+    }
+
+    this.replaceQuantityExistingCartItem(itemIndex, quantity);
+
+    return true;
+  }
+
+  private replaceQuantityExistingCartItem(
+    itemIndex: number,
+    newQuantity: CartItemPayload['quantity']
+  ) {
+    this._cartItems[itemIndex].quantity = newQuantity;
+    this._cartItems[itemIndex].cartItemsTotalPrice =
+      this._cartItems[itemIndex].currentPrice *
+      this._cartItems[itemIndex].quantity;
+  }
 }
 
 export const cartStore = new CartStore();
