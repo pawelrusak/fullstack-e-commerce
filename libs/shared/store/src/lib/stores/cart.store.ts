@@ -14,8 +14,14 @@ export type CartItemPayload = Pick<CartItem, 'product' | 'quantity'>;
 export class CartStore {
   public _cartItems: CartItem[] = [];
 
-  // TODO rename this getter to items (?)
+  /**
+   * @deprecated Use `items` instead
+   */
   get cartItems() {
+    return this._cartItems;
+  }
+
+  get items() {
     return this._cartItems;
   }
 

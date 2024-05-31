@@ -16,12 +16,12 @@ describe('CartStore', () => {
     const quantity = faker.number.int({ min: 1, max: 10 });
     const cartItem = { product, quantity };
 
-    expect(cartStore.cartItems.length).toBe(0);
+    expect(cartStore.items.length).toBe(0);
 
     cartStore.addToCartOrUpdate(cartItem);
 
-    expect(cartStore.cartItems.length).toBe(1);
-    expect(cartStore.cartItems).toEqual([
+    expect(cartStore.items.length).toBe(1);
+    expect(cartStore.items).toEqual([
       {
         id: product._id,
         productId: product._id,
@@ -40,12 +40,12 @@ describe('CartStore', () => {
     const quantityTwo = faker.number.int({ min: 1, max: 10 });
     const cartItem = { product, quantity: quantityOne };
 
-    expect(cartStore.cartItems.length).toBe(0);
+    expect(cartStore.items.length).toBe(0);
 
     cartStore.addToCartOrUpdate(cartItem);
 
-    expect(cartStore.cartItems.length).toBe(1);
-    expect(cartStore.cartItems).toEqual([
+    expect(cartStore.items.length).toBe(1);
+    expect(cartStore.items).toEqual([
       {
         id: cartItem.product._id,
         productId: cartItem.product._id,
@@ -62,8 +62,8 @@ describe('CartStore', () => {
 
     const totalQuantity = quantityOne + quantityTwo;
 
-    expect(cartStore.cartItems.length).toBe(1);
-    expect(cartStore.cartItems).toEqual([
+    expect(cartStore.items.length).toBe(1);
+    expect(cartStore.items).toEqual([
       {
         id: updatedCartItem.product._id,
         productId: updatedCartItem.product._id,
