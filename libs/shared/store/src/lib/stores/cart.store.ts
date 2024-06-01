@@ -1,4 +1,5 @@
-import { makeObservable, action, observable, computed } from 'mobx';
+import { makeAutoObservable } from 'mobx';
+import { RootStore } from './root.store';
 import { Product } from '@e-shop/types';
 
 export type CartItem = {
@@ -15,16 +16,8 @@ export type CartItemPayload = Pick<CartItem, 'product' | 'quantity'>;
 export class CartStore {
   public _cartItems: CartItem[] = [];
 
-  constructor() {
-    makeObservable(this, {
-      _cartItems: observable,
-      cartItems: computed,
-      items: computed,
-      itemsCount: computed,
-      totalPrice: computed,
-      addToCartOrUpdate: action,
-      replaceQuantityOrRemove: action,
-    });
+  constructor(rootStore: RootStore) {
+    makeAutoObservable(rootStore);
   }
 
   /**
@@ -116,7 +109,3 @@ export class CartStore {
       this._cartItems[itemIndex].quantity;
   }
 }
-
-export const cartStore = new CartStore();
-
-export default cartStore;

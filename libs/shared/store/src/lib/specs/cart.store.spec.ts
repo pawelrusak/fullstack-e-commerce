@@ -1,4 +1,5 @@
 import { CartStore } from '../stores/cart.store';
+import { RootStore } from '../stores/root.store';
 import { faker } from '@faker-js/faker';
 import { productFactory } from '@e-shop/factories';
 
@@ -9,9 +10,15 @@ function createNewCartItem() {
   };
 }
 
+let cartStore: CartStore;
+
 describe('CartStore', () => {
+  beforeEach(() => {
+    const rootStore = new RootStore();
+    cartStore = rootStore.cart;
+  });
+
   it('should add new item to cart', () => {
-    const cartStore = new CartStore();
     const product = productFactory();
     const quantity = faker.number.int({ min: 1, max: 10 });
     const cartItem = { product, quantity };
@@ -34,7 +41,6 @@ describe('CartStore', () => {
   });
 
   it('should update existing item in cart', () => {
-    const cartStore = new CartStore();
     const product = productFactory();
     const quantityOne = faker.number.int({ min: 1, max: 10 });
     const quantityTwo = faker.number.int({ min: 1, max: 10 });
@@ -76,8 +82,6 @@ describe('CartStore', () => {
   });
 
   it('should count total price of all items in cart', () => {
-    const cartStore = new CartStore();
-
     const firstCartItem = createNewCartItem();
     const secondCartItem = createNewCartItem();
     const thirdCartItem = createNewCartItem();
@@ -93,8 +97,6 @@ describe('CartStore', () => {
   });
 
   it('should count total price of all items in cart', () => {
-    const cartStore = new CartStore();
-
     const firstCartItem = createNewCartItem();
     const secondCartItem = createNewCartItem();
     const thirdCartItem = createNewCartItem();
@@ -112,14 +114,12 @@ describe('CartStore', () => {
   });
 
   it("should return false when item to replace don't exist in cart", () => {
-    const cartStore = new CartStore();
     const product = createNewCartItem();
 
     expect(cartStore.replaceQuantityOrRemove(product)).toBe(false);
   });
 
   it('should return true when item to replace exist in cart', () => {
-    const cartStore = new CartStore();
     const product = createNewCartItem();
 
     cartStore.addToCartOrUpdate(product);
@@ -128,7 +128,6 @@ describe('CartStore', () => {
   });
 
   it('should remove item from cart when quantity is 0', () => {
-    const cartStore = new CartStore();
     const product = createNewCartItem();
 
     cartStore.addToCartOrUpdate(product);
@@ -144,7 +143,6 @@ describe('CartStore', () => {
   });
 
   it('should remove item from cart when quantity is less than 0', () => {
-    const cartStore = new CartStore();
     const product = createNewCartItem();
 
     cartStore.addToCartOrUpdate(product);
@@ -160,7 +158,6 @@ describe('CartStore', () => {
   });
 
   it('should update item quantity in cart', () => {
-    const cartStore = new CartStore();
     const product = createNewCartItem();
 
     cartStore.addToCartOrUpdate(product);
