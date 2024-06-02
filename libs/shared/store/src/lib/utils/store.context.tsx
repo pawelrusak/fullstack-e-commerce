@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import rootStore, { RootStore } from '../stores/root.store';
+import { useHydrated } from '@e-shop/utils';
 
 const StoreContext = React.createContext<RootStore | undefined>(undefined);
 
@@ -25,6 +26,16 @@ export function useStore() {
   return context;
 }
 
+export function useHydrationStore() {
+  const isHydrated = useHydrated();
+  const store = useStore();
+
+  return {
+    isHydrated,
+    store,
+  };
+}
+
 export function useCartStore() {
   const context = React.useContext(StoreContext);
 
@@ -35,4 +46,14 @@ export function useCartStore() {
   const cartStore = context.cart;
 
   return cartStore;
+}
+
+export function useHydrationCartStore() {
+  const isHydrated = useHydrated();
+  const cartStore = useCartStore();
+
+  return {
+    isHydrated,
+    cartStore,
+  };
 }
