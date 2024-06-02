@@ -1,4 +1,1 @@
-export {
-  QuantitySelection,
-  QuantitySelectionProps,
-} from './quantity-selection.component';
+export * from './quantity-selection.component';

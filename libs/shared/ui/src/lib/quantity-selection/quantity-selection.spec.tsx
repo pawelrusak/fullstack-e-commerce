@@ -2,8 +2,7 @@ import { render, screen } from '@e-shop/test-utils';
 import { faker } from '@faker-js/faker';
 
 import QuantitySelection from './quantity-selection.component';
-
-import { DATA_TEST_ID } from './quantity-selection.component';
+import { DATA_TEST_ID } from './quantity-selection.constants';
 
 const getInput = () => screen.getByTestId(DATA_TEST_ID.INPUT);
 const findInput = () => screen.queryByTestId(DATA_TEST_ID.INPUT);

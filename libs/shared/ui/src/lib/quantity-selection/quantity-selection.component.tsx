@@ -5,6 +5,7 @@ import { PlusIcon, MinusIcon } from '@e-shop/icons';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import * as Styled from './quantity-selection.styled';
 import { useQuantityInRange } from './quantity-selection.hooks';
+import { DATA_TEST_ID } from './quantity-selection.constants';
 
 type Quantity = Product['stock'];
 
@@ -12,12 +13,6 @@ export type QuantitySelectionProps = {
   initialQuantity?: Quantity;
   maxQuantity?: Quantity;
   onChangeQuantity?: (quantity: Quantity) => void;
-};
-
-export const DATA_TEST_ID = {
-  DECREASE: 'quantity-selection-decrease',
-  INCREASE: 'quantity-selection-increase',
-  INPUT: 'quantity-selection-input',
 };
 
 export function QuantitySelection({
@@ -50,6 +45,7 @@ export function QuantitySelection({
         </Styled.Button>
         <Styled.Button
           type="button"
+          // TODO remove this hart code color
           backgroundColor="#f4f4f4"
           order="3"
           onClick={handleIncrease}
