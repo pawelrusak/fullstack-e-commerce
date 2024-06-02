@@ -1,6 +1,7 @@
 import { makeAutoObservable } from 'mobx';
-import { RootStore } from './root.store';
+import { makePersistable } from 'mobx-persist-store';
 import { Product } from '@e-shop/types';
+import { RootStore } from './root.store';
 
 export type CartItem = {
   id: Product['_id'];
@@ -15,9 +16,21 @@ export type CartItemPayload = Pick<CartItem, 'product' | 'quantity'>;
 
 export class CartStore {
   public _cartItems: CartItem[] = [];
+  public _rootStore: RootStore;
 
   constructor(rootStore: RootStore) {
-    makeAutoObservable(rootStore);
+    makeAutoObservable(this, { _rootStore: false }, { autoBind: true });
+
+    this._rootStore = rootStore;
+
+    if (process.env.NODE_ENV !== 'test') {
+      makePersistable(this, {
+        name: 'cart-store',
+        properties: ['_cartItems'],
+        storage:
+          typeof window !== 'undefined' ? window.localStorage : undefined,
+      });
+    }
   }
 
   /**
