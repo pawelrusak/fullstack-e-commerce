@@ -68,6 +68,10 @@ export class CartStore {
     this.createNewCartItem(CartItemPayload);
   }
 
+  public clean() {
+    this._cartItems = [];
+  }
+
   private createNewCartItem({ product, quantity }: CartItemPayload) {
     this._cartItems.push({
       // TODO use some kind of unique id

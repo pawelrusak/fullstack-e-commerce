@@ -173,4 +173,20 @@ describe('CartStore', () => {
 
     expect(cartStore.items[0].quantity).toBe(newQuantity);
   });
+
+  it('should remove items from cart when', () => {
+    const firstCartItem = createNewCartItem();
+    const secondCartItem = createNewCartItem();
+    const thirdCartItem = createNewCartItem();
+
+    cartStore.addToCartOrUpdate(firstCartItem);
+    cartStore.addToCartOrUpdate(secondCartItem);
+    cartStore.addToCartOrUpdate(thirdCartItem);
+
+    expect(cartStore.items.length).toBe(3);
+
+    cartStore.clean();
+
+    expect(cartStore.items.length).toBe(0);
+  });
 });
