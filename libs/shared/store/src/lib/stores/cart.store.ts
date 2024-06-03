@@ -48,9 +48,17 @@ export class CartStore {
     return this._cartItems.reduce((acc, item) => acc + item.quantity, 0);
   }
 
+  // TODO add shipping cost
   get totalPrice() {
     return this._cartItems.reduce(
       (acc, item) => acc + item.cartItemsTotalPrice,
+      0
+    );
+  }
+
+  get totalItemsPrice() {
+    return this._cartItems.reduce(
+      (acc, item) => acc + item.product.price * item.quantity,
       0
     );
   }
