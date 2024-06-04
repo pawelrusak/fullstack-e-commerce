@@ -1,12 +1,16 @@
 export { default as ArrowLongRightIcon } from './arrow-long-right.svg';
 export { default as CardIconWithDot } from './card-icon-with-dot.svg';
+export { default as MinusSmallButton } from './minus-small-icon.svg';
 export { default as ArrowShortRight } from './arrow-short-right.svg';
 export { default as ArrowShortLeft } from './arrow-short-left.svg';
 export { default as EmailSolidIcon } from './email-solid-icon.svg';
+export { default as PlusSmallButton } from './plus-small-icon.svg';
 export { default as PhoneSolidIcon } from './phone-solid-icon.svg';
 export { default as InstagramIcon } from './instagram-icon.svg';
 export { default as HeadphoneIcon } from './headphone-icon.svg';
+export { default as TrashBigIcon } from './trash-big-icon.svg';
 export { default as EyeSlashIcon } from './eye-slash-icon.svg';
+export { default as ShareBigIcon } from './share-big-icon.svg';
 export { default as PinSolidIcon } from './pin-solid-icon.svg';
 export { default as LocationIcon } from './location-icon.svg';
 export { default as FacebookIcon } from './facebook-icon.svg';
