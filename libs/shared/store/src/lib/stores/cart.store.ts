@@ -1,5 +1,6 @@
 import { makeAutoObservable } from 'mobx';
 import { makePersistable } from 'mobx-persist-store';
+import { v4 as uuid } from 'uuid';
 import { Product } from '@e-shop/types';
 import { RootStore } from './root.store';
 
@@ -52,20 +53,20 @@ export class CartStore {
   get totalPrice() {
     return this._cartItems.reduce(
       (acc, item) => acc + item.cartItemsTotalPrice,
-      0
+      0,
     );
   }
 
   get totalItemsPrice() {
     return this._cartItems.reduce(
       (acc, item) => acc + item.product.price * item.quantity,
-      0
+      0,
     );
   }
 
   public addToCartOrUpdate(CartItemPayload: CartItemPayload) {
     const itemIndex = this._cartItems.findIndex(
-      (item) => item.productId === CartItemPayload.product._id
+      (item) => item.productId === CartItemPayload.product._id,
     );
 
     if (itemIndex !== -1) {
@@ -83,7 +84,7 @@ export class CartStore {
   private createNewCartItem({ product, quantity }: CartItemPayload) {
     this._cartItems.push({
       // TODO use some kind of unique id
-      id: product._id,
+      id: uuid(),
       productId: product._id,
       product,
       quantity,
@@ -94,7 +95,7 @@ export class CartStore {
 
   private updateExistingCartItem(
     itemIndex: number,
-    quantity: CartItemPayload['quantity']
+    quantity: CartItemPayload['quantity'],
   ) {
     const previousQuantity = this._cartItems[itemIndex].quantity;
     const updatedQuantity = previousQuantity + quantity;
@@ -107,7 +108,7 @@ export class CartStore {
 
   public replaceQuantityOrRemove({ product, quantity }: CartItemPayload) {
     const itemIndex = this._cartItems.findIndex(
-      (item) => item.productId === product._id
+      (item) => item.productId === product._id,
     );
 
     if (itemIndex === -1) {
@@ -126,7 +127,7 @@ export class CartStore {
 
   private replaceQuantityExistingCartItem(
     itemIndex: number,
-    newQuantity: CartItemPayload['quantity']
+    newQuantity: CartItemPayload['quantity'],
   ) {
     this._cartItems[itemIndex].quantity = newQuantity;
     this._cartItems[itemIndex].cartItemsTotalPrice =

@@ -30,7 +30,7 @@ describe('CartStore', () => {
     expect(cartStore.items.length).toBe(1);
     expect(cartStore.items).toEqual([
       {
-        id: product._id,
+        id: expect.any(String),
         productId: product._id,
         product,
         quantity,
@@ -53,7 +53,7 @@ describe('CartStore', () => {
     expect(cartStore.items.length).toBe(1);
     expect(cartStore.items).toEqual([
       {
-        id: cartItem.product._id,
+        id: expect.any(String),
         productId: cartItem.product._id,
         product: cartItem.product,
         quantity: quantityOne,
@@ -71,7 +71,7 @@ describe('CartStore', () => {
     expect(cartStore.items.length).toBe(1);
     expect(cartStore.items).toEqual([
       {
-        id: updatedCartItem.product._id,
+        id: expect.any(String),
         productId: updatedCartItem.product._id,
         product: updatedCartItem.product,
         quantity: totalQuantity,
