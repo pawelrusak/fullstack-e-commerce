@@ -83,7 +83,6 @@ export class CartStore {
 
   private createNewCartItem({ product, quantity }: CartItemPayload) {
     this._cartItems.push({
-      // TODO use some kind of unique id
       id: uuid(),
       productId: product._id,
       product,
@@ -91,6 +90,18 @@ export class CartStore {
       currentPrice: product.price,
       cartItemsTotalPrice: product.price * quantity,
     });
+  }
+
+  public findByIdAndRemove(id: CartItem['id']) {
+    const itemIndex = this._cartItems.findIndex((item) => item.id === id);
+
+    if (itemIndex === -1) {
+      return false;
+    }
+
+    this._cartItems.splice(itemIndex, 1);
+
+    return true;
   }
 
   private updateExistingCartItem(

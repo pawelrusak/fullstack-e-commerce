@@ -206,4 +206,25 @@ describe('CartStore', () => {
 
     expect(cartStore.items.length).toBe(0);
   });
+
+  it('should remove item from cart by id', () => {
+    const firstCartItem = createNewCartItem();
+    const secondCartItem = createNewCartItem();
+    const thirdCartItem = createNewCartItem();
+
+    cartStore.addToCartOrUpdate(firstCartItem);
+    cartStore.addToCartOrUpdate(secondCartItem);
+    cartStore.addToCartOrUpdate(thirdCartItem);
+
+    const indexOfItmToRemove = faker.number.int({ min: 0, max: 2 });
+    const itemToRemove = cartStore.items[indexOfItmToRemove];
+
+    expect(cartStore.items.length).toBe(3);
+    expect(cartStore.items).toContain(itemToRemove);
+
+    cartStore.findByIdAndRemove(itemToRemove.id);
+
+    expect(cartStore.items).not.toContain(itemToRemove);
+    expect(cartStore.items.length).toBe(2);
+  });
 });
