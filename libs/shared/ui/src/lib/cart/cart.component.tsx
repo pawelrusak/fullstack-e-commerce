@@ -1,6 +1,7 @@
 import * as Styled from './cart.styled';
 import { Product } from '@e-shop/types';
 import { VisuallyHidden } from '@reach/visually-hidden';
+import { ShareBigIcon, TrashBigIcon } from '@e-shop/icons';
 
 export type CartProps = React.ComponentPropsWithRef<'section'>;
 
@@ -10,7 +11,7 @@ export function Cart(props: CartProps) {
 
 export type CartTableProps = React.ComponentPropsWithRef<'table'>;
 
-export function CartTable(props: CartTableProps) {
+function CartTable(props: CartTableProps) {
   return <Styled.Table {...props} />;
 }
 
@@ -22,7 +23,7 @@ export type CartTableHeadProps = {
   actionTableHead?: React.ReactNode;
 };
 
-export function CartTableHead({
+function CartTableHead({
   productTableHead = 'Product',
   priceTableHead = 'Price',
   quantityTableHead = 'Quantity',
@@ -44,7 +45,7 @@ export function CartTableHead({
 
 export type CartTableBody = React.ComponentPropsWithRef<'tbody'>;
 
-export function CartTableBody(props: CartTableBody) {
+function CartTableBody(props: CartTableBody) {
   return <Styled.TBody {...props} />;
 }
 
@@ -52,14 +53,14 @@ export type CartTableBodyRowProps = {
   variant?: string;
   variantLabel?: React.ReactNode;
   quantity?: number;
-  screenReaderRemoveButtonLabel?: string;
   price: React.ReactNode;
   totalPrice: React.ReactNode;
   name: React.ReactNode;
   category: React.ReactNode;
+  actionButtons?: React.ReactNode;
 } & Pick<Product, 'thumbnail'>;
 
-export function CartTableBodyRow({
+function CartTableBodyRow({
   thumbnail,
   quantity = 1,
   category,
@@ -68,7 +69,7 @@ export function CartTableBodyRow({
   variant,
   price,
   totalPrice,
-  screenReaderRemoveButtonLabel = 'Remove',
+  actionButtons,
 }: CartTableBodyRowProps) {
   return (
     <Styled.Tr>
@@ -102,9 +103,43 @@ export function CartTableBodyRow({
         <Styled.PriceTotal>{totalPrice}</Styled.PriceTotal>
       </Styled.TdTotal>
       <Styled.TdAction>
-        <button>{screenReaderRemoveButtonLabel}</button>
+        <Styled.ActionButtons>{actionButtons}</Styled.ActionButtons>
       </Styled.TdAction>
     </Styled.Tr>
+  );
+}
+
+export type CartActionButtonProps = Omit<
+  React.ComponentPropsWithRef<'button'>,
+  'children'
+> & {
+  screenReaderText?: string;
+  primary?: boolean;
+};
+
+function RemoveFromCartButton({
+  primary = true,
+  screenReaderText = 'remove product from cart',
+  ...props
+}: CartActionButtonProps) {
+  return (
+    <Styled.IconButton {...props} primary={primary}>
+      <VisuallyHidden>{screenReaderText}</VisuallyHidden>
+      <TrashBigIcon />
+    </Styled.IconButton>
+  );
+}
+
+function ShareButton({
+  primary = false,
+  screenReaderText = 'share product',
+  ...props
+}: CartActionButtonProps) {
+  return (
+    <Styled.IconButton {...props} primary={primary}>
+      <VisuallyHidden>{screenReaderText}</VisuallyHidden>
+      <ShareBigIcon />
+    </Styled.IconButton>
   );
 }
 
@@ -112,5 +147,7 @@ Cart.Table = CartTable;
 Cart.TableHead = CartTableHead;
 Cart.TableBody = CartTableBody;
 Cart.TableBodyRow = CartTableBodyRow;
+Cart.RemoveFromCartButton = RemoveFromCartButton;
+Cart.ShareButton = ShareButton;
 
 export default Cart;

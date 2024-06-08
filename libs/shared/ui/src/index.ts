@@ -1,5 +1,6 @@
 'use client';
 
+export * from './lib/cart';
 export * from './lib/brand';
 export * from './lib/field';
 export * from './lib/button';

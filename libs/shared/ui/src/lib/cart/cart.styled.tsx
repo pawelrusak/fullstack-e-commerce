@@ -59,7 +59,9 @@ export const TBody = styled.tbody`
   }
 `;
 
-export const Tr = styled.tr``;
+export const Tr = styled.tr`
+  min-height: 29.4rem;
+`;
 
 const tableProductCellCss = css`
   width: 49.21%;
@@ -198,6 +200,8 @@ export const TdTotal = styled.td`
   ${verticalAlignCss};
 `;
 
+// ================================= Action Cell =================================
+
 const tableActionCellCss = css`
   width: 7.37%;
 `;
@@ -208,5 +212,53 @@ export const ThAction = styled.th`
 
 export const TdAction = styled.td`
   ${tableActionCellCss};
-  vertical-align: middle;
+  vertical-align: top;
+`;
+
+export const ActionButtons = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 3.8rem;
+
+  height: 100%;
+  min-height: 29.4rem;
+`;
+
+export type StyledButtonProps = {
+  primary?: boolean;
+};
+
+export const IconButton = styled.button<StyledButtonProps>`
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  padding: 1.6rem;
+  display: flex;
+  place-items: center;
+  height: 6.4rem;
+  width: 6.4rem;
+  border: 1px solid ${({ theme }) => theme.color.primary};
+  background-color: ${({ theme }) => theme.color.background};
+  color: ${({ theme }) => theme.color.primary};
+  border-radius: 999px;
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover,
+  :focus {
+    background-color: ${({ theme }) =>
+      polished.darken(0.1, theme.color.primary)};
+    border-color: ${({ theme }) => polished.darken(0.1, theme.color.primary)};
+    color: ${({ theme }) => theme.color.background};
+  }
+
+  ${({ primary }) =>
+    primary &&
+    css`
+      background-color: ${({ theme }) => theme.color.primary};
+      color: ${({ theme }) => theme.color.background};
+    `}
 `;

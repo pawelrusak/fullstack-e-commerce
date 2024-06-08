@@ -66,6 +66,14 @@ export default {
                 totalPrice={getCurrencyFormat(cartItemsTotalPrice)}
                 thumbnail={product.thumbnail}
                 variant={variant}
+                actionButtons={
+                  <>
+                    <Cart.RemoveFromCartButton
+                      onClick={() => window.alert('remove')}
+                    />
+                    <Cart.ShareButton onClick={() => window.alert('remove')} />
+                  </>
+                }
               />
             ),
           )}
