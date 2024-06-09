@@ -3,7 +3,9 @@ import * as polished from 'polished';
 
 const lightGrey = '#F4F4F4';
 
-export const SectionContainer = styled.section``;
+export const SectionContainer = styled.section`
+  overflow-x: scroll;
+`;
 
 export const Table = styled.table`
   border-collapse: collapse;
@@ -21,7 +23,8 @@ export const THead = styled.thead`
     line-height: 2.4rem;
     text-transform: uppercase;
     background-color: ${lightGrey};
-    padding: 3.2rem 0;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
   }
 
   & tr:first-child th:first-child {
@@ -65,6 +68,7 @@ export const Tr = styled.tr`
 
 const tableProductCellCss = css`
   width: 49.21%;
+  min-width: 66rem;
 `;
 
 // ================================= Product Cell =================================
@@ -98,10 +102,12 @@ export const ProductThumbnail = styled.img`
 `;
 
 export const ProductDetails = styled.div`
-  width: 31.4rem;
+  width: 100%;
+  max-width: 31.4rem;
   height: 16.6rem;
   display: flex;
   flex-direction: column;
+  align-self: center;
 `;
 
 export const ProductCategory = styled.span`
@@ -176,6 +182,7 @@ export const PriceTotal = styled.strong`
 
 const tableQuantityCellCss = css`
   width: 15.59%;
+  padding-right: 1.6rem;
 `;
 
 export const ThQuantity = styled.th`
