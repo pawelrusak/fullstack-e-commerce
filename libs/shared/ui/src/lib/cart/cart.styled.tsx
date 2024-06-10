@@ -5,8 +5,12 @@ import * as polished from 'polished';
 const lightGrey = '#F4F4F4';
 
 export const SectionContainer = styled.section`
-  overflow-x: scroll;
   max-width: 152rem;
+  margin-bottom: clamp(1.6rem, 1.667vw + 1.067rem, 3.2rem);
+`;
+
+export const TableContainer = styled.div`
+  overflow-x: scroll;
 `;
 
 export const Table = styled.table`
@@ -151,6 +155,7 @@ export const ProductVariantLabel = styled.span`
 
 const tablePriceCellCss = css`
   width: 14.67%;
+  padding-right: 1.6rem;
 `;
 
 const verticalAlignCss = css`
@@ -275,16 +280,27 @@ export const IconButton = styled.button<StyledButtonProps>`
 // ================================= Summary Cell =================================
 
 export const SummarySection = styled.section`
+  padding-top: 0.4rem;
+
   display: flex;
+  flex-direction: column-reverse;
+  align-items: end;
   gap: 1.6rem;
 
-  padding-top: 0.4rem;
+  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+    display: flex;
+    flex-direction: row;
+  }
 `;
 
 const subSummarySectionCss = css`
   max-width: 61.8rem;
   width: 100%;
-  padding: 3.2cap 3.6rem;
+  padding: 2.4rem 1.6rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+    padding: 3.2rem 3.6rem;
+  }
 
   border-radius: 1rem;
 `;
@@ -298,8 +314,15 @@ export const CouponSection = styled.section`
   line-height: 2.4rem;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 1.2rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   ${subSummarySectionCss}
 `;
@@ -318,6 +341,8 @@ export const CouponActionButton = styled.button`
   text-decoration: underline;
   text-decoration-thickness: 2px;
 
+  padding-left: 1.6rem;
+
   &:hover,
   &:focus {
     color: ${({ theme }) => theme.color.primary};
@@ -328,10 +353,17 @@ export const SubtotalSection = styled.section`
   background-color: ${lightGrey};
   margin-left: auto;
 
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
   align-items: center;
-  grid-template-columns: 1fr 13.8rem auto;
-  grid-template-areas: 'label price additional';
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 13.8rem auto;
+    grid-template-areas: 'label price additional';
+  }
 
   ${subSummarySectionCss}
 `;

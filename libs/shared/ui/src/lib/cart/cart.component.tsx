@@ -12,7 +12,11 @@ export function Cart(props: CartProps) {
 export type CartTableProps = React.ComponentPropsWithRef<'table'>;
 
 function CartTable(props: CartTableProps) {
-  return <Styled.Table {...props} />;
+  return (
+    <Styled.TableContainer>
+      <Styled.Table {...props} />
+    </Styled.TableContainer>
+  );
 }
 
 export type CartTableHeadProps = {
