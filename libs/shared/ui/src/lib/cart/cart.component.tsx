@@ -149,5 +149,12 @@ Cart.TableBody = CartTableBody;
 Cart.TableBodyRow = CartTableBodyRow;
 Cart.RemoveFromCartButton = RemoveFromCartButton;
 Cart.ShareButton = ShareButton;
+Cart.SummarySection = Styled.SummarySection;
+Cart.CouponSection = Styled.CouponSection;
+Cart.CouponActionButton = Styled.CouponActionButton;
+Cart.SubtotalSection = Styled.SubtotalSection;
+Cart.SubtotalLabel = Styled.SubtotalLabel;
+Cart.SubtotalPrice = Styled.SubtotalPrice;
+Cart.SubtotalAdditionalInfo = Styled.SubtotalAdditionalInfo;
 
 export default Cart;

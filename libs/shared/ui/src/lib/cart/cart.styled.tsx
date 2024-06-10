@@ -1,10 +1,12 @@
 import styled, { css } from 'styled-components';
 import * as polished from 'polished';
 
+/* TODO use variable */
 const lightGrey = '#F4F4F4';
 
 export const SectionContainer = styled.section`
   overflow-x: scroll;
+  max-width: 152rem;
 `;
 
 export const Table = styled.table`
@@ -55,8 +57,8 @@ export const TBody = styled.tbody`
     &:focus,
     &:focus-within {
       &::after {
-        border-color: ${({ theme }) =>
-          polished.transparentize(0.75, theme.color.text)};
+        /* TODO use variable */
+        border-color: #cbcbcb;
       }
     }
   }
@@ -268,4 +270,97 @@ export const IconButton = styled.button<StyledButtonProps>`
       background-color: ${({ theme }) => theme.color.primary};
       color: ${({ theme }) => theme.color.background};
     `}
+`;
+
+// ================================= Summary Cell =================================
+
+export const SummarySection = styled.section`
+  display: flex;
+  gap: 1.6rem;
+
+  padding-top: 0.4rem;
+`;
+
+const subSummarySectionCss = css`
+  max-width: 61.8rem;
+  width: 100%;
+  padding: 3.2cap 3.6rem;
+
+  border-radius: 1rem;
+`;
+
+export const CouponSection = styled.section`
+  border: 1px solid transparent;
+  /* TODO use variable */
+  border-color: #e5e5e5;
+
+  font-weight: 1.6rem;
+  line-height: 2.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ${subSummarySectionCss}
+`;
+
+export const CouponActionButton = styled.button`
+  all: unset;
+  display: block;
+
+  font-family: ${({ theme }) => theme.fontFamily.poppins};
+
+  font-size: 2rem;
+  line-height: 3rem;
+
+  cursor: pointer;
+
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.color.primary};
+  }
+`;
+
+export const SubtotalSection = styled.section`
+  background-color: ${lightGrey};
+  margin-left: auto;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 13.8rem auto;
+  grid-template-areas: 'label price additional';
+
+  ${subSummarySectionCss}
+`;
+
+export const SubtotalLabel = styled.span`
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  padding-right: 1.6rem;
+
+  grid-area: label;
+`;
+
+export const SubtotalPrice = styled.strong`
+  font-family: ${({ theme }) => theme.fontFamily.poppins};
+
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: ${({ theme }) => theme.color.primary};
+
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+
+  grid-area: price;
+`;
+
+export const SubtotalAdditionalInfo = styled.span`
+  font-size: 1.4rem;
+  line-height: 2rem;
+
+  grid-area: additional;
 `;

@@ -71,7 +71,7 @@ export default {
                     <Cart.RemoveFromCartButton
                       onClick={() => window.alert('remove')}
                     />
-                    <Cart.ShareButton onClick={() => window.alert('remove')} />
+                    <Cart.ShareButton onClick={() => window.alert('share')} />
                   </>
                 }
               />
@@ -79,6 +79,19 @@ export default {
           )}
         </Cart.TableBody>
       </Cart.Table>
+      <Cart.SummarySection>
+        <Cart.CouponSection>
+          Enter coupon code (ex: FIRSTPAY)
+          <Cart.CouponActionButton>Apply Code</Cart.CouponActionButton>
+        </Cart.CouponSection>
+        <Cart.SubtotalSection>
+          <Cart.SubtotalLabel>Sub Total</Cart.SubtotalLabel>
+          <Cart.SubtotalPrice>{getCurrencyFormat(7_733.0)}</Cart.SubtotalPrice>
+          <Cart.SubtotalAdditionalInfo>
+            ( excl. shipping fee )
+          </Cart.SubtotalAdditionalInfo>
+        </Cart.SubtotalSection>
+      </Cart.SummarySection>
     </Cart>
   ),
 } satisfies Meta<typeof Cart>;
