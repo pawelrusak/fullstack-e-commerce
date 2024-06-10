@@ -1,7 +1,8 @@
-import * as Styled from './cart.styled';
 import { Product } from '@e-shop/types';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import { ShareBigIcon, TrashBigIcon } from '@e-shop/icons';
+import { EN } from '@e-shop/i18n';
+import * as Styled from './cart.styled';
 
 export type CartProps = React.ComponentPropsWithRef<'section'>;
 
@@ -28,11 +29,13 @@ export type CartTableHeadProps = {
 };
 
 function CartTableHead({
-  productTableHead = 'Product',
-  priceTableHead = 'Price',
-  quantityTableHead = 'Quantity',
-  totalTableHead = 'Total',
-  actionTableHead = <VisuallyHidden>Action</VisuallyHidden>,
+  productTableHead = EN.CART_TABLE.HEADER.PRODUCT,
+  priceTableHead = EN.CART_TABLE.HEADER.PRICE,
+  quantityTableHead = EN.CART_TABLE.HEADER.QUANTITY,
+  totalTableHead = EN.CART_TABLE.HEADER.TOTAL,
+  actionTableHead = (
+    <VisuallyHidden>{EN.CART_TABLE.HEADER.ACTION}</VisuallyHidden>
+  ),
 }: CartTableHeadProps) {
   return (
     <Styled.THead>
@@ -69,7 +72,7 @@ function CartTableBodyRow({
   quantity = 1,
   category,
   name,
-  variantLabel = 'Variant:',
+  variantLabel = `${EN.CART_TABLE.PRODUCT_ITEM.VARIANT_LABEL}:`,
   variant,
   price,
   totalPrice,
@@ -118,31 +121,40 @@ export type CartActionButtonProps = Omit<
   'children'
 > & {
   screenReaderText?: string;
+  productName?: string;
   primary?: boolean;
 };
 
 function RemoveFromCartButton({
   primary = true,
-  screenReaderText = 'remove product from cart',
+  productName = EN.CART_TABLE.PRODUCT_ITEM.DEFAULT_PRODUCT_NAME,
+  screenReaderText = EN.CART_TABLE.PRODUCT_ITEM.ACTION_BUTTON.REMOVE_FROM_CART.replace(
+    /:productName:/,
+    productName,
+  ),
   ...props
 }: CartActionButtonProps) {
   return (
     <Styled.IconButton {...props} primary={primary}>
       <VisuallyHidden>{screenReaderText}</VisuallyHidden>
-      <TrashBigIcon />
+      <TrashBigIcon aria-hidden />
     </Styled.IconButton>
   );
 }
 
 function ShareButton({
   primary = false,
-  screenReaderText = 'share product',
+  productName = EN.CART_TABLE.PRODUCT_ITEM.DEFAULT_PRODUCT_NAME,
+  screenReaderText = EN.CART_TABLE.PRODUCT_ITEM.ACTION_BUTTON.SHARE.replace(
+    /:productName:/,
+    productName,
+  ),
   ...props
 }: CartActionButtonProps) {
   return (
     <Styled.IconButton {...props} primary={primary}>
       <VisuallyHidden>{screenReaderText}</VisuallyHidden>
-      <ShareBigIcon />
+      <ShareBigIcon aria-hidden />
     </Styled.IconButton>
   );
 }

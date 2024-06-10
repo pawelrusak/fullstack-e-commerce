@@ -3,6 +3,7 @@ import { Cart, CartTableBodyRowProps } from './cart.component';
 import { getCurrencyFormat } from '@e-shop/utils';
 import { CartItem } from '@e-shop/store';
 import { Modify, Product, SubCategory } from '@e-shop/types';
+import { EN } from '@e-shop/i18n';
 import imagePlaceholder from './storybook-assets/image-placeholder.png';
 
 type StoryCartProduct = Modify<
@@ -69,9 +70,13 @@ export default {
                 actionButtons={
                   <>
                     <Cart.RemoveFromCartButton
+                      productName={product.name}
                       onClick={() => window.alert('remove')}
                     />
-                    <Cart.ShareButton onClick={() => window.alert('share')} />
+                    <Cart.ShareButton
+                      productName={product.name}
+                      onClick={() => window.alert('share')}
+                    />
                   </>
                 }
               />
@@ -81,14 +86,18 @@ export default {
       </Cart.Table>
       <Cart.SummarySection>
         <Cart.CouponSection>
-          Enter coupon code (ex: FIRSTPAY)
-          <Cart.CouponActionButton>Apply Code</Cart.CouponActionButton>
+          {EN.CART_TABLE.SUMMARY.COUPON.LABEL}
+          <Cart.CouponActionButton>
+            {EN.CART_TABLE.SUMMARY.COUPON.ACTION_BUTTON}
+          </Cart.CouponActionButton>
         </Cart.CouponSection>
         <Cart.SubtotalSection>
-          <Cart.SubtotalLabel>Sub Total</Cart.SubtotalLabel>
+          <Cart.SubtotalLabel>
+            {EN.CART_TABLE.SUMMARY.SUBTOTAL.LABEL}
+          </Cart.SubtotalLabel>
           <Cart.SubtotalPrice>{getCurrencyFormat(7_733.0)}</Cart.SubtotalPrice>
           <Cart.SubtotalAdditionalInfo>
-            ( excl. shipping fee )
+            ( {EN.CART_TABLE.SUMMARY.SUBTOTAL.ADDITIONAL_INFO} )
           </Cart.SubtotalAdditionalInfo>
         </Cart.SubtotalSection>
       </Cart.SummarySection>
