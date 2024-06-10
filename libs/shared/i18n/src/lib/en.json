@@ -192,5 +192,32 @@
   "RELATED_PRODUCTS": {
     "TITLE": "Related Products",
     "LINK": "View All"
+  },
+  "CART_TABLE": {
+    "HEADER": {
+      "PRODUCT": "Product",
+      "PRICE": "Price",
+      "QUANTITY": "Quantity",
+      "TOTAL": "Total",
+      "ACTION": "Action"
+    },
+    "PRODUCT_ITEM": {
+      "VARIANT_LABEL": "Variant",
+      "DEFAULT_PRODUCT_NAME": "product",
+      "ACTION_BUTTON": {
+        "REMOVE_FROM_CART": "Remove :productName: from Cart",
+        "SHARE": "Share :productName: on Social Media"
+      }
+    },
+    "SUMMARY": {
+      "COUPON": {
+        "LABEL": "Enter coupon code (ex: FIRSTPAY)",
+        "ACTION_BUTTON": "Apply Code"
+      },
+      "SUBTOTAL": {
+        "LABEL": "Sub Total",
+        "ADDITIONAL_INFO": "excl. shipping fee"
+      }
+    }
   }
 }
