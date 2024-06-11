@@ -45,6 +45,18 @@ export const THead = styled.thead`
   }
 `;
 
+export const ActionButtons = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 3.8rem;
+
+  height: 100%;
+  min-height: 29.4rem;
+`;
+
 export const TBody = styled.tbody`
   & > tr {
     position: relative;
@@ -57,12 +69,20 @@ export const TBody = styled.tbody`
       border-radius: 1rem;
     }
 
+    ${ActionButtons} {
+      opacity: 0;
+    }
+
     &:hover,
     &:focus,
     &:focus-within {
       &::after {
         /* TODO use variable */
         border-color: #cbcbcb;
+      }
+
+      ${ActionButtons} {
+        opacity: 1;
       }
     }
   }
@@ -229,18 +249,6 @@ export const TdAction = styled.td`
   vertical-align: top;
 `;
 
-export const ActionButtons = styled.div`
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 3.8rem;
-
-  height: 100%;
-  min-height: 29.4rem;
-`;
-
 export type StyledButtonProps = {
   primary?: boolean;
 };
@@ -262,11 +270,15 @@ export const IconButton = styled.button<StyledButtonProps>`
   z-index: 10;
 
   &:hover,
-  :focus {
+  &:focus {
     background-color: ${({ theme }) =>
       polished.darken(0.1, theme.color.primary)};
     border-color: ${({ theme }) => polished.darken(0.1, theme.color.primary)};
     color: ${({ theme }) => theme.color.background};
+  }
+
+  &:focus {
+    outline: auto;
   }
 
   ${({ primary }) =>
