@@ -129,7 +129,7 @@ function RemoveFromCartButton({
   primary = true,
   productName = EN.CART_TABLE.PRODUCT_ITEM.DEFAULT_PRODUCT_NAME,
   screenReaderText = EN.CART_TABLE.PRODUCT_ITEM.ACTION_BUTTON.REMOVE_FROM_CART.replace(
-    /:productName:/,
+    ':productName:',
     productName,
   ),
   ...props
@@ -146,7 +146,7 @@ function ShareButton({
   primary = false,
   productName = EN.CART_TABLE.PRODUCT_ITEM.DEFAULT_PRODUCT_NAME,
   screenReaderText = EN.CART_TABLE.PRODUCT_ITEM.ACTION_BUTTON.SHARE.replace(
-    /:productName:/,
+    ':productName:',
     productName,
   ),
   ...props
