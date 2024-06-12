@@ -22,7 +22,7 @@ export default function CardIconWithDot(props: React.SVGProps<SVGSVGElement>) {
           fill="currentColor"
         />
       </g>
-      <circle cx="29" cy="3" r="3" fill="#FF624C" />
+      <circle cx="29" cy="3" r="3" fill="#FF624C" data-cart-icon-indicator />
       <defs>
         <clipPath id="clip0_67_202">
           <rect
