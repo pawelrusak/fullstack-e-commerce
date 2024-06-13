@@ -12,6 +12,23 @@ export const Complete: Story = {
   args: {},
 };
 
+export const CompleteWithFilledCartAndNumberBadge: Story = {
+  args: {
+    cartAmount: 150,
+    cartItemsCount: 1,
+    cartBadgeVariant: 'number',
+  },
+  render: (args) => <Navbar {...args} />,
+};
+
+export const CompleteWithFilledCartAndDotBadge: Story = {
+  args: {
+    cartAmount: 150,
+    cartItemsCount: 1,
+  },
+  render: (args) => <Navbar {...args} />,
+};
+
 export const WithoutProductBar: Story = {
   args: {},
   render: (args) => (
