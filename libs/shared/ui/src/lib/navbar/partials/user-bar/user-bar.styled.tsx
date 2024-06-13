@@ -2,6 +2,7 @@
 
 import styled, { css } from 'styled-components';
 import * as helper from 'polished';
+import { margin, MarginProps } from 'styled-system';
 
 export type HasBorderProps = {
   hasBorder?: boolean;
@@ -113,12 +114,50 @@ export const UserItemStrong = styled.strong`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
 `;
 
-export const UserItemIcon = styled.svg`
+type StyledUserItemIconProps = {
+  showIndicator?: boolean;
+} & MarginProps;
+
+export const UserItemIcon = styled.svg<StyledUserItemIconProps>`
   display: inline-block;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
     margin-right: 2.4rem;
+    ${margin}
   }
+
+  [data-cart-icon-indicator] {
+    visibility: ${({ showIndicator = false }) =>
+      showIndicator ? 'visible' : 'hidden'};
+  }
+`;
+
+export const UserItemCartIconWrapper = styled.div`
+  position: relative;
+  margin-right: 2.4rem;
+`;
+
+export const UserItemCartBadge = styled.strong`
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+
+  height: 1.8rem;
+  min-width: 1.8rem;
+  width: 100%;
+  max-width: fit-content;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.color.primary};
+  border-radius: 999px;
+  transform: translate(30%, -40%);
+
+  color: ${({ theme }) => theme.color.background};
 `;
 
 export const UserItemTextWrapper = styled.span`

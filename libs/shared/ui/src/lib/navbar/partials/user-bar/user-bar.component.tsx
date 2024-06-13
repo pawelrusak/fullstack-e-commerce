@@ -1,14 +1,26 @@
 import * as Styled from './user-bar.styled';
 import { EN } from '@e-shop/i18n';
+import { getCurrencyFormat } from '@e-shop/utils';
+import { CardIconWithDot, UserIcon } from '@e-shop/icons';
 import { Brand } from '../../../brand';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import * as SharedStyled from '../../navbar.styled';
-import { CardIconWithDot, UserIcon } from '@e-shop/icons';
 import type { HasBorderProps } from './user-bar.styled';
 
-export type UserBarProps = HasBorderProps;
+export type UserCartButtonProps = {
+  cartAmount?: number;
+  cartItemsCount?: number;
+  cartBadgeVariant?: 'dot' | 'number';
+};
 
-export function UserBar({ hasBorder }: UserBarProps) {
+export type UserBarProps = HasBorderProps & UserCartButtonProps;
+
+export function UserBar({
+  hasBorder,
+  cartAmount = 0,
+  cartItemsCount = 0,
+  cartBadgeVariant = 'dot',
+}: UserBarProps) {
   return (
     <Styled.UserBarWrapper data-testid="navbar-user-bar" hasBorder={hasBorder}>
       <SharedStyled.BarContainer>
@@ -36,10 +48,25 @@ export function UserBar({ hasBorder }: UserBarProps) {
           <Styled.UserList>
             <Styled.UserItem>
               <Styled.UserCartButton data-testid="cart-button">
-                <Styled.UserItemIcon as={CardIconWithDot} />
+                <Styled.UserItemCartIconWrapper>
+                  <Styled.UserItemIcon
+                    showIndicator={Boolean(
+                      cartBadgeVariant === 'dot' && cartItemsCount,
+                    )}
+                    marginRight={0}
+                    as={CardIconWithDot}
+                  />
+                  {cartBadgeVariant === 'number' && cartItemsCount ? (
+                    <Styled.UserItemCartBadge>
+                      {cartItemsCount}
+                    </Styled.UserItemCartBadge>
+                  ) : null}
+                </Styled.UserItemCartIconWrapper>
                 <Styled.UserItemTextWrapper>
                   <Styled.UserItemText>{EN.NAV_BAR.CART}</Styled.UserItemText>
-                  <Styled.UserItemStrong>$150,00</Styled.UserItemStrong>
+                  <Styled.UserItemStrong>
+                    {getCurrencyFormat(cartAmount)}
+                  </Styled.UserItemStrong>
                 </Styled.UserItemTextWrapper>
               </Styled.UserCartButton>
             </Styled.UserItem>
