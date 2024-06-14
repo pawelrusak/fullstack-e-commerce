@@ -3,6 +3,8 @@ import { VisuallyHidden } from '@reach/visually-hidden';
 import { ShareBigIcon, TrashBigIcon } from '@e-shop/icons';
 import { EN } from '@e-shop/i18n';
 import * as Styled from './cart.styled';
+import CartQuantity from './partials/cart-quantity-control';
+import React from 'react';
 
 export type CartProps = React.ComponentPropsWithRef<'section'>;
 
@@ -59,7 +61,7 @@ function CartTableBody(props: CartTableBody) {
 export type CartTableBodyRowProps = {
   variant?: string;
   variantLabel?: React.ReactNode;
-  quantity?: number;
+  quantity: React.ReactNode;
   price: React.ReactNode;
   totalPrice: React.ReactNode;
   name: React.ReactNode;
@@ -69,7 +71,7 @@ export type CartTableBodyRowProps = {
 
 function CartTableBodyRow({
   thumbnail,
-  quantity = 1,
+  quantity,
   category,
   name,
   variantLabel = `${EN.CART_TABLE.PRODUCT_ITEM.VARIANT_LABEL}:`,
@@ -172,5 +174,6 @@ Cart.SubtotalSection = Styled.SubtotalSection;
 Cart.SubtotalLabel = Styled.SubtotalLabel;
 Cart.SubtotalPrice = Styled.SubtotalPrice;
 Cart.SubtotalAdditionalInfo = Styled.SubtotalAdditionalInfo;
+Cart.QuantityControl = CartQuantity;
 
 export default Cart;
