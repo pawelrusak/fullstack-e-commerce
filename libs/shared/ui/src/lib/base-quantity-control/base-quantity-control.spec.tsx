@@ -1,4 +1,4 @@
-import { render, screen } from '@e-shop/test-utils';
+import { render, screen, waitFor } from '@e-shop/test-utils';
 import { faker } from '@faker-js/faker';
 
 import BaseQuantityControl, {
@@ -17,16 +17,17 @@ const getIncreaseButton = () => screen.getByTestId(DATA_TEST_ID.INCREASE);
 const getDecreaseButton = () => screen.getByTestId(DATA_TEST_ID.DECREASE);
 
 const renderBaseQuantityControl = (
-  props?: Omit<BaseQuantityControlProps, 'children'>,
+  args?: Omit<BaseQuantityControlProps, 'children'>,
 ) =>
   render(
-    <BaseQuantityControl {...props}>
+    <BaseQuantityControl {...args}>
       <BaseQuantityControl.IncreaseButton data-testid={DATA_TEST_ID.INCREASE} />
       <BaseQuantityControl.Input data-testid={DATA_TEST_ID.INPUT} />
       <BaseQuantityControl.DecreaseButton data-testid={DATA_TEST_ID.DECREASE} />
     </BaseQuantityControl>,
   );
 
+// TODO fix warning: "An update to QuantityProvider inside a test was not wrapped in act(...)."
 describe('BaseQuantityControl', () => {
   it('should render successfully', () => {
     const { baseElement } = renderBaseQuantityControl();
@@ -167,11 +168,38 @@ describe('BaseQuantityControl', () => {
     expect(onChangeQuantity).toHaveBeenCalledWith(initialQuantity - 1);
   });
 
-  it.todo('should disabled decrease button if quantity is 0');
+  it('should disabled decrease button if quantity is 0 and enable his when is more than 0', async () => {
+    renderBaseQuantityControl({ initialQuantity: 0 });
 
-  it.todo(
-    'should disabled increase button if quantity is equal to maxQuantity',
-  );
+    const decreaseButton = getDecreaseButton();
+    const increaseButton = getIncreaseButton();
+
+    expect(decreaseButton).toBeDisabled();
+
+    await waitFor(() => increaseButton.click());
+
+    expect(decreaseButton).toBeEnabled();
+  });
+
+  it('should disabled increase button if quantity is equal to maxQuantity', async () => {
+    const maxQuantity = faker.number.int({ min: 2, max: 5 });
+
+    renderBaseQuantityControl({ initialQuantity: 0, maxQuantity });
+
+    const increaseButton = getIncreaseButton();
+
+    expect(increaseButton).toBeEnabled();
+
+    for (let i = 0; i < maxQuantity - 1; i++) {
+      await waitFor(() => increaseButton.click());
+    }
+
+    expect(increaseButton).toBeEnabled();
+
+    await waitFor(() => increaseButton.click());
+
+    expect(increaseButton).toBeDisabled();
+  });
 
   // TODO Write some test for onChange of input
 });
