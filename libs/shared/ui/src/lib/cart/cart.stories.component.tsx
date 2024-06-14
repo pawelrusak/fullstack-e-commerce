@@ -101,6 +101,10 @@ const cartItems: StoryCartItem[] = [
 ];
 
 export function CartStoryComplete() {
+  const handleChangeQuantity = (quantity: number) => {
+    console.log(quantity);
+  };
+
   return (
     <Cart>
       <Cart.Table>
@@ -120,7 +124,13 @@ export function CartStoryComplete() {
                 category={product.subCategory.name}
                 name={product.name}
                 price={getCurrencyFormat(currentPrice)}
-                quantity={quantity}
+                quantity={
+                  <Cart.QuantityControl
+                    initialQuantity={quantity}
+                    maxQuantity={5}
+                    onChangeQuantity={handleChangeQuantity}
+                  />
+                }
                 totalPrice={getCurrencyFormat(cartItemsTotalPrice)}
                 thumbnail={product.thumbnail}
                 variant={variant}
@@ -163,6 +173,10 @@ export function CartStoryComplete() {
 }
 
 export function CartStoryWithoutCoupon() {
+  const handleChangeQuantity = (quantity: number) => {
+    console.log(quantity);
+  };
+
   return (
     <Cart>
       <Cart.Table>
@@ -182,7 +196,13 @@ export function CartStoryWithoutCoupon() {
                 category={product.subCategory.name}
                 name={product.name}
                 price={getCurrencyFormat(currentPrice)}
-                quantity={quantity}
+                quantity={
+                  <Cart.QuantityControl
+                    initialQuantity={quantity}
+                    maxQuantity={5}
+                    onChangeQuantity={handleChangeQuantity}
+                  />
+                }
                 totalPrice={getCurrencyFormat(cartItemsTotalPrice)}
                 thumbnail={product.thumbnail}
                 variant={variant}
