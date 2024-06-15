@@ -7,6 +7,7 @@ import { ArrowLongRightIcon } from '@e-shop/icons';
 import { Product } from '@e-shop/types';
 import { EN } from '@e-shop/i18n';
 import { getCurrencyFormat } from '@e-shop/utils';
+import { useCartStore, withStore } from '@e-shop/store';
 
 // TODO create ui component for this
 const Link = styled(NextLink)`
@@ -17,9 +18,20 @@ type FeaturedProductsSectionProps = {
   products: Product[];
 };
 
-export default function FeaturedProductsSection({
-  products,
-}: FeaturedProductsSectionProps) {
+function FeaturedProductsSection({ products }: FeaturedProductsSectionProps) {
+  const cartStore = useCartStore();
+
+  const handleAddToCart = (
+    event: React.MouseEvent<HTMLButtonElement>,
+    product: Product,
+  ) => {
+    event.preventDefault();
+    cartStore.addToCartOrUpdate({ product, quantity: 1 });
+
+    // TODO show toast or open modal
+    window.alert(`Product "${product.name}" added to cart`);
+  };
+
   return (
     <CardsSection mb={0}>
       <CardsSection.Header>
@@ -44,6 +56,11 @@ export default function FeaturedProductsSection({
                     height={214}
                     alt=""
                   />
+                  <ProductCard.ButtonsSection>
+                    <ProductCard.AddToCartButton
+                      onClick={(event) => handleAddToCart(event, product)}
+                    />
+                  </ProductCard.ButtonsSection>
                 </ProductCard.ThumbnailContainer>
                 <ProductCard.Category>
                   {product.subCategory.name}
@@ -64,3 +81,5 @@ export default function FeaturedProductsSection({
     </CardsSection>
   );
 }
+
+export default withStore(FeaturedProductsSection);
