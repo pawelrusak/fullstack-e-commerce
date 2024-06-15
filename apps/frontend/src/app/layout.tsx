@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import { Navbar } from '@e-shop/ui';
 import { GlobalStyle, AppThemeProvider } from '@e-shop/theme';
 import { StyledComponentsRegistry } from './registry';
 import { StoreProvider } from '@e-shop/store';
+import Navbar from './components/navbar.component';
 import Footer from './components/footer.component';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
