@@ -8,6 +8,7 @@ import { ArrowLongRightIcon } from '@e-shop/icons';
 import { Product, SubCategory } from '@e-shop/types';
 import { EN } from '@e-shop/i18n';
 import { getCurrencyFormat } from '@e-shop/utils';
+import { useCartStore, withStore } from '@e-shop/store';
 
 // @todo create ui component for this
 const Link = styled(NextLink)`
@@ -25,16 +26,29 @@ type RelatedProductsSectionProps = {
   categorySlug: SubCategory['category']['slug'];
 };
 
-export default function RelatedProductsSection({
+function RelatedProductsSection({
   products,
   categorySlug,
 }: RelatedProductsSectionProps) {
+  const cartStore = useCartStore();
+
   const queryString = qs.stringify({
     'subCategory.category.slug': categorySlug,
-    // TODO add types
+    // TODO add typescript types
   });
 
   const relatedProductUrl = `/products?${queryString}`;
+
+  const handleAddToCart = (
+    event: React.MouseEvent<HTMLButtonElement>,
+    product: Product,
+  ) => {
+    event.preventDefault();
+    cartStore.addToCartOrUpdate({ product, quantity: 1 });
+
+    // TODO show toast or open modal
+    window.alert(`Product "${product.name}" added to cart`);
+  };
 
   return (
     <CardsSection>
@@ -53,13 +67,18 @@ export default function RelatedProductsSection({
               <ProductCard.ThumbnailContainer>
                 <ProductCard.Thumbnail
                   src={
-                    // @todo use const for file path
+                    // TODO use const for file path
                     product.thumbnail || '/assets/images/placeholder-view.svg'
                   }
                   width={236}
                   height={214}
                   alt=""
                 />
+                <ProductCard.ButtonsSection>
+                  <ProductCard.AddToCartButton
+                    onClick={(event) => handleAddToCart(event, product)}
+                  />
+                </ProductCard.ButtonsSection>
               </ProductCard.ThumbnailContainer>
               <ProductCard.Category>
                 {product.subCategory.name}
@@ -79,3 +98,5 @@ export default function RelatedProductsSection({
     </CardsSection>
   );
 }
+
+export default withStore(RelatedProductsSection);
