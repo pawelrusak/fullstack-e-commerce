@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { useRouter } from 'next/navigation';
 import { QuantitySelection, Button } from '@e-shop/ui';
 import { CardIcon } from '@e-shop/icons';
 import { VisuallyHidden } from '@reach/visually-hidden';
@@ -43,6 +44,7 @@ const INITIAL_QUANTITY = 1;
 
 // TODO rename to "ProductDetailsForm" and add 'form' tag
 function ProductDetailsControls({ product }: ProductDetailsControlsProps) {
+  const router = useRouter();
   const [quantity, setQuantity] =
     React.useState<CartItem['quantity']>(INITIAL_QUANTITY);
   const cartStore = useCartStore();
@@ -59,7 +61,7 @@ function ProductDetailsControls({ product }: ProductDetailsControlsProps) {
 
     cartStore.addToCartOrUpdate({ product, quantity });
 
-    // TODO redirect to cart page
+    router.push('/cart');
   };
 
   const handleClickAddToCart = (quantity: number) => {
