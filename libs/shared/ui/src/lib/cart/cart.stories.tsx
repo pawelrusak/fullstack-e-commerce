@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Cart, {
   CartStoryComplete,
+  CartStoryEmptyState,
   CartStoryWithoutCoupon,
 } from './cart.stories.component';
 
@@ -20,4 +21,9 @@ export const Complete: Story = {
 export const WithoutCoupon: Story = {
   args: {},
   render: () => <CartStoryWithoutCoupon />,
+};
+
+export const EmptyState: Story = {
+  args: {},
+  render: () => <CartStoryEmptyState />,
 };

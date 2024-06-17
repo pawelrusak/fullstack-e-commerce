@@ -238,4 +238,28 @@ export function CartStoryWithoutCoupon() {
   );
 }
 
+export function CartStoryEmptyState() {
+  return (
+    <Cart>
+      <Cart.Table>
+        <Cart.TableHead />
+        <Cart.TableBody removeThBorder>
+          <Cart.TableBodyEmptyStateRow />
+        </Cart.TableBody>
+      </Cart.Table>
+      <Cart.SummarySection>
+        <Cart.SubtotalSection>
+          <Cart.SubtotalLabel>
+            {EN.CART_TABLE.SUMMARY.SUBTOTAL.LABEL}
+          </Cart.SubtotalLabel>
+          <Cart.SubtotalPrice>{getCurrencyFormat(0)}</Cart.SubtotalPrice>
+          <Cart.SubtotalAdditionalInfo>
+            ( {EN.CART_TABLE.SUMMARY.SUBTOTAL.ADDITIONAL_INFO} )
+          </Cart.SubtotalAdditionalInfo>
+        </Cart.SubtotalSection>
+      </Cart.SummarySection>
+    </Cart>
+  );
+}
+
 export default CartStoryComplete;
