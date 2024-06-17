@@ -201,6 +201,10 @@
       "TOTAL": "Total",
       "ACTION": "Action"
     },
+    "EMPTY_CART": {
+      "TITLE": "Your Cart is Empty",
+      "DESCRIPTION": "Looks like you haven't added any items to the cart yet."
+    },
     "PRODUCT_ITEM": {
       "VARIANT_LABEL": "Variant",
       "DEFAULT_PRODUCT_NAME": "product",
