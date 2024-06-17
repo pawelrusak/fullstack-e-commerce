@@ -4,7 +4,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Divider } from '@e-shop/ui';
 
-const LayoutArticle = styled.article``;
+const LayoutArticle = styled.article`
+  margin-top: clamp(2rem, 5vw + 0.4rem, 6.4rem);
+`;
 
 const SummaryContainer = styled.div`
   margin-bottom: 2.4rem;
