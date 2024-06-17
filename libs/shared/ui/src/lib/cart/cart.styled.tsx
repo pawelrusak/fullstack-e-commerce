@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import * as polished from 'polished';
+import { CardIcon } from '@e-shop/icons';
 
 /* TODO use variable */
 const lightGrey = '#F4F4F4';
@@ -57,35 +58,43 @@ export const ActionButtons = styled.div`
   min-height: 29.4rem;
 `;
 
-export const TBody = styled.tbody`
-  & > tr {
-    position: relative;
-    &::after {
-      position: absolute;
-      content: ' ';
+export type StyledTBodyProps = {
+  removeThBorder?: boolean;
+};
 
-      inset: 0;
-      border: 1px solid transparent;
-      border-radius: 1rem;
-    }
+export const TBody = styled.tbody<StyledTBodyProps>`
+  ${({ removeThBorder }) =>
+    !removeThBorder &&
+    css`
+      & > tr {
+        position: relative;
+        &::after {
+          position: absolute;
+          content: ' ';
 
-    ${ActionButtons} {
-      opacity: 0;
-    }
+          inset: 0;
+          border: 1px solid transparent;
+          border-radius: 1rem;
+        }
 
-    &:hover,
-    &:focus,
-    &:focus-within {
-      &::after {
-        /* TODO use variable */
-        border-color: #cbcbcb;
+        ${ActionButtons} {
+          opacity: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:focus-within {
+          &::after {
+            /* TODO use variable */
+            border-color: #cbcbcb;
+          }
+
+          ${ActionButtons} {
+            opacity: 1;
+          }
+        }
       }
-
-      ${ActionButtons} {
-        opacity: 1;
-      }
-    }
-  }
+    `}
 `;
 
 export const Tr = styled.tr`
@@ -407,4 +416,41 @@ export const SubtotalAdditionalInfo = styled.span`
   line-height: 2rem;
 
   grid-area: additional;
+`;
+
+// ================================= Empty State =================================
+
+export const TdEmptyState = styled.td`
+  padding: 2.4rem 1.6rem;
+  height: 33rem;
+`;
+
+export const EmptyStateHeader = styled.header`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+`;
+
+export const EmptyStateCartIcon = styled(CardIcon)`
+  scale: 2.5;
+  height: 3rem;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 3rem;
+  color: ${({ theme }) => theme.color.primary};
+`;
+
+export const EmptyStateTitle = styled.h2`
+  font-family: ${({ theme }) => theme.fontFamily.poppins};
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+  margin-bottom: 0.8rem;
+`;
+
+export const EmptyStateParagraph = styled.p`
+  font-size: 2rem;
+  line-height: 3rem;
 `;

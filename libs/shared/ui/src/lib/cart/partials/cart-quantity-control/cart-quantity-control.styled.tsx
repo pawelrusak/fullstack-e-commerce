@@ -45,7 +45,6 @@ const quantityButtonCss = css`
   }
 `;
 
-// TODO improve styles of a11y
 export const QuantityIncreaseButton = styled(
   BaseQuantityControl.IncreaseButton,
 )`

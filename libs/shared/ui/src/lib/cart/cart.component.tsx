@@ -1,10 +1,11 @@
+import React from 'react';
 import { Product } from '@e-shop/types';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import { ShareBigIcon, TrashBigIcon } from '@e-shop/icons';
 import { EN } from '@e-shop/i18n';
 import * as Styled from './cart.styled';
+import { StyledTBodyProps } from './cart.styled';
 import CartQuantity from './partials/cart-quantity-control';
-import React from 'react';
 
 export type CartProps = React.ComponentPropsWithRef<'section'>;
 
@@ -52,7 +53,8 @@ function CartTableHead({
   );
 }
 
-export type CartTableBody = React.ComponentPropsWithRef<'tbody'>;
+export type CartTableBody = React.ComponentPropsWithRef<'tbody'> &
+  StyledTBodyProps;
 
 function CartTableBody(props: CartTableBody) {
   return <Styled.TBody {...props} />;
@@ -118,6 +120,34 @@ function CartTableBodyRow({
   );
 }
 
+type HTagLevel = 1 | 2 | 3 | 4 | 5 | 6;
+
+export type CartTableBodyEmptyStateRowProps = {
+  title?: string;
+  description?: string;
+  headingLevel?: HTagLevel;
+};
+
+function CartTableBodyEmptyStateRow({
+  title = EN.CART_TABLE.EMPTY_CART.TITLE,
+  description = EN.CART_TABLE.EMPTY_CART.DESCRIPTION,
+  headingLevel = 2,
+}: CartTableBodyEmptyStateRowProps) {
+  return (
+    <Styled.Tr>
+      <Styled.TdEmptyState colSpan={5}>
+        <Styled.EmptyStateHeader>
+          <Styled.EmptyStateCartIcon aria-hidden />
+          <Styled.EmptyStateTitle as={`h${headingLevel}`}>
+            {title}
+          </Styled.EmptyStateTitle>
+          <Styled.EmptyStateParagraph>{description}</Styled.EmptyStateParagraph>
+        </Styled.EmptyStateHeader>
+      </Styled.TdEmptyState>
+    </Styled.Tr>
+  );
+}
+
 export type CartActionButtonProps = Omit<
   React.ComponentPropsWithRef<'button'>,
   'children'
@@ -175,5 +205,6 @@ Cart.SubtotalLabel = Styled.SubtotalLabel;
 Cart.SubtotalPrice = Styled.SubtotalPrice;
 Cart.SubtotalAdditionalInfo = Styled.SubtotalAdditionalInfo;
 Cart.QuantityControl = CartQuantity;
+Cart.TableBodyEmptyStateRow = CartTableBodyEmptyStateRow;
 
 export default Cart;
