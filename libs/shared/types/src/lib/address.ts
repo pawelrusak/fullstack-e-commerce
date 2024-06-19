@@ -3,7 +3,7 @@ export type Address = {
   country: string;
   state: string;
   city: string;
-  zipCode: string;
+  postalCode: string;
 };
 
 export type AddressSchema = Address;
