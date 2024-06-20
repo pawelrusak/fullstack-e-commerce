@@ -14,6 +14,7 @@ export type User = Id & {
   avatarUrl?: string;
   address: Address;
   bannedAt?: string;
+  isBanned: boolean;
 } & Timestamp;
 
 export type UserSchema = Prettify<
@@ -25,11 +26,4 @@ export type UserSchema = Prettify<
       bannedAt?: Date;
     }
   >
-> & {
-  /**
-   * This is a virtual field
-   *
-   * @see {@link https://mongoosejs.com/docs/tutorials/virtuals.html | Mongoose Virtuals}
-   */
-  isBanned: boolean;
-};
+>;
