@@ -74,6 +74,11 @@ export const userSchema = new mongoose.Schema<UserSchema>(
       type: Date,
       required: false,
     },
+    isBanned: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
   {
     timestamps: true,
