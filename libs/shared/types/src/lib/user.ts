@@ -14,7 +14,7 @@ export type User = Id & {
   avatarUrl?: string;
   address: Address;
   bannedAt?: string;
-  isBanned: boolean;
+  isBanned?: boolean;
 } & Timestamp;
 
 export type UserSchema = Prettify<
