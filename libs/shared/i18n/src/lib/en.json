@@ -223,5 +223,16 @@
         "ADDITIONAL_INFO": "excl. shipping fee"
       }
     }
+  },
+  "CART_PAGE": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Cart"
+    },
+    "TITLE": "Your Cart",
+    "CTA_BUTTONS": {
+      "CONTINUE_SHOPPING": "Continue Shopping",
+      "PROCEED_TO_CHECKOUT": "Proceed to Checkout"
+    }
   }
 }
