@@ -50,10 +50,16 @@ export const Button = styled.button<ButtonProps>`
         polished.darken(0.1, solidBorderColors[colorVariant])};
   }
 
-  :disabled {
+  &:focus {
+    outline: auto;
+  }
+
+  :disabled,
+  &[aria-disabled='true'] {
     cursor: default;
     background: ${DISABLED_COLOR};
     border-color: ${DISABLED_COLOR};
+    pointer-events: none;
   }
 
   ${({ variant = 'solid', colorVariant = 'primary' }) =>
@@ -62,9 +68,11 @@ export const Button = styled.button<ButtonProps>`
       background: ${({ theme }) => theme.color.background};
       color: ${outlineFontColors[colorVariant]};
 
-      :disabled {
+      &:disabled,
+      &[aria-disabled='true'] {
         color: ${DISABLED_COLOR};
         background: ${({ theme }) => theme.color.background};
+        pointer-events: none;
       }
     `}
 `;
