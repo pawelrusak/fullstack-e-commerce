@@ -2,7 +2,7 @@ import * as Styled from './values-section.styled';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import { EN } from '@e-shop/i18n';
 
-type ValuesSectionProps = {
+export type ValuesSectionProps = {
   screenReaderLabel?: string;
   children?: React.ReactNode;
 } & React.ComponentPropsWithRef<'section'>;
@@ -20,7 +20,7 @@ export function ValuesSection({
   );
 }
 
-type ValuesSectionItemIconProps = {
+export type ValuesSectionItemIconProps = {
   icon: React.ReactElement;
 };
 
@@ -32,7 +32,7 @@ function ValuesSectionItemIcon({ icon }: ValuesSectionItemIconProps) {
   );
 }
 
-type ValuesSectionItemProps = {
+export type ValuesSectionItemProps = {
   children: React.ReactNode;
 };
 
