@@ -1,6 +1,9 @@
 'use client';
 
-import { ValuesSection as ValuesInfo } from '@e-shop/ui';
+import {
+  ValuesSection as ValuesInfo,
+  ValuesSectionProps as ValuesInfoProps,
+} from '@e-shop/ui';
 import {
   SecurityIcon,
   HeadphoneIcon,
@@ -32,9 +35,11 @@ const OUR_VALUES = [
   },
 ];
 
-export default function HomepageValuesSection() {
+type ValuesSectionProps = ValuesInfoProps;
+
+export default function ValuesSection(props: ValuesSectionProps) {
   return (
-    <ValuesInfo>
+    <ValuesInfo {...props}>
       {OUR_VALUES.map((value) => (
         <ValuesInfo.Item key={value.title}>
           <ValuesInfo.ItemIcon icon={value.icon} />
