@@ -17,5 +17,6 @@ export * from './lib/specification';
 export * from './lib/cards-section';
 export * from './lib/layout-wrapper';
 export * from './lib/values-section';
+export * from './lib/progress-stepper';
 export * from './lib/products-carousel';
 export * from './lib/quantity-selection';
