@@ -234,5 +234,12 @@
       "CONTINUE_SHOPPING": "Continue Shopping",
       "PROCEED_TO_CHECKOUT": "Proceed to Checkout"
     }
+  },
+  "CHECKOUT": {
+    "STEPS": {
+      "INFORMATION": "Information",
+      "SHIPPING": "Shipping",
+      "PAYMENT": "Payment"
+    }
   }
 }
