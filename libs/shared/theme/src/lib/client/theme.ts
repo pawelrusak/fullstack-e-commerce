@@ -6,6 +6,7 @@ const theme: DefaultTheme = {
     secondary: '#FED550',
     text: '#303030',
     background: '#FFFFFF',
+    secondBackground: '#F4F4F4',
     border: '#F4F4F4',
     error: '#dc143c',
   },
