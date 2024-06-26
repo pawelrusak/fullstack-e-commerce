@@ -27,12 +27,21 @@ export function FieldLabel(props: FieldLabelProps) {
   return <Styled.Label htmlFor={controlId} {...props} />;
 }
 
-export type FieldInputProps = React.ComponentPropsWithRef<'input'>;
+export type FieldInputProps<Element extends React.ElementType> =
+  React.ComponentPropsWithRef<Element> & {
+    as?: Element;
+  };
 
-export function FieldInput(props: FieldInputProps) {
+export function FieldInput<Element extends React.ElementType = 'input'>({
+  as = 'input',
+  ...props
+}: FieldInputProps<Element>) {
   const { controlId } = useField();
+
   return (
     <Styled.Input
+      forwardedAs={undefined}
+      as={as}
       id={controlId}
       aria-describedby={controlId ? `${controlId}-field-error` : undefined}
       {...props}
