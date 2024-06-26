@@ -3,6 +3,7 @@
 export * from './lib/cart';
 export * from './lib/brand';
 export * from './lib/field';
+export * from './lib/panel';
 export * from './lib/button';
 export * from './lib/footer';
 export * from './lib/navbar';
