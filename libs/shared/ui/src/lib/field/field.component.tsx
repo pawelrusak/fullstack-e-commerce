@@ -1,10 +1,11 @@
 import * as Styled from './field.styled';
 import { FieldProvider, useField } from './field.context';
 import type { FieldContextParams } from './field.context';
-import type { StyledLabelProps } from './field.styled';
+import type { StyledLabelProps, StyledFieldProps } from './field.styled';
 
 export type FieldProps = React.ComponentPropsWithRef<'div'> &
-  FieldContextParams;
+  FieldContextParams &
+  StyledFieldProps;
 
 export type FieldControlInputProps = React.ComponentPropsWithRef<'input'> & {
   iconLeft?: React.ReactElement;
