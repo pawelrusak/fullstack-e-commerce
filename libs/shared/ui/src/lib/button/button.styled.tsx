@@ -5,6 +5,7 @@ import { theme } from '@e-shop/theme';
 export type ButtonProps = {
   variant?: 'outline' | 'solid';
   colorVariant?: 'primary' | 'secondary';
+  fullWidth?: boolean;
 };
 
 const DISABLED_COLOR = '#cbcbcb';
@@ -28,6 +29,8 @@ const outlineFontColors: ColorVariant = {
 
 export const Button = styled.button<ButtonProps>`
   all: unset;
+  display: inline-block;
+  box-sizing: border-box;
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   padding: 1.5rem 3.9rem;
   line-height: 3rem;
@@ -40,8 +43,16 @@ export const Button = styled.button<ButtonProps>`
   border: 1px solid
     ${({ colorVariant = 'primary' }) => solidBorderColors[colorVariant]};
 
-  :hover,
-  :focus {
+  ${({ fullWidth }) =>
+    fullWidth &&
+    css`
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    `}
+
+  &:hover,
+  &:focus {
     background: ${({ colorVariant = 'primary' }) =>
       polished.darken(0.1, solidBackgroundColors[colorVariant])};
     color: ${({ theme }) => theme.color.background};
@@ -54,7 +65,7 @@ export const Button = styled.button<ButtonProps>`
     outline: auto;
   }
 
-  :disabled,
+  &:disabled,
   &[aria-disabled='true'] {
     cursor: default;
     background: ${DISABLED_COLOR};
