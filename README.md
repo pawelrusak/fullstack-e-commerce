@@ -19,7 +19,8 @@
 </p>
 
 > [!IMPORTANT]
-> The project is at an early stage of development so it currently only contains a UI components library.
+> The project is at an early stage of development so many functions have not been added or are not work quite right yet.
+> See the [Known issues](#known-issues) section for more information.
 > You can view the UI components using Storybook, to do this go to the [Storybook](#storybook) section.
 
 ## Table of Contents
@@ -166,6 +167,7 @@ Below is a list of the most important known issues from a user and developer per
 - **Asset Sources**: Missing the "[single source of truth](https://en.wikipedia.org/wiki/Single_source_of_truth)" for project assets.
 - **Responsive Styles**: Styles for small devices need improvement (It work, but I am not satisfied with the final result).
 - **Backend tests fails**: Need to remember to start the server (run: `npx nx serve backend`) before running the tests. Express server configuration must be exported and added to the tests setup - it will be fixed in future updates.
+- **Missing link to cart**: The cart icon in the navbar is not yet linked to the cart page. You can visit cart page by typing `/cart` in the URL bar or use button "Buy now" on the product page.
 
 ## License
 
