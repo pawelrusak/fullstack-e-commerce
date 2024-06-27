@@ -236,10 +236,68 @@
     }
   },
   "CHECKOUT": {
+    "TITLE": "Checkout",
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CART": "Cart",
+      "CURRENT": "Checkout"
+    },
     "STEPS": {
       "INFORMATION": "Information",
       "SHIPPING": "Shipping",
       "PAYMENT": "Payment"
+    },
+    "PANEL": {
+      "TITLE": "Order Summary",
+      "SHIPPING_FEE": "Total"
+    },
+    "INFORMATION": {
+      "FORM": {
+        "TITLE": "Billing Details",
+        "SUBMIT_BUTTON": "Order Now",
+        "FIELD": {
+          "FIRST_NAME": {
+            "LABEL": "First Name",
+            "PLACEHOLDER": "Amelia Robert"
+          },
+          "LAST_NAME": {
+            "LABEL": "Last Name",
+            "PLACEHOLDER": "Watson"
+          },
+          "PHONE_NUMBER": {
+            "LABEL": "Phone Number",
+            "PLACEHOLDER": "+123 456 7890"
+          },
+          "EMAIL_ADDRESS": {
+            "LABEL": "Email Address",
+            "PLACEHOLDER": "amelia.watson@eshop.com"
+          },
+          "ADDRESS": {
+            "LABEL": "Address",
+            "PLACEHOLDER": "Home Address, Auxiliary St. 12345, Anywhere State"
+          },
+          "COUNTRY": {
+            "LABEL": "Country",
+            "PLACEHOLDER": "Indonesia"
+          },
+          "STATE": {
+            "LABEL": "State",
+            "PLACEHOLDER": "Kalimantan Timur"
+          },
+          "CITY": {
+            "LABEL": "City",
+            "PLACEHOLDER": "Samarinda"
+          },
+          "POSTAL_CODE": {
+            "LABEL": "Postal Code",
+            "PLACEHOLDER": "555555"
+          },
+          "ORDER_NOTES": {
+            "LABEL": "Order Notes",
+            "PLACEHOLDER": "Enter your order notes..."
+          }
+        }
+      }
     }
   }
 }
