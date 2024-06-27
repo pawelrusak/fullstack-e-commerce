@@ -15,6 +15,12 @@ export const SolidPrimary: Story = {
   args: {},
 };
 
+export const SolidFullWidth: Story = {
+  args: {
+    fullWidth: true,
+  },
+};
+
 export const SolidSecondary: Story = {
   args: {
     colorVariant: 'secondary',
