@@ -6,6 +6,7 @@ import type { MarginProps } from 'styled-system';
 const ICON_WIDTH = `7.8rem`;
 
 export const Input = styled.input`
+  box-sizing: border-box;
   line-height: 3rem;
   font-size: 2rem;
   border: 0.1rem solid
@@ -14,15 +15,19 @@ export const Input = styled.input`
   border-radius: 1rem;
   width: 100%;
   outline: none;
+  opacity: 0.75;
 
-  :focus {
+  &:focus {
     border-color: ${({ theme }) => theme.color.primary};
     box-shadow: 0 0 0 0.3rem
       ${({ theme }) => polished.transparentize(0.4, theme.color.primary)};
   }
 
-  ::placeholder {
-    opacity: 0.75;
+  &::placeholder {
+    opacity: 0.4;
+    line-height: 3rem;
+    font-size: 2rem;
+    font-family: ${({ theme }) => theme.fontFamily.montserrat};
   }
 `;
 
@@ -112,7 +117,6 @@ export type StyledControlIconProps = {
 };
 
 export const ControlIcon = styled.span<StyledControlIconProps>`
-  all: unset;
   position: absolute;
   display: flex;
   width: ${ICON_WIDTH};
