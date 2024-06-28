@@ -127,7 +127,7 @@ function CartSection() {
           as={Link}
           tabIndex={isHydrated && !cartStore.itemsCount ? -1 : undefined}
           role="link"
-          href="/checkout"
+          href="/checkout/information"
           aria-disabled={isHydrated && !cartStore.itemsCount}
         >
           {EN.CART_PAGE.CTA_BUTTONS.PROCEED_TO_CHECKOUT}
