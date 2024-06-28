@@ -249,7 +249,9 @@
     },
     "PANEL": {
       "TITLE": "Order Summary",
-      "SHIPPING_FEE": "Total"
+      "SHIPPING_FEE": "Shipping Fee",
+      "TOTAL": "Total",
+      "SUBTOTAL": "Subtotal"
     },
     "INFORMATION": {
       "FORM": {
