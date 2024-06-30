@@ -1,3 +1,4 @@
+import * as React from 'react';
 import * as Styled from './field.styled';
 import { FieldProvider, useField } from './field.context';
 import type { FieldContextParams } from './field.context';
@@ -33,34 +34,36 @@ export type FieldInputProps<Element extends React.ElementType> =
     as?: Element;
   };
 
-export function FieldInput<Element extends React.ElementType = 'input'>({
-  as = 'input',
-  ...props
-}: FieldInputProps<Element>) {
+const FieldInput = React.forwardRef(function <
+  Element extends React.ElementType = 'input',
+>(
+  { as = 'input', ...props }: FieldInputProps<Element>,
+  // TODO improve this type, should depends of the tag passed to as prop {@see https://www.benmvp.com/blog/forwarding-refs-polymorphic-react-component-typescript/}
+  ref: React.Ref<HTMLInputElement>,
+) {
   const { controlId } = useField();
 
   return (
     <Styled.Input
-      forwardedAs={undefined}
+      ref={ref}
       as={as}
       id={controlId}
       aria-describedby={controlId ? `${controlId}-field-error` : undefined}
       {...props}
     />
   );
-}
+});
 
-function FieldControlInput({
-  iconLeft,
-  iconRight,
-  ...params
-}: FieldControlInputProps) {
+const FieldControlInput = React.forwardRef(function (
+  { iconLeft, iconRight, ...params }: FieldControlInputProps,
+  ref: React.Ref<HTMLInputElement>,
+) {
   return (
     <Styled.Control
       hasLeftIcon={Boolean(iconLeft)}
       hasRightIcon={Boolean(iconRight)}
     >
-      <FieldInput {...params} />
+      <FieldInput {...params} ref={ref} />
       {iconLeft && (
         <Styled.ControlIcon isLeft data-testid="input-icon-left">
           {iconLeft}
@@ -73,7 +76,7 @@ function FieldControlInput({
       )}
     </Styled.Control>
   );
-}
+});
 
 export type FieldErrorProps = React.ComponentPropsWithRef<'strong'>;
 
