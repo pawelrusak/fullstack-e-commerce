@@ -42,7 +42,9 @@ export const ORDER_STATUS_CODE = Object.freeze({
  */
 export type OrderStatusCode = (typeof ORDER_STATUS_CODE)[OrderStatus];
 
-export type CustomerContact = Required<Pick<User, 'email' | 'phone'>>;
+export type CustomerContact = Required<
+  Pick<User, 'email' | 'phone' | 'firstName' | 'lastName'>
+>;
 
 export type PaymentMethod = 'paypal' | 'stripe' | 'cash';
 
