@@ -62,7 +62,7 @@ This project is developed using the <abbr title="MongoDB, Express.js, Next.js, a
 In addition, the project uses technologies like (or will be):
 
 - [Zod](https://zod.dev/)
-- [React Hook Form](https://react-hook-form.com/) _(planned for future use)_
+- [React Hook Form](https://react-hook-form.com/)
 - [Styled Components](https://styled-components.com/)
 - [Storybook](https://storybook.js.org/)
 - [Base UI](https://mui.com/base-ui/) or [React Aria](https://react-spectrum.adobe.com/react-aria/) _(planned for future use)_
