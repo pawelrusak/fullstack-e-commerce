@@ -25,6 +25,27 @@ export const orderSchema = new mongoose.Schema<OrderSchema>(
         required: true,
         trim: true,
       },
+      firstName: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+        minLength: 2,
+        /**
+         * @see {@link https://www.rfc-editor.org/rfc/rfc5321#section-4.5.3.1.1 | RFC 5321}
+         */
+        maxLength: 64,
+      },
+      lastName: {
+        type: String,
+        required: false,
+        trim: true,
+        minLength: 2,
+        /**
+         * @see {@link https://www.rfc-editor.org/rfc/rfc5321#section-4.5.3.1.1 | RFC 5321}
+         */
+        maxLength: 64,
+      },
     },
     products: [
       {
