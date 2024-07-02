@@ -42,9 +42,14 @@ export const ORDER_STATUS_CODE = Object.freeze({
  */
 export type OrderStatusCode = (typeof ORDER_STATUS_CODE)[OrderStatus];
 
-export type CustomerContact = Required<
+export type OrderContact = Required<
   Pick<User, 'email' | 'phone' | 'firstName' | 'lastName'>
 >;
+
+/**
+ * @deprecated use OrderContact instead
+ */
+export type CustomerContact = OrderContact;
 
 export type PaymentMethod = 'paypal' | 'stripe' | 'cash';
 
@@ -53,7 +58,7 @@ export type Order = Id & {
    * This will be set when the order is created by the registered user.
    */
   customer?: User;
-  contact: CustomerContact;
+  contact: OrderContact;
   products: OrderProduct[];
   status: OrderStatus;
   productsCount: number;
@@ -85,6 +90,10 @@ export type OrderSchema = Prettify<
     {
       _id: Types.ObjectId;
       customer?: Types.Subdocument<UserSchema>;
+      shippingAddress: AddressSchema;
+      /**
+       * @deprecated use shippingAddress instead
+       */
       address: AddressSchema;
       paymentAt?: Date;
       cancelledAt?: Date;
