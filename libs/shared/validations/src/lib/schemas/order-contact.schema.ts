@@ -1,7 +1,7 @@
 import { z, ZodType } from 'zod';
-import { CustomerContact } from '@e-shop/types';
+import { OrderContact } from '@e-shop/types';
 
-export const contactSchema: ZodType<CustomerContact> = z.object({
+export const orderContactSchema: ZodType<OrderContact> = z.object({
   firstName: z.string().min(2).max(64).trim(),
   lastName: z.string().min(2).max(64).trim(),
   phone: z.string().trim(),
