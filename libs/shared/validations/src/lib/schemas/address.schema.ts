@@ -1,8 +1,7 @@
-import { z, ZodType } from 'zod';
-import { Address } from '@e-shop/types';
+import { z } from 'zod';
 
 // TODO improve schema (change min and max length etc.)
-export const addressSchema: ZodType<Address> = z.object({
+export const addressSchema = z.object({
   address: z.string().min(1).trim(),
   country: z.string().min(1).trim(),
   state: z.string().min(1).trim(),
