@@ -27,5 +27,6 @@ export const addressSchema = new mongoose.Schema<AddressSchema>({
     type: String,
     required: true,
     trim: true,
+    // TODO validate by used isPostalCode from https://www.npmjs.com/package/validator
   },
 });
