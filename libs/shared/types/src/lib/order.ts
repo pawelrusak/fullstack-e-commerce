@@ -53,6 +53,10 @@ export type CustomerContact = OrderContact;
 
 export type PaymentMethod = 'paypal' | 'stripe' | 'cash';
 
+export type OrderCustomerNote = {
+  customerNote?: string;
+};
+
 export type Order = Id & {
   /**
    * This will be set when the order is created by the registered user.
@@ -81,8 +85,8 @@ export type Order = Id & {
    */
   pendingAt?: string;
   paymentMethod: PaymentMethod;
-  customerNote?: string;
-} & Timestamp;
+} & OrderCustomerNote &
+  Timestamp;
 
 export type OrderSchema = Prettify<
   Modify<
