@@ -134,7 +134,10 @@ export const UserItemIcon = styled.svg<StyledUserItemIconProps>`
 
 export const UserItemCartIconWrapper = styled.div`
   position: relative;
-  margin-right: 2.4rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+    margin-right: 2.4rem;
+  }
 `;
 
 export const UserItemCartBadge = styled.strong`
