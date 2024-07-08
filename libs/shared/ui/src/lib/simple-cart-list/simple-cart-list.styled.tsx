@@ -6,7 +6,7 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   display: grid;
-  grid-template-columns: 1fr 13rem 11.5rem;
+  grid-template-columns: 1fr 13rem 12.7rem;
   grid-template-areas: 'name quantity price';
 
   padding: 2rem 0;
@@ -38,6 +38,7 @@ export const ItemQuantity = styled.strong`
 
 export const ItemPrice = styled.strong`
   grid-area: price;
+  margin-left: 0.5rem;
 
   ${itemTextCss}
   font-weight: ${({ theme }) => theme.fontWeight.semiBold};
