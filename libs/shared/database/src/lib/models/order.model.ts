@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import type { OrderSchema } from '@e-shop/types';
+import { ORDER_STATUS_CODE } from '@e-shop/types';
 import { addressSchema } from '../schemas/address.schema';
 
 export const orderSchema = new mongoose.Schema<OrderSchema>(
@@ -88,7 +89,7 @@ export const orderSchema = new mongoose.Schema<OrderSchema>(
       type: Number,
       required: true,
       min: 0,
-      max: 6,
+      max: Object.keys(ORDER_STATUS_CODE).length - 1,
     },
     shippingAddress: addressSchema,
     totalPrice: {
@@ -123,6 +124,7 @@ export const orderSchema = new mongoose.Schema<OrderSchema>(
     pendingAt: {
       type: Date,
       required: false,
+      default: Date.now,
     },
     paymentMethod: {
       type: String,
