@@ -1,9 +1,12 @@
 import mongoose from 'mongoose';
 import type { OrderSchema } from '@e-shop/types';
 import { ORDER_STATUS_CODE } from '@e-shop/types';
-import { addressSchema } from '../schemas/address.schema';
+import { addressSchema } from '../../schemas/address.schema';
+import { OrderRegister, register } from './order.statics';
 
-export const orderSchema = new mongoose.Schema<OrderSchema>(
+type OrderModel = mongoose.Model<OrderSchema> & OrderRegister;
+
+export const orderSchema = new mongoose.Schema<OrderSchema, OrderModel>(
   {
     customer: {
       type: mongoose.Schema.Types.ObjectId,
@@ -29,6 +32,7 @@ export const orderSchema = new mongoose.Schema<OrderSchema>(
       firstName: {
         type: String,
         required: true,
+        // TODO remove unique
         unique: true,
         trim: true,
         minLength: 2,
@@ -136,6 +140,7 @@ export const orderSchema = new mongoose.Schema<OrderSchema>(
       required: false,
       trim: true,
       max: 1000,
+      // TODO add setter for empty string
     },
   },
   {
@@ -143,4 +148,9 @@ export const orderSchema = new mongoose.Schema<OrderSchema>(
   },
 );
 
-export const Order = mongoose.model('Order', orderSchema);
+orderSchema.statics['register'] = register;
+
+export const Order = mongoose.model<OrderSchema, OrderModel>(
+  'Order',
+  orderSchema,
+);
