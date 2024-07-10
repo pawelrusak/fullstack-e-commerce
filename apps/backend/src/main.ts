@@ -18,6 +18,8 @@ app.get('/api', (req, res) => {
   res.send({ message: 'Welcome to backend!' });
 });
 
+app.use(express.json());
+
 registerRoutes(app);
 
 const port = process.env.PORT || 3333;
