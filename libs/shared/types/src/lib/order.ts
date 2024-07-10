@@ -88,12 +88,22 @@ export type Order = Id & {
 } & OrderCustomerNote &
   Timestamp;
 
+export type OrderProductSchema = Prettify<
+  Modify<
+    OrderProduct,
+    {
+      product: Types.ObjectId;
+    }
+  >
+>;
+
 export type OrderSchema = Prettify<
   Modify<
     Order,
     {
       _id: Types.ObjectId;
       customer?: Types.Subdocument<UserSchema>;
+      products: OrderProductSchema[];
       shippingAddress: AddressSchema;
       /**
        * @deprecated use shippingAddress instead
