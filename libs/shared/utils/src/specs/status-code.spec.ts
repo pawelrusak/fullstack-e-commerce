@@ -8,6 +8,7 @@ describe('STATUS_CODE', () => {
   it('should have a specific shape', () => {
     expect(STATUS_CODE).toMatchInlineSnapshot(`
       {
+        "CREATED": 201,
         "NOT_IMPLEMENTED": 501,
         "OK": 200,
       }
