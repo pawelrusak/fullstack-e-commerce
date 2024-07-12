@@ -3,15 +3,18 @@ import type { ProductSchema } from '@e-shop/types';
 import {
   findAllWithCategories,
   findAllBrandsAndCount,
+  updateStockByOrder,
 } from './product.statics';
 import type {
   ProductFindAllWithCategories,
   ProductFindAllBrandsAndCount,
+  ProductUpdateStockByOrder,
 } from './product.statics';
 
 type ProductModel = mongoose.Model<ProductSchema> &
   ProductFindAllWithCategories &
-  ProductFindAllBrandsAndCount;
+  ProductFindAllBrandsAndCount &
+  ProductUpdateStockByOrder;
 
 export const productSchema = new mongoose.Schema<ProductSchema, ProductModel>(
   {
@@ -58,6 +61,7 @@ export const productSchema = new mongoose.Schema<ProductSchema, ProductModel>(
       type: [String],
       required: true,
     },
+    //  TODO add "metrics" field for example metrics: { ordersCount: Number, viewCount: Number }
     size: {
       width: {
         type: Number,
@@ -85,13 +89,14 @@ export const productSchema = new mongoose.Schema<ProductSchema, ProductModel>(
       default: false,
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 productSchema.statics['findAllWithCategories'] = findAllWithCategories;
 productSchema.statics['findAllBrandsAndCount'] = findAllBrandsAndCount;
+productSchema.statics['updateStockByOrder'] = updateStockByOrder;
 
 export const Product = mongoose.model<ProductSchema, ProductModel>(
   'Product',
-  productSchema
+  productSchema,
 );

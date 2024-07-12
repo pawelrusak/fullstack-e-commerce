@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
-import { ProductSchema, Brand } from '@e-shop/types';
+import { ProductSchema, Brand, Order as TOrder } from '@e-shop/types';
 import {
   renameFilterKeysRelatedToCategories,
   validateAndConvertFilterData,
+  getOrderedProductsFromOrder,
 } from './product.utils';
 
 export type ProductFindAllWithCategories = {
@@ -11,7 +12,7 @@ export type ProductFindAllWithCategories = {
 
 export function findAllWithCategories(
   this: mongoose.Model<ProductSchema>,
-  filter: unknown
+  filter: unknown,
 ) {
   const validatedFilter = validateAndConvertFilterData(filter);
 
@@ -89,4 +90,43 @@ export function findAllBrandsAndCount(this: mongoose.Model<ProductSchema>) {
   ];
 
   return this.aggregate<ProductSchema>(aggregationSteps);
+}
+
+export type OrderedProducts = Pick<TOrder, 'products'>;
+
+export type ProductUpdateStockByOrder<
+  TRawDocType = OrderedProducts,
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  TQueryHelpers = {},
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  TInstanceMethods = {},
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  TVirtuals = {},
+> = {
+  updateStockByOrder(
+    docs: OrderedProducts,
+  ): ReturnType<
+    mongoose.Model<
+      TRawDocType,
+      TQueryHelpers,
+      TInstanceMethods,
+      TVirtuals
+    >['updateOne']
+  >[];
+};
+
+export async function updateStockByOrder(
+  this: mongoose.Model<ProductSchema>,
+  order: OrderedProducts,
+) {
+  const orderedProducts = getOrderedProductsFromOrder(order);
+
+  const updateProductsQueryPromises = orderedProducts.map((orderedProduct) =>
+    this.updateOne(
+      { _id: orderedProduct.productId },
+      { $inc: { stock: -orderedProduct.quantity } },
+    ),
+  );
+
+  return Promise.all(updateProductsQueryPromises);
 }

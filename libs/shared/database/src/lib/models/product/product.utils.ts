@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { productBaseSchema } from '@e-shop/validations';
-import { Paths, Product } from '@e-shop/types';
+import { Paths, Product, OrderProduct } from '@e-shop/types';
+import { OrderedProducts } from './product.statics';
 
 type ProductPaths = Paths<Product>;
 
@@ -52,4 +53,19 @@ export function validateAndConvertFilterData(filterData: unknown) {
 
     throw new TypeError('Invalid filter data');
   }
+}
+
+type NormalizedOrderedProduct = {
+  productId: OrderProduct['product']['_id'];
+} & Pick<OrderProduct, 'quantity'>;
+
+export function getOrderedProductsFromOrder(order: OrderedProducts) {
+  const orderedProducts: NormalizedOrderedProduct[] = order.products.map(
+    (product) => ({
+      productId: product.product._id,
+      quantity: product.quantity,
+    }),
+  );
+
+  return orderedProducts;
 }
