@@ -1,5 +1,5 @@
 import { Controller } from '@e-shop/types';
-import { Order } from '@e-shop/database/models';
+import { Order, Product } from '@e-shop/database/models';
 import { STATUS_CODE } from '@e-shop/utils';
 import { OrderPostRequestBody } from '@e-shop/types/request';
 
@@ -11,7 +11,7 @@ export default {
    * @access Public
    */
   async register(request, response) {
-    const { body }: { body: OrderPostRequestBody } = request;
+    const { body: orderBody }: { body: OrderPostRequestBody } = request;
     // TODO use transactions
 
     // TODO validate product prices and maximum quantity of the order.
@@ -21,15 +21,16 @@ export default {
     await Order.register({
       // TODO add this property when register featured will be added
       customer: undefined,
-      contact: body.contact,
-      products: body.products,
-      shippingAddress: body.shippingAddress,
-      paymentMethod: body.paymentMethod,
-      customerNote: body.customerNote,
+      contact: orderBody.contact,
+      products: orderBody.products,
+      shippingAddress: orderBody.shippingAddress,
+      paymentMethod: orderBody.paymentMethod,
+      customerNote: orderBody.customerNote,
     });
 
-    // TODO update product stocks
+    await Product.updateStockByOrder(orderBody);
 
+    // TODO return order Id in response
     response.status(STATUS_CODE.CREATED).send({
       message: `This action created a new order and update product stock`,
     });
