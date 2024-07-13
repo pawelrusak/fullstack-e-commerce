@@ -104,7 +104,11 @@ export type ProductUpdateStockByOrder<
   TVirtuals = {},
 > = {
   updateStockByOrder(
-    docs: OrderedProducts,
+    order: OrderedProducts,
+    options?:
+      | (mongoose.mongo.UpdateOptions &
+          mongoose.MongooseUpdateQueryOptions<TRawDocType>)
+      | null,
   ): ReturnType<
     mongoose.Model<
       TRawDocType,
@@ -118,6 +122,10 @@ export type ProductUpdateStockByOrder<
 export async function updateStockByOrder(
   this: mongoose.Model<ProductSchema>,
   order: OrderedProducts,
+  options?:
+    | (mongoose.mongo.UpdateOptions &
+        mongoose.MongooseUpdateQueryOptions<OrderedProducts>)
+    | null,
 ) {
   const orderedProducts = getOrderedProductsFromOrder(order);
 
@@ -125,6 +133,7 @@ export async function updateStockByOrder(
     this.updateOne(
       { _id: orderedProduct.productId },
       { $inc: { stock: -orderedProduct.quantity } },
+      options,
     ),
   );
 
