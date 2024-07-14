@@ -105,10 +105,6 @@ export type OrderSchema = Prettify<
       customer?: Types.Subdocument<UserSchema>;
       products: OrderProductSchema[];
       shippingAddress: AddressSchema;
-      /**
-       * @deprecated use shippingAddress instead
-       */
-      address: AddressSchema;
       paymentAt?: Date;
       cancelledAt?: Date;
       refundedAt?: Date;
