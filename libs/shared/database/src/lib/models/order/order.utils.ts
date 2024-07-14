@@ -1,8 +1,5 @@
 import type { OrderProduct, Modify } from '@e-shop/types';
-
-export function getOrderProductsIds(orderProducts: OrderProduct[]) {
-  return orderProducts.map((product) => product.product._id);
-}
+import { getOrderProductsIds } from '@e-shop/utils';
 
 type NormalizedOrderProduct = Modify<
   OrderProduct,
