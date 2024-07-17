@@ -1,16 +1,19 @@
-import { Controller } from '@e-shop/types';
-import { Order, Product } from '@e-shop/database/models';
 import { STATUS_CODE } from '@e-shop/utils';
-import { OrderPostRequestBody } from '@e-shop/types/request';
+import { Order, Product } from '@e-shop/database/models';
+
+import type { Response } from 'express';
+import type { Controller } from '@e-shop/types';
+import type { CreateResponseBody } from '@e-shop/types/response';
+import type { OrderPostRequestBody } from '@e-shop/types/request';
 
 export default {
   /**
    * This action registers a new order before payment is made
    *
    * @route POST /api/v1/orders/register
-   * @access Public
+   * @access Public/Private
    */
-  async register(request, response) {
+  async register(request, response: Response<CreateResponseBody>) {
     const { body: orderBody }: { body: OrderPostRequestBody } = request;
     // TODO use transactions
 
@@ -18,7 +21,7 @@ export default {
 
     // TODO validate that product exist in database.
 
-    await Order.register({
+    const order = await Order.register({
       // TODO add this property when register featured will be added
       customer: undefined,
       contact: orderBody.contact,
@@ -30,9 +33,14 @@ export default {
 
     await Product.updateStockByOrder(orderBody);
 
-    // TODO return order Id in response
+    // TODO (in future) send e-mail do client
+
     response.status(STATUS_CODE.CREATED).send({
-      message: `This action created a new order and update product stock`,
+      message: `This action created a new order and update products stocks`,
+      status: STATUS_CODE.CREATED,
+      data: {
+        order,
+      },
     });
   },
 } satisfies Controller;
