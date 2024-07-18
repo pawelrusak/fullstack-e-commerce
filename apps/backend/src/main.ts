@@ -2,6 +2,7 @@ import express from 'express';
 import * as path from 'path';
 import { connectDB } from '@e-shop/database';
 import { registerRoutes } from './routers';
+import { errorHandler } from './middlewares/error-handler';
 
 connectDB(process.env.DATABASE_URI);
 
@@ -21,6 +22,8 @@ app.get('/api', (req, res) => {
 app.use(express.json());
 
 registerRoutes(app);
+
+app.use(errorHandler);
 
 const port = process.env.PORT || 3333;
 const server = app.listen(port, () => {
