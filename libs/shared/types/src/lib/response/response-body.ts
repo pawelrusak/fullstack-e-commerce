@@ -48,20 +48,10 @@ export type UpdateResponseBody<TData = unknown> = Prettify<
 
 export type RemoveResponseBody = Prettify<Partial<Message> & Status>;
 
-export type ErrorsResponseBody = Prettify<
-  Partial<Message> &
-    Status & {
-      errors: Record<string, string[]>;
-    }
->;
-
-export type MetaErrorsResponseBody<
-  TMeta = unknown,
-  TErrors = Record<string, string[]>,
-> = Prettify<
+export type ErrorsResponseBody<TErrors = unknown, TMeta = unknown> = Prettify<
   Partial<Message> &
     Status & {
       errors?: TErrors;
-      meta: TMeta;
+      meta?: TMeta;
     }
 >;
