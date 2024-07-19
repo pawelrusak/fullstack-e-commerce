@@ -1,5 +1,6 @@
 import { ZodError } from 'zod';
 import mongoose from 'mongoose';
+import { InvalidObjectIdsError } from '@e-shop/utils';
 
 import type { Response } from 'express';
 import type { ErrorsResponseBody } from '@e-shop/types/response';
@@ -27,6 +28,7 @@ export const errorHandler = (
         });
       }
       break;
+
     case ZodError:
       {
         const err = error as ZodError;
@@ -38,6 +40,18 @@ export const errorHandler = (
         });
       }
       break;
+
+    case InvalidObjectIdsError:
+      {
+        const err = error as InvalidObjectIdsError;
+
+        response.status(422).json({
+          message: err.message,
+          status: 422,
+        });
+      }
+      break;
+
     default:
       response.status(500).json({
         message: 'Something broke!',
