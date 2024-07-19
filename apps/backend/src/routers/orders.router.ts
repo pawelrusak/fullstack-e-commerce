@@ -7,7 +7,7 @@ const router = Router();
 
 router.post(
   '/register',
-  validateOrderProductsPriceAndStock,
+  catchAsync(validateOrderProductsPriceAndStock),
   catchAsync(ordersController.register),
 );
 

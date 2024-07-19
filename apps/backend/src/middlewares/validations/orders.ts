@@ -1,13 +1,35 @@
 import { getOrderProductsIds, InvalidObjectIdsError } from '@e-shop/utils';
 import { isValidObjectIds, getInvalidObjectIds } from '@e-shop/database/utils';
+import { Product } from '@e-shop/database/models';
 
 import type { Request, Response, NextFunction } from 'express';
 import type { OrderPostRequestBody } from '@e-shop/types/request';
 
+async function assertProductsInDatabaseOrFail(productsIds: string[]) {
+  const products = await Product.find({ _id: { $in: productsIds } });
+
+  if (products.length !== productsIds.length) {
+    const productsInDatabaseIds = products.map((product) =>
+      product._id.toString(),
+    );
+    const missingProductsIds = productsIds.filter(
+      (id) => !productsInDatabaseIds.includes(id),
+    );
+
+    throw new InvalidObjectIdsError(
+      `The following products are not in the database: ${missingProductsIds.join(
+        ', ',
+      )}`,
+    );
+  }
+
+  return true;
+}
+
 type ParamsDictionary = Record<string, string>;
 
 // getOrderProductsIds
-export function validateOrderProductsPriceAndStock(
+export async function validateOrderProductsPriceAndStock(
   request?: Request<ParamsDictionary, unknown, OrderPostRequestBody>,
   response?: Response,
   next?: NextFunction,
@@ -27,7 +49,8 @@ export function validateOrderProductsPriceAndStock(
     );
   }
 
-  // TODO validate that products exists in database
+  // Validate that products exists in database
+  await assertProductsInDatabaseOrFail(orderProductsId);
 
   // TODO validate that price is this same as in database
 
