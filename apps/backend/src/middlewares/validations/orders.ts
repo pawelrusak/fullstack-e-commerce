@@ -1,9 +1,20 @@
-import { getOrderProductsIds, InvalidObjectIdsError } from '@e-shop/utils';
+import {
+  getOrderProductsIds,
+  InvalidObjectIdsError,
+  RegisterOrderError,
+} from '@e-shop/utils';
 import { isValidObjectIds, getInvalidObjectIds } from '@e-shop/database/utils';
 import { Product } from '@e-shop/database/models';
 
+import { Order } from '@e-shop/types';
 import type { Request, Response, NextFunction } from 'express';
 import type { OrderPostRequestBody } from '@e-shop/types/request';
+
+function assertOrderHasProducts(order: Partial<Order>) {
+  if (order.products === undefined || order.products.length === 0) {
+    throw new RegisterOrderError('The order must have at least one product.');
+  }
+}
 
 async function assertProductsInDatabaseOrFail(productsIds: string[]) {
   const products = await Product.find({ _id: { $in: productsIds } });
@@ -28,13 +39,14 @@ async function assertProductsInDatabaseOrFail(productsIds: string[]) {
 
 type ParamsDictionary = Record<string, string>;
 
-// getOrderProductsIds
 export async function validateOrderProductsPriceAndStock(
   request?: Request<ParamsDictionary, unknown, OrderPostRequestBody>,
   response?: Response,
   next?: NextFunction,
 ) {
   const { body: orderBody } = request;
+
+  assertOrderHasProducts(orderBody);
 
   // Validate order product to be valid MangoDB ObjectId (should reduce unnecessary database queries)
   const orderProductsId = getOrderProductsIds(orderBody.products);
