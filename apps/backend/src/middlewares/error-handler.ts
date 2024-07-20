@@ -1,6 +1,6 @@
 import { ZodError } from 'zod';
 import mongoose from 'mongoose';
-import { InvalidObjectIdsError } from '@e-shop/utils';
+import { InvalidObjectIdsError, RegisterOrderError } from '@e-shop/utils';
 
 import type { Response } from 'express';
 import type { ErrorsResponseBody } from '@e-shop/types/response';
@@ -41,9 +41,10 @@ export const errorHandler = (
       }
       break;
 
+    case RegisterOrderError:
     case InvalidObjectIdsError:
       {
-        const err = error as InvalidObjectIdsError;
+        const err = error as InvalidObjectIdsError | RegisterOrderError;
 
         response.status(422).json({
           message: err.message,
