@@ -1,6 +1,10 @@
 import { ZodError } from 'zod';
 import mongoose from 'mongoose';
-import { InvalidObjectIdsError, RegisterOrderError } from '@e-shop/utils';
+import {
+  InvalidObjectIdsError,
+  RegisterOrderError,
+  STATUS_CODE,
+} from '@e-shop/utils';
 
 import type { Response } from 'express';
 import type { ErrorsResponseBody } from '@e-shop/types/response';
@@ -26,9 +30,9 @@ export const errorHandler = (
       {
         const err = error as mongoose.mongo.MongoServerError;
 
-        response.status(400).json({
+        response.status(STATUS_CODE.BAD_REQUEST).json({
           message: err.message,
-          status: 400,
+          status: STATUS_CODE.BAD_REQUEST,
         });
       }
       break;
@@ -37,9 +41,9 @@ export const errorHandler = (
       {
         const err = error as ZodError;
 
-        response.status(400).json({
+        response.status(STATUS_CODE.BAD_REQUEST).json({
           message: err.message,
-          status: 400,
+          status: STATUS_CODE.BAD_REQUEST,
           errors: err.issues,
         });
       }
@@ -49,9 +53,9 @@ export const errorHandler = (
       {
         const err = error as mongoose.Error.DocumentNotFoundError;
 
-        response.status(404).json({
+        response.status(STATUS_CODE.NOT_FOUND).json({
           message: err.message,
-          status: 404,
+          status: STATUS_CODE.NOT_FOUND,
         });
       }
 
@@ -62,17 +66,17 @@ export const errorHandler = (
       {
         const err = error as InvalidObjectIdsError | RegisterOrderError;
 
-        response.status(422).json({
+        response.status(STATUS_CODE.UNPROCESSABLE_CONTENT).json({
           message: err.message,
-          status: 422,
+          status: STATUS_CODE.UNPROCESSABLE_CONTENT,
         });
       }
       break;
 
     default:
-      response.status(500).json({
+      response.status(STATUS_CODE.INTERNAL_SERVER_ERROR).json({
         message: 'Something broke!',
-        status: 500,
+        status: STATUS_CODE.INTERNAL_SERVER_ERROR,
       });
       break;
   }
