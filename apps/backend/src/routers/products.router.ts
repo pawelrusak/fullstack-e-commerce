@@ -5,8 +5,12 @@ import { getProductsQueryAndSort } from '../middlewares/queries/products';
 
 const router = Router();
 
-router.get('/', getProductsQueryAndSort, productsController.findAll);
-router.get('/:slug', productsController.findOne);
+router.get(
+  '/',
+  getProductsQueryAndSort,
+  catchAsync(productsController.findAll),
+);
+router.get('/:slug', catchAsync(productsController.findOne));
 
 /**
  * @todo Add authentication and admin middleware
