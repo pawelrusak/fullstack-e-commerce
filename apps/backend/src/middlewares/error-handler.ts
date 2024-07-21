@@ -8,7 +8,11 @@ import type { ErrorsResponseBody } from '@e-shop/types/response';
 /**
  * @see {@link https://mongoosejs.com/docs/api/error.html | Mongoose Errors}
  */
-type AppError = Error | mongoose.mongo.MongoServerError | ZodError;
+type AppError =
+  | Error
+  | mongoose.mongo.MongoServerError
+  | ZodError
+  | mongoose.Error.DocumentNotFoundError;
 
 export const errorHandler = (
   error: AppError,
@@ -39,6 +43,18 @@ export const errorHandler = (
           errors: err.issues,
         });
       }
+      break;
+
+    case mongoose.Error.DocumentNotFoundError:
+      {
+        const err = error as mongoose.Error.DocumentNotFoundError;
+
+        response.status(404).json({
+          message: err.message,
+          status: 404,
+        });
+      }
+
       break;
 
     case RegisterOrderError:
