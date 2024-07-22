@@ -39,6 +39,7 @@ export type OrderRegister<
    */
   register(
     docs: RegisterOrderDocs,
+    options?: mongoose.SessionOption,
   ): ReturnType<
     mongoose.Model<
       TRawDocType,
@@ -52,6 +53,7 @@ export type OrderRegister<
 export async function register(
   this: mongoose.Model<OrderSchema>,
   docs: TOrder,
+  options?: mongoose.SessionOption,
 ) {
   const uniqueProductIds = getOrderProductsKindCount(docs.products);
 
@@ -73,11 +75,12 @@ export async function register(
     productsKindCount: uniqueProductIds,
     totalPrice: orderProductTotalPrice,
     productsCount: orderProductsCount,
+    // TODO use setter for this
     customerNote:
       docs.customerNote?.trim() === '' ? undefined : docs.customerNote,
   };
 
-  const order = await this.create(newOrder);
+  const order = await this.create([newOrder], options);
 
-  return await this.findById(order._id).exec();
+  return await this.findById(order[0]._id, null, options).exec();
 }
