@@ -10,6 +10,7 @@ export * from './lib/navbar';
 export * from './lib/divider';
 export * from './lib/heading';
 export * from './lib/gallery';
+export * from './lib/checkbox';
 export * from './lib/paragraph';
 export * from './lib/breadcrumb';
 export * from './lib/hero-section';
