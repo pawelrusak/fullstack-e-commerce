@@ -3,6 +3,7 @@ export { default as CardIconWithDot } from './card-icon-with-dot.svg';
 export { default as MinusSmallButton } from './minus-small-icon.svg';
 export { default as ArrowShortRight } from './arrow-short-right.svg';
 export { default as ArrowShortLeft } from './arrow-short-left.svg';
+export { default as CheckSmallIcon } from './check-small-icon.svg';
 export { default as EmailSolidIcon } from './email-solid-icon.svg';
 export { default as PlusSmallButton } from './plus-small-icon.svg';
 export { default as PhoneSolidIcon } from './phone-solid-icon.svg';
