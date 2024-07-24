@@ -33,5 +33,5 @@ export const Wrapper = styled(Checkbox.Root)`
 
 export const Indicator = styled(Checkbox.Indicator)`
   line-height: 0.8rem;
-  color: ${({ theme }) => theme.color.text};
+  color: ${({ theme }) => theme.color.background};
 `;
