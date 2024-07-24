@@ -21,7 +21,6 @@ export const ProductNavLink = styled.a<PaddingProps>`
   font-size: 1.6rem;
   line-height: 3.2rem;
   padding: 2rem 4rem;
-  height: 7.2rem;
   vertical-align: middle;
   ${padding};
 
