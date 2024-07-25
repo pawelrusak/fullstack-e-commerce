@@ -1,3 +1,4 @@
+export * from './lib/shipping-method';
 export * from './lib/category';
 export * from './lib/address';
 export * from './lib/backend';
