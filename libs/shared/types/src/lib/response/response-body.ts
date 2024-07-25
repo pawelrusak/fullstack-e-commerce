@@ -26,11 +26,11 @@ export type BaseSuccessResponseBody<TData = unknown> = {
 } & Status;
 
 export type FindAllResponseBody<
-  TData,
+  TData extends unknown[] = unknown[],
   TMeta = PaginationMetaResponseBody,
 > = Prettify<
   BaseSuccessResponseBody<TData> & {
-    meta: TMeta;
+    meta?: TMeta;
   }
 >;
 
