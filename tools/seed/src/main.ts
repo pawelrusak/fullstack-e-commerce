@@ -1,8 +1,14 @@
 import mongoose from 'mongoose';
+import { shippingMethods } from '@e-shop/fixtures';
+import {
+  Product,
+  Category,
+  SubCategory,
+  ShippingMethod,
+} from '@e-shop/database/models';
 import categoriesFixture from './assets/fixtures/category';
 import subCategoriesFixture from './assets/fixtures/subCategory';
 import productsFixture from './assets/fixtures/product';
-import { Product, Category, SubCategory } from '@e-shop/database/models';
 
 /**
  * @todo Refactor this function
@@ -16,6 +22,18 @@ export async function seedData() {
     });
 
     /**
+     * Shipping Methods
+     */
+    const shippingMethodsWithoutId = shippingMethods.map((shippingMethod) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { _id, ...shippingMethodWithoutId } = shippingMethod;
+
+      return shippingMethodWithoutId;
+    });
+
+    await ShippingMethod.insertMany(shippingMethodsWithoutId);
+
+    /**
      * Main Categories
      */
     const resultCategories = await Category.insertMany(categoriesWithoutId);
@@ -26,7 +44,7 @@ export async function seedData() {
      */
     const subCategoriesWithParent = subCategoriesFixture.map((subCategory) => {
       const parentCategoryIndex = categoriesFixture.findIndex(
-        (category) => subCategory.category === category._id
+        (category) => subCategory.category === category._id,
       );
 
       const parentCategoryObjectId = resultCategories[parentCategoryIndex]._id;
@@ -39,7 +57,7 @@ export async function seedData() {
     });
 
     const subCategoriesDatabase = await SubCategory.insertMany(
-      subCategoriesWithParent
+      subCategoriesWithParent,
     );
     console.info('SubCategories seeded!');
 
@@ -48,12 +66,13 @@ export async function seedData() {
      */
     const productWithCategory = productsFixture.map((productFixture) => {
       const parentCategoryIndex = subCategoriesFixture.findIndex(
-        (subCategory) => productFixture.subCategory === subCategory._id
+        (subCategory) => productFixture.subCategory === subCategory._id,
       );
 
       const subCategoryObjectId =
         subCategoriesDatabase[parentCategoryIndex]._id;
 
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { _id, subCategory, ...product } = productFixture;
 
       return {
