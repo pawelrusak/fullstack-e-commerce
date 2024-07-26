@@ -6,6 +6,12 @@ import type { Controller } from '@e-shop/types';
 import type { FindAllResponseBody } from '@e-shop/types/response';
 
 export default {
+  /**
+   * his action returns all shipping methods
+   *
+   * @route GET /api/v1/shippings
+   * @access Public
+   */
   async findAll(request, response: Response<FindAllResponseBody>) {
     const shippingMethods = await ShippingMethod.find();
 
