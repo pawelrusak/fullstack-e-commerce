@@ -66,6 +66,8 @@ In addition, the project uses technologies like (or will be):
 - [Styled Components](https://styled-components.com/)
 - [Storybook](https://storybook.js.org/)
 - [Base UI](https://mui.com/base-ui/) or [React Aria](https://react-spectrum.adobe.com/react-aria/) _(planned for future use)_
+- [Radix UI](https://www.radix-ui.com/)
+- [Downshift](https://www.downshift-js.com/) _(planned for future use)_
 - [Stripe](https://stripe.com/) or [Paypal](https://www.paypal.com/) _(planned for future use)_
 - [Jest](https://jestjs.io/)
 - [MobX](https://mobx.js.org/)
