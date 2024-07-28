@@ -96,6 +96,20 @@ export const orderSchema = new mongoose.Schema<OrderSchema, OrderModel>(
       max: Object.keys(ORDER_STATUS_CODE).length - 1,
     },
     shippingAddress: addressSchema,
+    shippingMethod: {
+      method: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'ShippingMethod',
+        // TODO change to required: true
+        required: false,
+      },
+      costAtTimeOfOrder: {
+        type: Number,
+        // TODO change to required: true
+        required: false,
+        min: 0,
+      },
+    },
     totalPrice: {
       type: Number,
       required: true,
