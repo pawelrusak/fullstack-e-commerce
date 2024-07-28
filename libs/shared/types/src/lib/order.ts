@@ -1,9 +1,10 @@
-import { Types } from 'mongoose';
-import { Id, Timestamp } from './shared';
-import { Prettify, Modify } from './utils';
-import { User, UserSchema } from './user';
-import { Product } from './product';
-import { Address, AddressSchema } from './address';
+import type { Types } from 'mongoose';
+import type { Id, Timestamp } from './shared';
+import type { Prettify, Modify } from './utils';
+import type { User, UserSchema } from './user';
+import type { Product } from './product';
+import type { Address, AddressSchema } from './address';
+import type { ShippingMethod } from './shipping-method';
 
 export type OrderProduct = {
   product: Product;
@@ -57,6 +58,13 @@ export type OrderCustomerNote = {
   customerNote?: string;
 };
 
+export type OrderShippingMethodCost = ShippingMethod['cost'];
+
+export type OrderShippingMethod = {
+  method?: ShippingMethod;
+  costAtTimeOfOrder?: OrderShippingMethodCost;
+};
+
 export type Order = Id & {
   /**
    * This will be set when the order is created by the registered user.
@@ -69,7 +77,7 @@ export type Order = Id & {
   productsKindCount: number;
   statusCode: OrderStatusCode;
   shippingAddress: Address;
-  // TODO: Add shipping method
+  shippingMethod?: OrderShippingMethod;
   totalPrice: number;
   /**
    * This will be set after a successful payment and status change to "On Hold".
@@ -97,6 +105,15 @@ export type OrderProductSchema = Prettify<
   >
 >;
 
+export type OrderShippingMethodSchema = Prettify<
+  Modify<
+    OrderShippingMethod,
+    {
+      method?: Types.ObjectId;
+    }
+  >
+>;
+
 export type OrderSchema = Prettify<
   Modify<
     Order,
@@ -105,6 +122,7 @@ export type OrderSchema = Prettify<
       customer?: Types.Subdocument<UserSchema>;
       products: OrderProductSchema[];
       shippingAddress: AddressSchema;
+      shippingMethod?: OrderShippingMethodSchema;
       paymentAt?: Date;
       cancelledAt?: Date;
       refundedAt?: Date;
