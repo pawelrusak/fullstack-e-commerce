@@ -12,9 +12,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/last-commit/pawelrusak/fullstack-e-commerce?style=flat-square" alt="GitHub last commit" />
-  <img src="https://img.shields.io/github/commit-activity/w/pawelrusak/fullstack-e-commerce?style=flat-square" alt="GitHub commit activity" />
-  <img src="https://img.shields.io/github/license/pawelrusak/fullstack-e-commerce?style=flat-square" alt="GitHub License" />
+  <img src="https://img.shields.io/github/last-commit/pawelrusak/fullstack-e-commerce?style=flat-square" alt="GitHub last commit" />&nbsp;
+  <img src="https://img.shields.io/github/commit-activity/w/pawelrusak/fullstack-e-commerce?style=flat-square" alt="GitHub commit activity" />&nbsp;
+  <img src="https://img.shields.io/github/license/pawelrusak/fullstack-e-commerce?style=flat-square" alt="GitHub License" />&nbsp;
   <br />
 </p>
 
@@ -50,7 +50,7 @@ This project is a full-stack e-commerce platform designed to sell electronic goo
 > [!NOTE]
 > Next.js includes its own server implementation that allows interaction with databases and more. However, I have chosen to use Express alongside Next.js because, in my opinion, Express is more scalable and powerful.
 
-This project is developed using the <abbr title="MongoDB, Express.js, Next.js, and Node.js JavaScript software stack">MENN</abbr> stack. A common variant, the <abbr title="MongoDB, Express.js, React.js, and Node.js JavaScript software stack">MERN</abbr> stack, replaces Next.js with vanilla React to enhance SEO optimization and accelerate project development. Key technologies employed in this project include:
+This project is developed using the <abbr title="MongoDB, Express.js, Next.js, and Node.js JavaScript software stack">MENN</abbr> stack. A common variant, the <abbr title="MongoDB, Express.js, React.js, and Node.js JavaScript software stack">MERN</abbr> stack, replaces React with Next.jsto enhance SEO optimization and accelerate project development. Key technologies employed in this project include:
 
 - [Next.js](https://nextjs.org/) (a [React.js](https://reactjs.org/) framework)
 - [TypeScript](https://www.typescriptlang.org/),
