@@ -1,4 +1,9 @@
-import type { OrderProduct, Modify } from '@e-shop/types';
+import type {
+  OrderProduct,
+  Modify,
+  Prettify,
+  OrderShippingMethod,
+} from '@e-shop/types';
 import { getOrderProductsIds } from '@e-shop/utils';
 
 type NormalizedOrderProduct = Modify<
@@ -19,6 +24,42 @@ export function normalizeOrderProduct(orderProducts: OrderProduct[]) {
   );
 
   return normalizedOrderProduct;
+}
+
+// TODO remove required when remove optional property
+type BaseShippingMethod = Pick<Required<OrderShippingMethod>['method'], '_id'>;
+
+export type BaseOrderShippingMethod = Prettify<
+  Modify<
+    OrderShippingMethod,
+    {
+      method?: BaseShippingMethod;
+    }
+  >
+>;
+
+type NormalizedOrderShippingMethod = Prettify<
+  Modify<
+    OrderShippingMethod,
+    {
+      method?: string;
+    }
+  >
+>;
+
+export function normalizeOrderShippingMethod(
+  orderShippingMethod?: BaseOrderShippingMethod,
+) {
+  if (orderShippingMethod === undefined) {
+    return undefined;
+  }
+
+  const normalizedOrderShippingMethod: NormalizedOrderShippingMethod = {
+    method: orderShippingMethod?.method?._id,
+    costAtTimeOfOrder: orderShippingMethod.costAtTimeOfOrder,
+  };
+
+  return normalizedOrderShippingMethod;
 }
 
 export function getOrderProductTotalPrice(orderProducts: OrderProduct[]) {

@@ -11,6 +11,7 @@ import {
   getOrderProductsKindCount,
   getOrderProductTotalPrice,
   getCountOfAllOrderProducts,
+  normalizeOrderShippingMethod,
 } from './order.utils';
 
 type RegisterOrderDocs = Prettify<
@@ -21,6 +22,7 @@ type RegisterOrderDocs = Prettify<
     | 'products'
     | 'shippingAddress'
     | 'paymentMethod'
+    | 'shippingMethod'
     | 'customerNote'
   >
 >;
@@ -60,6 +62,7 @@ export async function register(
   const orderProducts = normalizeOrderProduct(docs.products);
   const orderProductTotalPrice = getOrderProductTotalPrice(docs.products);
   const orderProductsCount = getCountOfAllOrderProducts(docs.products);
+  const orderShippingMethod = normalizeOrderShippingMethod(docs.shippingMethod);
 
   const PENDING_ORDER_STATUS: OrderStatus = 'pending';
 
@@ -73,8 +76,12 @@ export async function register(
     status: PENDING_ORDER_STATUS,
     statusCode: ORDER_STATUS_CODE[PENDING_ORDER_STATUS],
     productsKindCount: uniqueProductIds,
-    totalPrice: orderProductTotalPrice,
+    totalPrice:
+      orderProductTotalPrice + (orderShippingMethod?.costAtTimeOfOrder || 0),
     productsCount: orderProductsCount,
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    shippingMethod: orderShippingMethod,
     // TODO use setter for this
     customerNote:
       docs.customerNote?.trim() === '' ? undefined : docs.customerNote,
