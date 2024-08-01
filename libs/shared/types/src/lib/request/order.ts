@@ -1,5 +1,5 @@
-import { Order } from '../order';
-import { Prettify } from '../utils';
+import type { Order } from '../order';
+import type { Prettify } from '../utils';
 
 export type OrderPostRequestBody = Prettify<
   Pick<
@@ -9,6 +9,7 @@ export type OrderPostRequestBody = Prettify<
     | 'products'
     | 'shippingAddress'
     | 'paymentMethod'
+    | 'shippingMethod'
     | 'customerNote'
   >
 >;
