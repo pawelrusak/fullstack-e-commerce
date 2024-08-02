@@ -27,6 +27,7 @@ export default {
           contact: orderBody.contact,
           products: orderBody.products,
           shippingAddress: orderBody.shippingAddress,
+          shippingMethod: orderBody.shippingMethod,
           paymentMethod: orderBody.paymentMethod,
           customerNote: orderBody.customerNote,
         },
