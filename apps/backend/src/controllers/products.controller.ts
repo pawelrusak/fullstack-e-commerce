@@ -9,14 +9,16 @@ export default {
    * @route GET /api/v1/products
    * @example
    * ```javascript
-   * GET /api/v1/products/by-categories?subCategory.category.slug=audio-headphones
+   * GET /api/v1/products?subCategory.category.slug=audio-headphones
    *
-   * GET /api/v1/products/by-categories?subCategory.name=camera&limit=5
+   * GET /api/v1/products?subCategory.name=camera&sort=size.width:asc
+   *
+   * GET /api/v1/products?subCategory.name=camera&limit=5
    * ```
    * @access Public
    */
   async findAll(_, response) {
-    // @todo use repository pattern?
+    // TODO use repository pattern?
     const products = await Product.findAllWithCategories(response.locals.query)
       .sort(response.locals.sort)
       .limit(response.locals.limit);
