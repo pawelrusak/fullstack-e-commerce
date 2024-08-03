@@ -100,13 +100,11 @@ export const orderSchema = new mongoose.Schema<OrderSchema, OrderModel>(
       method: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'ShippingMethod',
-        // TODO change to required: true
-        required: false,
+        required: true,
       },
       costAtTimeOfOrder: {
         type: Number,
-        // TODO change to required: true
-        required: false,
+        required: true,
         min: 0,
       },
     },
