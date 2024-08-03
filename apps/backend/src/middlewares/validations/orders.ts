@@ -5,7 +5,7 @@ import {
   getCurrencyFormat,
 } from '@e-shop/utils';
 import { isValidObjectIds, getInvalidObjectIds } from '@e-shop/database/utils';
-import { Product } from '@e-shop/database/models';
+import { Product, ShippingMethod } from '@e-shop/database/models';
 
 import type { Order, OrderProduct } from '@e-shop/types';
 import type { Request, Response, NextFunction } from 'express';
@@ -76,6 +76,46 @@ async function assertProductsIsNotEnoughAndPriceNotMatches(
   });
 }
 
+async function assertOrderHasValidShippingMethod(orderBody: Partial<Order>) {
+  if (!orderBody.shippingMethod) {
+    throw new RegisterOrderError('The order must have a shippingMethod field.');
+  }
+
+  if (!orderBody.shippingMethod.method) {
+    throw new RegisterOrderError(
+      'The shipping method must have a method field. Please fix the value of the shippingMethod.method field.',
+    );
+  }
+
+  if (orderBody.shippingMethod.method._id === undefined) {
+    throw new RegisterOrderError(
+      'The shipping method ID is missing. Please provide a valid shipping method ID.',
+    );
+  }
+
+  if (!isValidObjectIds(orderBody.shippingMethod.method._id)) {
+    throw new InvalidObjectIdsError(
+      'The shipping method ID is invalid. Please provide a valid shipping method ID.',
+    );
+  }
+
+  const shippingMethod = await ShippingMethod.findById(
+    orderBody.shippingMethod.method._id,
+  );
+
+  if (shippingMethod._id.toString() !== orderBody.shippingMethod.method._id) {
+    throw new RegisterOrderError(
+      'The shipping method ID provided is not exist in database. Please provide a exist shipping method ID.',
+    );
+  }
+
+  if (shippingMethod.cost !== orderBody.shippingMethod.costAtTimeOfOrder) {
+    throw new RegisterOrderError(
+      'The shipping method cost does not match the cost in the database. Please fix the value of the shippingMethod.costAtTimeOfOrder field.',
+    );
+  }
+}
+
 type ParamsDictionary = Record<string, string>;
 
 export async function validateOrderProductsPriceAndStock(
@@ -96,7 +136,9 @@ export async function validateOrderProductsPriceAndStock(
     const invalidProductsIds = getInvalidObjectIds(...orderProductsId);
 
     throw new InvalidObjectIdsError(
-      `The following products IDs are invalid: ${invalidProductsIds.join(', ')}`,
+      `The following products IDs are invalid: ${invalidProductsIds.join(
+        ', ',
+      )}`,
     );
   }
 
@@ -105,6 +147,9 @@ export async function validateOrderProductsPriceAndStock(
 
   // Validate that the price matches the database and ensure the purchased quantity does not exceed available stock
   await assertProductsIsNotEnoughAndPriceNotMatches(orderBody.products);
+
+  // validate shipping method
+  await assertOrderHasValidShippingMethod(orderBody);
 
   next();
 }
