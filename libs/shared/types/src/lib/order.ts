@@ -61,8 +61,8 @@ export type OrderCustomerNote = {
 export type OrderShippingMethodCost = ShippingMethod['cost'];
 
 export type OrderShippingMethod = {
-  method?: ShippingMethod;
-  costAtTimeOfOrder?: OrderShippingMethodCost;
+  method: ShippingMethod;
+  costAtTimeOfOrder: OrderShippingMethodCost;
 };
 
 export type Order = Id & {
@@ -77,7 +77,8 @@ export type Order = Id & {
   productsKindCount: number;
   statusCode: OrderStatusCode;
   shippingAddress: Address;
-  shippingMethod?: OrderShippingMethod;
+  shippingMethod: OrderShippingMethod;
+  // TODO: Add productsTotalPrice
   totalPrice: number;
   /**
    * This will be set after a successful payment and status change to "On Hold".
