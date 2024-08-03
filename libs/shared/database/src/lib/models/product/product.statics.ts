@@ -47,9 +47,11 @@ export function findAllWithCategories(
         subCategory: {
           _id: '$_subCategory._id',
           name: '$_subCategory.name',
+          slug: '$_subCategory.slug',
           category: {
             _id: '$_subCategory._category._id',
             name: '$_subCategory._category.name',
+            slug: '$_subCategory._category.slug',
           },
         },
       },
