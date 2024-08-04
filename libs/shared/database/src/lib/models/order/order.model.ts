@@ -32,8 +32,6 @@ export const orderSchema = new mongoose.Schema<OrderSchema, OrderModel>(
       firstName: {
         type: String,
         required: true,
-        // TODO remove unique
-        unique: true,
         trim: true,
         minLength: 2,
         /**
