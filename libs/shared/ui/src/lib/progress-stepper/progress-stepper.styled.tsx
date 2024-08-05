@@ -65,7 +65,7 @@ export const ListItem = styled.li<StyledListItemProps>`
 
 export const OrderedList = styled.ol`
   display: flex;
-  gap: 1.6rem;
+  gap: 2.4rem;
 
   counter-reset: progress-stepper-counter;
 
