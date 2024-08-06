@@ -29,8 +29,8 @@ const ButtonsWrapper = styled.div`
 
 const CardButton = styled(Button)`
   padding: 0;
-  height: 5.6rem;
-  width: 5.6rem;
+  height: 6.2rem;
+  width: 6.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
