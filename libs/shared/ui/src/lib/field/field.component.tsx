@@ -99,7 +99,7 @@ function FieldError({ children, ...props }: FieldErrorProps) {
 
 Field.ControlInput = FieldControlInput;
 Field.ControlIcon = Styled.ControlIcon;
-Field.Label = Styled.Label;
+Field.Label = FieldLabel;
 Field.Help = Styled.Help;
 Field.Control = Styled.Control;
 Field.Input = FieldInput;
