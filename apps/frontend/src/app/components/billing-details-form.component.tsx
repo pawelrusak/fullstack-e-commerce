@@ -53,6 +53,7 @@ const CheckoutPanelTitle = styled(Panel.Title)`
   margin-bottom: 2.8rem;
 `;
 
+// TODO extract to separate component
 const SummaryBox = styled.div`
   margin-top: auto;
   background-color: ${({ theme }) => theme.color.background};
@@ -235,6 +236,8 @@ function BillingDetailsForm() {
             </Field.Label>
             <Field.Input
               rows="4"
+              // eslint-disable-next-line
+              // @ts-ignore
               as="textarea"
               placeholder={
                 EN.CHECKOUT.INFORMATION.FORM.FIELD.ORDER_NOTES.PLACEHOLDER
