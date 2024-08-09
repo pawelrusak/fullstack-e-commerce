@@ -6,7 +6,7 @@ export type FieldContextParams = {
 };
 
 export const FieldContext = React.createContext<FieldContextParams | undefined>(
-  undefined
+  undefined,
 );
 
 export type FieldProviderProps = {
@@ -18,8 +18,10 @@ export function FieldProvider({
   controlId,
   valid,
 }: FieldProviderProps) {
+  const defaultId = React.useId();
+
   return (
-    <FieldContext.Provider value={{ controlId, valid }}>
+    <FieldContext.Provider value={{ controlId: controlId || defaultId, valid }}>
       {children}
     </FieldContext.Provider>
   );

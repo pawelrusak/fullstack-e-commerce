@@ -113,5 +113,26 @@ describe('Field', () => {
     expect(updatedInputElement).toHaveAttribute('id', id);
   });
 
+  it('should associate the label with the correct input element', () => {
+    const label = faker.word.noun();
+    const placeholder = faker.word.noun();
+    const inputTestId = 'input-element';
+
+    render(
+      <Field>
+        <Field.Label>{label}</Field.Label>
+        <Field.Input data-testid={inputTestId} placeholder={placeholder} />
+      </Field>,
+    );
+
+    const labelElement = screen.getByText(label, { selector: 'label' });
+    const inputElement = screen.getByRole('textbox');
+
+    expect(labelElement).toHaveAttribute('for');
+    expect(inputElement).toHaveAttribute('id');
+
+    expect(labelElement.getAttribute('for')).toBe(inputElement.id);
+  });
+
   it.todo('should display an error message when the valid prop is false');
 });

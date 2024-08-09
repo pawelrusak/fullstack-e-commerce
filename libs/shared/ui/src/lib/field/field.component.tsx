@@ -26,6 +26,7 @@ export type FieldLabelProps = React.ComponentPropsWithRef<'label'> &
 
 export function FieldLabel(props: FieldLabelProps) {
   const { controlId } = useField();
+
   return <Styled.Label htmlFor={controlId} {...props} />;
 }
 
