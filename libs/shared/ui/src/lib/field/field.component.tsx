@@ -38,12 +38,15 @@ const FieldInput = React.forwardRef<HTMLInputElement, FieldInputProps<'input'>>(
     ref: React.Ref<HTMLInputElement>,
   ) {
     const { controlId } = useField();
+    const type: React.HTMLInputTypeAttribute | undefined =
+      as === 'input' ? 'text' : undefined;
 
     return (
       <Styled.Input
         ref={ref}
         as={as}
         id={controlId}
+        type={type}
         aria-describedby={controlId ? `${controlId}-field-error` : undefined}
         {...props}
       />

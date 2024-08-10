@@ -5,6 +5,7 @@ import Field from './field.component';
 
 const queryIconLeft = () => screen.queryByTestId('input-icon-left');
 const queryIconRight = () => screen.queryByTestId('input-icon-right');
+const getByTextboxRole = () => screen.getByRole('textbox');
 
 describe('Field', () => {
   it('should render successfully', () => {
@@ -132,6 +133,73 @@ describe('Field', () => {
     expect(inputElement).toHaveAttribute('id');
 
     expect(labelElement.getAttribute('for')).toBe(inputElement.id);
+  });
+
+  it('should set default value of type attribute in Field.Input as "text"', () => {
+    const inputTestId = 'input-element';
+
+    const { rerender } = render(
+      <Field>
+        <Field.Input data-testid={inputTestId} />
+      </Field>,
+    );
+
+    const inputElement = screen.getByTestId(inputTestId);
+
+    expect(inputElement).toHaveAttribute('type', 'text');
+
+    const overrideType: React.HTMLInputTypeAttribute = 'email';
+
+    rerender(
+      <Field>
+        <Field.Input as="input" data-testid={inputTestId} />
+      </Field>,
+    );
+
+    expect(getByTextboxRole()).toHaveAttribute('type', 'text');
+
+    rerender(
+      <Field>
+        <Field.Input type={overrideType} data-testid={inputTestId} />
+      </Field>,
+    );
+
+    const updatedInputElement = screen.getByTestId(inputTestId);
+
+    expect(updatedInputElement).toHaveAttribute('type', overrideType);
+  });
+
+  it('should omit type attribute if Field.Input renders as a non-input element', () => {
+    render(
+      <Field>
+        {/* TODO remove these comments later*/}
+        {/* eslint-disable-next-line */}
+        {/* @ts-ignore */}
+        <Field.Input as="textarea" />
+      </Field>,
+    );
+
+    const inputElement = screen.getByRole('textbox');
+
+    expect(inputElement).not.toHaveAttribute('type');
+  });
+
+  it('should remove type attribute from Field.Input if value is "undefined"', () => {
+    const { rerender } = render(
+      <Field>
+        <Field.Input type={undefined} />
+      </Field>,
+    );
+
+    expect(getByTextboxRole()).not.toHaveAttribute('type');
+
+    rerender(
+      <Field>
+        <Field.Input as="input" type={undefined} />
+      </Field>,
+    );
+
+    expect(getByTextboxRole()).not.toHaveAttribute('type');
   });
 
   it.todo('should display an error message when the valid prop is false');
