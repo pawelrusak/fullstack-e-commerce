@@ -8,7 +8,7 @@ const borderColor = '#cbcbcb';
 export const FieldsetWrapper = styled.fieldset`
   display: flex;
   flex-wrap: wrap;
-  gap: 2.4rem;
+  gap: 2.2rem;
 `;
 
 export const Input = styled.input`
