@@ -25,14 +25,14 @@ type Story<TField = typeof Field> = StoryObj<TField>;
 
 export const Simple: Story<FieldControlInputProps> = {
   args: {
-    type: 'text',
     value: 'ameliawatson',
     placeholder: 'ameliawatson',
   },
   render: (args: FieldControlInputProps) => (
     <Field>
       <Field.Label>Username</Field.Label>
-      <Field.ControlInput type="text" {...args} />
+      {/* NOTE: Field.ControlInput and Field.Input have [type="text"] attribute as default  */}
+      <Field.ControlInput {...args} />
     </Field>
   ),
 };
@@ -47,7 +47,6 @@ export const Complete: Story<FieldControlInputProps> = {
       <Field.ControlInput
         iconLeft={<CheckIcon />}
         iconRight={<EyeSlashIcon />}
-        type="text"
         placeholder="ameliawatson"
         {...args}
       />
@@ -99,7 +98,7 @@ export const InValid: Story<FieldProps> = {
   render: (args: FieldProps) => (
     <Field {...args}>
       <Field.Label>Username</Field.Label>
-      <Field.ControlInput type="text" value="Wrong value" />
+      <Field.ControlInput value="Wrong value" />
       <Field.Error>Some error message</Field.Error>
     </Field>
   ),
