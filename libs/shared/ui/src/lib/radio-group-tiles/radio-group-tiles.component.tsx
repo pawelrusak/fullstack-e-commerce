@@ -8,7 +8,7 @@ export function RadioGroupTiles(props: ShippingMethodListProps) {
 }
 
 RadioGroupTiles.Tile = Styled.Tile;
-RadioGroupTiles.TileInput = Styled.Input;
+RadioGroupTiles.TileRadioInput = Styled.Input;
 RadioGroupTiles.TileLabel = Styled.Label;
 RadioGroupTiles.TileImage = Styled.Image;
 RadioGroupTiles.TileAdditionalText = Styled.AdditionalText;
