@@ -32,4 +32,30 @@ describe('RadioGroupTiles', () => {
 
     expect(inputElement).toHaveAttribute('type', 'radio');
   });
+
+  it('each tile radio buttons should have a unique id', () => {
+    const inputTestId = 'radio-input';
+
+    const { debug } = render(
+      <RadioGroupTiles>
+        <RadioGroupTiles.Tile>
+          <RadioGroupTiles.TileRadioInput data-testid={inputTestId} />
+        </RadioGroupTiles.Tile>
+        <RadioGroupTiles.Tile>
+          <RadioGroupTiles.TileRadioInput data-testid={inputTestId} />
+        </RadioGroupTiles.Tile>
+      </RadioGroupTiles>,
+    );
+
+    debug();
+
+    const tileElements = screen.getAllByTestId(inputTestId);
+
+    const [firstRadioInput, secondRadioInput] = tileElements;
+
+    expect(firstRadioInput).toHaveAttribute('id');
+    expect(secondRadioInput).toHaveAttribute('id');
+
+    expect(firstRadioInput).not.toBe(secondRadioInput);
+  });
 });
