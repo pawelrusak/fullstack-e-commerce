@@ -21,17 +21,15 @@ export function Tile(props: TileProps) {
   );
 }
 
-export type RadioGroupTilesTileRadioInputProps =
-  React.ComponentPropsWithoutRef<'input'>;
+export type TileRadioInputProps = React.ComponentPropsWithoutRef<'input'>;
 
-const TileRadioInput = React.forwardRef<
-  HTMLInputElement,
-  RadioGroupTilesTileRadioInputProps
->(function (props, ref) {
-  const { controlId } = useTile();
+const TileRadioInput = React.forwardRef<HTMLInputElement, TileRadioInputProps>(
+  function (props, ref) {
+    const { controlId } = useTile();
 
-  return <Styled.Input type="radio" id={controlId} {...props} ref={ref} />;
-});
+    return <Styled.Input type="radio" id={controlId} {...props} ref={ref} />;
+  },
+);
 
 RadioGroupTiles.Tile = Tile;
 RadioGroupTiles.TileRadioInput = TileRadioInput;
@@ -40,3 +38,5 @@ RadioGroupTiles.TileImage = Styled.Image;
 RadioGroupTiles.TileAdditionalText = Styled.AdditionalText;
 
 export default RadioGroupTiles;
+
+export type RadioGroupTilesTileRadioInputProps = TileRadioInputProps;
