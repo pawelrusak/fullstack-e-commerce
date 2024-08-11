@@ -60,6 +60,14 @@ export type User = Id &
   UserAuthentication &
   Timestamp;
 
+/**
+ * -----------------------------------------------------------------------------------
+ *
+ *                                DATABASE SCHEMA DEFINITION
+ *
+ * ------------------------------------------------------------------------------------
+ */
+
 export type UserBanStatusTimestampSchema = {
   /**
    * Date the user was banned. Mongoose-compatible
@@ -70,7 +78,7 @@ export type UserBanStatusTimestampSchema = {
 export type UserBanStatusSchema = UserBanStatusTimestampSchema &
   UserBanStatusFlag;
 
-// Rename to UserEntitySchema
+// TODO: Rename to UserEntitySchema
 export type UserSchema = IdSchema &
   UserAccountName &
   UserName &
