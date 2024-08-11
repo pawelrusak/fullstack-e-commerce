@@ -58,4 +58,30 @@ describe('RadioGroupTiles', () => {
 
     expect(firstRadioInput).not.toBe(secondRadioInput);
   });
+
+  it('should render given id passing by controlId prop', () => {
+    const firstTestId = 'first-radio-input';
+    const firstControlId = 'first-control-id';
+
+    const secondTestId = 'second-radio-input';
+    const secondControlId = 'second-control-id';
+
+    render(
+      <RadioGroupTiles>
+        <RadioGroupTiles.Tile controlId={firstControlId}>
+          <RadioGroupTiles.TileRadioInput data-testid={firstTestId} />
+        </RadioGroupTiles.Tile>
+
+        <RadioGroupTiles.Tile controlId={secondControlId}>
+          <RadioGroupTiles.TileRadioInput data-testid={secondTestId} />
+        </RadioGroupTiles.Tile>
+      </RadioGroupTiles>,
+    );
+
+    const firstRadioElement = screen.getByTestId(firstTestId);
+    expect(firstRadioElement).toHaveAttribute('id', firstControlId);
+
+    const secondRadioElement = screen.getByTestId(secondTestId);
+    expect(secondRadioElement).toHaveAttribute('id', secondControlId);
+  });
 });

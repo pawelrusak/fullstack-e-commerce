@@ -2,17 +2,20 @@ import React from 'react';
 import * as Styled from './radio-group-tiles.styled';
 import { TileProvider, useTile } from './radio-group-tiles.context';
 
+import type { TileContextParams } from './radio-group-tiles.context';
+
 export type RadioGroupTilesProps = React.ComponentPropsWithoutRef<'fieldset'>;
 
 export function RadioGroupTiles(props: RadioGroupTilesProps) {
   return <Styled.FieldsetWrapper {...props} />;
 }
 
-export type TileProps = React.ComponentPropsWithoutRef<'div'>;
+export type TileProps = React.ComponentPropsWithoutRef<'div'> &
+  TileContextParams;
 
 export function Tile(props: TileProps) {
   return (
-    <TileProvider>
+    <TileProvider controlId={props.controlId}>
       <Styled.Tile {...props} />
     </TileProvider>
   );
