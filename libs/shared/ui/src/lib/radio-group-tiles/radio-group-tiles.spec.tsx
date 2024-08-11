@@ -36,7 +36,7 @@ describe('RadioGroupTiles', () => {
   it('each tile radio buttons should have a unique id', () => {
     const inputTestId = 'radio-input';
 
-    const { debug } = render(
+    render(
       <RadioGroupTiles>
         <RadioGroupTiles.Tile>
           <RadioGroupTiles.TileRadioInput data-testid={inputTestId} />
@@ -46,8 +46,6 @@ describe('RadioGroupTiles', () => {
         </RadioGroupTiles.Tile>
       </RadioGroupTiles>,
     );
-
-    debug();
 
     const tileElements = screen.getAllByTestId(inputTestId);
 
