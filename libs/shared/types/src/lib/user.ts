@@ -1,29 +1,83 @@
-import type { Types } from 'mongoose';
-import type { Id, Timestamp } from './shared';
-import type { Prettify, Modify } from './utils';
-import { Address } from './address';
+import type { Id, Timestamp, IdSchema, TimestampSchema } from './shared';
+import type { Address } from './address';
 
-export type User = Id & {
+export type UserAccountName = {
   username: string;
+};
+
+export type UserName = {
   firstName?: string;
   lastName?: string;
-  email: string;
-  phone?: string;
-  password: string;
-  isAdmin: boolean;
-  avatarUrl?: string;
-  address: Address;
-  bannedAt?: string;
-  isBanned?: boolean;
-} & Timestamp;
+};
 
-export type UserSchema = Prettify<
-  Modify<
-    User,
-    {
-      _id: Types.ObjectId;
-      isAdmin: User['isAdmin'];
-      bannedAt?: Date;
-    }
-  >
->;
+export type UserContactEmail = {
+  email: string;
+};
+
+export type UserContactPhone = {
+  phone?: string;
+};
+
+export type UserContactInfo = UserContactEmail & UserContactPhone;
+
+export type UserAvatar = {
+  avatarUrl?: string;
+};
+
+export type UserAddress = {
+  address: Address;
+};
+
+export type UserBanStatusTimestamp = {
+  /**
+   * Date the user was banned. JSON-compatible
+   */
+  bannedAt?: string;
+};
+
+export type UserBanStatusFlag = {
+  isBanned?: boolean;
+};
+
+export type UserBanStatus = UserBanStatusTimestamp & UserBanStatusFlag;
+
+export type UserRole = {
+  isAdmin: boolean;
+};
+
+export type UserAuthentication = UserContactEmail & {
+  password: string;
+};
+
+export type User = Id &
+  UserAccountName &
+  UserName &
+  UserAvatar &
+  UserAddress &
+  UserBanStatus &
+  UserContactInfo &
+  UserRole &
+  UserAuthentication &
+  Timestamp;
+
+export type UserBanStatusTimestampSchema = {
+  /**
+   * Date the user was banned. Mongoose-compatible
+   */
+  bannedAt?: Date;
+};
+
+export type UserBanStatusSchema = UserBanStatusTimestampSchema &
+  UserBanStatusFlag;
+
+// Rename to UserEntitySchema
+export type UserSchema = IdSchema &
+  UserAccountName &
+  UserName &
+  UserAvatar &
+  UserAddress &
+  UserBanStatusSchema &
+  UserContactInfo &
+  UserRole &
+  UserAuthentication &
+  TimestampSchema;
