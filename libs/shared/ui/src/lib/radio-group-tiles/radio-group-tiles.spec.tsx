@@ -1,4 +1,5 @@
 import { render, screen } from '@e-shop/test-utils';
+import { faker } from '@faker-js/faker';
 import RadioGroupTiles from './radio-group-tiles.component';
 
 describe('RadioGroupTiles', () => {
@@ -123,5 +124,36 @@ describe('RadioGroupTiles', () => {
     expect(additionalTextElement.getAttribute('aria-details')).toBe(
       inputElement.id,
     );
+  });
+
+  it('should render [name] attribute on TileRadioInput when pass "radioGroupName" props', () => {
+    const radioGroupName = faker.word.noun();
+
+    render(
+      <RadioGroupTiles radioGroupName={radioGroupName}>
+        <RadioGroupTiles.Tile>
+          <RadioGroupTiles.TileRadioInput />
+        </RadioGroupTiles.Tile>
+
+        <RadioGroupTiles.Tile>
+          <RadioGroupTiles.TileRadioInput />
+        </RadioGroupTiles.Tile>
+
+        <RadioGroupTiles.Tile>
+          <RadioGroupTiles.TileRadioInput />
+        </RadioGroupTiles.Tile>
+      </RadioGroupTiles>,
+    );
+
+    const radioElements = screen.getAllByRole('radio');
+
+    expect(radioElements).toHaveLength(3);
+
+    const [firstRadioElement, secondRadioElement, thirdRadioElement] =
+      radioElements;
+
+    expect(firstRadioElement).toHaveAttribute('name', radioGroupName);
+    expect(secondRadioElement).toHaveAttribute('name', radioGroupName);
+    expect(thirdRadioElement).toHaveAttribute('name', radioGroupName);
   });
 });

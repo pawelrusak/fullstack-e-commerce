@@ -1,5 +1,59 @@
 import React from 'react';
 
+/**
+ * -----------------------------------------------------------------------------------
+ *
+ *                              RADIO GROUP TILES CONTEXT
+ *
+ * ------------------------------------------------------------------------------------
+ */
+
+export type RadioGroupTilesContextParams = {
+  /**
+   * The name attribute assigned to all radio inputs within the group.
+   */
+  radioGroupName?: string;
+};
+
+export const RadioGroupTilesContext = React.createContext<
+  RadioGroupTilesContextParams | undefined
+>(undefined);
+
+export type RadioGroupTilesProviderProps = {
+  children: React.ReactNode;
+} & RadioGroupTilesContextParams;
+
+export function RadioGroupTilesProvider({
+  children,
+  radioGroupName,
+}: RadioGroupTilesProviderProps) {
+  return (
+    <RadioGroupTilesContext.Provider value={{ radioGroupName }}>
+      {children}
+    </RadioGroupTilesContext.Provider>
+  );
+}
+
+export function useRadioGroupTiles() {
+  const context = React.useContext(RadioGroupTilesContext);
+
+  if (context === undefined) {
+    throw new Error(
+      'useRadioGroupTiles must be used within a RadioGroupTilesProvider',
+    );
+  }
+
+  return context;
+}
+
+/**
+ * -----------------------------------------------------------------------------------
+ *
+ *                          TILE OF RADIO GROUP TILES CONTEXT
+ *
+ * ------------------------------------------------------------------------------------
+ */
+
 export type TileContextParams = {
   controlId?: string;
 };

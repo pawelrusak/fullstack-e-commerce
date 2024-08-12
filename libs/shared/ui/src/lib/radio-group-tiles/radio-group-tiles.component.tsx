@@ -1,13 +1,26 @@
 import React from 'react';
 import * as Styled from './radio-group-tiles.styled';
-import { TileProvider, useTile } from './radio-group-tiles.context';
+import {
+  TileProvider,
+  useTile,
+  RadioGroupTilesProvider,
+  useRadioGroupTiles,
+} from './radio-group-tiles.context';
 
-import type { TileContextParams } from './radio-group-tiles.context';
+import type {
+  TileContextParams,
+  RadioGroupTilesContextParams,
+} from './radio-group-tiles.context';
 
-export type RadioGroupTilesProps = React.ComponentPropsWithoutRef<'fieldset'>;
+export type RadioGroupTilesProps = React.ComponentPropsWithoutRef<'fieldset'> &
+  RadioGroupTilesContextParams;
 
 export function RadioGroupTiles(props: RadioGroupTilesProps) {
-  return <Styled.FieldsetWrapper {...props} />;
+  return (
+    <RadioGroupTilesProvider radioGroupName={props.radioGroupName}>
+      <Styled.FieldsetWrapper {...props} />
+    </RadioGroupTilesProvider>
+  );
 }
 
 export type TileProps = React.ComponentPropsWithoutRef<'div'> &
@@ -26,8 +39,17 @@ export type TileRadioInputProps = React.ComponentPropsWithoutRef<'input'>;
 const TileRadioInput = React.forwardRef<HTMLInputElement, TileRadioInputProps>(
   function (props, ref) {
     const { controlId } = useTile();
+    const { radioGroupName } = useRadioGroupTiles();
 
-    return <Styled.Input type="radio" id={controlId} {...props} ref={ref} />;
+    return (
+      <Styled.Input
+        type="radio"
+        id={controlId}
+        name={radioGroupName}
+        {...props}
+        ref={ref}
+      />
+    );
   },
 );
 
