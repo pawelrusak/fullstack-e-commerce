@@ -1,5 +1,4 @@
 import { render, screen } from '@e-shop/test-utils';
-
 import RadioGroupTiles from './radio-group-tiles.component';
 
 describe('RadioGroupTiles', () => {
@@ -17,7 +16,7 @@ describe('RadioGroupTiles', () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it('should render input with type radio', () => {
+  it('should render the input element with type="radio"', () => {
     const inputTestId = 'radio-input';
 
     render(
@@ -29,7 +28,6 @@ describe('RadioGroupTiles', () => {
     );
 
     const inputElement = screen.getByTestId(inputTestId);
-
     expect(inputElement).toHaveAttribute('type', 'radio');
   });
 
@@ -48,16 +46,14 @@ describe('RadioGroupTiles', () => {
     );
 
     const tileElements = screen.getAllByTestId(inputTestId);
-
     const [firstRadioInput, secondRadioInput] = tileElements;
 
     expect(firstRadioInput).toHaveAttribute('id');
     expect(secondRadioInput).toHaveAttribute('id');
-
-    expect(firstRadioInput).not.toBe(secondRadioInput);
+    expect(firstRadioInput.id).not.toBe(secondRadioInput.id);
   });
 
-  it('should render given id passing by controlId prop', () => {
+  it('should use controlId prop to set the ID of TileRadioInput', () => {
     const firstTestId = 'first-radio-input';
     const firstControlId = 'first-control-id';
 
@@ -83,7 +79,7 @@ describe('RadioGroupTiles', () => {
     expect(secondRadioElement).toHaveAttribute('id', secondControlId);
   });
 
-  it('should render label attached to radio input', () => {
+  it('should render a label correctly associated with its radio input', () => {
     const labelTestId = 'radio-label';
     const inputTestId = 'radio-input';
 
