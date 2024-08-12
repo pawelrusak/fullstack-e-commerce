@@ -31,12 +31,21 @@ const TileRadioInput = React.forwardRef<HTMLInputElement, TileRadioInputProps>(
   },
 );
 
+type TileLabelProps = React.ComponentPropsWithoutRef<'label'>;
+
+function TileLabel(props: TileLabelProps) {
+  const { controlId } = useTile();
+
+  return <Styled.Label htmlFor={controlId} {...props} />;
+}
+
 RadioGroupTiles.Tile = Tile;
 RadioGroupTiles.TileRadioInput = TileRadioInput;
-RadioGroupTiles.TileLabel = Styled.Label;
+RadioGroupTiles.TileLabel = TileLabel;
 RadioGroupTiles.TileImage = Styled.Image;
 RadioGroupTiles.TileAdditionalText = Styled.AdditionalText;
 
 export default RadioGroupTiles;
 
 export type RadioGroupTilesTileRadioInputProps = TileRadioInputProps;
+export type RadioGroupTilesTileLabelProps = TileLabelProps;
