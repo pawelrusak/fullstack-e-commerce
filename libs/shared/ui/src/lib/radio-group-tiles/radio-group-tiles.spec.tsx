@@ -99,4 +99,29 @@ describe('RadioGroupTiles', () => {
     expect(inputElement).toHaveAttribute('id');
     expect(labelElement.getAttribute('for')).toBe(inputElement.id);
   });
+
+  it('should render additional text correctly associated with its radio input', () => {
+    const additionalTextTestId = 'additional-text';
+    const inputTestId = 'radio-input';
+
+    render(
+      <RadioGroupTiles>
+        <RadioGroupTiles.Tile>
+          <RadioGroupTiles.TileRadioInput data-testid={inputTestId} />
+          <RadioGroupTiles.TileAdditionalText
+            data-testid={additionalTextTestId}
+          />
+        </RadioGroupTiles.Tile>
+      </RadioGroupTiles>,
+    );
+
+    const additionalTextElement = screen.getByTestId(additionalTextTestId);
+    const inputElement = screen.getByTestId(inputTestId);
+
+    expect(additionalTextElement).toHaveAttribute('aria-details');
+    expect(inputElement).toHaveAttribute('id');
+    expect(additionalTextElement.getAttribute('aria-details')).toBe(
+      inputElement.id,
+    );
+  });
 });

@@ -39,13 +39,22 @@ function TileLabel(props: TileLabelProps) {
   return <Styled.Label htmlFor={controlId} {...props} />;
 }
 
+type AdditionalTextProps = React.ComponentPropsWithoutRef<'p'>;
+
+function AdditionalText(props: AdditionalTextProps) {
+  const { controlId } = useTile();
+
+  return <Styled.AdditionalText aria-details={controlId} {...props} />;
+}
+
 RadioGroupTiles.Tile = Tile;
 RadioGroupTiles.TileRadioInput = TileRadioInput;
 RadioGroupTiles.TileLabel = TileLabel;
 RadioGroupTiles.TileImage = Styled.Image;
-RadioGroupTiles.TileAdditionalText = Styled.AdditionalText;
+RadioGroupTiles.TileAdditionalText = AdditionalText;
 
 export default RadioGroupTiles;
 
 export type RadioGroupTilesTileRadioInputProps = TileRadioInputProps;
 export type RadioGroupTilesTileLabelProps = TileLabelProps;
+export type RadioGroupTilesTileAdditionalTextProps = AdditionalTextProps;
