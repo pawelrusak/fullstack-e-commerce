@@ -21,5 +21,6 @@ export * from './lib/layout-wrapper';
 export * from './lib/values-section';
 export * from './lib/simple-cart-list';
 export * from './lib/progress-stepper';
+export * from './lib/radio-group-tiles';
 export * from './lib/products-carousel';
 export * from './lib/quantity-selection';
