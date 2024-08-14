@@ -12,13 +12,38 @@ import type {
   RadioGroupTilesContextParams,
 } from './radio-group-tiles.context';
 
+type RadioGroupTilesValidationProps = {
+  /**
+   * These props are used to set the aria-required and role="radiogroup" attributes on the fieldset element.
+   *
+   * @see {@link https://adrianroselli.com/2022/02/support-for-marking-radio-buttons-required-invalid.html#Results | Support for Marking Radio Buttons Required, Invalid}
+   */
+  required?: boolean;
+  /**
+   * These props are used to set the aria-invalid attribute on the fieldset element. If used then required="true" prop is required.
+   */
+  valid?: boolean;
+};
+
 export type RadioGroupTilesProps = React.ComponentPropsWithoutRef<'fieldset'> &
-  RadioGroupTilesContextParams;
+  RadioGroupTilesContextParams &
+  RadioGroupTilesValidationProps;
 
 export function RadioGroupTiles(props: RadioGroupTilesProps) {
+  const ariaRequired = props.required ? true : undefined;
+  const role = props.required ? 'radiogroup' : undefined;
+
+  const valid = props.valid ? true : false;
+  const invalid = props.valid === undefined ? undefined : !valid;
+
   return (
     <RadioGroupTilesProvider radioGroupName={props.radioGroupName}>
-      <Styled.FieldsetWrapper {...props} />
+      <Styled.FieldsetWrapper
+        aria-required={ariaRequired}
+        aria-invalid={invalid}
+        role={role}
+        {...props}
+      />
     </RadioGroupTilesProvider>
   );
 }

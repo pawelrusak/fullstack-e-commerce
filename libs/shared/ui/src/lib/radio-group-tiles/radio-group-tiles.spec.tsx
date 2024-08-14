@@ -156,4 +156,62 @@ describe('RadioGroupTiles', () => {
     expect(secondRadioElement).toHaveAttribute('name', radioGroupName);
     expect(thirdRadioElement).toHaveAttribute('name', radioGroupName);
   });
+
+  it('should not set [aria-invalid] attribute on fieldset when [valid] prop is not provided', () => {
+    const fieldsetDataTestId = 'fieldset';
+
+    render(
+      <RadioGroupTiles data-testid={fieldsetDataTestId}>
+        <RadioGroupTiles.Tile>
+          <RadioGroupTiles.TileRadioInput />
+        </RadioGroupTiles.Tile>
+      </RadioGroupTiles>,
+    );
+
+    const fieldsetElement = screen.getByTestId(fieldsetDataTestId);
+    expect(fieldsetElement).not.toHaveAttribute('aria-invalid');
+  });
+
+  it('should set [aria-invalid="true"] when [valid={false}] prop is provided', () => {
+    const fieldsetDataTestId = 'fieldset';
+
+    render(
+      <RadioGroupTiles data-testid={fieldsetDataTestId} valid={false}>
+        <RadioGroupTiles.Tile>
+          <RadioGroupTiles.TileRadioInput />
+        </RadioGroupTiles.Tile>
+      </RadioGroupTiles>,
+    );
+
+    const fieldsetElement = screen.getByTestId(fieldsetDataTestId);
+    expect(fieldsetElement).toHaveAttribute('aria-invalid', 'true');
+  });
+
+  it('should set [aria-required="true"] and [role="radiogroup"] when [required={true}] prop is provided', () => {
+    const fieldsetDataTestId = 'fieldset';
+
+    const { rerender } = render(
+      <RadioGroupTiles data-testid={fieldsetDataTestId}>
+        <RadioGroupTiles.Tile>
+          <RadioGroupTiles.TileRadioInput />
+        </RadioGroupTiles.Tile>
+      </RadioGroupTiles>,
+    );
+
+    const fieldsetElement = screen.getByTestId(fieldsetDataTestId);
+    expect(fieldsetElement).not.toHaveAttribute('aria-required');
+    expect(fieldsetElement).not.toHaveAttribute('role', 'radiogroup');
+
+    rerender(
+      <RadioGroupTiles data-testid={fieldsetDataTestId} required>
+        <RadioGroupTiles.Tile>
+          <RadioGroupTiles.TileRadioInput />
+        </RadioGroupTiles.Tile>
+      </RadioGroupTiles>,
+    );
+
+    const updatedFieldsetElement = screen.getByTestId(fieldsetDataTestId);
+    expect(updatedFieldsetElement).toHaveAttribute('aria-required', 'true');
+    expect(updatedFieldsetElement).toHaveAttribute('role', 'radiogroup');
+  });
 });
