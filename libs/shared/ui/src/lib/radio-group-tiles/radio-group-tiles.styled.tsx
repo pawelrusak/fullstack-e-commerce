@@ -5,12 +5,6 @@ import * as polished from 'polished';
 
 const borderColor = '#cbcbcb';
 
-export const FieldsetWrapper = styled.fieldset`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.2rem;
-`;
-
 export const Input = styled.input`
   position: absolute;
   inset: 0;
@@ -67,4 +61,20 @@ export const Image = styled.img`
   width: 12rem;
   height: 7.5rem;
   margin: 0.5rem 0;
+`;
+
+export const FieldsetWrapper = styled.fieldset`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+
+  &[aria-invalid='true'] ${Tile} {
+    border-color: ${({ theme }) => theme.color.error};
+    background-color: ${({ theme }) =>
+      polished.lighten(0.45, theme.color.error)};
+  }
+
+  &[aria-invalid='true'] :is(${Label}, ${AdditionalText}) {
+    color: ${({ theme }) => theme.color.error};
+  }
 `;
