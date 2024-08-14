@@ -118,7 +118,20 @@ type StyledUserItemIconProps = {
   showIndicator?: boolean;
 } & MarginProps;
 
-export const UserItemIcon = styled.svg<StyledUserItemIconProps>`
+const isUserItemIconPropForwarded = (prop: string) =>
+  ![
+    'showIndicator',
+    'marginTop',
+    'marginBottom',
+    'marginLeft',
+    'marginRight',
+    'marginY',
+    'marginX',
+  ].includes(prop);
+
+export const UserItemIcon = styled.svg.withConfig<StyledUserItemIconProps>({
+  shouldForwardProp: isUserItemIconPropForwarded,
+})`
   display: inline-block;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
