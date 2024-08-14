@@ -126,7 +126,7 @@ describe('RadioGroupTiles', () => {
     );
   });
 
-  it('should render [name] attribute on TileRadioInput when pass "radioGroupName" props', () => {
+  it('should set the [name] attribute on TileRadioInput when "radioGroupName" prop is provided', () => {
     const radioGroupName = faker.word.noun();
 
     render(
