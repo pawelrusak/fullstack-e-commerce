@@ -1,7 +1,13 @@
 import type { Types } from 'mongoose';
 import type { Id, Timestamp } from './shared';
 import type { Prettify, Modify } from './utils';
-import type { User, UserSchema } from './user';
+import type {
+  User,
+  UserSchema,
+  UserName,
+  UserContactPhone,
+  UserContactEmail,
+} from './user';
 import type { Product } from './product';
 import type { Address, AddressSchema } from './address';
 import type { ShippingMethod } from './shipping-method';
@@ -44,7 +50,7 @@ export const ORDER_STATUS_CODE = Object.freeze({
 export type OrderStatusCode = (typeof ORDER_STATUS_CODE)[OrderStatus];
 
 export type OrderContact = Required<
-  Pick<User, 'email' | 'phone' | 'firstName' | 'lastName'>
+  UserName & UserContactPhone & UserContactEmail
 >;
 
 /**
