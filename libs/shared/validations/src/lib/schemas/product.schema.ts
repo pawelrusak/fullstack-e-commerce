@@ -21,7 +21,7 @@ export const productBaseSchema = z.object({
   subCategory: subCategorySchema,
   isFeatured: z.preprocess(
     (val) => String(val).trim().toLocaleLowerCase() === 'true',
-    z.boolean()
+    z.boolean(),
   ),
 });
 
