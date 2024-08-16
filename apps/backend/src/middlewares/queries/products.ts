@@ -51,7 +51,7 @@ function getSortObject(sortQuery: unknown) {
 function getProductFilter(requestQuery: RequestQuery) {
   const queryWithNestedObjects = removeUnknownProperties(
     requestQuery,
-    getSchemaPaths(Product.schema)
+    getSchemaPaths(Product.schema),
   );
 
   return removePropertiesWithObject(queryWithNestedObjects);
@@ -61,7 +61,7 @@ function getProductFilter(requestQuery: RequestQuery) {
 export function getProductsQueryAndSort(
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) {
   /**
    * Query
@@ -79,7 +79,7 @@ export function getProductsQueryAndSort(
   // @todo use nodeEnv? or other way to set default limit
   response.locals.limit = parseInt(
     (request.query.limit as string | undefined) || '1000',
-    10
+    10,
   );
 
   next();
