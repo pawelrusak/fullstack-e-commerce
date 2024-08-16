@@ -18,5 +18,5 @@ export const categorySchema = new mongoose.Schema<CategorySchema>({
 
 export const Category = mongoose.model<CategorySchema>(
   'Category',
-  categorySchema
+  categorySchema,
 );
