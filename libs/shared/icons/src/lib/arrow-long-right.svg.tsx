@@ -1,5 +1,5 @@
 export default function ArrowLongRightIcon(
-  props: React.SVGProps<SVGSVGElement>
+  props: React.SVGProps<SVGSVGElement>,
 ) {
   return (
     <svg
