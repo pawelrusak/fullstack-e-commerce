@@ -11,7 +11,7 @@ const Wrapper = ({ children }: WrapperProps) => {
 
 const render = (
   ui: React.ReactElement,
-  options?: Omit<RenderOptions, 'wrapper'>
+  options?: Omit<RenderOptions, 'wrapper'>,
 ) => rtlRender(ui, { wrapper: Wrapper, ...options });
 
 export * from '@testing-library/react';
