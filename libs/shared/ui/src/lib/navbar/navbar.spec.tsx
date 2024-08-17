@@ -73,9 +73,6 @@ describe('Navbar', () => {
 
   test('should contains the hamburger button', () => {
     render(<Navbar />);
-    // const hamburgerButton = screen.getByRole('button', {
-    //   name: /all categories/i,
-    // });
 
     const hamburgerButton = screen.getByTestId('products-hamburger');
     expect(hamburgerButton).toBeInTheDocument();
@@ -86,7 +83,6 @@ describe('Navbar', () => {
 
     const cardButton = screen.getByTestId('cart-button');
 
-    // const cartButton = screen.getByRole('button', { name: /cart/i });
     expect(cardButton).toBeInTheDocument();
   });
 
