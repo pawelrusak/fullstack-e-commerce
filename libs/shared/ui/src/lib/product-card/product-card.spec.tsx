@@ -14,7 +14,7 @@ describe('ProductCard', () => {
         <ProductCard.AddToCartButton />
         <ProductCard.AddToWishlistButton />
         <ProductCard.ShareButton />
-      </ProductCard>
+      </ProductCard>,
     );
 
     const addToCartButton = screen.getByRole('button', {

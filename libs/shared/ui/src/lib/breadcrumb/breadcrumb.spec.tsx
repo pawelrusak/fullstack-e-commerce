@@ -40,7 +40,7 @@ describe('Breadcrumb', () => {
         <Breadcrumb.Item href="#" isCurrent>
           {current}
         </Breadcrumb.Item>
-      </Breadcrumb>
+      </Breadcrumb>,
     );
 
     const currentLink = screen.getByRole('link', {

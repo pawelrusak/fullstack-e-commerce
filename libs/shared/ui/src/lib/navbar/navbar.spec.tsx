@@ -27,7 +27,7 @@ describe('Navbar', () => {
       <Navbar>
         <Navbar.ContactBar />
         <Navbar.UserBar />
-      </Navbar>
+      </Navbar>,
     );
 
     const userBar = screen.getByTestId('navbar-user-bar');
