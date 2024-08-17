@@ -21,11 +21,6 @@ export default function MastercardLogo(props: React.SVGProps<SVGSVGElement>) {
           fill="#F79E1B"
         />
       </g>
-      {/* <defs>
-        <clipPath id="clip0_21_674">
-          <rect width="26" height="17" fill="white" />
-        </clipPath>
-      </defs> */}
     </svg>
   );
 }

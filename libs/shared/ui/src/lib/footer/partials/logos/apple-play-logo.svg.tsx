@@ -14,11 +14,6 @@ export default function ApplePlayLogo(props: React.SVGProps<SVGSVGElement>) {
           fill="black"
         />
       </g>
-      {/* <defs>
-        <clipPath id="clip0_21_686">
-          <rect width="37" height="15" fill="white" />
-        </clipPath>
-      </defs> */}
     </svg>
   );
 }

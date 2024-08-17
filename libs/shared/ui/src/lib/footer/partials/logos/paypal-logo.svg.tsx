@@ -34,11 +34,6 @@ export default function PaypalLogo(props: React.SVGProps<SVGSVGElement>) {
           fill="#469BDB"
         />
       </g>
-      {/* <defs>
-        <clipPath id="clip0_21_698">
-          <rect width="43" height="13" fill="white" />
-        </clipPath>
-      </defs> */}
     </svg>
   );
 }
