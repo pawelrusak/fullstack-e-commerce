@@ -2,6 +2,7 @@ import { DefaultTheme } from 'styled-components';
 
 const theme: DefaultTheme = {
   color: {
+    // TODO: convert to hsl color format
     primary: '#FF624C',
     secondary: '#FED550',
     text: '#303030',
@@ -13,6 +14,8 @@ const theme: DefaultTheme = {
   fontFamily: {
     poppins: ['Poppins', 'sans-serif'].join(', '),
     montserrat: ['Montserrat', 'sans-serif'].join(', '),
+    primary: ['Montserrat', 'sans-serif'].join(', '),
+    secondary: ['Poppins', 'sans-serif'].join(', '),
   },
   fontWeight: {
     regular: 400,
