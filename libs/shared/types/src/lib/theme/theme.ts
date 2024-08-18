@@ -33,11 +33,11 @@ export type AppFontFamily = {
      *
      * @warning Use only for headings at level H5 or lower.
      */
-    primary?: string;
+    primary: string;
     /**
      * For headings, titles, etc.
      */
-    secondary?: string;
+    secondary: string;
   };
 };
 
