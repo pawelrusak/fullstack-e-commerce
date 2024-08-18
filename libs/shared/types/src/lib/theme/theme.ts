@@ -1,5 +1,6 @@
 import { Theme as StyledSystemTheme } from 'styled-system';
 
+// TODO: Move this file to the theme library
 export type AppSpacesTheme = {
   space: StyledSystemTheme['space'];
 };
@@ -10,7 +11,7 @@ export type AppColorTheme = {
     secondary: string;
     text: string;
     background: string;
-    // TODO: rename this to secondarySurface (surface will be used for ui components background like card, modal, navbar, etc.)
+    // TODO: Rename this to "secondarySurface". "Surface" will be used for UI components' backgrounds, such as cards, modals, navbar, etc.
     secondBackground: string;
     border: string;
     error: string;
@@ -19,8 +20,24 @@ export type AppColorTheme = {
 
 export type AppFontFamily = {
   fontFamily: {
+    /**
+     * @deprecated Use "primary" instead
+     */
     montserrat: string;
+    /**
+     * @deprecated Use "secondary" instead.
+     */
     poppins: string;
+    /**
+     * For body text, forms, etc.
+     *
+     * @warning Use only for headings at level H5 or lower.
+     */
+    primary?: string;
+    /**
+     * For headings, titles, etc.
+     */
+    secondary?: string;
   };
 };
 
