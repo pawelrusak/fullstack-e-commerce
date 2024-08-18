@@ -8,13 +8,38 @@ export type AppSpacesTheme = {
 export type AppColorTheme = {
   color: {
     primary: string;
+    onPrimary?: string;
+
     secondary: string;
-    text: string;
+    /**
+     * Background color for UI components such as cards, modals, navbars, etc.
+     */
+    surface?: string;
+    onSurface?: string;
+    /**
+     * Background color for secondary UI components, such as panels, forms, etc.
+     */
+    secondarySurface?: string;
+    onSecondarySurface?: string;
+    /**
+     * The primary background color for the entire application.
+     * Use this for the main application background. For specific UI elements like
+     * navbars or cards, use "surface" even if the color is the same.
+     */
     background: string;
-    // TODO: Rename this to "secondarySurface". "Surface" will be used for UI components' backgrounds, such as cards, modals, navbar, etc.
-    secondBackground: string;
-    border: string;
+    onBackground?: string;
+
     error: string;
+    border: string;
+    /**
+     * @deprecated Use "onBackground" or "onSurface" instead, depending on the context.
+     */
+    text: string;
+    /**
+     * @deprecated Use "secondarySurface" instead.
+     * TODO: Rename this to "secondarySurface" to align with naming conventions.
+     */
+    secondBackground: string;
   };
 };
 
