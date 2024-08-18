@@ -3,17 +3,31 @@ import { DefaultTheme } from 'styled-components';
 const theme: DefaultTheme = {
   color: {
     primary: 'hsl(7, 100%, 65%)',
+    onPrimary: 'hsl(0, 0%, 100%)',
+
     secondary: 'hsl(46, 99%, 65%)',
-    text: 'hsl(0, 0%, 19%)',
+
+    surface: 'hsl(0, 0%, 100%)',
+    onSurface: 'hsl(0, 0%, 19%);',
+
+    secondarySurface: 'hsl(0, 0%, 96%)',
+    onSecondarySurface: 'hsl(0, 0%, 19%)',
+
     background: 'hsl(0, 0%, 100%)',
-    secondBackground: 'hsl(0, 0%, 96%)',
+    onBackground: 'hsl(0, 0%, 100%)',
+
     border: 'hsl(0, 0%, 96%)',
     error: 'hsl(348, 83%, 47%)',
+
+    // TODO: Remove deprecated "secondBackground" color after refactoring
+    secondBackground: 'hsl(0, 0%, 96%)',
+    // TODO: Remove deprecated "text" color after replacing with "onBackground" or "onSurface"
+    text: 'hsl(0, 0%, 19%)',
   },
   fontFamily: {
-    // TODO: Remove deprecated font family
+    // TODO: Remove deprecated "poppins" font family after refactoring
     poppins: ['Poppins', 'sans-serif'].join(', '),
-    // TODO: Remove deprecated font family
+    // TODO: Remove deprecated "montserrat" font family after refactoring
     montserrat: ['Montserrat', 'sans-serif'].join(', '),
     primary: ['Montserrat', 'sans-serif'].join(', '),
     secondary: ['Poppins', 'sans-serif'].join(', '),
