@@ -18,6 +18,19 @@
   <br />
 </p>
 
+> [!WARNING]
+> This project is currently being refactored. The main goals include:
+>
+> - [ ] Improving the UI library with a complete theme so that all colors and related elements come from one source.
+> - [ ] Adding full end-to-end (e2e) tests (right now, only some integration tests are available).
+> - [ ] Using a layered or hexagonal architecture for both the backend and frontend.
+> - [ ] Refactoring the frontend to organize components better, using route groups for domain separation and splitting components into presentation and container types.
+> - [ ] Changing the directory structure for libraries, like moving `libs/shared/types` to `libs/core/types` and `libs/shared/ui` to `libs/frontend/shared/ui`.
+> - [ ] Applying SOLID principles where needed, such as using the Open/Closed Principle in [error-handler.ts](./apps/backend/src/middlewares/error-handler.ts) and the Interface Segregation Principle in [product.ts](./libs/shared/types/src/lib/product.ts).
+> - [ ] Reorganizing the translation structure in the `i18n` library to match the "route groups" used in the `frontend` app.
+>
+> ...and more minor changes.
+
 > [!IMPORTANT]
 > The project is at an early stage of development so many functions have not been added or are not work quite right yet.
 > See the [Known issues](#known-issues) section for more information.
