@@ -2,17 +2,18 @@ import { DefaultTheme } from 'styled-components';
 
 const theme: DefaultTheme = {
   color: {
-    // TODO: convert to hsl color format
-    primary: '#FF624C',
-    secondary: '#FED550',
-    text: '#303030',
-    background: '#FFFFFF',
-    secondBackground: '#F4F4F4',
-    border: '#F4F4F4',
-    error: '#dc143c',
+    primary: 'hsl(7, 100%, 65%)',
+    secondary: 'hsl(46, 99%, 65%)',
+    text: 'hsl(0, 0%, 19%)',
+    background: 'hsl(0, 0%, 100%)',
+    secondBackground: 'hsl(0, 0%, 96%)',
+    border: 'hsl(0, 0%, 96%)',
+    error: 'hsl(348, 83%, 47%)',
   },
   fontFamily: {
+    // TODO: Remove deprecated font family
     poppins: ['Poppins', 'sans-serif'].join(', '),
+    // TODO: Remove deprecated font family
     montserrat: ['Montserrat', 'sans-serif'].join(', '),
     primary: ['Montserrat', 'sans-serif'].join(', '),
     secondary: ['Poppins', 'sans-serif'].join(', '),
