@@ -14,7 +14,7 @@ const theme: DefaultTheme = {
     onSecondarySurface: 'hsl(0, 0%, 19%)',
 
     background: 'hsl(0, 0%, 100%)',
-    onBackground: 'hsl(0, 0%, 100%)',
+    onBackground: 'hsl(0, 0%, 19%)',
 
     border: 'hsl(0, 0%, 96%)',
     error: 'hsl(348, 83%, 47%)',
