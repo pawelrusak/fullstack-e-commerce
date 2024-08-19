@@ -47,7 +47,7 @@ describe('Theme config', () => {
           "background": "hsl(0, 0%, 100%)",
           "border": "hsl(0, 0%, 96%)",
           "error": "hsl(348, 83%, 47%)",
-          "onBackground": "hsl(0, 0%, 100%)",
+          "onBackground": "hsl(0, 0%, 19%)",
           "onPrimary": "hsl(0, 0%, 100%)",
           "onSecondarySurface": "hsl(0, 0%, 19%)",
           "onSurface": "hsl(0, 0%, 19%);",
