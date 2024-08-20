@@ -10,4 +10,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/libs/shared/theme',
+  setupFilesAfterEnv: ['@testing-library/jest-dom'],
 } satisfies Config;
