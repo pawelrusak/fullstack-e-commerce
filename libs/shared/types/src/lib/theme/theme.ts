@@ -16,11 +16,13 @@ export type AppColorTheme = {
      */
     surface: string;
     onSurface: string;
+    onSurfaceVariant?: string;
     /**
      * Background color for secondary UI components, such as panels, forms, etc.
      */
     secondarySurface: string;
     onSecondarySurface: string;
+    onSecondarySurfaceVariant?: string;
     /**
      * The primary background color for the entire application.
      * Use this for the main application background. For specific UI elements like
