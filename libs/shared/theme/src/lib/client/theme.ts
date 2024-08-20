@@ -9,9 +9,11 @@ const theme: DefaultTheme = {
 
     surface: 'hsl(0, 0%, 100%)',
     onSurface: 'hsl(0, 0%, 19%);',
+    onSurfaceVariant: 'hsl(7, 100%, 65%)',
 
     secondarySurface: 'hsl(0, 0%, 96%)',
     onSecondarySurface: 'hsl(0, 0%, 19%)',
+    onSecondarySurfaceVariant: 'hsl(7, 100%, 65%)',
 
     background: 'hsl(0, 0%, 100%)',
     onBackground: 'hsl(0, 0%, 19%)',
