@@ -1,19 +1,20 @@
 import { DefaultTheme } from 'styled-components';
+import { colorPalette } from './color-palette';
 
 const theme: DefaultTheme = {
   color: {
-    primary: 'hsl(7, 100%, 65%)',
+    primary: colorPalette.primary[500],
     onPrimary: 'hsl(0, 0%, 100%)',
 
     secondary: 'hsl(46, 99%, 65%)',
 
     surface: 'hsl(0, 0%, 100%)',
     onSurface: 'hsl(0, 0%, 19%);',
-    onSurfaceVariant: 'hsl(7, 100%, 65%)',
+    onSurfaceVariant: colorPalette.primary[500],
 
     secondarySurface: 'hsl(0, 0%, 96%)',
     onSecondarySurface: 'hsl(0, 0%, 19%)',
-    onSecondarySurfaceVariant: 'hsl(7, 100%, 65%)',
+    onSecondarySurfaceVariant: colorPalette.primary[500],
 
     background: 'hsl(0, 0%, 100%)',
     onBackground: 'hsl(0, 0%, 19%)',
