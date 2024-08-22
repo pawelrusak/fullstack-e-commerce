@@ -5,10 +5,35 @@ export type AppSpacesTheme = {
   space: StyledSystemTheme['space'];
 };
 
+/**
+ * The `color` object defines color groups used across multiple components like buttons, navbars,
+ * and badges. Follow these guidelines when adding new colors:
+ *
+ * @property {string} color.example - Base color for the `example` group (e.g., primary, secondary).
+ * @property {string} color.onExample - Text color on top of the `example` color.
+ * @property {string} color.exampleBorder - Border color within the `example` group.
+ * @property {string} color.exampleInteract - Color for interactive states (e.g., hover, focus) in the `example` group.
+ * @property {string} color.onExampleInteract - Text color during interactive states in the `example` group.
+ * @property {string} color.exampleVariant - A variant shade of the `example` color.
+ * @property {string} color.onExampleVariant - Text color on top of the `exampleVariant` color.
+ * @property {string} color.exampleBorderInteract - Border color for interactive states in the `example` group.
+ * @property {string} color.onExampleLink - Link color in the `example` group.
+ * @property {string} color.onExampleLinkInteract - Link color for interactive states in the `example` group.
+ *
+ * Naming Conventions:
+ * - Base name (e.g., `primary`, `surface`) for each color group.
+ * - Prefix with `on` for overlay colors (e.g., text, icons).
+ * - Suffix with `Interact` for interactive states (e.g., hover, focus).
+ * - Use `Variant` for alternative color for others related elements.
+ */
 export type AppColorTheme = {
   color: {
     primary: string;
     onPrimary: string;
+    // For focus, hover states etc.
+    primaryBorder?: string;
+    primaryInteract?: string;
+    primaryBorderInteract?: string;
 
     secondary: string;
     /**
@@ -17,6 +42,7 @@ export type AppColorTheme = {
     surface: string;
     onSurface: string;
     onSurfaceVariant: string;
+    onSurfaceInteract?: string;
     /**
      * Background color for secondary UI components, such as panels, forms, etc.
      */
@@ -30,6 +56,9 @@ export type AppColorTheme = {
      */
     background: string;
     onBackground: string;
+    onBackgroundLink?: string;
+    onBackgroundInteract?: string;
+    onBackgroundLinkInteract?: string;
 
     error: string;
     border: string;
