@@ -5,12 +5,16 @@ const theme: DefaultTheme = {
   color: {
     primary: colorPalette.primary[500],
     onPrimary: 'hsl(0, 0%, 100%)',
+    primaryBorder: colorPalette.primary[500],
+    primaryInteract: colorPalette.primary[600],
+    primaryBorderInteract: colorPalette.primary[600],
 
     secondary: 'hsl(46, 99%, 65%)',
 
     surface: 'hsl(0, 0%, 100%)',
     onSurface: 'hsl(0, 0%, 19%);',
     onSurfaceVariant: colorPalette.primary[500],
+    onSurfaceInteract: colorPalette.primary[500],
 
     secondarySurface: 'hsl(0, 0%, 96%)',
     onSecondarySurface: 'hsl(0, 0%, 19%)',
@@ -18,6 +22,9 @@ const theme: DefaultTheme = {
 
     background: 'hsl(0, 0%, 100%)',
     onBackground: 'hsl(0, 0%, 19%)',
+    onBackgroundLink: colorPalette.primary[500],
+    onBackgroundInteract: colorPalette.primary[500],
+    onBackgroundLinkInteract: colorPalette.primary[600],
 
     border: 'hsl(0, 0%, 96%)',
     error: 'hsl(348, 83%, 47%)',
