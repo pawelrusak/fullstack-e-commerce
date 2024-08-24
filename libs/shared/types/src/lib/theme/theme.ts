@@ -34,7 +34,13 @@ export type AppColor = {
   primaryInteract: string;
   primaryBorderInteract: string;
 
+  /**
+   * @deprecated "Deprecated" use "tertiary" instead (this color name will be used in other purposes).
+   */
   secondary: string;
+
+  tertiary?: string;
+
   /**
    * Background color for UI components such as cards, modals, navbars, etc.
    */
