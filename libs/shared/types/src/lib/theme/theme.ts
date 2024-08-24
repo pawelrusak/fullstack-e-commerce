@@ -31,9 +31,9 @@ export type AppColorTheme = {
     primary: string;
     onPrimary: string;
     // For focus, hover states etc.
-    primaryBorder?: string;
-    primaryInteract?: string;
-    primaryBorderInteract?: string;
+    primaryBorder: string;
+    primaryInteract: string;
+    primaryBorderInteract: string;
 
     secondary: string;
     /**
@@ -42,7 +42,7 @@ export type AppColorTheme = {
     surface: string;
     onSurface: string;
     onSurfaceVariant: string;
-    onSurfaceInteract?: string;
+    onSurfaceInteract: string;
     /**
      * Background color for secondary UI components, such as panels, forms, etc.
      */
@@ -56,9 +56,9 @@ export type AppColorTheme = {
      */
     background: string;
     onBackground: string;
-    onBackgroundLink?: string;
-    onBackgroundInteract?: string;
-    onBackgroundLinkInteract?: string;
+    onBackgroundLink: string;
+    onBackgroundInteract: string;
+    onBackgroundLinkInteract: string;
 
     error: string;
     border: string;
