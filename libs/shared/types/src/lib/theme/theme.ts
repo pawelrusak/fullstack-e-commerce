@@ -38,10 +38,10 @@ export type AppColor = {
    * @deprecated "Deprecated" use "tertiary" instead (this color name will be used in other purposes).
    */
   secondary: string;
-  onSecondary?: string;
-  secondaryBorder?: string;
-  secondaryInteract?: string;
-  secondaryBorderInteract?: string;
+  onSecondary: string;
+  secondaryBorder: string;
+  secondaryInteract: string;
+  secondaryBorderInteract: string;
 
   tertiary: string;
 
