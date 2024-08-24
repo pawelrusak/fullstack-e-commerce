@@ -39,7 +39,7 @@ export type AppColor = {
    */
   secondary: string;
 
-  tertiary?: string;
+  tertiary: string;
 
   /**
    * Background color for UI components such as cards, modals, navbars, etc.
