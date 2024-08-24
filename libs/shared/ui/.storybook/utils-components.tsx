@@ -22,5 +22,5 @@ export const StripeInner = styled.div`
 
 export const Container = styled.div`
   background-color: ${({ theme }) =>
-    polished.transparentize(0.8, theme.color.secondary)};
+    polished.transparentize(0.8, theme.color.tertiary)};
 `;
