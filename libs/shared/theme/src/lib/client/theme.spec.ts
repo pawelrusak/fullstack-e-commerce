@@ -11,6 +11,10 @@ describe('Theme config', () => {
         primaryBorderInteract: expect.any(String),
 
         secondary: expect.any(String),
+        onSecondary: expect.any(String),
+        secondaryBorder: expect.any(String),
+        secondaryInteract: expect.any(String),
+        secondaryBorderInteract: expect.any(String),
 
         tertiary: expect.any(String),
 
@@ -68,6 +72,7 @@ describe('Theme config', () => {
           "onBackgroundLink": "hsl(7, 100%, 65%)",
           "onBackgroundLinkInteract": "hsl(7, 86%, 51%)",
           "onPrimary": "hsl(0, 0%, 100%)",
+          "onSecondary": "hsl(0, 0%, 100%)",
           "onSecondarySurface": "hsl(0, 0%, 19%)",
           "onSecondarySurfaceVariant": "hsl(7, 100%, 65%)",
           "onSurface": "hsl(0, 0%, 19%);",
@@ -78,7 +83,10 @@ describe('Theme config', () => {
           "primaryBorderInteract": "hsl(7, 86%, 51%)",
           "primaryInteract": "hsl(7, 86%, 51%)",
           "secondBackground": "hsl(0, 0%, 96%)",
-          "secondary": "hsl(46, 99%, 65%)",
+          "secondary": "hsl(0, 0%, 19%)",
+          "secondaryBorder": "hsl(0, 0%, 19%)",
+          "secondaryBorderInteract": "hsl(0, 0%, 16%)",
+          "secondaryInteract": "hsl(0, 0%, 16%)",
           "secondarySurface": "hsl(0, 0%, 96%)",
           "surface": "hsl(0, 0%, 100%)",
           "tertiary": "hsl(46, 99%, 65%)",

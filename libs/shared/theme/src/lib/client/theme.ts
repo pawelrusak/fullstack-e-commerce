@@ -9,7 +9,11 @@ const theme: DefaultTheme = {
     primaryInteract: colorPalette.primary[600],
     primaryBorderInteract: colorPalette.primary[600],
 
-    secondary: 'hsl(46, 99%, 65%)',
+    secondary: colorPalette.secondary[500],
+    onSecondary: 'hsl(0, 0%, 100%)',
+    secondaryBorder: colorPalette.secondary[500],
+    secondaryInteract: colorPalette.secondary[600],
+    secondaryBorderInteract: colorPalette.secondary[600],
 
     tertiary: 'hsl(46, 99%, 65%)',
 
