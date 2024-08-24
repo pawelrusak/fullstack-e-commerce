@@ -11,6 +11,8 @@ const theme: DefaultTheme = {
 
     secondary: 'hsl(46, 99%, 65%)',
 
+    tertiary: 'hsl(46, 99%, 65%)',
+
     surface: 'hsl(0, 0%, 100%)',
     onSurface: 'hsl(0, 0%, 19%);',
     onSurfaceVariant: colorPalette.primary[500],

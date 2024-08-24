@@ -12,6 +12,8 @@ describe('Theme config', () => {
 
         secondary: expect.any(String),
 
+        tertiary: expect.any(String),
+
         surface: expect.any(String),
         onSurface: expect.any(String),
         onSurfaceVariant: expect.any(String),
@@ -79,6 +81,7 @@ describe('Theme config', () => {
           "secondary": "hsl(46, 99%, 65%)",
           "secondarySurface": "hsl(0, 0%, 96%)",
           "surface": "hsl(0, 0%, 100%)",
+          "tertiary": "hsl(46, 99%, 65%)",
           "text": "hsl(0, 0%, 19%)",
         },
         "fontFamily": {
