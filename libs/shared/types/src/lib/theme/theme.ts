@@ -140,8 +140,7 @@ export type AppScreensTheme = {
 export type AppComponent = Component;
 
 export type AppComponentTheme = {
-  // TODO:: Remove optional modifier
-  component?: AppComponent;
+  component: AppComponent;
 };
 
 export type AppTheme = AppColorTheme &

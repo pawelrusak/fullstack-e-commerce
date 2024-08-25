@@ -5,7 +5,7 @@ type AvailableComponentToken<CSSProps extends keyof CSSProperties> = {
 };
 
 type ButtonComponent = {
-  brand?: {
+  brand: {
     base: {
       svgText: AvailableComponentToken<'fill'>;
       svgDot: AvailableComponentToken<'fill'>;
