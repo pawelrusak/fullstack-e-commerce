@@ -8,6 +8,7 @@ describe('Theme config', () => {
       fontWeight: expect.any(Object),
       space: expect.arrayContaining([expect.any(Number)]),
       screens: expect.any(Object),
+      component: expect.any(Object),
     });
   });
 

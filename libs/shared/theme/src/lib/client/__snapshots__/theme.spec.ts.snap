@@ -31,6 +31,18 @@ exports[`Theme config should match the specified values 1`] = `
     "tertiary": "hsl(46, 99%, 65%)",
     "text": "hsl(0, 0%, 19%)",
   },
+  "component": {
+    "brand": {
+      "base": {
+        "svgDot": {
+          "fill": "hsl(7, 100%, 65%)",
+        },
+        "svgText": {
+          "fill": "hsl(0, 0%, 19%)",
+        },
+      },
+    },
+  },
   "fontFamily": {
     "montserrat": "Montserrat, sans-serif",
     "poppins": "Poppins, sans-serif",
