@@ -1,8 +1,11 @@
-import { Theme as StyledSystemTheme } from 'styled-system';
+import type { Theme as StyledSystemTheme } from 'styled-system';
+import type { Component } from './component';
+
+export type AppSpace = StyledSystemTheme['space'];
 
 // TODO: Move this file to the theme library
 export type AppSpacesTheme = {
-  space: StyledSystemTheme['space'];
+  space: AppSpace;
 };
 
 /**
@@ -134,8 +137,16 @@ export type AppScreensTheme = {
   screens: AppScreens;
 };
 
+export type AppComponent = Component;
+
+export type AppComponentTheme = {
+  // TODO:: Remove optional modifier
+  component?: AppComponent;
+};
+
 export type AppTheme = AppColorTheme &
   AppFontFamilyTheme &
   AppFontWeightTheme &
   AppSpacesTheme &
-  AppScreensTheme;
+  AppScreensTheme &
+  AppComponentTheme;
