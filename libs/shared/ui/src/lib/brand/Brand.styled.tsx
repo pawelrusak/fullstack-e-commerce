@@ -1,6 +1,8 @@
 'use client';
 
 import styled from 'styled-components';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
+
 import BrandSvgIcon from './brand.svg';
 
 export const Wrapper = styled.span`
@@ -16,10 +18,11 @@ export type BrandSvgProps = Readonly<{
 
 export const BrandSvg = styled(BrandSvgIcon)<BrandSvgProps>`
   [data-brand-text] {
-    fill: ${({ textColor, theme }) => textColor ?? theme.color.text};
+    fill: ${({ textColor }) =>
+      textColor ?? getToken('brand.base.svgText.fill')};
   }
 
   [data-brand-dot] {
-    fill: ${({ dotColor, theme }) => dotColor ?? theme.color.primary};
+    fill: ${({ textColor }) => textColor ?? getToken('brand.base.svgDot.fill')};
   }
 `;

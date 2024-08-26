@@ -6,6 +6,7 @@ import Brand from './brand.component';
 describe('Brand', () => {
   it('should render successfully', () => {
     const { baseElement } = render(<Brand />);
+
     expect(baseElement).toBeTruthy();
   });
 
