@@ -14,7 +14,7 @@ type BrandComponent = {
 };
 
 type ButtonComponent = {
-  button?: {
+  button: {
     base: AvailableComponentToken<'fontFamily'>;
     variant: {
       primary: {
