@@ -1,37 +1,53 @@
-import { setupGetThemeToken } from './token.utils';
+import { setupGetThemeToken, getComponentThemeToken } from './token.utils';
+import { component } from './component-theme';
 import { faker } from '@faker-js/faker';
 
-describe('setupGetToken', () => {
-  it('should return specified value', () => {
-    const object = {
-      a: {
-        b: faker.string.nanoid(),
-        c: {
-          d: faker.string.nanoid(),
+describe('Theme token utils', () => {
+  describe('setupGetThemeToken', () => {
+    it('should return specified value', () => {
+      const object = {
+        a: {
+          b: faker.string.nanoid(),
+          c: {
+            d: faker.string.nanoid(),
+          },
         },
-      },
-    };
+      };
 
-    const getThemeToken = setupGetThemeToken(object);
+      const getThemeToken = setupGetThemeToken(object);
 
-    const firstResult = getThemeToken('a.b');
-    expect(firstResult).toBe(object.a.b);
+      const firstResult = getThemeToken('a.b');
+      expect(firstResult).toBe(object.a.b);
 
-    const secondResult = getThemeToken('a.c.d');
-    expect(secondResult).toBe(object.a.c.d);
+      const secondResult = getThemeToken('a.c.d');
+      expect(secondResult).toBe(object.a.c.d);
+    });
+
+    it('should return undefined for non-existing keys', () => {
+      const object = {
+        a: {
+          b: faker.string.nanoid(),
+        },
+      };
+
+      const getThemeToken = setupGetThemeToken(object);
+
+      const result = getThemeToken('a.c');
+      expect(result).toBeUndefined();
+    });
   });
 
-  it('should return undefined for non-existing keys', () => {
-    const object = {
-      a: {
-        b: faker.string.nanoid(),
-      },
-    };
+  describe('getComponentThemeToken', () => {
+    it('should return the same value as the component theme for valid keys', () => {
+      const brandToken = getComponentThemeToken('brand.base.svgDot');
 
-    const getThemeToken = setupGetThemeToken(object);
+      expect(brandToken).toEqual(component.brand.base.svgDot);
+    });
 
-    const result = getThemeToken('a.c');
+    it('should return undefined for invalid component keys', () => {
+      const invalidToken = getComponentThemeToken('brand.base.nonExistentKey');
 
-    expect(result).toBeUndefined();
+      expect(invalidToken).toBeUndefined();
+    });
   });
 });
