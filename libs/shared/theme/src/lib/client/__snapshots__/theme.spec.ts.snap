@@ -42,6 +42,27 @@ exports[`Theme config should match the specified values 1`] = `
         },
       },
     },
+    "button": {
+      "base": {
+        "fontFamily": "Montserrat, sans-serif",
+      },
+      "variant": {
+        "primary": {
+          "default": {
+            "backgroundColor": "hsl(7, 100%, 65%)",
+            "borderColor": "hsl(7, 100%, 65%)",
+            "color": "hsl(0, 0%, 100%)",
+          },
+        },
+        "secondary": {
+          "default": {
+            "backgroundColor": "hsl(0, 0%, 19%)",
+            "borderColor": "hsl(0, 0%, 19%)",
+            "color": "hsl(0, 0%, 100%)",
+          },
+        },
+      },
+    },
   },
   "fontFamily": {
     "montserrat": "Montserrat, sans-serif",
