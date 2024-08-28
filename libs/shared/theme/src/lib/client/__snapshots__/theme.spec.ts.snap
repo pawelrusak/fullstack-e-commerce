@@ -52,6 +52,18 @@ exports[`Theme config should match the specified values 1`] = `
             "backgroundColor": "hsl(7, 100%, 65%)",
             "borderColor": "hsl(7, 100%, 65%)",
             "color": "hsl(0, 0%, 100%)",
+            "palette": {
+              "backgroundColor": "hsl(7, 100%, 65%)",
+              "borderColor": "hsl(7, 100%, 65%)",
+              "color": "hsl(0, 0%, 100%)",
+            },
+          },
+          "defaultInteract": {
+            "palette": {
+              "backgroundColor": "hsl(7, 86%, 51%)",
+              "borderColor": "hsl(7, 86%, 51%)",
+              "color": "hsl(0, 0%, 100%)",
+            },
           },
         },
         "secondary": {
@@ -59,6 +71,18 @@ exports[`Theme config should match the specified values 1`] = `
             "backgroundColor": "hsl(0, 0%, 19%)",
             "borderColor": "hsl(0, 0%, 19%)",
             "color": "hsl(0, 0%, 100%)",
+            "palette": {
+              "backgroundColor": "hsl(0, 0%, 19%)",
+              "borderColor": "hsl(0, 0%, 19%)",
+              "color": "hsl(0, 0%, 100%)",
+            },
+          },
+          "defaultInteract": {
+            "palette": {
+              "backgroundColor": "hsl(0, 0%, 16%)",
+              "borderColor": "hsl(7, 86%, 51%)",
+              "color": "hsl(0, 0%, 100%)",
+            },
           },
         },
       },
