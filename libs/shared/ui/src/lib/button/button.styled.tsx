@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import * as polished from 'polished';
-import { theme } from '@e-shop/theme';
+import { theme, getComponentThemeToken as getToken } from '@e-shop/theme';
+import type { ButtonComponentPalette } from '@e-shop/types/theme';
 
 export type ButtonProps = {
   variant?: 'outline' | 'solid';
@@ -12,14 +12,19 @@ const DISABLED_COLOR = '#cbcbcb';
 
 type ColorVariant = Record<Required<ButtonProps>['colorVariant'], string>;
 
-const solidBackgroundColors: ColorVariant = {
-  primary: theme.color.primary,
-  secondary: theme.color.text,
+type PaletteVariant = Record<
+  Required<ButtonProps>['colorVariant'],
+  ButtonComponentPalette
+>;
+
+const defaultPalette: PaletteVariant = {
+  primary: getToken('button.variant.primary.default.palette'),
+  secondary: getToken('button.variant.secondary.default.palette'),
 };
 
-const solidBorderColors: ColorVariant = {
-  primary: theme.color.primary,
-  secondary: theme.color.text,
+const defaultInteractPalette: PaletteVariant = {
+  primary: getToken('button.variant.primary.defaultInteract.palette'),
+  secondary: getToken('button.variant.secondary.defaultInteract.palette'),
 };
 
 const outlineFontColors: ColorVariant = {
@@ -31,17 +36,15 @@ export const Button = styled.button<ButtonProps>`
   all: unset;
   display: inline-block;
   box-sizing: border-box;
+  font-family: ${getToken('button.base.fontFamily')};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-size: 2rem;
   padding: 1.5rem 3.9rem;
   line-height: 3rem;
-  font-size: 2rem;
   border-radius: 1rem;
   cursor: pointer;
-  background: ${({ colorVariant = 'primary' }) =>
-    solidBackgroundColors[colorVariant]};
-  color: ${({ theme }) => theme.color.background};
-  border: 1px solid
-    ${({ colorVariant = 'primary' }) => solidBorderColors[colorVariant]};
+  border: 1px solid transparent;
+  ${({ colorVariant = 'primary' }) => defaultPalette[colorVariant]}
 
   ${({ fullWidth }) =>
     fullWidth &&
@@ -51,14 +54,8 @@ export const Button = styled.button<ButtonProps>`
       justify-content: center;
     `}
 
-  &:hover,
-  &:focus {
-    background: ${({ colorVariant = 'primary' }) =>
-      polished.darken(0.1, solidBackgroundColors[colorVariant])};
-    color: ${({ theme }) => theme.color.background};
-    border: 1px solid
-      ${({ colorVariant = 'primary' }) =>
-        polished.darken(0.1, solidBorderColors[colorVariant])};
+  &:is(:hover, :focus) {
+    ${({ colorVariant = 'primary' }) => defaultInteractPalette[colorVariant]}
   }
 
   &:focus {
