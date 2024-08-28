@@ -1,1 +1,6 @@
-export * from './theme';
+export type * from './theme';
+export type {
+  BrandComponent,
+  ButtonComponent,
+  ButtonComponentPalette,
+} from './component';
