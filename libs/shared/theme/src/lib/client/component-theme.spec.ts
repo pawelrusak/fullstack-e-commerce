@@ -146,7 +146,7 @@ describe('Component theme config', () => {
               "defaultInteract": {
                 "palette": {
                   "backgroundColor": "hsl(0, 0%, 16%)",
-                  "borderColor": "hsl(7, 86%, 51%)",
+                  "borderColor": "hsl(0, 0%, 16%)",
                   "color": "hsl(0, 0%, 100%)",
                 },
               },

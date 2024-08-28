@@ -77,7 +77,7 @@ export const component: AppComponent = {
           palette: {
             color: color.onSecondary,
             backgroundColor: color.secondaryInteract,
-            borderColor: color.primaryBorderInteract,
+            borderColor: color.secondaryBorderInteract,
           },
         },
       },
