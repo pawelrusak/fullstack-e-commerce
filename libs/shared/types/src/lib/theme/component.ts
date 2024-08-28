@@ -23,17 +23,17 @@ export type ButtonComponent = {
     variant: {
       primary: {
         default: {
-          palette?: ButtonComponentPalette;
+          palette: ButtonComponentPalette;
         } & ButtonComponentPalette;
-        defaultInteract?: {
+        defaultInteract: {
           palette: ButtonComponentPalette;
         };
       };
       secondary: {
         default: {
-          palette?: ButtonComponentPalette;
+          palette: ButtonComponentPalette;
         } & ButtonComponentPalette;
-        defaultInteract?: {
+        defaultInteract: {
           palette: ButtonComponentPalette;
         };
       };
