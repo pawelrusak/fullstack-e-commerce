@@ -4,7 +4,7 @@ type AvailableComponentToken<CSSProps extends keyof CSSProperties> = {
   [P in CSSProps]: CSSProperties[P];
 };
 
-type BrandComponent = {
+export type BrandComponent = {
   brand: {
     base: {
       svgText: AvailableComponentToken<'fill'>;
@@ -13,19 +13,29 @@ type BrandComponent = {
   };
 };
 
-type ButtonComponent = {
+export type ButtonComponentPalette = AvailableComponentToken<
+  'color' | 'backgroundColor' | 'borderColor'
+>;
+
+export type ButtonComponent = {
   button: {
     base: AvailableComponentToken<'fontFamily'>;
     variant: {
       primary: {
-        default: AvailableComponentToken<
-          'color' | 'backgroundColor' | 'borderColor'
-        >;
+        default: {
+          palette?: ButtonComponentPalette;
+        } & ButtonComponentPalette;
+        defaultInteract?: {
+          palette: ButtonComponentPalette;
+        };
       };
       secondary: {
-        default: AvailableComponentToken<
-          'color' | 'backgroundColor' | 'borderColor'
-        >;
+        default: {
+          palette?: ButtonComponentPalette;
+        } & ButtonComponentPalette;
+        defaultInteract?: {
+          palette: ButtonComponentPalette;
+        };
       };
     };
   };
