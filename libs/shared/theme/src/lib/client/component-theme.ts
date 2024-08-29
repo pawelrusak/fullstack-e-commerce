@@ -27,18 +27,6 @@ export const component: AppComponent = {
     variant: {
       primary: {
         default: {
-          /**
-           * @deprecated
-           */
-          color: color.onPrimary,
-          /**
-           * @deprecated
-           */
-          backgroundColor: color.primary,
-          /**
-           * @deprecated
-           */
-          borderColor: color.primaryBorder,
           palette: {
             color: color.onPrimary,
             backgroundColor: color.primary,
@@ -55,18 +43,6 @@ export const component: AppComponent = {
       },
       secondary: {
         default: {
-          /**
-           * @deprecated
-           */
-          color: color.onSecondary,
-          /**
-           * @deprecated
-           */
-          backgroundColor: color.secondary,
-          /**
-           * @deprecated
-           */
-          borderColor: color.secondaryBorder,
           palette: {
             color: color.onSecondary,
             backgroundColor: color.secondary,

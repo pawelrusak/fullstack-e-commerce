@@ -49,9 +49,6 @@ exports[`Theme config should match the specified values 1`] = `
       "variant": {
         "primary": {
           "default": {
-            "backgroundColor": "hsl(7, 100%, 65%)",
-            "borderColor": "hsl(7, 100%, 65%)",
-            "color": "hsl(0, 0%, 100%)",
             "palette": {
               "backgroundColor": "hsl(7, 100%, 65%)",
               "borderColor": "hsl(7, 100%, 65%)",
@@ -68,9 +65,6 @@ exports[`Theme config should match the specified values 1`] = `
         },
         "secondary": {
           "default": {
-            "backgroundColor": "hsl(0, 0%, 19%)",
-            "borderColor": "hsl(0, 0%, 19%)",
-            "color": "hsl(0, 0%, 100%)",
             "palette": {
               "backgroundColor": "hsl(0, 0%, 19%)",
               "borderColor": "hsl(0, 0%, 19%)",

@@ -46,18 +46,6 @@ describe('Component theme config', () => {
         variant: {
           primary: {
             default: {
-              /**
-               * @deprecated
-               */
-              backgroundColor: expect.any(String),
-              /**
-               * @deprecated
-               */
-              color: expect.any(String),
-              /**
-               * @deprecated
-               */
-              borderColor: expect.any(String),
               palette: {
                 backgroundColor: expect.any(String),
                 color: expect.any(String),
@@ -74,18 +62,6 @@ describe('Component theme config', () => {
           },
           secondary: {
             default: {
-              /**
-               * @deprecated
-               */
-              backgroundColor: expect.any(String),
-              /**
-               * @deprecated
-               */
-              color: expect.any(String),
-              /**
-               * @deprecated
-               */
-              borderColor: expect.any(String),
               palette: {
                 backgroundColor: expect.any(String),
                 color: expect.any(String),
@@ -115,9 +91,6 @@ describe('Component theme config', () => {
           "variant": {
             "primary": {
               "default": {
-                "backgroundColor": "hsl(7, 100%, 65%)",
-                "borderColor": "hsl(7, 100%, 65%)",
-                "color": "hsl(0, 0%, 100%)",
                 "palette": {
                   "backgroundColor": "hsl(7, 100%, 65%)",
                   "borderColor": "hsl(7, 100%, 65%)",
@@ -134,9 +107,6 @@ describe('Component theme config', () => {
             },
             "secondary": {
               "default": {
-                "backgroundColor": "hsl(0, 0%, 19%)",
-                "borderColor": "hsl(0, 0%, 19%)",
-                "color": "hsl(0, 0%, 100%)",
                 "palette": {
                   "backgroundColor": "hsl(0, 0%, 19%)",
                   "borderColor": "hsl(0, 0%, 19%)",
