@@ -24,7 +24,7 @@ export type ButtonComponent = {
       primary: {
         default: {
           palette: ButtonComponentPalette;
-        } & Partial<ButtonComponentPalette>;
+        };
         defaultInteract: {
           palette: ButtonComponentPalette;
         };
@@ -32,7 +32,7 @@ export type ButtonComponent = {
       secondary: {
         default: {
           palette: ButtonComponentPalette;
-        } & Partial<ButtonComponentPalette>;
+        };
         defaultInteract: {
           palette: ButtonComponentPalette;
         };
