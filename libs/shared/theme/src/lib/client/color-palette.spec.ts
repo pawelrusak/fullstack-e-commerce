@@ -29,12 +29,40 @@ describe('Color palette', () => {
         900: expect.any(String),
         950: expect.any(String),
       },
+      neutral: {
+        0: expect.any(String),
+        50: expect.any(String),
+        100: expect.any(String),
+        200: expect.any(String),
+        300: expect.any(String),
+        400: expect.any(String),
+        500: expect.any(String),
+        600: expect.any(String),
+        700: expect.any(String),
+        800: expect.any(String),
+        900: expect.any(String),
+        1000: expect.any(String),
+      },
     });
   });
 
   it('should match the specified values', () => {
     expect(colorPalette).toMatchInlineSnapshot(`
       {
+        "neutral": {
+          "0": "hsl(0, 0%, 100%)",
+          "100": "hsl(0, 0%, 92%)",
+          "1000": "hsl(0, 0%, 0%)",
+          "200": "hsl(0, 0%, 88%)",
+          "300": "hsl(0, 0%, 80%)",
+          "400": "hsl(0, 0%, 70%)",
+          "50": "hsl(0, 0%, 96%)",
+          "500": "hsl(0, 0%, 59%)",
+          "600": "hsl(0, 0%, 42%)",
+          "700": "hsl(0, 0%, 30%)",
+          "800": "hsl(0, 0%, 19%)",
+          "900": "hsl(0, 0%, 9%)",
+        },
         "primary": {
           "100": "hsl(7, 100%, 94%)",
           "200": "hsl(7, 100%, 89%)",
