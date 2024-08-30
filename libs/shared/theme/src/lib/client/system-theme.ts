@@ -24,7 +24,7 @@ export const color: AppColor = {
   tertiary: 'hsl(46, 99%, 65%)',
 
   surface: 'hsl(0, 0%, 100%)',
-  onSurface: 'hsl(0, 0%, 19%);',
+  onSurface: 'hsl(0, 0%, 19%)',
   onSurfaceVariant: colorPalette.primary[500],
   onSurfaceInteract: colorPalette.primary[500],
 
