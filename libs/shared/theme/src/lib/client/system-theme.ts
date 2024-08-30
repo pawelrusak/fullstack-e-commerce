@@ -8,6 +8,9 @@ import type {
   AppSpacesTheme,
 } from '@e-shop/types/theme';
 
+/**
+ * TODO: Add colors: danger, attention, success.
+ */
 export const color: AppColor = {
   primary: colorPalette.primary[500],
   onPrimary: colorPalette.neutral[0],
@@ -21,7 +24,7 @@ export const color: AppColor = {
   secondaryInteract: colorPalette.secondary[600],
   secondaryBorderInteract: colorPalette.secondary[600],
 
-  tertiary: 'hsl(46, 99%, 65%)',
+  tertiary: colorPalette.tertiary[300],
 
   surface: colorPalette.neutral[0],
   onSurface: colorPalette.neutral[800],
