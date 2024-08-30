@@ -87,7 +87,7 @@ describe('Base Theme', () => {
           "onSecondary": "hsl(0, 0%, 100%)",
           "onSecondarySurface": "hsl(0, 0%, 19%)",
           "onSecondarySurfaceVariant": "hsl(7, 100%, 65%)",
-          "onSurface": "hsl(0, 0%, 19%);",
+          "onSurface": "hsl(0, 0%, 19%)",
           "onSurfaceInteract": "hsl(7, 100%, 65%)",
           "onSurfaceVariant": "hsl(7, 100%, 65%)",
           "primary": "hsl(7, 100%, 65%)",
