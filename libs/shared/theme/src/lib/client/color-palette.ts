@@ -1,4 +1,4 @@
-// TODO: add deep freeze/seal
+// TODO: Use deep freeze
 export const colorPalette = {
   /**
    * The color palette was generated using the
@@ -35,62 +35,74 @@ export const colorPalette = {
      * Used in: app background.
      *
      * @HEX #ffffff
+     * @HSL 0, 0%, 100%
      */
     0: 'hsl(0, 0%, 100%)',
     /**
      * Used in: panel surface, cart table header surface, countdown section surface, etc.
      *
      * @HEX #f4f4f4
+     * @HSL 0, 0%, 96%
      */
     50: 'hsl(0, 0%, 96%)',
     /**
      * Used in: countdown secondary card surface, etc.
      *
      * @HEX #eaeaea
+     * @HSL 0, 0%, 92%
      */
     100: 'hsl(0, 0%, 92%)',
     /**
      * Used in: stock meter empty state surface, etc.
      *
      * @HEX #e0e0e0
+     * @HSL 0, 0%, 88%
      */
     200: 'hsl(0, 0%, 88%)',
     /**
      * Used in: navbar border, card border, etc.
      *
      * @HEX #cbcbcb
+     * @HSL 0, 0%, 80%
      */
     300: 'hsl(0, 0%, 80%)',
     /**
      * @HEX #b3b3b3
+     * @HSL 0, 0%, 70%
      */
     400: 'hsl(0, 0%, 70%)',
     /**
      * Used in: input border, etc.
      *
      * @HEX #979797
+     * @HSL 0, 0%, 59%
      */
     500: 'hsl(0, 0%, 59%)',
     /**
      * @HEX #6b6b6b
+     * @HSL 0, 0%, 42%
      */
     600: 'hsl(0, 0%, 42%)',
     /**
      * @HEX #4d4d4d
+     * @HSL 0, 0%, 30%
      */
     700: 'hsl(0, 0%, 30%)',
     /**
      * Used in: text, etc.
      *
      * @HEX #303030
+     * @HSL 0, 0%, 19%
      */
     800: 'hsl(0, 0%, 19%)',
     /**
      * @HEX #171717
+     * @HSL 0, 0%, 9%
      */
     900: 'hsl(0, 0%, 9%)',
     /**
      * @HEX #000000
+     * @HSL 0, 0%, 0%
      */
     1000: 'hsl(0, 0%, 0%)',
   },
