@@ -10,41 +10,41 @@ import type {
 
 export const color: AppColor = {
   primary: colorPalette.primary[500],
-  onPrimary: 'hsl(0, 0%, 100%)',
+  onPrimary: colorPalette.neutral[0],
   primaryBorder: colorPalette.primary[500],
   primaryInteract: colorPalette.primary[600],
   primaryBorderInteract: colorPalette.primary[600],
 
   secondary: colorPalette.secondary[500],
-  onSecondary: 'hsl(0, 0%, 100%)',
+  onSecondary: colorPalette.neutral[0],
   secondaryBorder: colorPalette.secondary[500],
   secondaryInteract: colorPalette.secondary[600],
   secondaryBorderInteract: colorPalette.secondary[600],
 
   tertiary: 'hsl(46, 99%, 65%)',
 
-  surface: 'hsl(0, 0%, 100%)',
-  onSurface: 'hsl(0, 0%, 19%)',
+  surface: colorPalette.neutral[0],
+  onSurface: colorPalette.neutral[800],
   onSurfaceVariant: colorPalette.primary[500],
   onSurfaceInteract: colorPalette.primary[500],
 
-  secondarySurface: 'hsl(0, 0%, 96%)',
-  onSecondarySurface: 'hsl(0, 0%, 19%)',
+  secondarySurface: colorPalette.neutral[50],
+  onSecondarySurface: colorPalette.neutral[800],
   onSecondarySurfaceVariant: colorPalette.primary[500],
 
-  background: 'hsl(0, 0%, 100%)',
-  onBackground: 'hsl(0, 0%, 19%)',
+  background: colorPalette.neutral[0],
+  onBackground: colorPalette.neutral[800],
   onBackgroundLink: colorPalette.primary[500],
   onBackgroundInteract: colorPalette.primary[500],
   onBackgroundLinkInteract: colorPalette.primary[600],
 
-  border: 'hsl(0, 0%, 96%)',
+  border: colorPalette.neutral[50],
   error: 'hsl(348, 83%, 47%)',
 
   // TODO: Remove deprecated "secondBackground" color after refactoring
-  secondBackground: 'hsl(0, 0%, 96%)',
+  secondBackground: colorPalette.neutral[50],
   // TODO: Remove deprecated "text" color after replacing with "onBackground" or "onSurface"
-  text: 'hsl(0, 0%, 19%)',
+  text: colorPalette.neutral[800],
 };
 
 export const fontFamily: AppFontFamily = {
