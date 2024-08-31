@@ -1,4 +1,4 @@
-import theme from './theme';
+import theme from './default.theme';
 
 describe('Theme config', () => {
   it('should have the correct structure and types', () => {
