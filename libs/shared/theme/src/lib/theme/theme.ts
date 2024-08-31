@@ -1,5 +1,11 @@
-import { color, fontFamily, fontWeight, space, screens } from './system.tokens';
-import { component } from './component.tokens';
+import {
+  color,
+  fontFamily,
+  fontWeight,
+  space,
+  screens,
+  component,
+} from './tokens';
 
 import type { DefaultTheme } from 'styled-components';
 

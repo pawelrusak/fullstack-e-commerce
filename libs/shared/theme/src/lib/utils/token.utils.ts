@@ -1,6 +1,6 @@
 import { get } from 'lodash';
 
-import theme from './theme';
+import { theme } from '../theme';
 
 import type { Paths } from '@e-shop/types';
 

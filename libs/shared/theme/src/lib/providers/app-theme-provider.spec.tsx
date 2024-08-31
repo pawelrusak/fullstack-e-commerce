@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import defaultTheme from './theme';
+import { theme as defaultTheme } from '../theme';
 import { AppThemeProvider } from './app-theme-provider';
 import { render, screen } from '@testing-library/react';
 

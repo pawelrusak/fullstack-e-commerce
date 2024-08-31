@@ -1,7 +1,7 @@
 'use client';
 
 import { ThemeProvider } from 'styled-components';
-import defaultTheme from './theme';
+import { theme as defaultTheme } from '../theme';
 import type { DefaultTheme } from 'styled-components';
 
 export type AppThemeProviderProps = {
