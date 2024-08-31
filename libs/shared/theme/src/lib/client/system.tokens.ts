@@ -1,4 +1,4 @@
-import { colorPalette } from './color-palette';
+import { colorPalette } from './color-palette.reference.tokens';
 
 import type {
   AppColor,

@@ -1,4 +1,4 @@
-import { component } from './component-theme';
+import { component } from './component.tokens';
 
 describe('Component theme config', () => {
   describe('Component Brand theme config', () => {

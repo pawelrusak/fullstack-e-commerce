@@ -1,4 +1,4 @@
-import { colorPalette } from './color-palette';
+import { colorPalette } from './color-palette.reference.tokens';
 
 describe('Color palette', () => {
   it('should have the correct structure and types', () => {

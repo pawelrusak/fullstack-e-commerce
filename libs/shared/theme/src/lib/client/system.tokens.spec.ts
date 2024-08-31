@@ -1,4 +1,4 @@
-import { color, fontFamily, fontWeight, space, screens } from './system-theme';
+import { color, fontFamily, fontWeight, space, screens } from './system.tokens';
 
 describe('Base Theme', () => {
   describe('Base Theme structure', () => {

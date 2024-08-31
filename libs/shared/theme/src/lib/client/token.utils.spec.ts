@@ -1,5 +1,5 @@
 import { setupGetThemeToken, getComponentThemeToken } from './token.utils';
-import { component } from './component-theme';
+import { component } from './component.tokens';
 import { faker } from '@faker-js/faker';
 
 describe('Theme token utils', () => {

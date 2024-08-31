@@ -1,5 +1,5 @@
-import { colorPalette } from './color-palette';
-import { color, fontFamily } from './system-theme';
+import { colorPalette } from './color-palette.reference.tokens';
+import { color, fontFamily } from './system.tokens';
 
 import type { AppComponent } from '@e-shop/types/theme';
 

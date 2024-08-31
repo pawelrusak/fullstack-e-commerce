@@ -1,5 +1,5 @@
-import { color, fontFamily, fontWeight, space, screens } from './system-theme';
-import { component } from './component-theme';
+import { color, fontFamily, fontWeight, space, screens } from './system.tokens';
+import { component } from './component.tokens';
 
 import type { DefaultTheme } from 'styled-components';
 
