@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Theme config should match the specified values 1`] = `
+exports[`Default Theme should match the specified values 1`] = `
 {
   "color": {
     "background": "hsl(0, 0%, 100%)",

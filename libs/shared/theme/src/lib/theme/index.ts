@@ -1,3 +1,3 @@
 'use client';
 
-export { default as theme } from './default.theme';
+export { defaultTheme as theme } from './default.theme';

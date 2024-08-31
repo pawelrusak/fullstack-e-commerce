@@ -1,8 +1,8 @@
-import theme from './default.theme';
+import { defaultTheme } from './default.theme';
 
-describe('Theme config', () => {
+describe('Default Theme', () => {
   it('should have the correct structure and types', () => {
-    expect(theme).toEqual({
+    expect(defaultTheme).toEqual({
       color: expect.any(Object),
       fontFamily: expect.any(Object),
       fontWeight: expect.any(Object),
@@ -13,6 +13,6 @@ describe('Theme config', () => {
   });
 
   it('should match the specified values', () => {
-    expect(theme).toMatchSnapshot();
+    expect(defaultTheme).toMatchSnapshot();
   });
 });

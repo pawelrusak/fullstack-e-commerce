@@ -9,7 +9,7 @@ import {
 
 import type { DefaultTheme } from 'styled-components';
 
-const theme: DefaultTheme = {
+export const defaultTheme: DefaultTheme = {
   color,
   fontFamily,
   fontWeight,
@@ -17,5 +17,3 @@ const theme: DefaultTheme = {
   screens,
   component,
 };
-
-export default theme;
