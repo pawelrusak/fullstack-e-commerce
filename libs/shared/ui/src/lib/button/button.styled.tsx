@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { theme, getComponentThemeToken as getToken } from '@e-shop/theme';
-import type { ButtonComponentPalette } from '@e-shop/types/theme';
+import type { ButtonComponentPalette } from '@e-shop/theme/types';
 
 export type ButtonProps = {
   variant?: 'outline' | 'solid';
