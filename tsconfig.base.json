@@ -26,6 +26,7 @@
       "@e-shop/test-utils": ["libs/shared/test-utils/src/index.ts"],
       "@e-shop/theme": ["libs/shared/theme/src/index.ts"],
       "@e-shop/theme/server": ["libs/shared/theme/src/server.ts"],
+      "@e-shop/theme/types": ["libs/shared/types/src/theme.ts"],
       "@e-shop/types": ["libs/shared/types/src/index.ts"],
       "@e-shop/types/request": ["libs/shared/types/src/request.ts"],
       "@e-shop/types/response": ["libs/shared/types/src/response.ts"],
