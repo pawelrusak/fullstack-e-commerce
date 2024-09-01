@@ -5,8 +5,8 @@ import type {
   AppFontFamily,
   AppFontWeight,
   AppScreens,
-  AppSpacesTheme,
-} from '@e-shop/types/theme';
+  AppSpace,
+} from './system.tokens.types';
 
 /**
  * TODO: Add colors: danger, attention, success.
@@ -65,7 +65,7 @@ export const fontWeight: AppFontWeight = {
   bold: 700,
 };
 
-export const space: AppSpacesTheme['space'] = [0, 0.2, 0.4, 0.8, 1.6, 2.4, 3.2];
+export const space: AppSpace = [0, 0.2, 0.4, 0.8, 1.6, 2.4, 3.2];
 
 export const screens: AppScreens = {
   sm: '640px',

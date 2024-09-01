@@ -1,7 +1,7 @@
 import { colorPalette } from './color-palette.reference.tokens';
 import { color, fontFamily } from './system.tokens';
 
-import type { AppComponent } from '@e-shop/types/theme';
+import type { AppComponent } from './component.tokens.types';
 
 export const component: AppComponent = {
   /**
