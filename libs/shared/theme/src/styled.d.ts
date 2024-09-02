@@ -1,6 +1,6 @@
 import 'styled-components';
 
-import type { AppTheme } from '@e-shop/theme/types';
+import type { AppTheme } from './types';
 
 declare module 'styled-components' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
