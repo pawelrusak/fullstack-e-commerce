@@ -1,11 +1,23 @@
 // TODO: Use deep freeze
 export const colorPalette = {
   primary: {
+    /**
+     * Used in design: FAQ Accordion panel surface, discount badge etc.
+     *
+     * @HEX #ffefed
+     * @HSL 7, 100%, 96%
+     */
     50: 'hsl(7, 100%, 96%)',
     100: 'hsl(7, 100%, 91%)',
     200: 'hsl(7, 100%, 86%)',
     300: 'hsl(7, 100%, 81%)',
     400: 'hsl(7, 100%, 73%)',
+    /**
+     * Used in design: button variant, nabvar surface variant, panel variant, link, highlighted text etc.
+     *
+     * @HEX #ff624c
+     * @HSL 7, 100%, 65%
+     */
     500: 'hsl(7, 100%, 65%)',
     600: 'hsl(7, 100%, 59%)',
     700: 'hsl(7, 100%, 53%)',
@@ -14,11 +26,23 @@ export const colorPalette = {
     950: 'hsl(7, 100%, 35%)',
   },
   secondary: {
+    /**
+     * Used in design: Outlined secondary variant disabled buttons etc.
+     *
+     * @HEX #cbcbcb
+     * @HSL 0, 0%, 80%
+     */
     50: 'hsl(0, 0%, 80%)',
     100: 'hsl(0, 0%, 72%)',
     200: 'hsl(0, 0%, 64%)',
     300: 'hsl(0, 0%, 55%)',
     400: 'hsl(0, 0%, 37%)',
+    /**
+     * Used in design: panel, button, and footer variants.
+     *
+     * @HEX #303030
+     * @HSL 0, 0%, 19%
+     */
     500: 'hsl(0, 0%, 19%)',
     600: 'hsl(0, 0%, 16%)',
     700: 'hsl(0, 0%, 14%)',
@@ -30,6 +54,12 @@ export const colorPalette = {
     50: 'hsl(48, 100%, 96%)',
     100: 'hsl(47, 100%, 89%)',
     200: 'hsl(48, 98%, 77%)',
+    /**
+     * Used in design: rating star, etc.
+     *
+     * @HEX #fed550
+     * @HSL 46, 99%, 65%
+     */
     300: 'hsl(46, 99%, 65%)',
     400: 'hsl(43, 98%, 56%)',
     500: 'hsl(38, 94%, 50%)',
@@ -41,35 +71,35 @@ export const colorPalette = {
   },
   neutral: {
     /**
-     * Used in: app background.
+     * Used in design: app background.
      *
      * @HEX #ffffff
      * @HSL 0, 0%, 100%
      */
     0: 'hsl(0, 0%, 100%)',
     /**
-     * Used in: panel surface, cart table header surface, countdown section surface, etc.
+     * Used in design: panel surface, cart table header surface, countdown section surface, etc.
      *
      * @HEX #f4f4f4
      * @HSL 0, 0%, 96%
      */
     50: 'hsl(0, 0%, 96%)',
     /**
-     * Used in: countdown secondary card surface, etc.
+     * Used in design: countdown secondary card surface, etc.
      *
      * @HEX #eaeaea
      * @HSL 0, 0%, 92%
      */
     100: 'hsl(0, 0%, 92%)',
     /**
-     * Used in: stock meter empty state surface, etc.
+     * Used in design: stock meter empty state surface, etc.
      *
      * @HEX #e0e0e0
      * @HSL 0, 0%, 88%
      */
     200: 'hsl(0, 0%, 88%)',
     /**
-     * Used in: navbar border, card border, etc.
+     * Used in design: navbar border, card border, etc.
      *
      * @HEX #cbcbcb
      * @HSL 0, 0%, 80%
@@ -81,7 +111,7 @@ export const colorPalette = {
      */
     400: 'hsl(0, 0%, 70%)',
     /**
-     * Used in: input border, etc.
+     * Used in design: input border, etc.
      *
      * @HEX #979797
      * @HSL 0, 0%, 59%
@@ -98,7 +128,7 @@ export const colorPalette = {
      */
     700: 'hsl(0, 0%, 30%)',
     /**
-     * Used in: text, etc.
+     * Used in design: text, etc.
      *
      * @HEX #303030
      * @HSL 0, 0%, 19%
