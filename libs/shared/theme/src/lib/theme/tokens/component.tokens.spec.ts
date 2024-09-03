@@ -99,8 +99,8 @@ describe('Component theme config', () => {
               },
               "defaultInteract": {
                 "palette": {
-                  "backgroundColor": "hsl(7, 86%, 51%)",
-                  "borderColor": "hsl(7, 86%, 51%)",
+                  "backgroundColor": "hsl(7, 100%, 59%)",
+                  "borderColor": "hsl(7, 100%, 59%)",
                   "color": "hsl(0, 0%, 100%)",
                 },
               },
