@@ -43,7 +43,8 @@ export const Button = styled.button<ButtonProps>`
   line-height: 3rem;
   border-radius: 1rem;
   cursor: pointer;
-  border: 1px solid transparent;
+  border-width: 1px;
+  border-style: solid;
   ${({ colorVariant = 'primary' }) => defaultPalette[colorVariant]}
 
   ${({ fullWidth }) =>
