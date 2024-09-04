@@ -26,16 +26,21 @@ export type AppSpace = StyledSystemTheme['space'];
 export type AppColor = {
   primary: string;
   onPrimary: string;
-  // For focus, hover states etc.
   primaryBorder: string;
   primaryInteract: string;
   primaryBorderInteract: string;
+  onPrimaryDisabled: string;
+  primaryDisabled: string;
+  primaryBorderDisabled: string;
 
   secondary: string;
   onSecondary: string;
   secondaryBorder: string;
   secondaryInteract: string;
   secondaryBorderInteract: string;
+  onSecondaryDisabled: string;
+  secondaryDisabled: string;
+  secondaryBorderDisabled: string;
 
   tertiary: string;
 

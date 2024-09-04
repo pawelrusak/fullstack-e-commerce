@@ -17,12 +17,18 @@ export const color: AppColor = {
   primaryBorder: colorPalette.primary[500],
   primaryInteract: colorPalette.primary[600],
   primaryBorderInteract: colorPalette.primary[600],
+  onPrimaryDisabled: colorPalette.neutral[0],
+  primaryDisabled: colorPalette.primary[300],
+  primaryBorderDisabled: colorPalette.primary[300],
 
   secondary: colorPalette.secondary[500],
   onSecondary: colorPalette.neutral[0],
   secondaryBorder: colorPalette.secondary[500],
   secondaryInteract: colorPalette.secondary[600],
   secondaryBorderInteract: colorPalette.secondary[600],
+  onSecondaryDisabled: colorPalette.neutral[0],
+  secondaryDisabled: colorPalette.secondary[50],
+  secondaryBorderDisabled: colorPalette.secondary[50],
 
   tertiary: colorPalette.tertiary[300],
 
