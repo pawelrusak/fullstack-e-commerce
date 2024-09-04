@@ -59,6 +59,13 @@ describe('Component theme config', () => {
                 borderColor: expect.any(String),
               },
             },
+            defaultDisabled: {
+              palette: {
+                color: expect.any(String),
+                backgroundColor: expect.any(String),
+                borderColor: expect.any(String),
+              },
+            },
           },
           secondary: {
             default: {
@@ -72,6 +79,13 @@ describe('Component theme config', () => {
               palette: {
                 backgroundColor: expect.any(String),
                 color: expect.any(String),
+                borderColor: expect.any(String),
+              },
+            },
+            defaultDisabled: {
+              palette: {
+                color: expect.any(String),
+                backgroundColor: expect.any(String),
                 borderColor: expect.any(String),
               },
             },
@@ -97,6 +111,13 @@ describe('Component theme config', () => {
                   "color": "hsl(0, 0%, 100%)",
                 },
               },
+              "defaultDisabled": {
+                "palette": {
+                  "backgroundColor": "hsl(7, 100%, 81%)",
+                  "borderColor": "hsl(7, 100%, 81%)",
+                  "color": "hsl(0, 0%, 100%)",
+                },
+              },
               "defaultInteract": {
                 "palette": {
                   "backgroundColor": "hsl(7, 100%, 59%)",
@@ -110,6 +131,13 @@ describe('Component theme config', () => {
                 "palette": {
                   "backgroundColor": "hsl(0, 0%, 19%)",
                   "borderColor": "hsl(0, 0%, 19%)",
+                  "color": "hsl(0, 0%, 100%)",
+                },
+              },
+              "defaultDisabled": {
+                "palette": {
+                  "backgroundColor": "hsl(0, 0%, 80%)",
+                  "borderColor": "hsl(0, 0%, 80%)",
                   "color": "hsl(0, 0%, 100%)",
                 },
               },

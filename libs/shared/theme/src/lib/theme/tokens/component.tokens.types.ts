@@ -28,12 +28,18 @@ export type ButtonComponent = {
         defaultInteract: {
           palette: ButtonComponentPalette;
         };
+        defaultDisabled: {
+          palette: ButtonComponentPalette;
+        };
       };
       secondary: {
         default: {
           palette: ButtonComponentPalette;
         };
         defaultInteract: {
+          palette: ButtonComponentPalette;
+        };
+        defaultDisabled: {
           palette: ButtonComponentPalette;
         };
       };

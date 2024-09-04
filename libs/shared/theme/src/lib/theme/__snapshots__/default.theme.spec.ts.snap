@@ -61,6 +61,13 @@ exports[`Default Theme should match the specified values 1`] = `
               "color": "hsl(0, 0%, 100%)",
             },
           },
+          "defaultDisabled": {
+            "palette": {
+              "backgroundColor": "hsl(7, 100%, 81%)",
+              "borderColor": "hsl(7, 100%, 81%)",
+              "color": "hsl(0, 0%, 100%)",
+            },
+          },
           "defaultInteract": {
             "palette": {
               "backgroundColor": "hsl(7, 100%, 59%)",
@@ -74,6 +81,13 @@ exports[`Default Theme should match the specified values 1`] = `
             "palette": {
               "backgroundColor": "hsl(0, 0%, 19%)",
               "borderColor": "hsl(0, 0%, 19%)",
+              "color": "hsl(0, 0%, 100%)",
+            },
+          },
+          "defaultDisabled": {
+            "palette": {
+              "backgroundColor": "hsl(0, 0%, 80%)",
+              "borderColor": "hsl(0, 0%, 80%)",
               "color": "hsl(0, 0%, 100%)",
             },
           },
