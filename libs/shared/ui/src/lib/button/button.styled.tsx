@@ -27,6 +27,11 @@ const defaultInteractPalette: PaletteVariant = {
   secondary: getToken('button.variant.secondary.defaultInteract.palette'),
 };
 
+const defaultDisabledPalette: PaletteVariant = {
+  primary: getToken('button.variant.primary.defaultDisabled.palette'),
+  secondary: getToken('button.variant.secondary.defaultDisabled.palette'),
+};
+
 const outlineFontColors: ColorVariant = {
   primary: theme.color.primary,
   secondary: theme.color.text,
@@ -66,8 +71,7 @@ export const Button = styled.button<ButtonProps>`
   &:disabled,
   &[aria-disabled='true'] {
     cursor: default;
-    background: ${DISABLED_COLOR};
-    border-color: ${DISABLED_COLOR};
+    ${({ colorVariant = 'primary' }) => defaultDisabledPalette[colorVariant]}
     pointer-events: none;
   }
 
@@ -81,6 +85,7 @@ export const Button = styled.button<ButtonProps>`
       &[aria-disabled='true'] {
         color: ${DISABLED_COLOR};
         background: ${({ theme }) => theme.color.background};
+        border-color: ${DISABLED_COLOR};
         pointer-events: none;
       }
     `}
