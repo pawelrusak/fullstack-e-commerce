@@ -7,23 +7,23 @@ export default {
   args: {
     children: 'Shop Now',
   },
+  argTypes: {
+    colorVariant: {
+      control: 'select',
+      options: ['primary', 'secondary'],
+    },
+  },
 } satisfies Meta<typeof Button>;
 
 type Story = StoryObj<typeof Button>;
 
-export const SolidPrimary: Story = {
+export const Solid: Story = {
   args: {},
 };
 
 export const SolidFullWidth: Story = {
   args: {
     fullWidth: true,
-  },
-};
-
-export const SolidSecondary: Story = {
-  args: {
-    colorVariant: 'secondary',
   },
 };
 
@@ -36,13 +36,6 @@ export const SolidDisabled: Story = {
 export const Outline: Story = {
   args: {
     variant: 'outline',
-  },
-};
-
-export const OutlineSecondary: Story = {
-  args: {
-    variant: 'outline',
-    colorVariant: 'secondary',
   },
 };
 
