@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import { theme as defaultTheme } from '../theme';
-import { AppThemeProvider } from './app-theme-provider';
+import { AppThemeProvider } from './app-theme.provider';
 import { render, screen } from '@testing-library/react';
 
 jest.mock('styled-components', () => ({
