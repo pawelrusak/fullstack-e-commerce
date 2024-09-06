@@ -1,10 +1,10 @@
-import { GlobalStyle, AppThemeProvider } from '@e-shop/theme';
+import { GlobalStyle, AppThemeProvider, theme } from '@e-shop/theme';
 import { Decorator } from '@storybook/react';
 
 export const GlobalStyleDecorator: Decorator = (Story) => {
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle theme={theme} />
       <Story />
     </>
   );
