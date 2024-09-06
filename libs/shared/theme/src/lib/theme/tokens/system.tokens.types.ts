@@ -24,6 +24,9 @@ export type AppSpace = StyledSystemTheme['space'];
  * - Use `Variant` for alternative color for others related elements.
  */
 export type AppColor = {
+  /**
+   * The primary color for the application.
+   */
   primary: string;
   onPrimary: string;
   primaryBorder: string;
@@ -33,6 +36,16 @@ export type AppColor = {
   primaryDisabled: string;
   primaryBorderDisabled: string;
 
+  primaryOutline: string;
+  onPrimaryOutline: string;
+  primaryOutlineBorder: string;
+  onPrimaryOutlineInteract: string;
+  primaryOutlineInteract: string;
+  primaryOutlineBorderInteract: string;
+
+  /**
+   * The secondary color for the application.
+   */
   secondary: string;
   onSecondary: string;
   secondaryBorder: string;
@@ -42,6 +55,16 @@ export type AppColor = {
   secondaryDisabled: string;
   secondaryBorderDisabled: string;
 
+  secondaryOutline: string;
+  onSecondaryOutline: string;
+  secondaryOutlineBorder: string;
+  onSecondaryOutlineInteract: string;
+  secondaryOutlineInteract: string;
+  secondaryOutlineBorderInteract: string;
+
+  /**
+   * The tertiary color for the application.
+   */
   tertiary: string;
 
   /**
