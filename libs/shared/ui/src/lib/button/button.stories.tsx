@@ -8,6 +8,10 @@ export default {
     children: 'Shop Now',
   },
   argTypes: {
+    variant: {
+      control: 'select',
+      options: ['solid', 'outline'],
+    },
     colorVariant: {
       control: 'select',
       options: ['primary', 'secondary'],
