@@ -15,15 +15,18 @@ const GlobalStyle = createGlobalStyle`
   html {
     // css happy rems
     font-size: 62.5%;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
   }
 
   body {
     font-size: 1.6rem;
+
+    color: ${({ theme }) => theme.color.onBackground};
+    background-color: ${({ theme }) => theme.color.background};
+    font-family: ${({ theme }) => theme.fontFamily.primary};
+    font-weight: ${({ theme }) => theme.fontWeight.regular};
   }
 
-  /* @todo Move this to component  */
+  /* TODO: Move this to component for hermetization */
   .products-carousel {
     display: flex;
   }
