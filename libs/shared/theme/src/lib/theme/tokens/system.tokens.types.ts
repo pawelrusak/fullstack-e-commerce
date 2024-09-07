@@ -42,6 +42,9 @@ export type AppColor = {
   onPrimaryOutlineInteract: string;
   primaryOutlineInteract: string;
   primaryOutlineBorderInteract: string;
+  primaryOutlineDisabled: string;
+  onPrimaryOutlineDisabled: string;
+  primaryOutlineBorderDisabled: string;
 
   /**
    * The secondary color for the application.
@@ -61,6 +64,9 @@ export type AppColor = {
   onSecondaryOutlineInteract: string;
   secondaryOutlineInteract: string;
   secondaryOutlineBorderInteract: string;
+  secondaryOutlineDisabled: string;
+  onSecondaryOutlineDisabled: string;
+  secondaryOutlineBorderDisabled: string;
 
   /**
    * The tertiary color for the application.

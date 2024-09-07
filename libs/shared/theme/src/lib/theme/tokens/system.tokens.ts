@@ -27,6 +27,9 @@ export const color: AppColor = {
   onPrimaryOutlineInteract: colorPalette.neutral[0],
   primaryOutlineInteract: colorPalette.primary[600],
   primaryOutlineBorderInteract: colorPalette.primary[600],
+  primaryOutlineDisabled: 'transparent',
+  onPrimaryOutlineDisabled: colorPalette.neutral[300],
+  primaryOutlineBorderDisabled: colorPalette.neutral[300],
 
   secondary: colorPalette.secondary[500],
   onSecondary: colorPalette.neutral[0],
@@ -43,6 +46,9 @@ export const color: AppColor = {
   onSecondaryOutlineInteract: colorPalette.neutral[0],
   secondaryOutlineInteract: colorPalette.secondary[600],
   secondaryOutlineBorderInteract: colorPalette.secondary[600],
+  secondaryOutlineDisabled: 'transparent',
+  onSecondaryOutlineDisabled: colorPalette.neutral[300],
+  secondaryOutlineBorderDisabled: colorPalette.neutral[300],
 
   tertiary: colorPalette.tertiary[300],
 
