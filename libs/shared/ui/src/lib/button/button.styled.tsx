@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { theme, getComponentThemeToken as getToken } from '@e-shop/theme';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import type { ButtonComponentPalette } from '@e-shop/theme/types';
 
 export type ButtonProps = {
@@ -9,8 +9,6 @@ export type ButtonProps = {
 };
 
 const DISABLED_COLOR = '#cbcbcb';
-
-type ColorVariant = Record<Required<ButtonProps>['colorVariant'], string>;
 
 type PaletteVariant = Record<
   Required<ButtonProps>['colorVariant'],
@@ -32,9 +30,14 @@ const defaultDisabledPalette: PaletteVariant = {
   secondary: getToken('button.variant.secondary.defaultDisabled.palette'),
 };
 
-const outlineFontColors: ColorVariant = {
-  primary: theme.color.primary,
-  secondary: theme.color.text,
+const outlinePalette: PaletteVariant = {
+  primary: getToken('button.variant.primary.outline.palette'),
+  secondary: getToken('button.variant.secondary.outline.palette'),
+};
+
+const outlineInteractPalette: PaletteVariant = {
+  primary: getToken('button.variant.primary.outlineInteract.palette'),
+  secondary: getToken('button.variant.secondary.outlineInteract.palette'),
 };
 
 export const Button = styled.button<ButtonProps>`
@@ -78,8 +81,11 @@ export const Button = styled.button<ButtonProps>`
   ${({ variant = 'solid', colorVariant = 'primary' }) =>
     variant === 'outline' &&
     css`
-      background: ${({ theme }) => theme.color.background};
-      color: ${outlineFontColors[colorVariant]};
+      ${outlinePalette[colorVariant]};
+
+      $:is(:hover, :focus) {
+        ${outlineInteractPalette[colorVariant]}
+      }
 
       &:disabled,
       &[aria-disabled='true'] {
