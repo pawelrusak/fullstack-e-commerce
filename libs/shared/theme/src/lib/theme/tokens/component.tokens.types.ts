@@ -31,6 +31,12 @@ export type ButtonComponent = {
         defaultDisabled: {
           palette: ButtonComponentPalette;
         };
+        outline: {
+          palette: ButtonComponentPalette;
+        };
+        outlineInteract: {
+          palette: ButtonComponentPalette;
+        };
       };
       secondary: {
         default: {
@@ -40,6 +46,12 @@ export type ButtonComponent = {
           palette: ButtonComponentPalette;
         };
         defaultDisabled: {
+          palette: ButtonComponentPalette;
+        };
+        outline: {
+          palette: ButtonComponentPalette;
+        };
+        outlineInteract: {
           palette: ButtonComponentPalette;
         };
       };

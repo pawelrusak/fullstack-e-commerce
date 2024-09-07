@@ -66,6 +66,20 @@ describe('Component theme config', () => {
                 borderColor: expect.any(String),
               },
             },
+            outline: {
+              palette: {
+                color: expect.any(String),
+                backgroundColor: expect.any(String),
+                borderColor: expect.any(String),
+              },
+            },
+            outlineInteract: {
+              palette: {
+                color: expect.any(String),
+                backgroundColor: expect.any(String),
+                borderColor: expect.any(String),
+              },
+            },
           },
           secondary: {
             default: {
@@ -83,6 +97,20 @@ describe('Component theme config', () => {
               },
             },
             defaultDisabled: {
+              palette: {
+                color: expect.any(String),
+                backgroundColor: expect.any(String),
+                borderColor: expect.any(String),
+              },
+            },
+            outline: {
+              palette: {
+                color: expect.any(String),
+                backgroundColor: expect.any(String),
+                borderColor: expect.any(String),
+              },
+            },
+            outlineInteract: {
               palette: {
                 color: expect.any(String),
                 backgroundColor: expect.any(String),
@@ -125,6 +153,20 @@ describe('Component theme config', () => {
                   "color": "hsl(0, 0%, 100%)",
                 },
               },
+              "outline": {
+                "palette": {
+                  "backgroundColor": "transparent",
+                  "borderColor": "hsl(7, 100%, 65%)",
+                  "color": "hsl(7, 100%, 65%)",
+                },
+              },
+              "outlineInteract": {
+                "palette": {
+                  "backgroundColor": "hsl(7, 100%, 59%)",
+                  "borderColor": "hsl(7, 100%, 59%)",
+                  "color": "hsl(0, 0%, 100%)",
+                },
+              },
             },
             "secondary": {
               "default": {
@@ -142,6 +184,20 @@ describe('Component theme config', () => {
                 },
               },
               "defaultInteract": {
+                "palette": {
+                  "backgroundColor": "hsl(0, 0%, 16%)",
+                  "borderColor": "hsl(0, 0%, 16%)",
+                  "color": "hsl(0, 0%, 100%)",
+                },
+              },
+              "outline": {
+                "palette": {
+                  "backgroundColor": "transparent",
+                  "borderColor": "hsl(0, 0%, 19%)",
+                  "color": "hsl(0, 0%, 19%)",
+                },
+              },
+              "outlineInteract": {
                 "palette": {
                   "backgroundColor": "hsl(0, 0%, 16%)",
                   "borderColor": "hsl(0, 0%, 16%)",
