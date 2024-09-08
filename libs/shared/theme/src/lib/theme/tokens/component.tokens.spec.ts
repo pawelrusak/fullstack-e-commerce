@@ -80,6 +80,13 @@ describe('Component theme config', () => {
                 borderColor: expect.any(String),
               },
             },
+            outlineDisabled: {
+              palette: {
+                color: expect.any(String),
+                backgroundColor: expect.any(String),
+                borderColor: expect.any(String),
+              },
+            },
           },
           secondary: {
             default: {
@@ -111,6 +118,13 @@ describe('Component theme config', () => {
               },
             },
             outlineInteract: {
+              palette: {
+                color: expect.any(String),
+                backgroundColor: expect.any(String),
+                borderColor: expect.any(String),
+              },
+            },
+            outlineDisabled: {
               palette: {
                 color: expect.any(String),
                 backgroundColor: expect.any(String),
@@ -160,6 +174,13 @@ describe('Component theme config', () => {
                   "color": "hsl(7, 100%, 65%)",
                 },
               },
+              "outlineDisabled": {
+                "palette": {
+                  "backgroundColor": "transparent",
+                  "borderColor": "hsl(0, 0%, 80%)",
+                  "color": "hsl(0, 0%, 80%)",
+                },
+              },
               "outlineInteract": {
                 "palette": {
                   "backgroundColor": "hsl(7, 100%, 59%)",
@@ -195,6 +216,13 @@ describe('Component theme config', () => {
                   "backgroundColor": "transparent",
                   "borderColor": "hsl(0, 0%, 19%)",
                   "color": "hsl(0, 0%, 19%)",
+                },
+              },
+              "outlineDisabled": {
+                "palette": {
+                  "backgroundColor": "transparent",
+                  "borderColor": "hsl(0, 0%, 80%)",
+                  "color": "hsl(0, 0%, 80%)",
                 },
               },
               "outlineInteract": {

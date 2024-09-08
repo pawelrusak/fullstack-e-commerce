@@ -61,6 +61,13 @@ export const component: AppComponent = {
             borderColor: color.primaryOutlineBorderInteract,
           },
         },
+        outlineDisabled: {
+          palette: {
+            color: color.onPrimaryOutlineDisabled,
+            backgroundColor: color.primaryOutlineDisabled,
+            borderColor: color.primaryOutlineBorderDisabled,
+          },
+        },
       },
       secondary: {
         default: {
@@ -96,6 +103,13 @@ export const component: AppComponent = {
             color: color.onSecondaryOutlineInteract,
             backgroundColor: color.secondaryOutlineInteract,
             borderColor: color.secondaryOutlineBorderInteract,
+          },
+        },
+        outlineDisabled: {
+          palette: {
+            color: color.onSecondaryOutlineDisabled,
+            backgroundColor: color.secondaryOutlineDisabled,
+            borderColor: color.secondaryOutlineBorderDisabled,
           },
         },
       },
