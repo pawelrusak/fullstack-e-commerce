@@ -1,17 +1,29 @@
 import styled, { css } from 'styled-components';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import type { ButtonComponentPalette } from '@e-shop/theme/types';
+import type { ObjectValues } from '@e-shop/types';
+
+export const BUTTON_VARIANT = {
+  OUTLINE: 'outline',
+  SOLID: 'solid',
+} as const;
+
+export type ButtonVariant = ObjectValues<typeof BUTTON_VARIANT>;
+
+export const BUTTON_COLOR_VARIANT = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+} as const;
+
+export type ButtonColorVariant = ObjectValues<typeof BUTTON_COLOR_VARIANT>;
 
 export type ButtonProps = {
-  variant?: 'outline' | 'solid';
-  colorVariant?: 'primary' | 'secondary';
+  variant?: ButtonVariant;
+  colorVariant?: ButtonColorVariant;
   fullWidth?: boolean;
 };
 
-type PaletteVariant = Record<
-  Required<ButtonProps>['colorVariant'],
-  ButtonComponentPalette
->;
+type PaletteVariant = Record<ButtonColorVariant, ButtonComponentPalette>;
 
 const defaultPalette: PaletteVariant = {
   primary: getToken('button.variant.primary.default.palette'),
@@ -56,7 +68,8 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   border-width: 1px;
   border-style: solid;
-  ${({ colorVariant = 'primary' }) => defaultPalette[colorVariant]}
+  ${({ colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
+    defaultPalette[colorVariant]}
 
   ${({ fullWidth }) =>
     fullWidth &&
@@ -67,7 +80,8 @@ export const Button = styled.button<ButtonProps>`
     `}
 
   &:is(:hover, :focus) {
-    ${({ colorVariant = 'primary' }) => defaultInteractPalette[colorVariant]}
+    ${({ colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
+      defaultInteractPalette[colorVariant]}
   }
 
   &:focus {
@@ -77,12 +91,13 @@ export const Button = styled.button<ButtonProps>`
   &:disabled,
   &[aria-disabled='true'] {
     cursor: default;
-    ${({ colorVariant = 'primary' }) => defaultDisabledPalette[colorVariant]}
+    ${({ colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
+      defaultDisabledPalette[colorVariant]}
     pointer-events: none;
   }
 
-  ${({ variant = 'solid', colorVariant = 'primary' }) =>
-    variant === 'outline' &&
+  ${({ variant, colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
+    variant === BUTTON_VARIANT.OUTLINE &&
     css`
       ${outlinePalette[colorVariant]};
 
