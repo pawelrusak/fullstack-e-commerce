@@ -8,8 +8,6 @@ export type ButtonProps = {
   fullWidth?: boolean;
 };
 
-const DISABLED_COLOR = '#cbcbcb';
-
 type PaletteVariant = Record<
   Required<ButtonProps>['colorVariant'],
   ButtonComponentPalette
@@ -38,6 +36,11 @@ const outlinePalette: PaletteVariant = {
 const outlineInteractPalette: PaletteVariant = {
   primary: getToken('button.variant.primary.outlineInteract.palette'),
   secondary: getToken('button.variant.secondary.outlineInteract.palette'),
+};
+
+const outlineDisabledPalette: PaletteVariant = {
+  primary: getToken('button.variant.primary.outlineDisabled.palette'),
+  secondary: getToken('button.variant.secondary.outlineDisabled.palette'),
 };
 
 export const Button = styled.button<ButtonProps>`
@@ -89,9 +92,7 @@ export const Button = styled.button<ButtonProps>`
 
       &:disabled,
       &[aria-disabled='true'] {
-        color: ${DISABLED_COLOR};
-        background: ${({ theme }) => theme.color.background};
-        border-color: ${DISABLED_COLOR};
+        ${outlineDisabledPalette[colorVariant]}
         pointer-events: none;
       }
     `}
