@@ -42,6 +42,7 @@ describe('Component theme config', () => {
       expect(button).toEqual({
         base: {
           fontFamily: expect.any(String),
+          fontWeight: expect.any(Number),
         },
         variant: {
           primary: {
@@ -143,6 +144,7 @@ describe('Component theme config', () => {
         {
           "base": {
             "fontFamily": "Montserrat, sans-serif",
+            "fontWeight": 700,
           },
           "variant": {
             "primary": {

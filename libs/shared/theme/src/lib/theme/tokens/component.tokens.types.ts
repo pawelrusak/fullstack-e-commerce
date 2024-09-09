@@ -19,7 +19,7 @@ export type ButtonComponentPalette = AvailableComponentToken<
 
 export type ButtonComponent = {
   button: {
-    base: AvailableComponentToken<'fontFamily'>;
+    base: AvailableComponentToken<'fontFamily' | 'fontWeight'>;
     variant: {
       primary: {
         default: {

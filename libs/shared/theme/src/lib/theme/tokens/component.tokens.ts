@@ -1,5 +1,5 @@
 import { colorPalette } from './color-palette.reference.tokens';
-import { color, fontFamily } from './system.tokens';
+import { color, fontFamily, fontWeight } from './system.tokens';
 
 import type { AppComponent } from './component.tokens.types';
 
@@ -23,6 +23,7 @@ export const component: AppComponent = {
   button: {
     base: {
       fontFamily: fontFamily.primary,
+      fontWeight: fontWeight.bold,
     },
     variant: {
       primary: {
