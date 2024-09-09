@@ -60,7 +60,7 @@ export const Button = styled.button<ButtonProps>`
   display: inline-block;
   box-sizing: border-box;
   font-family: ${getToken('button.base.fontFamily')};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-weight: ${getToken('button.base.fontWeight')};
   font-size: 2rem;
   padding: 1.5rem 3.9rem;
   line-height: 3rem;
