@@ -1,5 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './button.component';
+import {
+  Button,
+  BUTTON_COLOR_VARIANT,
+  BUTTON_VARIANT,
+} from './button.component';
 
 export default {
   component: Button,
@@ -10,11 +14,11 @@ export default {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['solid', 'outline'],
+      options: [BUTTON_VARIANT.SOLID, BUTTON_VARIANT.OUTLINE],
     },
     colorVariant: {
       control: 'select',
-      options: ['primary', 'secondary'],
+      options: [BUTTON_COLOR_VARIANT.PRIMARY, BUTTON_COLOR_VARIANT.SECONDARY],
     },
   },
 } satisfies Meta<typeof Button>;
@@ -39,13 +43,13 @@ export const SolidDisabled: Story = {
 
 export const Outline: Story = {
   args: {
-    variant: 'outline',
+    variant: BUTTON_VARIANT.OUTLINE,
   },
 };
 
 export const OutlineDisabled: Story = {
   args: {
-    variant: 'outline',
+    variant: BUTTON_VARIANT.OUTLINE,
     disabled: true,
   },
 };
