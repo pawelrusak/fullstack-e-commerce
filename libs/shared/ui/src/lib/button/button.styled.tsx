@@ -17,7 +17,7 @@ export const BUTTON_COLOR_VARIANT = {
 
 export type ButtonColorVariant = ObjectValues<typeof BUTTON_COLOR_VARIANT>;
 
-export type ButtonProps = {
+export type StyledButtonProps = {
   variant?: ButtonVariant;
   colorVariant?: ButtonColorVariant;
   fullWidth?: boolean;
@@ -55,7 +55,7 @@ const outlineDisabledPalette: PaletteVariant = {
   secondary: getToken('button.variant.secondary.outlineDisabled.palette'),
 };
 
-export const Button = styled.button<ButtonProps>`
+export const Button = styled.button<StyledButtonProps>`
   all: unset;
   display: inline-block;
   box-sizing: border-box;
