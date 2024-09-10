@@ -8,7 +8,7 @@ export const BUTTON_COLOR_VARIANT = {
   SECONDARY: 'secondary',
 } as const;
 
-export const BUTTON_STATE = {
+export const _BUTTON_STATE = {
   BASE: 'base',
   INTERACT: 'interact',
   DISABLED: 'disabled',
@@ -21,7 +21,7 @@ export const BUTTON_VARIANT = {
 
 export type ButtonColorVariant = ObjectValues<typeof BUTTON_COLOR_VARIANT>;
 
-export type ButtonState = ObjectValues<typeof BUTTON_STATE>;
+export type ButtonState = ObjectValues<typeof _BUTTON_STATE>;
 
 export type ButtonVariant = ObjectValues<typeof BUTTON_VARIANT>;
 
@@ -37,7 +37,7 @@ type ButtonFullWidthProp = {
   fullWidth?: boolean;
 };
 
-export type ButtonProps = ButtonVariantProp &
+export type InternalButtonProps = ButtonVariantProp &
   ButtonColorVariantProp &
   ButtonFullWidthProp;
 

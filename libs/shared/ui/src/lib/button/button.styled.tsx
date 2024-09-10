@@ -2,14 +2,14 @@ import styled, { css } from 'styled-components';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import {
   getPalette,
-  BUTTON_STATE,
+  _BUTTON_STATE,
   BUTTON_VARIANT,
   BUTTON_COLOR_VARIANT,
 } from './button.utils';
 
-import type { ButtonProps } from './button.utils';
+import type { InternalButtonProps } from './button.utils';
 
-export type StyledButtonProps = ButtonProps;
+export type StyledButtonProps = InternalButtonProps;
 
 export const Button = styled.button<StyledButtonProps>`
   all: unset;
@@ -28,7 +28,7 @@ export const Button = styled.button<StyledButtonProps>`
     getPalette({
       colorVariant,
       variant: BUTTON_VARIANT.SOLID,
-      state: BUTTON_STATE.BASE,
+      state: _BUTTON_STATE.BASE,
     })}
 
   ${({ fullWidth }) =>
@@ -44,7 +44,7 @@ export const Button = styled.button<StyledButtonProps>`
       getPalette({
         colorVariant,
         variant: BUTTON_VARIANT.SOLID,
-        state: BUTTON_STATE.INTERACT,
+        state: _BUTTON_STATE.INTERACT,
       })}
   }
 
@@ -59,7 +59,7 @@ export const Button = styled.button<StyledButtonProps>`
       getPalette({
         colorVariant,
         variant: BUTTON_VARIANT.SOLID,
-        state: BUTTON_STATE.DISABLED,
+        state: _BUTTON_STATE.DISABLED,
       })}
     pointer-events: none;
   }
@@ -70,14 +70,14 @@ export const Button = styled.button<StyledButtonProps>`
       ${getPalette({
         colorVariant,
         variant,
-        state: BUTTON_STATE.BASE,
+        state: _BUTTON_STATE.BASE,
       })};
 
       $:is(:hover, :focus) {
         ${getPalette({
           colorVariant,
           variant,
-          state: BUTTON_STATE.INTERACT,
+          state: _BUTTON_STATE.INTERACT,
         })}
       }
 
@@ -86,7 +86,7 @@ export const Button = styled.button<StyledButtonProps>`
         ${getPalette({
           colorVariant,
           variant,
-          state: BUTTON_STATE.DISABLED,
+          state: _BUTTON_STATE.DISABLED,
         })}
         pointer-events: none;
       }
