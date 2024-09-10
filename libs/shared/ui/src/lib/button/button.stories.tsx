@@ -12,6 +12,12 @@ export default {
     children: 'Shop Now',
   },
   argTypes: {
+    fullWidth: {
+      control: 'boolean',
+    },
+    disabled: {
+      control: 'boolean',
+    },
     variant: {
       control: 'select',
       options: [BUTTON_VARIANT.SOLID, BUTTON_VARIANT.OUTLINE],
