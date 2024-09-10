@@ -1,9 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {
-  Button,
-  BUTTON_COLOR_VARIANT,
-  BUTTON_VARIANT,
-} from './button.component';
+import { BUTTON_COLOR_VARIANT, BUTTON_VARIANT } from './button.utils';
+import { Button } from './button.component';
 
 export default {
   component: Button,
