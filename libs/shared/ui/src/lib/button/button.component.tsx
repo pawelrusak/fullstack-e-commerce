@@ -1,17 +1,13 @@
 import { StyledComponent, DefaultTheme } from 'styled-components';
 import * as Styled from './button.styled';
-import { BUTTON_VARIANT, BUTTON_COLOR_VARIANT } from './button.styled';
+import { BUTTON_VARIANT, BUTTON_COLOR_VARIANT } from './button.utils';
 import type {
-  StyledButtonProps,
+  ButtonProps as _ButtonProps,
   ButtonColorVariant,
   ButtonVariant,
-} from './button.styled';
+} from './button.utils';
 
-export type ButtonProps = StyledComponent<
-  'button',
-  DefaultTheme,
-  StyledButtonProps
->;
+export type ButtonProps = StyledComponent<'button', DefaultTheme, _ButtonProps>;
 
 export const Button = Styled.Button;
 
