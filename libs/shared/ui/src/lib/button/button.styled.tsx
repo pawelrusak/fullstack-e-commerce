@@ -25,35 +25,62 @@ export type StyledButtonProps = {
 
 type PaletteVariant = Record<ButtonColorVariant, ButtonComponentPalette>;
 
-const defaultPalette: PaletteVariant = {
-  primary: getToken('button.variant.primary.default.palette'),
-  secondary: getToken('button.variant.secondary.default.palette'),
+const BUTTON_STATE = {
+  BASE: 'base',
+  INTERACT: 'interact',
+  DISABLED: 'disabled',
+} as const;
+
+type ButtonState = ObjectValues<typeof BUTTON_STATE>;
+
+type PaletteState = Record<ButtonState, PaletteVariant>;
+
+type Palette = Record<ButtonVariant, PaletteState>;
+
+const palette: Palette = {
+  solid: {
+    base: {
+      primary: getToken('button.variant.primary.default.palette'),
+      secondary: getToken('button.variant.secondary.default.palette'),
+    },
+    interact: {
+      primary: getToken('button.variant.primary.defaultInteract.palette'),
+      secondary: getToken('button.variant.secondary.defaultInteract.palette'),
+    },
+    disabled: {
+      primary: getToken('button.variant.primary.defaultDisabled.palette'),
+      secondary: getToken('button.variant.secondary.defaultDisabled.palette'),
+    },
+  },
+  outline: {
+    base: {
+      primary: getToken('button.variant.primary.outline.palette'),
+      secondary: getToken('button.variant.secondary.outline.palette'),
+    },
+    interact: {
+      primary: getToken('button.variant.primary.outlineInteract.palette'),
+      secondary: getToken('button.variant.secondary.outlineInteract.palette'),
+    },
+    disabled: {
+      primary: getToken('button.variant.primary.outlineDisabled.palette'),
+      secondary: getToken('button.variant.secondary.outlineDisabled.palette'),
+    },
+  },
 };
 
-const defaultInteractPalette: PaletteVariant = {
-  primary: getToken('button.variant.primary.defaultInteract.palette'),
-  secondary: getToken('button.variant.secondary.defaultInteract.palette'),
+type GetPaletteParam = {
+  variant: ButtonVariant;
+  state: ButtonState;
+  colorVariant: ButtonColorVariant;
 };
 
-const defaultDisabledPalette: PaletteVariant = {
-  primary: getToken('button.variant.primary.defaultDisabled.palette'),
-  secondary: getToken('button.variant.secondary.defaultDisabled.palette'),
-};
-
-const outlinePalette: PaletteVariant = {
-  primary: getToken('button.variant.primary.outline.palette'),
-  secondary: getToken('button.variant.secondary.outline.palette'),
-};
-
-const outlineInteractPalette: PaletteVariant = {
-  primary: getToken('button.variant.primary.outlineInteract.palette'),
-  secondary: getToken('button.variant.secondary.outlineInteract.palette'),
-};
-
-const outlineDisabledPalette: PaletteVariant = {
-  primary: getToken('button.variant.primary.outlineDisabled.palette'),
-  secondary: getToken('button.variant.secondary.outlineDisabled.palette'),
-};
+function getPalette({
+  variant,
+  state,
+  colorVariant,
+}: GetPaletteParam): ButtonComponentPalette {
+  return palette[variant][state][colorVariant];
+}
 
 export const Button = styled.button<StyledButtonProps>`
   all: unset;
@@ -69,7 +96,11 @@ export const Button = styled.button<StyledButtonProps>`
   border-width: 1px;
   border-style: solid;
   ${({ colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
-    defaultPalette[colorVariant]}
+    getPalette({
+      colorVariant,
+      variant: BUTTON_VARIANT.SOLID,
+      state: BUTTON_STATE.BASE,
+    })}
 
   ${({ fullWidth }) =>
     fullWidth &&
@@ -81,7 +112,11 @@ export const Button = styled.button<StyledButtonProps>`
 
   &:is(:hover, :focus) {
     ${({ colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
-      defaultInteractPalette[colorVariant]}
+      getPalette({
+        colorVariant,
+        variant: BUTTON_VARIANT.SOLID,
+        state: BUTTON_STATE.INTERACT,
+      })}
   }
 
   &:focus {
@@ -92,22 +127,38 @@ export const Button = styled.button<StyledButtonProps>`
   &[aria-disabled='true'] {
     cursor: default;
     ${({ colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
-      defaultDisabledPalette[colorVariant]}
+      getPalette({
+        colorVariant,
+        variant: BUTTON_VARIANT.SOLID,
+        state: BUTTON_STATE.DISABLED,
+      })}
     pointer-events: none;
   }
 
   ${({ variant, colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
     variant === BUTTON_VARIANT.OUTLINE &&
     css`
-      ${outlinePalette[colorVariant]};
+      ${getPalette({
+        colorVariant,
+        variant,
+        state: BUTTON_STATE.BASE,
+      })};
 
       $:is(:hover, :focus) {
-        ${outlineInteractPalette[colorVariant]}
+        ${getPalette({
+          colorVariant,
+          variant,
+          state: BUTTON_STATE.INTERACT,
+        })}
       }
 
       &:disabled,
       &[aria-disabled='true'] {
-        ${outlineDisabledPalette[colorVariant]}
+        ${getPalette({
+          colorVariant,
+          variant,
+          state: BUTTON_STATE.DISABLED,
+        })}
         pointer-events: none;
       }
     `}
