@@ -10,7 +10,7 @@ export const GlobalStyleDecorator: Decorator = (Story) => {
   );
 };
 
-export const ThemeDecorator: Decorator = (Story) => {
+export const AppThemeDecorator: Decorator = (Story) => {
   return (
     <AppThemeProvider>
       <Story />
