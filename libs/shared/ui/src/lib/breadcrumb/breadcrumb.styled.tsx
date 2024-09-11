@@ -1,21 +1,25 @@
 import styled, { css } from 'styled-components';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
-export const Nav = styled.nav``;
+export const Nav = styled.nav`
+  background-color: ${getToken('breadcrumb.root.base.backgroundColor')};
+`;
 
 export type StyledLinkProps = {
   isCurrent?: boolean;
 };
 
 export const Link = styled.a<StyledLinkProps>`
-  color: ${({ theme }) => theme.color.text};
+  font-family: ${getToken('breadcrumb.link.base.fontFamily')};
+  background-color: ${getToken('breadcrumb.link.base.backgroundColor')};
+  ${getToken('breadcrumb.link.variant.base.default.palette')};
   text-decoration: none;
   padding: 0 1.8rem;
   font-size: 1.6rem;
   line-height: 2.4rem;
 
-  &:hover,
-  &:focus {
-    color: ${({ theme }) => theme.color.primary};
+  &:is(:hover, :focus) {
+    ${getToken('breadcrumb.link.variant.base.defaultInteract.palette')};
   }
 
   ${({ isCurrent }) =>
