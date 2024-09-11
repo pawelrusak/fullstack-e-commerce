@@ -1,3 +1,4 @@
+import { css } from 'styled-components';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
 import type { ButtonComponentPalette } from '@e-shop/theme/types';
@@ -86,10 +87,43 @@ type GetPaletteParam = Required<
   GetPaletteStateParam & ButtonVariantProp & ButtonColorVariantProp
 >;
 
-export function getPalette({
+function getPalette({
   variant,
   state,
   colorVariant,
 }: GetPaletteParam): ButtonComponentPalette {
   return palette[variant][state][colorVariant];
 }
+
+type GetPaletteStylesParam = {
+  colorVariant: ButtonColorVariant;
+  variant: ButtonVariant;
+};
+
+export const getPaletteStyles = ({
+  colorVariant,
+  variant,
+}: GetPaletteStylesParam) => css`
+  ${getPalette({
+    colorVariant,
+    variant,
+    state: _BUTTON_STATE.BASE,
+  })}
+
+  &:is(:hover, :focus) {
+    ${getPalette({
+      colorVariant,
+      variant,
+      state: _BUTTON_STATE.INTERACT,
+    })}
+  }
+
+  &:disabled,
+  &[aria-disabled='true'] {
+    ${getPalette({
+      colorVariant,
+      variant,
+      state: _BUTTON_STATE.DISABLED,
+    })}
+  }
+`;

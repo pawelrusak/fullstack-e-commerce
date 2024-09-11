@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import {
-  getPalette,
-  _BUTTON_STATE,
   BUTTON_VARIANT,
   BUTTON_COLOR_VARIANT,
+  getPaletteStyles,
 } from './button.utils';
 
 import type { InternalButtonProps } from './button.utils';
@@ -24,12 +23,19 @@ export const Button = styled.button<StyledButtonProps>`
   cursor: pointer;
   border-width: 1px;
   border-style: solid;
-  ${({ colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
-    getPalette({
-      colorVariant,
-      variant: BUTTON_VARIANT.SOLID,
-      state: _BUTTON_STATE.BASE,
-    })}
+
+  ${({
+    variant = BUTTON_VARIANT.SOLID,
+    colorVariant = BUTTON_COLOR_VARIANT.PRIMARY,
+  }) => getPaletteStyles({ variant, colorVariant })}
+
+  ${({ variant, colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
+    variant === BUTTON_VARIANT.OUTLINE &&
+    getPaletteStyles({ variant, colorVariant })}
+
+  &:focus {
+    outline: auto;
+  }
 
   ${({ fullWidth }) =>
     fullWidth &&
@@ -39,56 +45,9 @@ export const Button = styled.button<StyledButtonProps>`
       justify-content: center;
     `}
 
-  &:is(:hover, :focus) {
-    ${({ colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
-      getPalette({
-        colorVariant,
-        variant: BUTTON_VARIANT.SOLID,
-        state: _BUTTON_STATE.INTERACT,
-      })}
-  }
-
-  &:focus {
-    outline: auto;
-  }
-
   &:disabled,
   &[aria-disabled='true'] {
     cursor: default;
-    ${({ colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
-      getPalette({
-        colorVariant,
-        variant: BUTTON_VARIANT.SOLID,
-        state: _BUTTON_STATE.DISABLED,
-      })}
     pointer-events: none;
   }
-
-  ${({ variant, colorVariant = BUTTON_COLOR_VARIANT.PRIMARY }) =>
-    variant === BUTTON_VARIANT.OUTLINE &&
-    css`
-      ${getPalette({
-        colorVariant,
-        variant,
-        state: _BUTTON_STATE.BASE,
-      })};
-
-      $:is(:hover, :focus) {
-        ${getPalette({
-          colorVariant,
-          variant,
-          state: _BUTTON_STATE.INTERACT,
-        })}
-      }
-
-      &:disabled,
-      &[aria-disabled='true'] {
-        ${getPalette({
-          colorVariant,
-          variant,
-          state: _BUTTON_STATE.DISABLED,
-        })}
-        pointer-events: none;
-      }
-    `}
 `;
