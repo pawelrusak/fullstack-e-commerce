@@ -240,4 +240,72 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Breadcrumb theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { breadcrumb } = component;
+
+      expect(breadcrumb).toEqual({
+        root: {
+          base: {
+            backgroundColor: expect.any(String),
+          },
+        },
+        link: {
+          base: {
+            fontFamily: expect.any(String),
+            backgroundColor: expect.any(String),
+          },
+          variant: {
+            base: {
+              default: {
+                palette: {
+                  color: expect.any(String),
+                },
+              },
+              defaultInteract: {
+                palette: {
+                  color: expect.any(String),
+                },
+              },
+            },
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { breadcrumb } = component;
+
+      expect(breadcrumb).toMatchInlineSnapshot(`
+        {
+          "link": {
+            "base": {
+              "backgroundColor": "transparent",
+              "fontFamily": "Montserrat, sans-serif",
+            },
+            "variant": {
+              "base": {
+                "default": {
+                  "palette": {
+                    "color": "hsl(0, 0%, 19%)",
+                  },
+                },
+                "defaultInteract": {
+                  "palette": {
+                    "color": "hsl(7, 100%, 65%)",
+                  },
+                },
+              },
+            },
+          },
+          "root": {
+            "base": {
+              "backgroundColor": "transparent",
+            },
+          },
+        }
+      `);
+    });
+  });
 });

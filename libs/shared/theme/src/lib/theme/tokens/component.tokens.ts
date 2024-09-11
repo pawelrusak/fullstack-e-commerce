@@ -116,4 +116,34 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Breadcrumb component tokens
+   */
+  breadcrumb: {
+    root: {
+      base: {
+        backgroundColor: 'transparent',
+      },
+    },
+    link: {
+      base: {
+        fontFamily: fontFamily.primary,
+        backgroundColor: 'transparent',
+      },
+      variant: {
+        base: {
+          default: {
+            palette: {
+              color: color.onBackground,
+            },
+          },
+          defaultInteract: {
+            palette: {
+              color: color.onBackgroundInteract,
+            },
+          },
+        },
+      },
+    },
+  },
 };

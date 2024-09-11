@@ -66,6 +66,33 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
     },
+    "breadcrumb": {
+      "link": {
+        "base": {
+          "backgroundColor": "transparent",
+          "fontFamily": "Montserrat, sans-serif",
+        },
+        "variant": {
+          "base": {
+            "default": {
+              "palette": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+            },
+            "defaultInteract": {
+              "palette": {
+                "color": "hsl(7, 100%, 65%)",
+              },
+            },
+          },
+        },
+      },
+      "root": {
+        "base": {
+          "backgroundColor": "transparent",
+        },
+      },
+    },
     "button": {
       "base": {
         "fontFamily": "Montserrat, sans-serif",

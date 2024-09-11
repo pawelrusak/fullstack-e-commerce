@@ -65,4 +65,29 @@ export type ButtonComponent = {
   };
 };
 
-export type AppComponent = BrandComponent & ButtonComponent;
+export type BreadcrumbComponentLinkPalette = AvailableComponentToken<'color'>;
+
+export type BreadcrumbComponent = {
+  breadcrumb: {
+    root: {
+      base: AvailableComponentToken<'backgroundColor'>;
+    };
+    link: {
+      base: AvailableComponentToken<'fontFamily' | 'backgroundColor'>;
+      variant: {
+        base: {
+          default: {
+            palette: BreadcrumbComponentLinkPalette;
+          };
+          defaultInteract: {
+            palette: BreadcrumbComponentLinkPalette;
+          };
+        };
+      };
+    };
+  };
+};
+
+export type AppComponent = BrandComponent &
+  ButtonComponent &
+  BreadcrumbComponent;
