@@ -146,4 +146,51 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Cards component tokens
+   */
+  cardsSection: {
+    root: {
+      base: {
+        palette: {
+          backgroundColor: 'transparent',
+        },
+      },
+    },
+    title: {
+      base: {
+        palette: {
+          color: color.onBackground,
+        },
+        fontFamily: fontFamily.secondary,
+        fontWeight: fontWeight.semiBold,
+      },
+    },
+    readMoreLink: {
+      base: {
+        fontFamily: fontFamily.primary,
+        fontWeight: fontWeight.bold,
+      },
+      variant: {
+        default: {
+          palette: {
+            color: color.onBackgroundLink,
+          },
+        },
+        interact: {
+          palette: {
+            color: color.onBackgroundLinkInteract,
+          },
+        },
+      },
+    },
+    body: {
+      base: {
+        palette: {
+          backgroundColor: 'transparent',
+          color: color.onBackground,
+        },
+      },
+    },
+  },
 };

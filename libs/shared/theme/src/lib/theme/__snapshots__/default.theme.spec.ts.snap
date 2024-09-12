@@ -189,6 +189,50 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
     },
+    "cardsSection": {
+      "body": {
+        "base": {
+          "palette": {
+            "backgroundColor": "transparent",
+            "color": "hsl(0, 0%, 19%)",
+          },
+        },
+      },
+      "readMoreLink": {
+        "base": {
+          "fontFamily": "Montserrat, sans-serif",
+          "fontWeight": 700,
+        },
+        "variant": {
+          "default": {
+            "palette": {
+              "color": "hsl(7, 100%, 65%)",
+            },
+          },
+          "interact": {
+            "palette": {
+              "color": "hsl(7, 100%, 59%)",
+            },
+          },
+        },
+      },
+      "root": {
+        "base": {
+          "palette": {
+            "backgroundColor": "transparent",
+          },
+        },
+      },
+      "title": {
+        "base": {
+          "fontFamily": "Poppins, sans-serif",
+          "fontWeight": 600,
+          "palette": {
+            "color": "hsl(0, 0%, 19%)",
+          },
+        },
+      },
+    },
   },
   "fontFamily": {
     "montserrat": "Montserrat, sans-serif",

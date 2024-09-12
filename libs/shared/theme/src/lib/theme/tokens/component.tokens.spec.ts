@@ -308,4 +308,106 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component CardsSection theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { cardsSection } = component;
+
+      expect(cardsSection).toEqual({
+        root: {
+          base: {
+            palette: {
+              backgroundColor: expect.any(String),
+            },
+          },
+        },
+        title: {
+          base: {
+            palette: {
+              color: expect.any(String),
+            },
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+          },
+        },
+        readMoreLink: {
+          base: {
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+          },
+          variant: {
+            default: {
+              palette: {
+                color: expect.any(String),
+              },
+            },
+            interact: {
+              palette: {
+                color: expect.any(String),
+              },
+            },
+          },
+        },
+        body: {
+          base: {
+            palette: {
+              backgroundColor: expect.any(String),
+              color: expect.any(String),
+            },
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { cardsSection } = component;
+
+      expect(cardsSection).toMatchInlineSnapshot(`
+        {
+          "body": {
+            "base": {
+              "palette": {
+                "backgroundColor": "transparent",
+                "color": "hsl(0, 0%, 19%)",
+              },
+            },
+          },
+          "readMoreLink": {
+            "base": {
+              "fontFamily": "Montserrat, sans-serif",
+              "fontWeight": 700,
+            },
+            "variant": {
+              "default": {
+                "palette": {
+                  "color": "hsl(7, 100%, 65%)",
+                },
+              },
+              "interact": {
+                "palette": {
+                  "color": "hsl(7, 100%, 59%)",
+                },
+              },
+            },
+          },
+          "root": {
+            "base": {
+              "palette": {
+                "backgroundColor": "transparent",
+              },
+            },
+          },
+          "title": {
+            "base": {
+              "fontFamily": "Poppins, sans-serif",
+              "fontWeight": 600,
+              "palette": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+            },
+          },
+        }
+      `);
+    });
+  });
 });

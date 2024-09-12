@@ -88,6 +88,38 @@ export type BreadcrumbComponent = {
   };
 };
 
+export type CardsSectionComponent = {
+  cardsSection: {
+    root: {
+      base: {
+        palette: AvailableComponentToken<'backgroundColor'>;
+      };
+    };
+    title: {
+      base: {
+        palette: AvailableComponentToken<'color'>;
+      } & AvailableComponentToken<'fontFamily' | 'fontWeight'>;
+    };
+    readMoreLink: {
+      base: AvailableComponentToken<'fontWeight' | 'fontFamily'>;
+      variant: {
+        default: {
+          palette: AvailableComponentToken<'color'>;
+        };
+        interact: {
+          palette: AvailableComponentToken<'color'>;
+        };
+      };
+    };
+    body: {
+      base: {
+        palette: AvailableComponentToken<'backgroundColor' | 'color'>;
+      };
+    };
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
-  BreadcrumbComponent;
+  BreadcrumbComponent &
+  CardsSectionComponent;
