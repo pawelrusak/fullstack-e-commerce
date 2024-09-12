@@ -21,14 +21,14 @@ export function Breadcrumb({
     return id || innerId;
   }, [id, innerId]);
   return (
-    <Styled.Nav
+    <Styled.RootNav
       aria-labelledby={accessibilityId}
       id={accessibilityId}
       {...props}
     >
       <VisuallyHidden id={accessibilityId}>{screenReaderLabel}</VisuallyHidden>
       <Styled.List>{children}</Styled.List>
-    </Styled.Nav>
+    </Styled.RootNav>
   );
 }
 

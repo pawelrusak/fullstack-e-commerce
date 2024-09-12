@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
-export const Nav = styled.nav`
+export const RootNav = styled.nav`
   background-color: ${getToken('breadcrumb.root.base.backgroundColor')};
 `;
 
