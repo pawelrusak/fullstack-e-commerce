@@ -5,7 +5,7 @@ type CardsSectionProps = React.ComponentPropsWithRef<'section'> &
   StyledSectionProps;
 
 export function CardsSection(props: CardsSectionProps) {
-  return <Styled.Section {...props} />;
+  return <Styled.RootSection {...props} />;
 }
 
 CardsSection.Body = Styled.Body;

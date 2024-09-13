@@ -6,7 +6,7 @@ import type { MarginProps } from 'styled-system';
 
 export type StyledSectionProps = MarginProps;
 
-export const Section = styled.section<StyledSectionProps>`
+export const RootSection = styled.section<StyledSectionProps>`
   margin-bottom: 8rem;
   ${margin}
   background-color: ${getToken(
