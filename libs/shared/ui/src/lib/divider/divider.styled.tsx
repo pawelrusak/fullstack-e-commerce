@@ -1,14 +1,13 @@
 'use client';
 
 import styled from 'styled-components';
-import * as helper from 'polished';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
 // TODO: add margin from styled-system
 export const Divider = styled.hr`
   border: none;
   border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: ${({ theme }) =>
-    helper.transparentize(0.75, theme.color.text)};
+  border-top-color: ${getToken('divider.base.palette.borderColor')};
   margin: 1.6rem 0;
 `;
