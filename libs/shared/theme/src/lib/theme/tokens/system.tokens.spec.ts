@@ -86,12 +86,16 @@ describe('Base Theme', () => {
     it('should have the correct space structure and types', () => {
       expect(space).toEqual({
         0: expect.any(Number),
-        1: expect.any(Number),
-        2: expect.any(Number),
-        3: expect.any(Number),
-        4: expect.any(Number),
-        5: expect.any(Number),
-        6: expect.any(Number),
+        1: expect.any(String),
+        2: expect.any(String),
+        3: expect.any(String),
+        4: expect.any(String),
+        5: expect.any(String),
+        6: expect.any(String),
+        7: expect.any(String),
+        8: expect.any(String),
+        9: expect.any(String),
+        10: expect.any(String),
       });
     });
 
@@ -190,12 +194,16 @@ describe('Base Theme', () => {
       expect(space).toMatchInlineSnapshot(`
         {
           "0": 0,
-          "1": 0.2,
-          "2": 0.4,
-          "3": 0.8,
-          "4": 1.6,
-          "5": 2.4,
-          "6": 3.2,
+          "1": "0.4rem",
+          "10": "10rem",
+          "2": "0.8rem",
+          "3": "1.6rem",
+          "4": "2.4rem",
+          "5": "3.2rem",
+          "6": "4rem",
+          "7": "4.8rem",
+          "8": "6.4rem",
+          "9": "8rem",
         }
       `);
     });
