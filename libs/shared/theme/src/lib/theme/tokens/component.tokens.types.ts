@@ -119,7 +119,16 @@ export type CardsSectionComponent = {
   };
 };
 
+export type DividerComponent = {
+  divider: {
+    base: {
+      palette: AvailableComponentToken<'borderColor'>;
+    };
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
-  CardsSectionComponent;
+  CardsSectionComponent &
+  DividerComponent;

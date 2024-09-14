@@ -193,4 +193,14 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Divider component tokens
+   */
+  divider: {
+    base: {
+      palette: {
+        borderColor: colorPalette.secondary[50],
+      },
+    },
+  },
 };

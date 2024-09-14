@@ -410,4 +410,32 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Divider theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { divider } = component;
+
+      expect(divider).toEqual({
+        base: {
+          palette: {
+            borderColor: expect.any(String),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { divider } = component;
+
+      expect(divider).toMatchInlineSnapshot(`
+        {
+          "base": {
+            "palette": {
+              "borderColor": "hsl(0, 0%, 80%)",
+            },
+          },
+        }
+      `);
+    });
+  });
 });
