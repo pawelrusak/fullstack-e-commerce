@@ -6,7 +6,7 @@ describe('Default Theme', () => {
       color: expect.any(Object),
       fontFamily: expect.any(Object),
       fontWeight: expect.any(Object),
-      space: expect.arrayContaining([expect.any(Number)]),
+      space: expect.any(Object),
       screens: expect.any(Object),
       component: expect.any(Object),
     });

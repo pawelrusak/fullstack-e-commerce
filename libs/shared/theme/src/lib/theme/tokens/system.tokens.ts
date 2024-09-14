@@ -91,7 +91,15 @@ export const fontWeight: AppFontWeight = {
   bold: 700,
 };
 
-export const space: AppSpace = [0, 0.2, 0.4, 0.8, 1.6, 2.4, 3.2];
+export const space: AppSpace = {
+  0: 0,
+  1: 0.2,
+  2: 0.4,
+  3: 0.8,
+  4: 1.6,
+  5: 2.4,
+  6: 3.2,
+};
 
 export const screens: AppScreens = {
   sm: '640px',

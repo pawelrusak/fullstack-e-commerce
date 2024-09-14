@@ -84,7 +84,15 @@ describe('Base Theme', () => {
     });
 
     it('should have the correct space structure and types', () => {
-      expect(space).toEqual(expect.arrayContaining([expect.any(Number)]));
+      expect(space).toEqual({
+        0: expect.any(Number),
+        1: expect.any(Number),
+        2: expect.any(Number),
+        3: expect.any(Number),
+        4: expect.any(Number),
+        5: expect.any(Number),
+        6: expect.any(Number),
+      });
     });
 
     it('should have the correct screens structure and types', () => {
@@ -180,15 +188,15 @@ describe('Base Theme', () => {
 
     it('should match the space specified values', () => {
       expect(space).toMatchInlineSnapshot(`
-        [
-          0,
-          0.2,
-          0.4,
-          0.8,
-          1.6,
-          2.4,
-          3.2,
-        ]
+        {
+          "0": 0,
+          "1": 0.2,
+          "2": 0.4,
+          "3": 0.8,
+          "4": 1.6,
+          "5": 2.4,
+          "6": 3.2,
+        }
       `);
     });
 
