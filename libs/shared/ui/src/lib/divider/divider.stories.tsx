@@ -1,38 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Divider } from './divider.component';
 
+const marginControl = {
+  control: 'select',
+  options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+};
+
 export default {
   component: Divider,
   title: 'Divider',
   argTypes: {
-    mb: {
-      control: 'select',
-      options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    },
-    mt: {
-      control: 'select',
-      options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    },
-    mr: {
-      control: 'select',
-      options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    },
-    ml: {
-      control: 'select',
-      options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    },
-    m: {
-      control: 'select',
-      options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    },
-    mx: {
-      control: 'select',
-      options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    },
-    my: {
-      control: 'select',
-      options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    },
+    mb: marginControl,
+    mt: marginControl,
+    mr: marginControl,
+    ml: marginControl,
+    m: marginControl,
+    mx: marginControl,
+    my: marginControl,
   },
 } satisfies Meta<typeof Divider>;
 
