@@ -31,6 +31,9 @@ export const color: AppColor = {
   onPrimaryOutlineDisabled: colorPalette.neutral[300],
   primaryOutlineBorderDisabled: colorPalette.neutral[300],
 
+  primaryContainer: colorPalette.primary[50],
+  onPrimaryContainer: colorPalette.primary[500],
+
   secondary: colorPalette.secondary[500],
   onSecondary: colorPalette.neutral[0],
   secondaryBorder: colorPalette.secondary[500],

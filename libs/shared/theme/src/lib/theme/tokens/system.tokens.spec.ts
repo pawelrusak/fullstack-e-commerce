@@ -23,6 +23,9 @@ describe('Base Theme', () => {
         onPrimaryOutlineDisabled: expect.any(String),
         primaryOutlineBorderDisabled: expect.any(String),
 
+        primaryContainer: expect.any(String),
+        onPrimaryContainer: expect.any(String),
+
         secondary: expect.any(String),
         onSecondary: expect.any(String),
         secondaryBorder: expect.any(String),
@@ -122,6 +125,7 @@ describe('Base Theme', () => {
           "onBackgroundLink": "hsl(7, 100%, 65%)",
           "onBackgroundLinkInteract": "hsl(7, 100%, 59%)",
           "onPrimary": "hsl(0, 0%, 100%)",
+          "onPrimaryContainer": "hsl(7, 100%, 65%)",
           "onPrimaryDisabled": "hsl(0, 0%, 100%)",
           "onPrimaryOutline": "hsl(7, 100%, 65%)",
           "onPrimaryOutlineDisabled": "hsl(0, 0%, 80%)",
@@ -140,6 +144,7 @@ describe('Base Theme', () => {
           "primaryBorder": "hsl(7, 100%, 65%)",
           "primaryBorderDisabled": "hsl(7, 100%, 81%)",
           "primaryBorderInteract": "hsl(7, 100%, 59%)",
+          "primaryContainer": "hsl(7, 100%, 96%)",
           "primaryDisabled": "hsl(7, 100%, 81%)",
           "primaryInteract": "hsl(7, 100%, 59%)",
           "primaryOutline": "transparent",

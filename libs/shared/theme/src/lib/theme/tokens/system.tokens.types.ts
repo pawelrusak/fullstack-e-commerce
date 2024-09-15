@@ -46,6 +46,9 @@ export type AppColor = {
   onPrimaryOutlineDisabled: string;
   primaryOutlineBorderDisabled: string;
 
+  primaryContainer: string;
+  onPrimaryContainer: string;
+
   /**
    * The secondary color for the application.
    */
