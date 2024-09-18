@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Divider } from './divider.component';
+import { SpacingHighlightDecorator } from '../../../.storybook/decorators';
 
 const marginControl = {
   control: 'select',
@@ -24,4 +25,9 @@ type Story = StoryObj<typeof Divider>;
 
 export const Default: Story = {
   args: {},
+};
+
+export const WithSpacingHighlight: Story = {
+  args: {},
+  decorators: [SpacingHighlightDecorator],
 };
