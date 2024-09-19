@@ -2,28 +2,26 @@
 
 import styled from 'styled-components';
 import * as Checkbox from '@radix-ui/react-checkbox';
-import * as polished from 'polished';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
 export const Wrapper = styled(Checkbox.Root)`
   display: flex;
-  background-color: ${({ theme }) => theme.color.background};
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 0.2rem;
-  border: 1px solid ${({ theme }) => theme.color.text};
+  border-width: 1px;
+  border-style: solid;
+  ${getToken('checkbox.root.variant.default.state.default.palette')};
   align-items: center;
   justify-content: center;
   cursor: pointer;
 
   &[aria-checked='true'] {
-    background: ${({ theme }) => theme.color.primary};
-    border-color: ${({ theme }) => theme.color.primary};
+    ${getToken('checkbox.root.variant.default.state.checked.palette')};
   }
 
-  &:hover {
-    background-color: ${({ theme }) =>
-      polished.darken(0.1, theme.color.primary)};
-    border-color: ${({ theme }) => polished.darken(0.1, theme.color.primary)};
+  &:is(:hover, :focus) {
+    ${getToken('checkbox.root.variant.default.state.interact.palette')};
   }
 
   &:focus {
@@ -33,5 +31,5 @@ export const Wrapper = styled(Checkbox.Root)`
 
 export const Indicator = styled(Checkbox.Indicator)`
   line-height: 0.8rem;
-  color: ${({ theme }) => theme.color.background};
+  ${getToken('checkbox.indicator.base.palette')};
 `;
