@@ -127,8 +127,40 @@ export type DividerComponent = {
   };
 };
 
+export type CheckboxComponentPalette = AvailableComponentToken<
+  'backgroundColor' | 'borderColor'
+>;
+
+export type CheckboxComponent = {
+  checkbox: {
+    root: {
+      variant: {
+        default: {
+          state: {
+            default: {
+              palette: CheckboxComponentPalette;
+            };
+            interact: {
+              palette: CheckboxComponentPalette;
+            };
+            checked: {
+              palette: CheckboxComponentPalette;
+            };
+          };
+        };
+      };
+    };
+    indicator: {
+      base: {
+        palette: AvailableComponentToken<'color'>;
+      };
+    };
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
   CardsSectionComponent &
-  DividerComponent;
+  DividerComponent &
+  CheckboxComponent;

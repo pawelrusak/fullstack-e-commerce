@@ -203,4 +203,42 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Checkbox component tokens
+   */
+  checkbox: {
+    root: {
+      variant: {
+        default: {
+          state: {
+            default: {
+              palette: {
+                backgroundColor: 'transparent',
+                borderColor: colorPalette.neutral[800],
+              },
+            },
+            interact: {
+              palette: {
+                backgroundColor: color.primaryInteract,
+                borderColor: color.primaryInteract,
+              },
+            },
+            checked: {
+              palette: {
+                backgroundColor: color.primary,
+                borderColor: color.primary,
+              },
+            },
+          },
+        },
+      },
+    },
+    indicator: {
+      base: {
+        palette: {
+          color: color.onPrimary,
+        },
+      },
+    },
+  },
 };

@@ -438,4 +438,88 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Checkbox theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { checkbox } = component;
+
+      expect(checkbox).toEqual({
+        root: {
+          variant: {
+            default: {
+              state: {
+                default: {
+                  palette: {
+                    backgroundColor: expect.any(String),
+                    borderColor: expect.any(String),
+                  },
+                },
+                interact: {
+                  palette: {
+                    backgroundColor: expect.any(String),
+                    borderColor: expect.any(String),
+                  },
+                },
+                checked: {
+                  palette: {
+                    backgroundColor: expect.any(String),
+                    borderColor: expect.any(String),
+                  },
+                },
+              },
+            },
+          },
+        },
+        indicator: {
+          base: {
+            palette: {
+              color: expect.any(String),
+            },
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { checkbox } = component;
+
+      expect(checkbox).toMatchInlineSnapshot(`
+        {
+          "indicator": {
+            "base": {
+              "palette": {
+                "color": "hsl(0, 0%, 100%)",
+              },
+            },
+          },
+          "root": {
+            "variant": {
+              "default": {
+                "state": {
+                  "checked": {
+                    "palette": {
+                      "backgroundColor": "hsl(7, 100%, 65%)",
+                      "borderColor": "hsl(7, 100%, 65%)",
+                    },
+                  },
+                  "default": {
+                    "palette": {
+                      "backgroundColor": "transparent",
+                      "borderColor": "hsl(0, 0%, 19%)",
+                    },
+                  },
+                  "interact": {
+                    "palette": {
+                      "backgroundColor": "hsl(7, 100%, 59%)",
+                      "borderColor": "hsl(7, 100%, 59%)",
+                    },
+                  },
+                },
+              },
+            },
+          },
+        }
+      `);
+    });
+  });
 });
