@@ -39,9 +39,9 @@ describe('Theme token utils', () => {
 
   describe('getComponentThemeToken', () => {
     it('should return the same value as the component theme for valid keys', () => {
-      const brandToken = getComponentThemeToken('brand.base.svgDot');
+      const brandToken = getComponentThemeToken('brand');
 
-      expect(brandToken).toEqual(component.brand.base.svgDot);
+      expect(brandToken).toEqual(component.brand);
     });
 
     it('should return undefined for invalid component keys', () => {
