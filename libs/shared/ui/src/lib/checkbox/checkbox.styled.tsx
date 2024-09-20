@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import * as Checkbox from '@radix-ui/react-checkbox';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
-export const Wrapper = styled(Checkbox.Root)`
+export const Root = styled(Checkbox.Root)`
   display: flex;
   width: 1.6rem;
   height: 1.6rem;

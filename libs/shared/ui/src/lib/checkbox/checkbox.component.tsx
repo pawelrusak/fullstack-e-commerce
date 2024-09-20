@@ -7,13 +7,13 @@ export type CheckboxProps = RadixCheckboxProps;
 
 export function Checkbox({ children, ...props }: CheckboxProps) {
   return (
-    <Styled.Wrapper {...props}>
+    <Styled.Root {...props}>
       {children || (
         <Styled.Indicator>
           <CheckSmallIcon />
         </Styled.Indicator>
       )}
-    </Styled.Wrapper>
+    </Styled.Root>
   );
 }
 
