@@ -6,10 +6,6 @@ type AvailableComponentToken<CSSProps extends keyof CSSProperties> = {
 
 export type BrandComponent = {
   brand: {
-    base: {
-      svgText: AvailableComponentToken<'fill'>;
-      svgDot: AvailableComponentToken<'fill'>;
-    };
     svgText: {
       primary: {
         initial: AvailableComponentToken<'fill'>;

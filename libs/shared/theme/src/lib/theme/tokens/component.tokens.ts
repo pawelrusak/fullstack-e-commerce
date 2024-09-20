@@ -8,17 +8,6 @@ export const component: AppComponent = {
    * Brand component tokens
    */
   brand: {
-    /**
-     * @deprecated Use `svgText` and `svgDot` instead
-     */
-    base: {
-      svgDot: {
-        fill: color.primary,
-      },
-      svgText: {
-        fill: colorPalette.secondary[500],
-      },
-    },
     svgText: {
       primary: {
         initial: {

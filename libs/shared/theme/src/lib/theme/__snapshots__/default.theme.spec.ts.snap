@@ -59,14 +59,6 @@ exports[`Default Theme should match the specified values 1`] = `
   },
   "component": {
     "brand": {
-      "base": {
-        "svgDot": {
-          "fill": "hsl(7, 100%, 65%)",
-        },
-        "svgText": {
-          "fill": "hsl(0, 0%, 19%)",
-        },
-      },
       "svgDot": {
         "primary": {
           "initial": {

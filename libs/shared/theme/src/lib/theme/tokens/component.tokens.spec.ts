@@ -6,14 +6,6 @@ describe('Component theme config', () => {
       const { brand } = component;
 
       expect(brand).toEqual({
-        base: {
-          svgText: {
-            fill: expect.any(String),
-          },
-          svgDot: {
-            fill: expect.any(String),
-          },
-        },
         svgText: {
           primary: {
             initial: {
@@ -36,14 +28,6 @@ describe('Component theme config', () => {
 
       expect(brand).toMatchInlineSnapshot(`
         {
-          "base": {
-            "svgDot": {
-              "fill": "hsl(7, 100%, 65%)",
-            },
-            "svgText": {
-              "fill": "hsl(0, 0%, 19%)",
-            },
-          },
           "svgDot": {
             "primary": {
               "initial": {
