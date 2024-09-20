@@ -11,12 +11,12 @@ export const Root = styled.span`
   padding-top: 0.7rem;
 `;
 
-export type BrandSvgProps = Readonly<{
+export type StyledBrandSvgProps = Readonly<{
   textColor?: string;
   dotColor?: string;
 }>;
 
-export const BrandSvg = styled(BrandSvgIcon)<BrandSvgProps>`
+export const BrandSvg = styled(BrandSvgIcon)<StyledBrandSvgProps>`
   [data-brand-text] {
     fill: ${({ textColor }) =>
       textColor ?? getToken('brand.base.svgText.fill')};
