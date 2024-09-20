@@ -20,7 +20,8 @@ export const Root = styled(Checkbox.Root)`
     ${getToken('checkbox.root.variant.default.state.checked.palette')};
   }
 
-  &:is(:hover, :focus) {
+  &:hover,
+  &:focus {
     ${getToken('checkbox.root.variant.default.state.interact.palette')};
   }
 
