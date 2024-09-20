@@ -2,8 +2,9 @@
 
 import styled from 'styled-components';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
-
 import BrandSvgIcon from './brand.svg';
+
+const { svgDot: svgDotToken, svgText: svgTextToken } = getToken('brand');
 
 export const Root = styled.span`
   display: inline-block;
@@ -11,18 +12,17 @@ export const Root = styled.span`
   padding-top: 0.7rem;
 `;
 
-export type StyledBrandSvgProps = Readonly<{
+export type StyledBrandSvgProps = {
   textColor?: string;
   dotColor?: string;
-}>;
+};
 
 export const BrandSvg = styled(BrandSvgIcon)<StyledBrandSvgProps>`
   [data-brand-text] {
-    fill: ${({ textColor }) =>
-      textColor ?? getToken('brand.base.svgText.fill')};
+    fill: ${({ textColor }) => textColor ?? svgTextToken.primary.initial.fill};
   }
 
   [data-brand-dot] {
-    fill: ${({ textColor }) => textColor ?? getToken('brand.base.svgDot.fill')};
+    fill: ${({ dotColor }) => dotColor ?? svgDotToken.primary.initial.fill};
   }
 `;
