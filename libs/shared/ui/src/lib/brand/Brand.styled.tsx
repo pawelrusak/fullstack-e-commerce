@@ -5,7 +5,7 @@ import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
 import BrandSvgIcon from './brand.svg';
 
-export const Wrapper = styled.span`
+export const Root = styled.span`
   display: inline-block;
   height: 4rem;
   padding-top: 0.7rem;

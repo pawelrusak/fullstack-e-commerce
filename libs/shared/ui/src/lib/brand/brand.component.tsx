@@ -9,10 +9,10 @@ export type BrandProps = BrandSvgProps & ClassNameAttribute;
 
 export function Brand({ className, ...rest }: BrandProps) {
   return (
-    <Styled.Wrapper className={className}>
+    <Styled.Root className={className}>
       <Styled.BrandSvg {...rest} />
       <VisuallyHidden>{EN.GLOBAL.BRAND_NAME}</VisuallyHidden>
-    </Styled.Wrapper>
+    </Styled.Root>
   );
 }
 
