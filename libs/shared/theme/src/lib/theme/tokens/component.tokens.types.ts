@@ -10,6 +10,16 @@ export type BrandComponent = {
       svgText: AvailableComponentToken<'fill'>;
       svgDot: AvailableComponentToken<'fill'>;
     };
+    svgText: {
+      primary: {
+        initial: AvailableComponentToken<'fill'>;
+      };
+    };
+    svgDot: {
+      primary: {
+        initial: AvailableComponentToken<'fill'>;
+      };
+    };
   };
 };
 
