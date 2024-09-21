@@ -8,6 +8,8 @@ export type {
 export type {
   AppComponent,
   BrandComponent,
+  BrandAccentThemeVariant,
+  BrandBaseThemeVariant,
   ButtonComponent,
   ButtonComponentPalette,
 } from './component.tokens.types';
