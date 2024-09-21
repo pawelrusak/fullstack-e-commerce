@@ -65,8 +65,23 @@ exports[`Default Theme should match the specified values 1`] = `
             "fill": "hsl(7, 100%, 65%)",
           },
         },
+        "secondary": {
+          "initial": {
+            "fill": "hsl(0, 0%, 19%)",
+          },
+        },
       },
       "svgText": {
+        "default": {
+          "initial": {
+            "fill": "hsl(0, 0%, 19%)",
+          },
+        },
+        "invert": {
+          "initial": {
+            "fill": "hsl(0, 0%, 100%)",
+          },
+        },
         "primary": {
           "initial": {
             "fill": "hsl(0, 0%, 19%)",

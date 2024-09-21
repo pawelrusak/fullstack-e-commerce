@@ -4,21 +4,33 @@ type AvailableComponentToken<CSSProps extends keyof CSSProperties> = {
   [P in CSSProps]: CSSProperties[P];
 };
 
+/**
+ * **********************************************************************************************
+ *                                     Brand Component Tokens
+ * **********************************************************************************************
+ */
+export type BrandAccentThemeVariant = 'primary' | 'secondary';
+export type BrandBaseThemeVariant = 'default' | 'invert';
+
+type BrandSVGTokenMap<TVariant extends string> = Record<
+  TVariant,
+  {
+    initial: AvailableComponentToken<'fill'>;
+  }
+>;
+
 export type BrandComponent = {
   brand: {
-    svgText: {
-      primary: {
-        initial: AvailableComponentToken<'fill'>;
-      };
-    };
-    svgDot: {
-      primary: {
-        initial: AvailableComponentToken<'fill'>;
-      };
-    };
+    svgText: BrandSVGTokenMap<'primary' | BrandBaseThemeVariant>;
+    svgDot: BrandSVGTokenMap<BrandAccentThemeVariant>;
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                     Button Component Tokens
+ * **********************************************************************************************
+ */
 export type ButtonComponentPalette = AvailableComponentToken<
   'color' | 'backgroundColor' | 'borderColor'
 >;

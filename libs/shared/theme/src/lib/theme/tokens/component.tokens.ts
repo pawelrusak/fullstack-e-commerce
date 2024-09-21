@@ -14,11 +14,26 @@ export const component: AppComponent = {
           fill: colorPalette.secondary[500],
         },
       },
+      default: {
+        initial: {
+          fill: colorPalette.neutral[800],
+        },
+      },
+      invert: {
+        initial: {
+          fill: colorPalette.neutral[0],
+        },
+      },
     },
     svgDot: {
       primary: {
         initial: {
           fill: color.primary,
+        },
+      },
+      secondary: {
+        initial: {
+          fill: color.secondary,
         },
       },
     },

@@ -12,9 +12,24 @@ describe('Component theme config', () => {
               fill: expect.any(String),
             },
           },
+          default: {
+            initial: {
+              fill: expect.any(String),
+            },
+          },
+          invert: {
+            initial: {
+              fill: expect.any(String),
+            },
+          },
         },
         svgDot: {
           primary: {
+            initial: {
+              fill: expect.any(String),
+            },
+          },
+          secondary: {
             initial: {
               fill: expect.any(String),
             },
@@ -34,8 +49,23 @@ describe('Component theme config', () => {
                 "fill": "hsl(7, 100%, 65%)",
               },
             },
+            "secondary": {
+              "initial": {
+                "fill": "hsl(0, 0%, 19%)",
+              },
+            },
           },
           "svgText": {
+            "default": {
+              "initial": {
+                "fill": "hsl(0, 0%, 19%)",
+              },
+            },
+            "invert": {
+              "initial": {
+                "fill": "hsl(0, 0%, 100%)",
+              },
+            },
             "primary": {
               "initial": {
                 "fill": "hsl(0, 0%, 19%)",
