@@ -1,8 +1,10 @@
-import type { CSSProperties } from 'react';
-
-type AvailableComponentToken<CSSProps extends keyof CSSProperties> = {
-  [P in CSSProps]: CSSProperties[P];
-};
+import type {
+  AvailableComponentToken,
+  DefaultModifier,
+  ModifierStateMap,
+  InitialState,
+  StateStyleMap,
+} from './tokens.utils.types';
 
 /**
  * **********************************************************************************************
@@ -10,13 +12,11 @@ type AvailableComponentToken<CSSProps extends keyof CSSProperties> = {
  * **********************************************************************************************
  */
 export type BrandAccentThemeVariant = 'primary' | 'secondary';
-export type BrandBaseThemeVariant = 'default' | 'invert';
+export type BrandBaseThemeVariant = DefaultModifier | 'invert';
 
-type BrandSVGTokenMap<TVariant extends string> = Record<
+type BrandSVGTokenMap<TVariant extends string> = ModifierStateMap<
   TVariant,
-  {
-    initial: AvailableComponentToken<'fill'>;
-  }
+  StateStyleMap<InitialState, AvailableComponentToken<'fill'>>
 >;
 
 export type BrandComponent = {
