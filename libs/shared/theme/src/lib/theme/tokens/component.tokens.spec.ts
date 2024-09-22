@@ -7,11 +7,6 @@ describe('Component theme config', () => {
 
       expect(brand).toEqual({
         svgText: {
-          primary: {
-            initial: {
-              fill: expect.any(String),
-            },
-          },
           default: {
             initial: {
               fill: expect.any(String),
@@ -64,11 +59,6 @@ describe('Component theme config', () => {
             "invert": {
               "initial": {
                 "fill": "hsl(0, 0%, 100%)",
-              },
-            },
-            "primary": {
-              "initial": {
-                "fill": "hsl(0, 0%, 19%)",
               },
             },
           },

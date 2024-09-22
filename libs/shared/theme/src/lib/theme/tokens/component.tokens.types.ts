@@ -21,7 +21,7 @@ type BrandSVGTokenMap<TVariant extends string> = Record<
 
 export type BrandComponent = {
   brand: {
-    svgText: BrandSVGTokenMap<'primary' | BrandBaseThemeVariant>;
+    svgText: BrandSVGTokenMap<BrandBaseThemeVariant>;
     svgDot: BrandSVGTokenMap<BrandAccentThemeVariant>;
   };
 };

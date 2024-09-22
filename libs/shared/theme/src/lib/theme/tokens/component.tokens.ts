@@ -9,11 +9,6 @@ export const component: AppComponent = {
    */
   brand: {
     svgText: {
-      primary: {
-        initial: {
-          fill: colorPalette.secondary[500],
-        },
-      },
       default: {
         initial: {
           fill: colorPalette.neutral[800],
