@@ -39,3 +39,7 @@ export type Paths<T, D extends number = 10> = [D] extends [never]
     : '';
 
 export type ObjectValues<T> = T[keyof T];
+
+export type UppercaseKeyMap<K extends string> = {
+  [Key in K as Uppercase<Key>]: Key;
+};
