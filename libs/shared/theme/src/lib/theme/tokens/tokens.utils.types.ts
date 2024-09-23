@@ -18,3 +18,8 @@ export type ModifierStateMap<
   TModifier extends string,
   TStateTokenMap extends StateStyleMap,
 > = Record<TModifier, TStateTokenMap>;
+
+export type ImmutableBaseToken<TToken extends keyof CSSProperties> = Record<
+  '_base',
+  AvailableComponentToken<TToken>
+>;
