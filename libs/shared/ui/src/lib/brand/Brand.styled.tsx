@@ -3,6 +3,7 @@
 import styled from 'styled-components';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import BrandSvgIcon from './brand.svg';
+import { ACCENT_THEME, BASE_THEME } from './brand.constants';
 
 import type {
   BrandAccentThemeVariant,
@@ -26,12 +27,12 @@ export type StyledBrandSvgProps = {
 
 export const BrandSvg = styled(BrandSvgIcon)<StyledBrandSvgProps>`
   [data-brand-text] {
-    fill: ${({ textColor, baseTheme = 'default' }) =>
+    fill: ${({ textColor, baseTheme = BASE_THEME.DEFAULT }) =>
       textColor ?? svgTextToken[baseTheme].initial.fill};
   }
 
   [data-brand-dot] {
-    fill: ${({ dotColor, accentTheme = 'primary' }) =>
+    fill: ${({ dotColor, accentTheme = ACCENT_THEME.PRIMARY }) =>
       dotColor ?? svgDotToken[accentTheme].initial.fill};
   }
 `;

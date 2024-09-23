@@ -5,11 +5,7 @@ import {
   PrimarySurfaceDecorator,
   SecondarySurfaceDecorator,
 } from '../../../.storybook/decorators';
-
-import type { BrandProps } from './brand.component';
-
-type AccentThemes = BrandProps['accentTheme'][];
-type BaseThemes = BrandProps['baseTheme'][];
+import { ACCENT_THEME, BASE_THEME } from './brand.constants';
 
 export default {
   component: Brand,
@@ -23,11 +19,11 @@ export default {
     },
     accentTheme: {
       control: 'select',
-      options: ['primary', 'secondary'] as AccentThemes,
+      options: [ACCENT_THEME.PRIMARY, ACCENT_THEME.SECONDARY],
     },
     baseTheme: {
       control: 'select',
-      options: ['default', 'invert'] as BaseThemes,
+      options: [BASE_THEME.DEFAULT, BASE_THEME.INVERT],
     },
   },
 } satisfies Meta<typeof Brand>;
@@ -41,16 +37,16 @@ export const Default: Story = {
 
 export const OnPrimary: Story = {
   args: {
-    accentTheme: 'secondary',
-    baseTheme: 'invert',
+    baseTheme: BASE_THEME.INVERT,
+    accentTheme: ACCENT_THEME.SECONDARY,
   },
   decorators: [PrimarySurfaceDecorator],
 };
 
 export const OnSecondary: Story = {
   args: {
-    baseTheme: 'invert',
-    accentTheme: 'primary',
+    baseTheme: BASE_THEME.INVERT,
+    accentTheme: ACCENT_THEME.PRIMARY,
   },
   decorators: [SecondarySurfaceDecorator],
 };
