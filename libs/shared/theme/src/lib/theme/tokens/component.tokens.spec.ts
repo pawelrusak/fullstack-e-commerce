@@ -501,12 +501,29 @@ describe('Component theme config', () => {
               },
             },
           },
+          default: {
+            initial: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+            },
+            interact: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+            },
+            checked: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+            },
+          },
         },
         indicator: {
           base: {
             palette: {
               color: expect.any(String),
             },
+          },
+          _base: {
+            color: expect.any(String),
           },
         },
       });
@@ -518,6 +535,9 @@ describe('Component theme config', () => {
       expect(checkbox).toMatchInlineSnapshot(`
         {
           "indicator": {
+            "_base": {
+              "color": "hsl(0, 0%, 100%)",
+            },
             "base": {
               "palette": {
                 "color": "hsl(0, 0%, 100%)",
@@ -525,6 +545,20 @@ describe('Component theme config', () => {
             },
           },
           "root": {
+            "default": {
+              "checked": {
+                "backgroundColor": "hsl(7, 100%, 65%)",
+                "borderColor": "hsl(7, 100%, 65%)",
+              },
+              "initial": {
+                "backgroundColor": "transparent",
+                "borderColor": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "backgroundColor": "hsl(7, 100%, 59%)",
+                "borderColor": "hsl(7, 100%, 59%)",
+              },
+            },
             "variant": {
               "default": {
                 "state": {

@@ -253,6 +253,9 @@ exports[`Default Theme should match the specified values 1`] = `
     },
     "checkbox": {
       "indicator": {
+        "_base": {
+          "color": "hsl(0, 0%, 100%)",
+        },
         "base": {
           "palette": {
             "color": "hsl(0, 0%, 100%)",
@@ -260,6 +263,20 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
       "root": {
+        "default": {
+          "checked": {
+            "backgroundColor": "hsl(7, 100%, 65%)",
+            "borderColor": "hsl(7, 100%, 65%)",
+          },
+          "initial": {
+            "backgroundColor": "transparent",
+            "borderColor": "hsl(0, 0%, 19%)",
+          },
+          "interact": {
+            "backgroundColor": "hsl(7, 100%, 59%)",
+            "borderColor": "hsl(7, 100%, 59%)",
+          },
+        },
         "variant": {
           "default": {
             "state": {

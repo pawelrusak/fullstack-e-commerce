@@ -248,12 +248,29 @@ export const component: AppComponent = {
           },
         },
       },
+      default: {
+        initial: {
+          backgroundColor: 'transparent',
+          borderColor: colorPalette.neutral[800],
+        },
+        interact: {
+          backgroundColor: color.primaryInteract,
+          borderColor: color.primaryInteract,
+        },
+        checked: {
+          backgroundColor: color.primary,
+          borderColor: color.primary,
+        },
+      },
     },
     indicator: {
       base: {
         palette: {
           color: color.onPrimary,
         },
+      },
+      _base: {
+        color: color.onPrimary,
       },
     },
   },

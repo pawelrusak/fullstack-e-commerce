@@ -1,7 +1,8 @@
 import type {
   AvailableComponentToken,
-  DefaultModifier,
+  ImmutableBaseToken,
   ModifierStateMap,
+  DefaultModifier,
   InitialState,
   StateStyleMap,
 } from './tokens.utils.types';
@@ -149,6 +150,11 @@ export type CheckboxComponentPalette = AvailableComponentToken<
   'backgroundColor' | 'borderColor'
 >;
 
+type CheckboxRootTokenMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<InitialState | 'interact' | 'checked', CheckboxComponentPalette>
+>;
+
 export type CheckboxComponent = {
   checkbox: {
     root: {
@@ -167,12 +173,12 @@ export type CheckboxComponent = {
           };
         };
       };
-    };
+    } & CheckboxRootTokenMap;
     indicator: {
       base: {
         palette: AvailableComponentToken<'color'>;
       };
-    };
+    } & ImmutableBaseToken<'color'>;
   };
 };
 
