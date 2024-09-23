@@ -1,8 +1,8 @@
 import { VisuallyHidden } from '@reach/visually-hidden';
 import { EN } from '@e-shop/i18n';
-import * as Styled from './Brand.styled';
+import * as Styled from './brand.styled';
 
-import type { StyledBrandSvgProps } from './Brand.styled';
+import type { StyledBrandSvgProps } from './brand.styled';
 
 // TODO: Move this to a shared type library or directory
 type ClassNameAttribute = Pick<React.HTMLProps<HTMLElement>, 'className'>;
