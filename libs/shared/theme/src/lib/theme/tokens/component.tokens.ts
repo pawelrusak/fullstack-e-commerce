@@ -218,6 +218,11 @@ export const component: AppComponent = {
         borderColor: colorPalette.secondary[50],
       },
     },
+    root: {
+      _base: {
+        borderColor: colorPalette.secondary[50],
+      },
+    },
   },
   /**
    * Checkbox component tokens

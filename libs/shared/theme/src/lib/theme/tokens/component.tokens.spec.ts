@@ -453,6 +453,11 @@ describe('Component theme config', () => {
             borderColor: expect.any(String),
           },
         },
+        root: {
+          _base: {
+            borderColor: expect.any(String),
+          },
+        },
       });
     });
 
@@ -463,6 +468,11 @@ describe('Component theme config', () => {
         {
           "base": {
             "palette": {
+              "borderColor": "hsl(0, 0%, 80%)",
+            },
+          },
+          "root": {
+            "_base": {
               "borderColor": "hsl(0, 0%, 80%)",
             },
           },

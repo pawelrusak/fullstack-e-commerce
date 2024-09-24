@@ -280,6 +280,11 @@ exports[`Default Theme should match the specified values 1`] = `
           "borderColor": "hsl(0, 0%, 80%)",
         },
       },
+      "root": {
+        "_base": {
+          "borderColor": "hsl(0, 0%, 80%)",
+        },
+      },
     },
   },
   "fontFamily": {

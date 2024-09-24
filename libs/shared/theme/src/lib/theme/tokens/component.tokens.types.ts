@@ -144,6 +144,7 @@ export type DividerComponent = {
     base: {
       palette: AvailableComponentToken<'borderColor'>;
     };
+    root: ImmutableBaseToken<'borderColor'>;
   };
 };
 
