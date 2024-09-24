@@ -282,9 +282,16 @@ describe('Component theme config', () => {
           base: {
             backgroundColor: expect.any(String),
           },
+          _base: {
+            backgroundColor: expect.any(String),
+          },
         },
         link: {
           base: {
+            fontFamily: expect.any(String),
+            backgroundColor: expect.any(String),
+          },
+          _base: {
             fontFamily: expect.any(String),
             backgroundColor: expect.any(String),
           },
@@ -302,6 +309,14 @@ describe('Component theme config', () => {
               },
             },
           },
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+            },
+          },
         },
       });
     });
@@ -312,9 +327,21 @@ describe('Component theme config', () => {
       expect(breadcrumb).toMatchInlineSnapshot(`
         {
           "link": {
+            "_base": {
+              "backgroundColor": "transparent",
+              "fontFamily": "Montserrat, sans-serif",
+            },
             "base": {
               "backgroundColor": "transparent",
               "fontFamily": "Montserrat, sans-serif",
+            },
+            "default": {
+              "initial": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "color": "hsl(7, 100%, 65%)",
+              },
             },
             "variant": {
               "base": {
@@ -332,6 +359,9 @@ describe('Component theme config', () => {
             },
           },
           "root": {
+            "_base": {
+              "backgroundColor": "transparent",
+            },
             "base": {
               "backgroundColor": "transparent",
             },

@@ -87,11 +87,16 @@ export type ButtonComponent = {
 
 export type BreadcrumbComponentLinkPalette = AvailableComponentToken<'color'>;
 
+type BreadcrumbLinkTokenMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<InitialState | InteractState, BreadcrumbComponentLinkPalette>
+>;
+
 export type BreadcrumbComponent = {
   breadcrumb: {
     root: {
       base: AvailableComponentToken<'backgroundColor'>;
-    };
+    } & ImmutableBaseToken<'backgroundColor'>;
     link: {
       base: AvailableComponentToken<'fontFamily' | 'backgroundColor'>;
       variant: {
@@ -104,7 +109,8 @@ export type BreadcrumbComponent = {
           };
         };
       };
-    };
+    } & ImmutableBaseToken<'fontFamily' | 'backgroundColor'> &
+      BreadcrumbLinkTokenMap;
   };
 };
 

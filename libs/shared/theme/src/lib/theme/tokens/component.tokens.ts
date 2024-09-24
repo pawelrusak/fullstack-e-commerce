@@ -140,9 +140,16 @@ export const component: AppComponent = {
       base: {
         backgroundColor: 'transparent',
       },
+      _base: {
+        backgroundColor: 'transparent',
+      },
     },
     link: {
       base: {
+        fontFamily: fontFamily.primary,
+        backgroundColor: 'transparent',
+      },
+      _base: {
         fontFamily: fontFamily.primary,
         backgroundColor: 'transparent',
       },
@@ -158,6 +165,14 @@ export const component: AppComponent = {
               color: color.onBackgroundInteract,
             },
           },
+        },
+      },
+      default: {
+        initial: {
+          color: color.onBackground,
+        },
+        interact: {
+          color: color.onBackgroundInteract,
         },
       },
     },
