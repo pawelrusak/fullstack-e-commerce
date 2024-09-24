@@ -141,9 +141,6 @@ export type CardsSectionComponent = {
 
 export type DividerComponent = {
   divider: {
-    base: {
-      palette: AvailableComponentToken<'borderColor'>;
-    };
     root: ImmutableBaseToken<'borderColor'>;
   };
 };

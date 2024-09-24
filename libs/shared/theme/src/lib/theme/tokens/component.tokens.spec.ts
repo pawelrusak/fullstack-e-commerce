@@ -448,11 +448,6 @@ describe('Component theme config', () => {
       const { divider } = component;
 
       expect(divider).toEqual({
-        base: {
-          palette: {
-            borderColor: expect.any(String),
-          },
-        },
         root: {
           _base: {
             borderColor: expect.any(String),
@@ -466,11 +461,6 @@ describe('Component theme config', () => {
 
       expect(divider).toMatchInlineSnapshot(`
         {
-          "base": {
-            "palette": {
-              "borderColor": "hsl(0, 0%, 80%)",
-            },
-          },
           "root": {
             "_base": {
               "borderColor": "hsl(0, 0%, 80%)",
