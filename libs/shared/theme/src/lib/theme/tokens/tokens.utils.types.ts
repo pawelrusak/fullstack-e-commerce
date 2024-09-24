@@ -8,6 +8,8 @@ export type DefaultModifier = 'default';
 
 export type InitialState = 'initial';
 
+export type InteractState = 'interact';
+
 export type StateStyleMap<
   TState extends string = InitialState,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
