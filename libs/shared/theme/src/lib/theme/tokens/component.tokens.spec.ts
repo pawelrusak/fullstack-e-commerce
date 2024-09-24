@@ -477,30 +477,6 @@ describe('Component theme config', () => {
 
       expect(checkbox).toEqual({
         root: {
-          variant: {
-            default: {
-              state: {
-                default: {
-                  palette: {
-                    backgroundColor: expect.any(String),
-                    borderColor: expect.any(String),
-                  },
-                },
-                interact: {
-                  palette: {
-                    backgroundColor: expect.any(String),
-                    borderColor: expect.any(String),
-                  },
-                },
-                checked: {
-                  palette: {
-                    backgroundColor: expect.any(String),
-                    borderColor: expect.any(String),
-                  },
-                },
-              },
-            },
-          },
           default: {
             initial: {
               backgroundColor: expect.any(String),
@@ -517,11 +493,6 @@ describe('Component theme config', () => {
           },
         },
         indicator: {
-          base: {
-            palette: {
-              color: expect.any(String),
-            },
-          },
           _base: {
             color: expect.any(String),
           },
@@ -538,11 +509,6 @@ describe('Component theme config', () => {
             "_base": {
               "color": "hsl(0, 0%, 100%)",
             },
-            "base": {
-              "palette": {
-                "color": "hsl(0, 0%, 100%)",
-              },
-            },
           },
           "root": {
             "default": {
@@ -557,30 +523,6 @@ describe('Component theme config', () => {
               "interact": {
                 "backgroundColor": "hsl(7, 100%, 59%)",
                 "borderColor": "hsl(7, 100%, 59%)",
-              },
-            },
-            "variant": {
-              "default": {
-                "state": {
-                  "checked": {
-                    "palette": {
-                      "backgroundColor": "hsl(7, 100%, 65%)",
-                      "borderColor": "hsl(7, 100%, 65%)",
-                    },
-                  },
-                  "default": {
-                    "palette": {
-                      "backgroundColor": "transparent",
-                      "borderColor": "hsl(0, 0%, 19%)",
-                    },
-                  },
-                  "interact": {
-                    "palette": {
-                      "backgroundColor": "hsl(7, 100%, 59%)",
-                      "borderColor": "hsl(7, 100%, 59%)",
-                    },
-                  },
-                },
               },
             },
           },

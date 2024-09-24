@@ -256,11 +256,6 @@ exports[`Default Theme should match the specified values 1`] = `
         "_base": {
           "color": "hsl(0, 0%, 100%)",
         },
-        "base": {
-          "palette": {
-            "color": "hsl(0, 0%, 100%)",
-          },
-        },
       },
       "root": {
         "default": {
@@ -275,30 +270,6 @@ exports[`Default Theme should match the specified values 1`] = `
           "interact": {
             "backgroundColor": "hsl(7, 100%, 59%)",
             "borderColor": "hsl(7, 100%, 59%)",
-          },
-        },
-        "variant": {
-          "default": {
-            "state": {
-              "checked": {
-                "palette": {
-                  "backgroundColor": "hsl(7, 100%, 65%)",
-                  "borderColor": "hsl(7, 100%, 65%)",
-                },
-              },
-              "default": {
-                "palette": {
-                  "backgroundColor": "transparent",
-                  "borderColor": "hsl(0, 0%, 19%)",
-                },
-              },
-              "interact": {
-                "palette": {
-                  "backgroundColor": "hsl(7, 100%, 59%)",
-                  "borderColor": "hsl(7, 100%, 59%)",
-                },
-              },
-            },
           },
         },
       },

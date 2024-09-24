@@ -224,30 +224,6 @@ export const component: AppComponent = {
    */
   checkbox: {
     root: {
-      variant: {
-        default: {
-          state: {
-            default: {
-              palette: {
-                backgroundColor: 'transparent',
-                borderColor: colorPalette.neutral[800],
-              },
-            },
-            interact: {
-              palette: {
-                backgroundColor: color.primaryInteract,
-                borderColor: color.primaryInteract,
-              },
-            },
-            checked: {
-              palette: {
-                backgroundColor: color.primary,
-                borderColor: color.primary,
-              },
-            },
-          },
-        },
-      },
       default: {
         initial: {
           backgroundColor: 'transparent',
@@ -264,11 +240,6 @@ export const component: AppComponent = {
       },
     },
     indicator: {
-      base: {
-        palette: {
-          color: color.onPrimary,
-        },
-      },
       _base: {
         color: color.onPrimary,
       },
