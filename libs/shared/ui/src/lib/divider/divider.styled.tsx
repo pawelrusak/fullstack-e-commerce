@@ -7,11 +7,11 @@ import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
 import type { MarginProps } from 'styled-system';
 
+const { root: rootToken } = getToken('divider');
+
 export const Divider = styled.hr<MarginProps>`
   border: none;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: ${getToken('divider.base.palette.borderColor')};
+  border-top: 1px solid ${rootToken._base.borderColor};
   margin: 1.6rem 0;
   ${margin}
 `;
