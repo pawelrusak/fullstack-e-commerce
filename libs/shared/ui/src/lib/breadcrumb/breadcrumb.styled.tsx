@@ -1,8 +1,10 @@
 import styled, { css } from 'styled-components';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
+const { root: rootToken, link: linkToken } = getToken('breadcrumb');
+
 export const RootNav = styled.nav`
-  background-color: ${getToken('breadcrumb.root.base.backgroundColor')};
+  background-color: ${rootToken._base.backgroundColor};
 `;
 
 export type StyledLinkProps = {
@@ -10,16 +12,16 @@ export type StyledLinkProps = {
 };
 
 export const Link = styled.a<StyledLinkProps>`
-  font-family: ${getToken('breadcrumb.link.base.fontFamily')};
-  background-color: ${getToken('breadcrumb.link.base.backgroundColor')};
-  ${getToken('breadcrumb.link.variant.base.default.palette')};
+  font-family: ${linkToken._base.fontFamily};
+  background-color: ${linkToken._base.backgroundColor};
+  color: ${linkToken.default.initial.color};
   text-decoration: none;
   padding: 0 1.8rem;
   font-size: 1.6rem;
   line-height: 2.4rem;
 
   &:is(:hover, :focus) {
-    ${getToken('breadcrumb.link.variant.base.defaultInteract.palette')};
+    color: ${linkToken.default.interact.color};
   }
 
   ${({ isCurrent }) =>
