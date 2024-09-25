@@ -20,7 +20,8 @@ export const Link = styled.a<StyledLinkProps>`
   font-size: 1.6rem;
   line-height: 2.4rem;
 
-  &:is(:hover, :focus) {
+  &:hover,
+  :focus {
     color: ${linkToken.default.interact.color};
   }
 
