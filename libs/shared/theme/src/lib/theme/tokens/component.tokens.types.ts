@@ -100,18 +100,25 @@ export type BreadcrumbComponent = {
   };
 };
 
+type CardsSectionReadMoreLinkToken = AvailableComponentToken<'color'>;
+
+type CardsSectionReadMoreLinkTokenMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<InitialState | InteractState, CardsSectionReadMoreLinkToken>
+>;
+
 export type CardsSectionComponent = {
   cardsSection: {
     root: {
       base: {
         palette: AvailableComponentToken<'backgroundColor'>;
       };
-    };
+    } & ImmutableBaseToken<'backgroundColor'>;
     title: {
       base: {
         palette: AvailableComponentToken<'color'>;
       } & AvailableComponentToken<'fontFamily' | 'fontWeight'>;
-    };
+    } & ImmutableBaseToken<'color' | 'fontFamily' | 'fontWeight'>;
     readMoreLink: {
       base: AvailableComponentToken<'fontWeight' | 'fontFamily'>;
       variant: {
@@ -122,12 +129,13 @@ export type CardsSectionComponent = {
           palette: AvailableComponentToken<'color'>;
         };
       };
-    };
+    } & ImmutableBaseToken<'fontWeight' | 'fontFamily'> &
+      CardsSectionReadMoreLinkTokenMap;
     body: {
       base: {
         palette: AvailableComponentToken<'backgroundColor' | 'color'>;
       };
-    };
+    } & ImmutableBaseToken<'backgroundColor' | 'color'>;
   };
 };
 

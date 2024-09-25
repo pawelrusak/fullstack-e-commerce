@@ -340,6 +340,9 @@ describe('Component theme config', () => {
               backgroundColor: expect.any(String),
             },
           },
+          _base: {
+            backgroundColor: expect.any(String),
+          },
         },
         title: {
           base: {
@@ -349,9 +352,18 @@ describe('Component theme config', () => {
             fontFamily: expect.any(String),
             fontWeight: expect.any(Number),
           },
+          _base: {
+            color: expect.any(String),
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+          },
         },
         readMoreLink: {
           base: {
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+          },
+          _base: {
             fontFamily: expect.any(String),
             fontWeight: expect.any(Number),
           },
@@ -367,6 +379,14 @@ describe('Component theme config', () => {
               },
             },
           },
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+            },
+          },
         },
         body: {
           base: {
@@ -374,6 +394,10 @@ describe('Component theme config', () => {
               backgroundColor: expect.any(String),
               color: expect.any(String),
             },
+          },
+          _base: {
+            backgroundColor: expect.any(String),
+            color: expect.any(String),
           },
         },
       });
@@ -385,6 +409,10 @@ describe('Component theme config', () => {
       expect(cardsSection).toMatchInlineSnapshot(`
         {
           "body": {
+            "_base": {
+              "backgroundColor": "transparent",
+              "color": "hsl(0, 0%, 19%)",
+            },
             "base": {
               "palette": {
                 "backgroundColor": "transparent",
@@ -393,9 +421,21 @@ describe('Component theme config', () => {
             },
           },
           "readMoreLink": {
+            "_base": {
+              "fontFamily": "Montserrat, sans-serif",
+              "fontWeight": 700,
+            },
             "base": {
               "fontFamily": "Montserrat, sans-serif",
               "fontWeight": 700,
+            },
+            "default": {
+              "initial": {
+                "color": "hsl(7, 100%, 65%)",
+              },
+              "interact": {
+                "color": "hsl(7, 100%, 59%)",
+              },
             },
             "variant": {
               "default": {
@@ -411,6 +451,9 @@ describe('Component theme config', () => {
             },
           },
           "root": {
+            "_base": {
+              "backgroundColor": "transparent",
+            },
             "base": {
               "palette": {
                 "backgroundColor": "transparent",
@@ -418,6 +461,11 @@ describe('Component theme config', () => {
             },
           },
           "title": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Poppins, sans-serif",
+              "fontWeight": 600,
+            },
             "base": {
               "fontFamily": "Poppins, sans-serif",
               "fontWeight": 600,

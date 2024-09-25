@@ -166,6 +166,9 @@ export const component: AppComponent = {
           backgroundColor: 'transparent',
         },
       },
+      _base: {
+        backgroundColor: 'transparent',
+      },
     },
     title: {
       base: {
@@ -175,9 +178,18 @@ export const component: AppComponent = {
         fontFamily: fontFamily.secondary,
         fontWeight: fontWeight.semiBold,
       },
+      _base: {
+        color: color.onBackground,
+        fontFamily: fontFamily.secondary,
+        fontWeight: fontWeight.semiBold,
+      },
     },
     readMoreLink: {
       base: {
+        fontFamily: fontFamily.primary,
+        fontWeight: fontWeight.bold,
+      },
+      _base: {
         fontFamily: fontFamily.primary,
         fontWeight: fontWeight.bold,
       },
@@ -193,6 +205,14 @@ export const component: AppComponent = {
           },
         },
       },
+      default: {
+        initial: {
+          color: color.onBackgroundLink,
+        },
+        interact: {
+          color: color.onBackgroundLinkInteract,
+        },
+      },
     },
     body: {
       base: {
@@ -200,6 +220,10 @@ export const component: AppComponent = {
           backgroundColor: 'transparent',
           color: color.onBackground,
         },
+      },
+      _base: {
+        backgroundColor: 'transparent',
+        color: color.onBackground,
       },
     },
   },

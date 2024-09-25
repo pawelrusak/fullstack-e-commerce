@@ -203,6 +203,10 @@ exports[`Default Theme should match the specified values 1`] = `
     },
     "cardsSection": {
       "body": {
+        "_base": {
+          "backgroundColor": "transparent",
+          "color": "hsl(0, 0%, 19%)",
+        },
         "base": {
           "palette": {
             "backgroundColor": "transparent",
@@ -211,9 +215,21 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
       "readMoreLink": {
+        "_base": {
+          "fontFamily": "Montserrat, sans-serif",
+          "fontWeight": 700,
+        },
         "base": {
           "fontFamily": "Montserrat, sans-serif",
           "fontWeight": 700,
+        },
+        "default": {
+          "initial": {
+            "color": "hsl(7, 100%, 65%)",
+          },
+          "interact": {
+            "color": "hsl(7, 100%, 59%)",
+          },
         },
         "variant": {
           "default": {
@@ -229,6 +245,9 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
       "root": {
+        "_base": {
+          "backgroundColor": "transparent",
+        },
         "base": {
           "palette": {
             "backgroundColor": "transparent",
@@ -236,6 +255,11 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
       "title": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+          "fontFamily": "Poppins, sans-serif",
+          "fontWeight": 600,
+        },
         "base": {
           "fontFamily": "Poppins, sans-serif",
           "fontWeight": 600,
