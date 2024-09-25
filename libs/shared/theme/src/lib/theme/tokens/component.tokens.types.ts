@@ -94,22 +94,8 @@ type BreadcrumbLinkTokenMap = ModifierStateMap<
 
 export type BreadcrumbComponent = {
   breadcrumb: {
-    root: {
-      base: AvailableComponentToken<'backgroundColor'>;
-    } & ImmutableBaseToken<'backgroundColor'>;
-    link: {
-      base: AvailableComponentToken<'fontFamily' | 'backgroundColor'>;
-      variant: {
-        base: {
-          default: {
-            palette: BreadcrumbComponentLinkPalette;
-          };
-          defaultInteract: {
-            palette: BreadcrumbComponentLinkPalette;
-          };
-        };
-      };
-    } & ImmutableBaseToken<'fontFamily' | 'backgroundColor'> &
+    root: ImmutableBaseToken<'backgroundColor'>;
+    link: ImmutableBaseToken<'fontFamily' | 'backgroundColor'> &
       BreadcrumbLinkTokenMap;
   };
 };

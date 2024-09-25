@@ -90,10 +90,6 @@ exports[`Default Theme should match the specified values 1`] = `
           "backgroundColor": "transparent",
           "fontFamily": "Montserrat, sans-serif",
         },
-        "base": {
-          "backgroundColor": "transparent",
-          "fontFamily": "Montserrat, sans-serif",
-        },
         "default": {
           "initial": {
             "color": "hsl(0, 0%, 19%)",
@@ -102,26 +98,9 @@ exports[`Default Theme should match the specified values 1`] = `
             "color": "hsl(7, 100%, 65%)",
           },
         },
-        "variant": {
-          "base": {
-            "default": {
-              "palette": {
-                "color": "hsl(0, 0%, 19%)",
-              },
-            },
-            "defaultInteract": {
-              "palette": {
-                "color": "hsl(7, 100%, 65%)",
-              },
-            },
-          },
-        },
       },
       "root": {
         "_base": {
-          "backgroundColor": "transparent",
-        },
-        "base": {
           "backgroundColor": "transparent",
         },
       },

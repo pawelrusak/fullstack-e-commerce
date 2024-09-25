@@ -279,35 +279,14 @@ describe('Component theme config', () => {
 
       expect(breadcrumb).toEqual({
         root: {
-          base: {
-            backgroundColor: expect.any(String),
-          },
           _base: {
             backgroundColor: expect.any(String),
           },
         },
         link: {
-          base: {
-            fontFamily: expect.any(String),
-            backgroundColor: expect.any(String),
-          },
           _base: {
             fontFamily: expect.any(String),
             backgroundColor: expect.any(String),
-          },
-          variant: {
-            base: {
-              default: {
-                palette: {
-                  color: expect.any(String),
-                },
-              },
-              defaultInteract: {
-                palette: {
-                  color: expect.any(String),
-                },
-              },
-            },
           },
           default: {
             initial: {
@@ -331,10 +310,6 @@ describe('Component theme config', () => {
               "backgroundColor": "transparent",
               "fontFamily": "Montserrat, sans-serif",
             },
-            "base": {
-              "backgroundColor": "transparent",
-              "fontFamily": "Montserrat, sans-serif",
-            },
             "default": {
               "initial": {
                 "color": "hsl(0, 0%, 19%)",
@@ -343,26 +318,9 @@ describe('Component theme config', () => {
                 "color": "hsl(7, 100%, 65%)",
               },
             },
-            "variant": {
-              "base": {
-                "default": {
-                  "palette": {
-                    "color": "hsl(0, 0%, 19%)",
-                  },
-                },
-                "defaultInteract": {
-                  "palette": {
-                    "color": "hsl(7, 100%, 65%)",
-                  },
-                },
-              },
-            },
           },
           "root": {
             "_base": {
-              "backgroundColor": "transparent",
-            },
-            "base": {
               "backgroundColor": "transparent",
             },
           },

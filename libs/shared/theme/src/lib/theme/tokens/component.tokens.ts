@@ -137,35 +137,14 @@ export const component: AppComponent = {
    */
   breadcrumb: {
     root: {
-      base: {
-        backgroundColor: 'transparent',
-      },
       _base: {
         backgroundColor: 'transparent',
       },
     },
     link: {
-      base: {
-        fontFamily: fontFamily.primary,
-        backgroundColor: 'transparent',
-      },
       _base: {
         fontFamily: fontFamily.primary,
         backgroundColor: 'transparent',
-      },
-      variant: {
-        base: {
-          default: {
-            palette: {
-              color: color.onBackground,
-            },
-          },
-          defaultInteract: {
-            palette: {
-              color: color.onBackgroundInteract,
-            },
-          },
-        },
       },
       default: {
         initial: {
