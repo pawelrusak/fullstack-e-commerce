@@ -6,12 +6,17 @@ import type { MarginProps } from 'styled-system';
 
 export type StyledSectionProps = MarginProps;
 
+const {
+  body: bodyToken,
+  root: rootToken,
+  title: titleToken,
+  readMoreLink: readMoreLinkToken,
+} = getToken('cardsSection');
+
 export const RootSection = styled.section<StyledSectionProps>`
   margin-bottom: 8rem;
+  background-color: ${rootToken._base.backgroundColor};
   ${margin}
-  background-color: ${getToken(
-    'cardsSection.root.base.palette.backgroundColor',
-  )};
 `;
 
 export const Header = styled.header`
@@ -30,27 +35,25 @@ export const Header = styled.header`
 `;
 
 export const Title = styled.h2`
-  color: ${getToken('cardsSection.title.base.palette.color')};
-  font-family: ${getToken('cardsSection.title.base.fontFamily')};
+  color: ${titleToken._base.color};
+  font-family: ${titleToken._base.fontFamily};
+  font-weight: ${titleToken._base.fontWeight};
   font-size: 3.6rem;
   line-height: 4.6rem;
-  font-weight: ${getToken('cardsSection.title.base.fontWeight')};
 `;
 
 export const Link = styled.a`
-  color: ${getToken('cardsSection.readMoreLink.variant.default.palette.color')};
+  color: ${readMoreLinkToken.default.initial.color};
   font-size: 1.6rem;
   line-height: 2.4rem;
-  font-weight: ${getToken('cardsSection.readMoreLink.base.fontWeight')};
-  font-family: ${getToken('cardsSection.readMoreLink.base.fontFamily')};
+  font-weight: ${readMoreLinkToken._base.fontWeight};
+  font-family: ${readMoreLinkToken._base.fontFamily};
   text-decoration: none;
   vertical-align: middle;
   align-self: end;
 
   &:is(:hover, :focus) {
-    color: ${getToken(
-      'cardsSection.readMoreLink.variant.interact.palette.color',
-    )};
+    color: ${readMoreLinkToken.default.interact.color};
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
@@ -59,8 +62,6 @@ export const Link = styled.a`
 `;
 
 export const Body = styled.div`
-  color: ${getToken('cardsSection.body.base.palette.color')};
-  background-color: ${getToken(
-    'cardsSection.body.base.palette.backgroundColor',
-  )};
+  color: ${bodyToken.base.palette.color};
+  background-color: ${bodyToken.base.palette.backgroundColor};
 `;
