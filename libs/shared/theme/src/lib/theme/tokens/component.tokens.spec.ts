@@ -76,6 +76,12 @@ describe('Component theme config', () => {
           fontFamily: expect.any(String),
           fontWeight: expect.any(Number),
         },
+        root: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+          },
+        },
         variant: {
           primary: {
             default: {
@@ -177,6 +183,12 @@ describe('Component theme config', () => {
           "base": {
             "fontFamily": "Montserrat, sans-serif",
             "fontWeight": 700,
+          },
+          "root": {
+            "_base": {
+              "fontFamily": "Montserrat, sans-serif",
+              "fontWeight": 700,
+            },
           },
           "variant": {
             "primary": {

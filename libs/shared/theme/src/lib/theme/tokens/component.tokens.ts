@@ -37,6 +37,15 @@ export const component: AppComponent = {
    * Button component tokens
    */
   button: {
+    root: {
+      _base: {
+        fontFamily: fontFamily.primary,
+        fontWeight: fontWeight.bold,
+      },
+    },
+    /**
+     * @deprecated Use `button.root._base` instead
+     */
     base: {
       fontFamily: fontFamily.primary,
       fontWeight: fontWeight.bold,
