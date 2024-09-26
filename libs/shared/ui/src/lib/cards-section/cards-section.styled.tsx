@@ -52,7 +52,8 @@ export const Link = styled.a`
   vertical-align: middle;
   align-self: end;
 
-  &:is(:hover, :focus) {
+  &:hover,
+  &:focus {
     color: ${readMoreLinkToken.default.interact.color};
   }
 
