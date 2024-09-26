@@ -43,11 +43,11 @@ export const Title = styled.h2`
 `;
 
 export const Link = styled.a`
-  color: ${readMoreLinkToken.default.initial.color};
   font-size: 1.6rem;
-  line-height: 2.4rem;
   font-weight: ${readMoreLinkToken._base.fontWeight};
   font-family: ${readMoreLinkToken._base.fontFamily};
+  line-height: 2.4rem;
+  color: ${readMoreLinkToken.default.initial.color};
   text-decoration: none;
   vertical-align: middle;
   align-self: end;
@@ -62,6 +62,6 @@ export const Link = styled.a`
 `;
 
 export const Body = styled.div`
-  color: ${bodyToken.base.palette.color};
-  background-color: ${bodyToken.base.palette.backgroundColor};
+  color: ${bodyToken._base.color};
+  background-color: ${bodyToken._base.backgroundColor};
 `;
