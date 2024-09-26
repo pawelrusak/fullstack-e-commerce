@@ -335,23 +335,11 @@ describe('Component theme config', () => {
 
       expect(cardsSection).toEqual({
         root: {
-          base: {
-            palette: {
-              backgroundColor: expect.any(String),
-            },
-          },
           _base: {
             backgroundColor: expect.any(String),
           },
         },
         title: {
-          base: {
-            palette: {
-              color: expect.any(String),
-            },
-            fontFamily: expect.any(String),
-            fontWeight: expect.any(Number),
-          },
           _base: {
             color: expect.any(String),
             fontFamily: expect.any(String),
@@ -359,26 +347,11 @@ describe('Component theme config', () => {
           },
         },
         readMoreLink: {
-          base: {
-            fontFamily: expect.any(String),
-            fontWeight: expect.any(Number),
-          },
           _base: {
             fontFamily: expect.any(String),
             fontWeight: expect.any(Number),
           },
-          variant: {
-            default: {
-              palette: {
-                color: expect.any(String),
-              },
-            },
-            interact: {
-              palette: {
-                color: expect.any(String),
-              },
-            },
-          },
+
           default: {
             initial: {
               color: expect.any(String),
@@ -389,12 +362,6 @@ describe('Component theme config', () => {
           },
         },
         body: {
-          base: {
-            palette: {
-              backgroundColor: expect.any(String),
-              color: expect.any(String),
-            },
-          },
           _base: {
             backgroundColor: expect.any(String),
             color: expect.any(String),
@@ -413,19 +380,9 @@ describe('Component theme config', () => {
               "backgroundColor": "transparent",
               "color": "hsl(0, 0%, 19%)",
             },
-            "base": {
-              "palette": {
-                "backgroundColor": "transparent",
-                "color": "hsl(0, 0%, 19%)",
-              },
-            },
           },
           "readMoreLink": {
             "_base": {
-              "fontFamily": "Montserrat, sans-serif",
-              "fontWeight": 700,
-            },
-            "base": {
               "fontFamily": "Montserrat, sans-serif",
               "fontWeight": 700,
             },
@@ -437,27 +394,10 @@ describe('Component theme config', () => {
                 "color": "hsl(7, 100%, 59%)",
               },
             },
-            "variant": {
-              "default": {
-                "palette": {
-                  "color": "hsl(7, 100%, 65%)",
-                },
-              },
-              "interact": {
-                "palette": {
-                  "color": "hsl(7, 100%, 59%)",
-                },
-              },
-            },
           },
           "root": {
             "_base": {
               "backgroundColor": "transparent",
-            },
-            "base": {
-              "palette": {
-                "backgroundColor": "transparent",
-              },
             },
           },
           "title": {
@@ -465,13 +405,6 @@ describe('Component theme config', () => {
               "color": "hsl(0, 0%, 19%)",
               "fontFamily": "Poppins, sans-serif",
               "fontWeight": 600,
-            },
-            "base": {
-              "fontFamily": "Poppins, sans-serif",
-              "fontWeight": 600,
-              "palette": {
-                "color": "hsl(0, 0%, 19%)",
-              },
             },
           },
         }

@@ -109,33 +109,11 @@ type CardsSectionReadMoreLinkTokenMap = ModifierStateMap<
 
 export type CardsSectionComponent = {
   cardsSection: {
-    root: {
-      base: {
-        palette: AvailableComponentToken<'backgroundColor'>;
-      };
-    } & ImmutableBaseToken<'backgroundColor'>;
-    title: {
-      base: {
-        palette: AvailableComponentToken<'color'>;
-      } & AvailableComponentToken<'fontFamily' | 'fontWeight'>;
-    } & ImmutableBaseToken<'color' | 'fontFamily' | 'fontWeight'>;
-    readMoreLink: {
-      base: AvailableComponentToken<'fontWeight' | 'fontFamily'>;
-      variant: {
-        default: {
-          palette: AvailableComponentToken<'color'>;
-        };
-        interact: {
-          palette: AvailableComponentToken<'color'>;
-        };
-      };
-    } & ImmutableBaseToken<'fontWeight' | 'fontFamily'> &
+    root: ImmutableBaseToken<'backgroundColor'>;
+    title: ImmutableBaseToken<'color' | 'fontFamily' | 'fontWeight'>;
+    readMoreLink: ImmutableBaseToken<'fontWeight' | 'fontFamily'> &
       CardsSectionReadMoreLinkTokenMap;
-    body: {
-      base: {
-        palette: AvailableComponentToken<'backgroundColor' | 'color'>;
-      };
-    } & ImmutableBaseToken<'backgroundColor' | 'color'>;
+    body: ImmutableBaseToken<'backgroundColor' | 'color'>;
   };
 };
 

@@ -207,19 +207,9 @@ exports[`Default Theme should match the specified values 1`] = `
           "backgroundColor": "transparent",
           "color": "hsl(0, 0%, 19%)",
         },
-        "base": {
-          "palette": {
-            "backgroundColor": "transparent",
-            "color": "hsl(0, 0%, 19%)",
-          },
-        },
       },
       "readMoreLink": {
         "_base": {
-          "fontFamily": "Montserrat, sans-serif",
-          "fontWeight": 700,
-        },
-        "base": {
           "fontFamily": "Montserrat, sans-serif",
           "fontWeight": 700,
         },
@@ -231,27 +221,10 @@ exports[`Default Theme should match the specified values 1`] = `
             "color": "hsl(7, 100%, 59%)",
           },
         },
-        "variant": {
-          "default": {
-            "palette": {
-              "color": "hsl(7, 100%, 65%)",
-            },
-          },
-          "interact": {
-            "palette": {
-              "color": "hsl(7, 100%, 59%)",
-            },
-          },
-        },
       },
       "root": {
         "_base": {
           "backgroundColor": "transparent",
-        },
-        "base": {
-          "palette": {
-            "backgroundColor": "transparent",
-          },
         },
       },
       "title": {
@@ -259,13 +232,6 @@ exports[`Default Theme should match the specified values 1`] = `
           "color": "hsl(0, 0%, 19%)",
           "fontFamily": "Poppins, sans-serif",
           "fontWeight": 600,
-        },
-        "base": {
-          "fontFamily": "Poppins, sans-serif",
-          "fontWeight": 600,
-          "palette": {
-            "color": "hsl(0, 0%, 19%)",
-          },
         },
       },
     },

@@ -161,23 +161,11 @@ export const component: AppComponent = {
    */
   cardsSection: {
     root: {
-      base: {
-        palette: {
-          backgroundColor: 'transparent',
-        },
-      },
       _base: {
         backgroundColor: 'transparent',
       },
     },
     title: {
-      base: {
-        palette: {
-          color: color.onBackground,
-        },
-        fontFamily: fontFamily.secondary,
-        fontWeight: fontWeight.semiBold,
-      },
       _base: {
         color: color.onBackground,
         fontFamily: fontFamily.secondary,
@@ -185,25 +173,9 @@ export const component: AppComponent = {
       },
     },
     readMoreLink: {
-      base: {
-        fontFamily: fontFamily.primary,
-        fontWeight: fontWeight.bold,
-      },
       _base: {
         fontFamily: fontFamily.primary,
         fontWeight: fontWeight.bold,
-      },
-      variant: {
-        default: {
-          palette: {
-            color: color.onBackgroundLink,
-          },
-        },
-        interact: {
-          palette: {
-            color: color.onBackgroundLinkInteract,
-          },
-        },
       },
       default: {
         initial: {
@@ -215,12 +187,6 @@ export const component: AppComponent = {
       },
     },
     body: {
-      base: {
-        palette: {
-          backgroundColor: 'transparent',
-          color: color.onBackground,
-        },
-      },
       _base: {
         backgroundColor: 'transparent',
         color: color.onBackground,
