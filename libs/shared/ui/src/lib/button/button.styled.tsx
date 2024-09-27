@@ -8,14 +8,16 @@ import {
 
 import type { InternalButtonProps } from './button.utils';
 
+const { root: rootToken } = getToken('button');
+
 export type StyledButtonProps = InternalButtonProps;
 
 export const Button = styled.button<StyledButtonProps>`
   all: unset;
   display: inline-block;
   box-sizing: border-box;
-  font-family: ${getToken('button.base.fontFamily')};
-  font-weight: ${getToken('button.base.fontWeight')};
+  font-family: ${rootToken._base.fontFamily};
+  font-weight: ${rootToken._base.fontWeight};
   font-size: 2rem;
   padding: 1.5rem 3.9rem;
   line-height: 3rem;
