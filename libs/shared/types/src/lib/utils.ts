@@ -43,3 +43,11 @@ export type ObjectValues<T> = T[keyof T];
 export type UppercaseKeyMap<K extends string> = {
   [Key in K as Uppercase<Key>]: Key;
 };
+
+export type ReplaceCharacter<
+  T extends string,
+  From extends string,
+  To extends string,
+> = T extends `${infer Prefix}${From}${infer Suffix}`
+  ? `${Prefix}${To}${ReplaceCharacter<Suffix, From, To>}`
+  : T;
