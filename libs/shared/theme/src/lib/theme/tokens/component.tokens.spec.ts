@@ -77,6 +77,74 @@ describe('Component theme config', () => {
             fontFamily: expect.any(String),
             fontWeight: expect.any(Number),
           },
+          'variant-primary': {
+            initial: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+            interact: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+            disabled: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+          },
+          'variant-secondary': {
+            initial: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+            interact: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+            disabled: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+          },
+          'variant-outline-primary': {
+            initial: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+            interact: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+            disabled: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+          },
+          'variant-outline-secondary': {
+            initial: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+            interact: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+            disabled: {
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+              color: expect.any(String),
+            },
+          },
         },
         variant: {
           primary: {
@@ -180,6 +248,74 @@ describe('Component theme config', () => {
             "_base": {
               "fontFamily": "Montserrat, sans-serif",
               "fontWeight": 700,
+            },
+            "variant-outline-primary": {
+              "disabled": {
+                "backgroundColor": "transparent",
+                "borderColor": "hsl(0, 0%, 80%)",
+                "color": "hsl(0, 0%, 80%)",
+              },
+              "initial": {
+                "backgroundColor": "transparent",
+                "borderColor": "hsl(7, 100%, 65%)",
+                "color": "hsl(7, 100%, 65%)",
+              },
+              "interact": {
+                "backgroundColor": "hsl(7, 100%, 59%)",
+                "borderColor": "hsl(7, 100%, 59%)",
+                "color": "hsl(0, 0%, 100%)",
+              },
+            },
+            "variant-outline-secondary": {
+              "disabled": {
+                "backgroundColor": "transparent",
+                "borderColor": "hsl(0, 0%, 80%)",
+                "color": "hsl(0, 0%, 80%)",
+              },
+              "initial": {
+                "backgroundColor": "transparent",
+                "borderColor": "hsl(0, 0%, 19%)",
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "backgroundColor": "hsl(0, 0%, 16%)",
+                "borderColor": "hsl(0, 0%, 16%)",
+                "color": "hsl(0, 0%, 100%)",
+              },
+            },
+            "variant-primary": {
+              "disabled": {
+                "backgroundColor": "hsl(7, 100%, 81%)",
+                "borderColor": "hsl(7, 100%, 81%)",
+                "color": "hsl(0, 0%, 100%)",
+              },
+              "initial": {
+                "backgroundColor": "hsl(7, 100%, 65%)",
+                "borderColor": "hsl(7, 100%, 65%)",
+                "color": "hsl(0, 0%, 100%)",
+              },
+              "interact": {
+                "backgroundColor": "hsl(7, 100%, 59%)",
+                "borderColor": "hsl(7, 100%, 59%)",
+                "color": "hsl(0, 0%, 100%)",
+              },
+            },
+            "variant-secondary": {
+              "disabled": {
+                "backgroundColor": "hsl(0, 0%, 80%)",
+                "borderColor": "hsl(0, 0%, 80%)",
+                "color": "hsl(0, 0%, 100%)",
+              },
+              "initial": {
+                "backgroundColor": "hsl(0, 0%, 19%)",
+                "borderColor": "hsl(0, 0%, 19%)",
+                "color": "hsl(0, 0%, 100%)",
+              },
+              "interact": {
+                "backgroundColor": "hsl(0, 0%, 16%)",
+                "borderColor": "hsl(0, 0%, 16%)",
+                "color": "hsl(0, 0%, 100%)",
+              },
             },
           },
           "variant": {

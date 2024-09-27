@@ -37,9 +37,33 @@ export type ButtonComponentPalette = AvailableComponentToken<
   'color' | 'backgroundColor' | 'borderColor'
 >;
 
+type ButtonVariantNamespaceKey = 'variant';
+
+type ButtonOutlineNamespaceKey = 'outline';
+
+export type ButtonBaseColorVariant = 'primary' | 'secondary';
+
+type ButtonVariant =
+  | ButtonBaseColorVariant
+  | `${ButtonOutlineNamespaceKey}-${ButtonBaseColorVariant}`;
+
+export type ButtonVariantModifier =
+  `${ButtonVariantNamespaceKey}-${ButtonVariant}`;
+
+type ButtonState = InitialState | InteractState | 'disabled';
+
+type ButtonRootVariantTokenMap = ModifierStateMap<
+  ButtonVariantModifier,
+  StateStyleMap<ButtonState, ButtonComponentPalette>
+>;
+
 export type ButtonComponent = {
   button: {
-    root: ImmutableBaseToken<'fontFamily' | 'fontWeight'>;
+    root: ImmutableBaseToken<'fontFamily' | 'fontWeight'> &
+      ButtonRootVariantTokenMap;
+    /**
+     * @deprecated Use `button.root.variant-*` instead
+     */
     variant: {
       primary: {
         default: {

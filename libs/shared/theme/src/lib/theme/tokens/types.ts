@@ -11,5 +11,7 @@ export type {
   BrandAccentThemeVariant,
   BrandBaseThemeVariant,
   ButtonComponent,
+  ButtonVariantModifier,
+  ButtonBaseColorVariant,
   ButtonComponentPalette,
 } from './component.tokens.types';
