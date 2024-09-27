@@ -43,13 +43,6 @@ export const component: AppComponent = {
         fontWeight: fontWeight.bold,
       },
     },
-    /**
-     * @deprecated Use `button.root._base` instead
-     */
-    base: {
-      fontFamily: fontFamily.primary,
-      fontWeight: fontWeight.bold,
-    },
     variant: {
       primary: {
         default: {

@@ -106,10 +106,6 @@ exports[`Default Theme should match the specified values 1`] = `
       },
     },
     "button": {
-      "base": {
-        "fontFamily": "Montserrat, sans-serif",
-        "fontWeight": 700,
-      },
       "root": {
         "_base": {
           "fontFamily": "Montserrat, sans-serif",

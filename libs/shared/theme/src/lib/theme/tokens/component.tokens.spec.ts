@@ -72,10 +72,6 @@ describe('Component theme config', () => {
       const { button } = component;
 
       expect(button).toEqual({
-        base: {
-          fontFamily: expect.any(String),
-          fontWeight: expect.any(Number),
-        },
         root: {
           _base: {
             fontFamily: expect.any(String),
@@ -180,10 +176,6 @@ describe('Component theme config', () => {
 
       expect(button).toMatchInlineSnapshot(`
         {
-          "base": {
-            "fontFamily": "Montserrat, sans-serif",
-            "fontWeight": 700,
-          },
           "root": {
             "_base": {
               "fontFamily": "Montserrat, sans-serif",
