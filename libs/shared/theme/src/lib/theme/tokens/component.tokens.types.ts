@@ -61,51 +61,6 @@ export type ButtonComponent = {
   button: {
     root: ImmutableBaseToken<'fontFamily' | 'fontWeight'> &
       ButtonRootVariantTokenMap;
-    /**
-     * @deprecated Use `button.root.variant-*` instead
-     */
-    variant: {
-      primary: {
-        default: {
-          palette: ButtonComponentPalette;
-        };
-        defaultInteract: {
-          palette: ButtonComponentPalette;
-        };
-        defaultDisabled: {
-          palette: ButtonComponentPalette;
-        };
-        outline: {
-          palette: ButtonComponentPalette;
-        };
-        outlineInteract: {
-          palette: ButtonComponentPalette;
-        };
-        outlineDisabled: {
-          palette: ButtonComponentPalette;
-        };
-      };
-      secondary: {
-        default: {
-          palette: ButtonComponentPalette;
-        };
-        defaultInteract: {
-          palette: ButtonComponentPalette;
-        };
-        defaultDisabled: {
-          palette: ButtonComponentPalette;
-        };
-        outline: {
-          palette: ButtonComponentPalette;
-        };
-        outlineInteract: {
-          palette: ButtonComponentPalette;
-        };
-        outlineDisabled: {
-          palette: ButtonComponentPalette;
-        };
-      };
-    };
   };
 };
 
