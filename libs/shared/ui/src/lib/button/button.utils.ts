@@ -5,7 +5,7 @@ import type {
   ButtonComponentPalette,
   ButtonVariantModifier,
 } from '@e-shop/theme/types';
-import type { ObjectValues, ReplaceCharacter } from '@e-shop/types';
+import type { ObjectValues, ConstantCaseKeyMap } from '@e-shop/types';
 
 const { root: rootToken } = getToken('button');
 
@@ -25,11 +25,7 @@ export const BUTTON_VARIANT = {
   SOLID: 'solid',
 } as const;
 
-type ConstantCase<T extends string> = {
-  [K in T as Uppercase<ReplaceCharacter<K, '-', '_'>>]: K;
-};
-
-const VARIANT_KEY: ConstantCase<ButtonVariantModifier> = {
+const VARIANT_KEY: ConstantCaseKeyMap<ButtonVariantModifier> = {
   VARIANT_PRIMARY: 'variant-primary',
   VARIANT_SECONDARY: 'variant-secondary',
   VARIANT_OUTLINE_PRIMARY: 'variant-outline-primary',
