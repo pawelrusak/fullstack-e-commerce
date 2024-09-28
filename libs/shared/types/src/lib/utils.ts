@@ -51,3 +51,11 @@ export type ReplaceCharacter<
 > = T extends `${infer Prefix}${From}${infer Suffix}`
   ? `${Prefix}${To}${ReplaceCharacter<Suffix, From, To>}`
   : T;
+
+export type ConstantCase<T extends string> = Uppercase<
+  ReplaceCharacter<T, '-', '_'>
+>;
+
+export type ConstantCaseKeyMap<T extends string> = {
+  [K in T as ConstantCase<K>]: K;
+};
