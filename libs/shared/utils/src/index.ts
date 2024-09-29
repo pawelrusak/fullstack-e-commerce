@@ -1,4 +1,5 @@
 export * from './lib/utils';
+export { getCSSValueNumber } from './lib/styles';
 export { STATUS_CODE } from './lib/status-code';
 export { isNumericValue } from './lib/is-numeric-value';
 export { getValueInRange } from './lib/get-value-in-range';
