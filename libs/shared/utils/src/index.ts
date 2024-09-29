@@ -1,5 +1,6 @@
 export * from './lib/utils';
 export { STATUS_CODE } from './lib/status-code';
+export { isNumericValue } from './lib/is-numeric-value';
 export { getValueInRange } from './lib/get-value-in-range';
 export { useHydrated } from './lib/hooks/use-hydrated.hook';
 export { getCurrencyFormat } from './lib/get-currency-format';
