@@ -88,7 +88,7 @@ describe('Base Theme', () => {
 
     it('should have the correct space structure and types', () => {
       expect(space).toEqual({
-        0: expect.any(Number),
+        0: expect.any(String),
         1: expect.any(String),
         2: expect.any(String),
         3: expect.any(String),
@@ -99,6 +99,7 @@ describe('Base Theme', () => {
         8: expect.any(String),
         9: expect.any(String),
         10: expect.any(String),
+        11: expect.any(String),
       });
     });
 
@@ -198,17 +199,18 @@ describe('Base Theme', () => {
     it('should match the space specified values', () => {
       expect(space).toMatchInlineSnapshot(`
         {
-          "0": 0,
+          "0": "0",
           "1": "0.4rem",
-          "10": "10rem",
+          "10": "8rem",
+          "11": "10rem",
           "2": "0.8rem",
           "3": "1.6rem",
-          "4": "2.4rem",
-          "5": "3.2rem",
-          "6": "4rem",
-          "7": "4.8rem",
-          "8": "6.4rem",
-          "9": "8rem",
+          "4": "2rem",
+          "5": "2.4rem",
+          "6": "3.2rem",
+          "7": "4rem",
+          "8": "4.8rem",
+          "9": "6.4rem",
         }
       `);
     });

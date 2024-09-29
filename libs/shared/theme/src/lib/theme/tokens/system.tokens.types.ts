@@ -1,6 +1,53 @@
-import type { Theme as StyledSystemTheme } from 'styled-system';
-
-export type AppSpace = StyledSystemTheme['space'];
+export type AppSpace = {
+  /**
+   * @value 0
+   */
+  0: string;
+  /**
+   * @value 0.4rem
+   */
+  1: string;
+  /**
+   * @value 0.8rem
+   */
+  2: string;
+  /**
+   * @value 1.6rem
+   */
+  3: string;
+  /**
+   * @value 2rem
+   */
+  4: string;
+  /**
+   * @value 2.4rem
+   */
+  5: string;
+  /**
+   * @value 3.2rem
+   */
+  6: string;
+  /**
+   * @value 4rem
+   */
+  7: string;
+  /**
+   * @value 4.8rem
+   */
+  8: string;
+  /**
+   * @value 6.4rem
+   */
+  9: string;
+  /**
+   * @value 8rem
+   */
+  10: string;
+  /**
+   * @value 10rem
+   */
+  11: string;
+};
 
 /**
  * The `color` object defines color groups used across multiple components like buttons, navbars,

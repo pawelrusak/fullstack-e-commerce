@@ -95,17 +95,18 @@ export const fontWeight: AppFontWeight = {
 };
 
 export const space: AppSpace = {
-  0: 0,
+  0: '0',
   1: '0.4rem',
   2: '0.8rem',
   3: '1.6rem',
-  4: '2.4rem',
-  5: '3.2rem',
-  6: '4rem',
-  7: '4.8rem',
-  8: '6.4rem',
-  9: '8rem',
-  10: '10rem',
+  4: '2rem',
+  5: '2.4rem',
+  6: '3.2rem',
+  7: '4rem',
+  8: '4.8rem',
+  9: '6.4rem',
+  10: '8rem',
+  11: '10rem',
 };
 
 export const screens: AppScreens = {
