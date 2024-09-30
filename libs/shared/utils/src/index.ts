@@ -8,4 +8,9 @@ export { getOrderProductsIds } from './lib/get-order-products-ids';
 export { replaceByCurrentYear } from './lib/replace-by-current-year';
 export { getCategoryQueryString } from './lib/get-category-query-string';
 export { InvalidObjectIdsError, RegisterOrderError } from './lib/errors';
-export { getCSSValueNumber, getCSSValueUnit, CSS_UNITS } from './lib/styles';
+export {
+  getCSSValueNumber,
+  getCSSValueUnit,
+  CSS_UNITS,
+  isCssValueWithUnit,
+} from './lib/styles';

@@ -9,3 +9,15 @@ export const CSS_VALUE_TEST_CASES = [
   ['0.1s', 0.1, 's'],
   ['10ms', 10, 'ms'],
 ] as const;
+
+export const NON_STRING_VALUES = [
+  undefined,
+  null,
+  true,
+  false,
+  {},
+  [],
+  10,
+  Infinity,
+  NaN,
+] as const;
