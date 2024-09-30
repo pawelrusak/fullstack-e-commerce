@@ -1,4 +1,4 @@
-import { getCSSValueNumber } from '../lib/styles/get-css-value-number';
+import { getCSSValueNumber } from '../../lib/styles/get-css-value-number';
 import { CSS_VALUE_TEST_CASES } from './styles.spec.constants';
 
 describe('getCSSValueNumber', () => {
