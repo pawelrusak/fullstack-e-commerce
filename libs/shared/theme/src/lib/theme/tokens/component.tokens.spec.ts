@@ -77,6 +77,27 @@ describe('Component theme config', () => {
             fontFamily: expect.any(String),
             fontWeight: expect.any(Number),
           },
+          'size-small': {
+            initial: {
+              padding: expect.any(String),
+              fontSize: expect.any(String),
+              lineHeight: expect.any(String),
+            },
+          },
+          'size-default': {
+            initial: {
+              padding: expect.any(String),
+              fontSize: expect.any(String),
+              lineHeight: expect.any(String),
+            },
+          },
+          'size-large': {
+            initial: {
+              padding: expect.any(String),
+              fontSize: expect.any(String),
+              lineHeight: expect.any(String),
+            },
+          },
           'variant-primary': {
             initial: {
               backgroundColor: expect.any(String),
@@ -158,6 +179,27 @@ describe('Component theme config', () => {
             "_base": {
               "fontFamily": "Montserrat, sans-serif",
               "fontWeight": 700,
+            },
+            "size-default": {
+              "initial": {
+                "fontSize": "2rem",
+                "lineHeight": "3rem",
+                "padding": "1.5rem 3.9rem",
+              },
+            },
+            "size-large": {
+              "initial": {
+                "fontSize": "2rem",
+                "lineHeight": "3rem",
+                "padding": "2.3rem 6.300000000000001rem",
+              },
+            },
+            "size-small": {
+              "initial": {
+                "fontSize": "1.6rem",
+                "lineHeight": "2.4rem",
+                "padding": "0.7000000000000001rem 1.9rem",
+              },
             },
             "variant-outline-primary": {
               "disabled": {

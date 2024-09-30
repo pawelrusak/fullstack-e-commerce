@@ -111,6 +111,27 @@ exports[`Default Theme should match the specified values 1`] = `
           "fontFamily": "Montserrat, sans-serif",
           "fontWeight": 700,
         },
+        "size-default": {
+          "initial": {
+            "fontSize": "2rem",
+            "lineHeight": "3rem",
+            "padding": "1.5rem 3.9rem",
+          },
+        },
+        "size-large": {
+          "initial": {
+            "fontSize": "2rem",
+            "lineHeight": "3rem",
+            "padding": "2.3rem 6.300000000000001rem",
+          },
+        },
+        "size-small": {
+          "initial": {
+            "fontSize": "1.6rem",
+            "lineHeight": "2.4rem",
+            "padding": "0.7000000000000001rem 1.9rem",
+          },
+        },
         "variant-outline-primary": {
           "disabled": {
             "backgroundColor": "transparent",

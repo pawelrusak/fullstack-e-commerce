@@ -57,10 +57,28 @@ type ButtonRootVariantTokenMap = ModifierStateMap<
   StateStyleMap<ButtonState, ButtonComponentPalette>
 >;
 
+type ButtonSizeNamespaceKey = 'size';
+
+export type ButtonSize = 'small' | 'large';
+
+export type ButtonSizeModifier =
+  | `${ButtonSizeNamespaceKey}-${ButtonSize}`
+  | `${ButtonSizeNamespaceKey}-${DefaultModifier}`;
+
+export type ButtonComponentSizeProperty = AvailableComponentToken<
+  'padding' | 'fontSize' | 'lineHeight'
+>;
+
+type ButtonRootSizeTokenMap = ModifierStateMap<
+  ButtonSizeModifier,
+  StateStyleMap<InitialState, ButtonComponentSizeProperty>
+>;
+
 export type ButtonComponent = {
   button: {
     root: ImmutableBaseToken<'fontFamily' | 'fontWeight'> &
-      ButtonRootVariantTokenMap;
+      ButtonRootVariantTokenMap &
+      ButtonRootSizeTokenMap;
   };
 };
 

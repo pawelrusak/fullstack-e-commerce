@@ -1,7 +1,14 @@
+import { adjustCssUnitValue } from '@e-shop/utils';
 import { colorPalette } from './color-palette.reference.tokens';
-import { color, fontFamily, fontWeight } from './system.tokens';
+import { color, fontFamily, fontWeight, space } from './system.tokens';
 
 import type { AppComponent } from './component.tokens.types';
+
+const BUTTON_BORDER_WIDTH = 0.1;
+
+function subtractBorder(value: string) {
+  return adjustCssUnitValue(value, -BUTTON_BORDER_WIDTH);
+}
 
 export const component: AppComponent = {
   /**
@@ -41,6 +48,27 @@ export const component: AppComponent = {
       _base: {
         fontFamily: fontFamily.primary,
         fontWeight: fontWeight.bold,
+      },
+      'size-small': {
+        initial: {
+          padding: `${subtractBorder(space[2])} ${subtractBorder(space[4])}`,
+          fontSize: '1.6rem',
+          lineHeight: '2.4rem',
+        },
+      },
+      'size-default': {
+        initial: {
+          padding: `${subtractBorder(space[3])} ${subtractBorder(space[7])}`,
+          fontSize: '2rem',
+          lineHeight: '3rem',
+        },
+      },
+      'size-large': {
+        initial: {
+          padding: `${subtractBorder(space[5])} ${subtractBorder(space[9])}`,
+          fontSize: '2rem',
+          lineHeight: '3rem',
+        },
       },
       'variant-primary': {
         initial: {
