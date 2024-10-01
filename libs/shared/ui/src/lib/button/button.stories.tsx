@@ -1,5 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BUTTON_COLOR_VARIANT, BUTTON_VARIANT } from './button.utils';
+import {
+  BUTTON_COLOR_VARIANT,
+  BUTTON_VARIANT,
+  BUTTON_SIZE,
+} from './button.utils';
 import { Button } from './button.component';
 
 export default {
@@ -22,6 +26,10 @@ export default {
     colorVariant: {
       control: 'select',
       options: [BUTTON_COLOR_VARIANT.PRIMARY, BUTTON_COLOR_VARIANT.SECONDARY],
+    },
+    size: {
+      control: 'select',
+      options: [undefined, BUTTON_SIZE.SMALL, BUTTON_SIZE.LARGE],
     },
   },
 } satisfies Meta<typeof Button>;
