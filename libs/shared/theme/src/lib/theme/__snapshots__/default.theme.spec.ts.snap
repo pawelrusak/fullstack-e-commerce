@@ -266,6 +266,72 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
     },
+    "field": {
+      "controlInput": {
+        "default": {
+          "focus": {
+            "borderColor": "hsl(7, 100%, 65%)",
+            "boxShadow": "0 0 0 0.3rem rgba(255,97,77,0.6)",
+            "color": undefined,
+          },
+          "initial": {
+            "borderColor": "hsl(0, 0%, 80%)",
+            "boxShadow": undefined,
+            "color": "hsl(0, 0%, 19%)",
+          },
+          "invalid": {
+            "borderColor": "hsl(348, 83%, 47%)",
+            "boxShadow": undefined,
+            "color": "hsl(348, 83%, 47%)",
+          },
+        },
+      },
+      "controlInputPlaceholder": {
+        "_base": {
+          "fontFamily": "Montserrat, sans-serif",
+          "fontWeight": 400,
+        },
+        "default": {
+          "initial": {
+            "color": "hsl(0, 0%, 19%)",
+          },
+          "invalid": {
+            "color": "hsl(348, 83%, 47%)",
+          },
+        },
+      },
+      "errorText": {
+        "_base": {
+          "color": "hsl(348, 83%, 47%)",
+        },
+      },
+      "helpText": {
+        "_base": {
+          "fontSize": "1.6rem",
+          "lineHeight": "2.4rem",
+        },
+      },
+      "label": {
+        "_base": {
+          "fontWeight": 700,
+        },
+      },
+      "labelAsterisk": {
+        "_base": {
+          "color": "hsl(7, 100%, 65%)",
+        },
+      },
+      "root": {
+        "default": {
+          "initial": {
+            "color": "hsl(0, 0%, 19%)",
+          },
+          "invalid": {
+            "color": "hsl(348, 83%, 47%)",
+          },
+        },
+      },
+    },
   },
   "fontFamily": {
     "montserrat": "Montserrat, sans-serif",

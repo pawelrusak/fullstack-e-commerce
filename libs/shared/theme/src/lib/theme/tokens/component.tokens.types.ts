@@ -139,9 +139,44 @@ export type CheckboxComponent = {
   };
 };
 
+export type FieldControlInputProperty = AvailableComponentToken<'boxShadow'>;
+
+type FieldControlInputTokenMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<
+    // TODO: add 'hover' state (and hoverFocus?)
+    InitialState | 'focus' | 'invalid',
+    AvailableComponentToken<'boxShadow' | 'color' | 'borderColor'>
+  >
+>;
+
+type FieldRootTokenMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<InitialState | 'invalid', AvailableComponentToken<'color'>>
+>;
+
+type FieldControlInputPlaceholderTokenMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<InitialState | 'invalid', AvailableComponentToken<'color'>>
+>;
+
+export type FieldComponent = {
+  field: {
+    root: FieldRootTokenMap;
+    label: ImmutableBaseToken<'fontWeight'>;
+    labelAsterisk: ImmutableBaseToken<'color'>;
+    controlInput: FieldControlInputTokenMap;
+    controlInputPlaceholder: ImmutableBaseToken<'fontFamily' | 'fontWeight'> &
+      FieldControlInputPlaceholderTokenMap;
+    helpText: ImmutableBaseToken<'fontSize' | 'lineHeight'>;
+    errorText: ImmutableBaseToken<'color'>;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
   CardsSectionComponent &
   DividerComponent &
-  CheckboxComponent;
+  CheckboxComponent &
+  FieldComponent;

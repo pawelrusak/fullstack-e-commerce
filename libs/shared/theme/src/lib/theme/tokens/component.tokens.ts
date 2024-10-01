@@ -1,3 +1,4 @@
+import { transparentize } from 'polished';
 import { adjustCssUnitValue } from '@e-shop/utils';
 import { colorPalette } from './color-palette.reference.tokens';
 import { color, fontFamily, fontWeight, space } from './system.tokens';
@@ -234,6 +235,75 @@ export const component: AppComponent = {
     indicator: {
       _base: {
         color: color.onPrimary,
+      },
+    },
+  },
+  /**
+   * Field component tokens
+   */
+  field: {
+    root: {
+      default: {
+        initial: {
+          color: color.onSurface,
+        },
+        invalid: {
+          color: color.error,
+        },
+      },
+    },
+    label: {
+      _base: {
+        fontWeight: fontWeight.bold,
+      },
+    },
+    labelAsterisk: {
+      _base: {
+        color: color.primary,
+      },
+    },
+    controlInput: {
+      default: {
+        initial: {
+          color: color.onSurface,
+          borderColor: colorPalette.neutral[300],
+          boxShadow: undefined,
+        },
+        focus: {
+          color: undefined,
+          borderColor: color.primary,
+          boxShadow: `0 0 0 0.3rem ${transparentize(0.4, color.primary)}`,
+        },
+        invalid: {
+          color: color.error,
+          borderColor: color.error,
+          boxShadow: undefined,
+        },
+      },
+    },
+    controlInputPlaceholder: {
+      _base: {
+        fontFamily: fontFamily.primary,
+        fontWeight: fontWeight.regular,
+      },
+      default: {
+        initial: {
+          color: color.onSurface,
+        },
+        invalid: {
+          color: color.error,
+        },
+      },
+    },
+    helpText: {
+      _base: {
+        fontSize: '1.6rem',
+        lineHeight: '2.4rem',
+      },
+    },
+    errorText: {
+      _base: {
+        color: color.error,
       },
     },
   },

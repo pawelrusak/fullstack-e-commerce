@@ -501,4 +501,150 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Field theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { field } = component;
+
+      expect(field).toEqual({
+        root: {
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            invalid: {
+              color: expect.any(String),
+            },
+          },
+        },
+        label: {
+          _base: {
+            fontWeight: expect.any(Number),
+          },
+        },
+        labelAsterisk: {
+          _base: {
+            color: expect.any(String),
+          },
+        },
+        controlInput: {
+          default: {
+            initial: {
+              color: expect.any(String),
+              borderColor: expect.any(String),
+              boxShadow: undefined,
+            },
+            focus: {
+              color: undefined,
+              borderColor: expect.any(String),
+              boxShadow: expect.any(String),
+            },
+            invalid: {
+              color: expect.any(String),
+              borderColor: expect.any(String),
+              boxShadow: undefined,
+            },
+          },
+        },
+        controlInputPlaceholder: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+          },
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            invalid: {
+              color: expect.any(String),
+            },
+          },
+        },
+        helpText: {
+          _base: {
+            fontSize: expect.any(String),
+            lineHeight: expect.any(String),
+          },
+        },
+        errorText: {
+          _base: {
+            color: expect.any(String),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { field } = component;
+
+      expect(field).toMatchInlineSnapshot(`
+        {
+          "controlInput": {
+            "default": {
+              "focus": {
+                "borderColor": "hsl(7, 100%, 65%)",
+                "boxShadow": "0 0 0 0.3rem rgba(255,97,77,0.6)",
+                "color": undefined,
+              },
+              "initial": {
+                "borderColor": "hsl(0, 0%, 80%)",
+                "boxShadow": undefined,
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "invalid": {
+                "borderColor": "hsl(348, 83%, 47%)",
+                "boxShadow": undefined,
+                "color": "hsl(348, 83%, 47%)",
+              },
+            },
+          },
+          "controlInputPlaceholder": {
+            "_base": {
+              "fontFamily": "Montserrat, sans-serif",
+              "fontWeight": 400,
+            },
+            "default": {
+              "initial": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "invalid": {
+                "color": "hsl(348, 83%, 47%)",
+              },
+            },
+          },
+          "errorText": {
+            "_base": {
+              "color": "hsl(348, 83%, 47%)",
+            },
+          },
+          "helpText": {
+            "_base": {
+              "fontSize": "1.6rem",
+              "lineHeight": "2.4rem",
+            },
+          },
+          "label": {
+            "_base": {
+              "fontWeight": 700,
+            },
+          },
+          "labelAsterisk": {
+            "_base": {
+              "color": "hsl(7, 100%, 65%)",
+            },
+          },
+          "root": {
+            "default": {
+              "initial": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "invalid": {
+                "color": "hsl(348, 83%, 47%)",
+              },
+            },
+          },
+        }
+      `);
+    });
+  });
 });
