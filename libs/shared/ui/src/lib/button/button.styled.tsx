@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
-import { getVariantPaletteStyle } from './button.utils';
+import { getVariantPaletteStyle, getSizeStyle } from './button.utils';
 
 import type { InternalButtonProps } from './button.utils';
 
@@ -23,7 +23,9 @@ export const Button = styled.button<StyledButtonProps>`
   border-style: solid;
 
   ${({ variant, colorVariant }) =>
-    getVariantPaletteStyle({ variant, colorVariant })}
+    getVariantPaletteStyle({ variant, colorVariant })};
+
+  ${({ size }) => getSizeStyle({ size })};
 
   &:focus {
     outline: auto;
