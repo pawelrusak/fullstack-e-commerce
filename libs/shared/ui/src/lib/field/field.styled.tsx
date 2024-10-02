@@ -1,7 +1,18 @@
 import styled, { css } from 'styled-components';
-import * as polished from 'polished';
 import { margin } from 'styled-system';
+
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import type { MarginProps } from 'styled-system';
+
+const {
+  root: rootToken,
+  controlInput: controlInputToken,
+  controlInputPlaceholder: controlInputPlaceholderToken,
+  errorText: errorTextToken,
+  helpText: helpTextToken,
+  label: labelToken,
+  labelAsterisk: labelAsteriskToken,
+} = getToken('field');
 
 const ICON_WIDTH = `7.8rem`;
 
@@ -9,8 +20,9 @@ export const Input = styled.input`
   box-sizing: border-box;
   line-height: 3rem;
   font-size: 2rem;
-  border: 0.1rem solid
-    ${({ theme }) => polished.transparentize(0.75, theme.color.text)};
+  border: 0.1rem solid ${controlInputToken.default.initial.borderColor};
+  color: ${controlInputToken.default.initial.color};
+  box-shadow: ${controlInputToken.default.initial.boxShadow};
   padding: 2.4rem 3.1rem;
   border-radius: 1rem;
   width: 100%;
@@ -18,16 +30,18 @@ export const Input = styled.input`
   opacity: 0.75;
 
   &:focus {
-    border-color: ${({ theme }) => theme.color.primary};
-    box-shadow: 0 0 0 0.3rem
-      ${({ theme }) => polished.transparentize(0.4, theme.color.primary)};
+    border-color: ${controlInputToken.default.focus.borderColor};
+    box-shadow: ${controlInputToken.default.focus.boxShadow};
+    color: ${controlInputToken.default.focus.color};
   }
 
   &::placeholder {
     opacity: 0.4;
     line-height: 3rem;
     font-size: 2rem;
-    font-family: ${({ theme }) => theme.fontFamily.montserrat};
+    color: ${controlInputPlaceholderToken.default.initial.color};
+    font-family: ${controlInputPlaceholderToken._base.fontFamily};
+    font-weight: ${controlInputPlaceholderToken._base.fontWeight};
   }
 `;
 
@@ -35,23 +49,25 @@ export type StyledFieldProps = MarginProps & {
   hasErrorColor?: boolean;
 };
 
+// TODO: Rename to "Root"
 export const Container = styled.div<StyledFieldProps>`
   margin-bottom: 3.2rem;
-  color: ${(props) => props.theme.color.text};
+  color: ${rootToken.default.initial.color};
   width: 100%;
   ${margin}
 
   ${({ hasErrorColor }) =>
     hasErrorColor &&
     css`
-      color: ${({ theme }) => theme.color.error};
+      color: ${rootToken.default.invalid.color};
 
       ${Input} {
-        border-color: ${({ theme }) => theme.color.error};
-        color: ${({ theme }) => theme.color.error};
+        border-color: ${controlInputToken.default.invalid.borderColor};
+        color: ${controlInputToken.default.invalid.color};
+        box-shadow: ${controlInputToken.default.invalid.boxShadow};
 
-        ::placeholder {
-          color: ${({ theme }) => theme.color.error};
+        &::placeholder {
+          color: ${controlInputPlaceholderToken.default.invalid.color};
         }
       }
     `}
@@ -66,14 +82,14 @@ export const Label = styled.label<StyledLabelProps>`
   line-height: 3rem;
   font-size: 2rem;
   margin-bottom: 1.2rem;
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-weight: ${labelToken._base.fontWeight};
 
-  ${({ theme, isRequired }) =>
+  ${({ isRequired }) =>
     isRequired &&
     css`
       &::after {
         content: ' *';
-        color: ${theme.color.primary};
+        color: ${labelAsteriskToken._base.color};
       }
     `}
 `;
@@ -141,10 +157,9 @@ export const ControlIcon = styled.span<StyledControlIconProps>`
 
 const helpCss = css`
   display: inline-block;
-
   margin-top: 0.8rem;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+  font-size: ${helpTextToken._base.fontSize};
+  line-height: ${helpTextToken._base.lineHeight};
 `;
 
 export const Help = styled.small`
@@ -153,7 +168,7 @@ export const Help = styled.small`
 
 export const Error = styled.strong<MarginProps>`
   ${helpCss}
-  color: ${({ theme }) => theme.color.error};
+  color: ${errorTextToken._base.color};
 
   ${margin}
 `;
