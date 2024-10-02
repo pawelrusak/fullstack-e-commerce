@@ -98,7 +98,10 @@ export const InValid: Story<FieldProps> = {
   render: (args: FieldProps) => (
     <Field {...args}>
       <Field.Label>Username</Field.Label>
-      <Field.ControlInput value="Wrong value" />
+      <Field.ControlInput
+        placeholder="ameliawatson"
+        defaultValue="Wrong value"
+      />
       <Field.Error>Some error message</Field.Error>
     </Field>
   ),
