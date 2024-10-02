@@ -8,7 +8,7 @@ const { root: rootToken } = getToken('button');
 
 export type StyledButtonProps = InternalButtonProps;
 
-export const Button = styled.button<StyledButtonProps>`
+export const RootButton = styled.button<StyledButtonProps>`
   all: unset;
   display: inline-block;
   box-sizing: border-box;

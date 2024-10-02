@@ -8,6 +8,6 @@ export type ButtonProps = StyledComponent<
   InternalButtonProps
 >;
 
-export const Button = Styled.Button;
+export const Button = Styled.RootButton;
 
 export default Button;
