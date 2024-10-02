@@ -307,4 +307,62 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Footer component tokens
+   */
+  footer: {
+    root: {
+      _base: {
+        borderTopColor: colorPalette.neutral[300],
+      },
+    },
+    navSectionTitle: {
+      _base: {
+        color: color.onSurface,
+        fontFamily: fontFamily.secondary,
+        fontWeight: fontWeight.semiBold,
+      },
+    },
+    navSectionListItemLink: {
+      default: {
+        initial: {
+          color: color.onSurface,
+        },
+        interact: {
+          color: color.onSurfaceInteract,
+        },
+      },
+    },
+    navSectionListItemIcon: {
+      _base: {
+        // Exception: Color not in palette; based on onSurface color with adjusted opacity in design.
+        color: transparentize(0.25, color.onSurface),
+      },
+    },
+    copyrightBar: {
+      _base: {
+        borderTopColor: colorPalette.neutral[300],
+      },
+    },
+    copyrightBarFormula: {
+      _base: {
+        color: color.onSurface,
+      },
+    },
+    copyrightBarListItemLink: {
+      default: {
+        initial: {
+          color: color.onSurface,
+        },
+        interact: {
+          color: color.onSurfaceInteract,
+        },
+      },
+    },
+    copyrightBarListItemSeparator: {
+      _base: {
+        backgroundColor: colorPalette.neutral[300],
+      },
+    },
+  },
 };

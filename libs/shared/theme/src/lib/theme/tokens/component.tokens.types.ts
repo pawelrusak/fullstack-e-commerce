@@ -173,10 +173,29 @@ export type FieldComponent = {
   };
 };
 
+type FooterListItemLinkMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<InitialState | InteractState, AvailableComponentToken<'color'>>
+>;
+
+export type FooterComponent = {
+  footer: {
+    root: ImmutableBaseToken<'borderTopColor'>;
+    navSectionTitle: ImmutableBaseToken<'color' | 'fontFamily' | 'fontWeight'>;
+    navSectionListItemLink: FooterListItemLinkMap;
+    navSectionListItemIcon: ImmutableBaseToken<'color'>;
+    copyrightBar: ImmutableBaseToken<'borderTopColor'>;
+    copyrightBarFormula: ImmutableBaseToken<'color'>;
+    copyrightBarListItemLink: FooterListItemLinkMap;
+    copyrightBarListItemSeparator: ImmutableBaseToken<'backgroundColor'>;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
   CardsSectionComponent &
   DividerComponent &
   CheckboxComponent &
-  FieldComponent;
+  FieldComponent &
+  FooterComponent;

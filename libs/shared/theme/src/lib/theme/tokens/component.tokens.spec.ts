@@ -647,4 +647,126 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Footer theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { footer } = component;
+
+      expect(footer).toEqual({
+        root: {
+          _base: {
+            borderTopColor: expect.any(String),
+          },
+        },
+        navSectionTitle: {
+          _base: {
+            color: expect.any(String),
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+          },
+        },
+        navSectionListItemLink: {
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+            },
+          },
+        },
+        navSectionListItemIcon: {
+          _base: {
+            color: expect.any(String),
+          },
+        },
+        copyrightBar: {
+          _base: {
+            borderTopColor: expect.any(String),
+          },
+        },
+        copyrightBarFormula: {
+          _base: {
+            color: expect.any(String),
+          },
+        },
+        copyrightBarListItemLink: {
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+            },
+          },
+        },
+        copyrightBarListItemSeparator: {
+          _base: {
+            backgroundColor: expect.any(String),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { footer } = component;
+
+      expect(footer).toMatchInlineSnapshot(`
+        {
+          "copyrightBar": {
+            "_base": {
+              "borderTopColor": "hsl(0, 0%, 80%)",
+            },
+          },
+          "copyrightBarFormula": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+            },
+          },
+          "copyrightBarListItemLink": {
+            "default": {
+              "initial": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "color": "hsl(7, 100%, 65%)",
+              },
+            },
+          },
+          "copyrightBarListItemSeparator": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 80%)",
+            },
+          },
+          "navSectionListItemIcon": {
+            "_base": {
+              "color": "rgba(48,48,48,0.75)",
+            },
+          },
+          "navSectionListItemLink": {
+            "default": {
+              "initial": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "color": "hsl(7, 100%, 65%)",
+              },
+            },
+          },
+          "navSectionTitle": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Poppins, sans-serif",
+              "fontWeight": 600,
+            },
+          },
+          "root": {
+            "_base": {
+              "borderTopColor": "hsl(0, 0%, 80%)",
+            },
+          },
+        }
+      `);
+    });
+  });
 });

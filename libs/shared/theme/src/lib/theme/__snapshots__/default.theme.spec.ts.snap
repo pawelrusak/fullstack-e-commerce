@@ -332,6 +332,60 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
     },
+    "footer": {
+      "copyrightBar": {
+        "_base": {
+          "borderTopColor": "hsl(0, 0%, 80%)",
+        },
+      },
+      "copyrightBarFormula": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+        },
+      },
+      "copyrightBarListItemLink": {
+        "default": {
+          "initial": {
+            "color": "hsl(0, 0%, 19%)",
+          },
+          "interact": {
+            "color": "hsl(7, 100%, 65%)",
+          },
+        },
+      },
+      "copyrightBarListItemSeparator": {
+        "_base": {
+          "backgroundColor": "hsl(0, 0%, 80%)",
+        },
+      },
+      "navSectionListItemIcon": {
+        "_base": {
+          "color": "rgba(48,48,48,0.75)",
+        },
+      },
+      "navSectionListItemLink": {
+        "default": {
+          "initial": {
+            "color": "hsl(0, 0%, 19%)",
+          },
+          "interact": {
+            "color": "hsl(7, 100%, 65%)",
+          },
+        },
+      },
+      "navSectionTitle": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+          "fontFamily": "Poppins, sans-serif",
+          "fontWeight": 600,
+        },
+      },
+      "root": {
+        "_base": {
+          "borderTopColor": "hsl(0, 0%, 80%)",
+        },
+      },
+    },
   },
   "fontFamily": {
     "montserrat": "Montserrat, sans-serif",
