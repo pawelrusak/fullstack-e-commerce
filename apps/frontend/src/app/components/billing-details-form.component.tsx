@@ -282,7 +282,7 @@ function BillingDetailsForm() {
                 : 'Loading...'}
             </SummaryBoxValue>
           </SummaryBoxInner>
-          <Button type="submit" fullWidth>
+          <Button type="submit" fullWidth size="large">
             {EN.CHECKOUT.INFORMATION.FORM.SUBMIT_BUTTON}
           </Button>
         </SummaryBox>
