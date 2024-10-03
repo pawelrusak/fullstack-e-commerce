@@ -5,6 +5,7 @@ import type {
   AppFontWeight,
   AppScreens,
   AppComponent,
+  AppFontSizes,
 } from './tokens';
 
 export type AppSpacesTheme = {
@@ -27,6 +28,10 @@ export type AppScreensTheme = {
   screens: AppScreens;
 };
 
+export type AppFontSizesTheme = {
+  fontSizes: AppFontSizes;
+};
+
 export type AppComponentTheme = {
   component: AppComponent;
 };
@@ -36,4 +41,5 @@ export type AppTheme = AppColorTheme &
   AppFontWeightTheme &
   AppSpacesTheme &
   AppScreensTheme &
-  AppComponentTheme;
+  AppComponentTheme &
+  AppFontSizesTheme;

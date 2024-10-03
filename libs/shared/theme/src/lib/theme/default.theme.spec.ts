@@ -4,6 +4,7 @@ describe('Default Theme', () => {
   it('should have the correct structure and types', () => {
     expect(defaultTheme).toEqual({
       color: expect.any(Object),
+      fontSizes: expect.any(Object),
       fontFamily: expect.any(Object),
       fontWeight: expect.any(Object),
       space: expect.any(Object),

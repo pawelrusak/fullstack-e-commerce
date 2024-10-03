@@ -1,5 +1,6 @@
 import {
   color,
+  fontSizes,
   fontFamily,
   fontWeight,
   space,
@@ -11,6 +12,7 @@ import type { DefaultTheme } from 'styled-components';
 
 export const defaultTheme: DefaultTheme = {
   color,
+  fontSizes,
   fontFamily,
   fontWeight,
   space,
