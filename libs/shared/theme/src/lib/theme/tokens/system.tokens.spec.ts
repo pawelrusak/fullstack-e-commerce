@@ -1,6 +1,7 @@
 import {
   color,
   fontFamily,
+  lineHeights,
   fontWeight,
   fontSizes,
   space,
@@ -104,6 +105,20 @@ describe('Base Theme', () => {
         h7: expect.any(String),
         h8: expect.any(String),
         body: expect.any(String),
+      });
+    });
+
+    it('should have the correct line heights structure and types', () => {
+      expect(lineHeights).toEqual({
+        h1: expect.any(Number),
+        h2: expect.any(Number),
+        h3: expect.any(Number),
+        h4: expect.any(Number),
+        h5: expect.any(Number),
+        h6: expect.any(Number),
+        h7: expect.any(Number),
+        h8: expect.any(Number),
+        body: expect.any(Number),
       });
     });
 
@@ -229,6 +244,22 @@ describe('Base Theme', () => {
           "h6": "1.6rem",
           "h7": "1.6rem",
           "h8": "1.4rem",
+        }
+      `);
+    });
+
+    it('should match the line heights specified values', () => {
+      expect(lineHeights).toMatchInlineSnapshot(`
+        {
+          "body": 1.5,
+          "h1": 1.2142857142857142,
+          "h2": 1.2777777777777777,
+          "h3": 1.25,
+          "h4": 1.5,
+          "h5": 1.5,
+          "h6": 1.5,
+          "h7": 1.5,
+          "h8": 1.4285714285714286,
         }
       `);
     });

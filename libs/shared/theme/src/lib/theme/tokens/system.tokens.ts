@@ -4,6 +4,7 @@ import type {
   AppColor,
   AppFontFamily,
   AppFontWeight,
+  AppLineHeights,
   AppFontSizes,
   AppScreens,
   AppSpace,
@@ -105,6 +106,18 @@ export const fontSizes: AppFontSizes = {
   h7: '1.6rem',
   h8: '1.4rem',
   body: '2.0rem',
+};
+
+export const lineHeights: AppLineHeights = {
+  h1: 68 / 56,
+  h2: 46 / 36,
+  h3: 30 / 24,
+  h4: 30 / 20,
+  h5: 30 / 20,
+  h6: 24 / 16,
+  h7: 24 / 16,
+  h8: 20 / 14,
+  body: 30 / 20,
 };
 
 export const space: AppSpace = {

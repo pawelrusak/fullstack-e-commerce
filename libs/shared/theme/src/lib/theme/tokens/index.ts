@@ -3,6 +3,7 @@ export {
   color,
   fontSizes,
   fontFamily,
+  lineHeights,
   fontWeight,
   screens,
   space,

@@ -2,6 +2,7 @@ export type {
   AppColor,
   AppFontSizes,
   AppFontFamily,
+  AppLineHeights,
   AppFontWeight,
   AppScreens,
   AppSpace,
