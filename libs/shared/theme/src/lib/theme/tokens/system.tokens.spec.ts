@@ -1,4 +1,11 @@
-import { color, fontFamily, fontWeight, space, screens } from './system.tokens';
+import {
+  color,
+  fontFamily,
+  fontWeight,
+  fontSizes,
+  space,
+  screens,
+} from './system.tokens';
 
 describe('Base Theme', () => {
   describe('Base Theme structure', () => {
@@ -83,6 +90,20 @@ describe('Base Theme', () => {
         regular: expect.any(Number),
         semiBold: expect.any(Number),
         bold: expect.any(Number),
+      });
+    });
+
+    it('should have the correct font sizes structure and types', () => {
+      expect(fontSizes).toEqual({
+        h1: expect.any(String),
+        h2: expect.any(String),
+        h3: expect.any(String),
+        h4: expect.any(String),
+        h5: expect.any(String),
+        h6: expect.any(String),
+        h7: expect.any(String),
+        h8: expect.any(String),
+        body: expect.any(String),
       });
     });
 
@@ -192,6 +213,22 @@ describe('Base Theme', () => {
           "bold": 700,
           "regular": 400,
           "semiBold": 600,
+        }
+      `);
+    });
+
+    it('should match the font sizes specified values', () => {
+      expect(fontSizes).toMatchInlineSnapshot(`
+        {
+          "body": "2.0rem",
+          "h1": "5.6rem",
+          "h2": "3.6rem",
+          "h3": "2.4rem",
+          "h4": "2.0rem",
+          "h5": "2.0rem",
+          "h6": "1.6rem",
+          "h7": "1.6rem",
+          "h8": "1.4rem",
         }
       `);
     });

@@ -188,6 +188,19 @@ export type AppFontWeight = {
   bold: number;
 };
 
+export type TypographyVariant =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+  | 'h7'
+  | 'h8'
+  | 'body';
+
+export type AppFontSizes = Record<TypographyVariant, string>;
+
 export type AppScreens = {
   sm: string;
   md: string;

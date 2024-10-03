@@ -4,6 +4,7 @@ import type {
   AppColor,
   AppFontFamily,
   AppFontWeight,
+  AppFontSizes,
   AppScreens,
   AppSpace,
 } from './system.tokens.types';
@@ -92,6 +93,18 @@ export const fontWeight: AppFontWeight = {
   regular: 400,
   semiBold: 600,
   bold: 700,
+};
+
+export const fontSizes: AppFontSizes = {
+  h1: '5.6rem',
+  h2: '3.6rem',
+  h3: '2.4rem',
+  h4: '2.0rem',
+  h5: '2.0rem',
+  h6: '1.6rem',
+  h7: '1.6rem',
+  h8: '1.4rem',
+  body: '2.0rem',
 };
 
 export const space: AppSpace = {
