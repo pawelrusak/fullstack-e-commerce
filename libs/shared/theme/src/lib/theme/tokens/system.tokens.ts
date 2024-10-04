@@ -109,6 +109,13 @@ export const fontSizes: AppFontSizes = {
 };
 
 export const lineHeights: AppLineHeights = {
+  /**
+   * These values come from the design system in Figma
+   * Each value is calculated as line-height / font-size.
+   *
+   * Example (h1 corresponds to 'Heading 1' in Figma):
+   * Figma specifies line-height: 68px and font-size: 56px, so 68 / 56 = 1.21.
+   */
   h1: 68 / 56,
   h2: 46 / 36,
   h3: 30 / 24,

@@ -188,6 +188,10 @@ export type AppFontWeight = {
   bold: number;
 };
 
+/**
+ * Typography variants taken directly from the Figma project.
+ * The Figma design uses 'Heading 1', 'Heading 2', etc., and 'Paragraph'.
+ */
 type TypographyVariant =
   | 'h1'
   | 'h2'
@@ -197,7 +201,7 @@ type TypographyVariant =
   | 'h6'
   | 'h7'
   | 'h8'
-  | 'body';
+  | 'body'; // 'body' corresponds to 'Paragraph' in the Figma project
 
 export type AppFontSizes = Record<TypographyVariant, string>;
 
