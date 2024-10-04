@@ -30,7 +30,7 @@ export type BrandComponent = {
 
 /**
  * **********************************************************************************************
- *                                     Button Component Tokens
+ *                                    Button Component Tokens
  * **********************************************************************************************
  */
 export type ButtonComponentPalette = AvailableComponentToken<
@@ -82,6 +82,11 @@ export type ButtonComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                   Breadcrumb Component Tokens
+ * **********************************************************************************************
+ */
 export type BreadcrumbComponentLinkPalette = AvailableComponentToken<'color'>;
 
 type BreadcrumbLinkTokenMap = ModifierStateMap<
@@ -97,6 +102,11 @@ export type BreadcrumbComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                 Cards Section Component Tokens
+ * **********************************************************************************************
+ */
 type CardsSectionReadMoreLinkToken = AvailableComponentToken<'color'>;
 
 type CardsSectionReadMoreLinkTokenMap = ModifierStateMap<
@@ -139,6 +149,11 @@ export type CheckboxComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                     Field  Component Tokens
+ * **********************************************************************************************
+ */
 export type FieldControlInputProperty = AvailableComponentToken<'boxShadow'>;
 
 type FieldControlInputTokenMap = ModifierStateMap<
@@ -173,6 +188,11 @@ export type FieldComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                     Footer Component Tokens
+ * **********************************************************************************************
+ */
 type FooterListItemLinkMap = ModifierStateMap<
   DefaultModifier,
   StateStyleMap<InitialState | InteractState, AvailableComponentToken<'color'>>
