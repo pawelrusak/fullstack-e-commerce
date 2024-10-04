@@ -7,6 +7,7 @@ describe('Default Theme', () => {
       fontSizes: expect.any(Object),
       fontFamily: expect.any(Object),
       fontWeight: expect.any(Object),
+      lineHeights: expect.any(Object),
       space: expect.any(Object),
       screens: expect.any(Object),
       component: expect.any(Object),
