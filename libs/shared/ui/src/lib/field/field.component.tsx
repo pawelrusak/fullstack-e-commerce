@@ -11,7 +11,7 @@ export type FieldProps = React.ComponentPropsWithRef<'div'> &
 export function Field({ controlId, valid = true, ...props }: FieldProps) {
   return (
     <FieldProvider valid={valid} controlId={controlId}>
-      <Styled.Container hasErrorColor={!valid} {...props} />
+      <Styled.Root hasErrorColor={!valid} {...props} />
     </FieldProvider>
   );
 }

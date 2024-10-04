@@ -49,8 +49,7 @@ export type StyledFieldProps = MarginProps & {
   hasErrorColor?: boolean;
 };
 
-// TODO: Rename to "Root"
-export const Container = styled.div<StyledFieldProps>`
+export const Root = styled.div<StyledFieldProps>`
   margin-bottom: 3.2rem;
   color: ${rootToken.default.initial.color};
   width: 100%;
