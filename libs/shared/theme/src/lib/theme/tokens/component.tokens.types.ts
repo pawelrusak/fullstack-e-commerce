@@ -33,13 +33,15 @@ export type BrandComponent = {
  *                                    Button Component Tokens
  * **********************************************************************************************
  */
+
+// Button Variant Tokens
 export type ButtonComponentPalette = AvailableComponentToken<
   'color' | 'backgroundColor' | 'borderColor'
 >;
 
-type ButtonVariantNamespaceKey = 'variant';
+export type ButtonVariantNamespaceKey = 'variant';
 
-type ButtonOutlineNamespaceKey = 'outline';
+export type ButtonOutlineNamespaceKey = 'outline';
 
 export type ButtonBaseColorVariant = 'primary' | 'secondary';
 
@@ -57,7 +59,8 @@ type ButtonRootVariantTokenMap = ModifierStateMap<
   StateStyleMap<ButtonState, ButtonComponentPalette>
 >;
 
-type ButtonSizeNamespaceKey = 'size';
+// Button Size Tokens
+export type ButtonSizeNamespaceKey = 'size';
 
 export type ButtonSize = 'small' | 'large';
 
