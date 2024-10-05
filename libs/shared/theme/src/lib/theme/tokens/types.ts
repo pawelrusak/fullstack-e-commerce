@@ -13,6 +13,7 @@ export type {
   BrandAccentThemeVariant,
   BrandBaseThemeVariant,
   ButtonSize,
+  ButtonState,
   ButtonComponent,
   ButtonSizeModifier,
   ButtonVariantModifier,

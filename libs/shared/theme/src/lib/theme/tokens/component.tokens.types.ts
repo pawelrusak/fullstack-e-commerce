@@ -50,7 +50,7 @@ type ButtonVariant =
 export type ButtonVariantModifier =
   `${ButtonVariantNamespaceKey}-${ButtonVariant}`;
 
-type ButtonState = InitialState | InteractState | 'disabled';
+export type ButtonState = InitialState | InteractState | 'disabled';
 
 type ButtonRootVariantTokenMap = ModifierStateMap<
   ButtonVariantModifier,
