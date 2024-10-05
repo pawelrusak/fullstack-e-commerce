@@ -4,6 +4,7 @@ import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import type {
   ButtonVariantModifier,
   ButtonSizeModifier,
+  ButtonState,
   ButtonSize,
 } from '@e-shop/theme/types';
 import type { ObjectValues, ConstantCaseKeyMap } from '@e-shop/types';
@@ -87,6 +88,17 @@ export function getVariantKey({
   return VARIANT_KEY.VARIANT_PRIMARY;
 }
 
+function getVariantPaletteProperties(
+  modifierKey: ButtonVariantModifier,
+  state: ButtonState,
+) {
+  return css`
+    background-color: ${rootToken[modifierKey][state].backgroundColor};
+    border-color: ${rootToken[modifierKey][state].borderColor};
+    color: ${rootToken[modifierKey][state].color};
+  `;
+}
+
 type GetVariantPaletteStyleParam = {
   colorVariant?: ButtonColorVariant;
   variant?: ButtonVariant;
@@ -102,21 +114,15 @@ export function getVariantPaletteStyle({
   });
 
   return css`
-    background-color: ${rootToken[variantKey].initial.backgroundColor};
-    border-color: ${rootToken[variantKey].initial.borderColor};
-    color: ${rootToken[variantKey].initial.color};
+    ${getVariantPaletteProperties(variantKey, 'initial')};
 
     &:is(:hover, :focus) {
-      background-color: ${rootToken[variantKey].interact.backgroundColor};
-      border-color: ${rootToken[variantKey].interact.borderColor};
-      color: ${rootToken[variantKey].interact.color};
+      ${getVariantPaletteProperties(variantKey, 'interact')};
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      background-color: ${rootToken[variantKey].disabled.backgroundColor};
-      border-color: ${rootToken[variantKey].disabled.borderColor};
-      color: ${rootToken[variantKey].disabled.color};
+      ${getVariantPaletteProperties(variantKey, 'disabled')};
     }
   `;
 }
