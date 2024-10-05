@@ -25,7 +25,7 @@ export const RootButton = styled.button<StyledButtonProps>`
   ${({ variant, colorVariant }) =>
     getVariantPaletteStyle({ variant, colorVariant })};
 
-  ${({ size }) => getSizeStyle({ size })};
+  ${({ size }) => getSizeStyle(size)};
 
   &:focus {
     outline: auto;

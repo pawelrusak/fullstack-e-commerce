@@ -2,8 +2,10 @@ import { css } from 'styled-components';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
 import type {
+  ButtonBaseColorVariant,
   ButtonVariantModifier,
   ButtonSizeModifier,
+  ButtonSizeNamespaceKey,
   ButtonState,
   ButtonSize,
 } from '@e-shop/theme/types';
@@ -11,10 +13,12 @@ import type { ObjectValues, ConstantCaseKeyMap } from '@e-shop/types';
 
 const { root: rootToken } = getToken('button');
 
+const SIZE_NAMESPACE: ButtonSizeNamespaceKey = 'size';
+
 export const BUTTON_COLOR_VARIANT = {
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
-} as const;
+} satisfies ConstantCaseKeyMap<ButtonBaseColorVariant>;
 
 export const BUTTON_VARIANT = {
   OUTLINE: 'outline',
@@ -69,6 +73,7 @@ type GetVariantKeyParam = ButtonVariantProp & ButtonColorVariantProp;
 const VARIANT = BUTTON_VARIANT;
 const COLOR_VARIANT = BUTTON_COLOR_VARIANT;
 
+// TODO: Apply Open–closed principle like in getSizeKey function
 export function getVariantKey({
   variant = VARIANT.SOLID,
   colorVariant = COLOR_VARIANT.PRIMARY,
@@ -127,30 +132,16 @@ export function getVariantPaletteStyle({
   `;
 }
 
-type GetSizeKeyParam = {
-  size?: ButtonSize;
-};
-
-export function getSizeKey({ size }: GetSizeKeyParam = {}) {
-  if (size === BUTTON_SIZE.SMALL) {
-    return SIZE_KEY.SIZE_SMALL;
-  }
-
-  if (size === BUTTON_SIZE.LARGE) {
-    return SIZE_KEY.SIZE_LARGE;
-  }
-
-  return SIZE_KEY.SIZE_DEFAULT;
+function addSizeNamespaceKeyPrefix(size: ButtonSize): ButtonSizeModifier {
+  return `${SIZE_NAMESPACE}-${size}`;
 }
 
-type GetSizeStyleParam = {
-  size?: ButtonSize;
-};
+export function getSizeKey(size?: ButtonSize): ButtonSizeModifier {
+  return size ? addSizeNamespaceKeyPrefix(size) : SIZE_KEY.SIZE_DEFAULT;
+}
 
-export function getSizeStyle({ size }: GetSizeStyleParam = {}) {
-  const sizeKey = getSizeKey({
-    size,
-  });
+export function getSizeStyle(size?: ButtonSize) {
+  const sizeKey = getSizeKey(size);
 
   return css`
     font-size: ${rootToken[sizeKey].initial.fontSize};
