@@ -9,6 +9,11 @@ const Container = styled.div`
   width: 43rem;
 `;
 
+const StrongText = styled.strong`
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+`;
+
+// TODO: Improve ArgTypes
 export default {
   component: Field,
   title: 'Field',
@@ -55,10 +60,6 @@ export const Complete: Story<FieldControlInputProps> = {
   ),
 };
 
-const StyleStrong = styled.strong`
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-`;
-
 const PasswordTemplate = (args: FieldControlInputProps) => {
   const [showPassword, setShowPassword] = React.useState(false);
 
@@ -77,7 +78,7 @@ const PasswordTemplate = (args: FieldControlInputProps) => {
       </Field.Control>
 
       <Field.Help>
-        <StyleStrong>Password Strength:</StyleStrong> Perfect!
+        <StrongText>Password Strength:</StrongText> Perfect!
       </Field.Help>
     </Field>
   );
