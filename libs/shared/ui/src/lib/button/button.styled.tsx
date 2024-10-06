@@ -8,15 +8,13 @@ const { root: rootToken } = getToken('button');
 
 export type StyledButtonProps = InternalButtonProps;
 
+// TODO: Add margin props
 export const RootButton = styled.button<StyledButtonProps>`
   all: unset;
   display: inline-block;
   box-sizing: border-box;
   font-family: ${rootToken._base.fontFamily};
   font-weight: ${rootToken._base.fontWeight};
-  font-size: 2rem;
-  padding: 1.5rem 3.9rem;
-  line-height: 3rem;
   border-radius: 1rem;
   cursor: pointer;
   border-width: 1px;
