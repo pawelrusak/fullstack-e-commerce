@@ -12,23 +12,24 @@ export type StyledLinkProps = {
 };
 
 export const Link = styled.a<StyledLinkProps>`
-  font-family: ${linkToken._base.fontFamily};
-  background-color: ${linkToken._base.backgroundColor};
   color: ${linkToken.default.initial.color};
+  background-color: ${linkToken._base.backgroundColor};
+  font-family: ${linkToken._base.fontFamily};
+  font-size: ${linkToken._base.fontSize};
+  line-height: ${linkToken._base.lineHeight};
+  font-weight: ${linkToken.isCurrent.initial.fontWeight};
   text-decoration: none;
   padding: 0 1.8rem;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
 
   &:hover,
-  :focus {
+  &:focus {
     color: ${linkToken.default.interact.color};
   }
 
   ${({ isCurrent }) =>
     isCurrent &&
     css`
-      font-weight: bold;
+      font-weight: ${linkToken.isCurrent.current.fontWeight};
     `}
 `;
 
