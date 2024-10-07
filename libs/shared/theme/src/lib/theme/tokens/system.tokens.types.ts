@@ -130,6 +130,7 @@ export type AppColor = {
   onSurface: string;
   onSurfaceVariant: string;
   onSurfaceInteract: string;
+  surfacePlaceholder: string;
   /**
    * Background color for secondary UI components, such as panels, forms, etc.
    */

@@ -59,6 +59,7 @@ describe('Base Theme', () => {
         onSurface: expect.any(String),
         onSurfaceVariant: expect.any(String),
         onSurfaceInteract: expect.any(String),
+        surfacePlaceholder: expect.any(String),
 
         secondarySurface: expect.any(String),
         onSecondarySurface: expect.any(String),
@@ -205,6 +206,7 @@ describe('Base Theme', () => {
           "secondaryOutlineInteract": "hsl(0, 0%, 16%)",
           "secondarySurface": "hsl(0, 0%, 96%)",
           "surface": "hsl(0, 0%, 100%)",
+          "surfacePlaceholder": "hsl(0, 0%, 82%)",
           "tertiary": "hsl(46, 99%, 65%)",
           "text": "hsl(0, 0%, 19%)",
         }

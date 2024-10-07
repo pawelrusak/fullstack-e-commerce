@@ -61,6 +61,7 @@ export const color: AppColor = {
   onSurface: colorPalette.neutral[800],
   onSurfaceVariant: colorPalette.primary[500],
   onSurfaceInteract: colorPalette.primary[500],
+  surfacePlaceholder: 'hsl(0, 0%, 82%)',
 
   secondarySurface: colorPalette.neutral[50],
   onSecondarySurface: colorPalette.neutral[800],
