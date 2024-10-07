@@ -89,6 +89,8 @@ exports[`Default Theme should match the specified values 1`] = `
         "_base": {
           "backgroundColor": "transparent",
           "fontFamily": "Montserrat, sans-serif",
+          "fontSize": "1.6rem",
+          "lineHeight": 1.5,
         },
         "default": {
           "initial": {
@@ -96,6 +98,14 @@ exports[`Default Theme should match the specified values 1`] = `
           },
           "interact": {
             "color": "hsl(7, 100%, 65%)",
+          },
+        },
+        "isCurrent": {
+          "current": {
+            "fontWeight": 700,
+          },
+          "initial": {
+            "fontWeight": 400,
           },
         },
       },

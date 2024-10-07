@@ -289,6 +289,8 @@ describe('Component theme config', () => {
           _base: {
             fontFamily: expect.any(String),
             backgroundColor: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
           },
           default: {
             initial: {
@@ -296,6 +298,14 @@ describe('Component theme config', () => {
             },
             interact: {
               color: expect.any(String),
+            },
+          },
+          isCurrent: {
+            initial: {
+              fontWeight: expect.any(Number),
+            },
+            current: {
+              fontWeight: expect.any(Number),
             },
           },
         },
@@ -311,6 +321,8 @@ describe('Component theme config', () => {
             "_base": {
               "backgroundColor": "transparent",
               "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "lineHeight": 1.5,
             },
             "default": {
               "initial": {
@@ -318,6 +330,14 @@ describe('Component theme config', () => {
               },
               "interact": {
                 "color": "hsl(7, 100%, 65%)",
+              },
+            },
+            "isCurrent": {
+              "current": {
+                "fontWeight": 700,
+              },
+              "initial": {
+                "fontWeight": 400,
               },
             },
           },

@@ -1,7 +1,14 @@
 import { transparentize } from 'polished';
 import { adjustCssUnitValue } from '@e-shop/utils';
 import { colorPalette } from './color-palette.reference.tokens';
-import { color, fontFamily, fontWeight, space } from './system.tokens';
+import {
+  color,
+  fontFamily,
+  fontWeight,
+  fontSizes,
+  lineHeights,
+  space,
+} from './system.tokens';
 
 import type { AppComponent } from './component.tokens.types';
 
@@ -154,6 +161,8 @@ export const component: AppComponent = {
       _base: {
         fontFamily: fontFamily.primary,
         backgroundColor: 'transparent',
+        fontSize: fontSizes.h7,
+        lineHeight: lineHeights.h7,
       },
       default: {
         initial: {
@@ -161,6 +170,14 @@ export const component: AppComponent = {
         },
         interact: {
           color: color.onBackgroundInteract,
+        },
+      },
+      isCurrent: {
+        initial: {
+          fontWeight: fontWeight.regular,
+        },
+        current: {
+          fontWeight: fontWeight.bold,
         },
       },
     },

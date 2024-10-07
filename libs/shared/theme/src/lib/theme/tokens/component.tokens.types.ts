@@ -97,11 +97,19 @@ type BreadcrumbLinkTokenMap = ModifierStateMap<
   StateStyleMap<InitialState | InteractState, BreadcrumbComponentLinkPalette>
 >;
 
+type BreadcrumbCurrentLinkTokenMap = ModifierStateMap<
+  'isCurrent',
+  StateStyleMap<InitialState | 'current', AvailableComponentToken<'fontWeight'>>
+>;
+
 export type BreadcrumbComponent = {
   breadcrumb: {
     root: ImmutableBaseToken<'backgroundColor'>;
-    link: ImmutableBaseToken<'fontFamily' | 'backgroundColor'> &
-      BreadcrumbLinkTokenMap;
+    link: ImmutableBaseToken<
+      'fontFamily' | 'backgroundColor' | 'fontSize' | 'lineHeight'
+    > &
+      BreadcrumbLinkTokenMap &
+      BreadcrumbCurrentLinkTokenMap;
   };
 };
 
