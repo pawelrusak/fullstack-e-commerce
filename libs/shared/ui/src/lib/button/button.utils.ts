@@ -4,8 +4,10 @@ import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import type {
   ButtonBaseColorVariant,
   ButtonVariantModifier,
+  ButtonVariantNamespaceKey,
   ButtonSizeModifier,
   ButtonSizeNamespaceKey,
+  ButtonOutlineNamespaceKey,
   ButtonState,
   ButtonSize,
 } from '@e-shop/theme/types';
@@ -15,27 +17,28 @@ const { root: rootToken } = getToken('button');
 
 const SIZE_NAMESPACE: ButtonSizeNamespaceKey = 'size';
 
+const VARIANT_NAMESPACE: `${ButtonVariantNamespaceKey}-` = 'variant-';
+
+type PartialConstantCaseKeyMap<T extends string> = Partial<
+  ConstantCaseKeyMap<T>
+>;
+
 export const BUTTON_COLOR_VARIANT = {
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
-} satisfies ConstantCaseKeyMap<ButtonBaseColorVariant>;
+} satisfies PartialConstantCaseKeyMap<ButtonBaseColorVariant>;
+
+type Variant = ButtonOutlineNamespaceKey | 'solid';
 
 export const BUTTON_VARIANT = {
   OUTLINE: 'outline',
   SOLID: 'solid',
-} as const;
+} satisfies PartialConstantCaseKeyMap<Variant>;
 
-export const BUTTON_SIZE: ConstantCaseKeyMap<ButtonSize> = {
+export const BUTTON_SIZE = {
   SMALL: 'small',
   LARGE: 'large',
-};
-
-const VARIANT_KEY: ConstantCaseKeyMap<ButtonVariantModifier> = {
-  VARIANT_PRIMARY: 'variant-primary',
-  VARIANT_SECONDARY: 'variant-secondary',
-  VARIANT_OUTLINE_PRIMARY: 'variant-outline-primary',
-  VARIANT_OUTLINE_SECONDARY: 'variant-outline-secondary',
-};
+} satisfies PartialConstantCaseKeyMap<ButtonSize>;
 
 const SIZE_KEY: ConstantCaseKeyMap<ButtonSizeModifier> = {
   SIZE_SMALL: 'size-small',
@@ -73,24 +76,20 @@ type GetVariantKeyParam = ButtonVariantProp & ButtonColorVariantProp;
 const VARIANT = BUTTON_VARIANT;
 const COLOR_VARIANT = BUTTON_COLOR_VARIANT;
 
-// TODO: Apply Open–closed principle like in getSizeKey function
+type VariantMiddleTypeNamespace<TVariant extends string> = `${TVariant}-` | '';
+
 export function getVariantKey({
   variant = VARIANT.SOLID,
   colorVariant = COLOR_VARIANT.PRIMARY,
 }: GetVariantKeyParam = {}) {
-  if (variant === VARIANT.OUTLINE && colorVariant === COLOR_VARIANT.PRIMARY) {
-    return VARIANT_KEY.VARIANT_OUTLINE_PRIMARY;
-  }
+  const VARIANT_TYPE_NAMESPACE = VARIANT_NAMESPACE;
+  const VARIANT_MIDDLE_TYPE_NAMESPACE: VariantMiddleTypeNamespace<
+    typeof variant
+  > = variant !== VARIANT.SOLID ? `${variant}-` : '';
 
-  if (variant === VARIANT.OUTLINE && colorVariant === COLOR_VARIANT.PRIMARY) {
-    return VARIANT_KEY.VARIANT_OUTLINE_SECONDARY;
-  }
+  const buttonVariantModifierKey: ButtonVariantModifier = `${VARIANT_TYPE_NAMESPACE}${VARIANT_MIDDLE_TYPE_NAMESPACE}${colorVariant}`;
 
-  if (variant === VARIANT.SOLID && colorVariant === COLOR_VARIANT.SECONDARY) {
-    return VARIANT_KEY.VARIANT_SECONDARY;
-  }
-
-  return VARIANT_KEY.VARIANT_PRIMARY;
+  return buttonVariantModifierKey;
 }
 
 function getVariantPaletteProperties(
