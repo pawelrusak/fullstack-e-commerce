@@ -17,9 +17,9 @@ export type CartTableProps = React.ComponentPropsWithRef<'table'>;
 
 function CartTable(props: CartTableProps) {
   return (
-    <Styled.TableContainer>
+    <Styled.Root>
       <Styled.Table {...props} />
-    </Styled.TableContainer>
+    </Styled.Root>
   );
 }
 

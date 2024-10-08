@@ -12,8 +12,7 @@ export const SectionContainer = styled.section`
   margin-bottom: clamp(1.6rem, 1.667vw + 1.067rem, 3.2rem);
 `;
 
-// TODO: rename to `Root`
-export const TableContainer = styled.div`
+export const Root = styled.div`
   overflow-x: scroll;
 `;
 
