@@ -789,4 +789,131 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Cart theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { cart } = component;
+
+      expect(cart).toEqual({
+        tableHead: {
+          _base: {
+            backgroundColor: expect.any(String),
+            color: expect.any(String),
+            fontWeight: expect.any(Number),
+            textTransform: expect.any(String),
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+          },
+        },
+        tableBody: {
+          default: {
+            initial: {
+              borderColor: expect.any(String),
+            },
+            interact: {
+              borderColor: expect.any(String),
+            },
+          },
+        },
+        tableProductThumbnail: {
+          _base: {
+            backgroundColor: expect.any(String),
+          },
+        },
+        tableProductCategory: {
+          _base: {
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            textTransform: expect.any(String),
+          },
+        },
+        tableProductName: {
+          _base: {
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+            fontFamily: expect.any(String),
+          },
+        },
+        tableProductVariantLabel: {
+          _base: {
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+          },
+        },
+        tableProductVariantDetails: {
+          _base: {
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+          },
+        },
+      });
+    });
+    it('should match the specified values', () => {
+      const { cart } = component;
+
+      expect(cart).toMatchInlineSnapshot(`
+        {
+          "tableBody": {
+            "default": {
+              "initial": {
+                "borderColor": "transparent",
+              },
+              "interact": {
+                "borderColor": "hsl(0, 0%, 80%)",
+              },
+            },
+          },
+          "tableHead": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 96%)",
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 700,
+              "lineHeight": 1.5,
+              "textTransform": "uppercase",
+            },
+          },
+          "tableProductCategory": {
+            "_base": {
+              "fontSize": "1.4rem",
+              "lineHeight": 1.4285714285714286,
+              "textTransform": "uppercase",
+            },
+          },
+          "tableProductName": {
+            "_base": {
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 600,
+              "lineHeight": 1.5,
+            },
+          },
+          "tableProductThumbnail": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 82%)",
+            },
+          },
+          "tableProductVariantDetails": {
+            "_base": {
+              "fontSize": "1.6rem",
+              "fontWeight": 400,
+              "lineHeight": 1.5,
+            },
+          },
+          "tableProductVariantLabel": {
+            "_base": {
+              "fontSize": "1.6rem",
+              "fontWeight": 700,
+              "lineHeight": 1.5,
+            },
+          },
+        }
+      `);
+    });
+  });
 });

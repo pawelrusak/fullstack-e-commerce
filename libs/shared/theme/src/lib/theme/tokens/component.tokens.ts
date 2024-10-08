@@ -382,4 +382,64 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Cart component tokens
+   */
+  cart: {
+    tableHead: {
+      _base: {
+        backgroundColor: color.secondarySurface,
+        color: color.onSecondarySurface,
+        fontWeight: fontWeight.bold,
+        textTransform: 'uppercase',
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.h6,
+        lineHeight: lineHeights.h6,
+      },
+    },
+    tableBody: {
+      default: {
+        initial: {
+          borderColor: 'transparent',
+        },
+        interact: {
+          borderColor: colorPalette.neutral[300],
+        },
+      },
+    },
+    tableProductThumbnail: {
+      _base: {
+        backgroundColor: color.surfacePlaceholder,
+      },
+    },
+    tableProductCategory: {
+      _base: {
+        fontSize: fontSizes.h8,
+        lineHeight: lineHeights.h8,
+        textTransform: 'uppercase',
+      },
+    },
+    tableProductName: {
+      _base: {
+        fontSize: fontSizes.h4,
+        lineHeight: lineHeights.h4,
+        fontWeight: fontWeight.semiBold,
+        fontFamily: fontFamily.secondary,
+      },
+    },
+    tableProductVariantLabel: {
+      _base: {
+        fontSize: fontSizes.h6,
+        lineHeight: lineHeights.h6,
+        fontWeight: fontWeight.bold,
+      },
+    },
+    tableProductVariantDetails: {
+      _base: {
+        fontSize: fontSizes.h7,
+        lineHeight: lineHeights.h7,
+        fontWeight: fontWeight.regular,
+      },
+    },
+  },
 };

@@ -222,6 +222,47 @@ export type FooterComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                      Card Component Tokens
+ * **********************************************************************************************
+ */
+type CartTableBodyMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<
+    InitialState | InteractState,
+    AvailableComponentToken<'borderColor'>
+  >
+>;
+
+type CartTableProductVariantProperties = ImmutableBaseToken<
+  'fontSize' | 'lineHeight' | 'fontWeight'
+>;
+
+export type CartComponent = {
+  cart: {
+    tableHead: ImmutableBaseToken<
+      | 'backgroundColor'
+      | 'color'
+      | 'fontWeight'
+      | 'textTransform'
+      | 'fontFamily'
+      | 'fontSize'
+      | 'lineHeight'
+    >;
+    tableBody: CartTableBodyMap;
+    tableProductThumbnail: ImmutableBaseToken<'backgroundColor'>;
+    tableProductCategory: ImmutableBaseToken<
+      'fontSize' | 'lineHeight' | 'textTransform'
+    >;
+    tableProductName: ImmutableBaseToken<
+      'fontSize' | 'lineHeight' | 'fontWeight' | 'fontFamily'
+    >;
+    tableProductVariantLabel: CartTableProductVariantProperties;
+    tableProductVariantDetails: CartTableProductVariantProperties;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -229,4 +270,5 @@ export type AppComponent = BrandComponent &
   DividerComponent &
   CheckboxComponent &
   FieldComponent &
-  FooterComponent;
+  FooterComponent &
+  CartComponent;
