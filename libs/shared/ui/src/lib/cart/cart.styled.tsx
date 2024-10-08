@@ -5,11 +5,14 @@ import { CardIcon } from '@e-shop/icons';
 /* TODO use variable */
 const lightGrey = '#F4F4F4';
 
+const CART_MAX_WIDTH = '152rem';
+
 export const SectionContainer = styled.section`
-  max-width: 152rem;
+  max-width: ${CART_MAX_WIDTH};
   margin-bottom: clamp(1.6rem, 1.667vw + 1.067rem, 3.2rem);
 `;
 
+// TODO: rename to `Root`
 export const TableContainer = styled.div`
   overflow-x: scroll;
 `;
@@ -17,12 +20,10 @@ export const TableContainer = styled.div`
 export const Table = styled.table`
   border-collapse: collapse;
   width: 100%;
-  max-width: 152rem;
+  max-width: ${CART_MAX_WIDTH};
 `;
 
 export const THead = styled.thead`
-  border-radius: 15px;
-
   & tr:first-child th {
     font-weight: ${({ theme }) => theme.fontWeight.bold};
     text-align: left;
@@ -53,7 +54,6 @@ export const ActionButtons = styled.div`
   justify-content: center;
   align-items: start;
   gap: 3.8rem;
-
   height: 100%;
   min-height: 29.4rem;
 `;
@@ -68,6 +68,7 @@ export const TBody = styled.tbody<StyledTBodyProps>`
     css`
       & > tr {
         position: relative;
+
         &::after {
           position: absolute;
           content: ' ';
