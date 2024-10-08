@@ -2,6 +2,18 @@ import styled, { css } from 'styled-components';
 import * as polished from 'polished';
 import { CardIcon } from '@e-shop/icons';
 
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
+
+const {
+  tableBody: tableBodyToken,
+  tableHead: tableHeadToken,
+  tableProductCategory: tableProductCategoryToken,
+  tableProductName: tableProductNameToken,
+  tableProductThumbnail: tableProductThumbnailToken,
+  tableProductVariantDetails: tableProductVariantDetailsToken,
+  tableProductVariantLabel: tableProductVariantLabelToken,
+} = getToken('cart');
+
 /* TODO use variable */
 const lightGrey = '#F4F4F4';
 
@@ -24,12 +36,14 @@ export const Table = styled.table`
 
 export const THead = styled.thead`
   & tr:first-child th {
-    font-weight: ${({ theme }) => theme.fontWeight.bold};
+    font-family: ${tableHeadToken._base.fontFamily};
+    font-weight: ${tableHeadToken._base.fontWeight};
+    line-height: ${tableHeadToken._base.lineHeight};
+    font-size: ${tableHeadToken._base.fontSize};
+    text-transform: ${tableHeadToken._base.textTransform};
+    background-color: ${tableHeadToken._base.backgroundColor};
+    color: ${tableHeadToken._base.color};
     text-align: left;
-    font-weight: 1.6rem;
-    line-height: 2.4rem;
-    text-transform: uppercase;
-    background-color: ${lightGrey};
     padding-top: 3.2rem;
     padding-bottom: 3.2rem;
   }
@@ -73,7 +87,7 @@ export const TBody = styled.tbody<StyledTBodyProps>`
           content: ' ';
 
           inset: 0;
-          border: 1px solid transparent;
+          border: 1px solid ${tableBodyToken.default.initial.borderColor};
           border-radius: 1rem;
         }
 
@@ -85,8 +99,7 @@ export const TBody = styled.tbody<StyledTBodyProps>`
         &:focus,
         &:focus-within {
           &::after {
-            /* TODO use variable */
-            border-color: #cbcbcb;
+            border-color: ${tableBodyToken.default.interact.borderColor};
           }
 
           ${ActionButtons} {
@@ -131,7 +144,8 @@ export const ProductThumbnail = styled.img`
   margin-right: 6.2rem;
 
   &[src$='placeholder-view.svg'] {
-    background-color: #d0d0d0;
+    background-color: ${tableProductThumbnailToken._base.backgroundColor};
+    border: 1px solid transparent;
     border-radius: 1rem;
   }
 `;
@@ -147,17 +161,18 @@ export const ProductDetails = styled.div`
 
 export const ProductCategory = styled.span`
   display: inline-block;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  line-height: 2rem;
+  text-transform: ${tableProductCategoryToken._base.textTransform};
+  font-size: ${tableProductCategoryToken._base.fontSize};
+  line-height: ${tableProductCategoryToken._base.lineHeight};
   margin-bottom: 1.6rem;
   letter-spacing: 0.3rem;
 `;
 
 export const ProductName = styled.strong`
-  font-size: 2rem;
-  line-height: 3rem;
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  font-size: ${tableProductNameToken._base.fontSize};
+  line-height: ${tableProductNameToken._base.lineHeight};
+  font-weight: ${tableProductNameToken._base.fontWeight};
+  font-family: ${tableProductNameToken._base.fontFamily};
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -165,19 +180,16 @@ export const ProductName = styled.strong`
   width: 31.4rem;
 `;
 
-const productVariantCss = css`
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-`;
-
 export const ProductVariant = styled.span`
-  ${productVariantCss};
+  font-size: ${tableProductVariantDetailsToken._base.fontSize};
+  line-height: ${tableProductVariantDetailsToken._base.lineHeight};
   margin-top: auto;
 `;
 
 export const ProductVariantLabel = styled.span`
-  ${productVariantCss};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-size: ${tableProductVariantLabelToken._base.fontSize};
+  line-height: ${tableProductVariantLabelToken._base.lineHeight};
+  font-weight: ${tableProductVariantLabelToken._base.fontWeight};
 `;
 
 // ================================= Price Cell =================================
