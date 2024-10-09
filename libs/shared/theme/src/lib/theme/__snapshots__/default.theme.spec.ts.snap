@@ -284,6 +284,14 @@ exports[`Default Theme should match the specified values 1`] = `
           "lineHeight": 1.5,
         },
       },
+      "tableProductPrice": {
+        "_base": {
+          "fontFamily": "Poppins, sans-serif",
+          "fontSize": "2.0rem",
+          "fontWeight": 600,
+          "lineHeight": 1.5,
+        },
+      },
       "tableProductThumbnail": {
         "_base": {
           "backgroundColor": "hsl(0, 0%, 82%)",

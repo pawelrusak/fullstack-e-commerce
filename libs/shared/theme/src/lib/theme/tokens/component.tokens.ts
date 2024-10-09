@@ -441,5 +441,13 @@ export const component: AppComponent = {
         fontWeight: fontWeight.regular,
       },
     },
+    tableProductPrice: {
+      _base: {
+        fontSize: fontSizes.h4,
+        lineHeight: lineHeights.h4,
+        fontWeight: fontWeight.semiBold,
+        fontFamily: fontFamily.secondary,
+      },
+    },
   },
 };

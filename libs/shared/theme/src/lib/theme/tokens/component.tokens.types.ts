@@ -260,6 +260,9 @@ export type CartComponent = {
     >;
     tableProductVariantLabel: CartTableProductVariantProperties;
     tableProductVariantDetails: CartTableProductVariantProperties;
+    tableProductPrice: ImmutableBaseToken<
+      'fontSize' | 'lineHeight' | 'fontWeight' | 'fontFamily'
+    >;
   };
 };
 

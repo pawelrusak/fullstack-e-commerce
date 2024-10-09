@@ -850,6 +850,14 @@ describe('Component theme config', () => {
             fontWeight: expect.any(Number),
           },
         },
+        tableProductPrice: {
+          _base: {
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+            fontFamily: expect.any(String),
+          },
+        },
       });
     });
     it('should match the specified values', () => {
@@ -886,6 +894,14 @@ describe('Component theme config', () => {
             },
           },
           "tableProductName": {
+            "_base": {
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 600,
+              "lineHeight": 1.5,
+            },
+          },
+          "tableProductPrice": {
             "_base": {
               "fontFamily": "Poppins, sans-serif",
               "fontSize": "2.0rem",
