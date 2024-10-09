@@ -1,19 +1,27 @@
 'uce client';
 
 import styled, { css } from 'styled-components';
-import * as polished from 'polished';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import { layoutWrapperCss } from '../layout-wrapper/layout-wrapper.styled';
 
-const lightGrayColorCss = css`
-  ${({ theme }) => polished.transparentize(0.75, theme.color.text)}
-`;
+const {
+  root: rootToken,
+  copyrightBar: copyrightBarToken,
+  copyrightBarFormula: copyrightBarFormulaToken,
+  copyrightBarListItemLink: copyrightBarListItemLinkToken,
+  copyrightBarListItemSeparator: copyrightBarListItemSeparatorToken,
+  navSectionListItemLink: navSectionListItemLinkToken,
+  navSectionListItemIcon: navSectionListItemIconToken,
+  navSectionTitle: navSectionTitleToken,
+} = getToken('footer');
 
+// TODO: rename to `RootFooter`
 export const Footer = styled.footer`
   margin-top: 2rem;
   padding: 4rem 0;
   padding: clamp(2rem, 6.25vw, 8rem) 0;
 
-  border-top: 1px solid ${lightGrayColorCss};
+  border-top: 1px solid ${rootToken._base.borderTopColor};
 
   @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
     border-top: none;
@@ -34,8 +42,8 @@ export const NavSection = styled.section`
     display: block;
     align-items: normal;
     flex-direction: row;
-
     margin-bottom: 0;
+
     &:first-child,
     &:last-child {
       display: flex;
@@ -83,9 +91,9 @@ export const BrandHeader = styled.h2`
 `;
 
 export const NavSectionTitle = styled.h2`
-  font-family: ${({ theme }) => theme.fontFamily.poppins};
-  color: ${({ theme }) => theme.color.text};
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  color: ${navSectionTitleToken._base.color};
+  font-family: ${navSectionTitleToken._base.fontFamily};
+  font-weight: ${navSectionTitleToken._base.fontWeight};
   font-size: 2rem;
   line-height: 3rem;
   margin-bottom: 2.4rem;
@@ -108,19 +116,19 @@ export const NavSectionListItem = styled.li`
     width: max-content;
     vertical-align: middle;
     text-decoration: none;
-    color: ${({ theme }) => theme.color.text};
+    color: ${copyrightBarListItemLinkToken.default.initial.color};
     font-size: 1.6rem;
     line-height: 2.4rem;
 
     &:hover,
     &:focus {
-      color: ${({ theme }) => theme.color.primary};
+      color: ${copyrightBarListItemLinkToken.default.interact.color};
     }
   }
 `;
 
 export const NavSectionListItemIcon = styled.svg`
-  color: ${({ theme }) => polished.transparentize(0.25, theme.color.text)};
+  color: ${navSectionListItemIconToken._base.color};
   display: inline-block;
   margin-right: 1.2rem;
   vertical-align: middle;
@@ -135,15 +143,15 @@ export const CopyrightBar = styled.section`
   ${layoutWrapperCss}
   padding: 0.8rem;
   gap: 1.6rem;
-
   position: relative;
+
   &::before {
     position: absolute;
     top: 0;
     left: 1rem;
     right: 1rem;
     content: ' ';
-    border-top: 1px solid ${lightGrayColorCss};
+    border-top: 1px solid ${copyrightBarToken._base.borderTopColor};
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
@@ -163,12 +171,11 @@ export const CopyrightBar = styled.section`
 const copyrightBarFormulaTextCss = css`
   font-weight: 1.4rem;
   line-height: 2rem;
-  color: ${({ theme }) => theme.color.text};
   text-decoration: none;
 `;
 
 export const CopyrightBarFormula = styled.p`
-  ${copyrightBarFormulaTextCss}
+  color: ${copyrightBarFormulaToken._base.color};
 `;
 
 export const CopyrightBarList = styled.ul`
@@ -185,6 +192,7 @@ export const CopyrightBarListItem = styled.li`
 
   & > :is(a, button) {
     display: inline-block;
+    color: ${navSectionListItemLinkToken.default.initial.color};
     ${copyrightBarFormulaTextCss}
     width: max-content;
     padding: 0 1rem;
@@ -192,7 +200,7 @@ export const CopyrightBarListItem = styled.li`
 
     &:hover,
     &:focus {
-      color: ${({ theme }) => theme.color.primary};
+      color: ${navSectionListItemLinkToken.default.interact.color};
     }
 
     &::before {
@@ -203,7 +211,8 @@ export const CopyrightBarListItem = styled.li`
       transform: translateY(-50%);
       width: 1px;
       height: 1.4rem;
-      background-color: ${lightGrayColorCss};
+      background-color: ${copyrightBarListItemSeparatorToken._base
+        .backgroundColor};
     }
   }
 `;
