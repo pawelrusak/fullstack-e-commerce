@@ -5,7 +5,7 @@ import { PaymentsList } from './partials';
 export type FooterProps = React.ComponentPropsWithRef<'footer'>;
 
 export function Footer(props: FooterProps) {
-  return <Styled.Footer {...props} />;
+  return <Styled.RootFooter {...props} />;
 }
 
 // TODO add props to the component

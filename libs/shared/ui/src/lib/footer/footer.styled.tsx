@@ -15,8 +15,7 @@ const {
   navSectionTitle: navSectionTitleToken,
 } = getToken('footer');
 
-// TODO: rename to `RootFooter`
-export const Footer = styled.footer`
+export const RootFooter = styled.footer`
   margin-top: 2rem;
   padding: 4rem 0;
   padding: clamp(2rem, 6.25vw, 8rem) 0;
