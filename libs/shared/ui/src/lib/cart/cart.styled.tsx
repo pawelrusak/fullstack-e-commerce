@@ -12,6 +12,7 @@ const {
   tableProductThumbnail: tableProductThumbnailToken,
   tableProductVariantDetails: tableProductVariantDetailsToken,
   tableProductVariantLabel: tableProductVariantLabelToken,
+  tableProductPrice: tableProductPriceToken,
 } = getToken('cart');
 
 /* TODO use variable */
@@ -213,9 +214,10 @@ export const TdPrice = styled.td`
 `;
 
 const priceCss = css`
-  font-size: 2rem;
-  line-height: 3rem;
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  font-size: ${tableProductPriceToken._base.fontSize};
+  line-height: ${tableProductPriceToken._base.lineHeight};
+  font-weight: ${tableProductPriceToken._base.fontWeight};
+  font-family: ${tableProductPriceToken._base.fontFamily};
 `;
 
 export const Price = styled.strong`
