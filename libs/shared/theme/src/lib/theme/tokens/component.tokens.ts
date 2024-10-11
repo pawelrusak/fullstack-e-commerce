@@ -449,5 +449,28 @@ export const component: AppComponent = {
         fontFamily: fontFamily.secondary,
       },
     },
+    tableProductQuantityInput: {
+      _base: {
+        fontSize: fontSizes.h6,
+        fontWeight: fontWeight.bold,
+        fontFamily: fontFamily.primary,
+        lineHeight: lineHeights.h6,
+        backgroundColor: color.secondarySurface,
+        color: color.onSecondarySurface,
+      },
+    },
+    tableProductQuantityButton: {
+      default: {
+        initial: {
+          color: color.onSurface,
+        },
+        interact: {
+          color: color.onSurfaceInteract,
+        },
+        disabled: {
+          color: colorPalette.neutral[400],
+        },
+      },
+    },
   },
 };

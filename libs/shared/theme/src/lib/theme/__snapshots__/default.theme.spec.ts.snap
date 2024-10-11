@@ -292,6 +292,29 @@ exports[`Default Theme should match the specified values 1`] = `
           "lineHeight": 1.5,
         },
       },
+      "tableProductQuantityButton": {
+        "default": {
+          "disabled": {
+            "color": "hsl(0, 0%, 70%)",
+          },
+          "initial": {
+            "color": "hsl(0, 0%, 19%)",
+          },
+          "interact": {
+            "color": "hsl(7, 100%, 65%)",
+          },
+        },
+      },
+      "tableProductQuantityInput": {
+        "_base": {
+          "backgroundColor": "hsl(0, 0%, 96%)",
+          "color": "hsl(0, 0%, 19%)",
+          "fontFamily": "Montserrat, sans-serif",
+          "fontSize": "1.6rem",
+          "fontWeight": 700,
+          "lineHeight": 1.5,
+        },
+      },
       "tableProductThumbnail": {
         "_base": {
           "backgroundColor": "hsl(0, 0%, 82%)",

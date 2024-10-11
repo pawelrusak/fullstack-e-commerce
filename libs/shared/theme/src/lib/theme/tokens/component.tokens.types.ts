@@ -239,6 +239,14 @@ type CartTableProductVariantProperties = ImmutableBaseToken<
   'fontSize' | 'lineHeight' | 'fontWeight'
 >;
 
+type CartTableProductQuantityButtonMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<
+    InitialState | InteractState | 'disabled',
+    AvailableComponentToken<'color'>
+  >
+>;
+
 export type CartComponent = {
   cart: {
     tableHead: ImmutableBaseToken<
@@ -263,6 +271,15 @@ export type CartComponent = {
     tableProductPrice: ImmutableBaseToken<
       'fontSize' | 'lineHeight' | 'fontWeight' | 'fontFamily'
     >;
+    tableProductQuantityInput: ImmutableBaseToken<
+      | 'fontSize'
+      | 'fontWeight'
+      | 'fontFamily'
+      | 'lineHeight'
+      | 'backgroundColor'
+      | 'color'
+    >;
+    tableProductQuantityButton: CartTableProductQuantityButtonMap;
   };
 };
 

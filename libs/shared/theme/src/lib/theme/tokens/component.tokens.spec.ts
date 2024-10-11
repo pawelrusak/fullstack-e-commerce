@@ -858,6 +858,29 @@ describe('Component theme config', () => {
             fontFamily: expect.any(String),
           },
         },
+        tableProductQuantityInput: {
+          _base: {
+            fontSize: expect.any(String),
+            fontWeight: expect.any(Number),
+            fontFamily: expect.any(String),
+            lineHeight: expect.any(Number),
+            backgroundColor: expect.any(String),
+            color: expect.any(String),
+          },
+        },
+        tableProductQuantityButton: {
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+            },
+            disabled: {
+              color: expect.any(String),
+            },
+          },
+        },
       });
     });
     it('should match the specified values', () => {
@@ -906,6 +929,29 @@ describe('Component theme config', () => {
               "fontFamily": "Poppins, sans-serif",
               "fontSize": "2.0rem",
               "fontWeight": 600,
+              "lineHeight": 1.5,
+            },
+          },
+          "tableProductQuantityButton": {
+            "default": {
+              "disabled": {
+                "color": "hsl(0, 0%, 70%)",
+              },
+              "initial": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "color": "hsl(7, 100%, 65%)",
+              },
+            },
+          },
+          "tableProductQuantityInput": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 96%)",
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 700,
               "lineHeight": 1.5,
             },
           },
