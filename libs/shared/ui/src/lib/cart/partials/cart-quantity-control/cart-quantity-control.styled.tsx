@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
 import { BaseQuantityControl } from '../../../base-quantity-control';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
+
+const { tableProductQuantityInput, tableProductQuantityButton } =
+  getToken('cart');
 
 export const QuantityContainer = styled.div`
   display: flex;
@@ -12,12 +16,14 @@ export const QuantityInput = styled(BaseQuantityControl.Input)`
   display: block;
   padding: 0.8rem 0;
   width: 4rem;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-size: ${tableProductQuantityInput._base.fontSize};
+  font-family: ${tableProductQuantityInput._base.fontFamily};
+  line-height: ${tableProductQuantityInput._base.lineHeight};
+  font-weight: ${tableProductQuantityInput._base.fontWeight};
   text-align: center;
   border-radius: 999px;
-  background-color: #f4f4f4;
+  color: ${tableProductQuantityInput._base.color};
+  background-color: ${tableProductQuantityInput._base.backgroundColor};
   z-index: 10;
 `;
 
@@ -25,14 +31,14 @@ const quantityButtonCss = css`
   all: unset;
   padding: 1rem;
   margin: 0.6rem;
-  color: ${({ theme }) => theme.color.text};
+  color: ${tableProductQuantityButton.default.initial.color};
   z-index: 10;
 
   cursor: pointer;
 
   &:hover:enabled,
   &:focus:enabled {
-    color: ${({ theme }) => theme.color.primary};
+    color: ${tableProductQuantityButton.default.interact.color};
   }
 
   &:focus {
@@ -40,7 +46,7 @@ const quantityButtonCss = css`
   }
 
   &:disabled {
-    opacity: 0.5;
+    color: ${tableProductQuantityButton.default.disabled.color};
     cursor: not-allowed;
   }
 `;
