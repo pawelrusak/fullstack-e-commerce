@@ -22,4 +22,9 @@ export type {
   ButtonVariantModifier,
   ButtonBaseColorVariant,
   ButtonComponentPalette,
+  IconButtonComponent,
+  IconButtonState,
+  IconButtonVariantNamespaceKey,
+  IconButtonVariant,
+  IconButtonVariantModifier,
 } from './component.tokens.types';
