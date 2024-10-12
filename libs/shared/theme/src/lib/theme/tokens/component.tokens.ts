@@ -473,4 +473,79 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Cart component tokens
+   */
+  iconButton: {
+    root: {
+      'variant-primary': {
+        initial: {
+          color: color.onPrimary,
+          backgroundColor: color.primary,
+          borderColor: color.primaryBorder,
+        },
+        interact: {
+          color: color.onPrimary,
+          backgroundColor: color.primaryInteract,
+          borderColor: color.primaryBorderInteract,
+        },
+        disabled: {
+          color: color.onPrimary,
+          backgroundColor: color.primaryDisabled,
+          borderColor: color.primaryBorderDisabled,
+        },
+      },
+      'variant-secondary': {
+        initial: {
+          color: color.onSecondary,
+          backgroundColor: color.secondary,
+          borderColor: color.secondaryBorder,
+        },
+        interact: {
+          color: color.onSecondary,
+          backgroundColor: color.secondaryInteract,
+          borderColor: color.secondaryBorderInteract,
+        },
+        disabled: {
+          color: color.onSecondary,
+          backgroundColor: color.secondaryDisabled,
+          borderColor: color.secondaryBorderDisabled,
+        },
+      },
+      'variant-outline-primary': {
+        initial: {
+          color: color.onPrimaryOutline,
+          backgroundColor: colorPalette.neutral[0],
+          borderColor: color.primaryOutlineBorder,
+        },
+        interact: {
+          color: color.onPrimaryOutlineInteract,
+          backgroundColor: color.primaryOutlineInteract,
+          borderColor: color.primaryOutlineBorderInteract,
+        },
+        disabled: {
+          color: color.onPrimaryOutlineDisabled,
+          backgroundColor: colorPalette.neutral[0],
+          borderColor: color.primaryOutlineBorderDisabled,
+        },
+      },
+      'variant-outline-secondary': {
+        initial: {
+          color: color.onSecondaryOutline,
+          backgroundColor: colorPalette.neutral[0],
+          borderColor: color.secondaryOutlineBorder,
+        },
+        interact: {
+          color: color.onSecondaryOutlineInteract,
+          backgroundColor: color.secondaryOutlineInteract,
+          borderColor: color.secondaryOutlineBorderInteract,
+        },
+        disabled: {
+          color: color.onSecondaryOutlineDisabled,
+          backgroundColor: colorPalette.neutral[0],
+          borderColor: color.secondaryOutlineBorderDisabled,
+        },
+      },
+    },
+  },
 };

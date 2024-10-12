@@ -283,6 +283,43 @@ export type CartComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                  Icon Button Component Tokens
+ * **********************************************************************************************
+ */
+
+// Button Variant Tokens
+type IconButtonComponentPalette = AvailableComponentToken<
+  'color' | 'backgroundColor' | 'borderColor'
+>;
+
+export type IconButtonVariantNamespaceKey = 'variant';
+
+type IconButtonOutlineNamespaceKey = 'outline';
+
+type IconButtonBaseColorVariant = 'primary' | 'secondary';
+
+export type IconButtonVariant =
+  | IconButtonBaseColorVariant
+  | `${IconButtonOutlineNamespaceKey}-${IconButtonBaseColorVariant}`;
+
+export type IconButtonVariantModifier =
+  `${IconButtonVariantNamespaceKey}-${IconButtonVariant}`;
+
+export type IconButtonState = InitialState | InteractState | 'disabled';
+
+type IconButtonRootVariantTokenMap = ModifierStateMap<
+  IconButtonVariantModifier,
+  StateStyleMap<IconButtonState, IconButtonComponentPalette>
+>;
+
+export type IconButtonComponent = {
+  iconButton: {
+    root: IconButtonRootVariantTokenMap;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -291,4 +328,5 @@ export type AppComponent = BrandComponent &
   CheckboxComponent &
   FieldComponent &
   FooterComponent &
-  CartComponent;
+  CartComponent &
+  IconButtonComponent;
