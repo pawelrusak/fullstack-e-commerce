@@ -13,6 +13,7 @@ export * from './lib/gallery';
 export * from './lib/checkbox';
 export * from './lib/paragraph';
 export * from './lib/breadcrumb';
+export * from './lib/icon-button';
 export * from './lib/hero-section';
 export * from './lib/product-card';
 export * from './lib/specification';
