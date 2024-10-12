@@ -8,9 +8,8 @@ export type StyledRootButtonProps = InternalIconButtonProps;
 export const RootButton = styled.button<StyledRootButtonProps>`
   all: unset;
   box-sizing: border-box;
-  padding: 1.6rem;
-  display: flex;
-  place-items: center;
+  display: grid;
+  place-content: center;
   height: 6.4rem;
   width: 6.4rem;
   border-radius: 999px;
