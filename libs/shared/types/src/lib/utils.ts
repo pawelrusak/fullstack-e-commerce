@@ -59,3 +59,7 @@ export type ConstantCase<T extends string> = Uppercase<
 export type ConstantCaseKeyMap<T extends string> = {
   [K in T as ConstantCase<K>]: K;
 };
+
+export type PartialConstantCaseKeyMap<T extends string> = Partial<
+  ConstantCaseKeyMap<T>
+>;
