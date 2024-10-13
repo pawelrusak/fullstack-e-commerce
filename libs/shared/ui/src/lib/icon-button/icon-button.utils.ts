@@ -6,11 +6,51 @@ import type {
   IconButtonVariantNamespaceKey,
   IconButtonState,
   IconButtonVariant as InternalIconButtonVariant,
+  IconButtonSizeModifier,
+  IconButtonSizeNamespaceKey,
+  IconButtonSize as InternalIconButtonSize,
 } from '@e-shop/theme/types';
 import type { ObjectValues, PartialConstantCaseKeyMap } from '@e-shop/types';
 
 const { root: rootToken } = getToken('iconButton');
 
+/**
+ * ******************************************************************************
+ *                                   Size
+ * ******************************************************************************
+ */
+const SIZE_NAMESPACE: IconButtonSizeNamespaceKey = 'size';
+
+export const ICON_BUTTON_SIZE = {
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
+} satisfies PartialConstantCaseKeyMap<InternalIconButtonSize>;
+
+export type IconButtonSize = ObjectValues<typeof ICON_BUTTON_SIZE>;
+
+type IconButtonSizeProp = {
+  size?: IconButtonSize;
+};
+
+function addSizeKey(size: IconButtonSize): IconButtonSizeModifier {
+  return `${SIZE_NAMESPACE}-${size}`;
+}
+
+export function getSizeStyle(size: IconButtonSize) {
+  const sizeKey = addSizeKey(size);
+
+  return css`
+    width: ${rootToken[sizeKey].initial.width};
+    height: ${rootToken[sizeKey].initial.height};
+  `;
+}
+
+/**
+ * ******************************************************************************
+ *                                   Variant
+ * ******************************************************************************
+ */
 const VARIANT_NAMESPACE: IconButtonVariantNamespaceKey = 'variant';
 
 export const ICON_BUTTON_VARIANT = {
@@ -25,8 +65,6 @@ export type IconButtonVariant = ObjectValues<typeof ICON_BUTTON_VARIANT>;
 type IconButtonVariantProp = {
   variant?: IconButtonVariant;
 };
-
-export type InternalIconButtonProps = IconButtonVariantProp;
 
 function getVariantPaletteProperties(
   modifierKey: IconButtonVariantModifier,
@@ -60,3 +98,11 @@ export function getVariantStyle(variant: IconButtonVariant) {
     }
   `;
 }
+
+/**
+ * ******************************************************************************
+ *                                   Rest
+ * ******************************************************************************
+ */
+export type InternalIconButtonProps = IconButtonVariantProp &
+  IconButtonSizeProp;

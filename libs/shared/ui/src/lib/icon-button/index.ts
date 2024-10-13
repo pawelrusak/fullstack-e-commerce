@@ -1,5 +1,5 @@
 export { IconButton } from './icon-button.component';
-export { ICON_BUTTON_VARIANT } from './icon-button.utils';
+export { ICON_BUTTON_VARIANT, ICON_BUTTON_SIZE } from './icon-button.utils';
 
 export type { IconButtonProps } from './icon-button.component';
-export type { IconButtonVariant } from './icon-button.utils';
+export type { IconButtonVariant, IconButtonSize } from './icon-button.utils';
