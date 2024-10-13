@@ -546,6 +546,24 @@ export const component: AppComponent = {
           borderColor: color.secondaryOutlineBorderDisabled,
         },
       },
+      'size-small': {
+        initial: {
+          width: '4rem',
+          height: '4rem',
+        },
+      },
+      'size-medium': {
+        initial: {
+          width: '5rem',
+          height: '5rem',
+        },
+      },
+      'size-large': {
+        initial: {
+          width: '6.4rem',
+          height: '6.4rem',
+        },
+      },
     },
   },
 };

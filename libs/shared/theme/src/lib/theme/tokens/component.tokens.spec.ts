@@ -1053,6 +1053,24 @@ describe('Component theme config', () => {
               color: expect.any(String),
             },
           },
+          'size-small': {
+            initial: {
+              width: '4rem',
+              height: '4rem',
+            },
+          },
+          'size-medium': {
+            initial: {
+              width: '5rem',
+              height: '5rem',
+            },
+          },
+          'size-large': {
+            initial: {
+              width: '6.4rem',
+              height: '6.4rem',
+            },
+          },
         },
       });
     });
@@ -1063,6 +1081,24 @@ describe('Component theme config', () => {
       expect(iconButton).toMatchInlineSnapshot(`
         {
           "root": {
+            "size-large": {
+              "initial": {
+                "height": "6.4rem",
+                "width": "6.4rem",
+              },
+            },
+            "size-medium": {
+              "initial": {
+                "height": "5rem",
+                "width": "5rem",
+              },
+            },
+            "size-small": {
+              "initial": {
+                "height": "4rem",
+                "width": "4rem",
+              },
+            },
             "variant-outline-primary": {
               "disabled": {
                 "backgroundColor": "hsl(0, 0%, 100%)",

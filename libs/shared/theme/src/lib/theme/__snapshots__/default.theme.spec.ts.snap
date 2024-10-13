@@ -487,6 +487,24 @@ exports[`Default Theme should match the specified values 1`] = `
     },
     "iconButton": {
       "root": {
+        "size-large": {
+          "initial": {
+            "height": "6.4rem",
+            "width": "6.4rem",
+          },
+        },
+        "size-medium": {
+          "initial": {
+            "height": "5rem",
+            "width": "5rem",
+          },
+        },
+        "size-small": {
+          "initial": {
+            "height": "4rem",
+            "width": "4rem",
+          },
+        },
         "variant-outline-primary": {
           "disabled": {
             "backgroundColor": "hsl(0, 0%, 100%)",

@@ -27,4 +27,7 @@ export type {
   IconButtonVariantNamespaceKey,
   IconButtonVariant,
   IconButtonVariantModifier,
+  IconButtonSizeNamespaceKey,
+  IconButtonSize,
+  IconButtonSizeModifier,
 } from './component.tokens.types';

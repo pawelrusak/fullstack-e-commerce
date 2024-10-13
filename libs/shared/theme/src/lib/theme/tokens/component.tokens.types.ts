@@ -314,9 +314,26 @@ type IconButtonRootVariantTokenMap = ModifierStateMap<
   StateStyleMap<IconButtonState, IconButtonComponentPalette>
 >;
 
+// IconButton Size Tokens
+export type IconButtonSizeNamespaceKey = 'size';
+
+export type IconButtonSize = 'small' | 'medium' | 'large';
+
+export type IconButtonSizeModifier =
+  `${IconButtonSizeNamespaceKey}-${IconButtonSize}`;
+
+type IconButtonComponentSizeProperty = AvailableComponentToken<
+  'height' | 'width'
+>;
+
+type IconButtonRootSizeTokenMap = ModifierStateMap<
+  IconButtonSizeModifier,
+  StateStyleMap<InitialState, IconButtonComponentSizeProperty>
+>;
+
 export type IconButtonComponent = {
   iconButton: {
-    root: IconButtonRootVariantTokenMap;
+    root: IconButtonRootVariantTokenMap & IconButtonRootSizeTokenMap;
   };
 };
 
