@@ -120,7 +120,8 @@ export function getVariantPaletteStyle({
   return css`
     ${getVariantPaletteProperties(variantKey, 'initial')};
 
-    &:is(:hover, :focus) {
+    &:hover,
+    &:focus {
       ${getVariantPaletteProperties(variantKey, 'interact')};
     }
 
