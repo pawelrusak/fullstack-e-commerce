@@ -8,10 +8,11 @@ export function Footer(props: FooterProps) {
   return <Styled.RootFooter {...props} />;
 }
 
-// TODO add props to the component
-function FooterBrand() {
+export type FooterBrandProps = React.ComponentPropsWithRef<'h2'>;
+
+function FooterBrand(props: FooterBrandProps) {
   return (
-    <Styled.BrandHeader>
+    <Styled.BrandHeader {...props}>
       <Brand />
     </Styled.BrandHeader>
   );
