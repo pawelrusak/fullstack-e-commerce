@@ -49,7 +49,7 @@ export const Default: Story = {
 export const Small: Story = {
   args: {
     variant: undefined,
-    size: undefined,
+    size: ICON_BUTTON_SIZE.SMALL,
   },
   render: (args) => (
     <IconButton {...args}>
@@ -62,7 +62,7 @@ export const Small: Story = {
 export const Medium: Story = {
   args: {
     variant: undefined,
-    size: undefined,
+    size: ICON_BUTTON_SIZE.MEDIUM,
   },
   render: (args) => (
     <IconButton {...args}>
