@@ -19,21 +19,12 @@ import type {
 
 const { root: rootToken } = getToken('button');
 
+/**
+ * ******************************************************************************
+ *                                   Size
+ * ******************************************************************************
+ */
 const SIZE_NAMESPACE: ButtonSizeNamespaceKey = 'size';
-
-const VARIANT_NAMESPACE: `${ButtonVariantNamespaceKey}-` = 'variant-';
-
-export const BUTTON_COLOR_VARIANT = {
-  PRIMARY: 'primary',
-  SECONDARY: 'secondary',
-} satisfies PartialConstantCaseKeyMap<ButtonBaseColorVariant>;
-
-type Variant = ButtonOutlineNamespaceKey | 'solid';
-
-export const BUTTON_VARIANT = {
-  OUTLINE: 'outline',
-  SOLID: 'solid',
-} satisfies PartialConstantCaseKeyMap<Variant>;
 
 export const BUTTON_SIZE = {
   SMALL: 'small',
@@ -45,10 +36,6 @@ const SIZE_KEY: ConstantCaseKeyMap<ButtonSizeModifier> = {
   SIZE_DEFAULT: 'size-default',
   SIZE_LARGE: 'size-large',
 };
-
-export type ButtonColorVariant = ObjectValues<typeof BUTTON_COLOR_VARIANT>;
-
-export type ButtonVariant = ObjectValues<typeof BUTTON_VARIANT>;
 
 type ButtonVariantProp = {
   variant?: ButtonVariant;
@@ -66,10 +53,46 @@ type ButtonSizeProp = {
   size?: ButtonSize;
 };
 
-export type InternalButtonProps = ButtonVariantProp &
-  ButtonColorVariantProp &
-  ButtonFullWidthProp &
-  ButtonSizeProp;
+function addSizeNamespaceKeyPrefix(size: ButtonSize): ButtonSizeModifier {
+  return `${SIZE_NAMESPACE}-${size}`;
+}
+
+export function getSizeKey(size?: ButtonSize): ButtonSizeModifier {
+  return size ? addSizeNamespaceKeyPrefix(size) : SIZE_KEY.SIZE_DEFAULT;
+}
+
+export function getSizeStyle(size?: ButtonSize) {
+  const sizeKey = getSizeKey(size);
+
+  return css`
+    font-size: ${rootToken[sizeKey].initial.fontSize};
+    line-height: ${rootToken[sizeKey].initial.lineHeight};
+    padding: ${rootToken[sizeKey].initial.padding};
+  `;
+}
+
+/**
+ * ******************************************************************************
+ *                                   Variant
+ * ******************************************************************************
+ */
+const VARIANT_NAMESPACE: `${ButtonVariantNamespaceKey}-` = 'variant-';
+
+export const BUTTON_COLOR_VARIANT = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+} satisfies PartialConstantCaseKeyMap<ButtonBaseColorVariant>;
+
+type Variant = ButtonOutlineNamespaceKey | 'solid';
+
+export const BUTTON_VARIANT = {
+  OUTLINE: 'outline',
+  SOLID: 'solid',
+} satisfies PartialConstantCaseKeyMap<Variant>;
+
+export type ButtonColorVariant = ObjectValues<typeof BUTTON_COLOR_VARIANT>;
+
+export type ButtonVariant = ObjectValues<typeof BUTTON_VARIANT>;
 
 type GetVariantKeyParam = ButtonVariantProp & ButtonColorVariantProp;
 
@@ -132,20 +155,12 @@ export function getVariantPaletteStyle({
   `;
 }
 
-function addSizeNamespaceKeyPrefix(size: ButtonSize): ButtonSizeModifier {
-  return `${SIZE_NAMESPACE}-${size}`;
-}
-
-export function getSizeKey(size?: ButtonSize): ButtonSizeModifier {
-  return size ? addSizeNamespaceKeyPrefix(size) : SIZE_KEY.SIZE_DEFAULT;
-}
-
-export function getSizeStyle(size?: ButtonSize) {
-  const sizeKey = getSizeKey(size);
-
-  return css`
-    font-size: ${rootToken[sizeKey].initial.fontSize};
-    line-height: ${rootToken[sizeKey].initial.lineHeight};
-    padding: ${rootToken[sizeKey].initial.padding};
-  `;
-}
+/**
+ * ******************************************************************************
+ *                                   Rest
+ * ******************************************************************************
+ */
+export type InternalButtonProps = ButtonVariantProp &
+  ButtonColorVariantProp &
+  ButtonFullWidthProp &
+  ButtonSizeProp;
