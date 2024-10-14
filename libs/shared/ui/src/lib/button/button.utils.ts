@@ -11,17 +11,17 @@ import type {
   ButtonState,
   ButtonSize,
 } from '@e-shop/theme/types';
-import type { ObjectValues, ConstantCaseKeyMap } from '@e-shop/types';
+import type {
+  ObjectValues,
+  ConstantCaseKeyMap,
+  PartialConstantCaseKeyMap,
+} from '@e-shop/types';
 
 const { root: rootToken } = getToken('button');
 
 const SIZE_NAMESPACE: ButtonSizeNamespaceKey = 'size';
 
 const VARIANT_NAMESPACE: `${ButtonVariantNamespaceKey}-` = 'variant-';
-
-type PartialConstantCaseKeyMap<T extends string> = Partial<
-  ConstantCaseKeyMap<T>
->;
 
 export const BUTTON_COLOR_VARIANT = {
   PRIMARY: 'primary',
