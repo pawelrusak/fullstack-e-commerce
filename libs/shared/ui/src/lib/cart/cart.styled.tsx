@@ -16,6 +16,8 @@ const {
   tableProductVariantDetails: tableProductVariantDetailsToken,
   tableProductVariantLabel: tableProductVariantLabelToken,
   tableProductPrice: tableProductPriceToken,
+  summaryCouponSection: summaryCouponSectionToken,
+  summaryCouponApplyButton: summaryCouponApplyButtonToken,
 } = getToken('cart');
 
 /* TODO use variable */
@@ -319,12 +321,14 @@ const subSummarySectionCss = css`
 `;
 
 export const CouponSection = styled.section`
-  border: 1px solid transparent;
-  /* TODO use variable */
-  border-color: #e5e5e5;
+  border: 1px solid ${summaryCouponSectionToken._base.borderColor};
 
-  font-weight: 1.6rem;
-  line-height: 2.4rem;
+  font-weight: ${summaryCouponSectionToken._base.fontWeight};
+  line-height: ${summaryCouponSectionToken._base.lineHeight};
+  font-size: ${summaryCouponSectionToken._base.fontSize};
+  font-family: ${summaryCouponSectionToken._base.fontFamily};
+  color: ${summaryCouponSectionToken._base.color};
+  background-color: ${summaryCouponSectionToken._base.backgroundColor};
 
   display: flex;
   flex-direction: column;
@@ -344,10 +348,11 @@ export const CouponActionButton = styled.button`
   all: unset;
   display: block;
 
-  font-family: ${({ theme }) => theme.fontFamily.poppins};
-
-  font-size: 2rem;
-  line-height: 3rem;
+  font-family: ${summaryCouponApplyButtonToken._base.fontFamily};
+  font-size: ${summaryCouponApplyButtonToken._base.fontSize};
+  font-weight: ${summaryCouponApplyButtonToken._base.fontWeight};
+  line-height: ${summaryCouponApplyButtonToken._base.lineHeight};
+  color: ${summaryCouponApplyButtonToken.default.initial.color};
 
   cursor: pointer;
 
@@ -358,7 +363,7 @@ export const CouponActionButton = styled.button`
 
   &:hover,
   &:focus {
-    color: ${({ theme }) => theme.color.primary};
+    color: ${summaryCouponApplyButtonToken.default.interact.color};
   }
 `;
 
