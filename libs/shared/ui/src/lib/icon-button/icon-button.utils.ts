@@ -29,20 +29,16 @@ export const ICON_BUTTON_SIZE = {
 
 export type IconButtonSize = ObjectValues<typeof ICON_BUTTON_SIZE>;
 
-type IconButtonSizeProp = {
-  size?: IconButtonSize;
-};
-
-function addSizeKey(size: IconButtonSize): IconButtonSizeModifier {
+function getSizeModifierKey(size: IconButtonSize): IconButtonSizeModifier {
   return `${SIZE_NAMESPACE}-${size}`;
 }
 
 export function getSizeStyle(size: IconButtonSize) {
-  const sizeKey = addSizeKey(size);
+  const sizeModifierKey = getSizeModifierKey(size);
 
   return css`
-    width: ${rootToken[sizeKey].initial.width};
-    height: ${rootToken[sizeKey].initial.height};
+    width: ${rootToken[sizeModifierKey].initial.width};
+    height: ${rootToken[sizeModifierKey].initial.height};
   `;
 }
 
@@ -62,11 +58,7 @@ export const ICON_BUTTON_VARIANT = {
 
 export type IconButtonVariant = ObjectValues<typeof ICON_BUTTON_VARIANT>;
 
-type IconButtonVariantProp = {
-  variant?: IconButtonVariant;
-};
-
-function getVariantPaletteProperties(
+function getVariantStyleByState(
   modifierKey: IconButtonVariantModifier,
   state: IconButtonState,
 ) {
@@ -77,24 +69,26 @@ function getVariantPaletteProperties(
   `;
 }
 
-function addVariantKey(variant: IconButtonVariant): IconButtonVariantModifier {
+function getVariantModifierKey(
+  variant: IconButtonVariant,
+): IconButtonVariantModifier {
   return `${VARIANT_NAMESPACE}-${variant}`;
 }
 
 export function getVariantStyle(variant: IconButtonVariant) {
-  const variantKey = addVariantKey(variant);
+  const variantModifierKey = getVariantModifierKey(variant);
 
   return css`
-    ${getVariantPaletteProperties(variantKey, 'initial')};
+    ${getVariantStyleByState(variantModifierKey, 'initial')};
 
     &:hover,
     &:focus {
-      ${getVariantPaletteProperties(variantKey, 'interact')};
+      ${getVariantStyleByState(variantModifierKey, 'interact')};
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      ${getVariantPaletteProperties(variantKey, 'disabled')};
+      ${getVariantStyleByState(variantModifierKey, 'disabled')};
     }
   `;
 }
@@ -104,5 +98,14 @@ export function getVariantStyle(variant: IconButtonVariant) {
  *                                   Rest
  * ******************************************************************************
  */
+
+type IconButtonSizeProp = {
+  size?: IconButtonSize;
+};
+
+type IconButtonVariantProp = {
+  variant?: IconButtonVariant;
+};
+
 export type InternalIconButtonProps = IconButtonVariantProp &
   IconButtonSizeProp;
