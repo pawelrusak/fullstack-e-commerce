@@ -472,6 +472,34 @@ export const component: AppComponent = {
         },
       },
     },
+    summaryCouponSection: {
+      _base: {
+        borderColor: colorPalette.neutral[300],
+        lineHeight: lineHeights.h7,
+        fontSize: fontSizes.h7,
+        fontWeight: fontWeight.regular,
+        fontFamily: fontFamily.primary,
+        backgroundColor: color.surface,
+        // Exception: Color not in palette; based on onSurface color with adjusted opacity in design.
+        color: transparentize(0.25, color.onSurface),
+      },
+    },
+    summaryCouponApplyButton: {
+      _base: {
+        fontWeight: fontWeight.semiBold,
+        fontSize: fontSizes.h4,
+        fontFamily: fontFamily.secondary,
+        lineHeight: lineHeights.h4,
+      },
+      default: {
+        initial: {
+          color: color.onSurface,
+        },
+        interact: {
+          color: color.onSurfaceInteract,
+        },
+      },
+    },
   },
   /**
    * Cart component tokens

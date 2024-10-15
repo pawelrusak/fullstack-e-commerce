@@ -881,6 +881,33 @@ describe('Component theme config', () => {
             },
           },
         },
+        summaryCouponSection: {
+          _base: {
+            borderColor: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontSize: expect.any(String),
+            fontWeight: expect.any(Number),
+            fontFamily: expect.any(String),
+            backgroundColor: expect.any(String),
+            color: expect.any(String),
+          },
+        },
+        summaryCouponApplyButton: {
+          _base: {
+            fontWeight: expect.any(Number),
+            fontSize: expect.any(String),
+            fontFamily: expect.any(String),
+            lineHeight: expect.any(Number),
+          },
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+            },
+          },
+        },
       });
     });
     it('should match the specified values', () => {
@@ -888,6 +915,33 @@ describe('Component theme config', () => {
 
       expect(cart).toMatchInlineSnapshot(`
         {
+          "summaryCouponApplyButton": {
+            "_base": {
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 600,
+              "lineHeight": 1.5,
+            },
+            "default": {
+              "initial": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "color": "hsl(7, 100%, 65%)",
+              },
+            },
+          },
+          "summaryCouponSection": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 100%)",
+              "borderColor": "hsl(0, 0%, 80%)",
+              "color": "rgba(48,48,48,0.75)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 400,
+              "lineHeight": 1.5,
+            },
+          },
           "tableBody": {
             "default": {
               "initial": {

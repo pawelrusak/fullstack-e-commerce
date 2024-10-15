@@ -247,6 +247,11 @@ type CartTableProductQuantityButtonMap = ModifierStateMap<
   >
 >;
 
+type CartSummaryCouponApplyButtonMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<InitialState | InteractState, AvailableComponentToken<'color'>>
+>;
+
 export type CartComponent = {
   cart: {
     tableHead: ImmutableBaseToken<
@@ -280,6 +285,19 @@ export type CartComponent = {
       | 'color'
     >;
     tableProductQuantityButton: CartTableProductQuantityButtonMap;
+    summaryCouponSection: ImmutableBaseToken<
+      | 'fontWeight'
+      | 'fontSize'
+      | 'fontFamily'
+      | 'lineHeight'
+      | 'borderColor'
+      | 'color'
+      | 'backgroundColor'
+    >;
+    summaryCouponApplyButton: ImmutableBaseToken<
+      'fontWeight' | 'fontSize' | 'fontFamily' | 'lineHeight'
+    > &
+      CartSummaryCouponApplyButtonMap;
   };
 };
 

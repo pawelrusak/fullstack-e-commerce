@@ -248,6 +248,33 @@ exports[`Default Theme should match the specified values 1`] = `
       },
     },
     "cart": {
+      "summaryCouponApplyButton": {
+        "_base": {
+          "fontFamily": "Poppins, sans-serif",
+          "fontSize": "2.0rem",
+          "fontWeight": 600,
+          "lineHeight": 1.5,
+        },
+        "default": {
+          "initial": {
+            "color": "hsl(0, 0%, 19%)",
+          },
+          "interact": {
+            "color": "hsl(7, 100%, 65%)",
+          },
+        },
+      },
+      "summaryCouponSection": {
+        "_base": {
+          "backgroundColor": "hsl(0, 0%, 100%)",
+          "borderColor": "hsl(0, 0%, 80%)",
+          "color": "rgba(48,48,48,0.75)",
+          "fontFamily": "Montserrat, sans-serif",
+          "fontSize": "1.6rem",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+        },
+      },
       "tableBody": {
         "default": {
           "initial": {
