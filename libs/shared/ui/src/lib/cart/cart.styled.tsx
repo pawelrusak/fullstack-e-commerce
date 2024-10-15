@@ -1,6 +1,9 @@
 import styled, { css } from 'styled-components';
-import * as polished from 'polished';
 import { CardIcon } from '@e-shop/icons';
+import {
+  IconButton as BaseIconButton,
+  ICON_BUTTON_VARIANT,
+} from '../icon-button';
 
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
@@ -276,40 +279,15 @@ export type StyledButtonProps = {
   primary?: boolean;
 };
 
-export const IconButton = styled.button<StyledButtonProps>`
-  all: unset;
-  display: block;
-  box-sizing: border-box;
-  padding: 1.6rem;
-  display: flex;
-  place-items: center;
-  height: 6.4rem;
-  width: 6.4rem;
-  border: 1px solid ${({ theme }) => theme.color.primary};
-  background-color: ${({ theme }) => theme.color.background};
-  color: ${({ theme }) => theme.color.primary};
-  border-radius: 999px;
-  cursor: pointer;
+export const IconButton = styled(BaseIconButton).attrs<StyledButtonProps>(
+  ({ primary }) => ({
+    size: 'large',
+    variant: primary
+      ? ICON_BUTTON_VARIANT.PRIMARY
+      : ICON_BUTTON_VARIANT.OUTLINE_PRIMARY,
+  }),
+)<StyledButtonProps>`
   z-index: 10;
-
-  &:hover,
-  &:focus {
-    background-color: ${({ theme }) =>
-      polished.darken(0.1, theme.color.primary)};
-    border-color: ${({ theme }) => polished.darken(0.1, theme.color.primary)};
-    color: ${({ theme }) => theme.color.background};
-  }
-
-  &:focus {
-    outline: auto;
-  }
-
-  ${({ primary }) =>
-    primary &&
-    css`
-      background-color: ${({ theme }) => theme.color.primary};
-      color: ${({ theme }) => theme.color.background};
-    `}
 `;
 
 // ================================= Summary Cell =================================
