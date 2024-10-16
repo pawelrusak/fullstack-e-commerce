@@ -29,7 +29,7 @@ export default {
     },
     size: {
       control: 'select',
-      options: [undefined, BUTTON_SIZE.SMALL, BUTTON_SIZE.LARGE],
+      options: [BUTTON_SIZE.SMALL, BUTTON_SIZE.MEDIUM, BUTTON_SIZE.LARGE],
     },
   },
 } satisfies Meta<typeof Button>;
