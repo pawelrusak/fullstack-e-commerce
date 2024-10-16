@@ -84,6 +84,13 @@ describe('Component theme config', () => {
               lineHeight: expect.any(String),
             },
           },
+          'size-medium': {
+            initial: {
+              padding: expect.any(String),
+              fontSize: expect.any(String),
+              lineHeight: expect.any(String),
+            },
+          },
           'size-default': {
             initial: {
               padding: expect.any(String),
@@ -192,6 +199,13 @@ describe('Component theme config', () => {
                 "fontSize": "2rem",
                 "lineHeight": "3rem",
                 "padding": "2.3rem 6.300000000000001rem",
+              },
+            },
+            "size-medium": {
+              "initial": {
+                "fontSize": "2rem",
+                "lineHeight": "3rem",
+                "padding": "1.5rem 3.9rem",
               },
             },
             "size-small": {

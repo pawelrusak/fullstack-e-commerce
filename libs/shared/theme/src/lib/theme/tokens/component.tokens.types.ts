@@ -62,7 +62,7 @@ type ButtonRootVariantTokenMap = ModifierStateMap<
 // Button Size Tokens
 export type ButtonSizeNamespaceKey = 'size';
 
-export type ButtonSize = 'small' | 'large';
+export type ButtonSize = 'small' | 'medium' | 'large';
 
 export type ButtonSizeModifier =
   | `${ButtonSizeNamespaceKey}-${ButtonSize}`

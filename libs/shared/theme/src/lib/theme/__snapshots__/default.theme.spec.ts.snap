@@ -136,6 +136,13 @@ exports[`Default Theme should match the specified values 1`] = `
             "padding": "2.3rem 6.300000000000001rem",
           },
         },
+        "size-medium": {
+          "initial": {
+            "fontSize": "2rem",
+            "lineHeight": "3rem",
+            "padding": "1.5rem 3.9rem",
+          },
+        },
         "size-small": {
           "initial": {
             "fontSize": "1.6rem",

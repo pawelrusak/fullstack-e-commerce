@@ -71,6 +71,13 @@ export const component: AppComponent = {
           lineHeight: '3rem',
         },
       },
+      'size-medium': {
+        initial: {
+          padding: `${subtractBorder(space[3])} ${subtractBorder(space[7])}`,
+          fontSize: '2rem',
+          lineHeight: '3rem',
+        },
+      },
       'size-large': {
         initial: {
           padding: `${subtractBorder(space[5])} ${subtractBorder(space[9])}`,
