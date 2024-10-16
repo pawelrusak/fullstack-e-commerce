@@ -11,11 +11,7 @@ import type {
   ButtonState,
   ButtonSize,
 } from '@e-shop/theme/types';
-import type {
-  ObjectValues,
-  ConstantCaseKeyMap,
-  PartialConstantCaseKeyMap,
-} from '@e-shop/types';
+import type { ObjectValues, PartialConstantCaseKeyMap } from '@e-shop/types';
 
 const { root: rootToken } = getToken('button');
 
@@ -31,19 +27,11 @@ export const BUTTON_SIZE = {
   LARGE: 'large',
 } satisfies PartialConstantCaseKeyMap<ButtonSize>;
 
-const SIZE_KEY: ConstantCaseKeyMap<ButtonSizeModifier> = {
+const SIZE_KEY = {
   SIZE_SMALL: 'size-small',
   SIZE_DEFAULT: 'size-default',
   SIZE_LARGE: 'size-large',
-};
-
-type ButtonVariantProp = {
-  variant?: ButtonVariant;
-};
-
-type ButtonColorVariantProp = {
-  colorVariant?: ButtonColorVariant;
-};
+} satisfies PartialConstantCaseKeyMap<ButtonSizeModifier>;
 
 type ButtonFullWidthProp = {
   fullWidth?: boolean;
@@ -77,6 +65,14 @@ export function getSizeStyle(size?: ButtonSize) {
  * ******************************************************************************
  */
 const VARIANT_NAMESPACE: `${ButtonVariantNamespaceKey}-` = 'variant-';
+
+type ButtonVariantProp = {
+  variant?: ButtonVariant;
+};
+
+type ButtonColorVariantProp = {
+  colorVariant?: ButtonColorVariant;
+};
 
 export const BUTTON_COLOR_VARIANT = {
   PRIMARY: 'primary',
