@@ -9,7 +9,7 @@ import type {
   ButtonSizeNamespaceKey,
   ButtonOutlineNamespaceKey,
   ButtonState,
-  ButtonSize,
+  ButtonSize as InternalButtonSize,
 } from '@e-shop/theme/types';
 import type { ObjectValues, PartialConstantCaseKeyMap } from '@e-shop/types';
 
@@ -24,38 +24,23 @@ const SIZE_NAMESPACE: ButtonSizeNamespaceKey = 'size';
 
 export const BUTTON_SIZE = {
   SMALL: 'small',
+  MEDIUM: 'medium',
   LARGE: 'large',
-} satisfies PartialConstantCaseKeyMap<ButtonSize>;
+} satisfies PartialConstantCaseKeyMap<InternalButtonSize>;
 
-const SIZE_KEY = {
-  SIZE_SMALL: 'size-small',
-  SIZE_DEFAULT: 'size-default',
-  SIZE_LARGE: 'size-large',
-} satisfies PartialConstantCaseKeyMap<ButtonSizeModifier>;
+export type ButtonSize = ObjectValues<typeof BUTTON_SIZE>;
 
-type ButtonFullWidthProp = {
-  fullWidth?: boolean;
-};
-
-type ButtonSizeProp = {
-  size?: ButtonSize;
-};
-
-function addSizeNamespaceKeyPrefix(size: ButtonSize): ButtonSizeModifier {
+export function getSizeModifierKey(size: ButtonSize): ButtonSizeModifier {
   return `${SIZE_NAMESPACE}-${size}`;
 }
 
-export function getSizeKey(size?: ButtonSize): ButtonSizeModifier {
-  return size ? addSizeNamespaceKeyPrefix(size) : SIZE_KEY.SIZE_DEFAULT;
-}
-
-export function getSizeStyle(size?: ButtonSize) {
-  const sizeKey = getSizeKey(size);
+export function getSizeStyle(size: ButtonSize = BUTTON_SIZE.MEDIUM) {
+  const sizeModifierKey = getSizeModifierKey(size);
 
   return css`
-    font-size: ${rootToken[sizeKey].initial.fontSize};
-    line-height: ${rootToken[sizeKey].initial.lineHeight};
-    padding: ${rootToken[sizeKey].initial.padding};
+    font-size: ${rootToken[sizeModifierKey].initial.fontSize};
+    line-height: ${rootToken[sizeModifierKey].initial.lineHeight};
+    padding: ${rootToken[sizeModifierKey].initial.padding};
   `;
 }
 
@@ -156,6 +141,15 @@ export function getVariantPaletteStyle({
  *                                   Rest
  * ******************************************************************************
  */
+
+type ButtonSizeProp = {
+  size?: ButtonSize;
+};
+
+type ButtonFullWidthProp = {
+  fullWidth?: boolean;
+};
+
 export type InternalButtonProps = ButtonVariantProp &
   ButtonColorVariantProp &
   ButtonFullWidthProp &
