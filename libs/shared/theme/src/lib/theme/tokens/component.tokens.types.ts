@@ -6,6 +6,7 @@ import type {
   InteractState,
   InitialState,
   StateStyleMap,
+  Size,
 } from './tokens.utils.types';
 
 /**
@@ -62,7 +63,7 @@ type ButtonRootVariantTokenMap = ModifierStateMap<
 // Button Size Tokens
 export type ButtonSizeNamespaceKey = 'size';
 
-export type ButtonSize = 'small' | 'medium' | 'large';
+export type ButtonSize = Size;
 
 export type ButtonSizeModifier = `${ButtonSizeNamespaceKey}-${ButtonSize}`;
 
@@ -333,7 +334,7 @@ type IconButtonRootVariantTokenMap = ModifierStateMap<
 // IconButton Size Tokens
 export type IconButtonSizeNamespaceKey = 'size';
 
-export type IconButtonSize = 'small' | 'medium' | 'large';
+export type IconButtonSize = Size;
 
 export type IconButtonSizeModifier =
   `${IconButtonSizeNamespaceKey}-${IconButtonSize}`;

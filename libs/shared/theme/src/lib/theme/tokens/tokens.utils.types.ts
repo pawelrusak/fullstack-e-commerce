@@ -25,3 +25,5 @@ export type ImmutableBaseToken<TToken extends keyof CSSProperties> = Record<
   '_base',
   AvailableComponentToken<TToken>
 >;
+
+export type Size = 'small' | 'medium' | 'large';
