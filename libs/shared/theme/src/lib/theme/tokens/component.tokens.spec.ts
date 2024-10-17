@@ -91,13 +91,6 @@ describe('Component theme config', () => {
               lineHeight: expect.any(String),
             },
           },
-          'size-default': {
-            initial: {
-              padding: expect.any(String),
-              fontSize: expect.any(String),
-              lineHeight: expect.any(String),
-            },
-          },
           'size-large': {
             initial: {
               padding: expect.any(String),
@@ -186,13 +179,6 @@ describe('Component theme config', () => {
             "_base": {
               "fontFamily": "Montserrat, sans-serif",
               "fontWeight": 700,
-            },
-            "size-default": {
-              "initial": {
-                "fontSize": "2rem",
-                "lineHeight": "3rem",
-                "padding": "1.5rem 3.9rem",
-              },
             },
             "size-large": {
               "initial": {

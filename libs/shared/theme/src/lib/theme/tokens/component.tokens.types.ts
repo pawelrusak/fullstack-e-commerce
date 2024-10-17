@@ -64,9 +64,7 @@ export type ButtonSizeNamespaceKey = 'size';
 
 export type ButtonSize = 'small' | 'medium' | 'large';
 
-export type ButtonSizeModifier =
-  | `${ButtonSizeNamespaceKey}-${ButtonSize}`
-  | `${ButtonSizeNamespaceKey}-${DefaultModifier}`;
+export type ButtonSizeModifier = `${ButtonSizeNamespaceKey}-${ButtonSize}`;
 
 export type ButtonComponentSizeProperty = AvailableComponentToken<
   'padding' | 'fontSize' | 'lineHeight'

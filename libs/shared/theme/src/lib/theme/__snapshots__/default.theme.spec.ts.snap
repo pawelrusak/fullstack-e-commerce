@@ -122,13 +122,6 @@ exports[`Default Theme should match the specified values 1`] = `
           "fontFamily": "Montserrat, sans-serif",
           "fontWeight": 700,
         },
-        "size-default": {
-          "initial": {
-            "fontSize": "2rem",
-            "lineHeight": "3rem",
-            "padding": "1.5rem 3.9rem",
-          },
-        },
         "size-large": {
           "initial": {
             "fontSize": "2rem",
