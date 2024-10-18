@@ -500,6 +500,39 @@ export const component: AppComponent = {
         },
       },
     },
+    subtotalSection: {
+      _base: {
+        backgroundColor: color.secondarySurface,
+      },
+    },
+    subtotalLabel: {
+      _base: {
+        fontWeight: fontWeight.bold,
+        fontSize: fontSizes.h6,
+        lineHeight: lineHeights.h6,
+        fontFamily: fontFamily.primary,
+        textTransform: 'uppercase',
+        color: color.onSecondarySurface,
+      },
+    },
+    subtotalPrice: {
+      _base: {
+        fontFamily: fontFamily.secondary,
+        fontSize: fontSizes.h3,
+        lineHeight: lineHeights.h3,
+        fontWeight: fontWeight.semiBold,
+        color: color.onSecondarySurfaceVariant,
+      },
+    },
+    subtotalAdditionalInfo: {
+      _base: {
+        fontSize: fontSizes.h8,
+        lineHeight: lineHeights.h8,
+        fontFamily: fontFamily.primary,
+        fontWeight: fontWeight.regular,
+        color: color.onSecondarySurface,
+      },
+    },
   },
   /**
    * Cart component tokens

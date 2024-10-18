@@ -297,6 +297,21 @@ export type CartComponent = {
       'fontWeight' | 'fontSize' | 'fontFamily' | 'lineHeight'
     > &
       CartSummaryCouponApplyButtonMap;
+    subtotalSection: ImmutableBaseToken<'backgroundColor'>;
+    subtotalLabel: ImmutableBaseToken<
+      | 'fontWeight'
+      | 'fontSize'
+      | 'lineHeight'
+      | 'fontFamily'
+      | 'color'
+      | 'textTransform'
+    >;
+    subtotalPrice: ImmutableBaseToken<
+      'fontFamily' | 'fontSize' | 'lineHeight' | 'fontWeight' | 'color'
+    >;
+    subtotalAdditionalInfo: ImmutableBaseToken<
+      'fontSize' | 'lineHeight' | 'fontFamily' | 'fontWeight' | 'color'
+    >;
   };
 };
 

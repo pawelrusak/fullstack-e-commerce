@@ -248,6 +248,39 @@ exports[`Default Theme should match the specified values 1`] = `
       },
     },
     "cart": {
+      "subtotalAdditionalInfo": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+          "fontFamily": "Montserrat, sans-serif",
+          "fontSize": "1.4rem",
+          "fontWeight": 400,
+          "lineHeight": 1.4285714285714286,
+        },
+      },
+      "subtotalLabel": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+          "fontFamily": "Montserrat, sans-serif",
+          "fontSize": "1.6rem",
+          "fontWeight": 700,
+          "lineHeight": 1.5,
+          "textTransform": "uppercase",
+        },
+      },
+      "subtotalPrice": {
+        "_base": {
+          "color": "hsl(7, 100%, 65%)",
+          "fontFamily": "Poppins, sans-serif",
+          "fontSize": "2.4rem",
+          "fontWeight": 600,
+          "lineHeight": 1.25,
+        },
+      },
+      "subtotalSection": {
+        "_base": {
+          "backgroundColor": "hsl(0, 0%, 96%)",
+        },
+      },
       "summaryCouponApplyButton": {
         "_base": {
           "fontFamily": "Poppins, sans-serif",

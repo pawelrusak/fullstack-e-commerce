@@ -908,6 +908,39 @@ describe('Component theme config', () => {
             },
           },
         },
+        subtotalSection: {
+          _base: {
+            backgroundColor: expect.any(String),
+          },
+        },
+        subtotalLabel: {
+          _base: {
+            fontWeight: expect.any(Number),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontFamily: expect.any(String),
+            color: expect.any(String),
+            textTransform: 'uppercase',
+          },
+        },
+        subtotalPrice: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            color: expect.any(String),
+            fontWeight: expect.any(Number),
+          },
+        },
+        subtotalAdditionalInfo: {
+          _base: {
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+            color: expect.any(String),
+          },
+        },
       });
     });
     it('should match the specified values', () => {
@@ -915,6 +948,39 @@ describe('Component theme config', () => {
 
       expect(cart).toMatchInlineSnapshot(`
         {
+          "subtotalAdditionalInfo": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.4rem",
+              "fontWeight": 400,
+              "lineHeight": 1.4285714285714286,
+            },
+          },
+          "subtotalLabel": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 700,
+              "lineHeight": 1.5,
+              "textTransform": "uppercase",
+            },
+          },
+          "subtotalPrice": {
+            "_base": {
+              "color": "hsl(7, 100%, 65%)",
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "2.4rem",
+              "fontWeight": 600,
+              "lineHeight": 1.25,
+            },
+          },
+          "subtotalSection": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 96%)",
+            },
+          },
           "summaryCouponApplyButton": {
             "_base": {
               "fontFamily": "Poppins, sans-serif",
