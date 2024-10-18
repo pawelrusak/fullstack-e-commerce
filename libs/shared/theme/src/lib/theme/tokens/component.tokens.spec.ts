@@ -941,6 +941,33 @@ describe('Component theme config', () => {
             color: expect.any(String),
           },
         },
+        emptyStateIcon: {
+          _base: {
+            color: expect.any(String),
+            scale: expect.any(Number),
+            height: expect.any(String),
+            width: expect.any(String),
+            marginBottom: expect.any(String),
+          },
+        },
+        emptyStateTitle: {
+          _base: {
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+            fontFamily: expect.any(String),
+            color: expect.any(String),
+          },
+        },
+        emptyStateParagraph: {
+          _base: {
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+            fontFamily: expect.any(String),
+            color: expect.any(String),
+          },
+        },
       });
     });
     it('should match the specified values', () => {
@@ -948,6 +975,33 @@ describe('Component theme config', () => {
 
       expect(cart).toMatchInlineSnapshot(`
         {
+          "emptyStateIcon": {
+            "_base": {
+              "color": "hsl(7, 100%, 65%)",
+              "height": "3rem",
+              "marginBottom": "3.2rem",
+              "scale": 2.5,
+              "width": "3rem",
+            },
+          },
+          "emptyStateParagraph": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 400,
+              "lineHeight": 1.5,
+            },
+          },
+          "emptyStateTitle": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "3.6rem",
+              "fontWeight": 600,
+              "lineHeight": 1.2777777777777777,
+            },
+          },
           "subtotalAdditionalInfo": {
             "_base": {
               "color": "hsl(0, 0%, 19%)",

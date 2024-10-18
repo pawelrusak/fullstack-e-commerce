@@ -533,6 +533,33 @@ export const component: AppComponent = {
         color: color.onSecondarySurface,
       },
     },
+    emptyStateIcon: {
+      _base: {
+        color: color.onSurfaceVariant,
+        scale: 2.5,
+        height: '3rem',
+        width: '3rem',
+        marginBottom: space[6],
+      },
+    },
+    emptyStateTitle: {
+      _base: {
+        fontSize: fontSizes.h2,
+        lineHeight: lineHeights.h2,
+        fontWeight: fontWeight.semiBold,
+        fontFamily: fontFamily.secondary,
+        color: color.onSurface,
+      },
+    },
+    emptyStateParagraph: {
+      _base: {
+        fontSize: fontSizes.body,
+        lineHeight: lineHeights.body,
+        fontWeight: fontWeight.regular,
+        fontFamily: fontFamily.primary,
+        color: color.onSurface,
+      },
+    },
   },
   /**
    * Cart component tokens

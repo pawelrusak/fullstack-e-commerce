@@ -312,6 +312,15 @@ export type CartComponent = {
     subtotalAdditionalInfo: ImmutableBaseToken<
       'fontSize' | 'lineHeight' | 'fontFamily' | 'fontWeight' | 'color'
     >;
+    emptyStateIcon: ImmutableBaseToken<
+      'scale' | 'height' | 'width' | 'marginBottom' | 'color'
+    >;
+    emptyStateTitle: ImmutableBaseToken<
+      'fontFamily' | 'fontSize' | 'lineHeight' | 'fontWeight' | 'color'
+    >;
+    emptyStateParagraph: ImmutableBaseToken<
+      'fontFamily' | 'fontSize' | 'lineHeight' | 'fontWeight' | 'color'
+    >;
   };
 };
 
