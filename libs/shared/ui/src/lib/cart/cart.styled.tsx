@@ -18,10 +18,11 @@ const {
   tableProductPrice: tableProductPriceToken,
   summaryCouponSection: summaryCouponSectionToken,
   summaryCouponApplyButton: summaryCouponApplyButtonToken,
+  subtotalSection: subtotalSectionToken,
+  subtotalLabel: subtotalLabelToken,
+  subtotalPrice: subtotalPriceToken,
+  subtotalAdditionalInfo: subtotalAdditionalInfoToken,
 } = getToken('cart');
-
-/* TODO use variable */
-const lightGrey = '#F4F4F4';
 
 const CART_MAX_WIDTH = '152rem';
 
@@ -368,7 +369,7 @@ export const CouponActionButton = styled.button`
 `;
 
 export const SubtotalSection = styled.section`
-  background-color: ${lightGrey};
+  background-color: ${subtotalSectionToken._base.backgroundColor};
   margin-left: auto;
 
   display: flex;
@@ -387,30 +388,35 @@ export const SubtotalSection = styled.section`
 `;
 
 export const SubtotalLabel = styled.span`
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  text-transform: uppercase;
+  font-weight: ${subtotalLabelToken._base.fontWeight};
+  font-size: ${subtotalLabelToken._base.fontSize};
+  line-height: ${subtotalLabelToken._base.lineHeight};
+  text-transform: ${subtotalLabelToken._base.textTransform};
+  font-family: ${subtotalLabelToken._base.fontFamily};
+  color: ${subtotalLabelToken._base.color};
   padding-right: 1.6rem;
 
   grid-area: label;
 `;
 
 export const SubtotalPrice = styled.strong`
-  font-family: ${({ theme }) => theme.fontFamily.poppins};
+  font-family: ${subtotalPriceToken._base.fontFamily};
+  font-weight: ${subtotalPriceToken._base.fontWeight};
+  font-size: ${subtotalPriceToken._base.fontSize};
+  line-height: ${subtotalPriceToken._base.lineHeight};
 
-  font-size: 2.4rem;
-  line-height: 3rem;
-  color: ${({ theme }) => theme.color.primary};
-
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  color: ${subtotalPriceToken._base.color};
 
   grid-area: price;
 `;
 
 export const SubtotalAdditionalInfo = styled.span`
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: ${subtotalAdditionalInfoToken._base.fontSize};
+  line-height: ${subtotalAdditionalInfoToken._base.lineHeight};
+  font-family: ${subtotalAdditionalInfoToken._base.fontFamily};
+  font-weight: ${subtotalAdditionalInfoToken._base.fontWeight};
+
+  color: ${subtotalAdditionalInfoToken._base.color};
 
   grid-area: additional;
 `;
