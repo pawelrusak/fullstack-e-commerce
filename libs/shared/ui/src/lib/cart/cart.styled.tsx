@@ -22,6 +22,9 @@ const {
   subtotalLabel: subtotalLabelToken,
   subtotalPrice: subtotalPriceToken,
   subtotalAdditionalInfo: subtotalAdditionalInfoToken,
+  emptyStateIcon: emptyStateIconToken,
+  emptyStateTitle: emptyStateTitleToken,
+  emptyStateParagraph: emptyStateParagraphToken,
 } = getToken('cart');
 
 const CART_MAX_WIDTH = '152rem';
@@ -437,23 +440,26 @@ export const EmptyStateHeader = styled.header`
 `;
 
 export const EmptyStateCartIcon = styled(CardIcon)`
-  scale: 2.5;
-  height: 3rem;
-  width: 3rem;
-  height: 3rem;
-  margin-bottom: 3rem;
-  color: ${({ theme }) => theme.color.primary};
+  scale: ${emptyStateIconToken._base.scale};
+  height: ${emptyStateIconToken._base.height};
+  width: ${emptyStateIconToken._base.width};
+  margin-bottom: ${emptyStateIconToken._base.marginBottom};
+  color: ${emptyStateIconToken._base.color};
 `;
 
 export const EmptyStateTitle = styled.h2`
-  font-family: ${({ theme }) => theme.fontFamily.poppins};
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
-  font-size: 3.6rem;
-  line-height: 4.6rem;
+  font-family: ${emptyStateTitleToken._base.fontFamily};
+  font-weight: ${emptyStateTitleToken._base.fontWeight};
+  font-size: ${emptyStateTitleToken._base.fontSize};
+  line-height: ${emptyStateTitleToken._base.lineHeight};
+  color: ${emptyStateTitleToken._base.color};
   margin-bottom: 0.8rem;
 `;
 
 export const EmptyStateParagraph = styled.p`
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: ${emptyStateParagraphToken._base.fontSize};
+  line-height: ${emptyStateParagraphToken._base.lineHeight};
+  font-family: ${emptyStateParagraphToken._base.fontFamily};
+  font-weight: ${emptyStateParagraphToken._base.fontWeight};
+  color: ${emptyStateParagraphToken._base.color};
 `;
