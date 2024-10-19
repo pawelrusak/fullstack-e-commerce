@@ -27,3 +27,9 @@ export type ImmutableBaseToken<TToken extends keyof CSSProperties> = Record<
 >;
 
 export type Size = 'small' | 'medium' | 'large';
+
+export type TopographyBaseProperties =
+  | 'fontFamily'
+  | 'fontSize'
+  | 'fontWeight'
+  | 'lineHeight';

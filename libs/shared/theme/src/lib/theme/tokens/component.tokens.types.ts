@@ -1,4 +1,5 @@
 import type {
+  TopographyBaseProperties,
   AvailableComponentToken,
   ImmutableBaseToken,
   ModifierStateMap,
@@ -254,73 +255,39 @@ type CartSummaryCouponApplyButtonMap = ModifierStateMap<
 export type CartComponent = {
   cart: {
     tableHead: ImmutableBaseToken<
-      | 'backgroundColor'
-      | 'color'
-      | 'fontWeight'
-      | 'textTransform'
-      | 'fontFamily'
-      | 'fontSize'
-      | 'lineHeight'
+      'backgroundColor' | 'color' | 'textTransform' | TopographyBaseProperties
     >;
     tableBody: CartTableBodyMap;
     tableProductThumbnail: ImmutableBaseToken<'backgroundColor'>;
     tableProductCategory: ImmutableBaseToken<
       'fontSize' | 'lineHeight' | 'textTransform'
     >;
-    tableProductName: ImmutableBaseToken<
-      'fontSize' | 'lineHeight' | 'fontWeight' | 'fontFamily'
-    >;
+    tableProductName: ImmutableBaseToken<TopographyBaseProperties>;
     tableProductVariantLabel: CartTableProductVariantProperties;
     tableProductVariantDetails: CartTableProductVariantProperties;
-    tableProductPrice: ImmutableBaseToken<
-      'fontSize' | 'lineHeight' | 'fontWeight' | 'fontFamily'
-    >;
+    tableProductPrice: ImmutableBaseToken<TopographyBaseProperties>;
     tableProductQuantityInput: ImmutableBaseToken<
-      | 'fontSize'
-      | 'fontWeight'
-      | 'fontFamily'
-      | 'lineHeight'
-      | 'backgroundColor'
-      | 'color'
+      TopographyBaseProperties | 'backgroundColor' | 'color'
     >;
     tableProductQuantityButton: CartTableProductQuantityButtonMap;
     summaryCouponSection: ImmutableBaseToken<
-      | 'fontWeight'
-      | 'fontSize'
-      | 'fontFamily'
-      | 'lineHeight'
-      | 'borderColor'
-      | 'color'
-      | 'backgroundColor'
+      TopographyBaseProperties | 'borderColor' | 'color' | 'backgroundColor'
     >;
-    summaryCouponApplyButton: ImmutableBaseToken<
-      'fontWeight' | 'fontSize' | 'fontFamily' | 'lineHeight'
-    > &
+    summaryCouponApplyButton: ImmutableBaseToken<TopographyBaseProperties> &
       CartSummaryCouponApplyButtonMap;
     subtotalSection: ImmutableBaseToken<'backgroundColor'>;
     subtotalLabel: ImmutableBaseToken<
-      | 'fontWeight'
-      | 'fontSize'
-      | 'lineHeight'
-      | 'fontFamily'
-      | 'color'
-      | 'textTransform'
+      TopographyBaseProperties | 'color' | 'textTransform'
     >;
-    subtotalPrice: ImmutableBaseToken<
-      'fontFamily' | 'fontSize' | 'lineHeight' | 'fontWeight' | 'color'
-    >;
+    subtotalPrice: ImmutableBaseToken<TopographyBaseProperties | 'color'>;
     subtotalAdditionalInfo: ImmutableBaseToken<
-      'fontSize' | 'lineHeight' | 'fontFamily' | 'fontWeight' | 'color'
+      TopographyBaseProperties | 'color'
     >;
     emptyStateIcon: ImmutableBaseToken<
       'scale' | 'height' | 'width' | 'marginBottom' | 'color'
     >;
-    emptyStateTitle: ImmutableBaseToken<
-      'fontFamily' | 'fontSize' | 'lineHeight' | 'fontWeight' | 'color'
-    >;
-    emptyStateParagraph: ImmutableBaseToken<
-      'fontFamily' | 'fontSize' | 'lineHeight' | 'fontWeight' | 'color'
-    >;
+    emptyStateTitle: ImmutableBaseToken<TopographyBaseProperties | 'color'>;
+    emptyStateParagraph: ImmutableBaseToken<TopographyBaseProperties | 'color'>;
   };
 };
 
