@@ -13,7 +13,7 @@ export function Gallery({ images }: GalleryProps) {
   const galleryId = React.useId();
 
   const [selectedImage, setSelectedImage] = React.useState<GalleryImage>(
-    images[0]
+    images[0],
   );
 
   const handleClickListButton = (image: GalleryImage) => {
@@ -21,7 +21,7 @@ export function Gallery({ images }: GalleryProps) {
   };
 
   return (
-    <Styled.ContainerSection>
+    <Styled.RootSection>
       <Styled.SelectedImage src={selectedImage} alt="" id={galleryId} />
       <Styled.List role="list">
         {images.length > 1 &&
@@ -38,7 +38,7 @@ export function Gallery({ images }: GalleryProps) {
             </Styled.ListItem>
           ))}
       </Styled.List>
-    </Styled.ContainerSection>
+    </Styled.RootSection>
   );
 }
 

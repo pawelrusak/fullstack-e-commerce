@@ -3,7 +3,7 @@
 import styled, { css } from 'styled-components';
 import * as helper from 'polished';
 
-export const ContainerSection = styled.section`
+export const RootSection = styled.section`
   max-width: 83.3rem;
   width: 100%;
 `;
