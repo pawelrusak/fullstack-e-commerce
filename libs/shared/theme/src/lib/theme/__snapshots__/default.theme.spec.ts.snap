@@ -572,6 +572,14 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
     },
+    "gallery": {
+      "buttonListBackdrop": {
+        "_base": {
+          "backgroundColor": "rgba(255,255,255,0.25)",
+          "borderColor": "hsl(0, 0%, 80%)",
+        },
+      },
+    },
     "iconButton": {
       "root": {
         "size-large": {

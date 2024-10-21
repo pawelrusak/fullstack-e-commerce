@@ -345,6 +345,17 @@ export type IconButtonComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                    Gallery Component Tokens
+ * **********************************************************************************************
+ */
+export type GalleryComponent = {
+  gallery: {
+    buttonListBackdrop: ImmutableBaseToken<'borderColor' | 'backgroundColor'>;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -354,4 +365,5 @@ export type AppComponent = BrandComponent &
   FieldComponent &
   FooterComponent &
   CartComponent &
-  IconButtonComponent;
+  IconButtonComponent &
+  GalleryComponent;

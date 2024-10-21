@@ -654,4 +654,12 @@ export const component: AppComponent = {
       },
     },
   },
+  gallery: {
+    buttonListBackdrop: {
+      _base: {
+        borderColor: colorPalette.neutral[300],
+        backgroundColor: transparentize(0.75, colorPalette.neutral[0]),
+      },
+    },
+  },
 };

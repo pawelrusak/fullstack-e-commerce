@@ -970,6 +970,7 @@ describe('Component theme config', () => {
         },
       });
     });
+
     it('should match the specified values', () => {
       const { cart } = component;
 
@@ -1340,6 +1341,36 @@ describe('Component theme config', () => {
                 "borderColor": "hsl(0, 0%, 16%)",
                 "color": "hsl(0, 0%, 100%)",
               },
+            },
+          },
+        }
+      `);
+    });
+  });
+
+  describe('Component Gallery theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { gallery } = component;
+
+      expect(gallery).toEqual({
+        buttonListBackdrop: {
+          _base: {
+            borderColor: expect.any(String),
+            backgroundColor: expect.any(String),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { gallery } = component;
+
+      expect(gallery).toMatchInlineSnapshot(`
+        {
+          "buttonListBackdrop": {
+            "_base": {
+              "backgroundColor": "rgba(255,255,255,0.25)",
+              "borderColor": "hsl(0, 0%, 80%)",
             },
           },
         }
