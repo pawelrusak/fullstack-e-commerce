@@ -1,7 +1,9 @@
 'use client';
 
 import styled, { css } from 'styled-components';
-import * as helper from 'polished';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
+
+const { buttonListBackdrop: buttonListBackdropToken } = getToken('gallery');
 
 export const RootSection = styled.section`
   max-width: 83.3rem;
@@ -39,23 +41,19 @@ export const ListButton = styled.button<ListButtonProps>`
   border-radius: 1rem;
   position: relative;
 
-  &::after {
-    position: absolute;
-    inset: 0;
-    content: '';
-    display: none;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #cbcbcb;
-    background-color: ${helper.transparentize(0.75, '#FFFFFF')};
-    border-radius: 1rem;
-  }
-
   ${({ selected }) =>
     !selected &&
     css`
       &::after {
+        position: absolute;
+        inset: 0;
+        content: '';
         display: block;
+        width: 100%;
+        height: 100%;
+        border: 1px solid ${buttonListBackdropToken._base.borderColor};
+        background-color: ${buttonListBackdropToken._base.backgroundColor};
+        border-radius: 1rem;
       }
     `}
 `;
