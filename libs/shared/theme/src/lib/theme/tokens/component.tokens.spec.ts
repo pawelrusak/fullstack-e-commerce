@@ -1377,4 +1377,160 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Heading theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { heading } = component;
+
+      expect(heading).toEqual({
+        root: {
+          _base: {
+            color: expect.any(String),
+          },
+          'level-1': {
+            initial: {
+              fontSize: expect.any(String),
+              fontWeight: expect.any(Number),
+              fontFamily: expect.any(String),
+              lineHeight: expect.any(Number),
+            },
+          },
+          'level-2': {
+            initial: {
+              fontSize: expect.any(String),
+              fontWeight: expect.any(Number),
+              fontFamily: expect.any(String),
+              lineHeight: expect.any(Number),
+            },
+          },
+          'level-3': {
+            initial: {
+              fontSize: expect.any(String),
+              fontWeight: expect.any(Number),
+              fontFamily: expect.any(String),
+              lineHeight: expect.any(Number),
+            },
+          },
+          'level-4': {
+            initial: {
+              fontSize: expect.any(String),
+              fontWeight: expect.any(Number),
+              fontFamily: expect.any(String),
+              lineHeight: expect.any(Number),
+            },
+          },
+          'level-5': {
+            initial: {
+              fontSize: expect.any(String),
+              fontWeight: expect.any(Number),
+              fontFamily: expect.any(String),
+              lineHeight: expect.any(Number),
+            },
+          },
+          'level-6': {
+            initial: {
+              fontSize: expect.any(String),
+              fontWeight: expect.any(Number),
+              fontFamily: expect.any(String),
+              lineHeight: expect.any(Number),
+            },
+          },
+          'level-7': {
+            initial: {
+              fontSize: expect.any(String),
+              fontWeight: expect.any(Number),
+              fontFamily: expect.any(String),
+              lineHeight: expect.any(Number),
+            },
+          },
+          'level-8': {
+            initial: {
+              fontSize: expect.any(String),
+              fontWeight: expect.any(Number),
+              fontFamily: expect.any(String),
+              lineHeight: expect.any(Number),
+            },
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { heading } = component;
+
+      expect(heading).toMatchInlineSnapshot(`
+        {
+          "root": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+            },
+            "level-1": {
+              "initial": {
+                "fontFamily": "Poppins, sans-serif",
+                "fontSize": "5.6rem",
+                "fontWeight": 700,
+                "lineHeight": 1.2142857142857142,
+              },
+            },
+            "level-2": {
+              "initial": {
+                "fontFamily": "Poppins, sans-serif",
+                "fontSize": "3.6rem",
+                "fontWeight": 600,
+                "lineHeight": 1.2777777777777777,
+              },
+            },
+            "level-3": {
+              "initial": {
+                "fontFamily": "Poppins, sans-serif",
+                "fontSize": "2.4rem",
+                "fontWeight": 600,
+                "lineHeight": 1.25,
+              },
+            },
+            "level-4": {
+              "initial": {
+                "fontFamily": "Poppins, sans-serif",
+                "fontSize": "2.0rem",
+                "fontWeight": 600,
+                "lineHeight": 1.5,
+              },
+            },
+            "level-5": {
+              "initial": {
+                "fontFamily": "Montserrat, sans-serif",
+                "fontSize": "2.0rem",
+                "fontWeight": 600,
+                "lineHeight": 1.5,
+              },
+            },
+            "level-6": {
+              "initial": {
+                "fontFamily": "Montserrat, sans-serif",
+                "fontSize": "1.6rem",
+                "fontWeight": 600,
+                "lineHeight": 1.5,
+              },
+            },
+            "level-7": {
+              "initial": {
+                "fontFamily": "Montserrat, sans-serif",
+                "fontSize": "1.6rem",
+                "fontWeight": 600,
+                "lineHeight": 1.5,
+              },
+            },
+            "level-8": {
+              "initial": {
+                "fontFamily": "Montserrat, sans-serif",
+                "fontSize": "1.4rem",
+                "fontWeight": 600,
+                "lineHeight": 1.4285714285714286,
+              },
+            },
+          },
+        }
+      `);
+    });
+  });
 });

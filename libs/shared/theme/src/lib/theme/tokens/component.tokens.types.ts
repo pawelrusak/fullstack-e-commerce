@@ -356,6 +356,31 @@ export type GalleryComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                    Heading Component Tokens
+ * **********************************************************************************************
+ */
+export type HeadingLevelNamespaceKey = 'level';
+
+export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+
+export type HeadingLevelModifier =
+  `${HeadingLevelNamespaceKey}-${HeadingLevel}`;
+
+type HeadingLevelProperty = AvailableComponentToken<TopographyBaseProperties>;
+
+type HeadingRootLevelTokenMap = ModifierStateMap<
+  HeadingLevelModifier,
+  StateStyleMap<InitialState, HeadingLevelProperty>
+>;
+
+export type HeadingComponent = {
+  heading: {
+    root: ImmutableBaseToken<'color'> & HeadingRootLevelTokenMap;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -366,4 +391,5 @@ export type AppComponent = BrandComponent &
   FooterComponent &
   CartComponent &
   IconButtonComponent &
-  GalleryComponent;
+  GalleryComponent &
+  HeadingComponent;

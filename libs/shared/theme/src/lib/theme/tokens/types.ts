@@ -30,4 +30,7 @@ export type {
   IconButtonSizeNamespaceKey,
   IconButtonSize,
   IconButtonSizeModifier,
+  HeadingLevel,
+  HeadingLevelModifier,
+  HeadingLevelNamespaceKey,
 } from './component.tokens.types';

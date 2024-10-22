@@ -662,4 +662,75 @@ export const component: AppComponent = {
       },
     },
   },
+  heading: {
+    root: {
+      _base: {
+        color: color.onBackground,
+      },
+      'level-1': {
+        initial: {
+          fontSize: fontSizes.h1,
+          fontWeight: fontWeight.bold,
+          fontFamily: fontFamily.secondary,
+          lineHeight: lineHeights.h1,
+        },
+      },
+      'level-2': {
+        initial: {
+          fontSize: fontSizes.h2,
+          fontWeight: fontWeight.semiBold,
+          fontFamily: fontFamily.secondary,
+          lineHeight: lineHeights.h2,
+        },
+      },
+      'level-3': {
+        initial: {
+          fontSize: fontSizes.h3,
+          fontWeight: fontWeight.semiBold,
+          fontFamily: fontFamily.secondary,
+          lineHeight: lineHeights.h3,
+        },
+      },
+      'level-4': {
+        initial: {
+          fontSize: fontSizes.h4,
+          fontWeight: fontWeight.semiBold,
+          fontFamily: fontFamily.secondary,
+          lineHeight: lineHeights.h4,
+        },
+      },
+      'level-5': {
+        initial: {
+          fontSize: fontSizes.h5,
+          fontWeight: fontWeight.semiBold,
+          fontFamily: fontFamily.primary,
+          lineHeight: lineHeights.h5,
+        },
+      },
+      'level-6': {
+        initial: {
+          fontSize: fontSizes.h6,
+          fontWeight: fontWeight.semiBold,
+          fontFamily: fontFamily.primary,
+          lineHeight: lineHeights.h6,
+        },
+      },
+      'level-7': {
+        initial: {
+          fontSize: fontSizes.h7,
+          fontWeight: fontWeight.semiBold,
+          fontFamily: fontFamily.primary,
+          lineHeight: lineHeights.h7,
+        },
+      },
+      'level-8': {
+        initial: {
+          fontSize: fontSizes.h8,
+          fontWeight: fontWeight.semiBold,
+          fontFamily: fontFamily.primary,
+          lineHeight: lineHeights.h8,
+        },
+      },
+    },
+  },
 };
