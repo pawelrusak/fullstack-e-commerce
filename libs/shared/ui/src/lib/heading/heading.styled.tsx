@@ -13,7 +13,7 @@ export type StyledHeadingProps = {
   level?: HeadingLevel;
 };
 
-export const Heading = styled.h1<StyledHeadingProps>`
+export const RootHeading = styled.h1<StyledHeadingProps>`
   display: block;
   color: ${rootToken._base.color};
   ${({ level }) => getLevelStyle(level)};
