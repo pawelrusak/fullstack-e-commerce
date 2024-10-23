@@ -1,11 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Heading } from './heading.component';
 
+import { HEADING_LEVEL } from './heading.utils';
+
 export default {
   component: Heading,
   title: 'Heading',
   args: {
     children: 'Hello World!',
+  },
+  argTypes: {
+    level: {
+      control: 'select',
+      options: Object.values(HEADING_LEVEL),
+    },
+    as: {
+      control: 'select',
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span', 'strong'],
+    },
   },
 } satisfies Meta<typeof Heading>;
 
