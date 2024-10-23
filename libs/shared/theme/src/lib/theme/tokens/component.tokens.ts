@@ -702,7 +702,7 @@ export const component: AppComponent = {
       'level-5': {
         initial: {
           fontSize: fontSizes.h5,
-          fontWeight: fontWeight.semiBold,
+          fontWeight: fontWeight.bold,
           fontFamily: fontFamily.primary,
           lineHeight: lineHeights.h5,
         },
@@ -710,7 +710,7 @@ export const component: AppComponent = {
       'level-6': {
         initial: {
           fontSize: fontSizes.h6,
-          fontWeight: fontWeight.semiBold,
+          fontWeight: fontWeight.bold,
           fontFamily: fontFamily.primary,
           lineHeight: lineHeights.h6,
         },
@@ -718,7 +718,7 @@ export const component: AppComponent = {
       'level-7': {
         initial: {
           fontSize: fontSizes.h7,
-          fontWeight: fontWeight.semiBold,
+          fontWeight: fontWeight.regular,
           fontFamily: fontFamily.primary,
           lineHeight: lineHeights.h7,
         },
@@ -726,7 +726,7 @@ export const component: AppComponent = {
       'level-8': {
         initial: {
           fontSize: fontSizes.h8,
-          fontWeight: fontWeight.semiBold,
+          fontWeight: fontWeight.regular,
           fontFamily: fontFamily.primary,
           lineHeight: lineHeights.h8,
         },

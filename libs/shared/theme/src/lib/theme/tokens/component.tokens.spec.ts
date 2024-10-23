@@ -1500,7 +1500,7 @@ describe('Component theme config', () => {
               "initial": {
                 "fontFamily": "Montserrat, sans-serif",
                 "fontSize": "2.0rem",
-                "fontWeight": 600,
+                "fontWeight": 700,
                 "lineHeight": 1.5,
               },
             },
@@ -1508,7 +1508,7 @@ describe('Component theme config', () => {
               "initial": {
                 "fontFamily": "Montserrat, sans-serif",
                 "fontSize": "1.6rem",
-                "fontWeight": 600,
+                "fontWeight": 700,
                 "lineHeight": 1.5,
               },
             },
@@ -1516,7 +1516,7 @@ describe('Component theme config', () => {
               "initial": {
                 "fontFamily": "Montserrat, sans-serif",
                 "fontSize": "1.6rem",
-                "fontWeight": 600,
+                "fontWeight": 400,
                 "lineHeight": 1.5,
               },
             },
@@ -1524,7 +1524,7 @@ describe('Component theme config', () => {
               "initial": {
                 "fontFamily": "Montserrat, sans-serif",
                 "fontSize": "1.4rem",
-                "fontWeight": 600,
+                "fontWeight": 400,
                 "lineHeight": 1.4285714285714286,
               },
             },
