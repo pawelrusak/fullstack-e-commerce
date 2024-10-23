@@ -27,6 +27,21 @@ export const Default: Story = {
   args: {},
 };
 
+export const Overview: Story = {
+  render: ({ children }) => (
+    <>
+      <Heading level="1">h1. {children}</Heading>
+      <Heading level="2">h2. {children}</Heading>
+      <Heading level="3">h3. {children}</Heading>
+      <Heading level="4">h4. {children}</Heading>
+      <Heading level="5">h5. {children}</Heading>
+      <Heading level="6">h6. {children}</Heading>
+      <Heading level="7">h7. {children}</Heading>
+      <Heading level="8">h8. {children}</Heading>
+    </>
+  ),
+};
+
 export const H1: Story = {
   args: {
     level: '1',
