@@ -23,7 +23,9 @@ export const HEADING_LEVEL = {
   8: 8,
 } satisfies Partial<Record<number, InternalHeadingLevel>>;
 
-export type HeadingLevel = ObjectValues<typeof HEADING_LEVEL>;
+type NumericHeadingLevel = ObjectValues<typeof HEADING_LEVEL>;
+
+export type HeadingLevel = NumericHeadingLevel | `${NumericHeadingLevel}`;
 
 function getLevelModifierKey(size: HeadingLevel): HeadingLevelModifier {
   return `${HEADING_LEVEL_NAMESPACE}-${size}`;
