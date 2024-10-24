@@ -4,15 +4,11 @@ import type { StyledRootSectionProps } from './hero-section.styled';
 export type HeroSectionProps = {
   children?: React.ReactNode;
 } & StyledRootSectionProps &
-  React.ComponentPropsWithRef<'section'>;
+  React.ComponentPropsWithoutRef<'section'>;
 
-export function HeroSection({
-  imageSrc,
-  children,
-  ...props
-}: HeroSectionProps) {
+export function HeroSection({ children, ...props }: HeroSectionProps) {
   return (
-    <Styled.RootSection imageSrc={imageSrc} {...props}>
+    <Styled.RootSection {...props}>
       <Styled.Content>{children}</Styled.Content>
     </Styled.RootSection>
   );
