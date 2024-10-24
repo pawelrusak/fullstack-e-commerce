@@ -63,3 +63,7 @@ export type ConstantCaseKeyMap<T extends string> = {
 export type PartialConstantCaseKeyMap<T extends string> = Partial<
   ConstantCaseKeyMap<T>
 >;
+
+export type AddPrefixToKey<T extends object, P extends string> = {
+  [K in keyof T as `${P}${Capitalize<string & K>}`]: T[K];
+};
