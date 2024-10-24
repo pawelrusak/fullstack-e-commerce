@@ -1,9 +1,9 @@
 import * as Styled from './hero-section.styled';
-import type { StyledContainerSectionProps } from './hero-section.styled';
+import type { StyledRootSectionProps } from './hero-section.styled';
 
 export type HeroSectionProps = {
   children?: React.ReactNode;
-} & StyledContainerSectionProps &
+} & StyledRootSectionProps &
   React.ComponentPropsWithRef<'section'>;
 
 export function HeroSection({
@@ -12,9 +12,9 @@ export function HeroSection({
   ...props
 }: HeroSectionProps) {
   return (
-    <Styled.ContainerSection imageSrc={imageSrc} {...props}>
+    <Styled.RootSection imageSrc={imageSrc} {...props}>
       <Styled.Content>{children}</Styled.Content>
-    </Styled.ContainerSection>
+    </Styled.RootSection>
   );
 }
 

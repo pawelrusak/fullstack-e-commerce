@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import { margin } from 'styled-system';
 import type { MarginProps } from 'styled-system';
 
-export type StyledContainerSectionProps = {
+export type StyledRootSectionProps = {
   imageSrc: string;
 } & MarginProps;
 
-export const ContainerSection = styled.section<StyledContainerSectionProps>`
+export const RootSection = styled.section<StyledRootSectionProps>`
   background-color: ${({ theme }) => theme.color.border};
   background-image: url(${({ imageSrc }) => imageSrc});
   background-position: center;
