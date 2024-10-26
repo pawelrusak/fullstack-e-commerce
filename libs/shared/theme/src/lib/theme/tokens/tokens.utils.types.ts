@@ -7,12 +7,38 @@ type TopographyCSSProperties = Pick<
   'fontSize' | 'lineHeight'
 >;
 
+type BoxModelCSSProperties = Pick<
+  React.CSSProperties,
+  | 'maxWidth'
+  | 'minWidth'
+  | 'widows'
+  | 'maxHeight'
+  | 'minHeight'
+  | 'height'
+  | 'padding'
+  | 'paddingTop'
+  | 'paddingRight'
+  | 'paddingBottom'
+  | 'paddingLeft'
+  | 'margin'
+  | 'marginTop'
+  | 'marginRight'
+  | 'marginBottom'
+  | 'marginLeft'
+>;
+
 type ScreenSizeTopographyCSSProperties = AddPrefixToKey<
   TopographyCSSProperties,
   ScreenSize
 >;
 
+type ScreenSizeBoxModelCSSProperties = AddPrefixToKey<
+  BoxModelCSSProperties,
+  ScreenSize
+>;
+
 type TokenCSSProperties = ScreenSizeTopographyCSSProperties &
+  ScreenSizeBoxModelCSSProperties &
   React.CSSProperties;
 
 export type AvailableComponentToken<
