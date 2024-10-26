@@ -381,6 +381,28 @@ export type HeadingComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                  Hero Section Component Tokens
+ * **********************************************************************************************
+ */
+export type HeroSectionComponent = {
+  heroSection: {
+    root: ImmutableBaseToken<'backgroundColor'>;
+    title: ImmutableBaseToken<
+      | TopographyBaseProperties
+      | 'smFontSize'
+      | 'smLineHeight'
+      | 'lgFontSize'
+      | 'lgLineHeight'
+      | 'color'
+    >;
+    description: ImmutableBaseToken<
+      TopographyBaseProperties | 'lgFontSize' | 'lgLineHeight' | 'color'
+    >;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -392,4 +414,5 @@ export type AppComponent = BrandComponent &
   CartComponent &
   IconButtonComponent &
   GalleryComponent &
-  HeadingComponent;
+  HeadingComponent &
+  HeroSectionComponent;

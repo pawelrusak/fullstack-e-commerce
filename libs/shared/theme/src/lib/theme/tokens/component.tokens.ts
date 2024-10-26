@@ -733,4 +733,35 @@ export const component: AppComponent = {
       },
     },
   },
+  heroSection: {
+    root: {
+      _base: {
+        backgroundColor: color.secondarySurface,
+      },
+    },
+    title: {
+      _base: {
+        color: color.onSecondarySurface,
+        fontFamily: fontFamily.secondary,
+        fontWeight: fontWeight.bold,
+        fontSize: '3rem',
+        lineHeight: 36 / 30,
+        smFontSize: '4.8rem',
+        smLineHeight: 58 / 48,
+        lgFontSize: fontSizes.h1,
+        lgLineHeight: lineHeights.h1,
+      },
+    },
+    description: {
+      _base: {
+        color: color.onSecondarySurface,
+        fontFamily: fontFamily.primary,
+        fontWeight: fontWeight.regular,
+        fontSize: fontSizes.h7,
+        lineHeight: lineHeights.h7,
+        lgFontSize: fontSizes.body,
+        lgLineHeight: lineHeights.body,
+      },
+    },
+  },
 };

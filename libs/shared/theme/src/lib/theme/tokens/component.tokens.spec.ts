@@ -1533,4 +1533,80 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Hero Section theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { heroSection } = component;
+
+      expect(heroSection).toEqual({
+        root: {
+          _base: {
+            backgroundColor: expect.any(String),
+          },
+        },
+        title: {
+          _base: {
+            color: expect.any(String),
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            smFontSize: expect.any(String),
+            smLineHeight: expect.any(Number),
+            lgFontSize: expect.any(String),
+            lgLineHeight: expect.any(Number),
+          },
+        },
+        description: {
+          _base: {
+            color: expect.any(String),
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            lgFontSize: expect.any(String),
+            lgLineHeight: expect.any(Number),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { heroSection } = component;
+
+      expect(heroSection).toMatchInlineSnapshot(`
+        {
+          "description": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 400,
+              "lgFontSize": "2.0rem",
+              "lgLineHeight": 1.5,
+              "lineHeight": 1.5,
+            },
+          },
+          "root": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 96%)",
+            },
+          },
+          "title": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "3rem",
+              "fontWeight": 700,
+              "lgFontSize": "5.6rem",
+              "lgLineHeight": 1.2142857142857142,
+              "lineHeight": 1.2,
+              "smFontSize": "4.8rem",
+              "smLineHeight": 1.2083333333333333,
+            },
+          },
+        }
+      `);
+    });
+  });
 });

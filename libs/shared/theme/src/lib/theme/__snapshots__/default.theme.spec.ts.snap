@@ -651,6 +651,37 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
     },
+    "heroSection": {
+      "description": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+          "fontFamily": "Montserrat, sans-serif",
+          "fontSize": "1.6rem",
+          "fontWeight": 400,
+          "lgFontSize": "2.0rem",
+          "lgLineHeight": 1.5,
+          "lineHeight": 1.5,
+        },
+      },
+      "root": {
+        "_base": {
+          "backgroundColor": "hsl(0, 0%, 96%)",
+        },
+      },
+      "title": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+          "fontFamily": "Poppins, sans-serif",
+          "fontSize": "3rem",
+          "fontWeight": 700,
+          "lgFontSize": "5.6rem",
+          "lgLineHeight": 1.2142857142857142,
+          "lineHeight": 1.2,
+          "smFontSize": "4.8rem",
+          "smLineHeight": 1.2083333333333333,
+        },
+      },
+    },
     "iconButton": {
       "root": {
         "size-large": {
