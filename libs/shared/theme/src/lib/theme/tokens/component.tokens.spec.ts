@@ -1609,4 +1609,34 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Layout Wrapper theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { layoutWrapper } = component;
+
+      expect(layoutWrapper).toEqual({
+        root: {
+          _base: {
+            maxWidth: undefined,
+            smMaxWidth: '156rem',
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { layoutWrapper } = component;
+
+      expect(layoutWrapper).toMatchInlineSnapshot(`
+        {
+          "root": {
+            "_base": {
+              "maxWidth": undefined,
+              "smMaxWidth": "156rem",
+            },
+          },
+        }
+      `);
+    });
+  });
 });

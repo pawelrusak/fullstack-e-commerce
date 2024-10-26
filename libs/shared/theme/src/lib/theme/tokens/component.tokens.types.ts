@@ -403,6 +403,17 @@ export type HeroSectionComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                 Layout Wrapper Component Tokens
+ * **********************************************************************************************
+ */
+export type LayoutWrapperComponent = {
+  layoutWrapper: {
+    root: ImmutableBaseToken<'maxWidth' | 'smMaxWidth'>;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -415,4 +426,5 @@ export type AppComponent = BrandComponent &
   IconButtonComponent &
   GalleryComponent &
   HeadingComponent &
-  HeroSectionComponent;
+  HeroSectionComponent &
+  LayoutWrapperComponent;

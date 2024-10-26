@@ -772,6 +772,14 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
     },
+    "layoutWrapper": {
+      "root": {
+        "_base": {
+          "maxWidth": undefined,
+          "smMaxWidth": "156rem",
+        },
+      },
+    },
   },
   "fontFamily": {
     "montserrat": "Montserrat, sans-serif",

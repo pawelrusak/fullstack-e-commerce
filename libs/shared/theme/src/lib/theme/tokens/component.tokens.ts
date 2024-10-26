@@ -764,4 +764,19 @@ export const component: AppComponent = {
       },
     },
   },
+  layoutWrapper: {
+    root: {
+      _base: {
+        maxWidth: undefined,
+        /**
+         * @layoutWidth 152rem
+         * @layoutPaddingLeft 2rem (in component)
+         * @layoutPaddingRight 2rem (in component)
+         *
+         * @layoutWidth + @layoutPaddingLeft + @layoutPaddingRight = 156rem
+         */
+        smMaxWidth: '156rem',
+      },
+    },
+  },
 };
