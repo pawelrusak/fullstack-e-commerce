@@ -4,6 +4,30 @@ import { FacebookIcon, TwitterIcon, InstagramIcon } from '@e-shop/icons';
 import { EN } from '@e-shop/i18n';
 import { VisuallyHidden } from '@reach/visually-hidden';
 
+type ContactBarLink = {
+  href: string;
+  icon: React.ReactNode;
+  screenReaderLabel: React.ReactNode;
+};
+
+const contactBarSocialsLinks: ContactBarLink[] = [
+  {
+    href: 'https://www.facebook.com/',
+    icon: <FacebookIcon aria-hidden />,
+    screenReaderLabel: 'Facebook',
+  },
+  {
+    href: 'https://www.twitter.com/',
+    icon: <TwitterIcon aria-hidden />,
+    screenReaderLabel: 'Twitter',
+  },
+  {
+    href: 'https://www.instagram.com/',
+    icon: <InstagramIcon aria-hidden />,
+    screenReaderLabel: 'Instagram',
+  },
+];
+
 export function ContactBar() {
   return (
     <Styled.ContactBar data-testid="navbar-contact-bar">
@@ -26,31 +50,18 @@ export function ContactBar() {
 
         <Styled.ContactList>
           <Styled.ContactItem>
-            <Styled.ContactSocialLink
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener"
-            >
-              <FacebookIcon aria-hidden />
-              <VisuallyHidden>Facebook</VisuallyHidden>
-            </Styled.ContactSocialLink>
-            <Styled.ContactSocialLink
-              href="https://www.twitter.com/"
-              target="_blank"
-              rel="noopener"
-            >
-              <TwitterIcon aria-hidden />
-              <VisuallyHidden>Twitter</VisuallyHidden>
-            </Styled.ContactSocialLink>
-            <Styled.ContactSocialLink
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener"
-              pr={0}
-            >
-              <InstagramIcon aria-hidden />
-              <VisuallyHidden>Instagram</VisuallyHidden>
-            </Styled.ContactSocialLink>
+            {contactBarSocialsLinks.map((link, index, array) => (
+              <Styled.ContactSocialLink
+                href={link.href}
+                target="_blank"
+                rel="noopener"
+                key={link.href}
+                pr={array.length - 1 === index ? 0 : undefined}
+              >
+                {link.icon}
+                <VisuallyHidden>{link.screenReaderLabel}</VisuallyHidden>
+              </Styled.ContactSocialLink>
+            ))}
           </Styled.ContactItem>
         </Styled.ContactList>
       </SharedStyled.BarContainer>
