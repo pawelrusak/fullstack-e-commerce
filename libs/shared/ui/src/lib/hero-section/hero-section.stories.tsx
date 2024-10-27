@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { HeroSection } from './hero-section.component';
 import { Button } from '../button';
 import heroPlaceholder from './storybook-assets/hero-placeholder.png';
-import { EN } from '@e-shop/i18n';
 
 export default {
   component: HeroSection,
@@ -10,10 +9,16 @@ export default {
   render: (args) => (
     <HeroSection {...args}>
       <HeroSection.TextWrapper>
-        <HeroSection.Title>{EN.HERO.TITLE}</HeroSection.Title>
-        <HeroSection.Description>{EN.HERO.DESCRIPTION}</HeroSection.Description>
+        <HeroSection.Title>
+          {'Your One-Stop \nElectronic Market'}
+        </HeroSection.Title>
+        <HeroSection.Description>
+          {
+            'Welcome to e-shop, a place where you can buy \neverything about electronics. Sale every day!'
+          }
+        </HeroSection.Description>
       </HeroSection.TextWrapper>
-      <Button>{EN.HERO.CTA_BUTTON}</Button>
+      <Button>Shop Now</Button>
     </HeroSection>
   ),
 } satisfies Meta<typeof HeroSection>;
