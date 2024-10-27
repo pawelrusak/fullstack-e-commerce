@@ -3,6 +3,48 @@ import * as Styled from './product-nav-bar.styled';
 import * as SharedStyled from '../../navbar.styled';
 import Hamburger from '../hamburger';
 
+type ProductNavBarLink = {
+  label: React.ReactNode;
+  href: string;
+};
+
+type ProductNavBarLinks = Record<string, ProductNavBarLink[]>;
+
+const productNavBarLinks: ProductNavBarLinks = {
+  left: [
+    {
+      label: EN.NAV_BAR.MENU_BAR.PRODUCTS_DROPDOWN,
+      href: '/',
+    },
+    {
+      label: EN.NAV_BAR.MENU_BAR.BLOG,
+      href: '/',
+    },
+    {
+      label: EN.NAV_BAR.MENU_BAR.CONTACT,
+      href: '/',
+    },
+  ],
+  right: [
+    {
+      label: (
+        <>
+          {EN.NAV_BAR.MENU_BAR.LIMITED_SALE} <span aria-hidden>👋🏻</span>
+        </>
+      ),
+      href: '/',
+    },
+    {
+      label: EN.NAV_BAR.MENU_BAR.BEST_SELLER,
+      href: '/',
+    },
+    {
+      label: EN.NAV_BAR.MENU_BAR.NEW_ARRIVAL,
+      href: '/',
+    },
+  ],
+};
+
 export function ProductNavBar() {
   return (
     <Styled.ProductNavBar data-testid="navbar-product-nav-bar">
@@ -10,7 +52,7 @@ export function ProductNavBar() {
         <Styled.ProductNavList>
           <Styled.ProductNavItem>
             <Styled.HamburgerButton
-              as={'button'}
+              as="button"
               pl={0}
               data-testid="products-hamburger"
             >
@@ -18,39 +60,26 @@ export function ProductNavBar() {
               {EN.NAV_BAR.MENU_BAR.CATEGORIES_HAMBURGER}
             </Styled.HamburgerButton>
           </Styled.ProductNavItem>
-          <Styled.ProductNavItem>
-            <Styled.ProductNavLink href="/">
-              {EN.NAV_BAR.MENU_BAR.PRODUCTS_DROPDOWN}
-            </Styled.ProductNavLink>
-          </Styled.ProductNavItem>
-          <Styled.ProductNavItem>
-            <Styled.ProductNavLink href="/">
-              {EN.NAV_BAR.MENU_BAR.BLOG}
-            </Styled.ProductNavLink>
-          </Styled.ProductNavItem>
-          <Styled.ProductNavItem>
-            <Styled.ProductNavLink href="/">
-              {EN.NAV_BAR.MENU_BAR.CONTACT}
-            </Styled.ProductNavLink>
-          </Styled.ProductNavItem>
+          {productNavBarLinks.left.map((link, index) => (
+            <Styled.ProductNavItem key={index}>
+              <Styled.ProductNavLink href={link.href}>
+                {link.label}
+              </Styled.ProductNavLink>
+            </Styled.ProductNavItem>
+          ))}
         </Styled.ProductNavList>
 
         <Styled.ProductNavList>
-          <Styled.ProductNavItem>
-            <Styled.ProductNavLink href="/">
-              {EN.NAV_BAR.MENU_BAR.LIMITED_SALE} <span aria-hidden>👋🏻</span>
-            </Styled.ProductNavLink>
-          </Styled.ProductNavItem>
-          <Styled.ProductNavItem>
-            <Styled.ProductNavLink href="/">
-              {EN.NAV_BAR.MENU_BAR.BEST_SELLER}
-            </Styled.ProductNavLink>
-          </Styled.ProductNavItem>
-          <Styled.ProductNavItem>
-            <Styled.ProductNavLink href="/" pr={0}>
-              {EN.NAV_BAR.MENU_BAR.NEW_ARRIVAL}
-            </Styled.ProductNavLink>
-          </Styled.ProductNavItem>
+          {productNavBarLinks.right.map((link, index, arr) => (
+            <Styled.ProductNavItem key={index}>
+              <Styled.ProductNavLink
+                href={link.href}
+                pr={index === arr.length - 1 ? 0 : undefined}
+              >
+                {link.label}
+              </Styled.ProductNavLink>
+            </Styled.ProductNavItem>
+          ))}
         </Styled.ProductNavList>
       </SharedStyled.BarContainer>
     </Styled.ProductNavBar>
