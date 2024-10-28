@@ -15,7 +15,7 @@ export function NavbarPure({
   cartItemsCount,
 }: NavbarProps) {
   return (
-    <Styled.Header>
+    <Styled.RootHeader>
       {children ? (
         children
       ) : (
@@ -29,7 +29,7 @@ export function NavbarPure({
           <ProductNavBar />
         </>
       )}
-    </Styled.Header>
+    </Styled.RootHeader>
   );
 }
 

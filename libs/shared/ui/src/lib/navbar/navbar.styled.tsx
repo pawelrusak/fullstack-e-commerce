@@ -2,7 +2,7 @@
 
 import styled, { css } from 'styled-components';
 
-export const Header = styled.header`
+export const RootHeader = styled.header`
   color: ${({ theme }) => theme.color.text};
   margin-bottom: 3rem;
 `;
