@@ -1639,4 +1639,72 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Navbar theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { navbar } = component;
+
+      expect(navbar).toEqual({
+        contactBarRoot: {
+          _base: {
+            mdBorderColor: expect.any(String),
+          },
+        },
+        contactBarListItem: {
+          _base: {
+            borderColor: expect.any(String),
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+            color: expect.any(String),
+          },
+        },
+        contactBarListItemLink: {
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+            },
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { navbar } = component;
+
+      expect(navbar).toMatchInlineSnapshot(`
+        {
+          "contactBarListItem": {
+            "_base": {
+              "borderColor": "hsl(0, 0%, 80%)",
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.4rem",
+              "fontWeight": 400,
+              "lineHeight": 1.4285714285714286,
+            },
+          },
+          "contactBarListItemLink": {
+            "default": {
+              "initial": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "color": "#969696",
+              },
+            },
+          },
+          "contactBarRoot": {
+            "_base": {
+              "mdBorderColor": "hsl(0, 0%, 80%)",
+            },
+          },
+        }
+      `);
+    });
+  });
 });

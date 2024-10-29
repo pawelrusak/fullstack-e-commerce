@@ -1,4 +1,4 @@
-import { transparentize } from 'polished';
+import { transparentize, lighten } from 'polished';
 import { adjustCssUnitValue } from '@e-shop/utils';
 import { colorPalette } from './color-palette.reference.tokens';
 import {
@@ -776,6 +776,33 @@ export const component: AppComponent = {
          * @layoutWidth + @layoutPaddingLeft + @layoutPaddingRight = 156rem
          */
         smMaxWidth: '156rem',
+      },
+    },
+  },
+  navbar: {
+    contactBarRoot: {
+      _base: {
+        mdBorderColor: colorPalette.neutral[300],
+      },
+    },
+    contactBarListItem: {
+      _base: {
+        borderColor: colorPalette.neutral[300],
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.h8,
+        lineHeight: lineHeights.h8,
+        fontWeight: fontWeight.regular,
+        color: color.onSurface,
+      },
+    },
+    contactBarListItemLink: {
+      default: {
+        initial: {
+          color: color.onSurface,
+        },
+        interact: {
+          color: lighten(0.4, color.onSurface),
+        },
       },
     },
   },
