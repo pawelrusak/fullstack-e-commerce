@@ -1,23 +1,26 @@
 'use client';
 
-import styled, { css, DefaultTheme } from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
   LocationIcon as RawLocationIcon,
   PhoneIcon as RawPhoneIcon,
 } from '@e-shop/icons';
-import * as helper from 'polished';
 import { padding } from 'styled-system';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import type { PaddingProps } from 'styled-system';
 
-const borderColor = ({ theme }: { theme: DefaultTheme }) =>
-  helper.transparentize(0.75, theme.color.text);
+const {
+  contactBarRoot: contactBarRootToken,
+  contactBarListItem: contactBarListItemToken,
+  contactBarListItemLink: contactBarListItemLinkToken,
+} = getToken('navbar');
 
 export const ContactBar = styled.div`
   display: none;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
     display: block;
-    border-bottom: 1px solid ${borderColor};
+    border-bottom: 1px solid ${contactBarRootToken._base.mdBorderColor};
     padding: 1.6rem 0 1.5rem;
   }
 `;
@@ -29,8 +32,14 @@ export const ContactList = styled.ul`
 export const ContactItem = styled.li`
   display: inline-block;
 
+  color: ${contactBarListItemToken._base.color};
+  font-size: ${contactBarListItemToken._base.fontSize};
+  font-family: ${contactBarListItemToken._base.fontFamily};
+  font-weight: ${contactBarListItemToken._base.fontWeight};
+  line-height: ${contactBarListItemToken._base.lineHeight};
+
   & + & {
-    border-left: 1px solid ${borderColor};
+    border-left: 1px solid ${contactBarListItemToken._base.borderColor};
   }
 `;
 
@@ -50,29 +59,27 @@ export const PhoneIcon = styled(RawPhoneIcon)`
   ${itemIcon}
 `;
 
-const baseContactElementCss = css<PaddingProps>`
+const baseContactListItemCss = css<PaddingProps>`
   display: inline-block;
-  font-size: 1.4rem;
   height: 3.2rem;
-  line-height: 2.4rem;
-  padding: 0.4rem 2.4rem;
+  padding: 0.6rem 2.4rem;
   vertical-align: middle;
   ${padding}
 `;
 
 export const ContactElement = styled.span`
-  ${baseContactElementCss}
+  ${baseContactListItemCss}
 `;
 
 export const ContactLink = styled.a`
-  ${baseContactElementCss}
+  ${baseContactListItemCss}
   text-decoration: none;
-  color: ${({ theme }) => theme.color.text};
+  color: ${contactBarListItemLinkToken.default.initial.color};
   cursor: pointer;
 
   :hover,
   :focus {
-    color: ${({ theme }) => helper.lighten(0.4, theme.color.text)};
+    color: ${contactBarListItemLinkToken.default.interact.color};
   }
 `;
 
