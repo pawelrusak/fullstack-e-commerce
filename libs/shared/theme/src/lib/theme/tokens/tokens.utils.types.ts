@@ -25,6 +25,10 @@ type BoxModelCSSProperties = Pick<
   | 'marginRight'
   | 'marginBottom'
   | 'marginLeft'
+  | 'border'
+  | 'borderColor'
+  | 'borderWidth'
+  | 'borderStyle'
 >;
 
 type ScreenSizeTopographyCSSProperties = AddPrefixToKey<
