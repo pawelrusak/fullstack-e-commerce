@@ -9,10 +9,6 @@ import * as helper from 'polished';
 import { padding } from 'styled-system';
 import type { PaddingProps } from 'styled-system';
 
-export const Header = styled.header`
-  color: ${({ theme }) => theme.color.text};
-`;
-
 const borderColor = ({ theme }: { theme: DefaultTheme }) =>
   helper.transparentize(0.75, theme.color.text);
 
@@ -32,6 +28,7 @@ export const ContactList = styled.ul`
 
 export const ContactItem = styled.li`
   display: inline-block;
+
   & + & {
     border-left: 1px solid ${borderColor};
   }
