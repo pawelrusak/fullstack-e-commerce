@@ -15,7 +15,7 @@ const {
   contactBarListItemLink: contactBarListItemLinkToken,
 } = getToken('navbar');
 
-export const ContactBar = styled.div`
+export const Root = styled.div`
   display: none;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
@@ -25,11 +25,11 @@ export const ContactBar = styled.div`
   }
 `;
 
-export const ContactList = styled.ul`
+export const List = styled.ul`
   display: inline-block;
 `;
 
-export const ContactItem = styled.li`
+export const ListItem = styled.li`
   display: inline-block;
 
   color: ${contactBarListItemToken._base.color};
@@ -67,11 +67,11 @@ const baseContactListItemCss = css<PaddingProps>`
   ${padding}
 `;
 
-export const ContactElement = styled.span`
+export const ListItemText = styled.span`
   ${baseContactListItemCss}
 `;
 
-export const ContactLink = styled.a`
+export const ListItemLink = styled.a`
   ${baseContactListItemCss}
   text-decoration: none;
   color: ${contactBarListItemLinkToken.default.initial.color};
@@ -83,7 +83,7 @@ export const ContactLink = styled.a`
   }
 `;
 
-export const ContactSocialLink = styled(ContactLink)<PaddingProps>`
+export const ListItemSocialLink = styled(ListItemLink)<PaddingProps>`
   padding: 0.8rem 1.2rem;
   ${padding}
 `;

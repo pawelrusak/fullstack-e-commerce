@@ -30,28 +30,28 @@ const contactBarSocialsLinks: ContactBarLink[] = [
 
 export function ContactBar() {
   return (
-    <Styled.ContactBar data-testid="navbar-contact-bar">
+    <Styled.Root data-testid="navbar-contact-bar">
       <SharedStyled.BarContainer>
-        <Styled.ContactList>
-          <Styled.ContactItem>
-            <Styled.ContactElement pl={0}>
+        <Styled.List>
+          <Styled.ListItem>
+            <Styled.ListItemText pl={0}>
               <Styled.LocationIcon aria-hidden />
               {EN.GLOBAL.LOCATION.STREET}, {EN.GLOBAL.LOCATION.CITY}{' '}
               {EN.GLOBAL.LOCATION.COUNTRY}
-            </Styled.ContactElement>
-          </Styled.ContactItem>
-          <Styled.ContactItem>
-            <Styled.ContactLink href={`tel:${EN.GLOBAL.CONTACT.PHONE}`}>
+            </Styled.ListItemText>
+          </Styled.ListItem>
+          <Styled.ListItem>
+            <Styled.ListItemLink href={`tel:${EN.GLOBAL.CONTACT.PHONE}`}>
               <Styled.PhoneIcon aria-hidden />
               {EN.GLOBAL.CONTACT.PHONE}
-            </Styled.ContactLink>
-          </Styled.ContactItem>
-        </Styled.ContactList>
+            </Styled.ListItemLink>
+          </Styled.ListItem>
+        </Styled.List>
 
-        <Styled.ContactList>
-          <Styled.ContactItem>
+        <Styled.List>
+          <Styled.ListItem>
             {contactBarSocialsLinks.map((link, index, array) => (
-              <Styled.ContactSocialLink
+              <Styled.ListItemSocialLink
                 href={link.href}
                 target="_blank"
                 rel="noopener"
@@ -60,12 +60,12 @@ export function ContactBar() {
               >
                 {link.icon}
                 <VisuallyHidden>{link.screenReaderLabel}</VisuallyHidden>
-              </Styled.ContactSocialLink>
+              </Styled.ListItemSocialLink>
             ))}
-          </Styled.ContactItem>
-        </Styled.ContactList>
+          </Styled.ListItem>
+        </Styled.List>
       </SharedStyled.BarContainer>
-    </Styled.ContactBar>
+    </Styled.Root>
   );
 }
 
