@@ -806,6 +806,30 @@ exports[`Default Theme should match the specified values 1`] = `
           "mdBorderColor": "hsl(0, 0%, 80%)",
         },
       },
+      "productBarListItem": {
+        "_base": {
+          "color": "hsl(0, 0%, 100%)",
+          "fontFamily": "Montserrat, sans-serif",
+          "fontSize": "1.6rem",
+          "fontWeight": 700,
+          "lineHeight": "3.2rem",
+        },
+      },
+      "productBarListItemLink": {
+        "default": {
+          "initial": {
+            "color": "hsl(0, 0%, 100%)",
+          },
+          "interact": {
+            "color": "rgba(255,255,255,0.75)",
+          },
+        },
+      },
+      "productBarRoot": {
+        "_base": {
+          "backgroundColor": "hsl(7, 100%, 65%)",
+        },
+      },
     },
   },
   "fontFamily": {

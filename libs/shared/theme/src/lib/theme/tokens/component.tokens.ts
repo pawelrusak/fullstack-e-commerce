@@ -805,5 +805,29 @@ export const component: AppComponent = {
         },
       },
     },
+    productBarRoot: {
+      _base: {
+        backgroundColor: color.primary,
+      },
+    },
+    productBarListItem: {
+      _base: {
+        color: color.onPrimary,
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.h6,
+        lineHeight: '3.2rem',
+        fontWeight: fontWeight.bold,
+      },
+    },
+    productBarListItemLink: {
+      default: {
+        initial: {
+          color: color.onPrimary,
+        },
+        interact: {
+          color: transparentize(0.25, color.onPrimary),
+        },
+      },
+    },
   },
 };

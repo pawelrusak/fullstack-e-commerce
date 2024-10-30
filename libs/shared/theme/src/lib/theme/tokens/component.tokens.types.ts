@@ -416,10 +416,10 @@ export type LayoutWrapperComponent = {
 
 /**
  * **********************************************************************************************
- *                                 Layout Wrapper Component Tokens
+ *                                     Navbar Component Tokens
  * **********************************************************************************************
  */
-type NavbarContactBarLinkTokenMap = ModifierStateMap<
+type NavbarLinkTokenMap = ModifierStateMap<
   DefaultModifier,
   StateStyleMap<InitialState | InteractState, AvailableComponentToken<'color'>>
 >;
@@ -430,7 +430,10 @@ export type NavbarComponent = {
     contactBarListItem: ImmutableBaseToken<
       TopographyBaseProperties | 'borderColor' | 'color'
     >;
-    contactBarListItemLink: NavbarContactBarLinkTokenMap;
+    contactBarListItemLink: NavbarLinkTokenMap;
+    productBarRoot: ImmutableBaseToken<'backgroundColor'>;
+    productBarListItem: ImmutableBaseToken<TopographyBaseProperties | 'color'>;
+    productBarListItemLink: NavbarLinkTokenMap;
   };
 };
 

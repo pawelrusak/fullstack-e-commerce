@@ -1670,6 +1670,30 @@ describe('Component theme config', () => {
             },
           },
         },
+        productBarRoot: {
+          _base: {
+            backgroundColor: expect.any(String),
+          },
+        },
+        productBarListItem: {
+          _base: {
+            color: expect.any(String),
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(String),
+            fontWeight: expect.any(Number),
+          },
+        },
+        productBarListItemLink: {
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+            },
+          },
+        },
       });
     });
 
@@ -1701,6 +1725,30 @@ describe('Component theme config', () => {
           "contactBarRoot": {
             "_base": {
               "mdBorderColor": "hsl(0, 0%, 80%)",
+            },
+          },
+          "productBarListItem": {
+            "_base": {
+              "color": "hsl(0, 0%, 100%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 700,
+              "lineHeight": "3.2rem",
+            },
+          },
+          "productBarListItemLink": {
+            "default": {
+              "initial": {
+                "color": "hsl(0, 0%, 100%)",
+              },
+              "interact": {
+                "color": "rgba(255,255,255,0.75)",
+              },
+            },
+          },
+          "productBarRoot": {
+            "_base": {
+              "backgroundColor": "hsl(7, 100%, 65%)",
             },
           },
         }
