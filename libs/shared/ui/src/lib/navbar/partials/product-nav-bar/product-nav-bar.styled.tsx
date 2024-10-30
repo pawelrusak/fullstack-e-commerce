@@ -1,38 +1,46 @@
 'use client';
 
 import styled from 'styled-components';
-import * as helper from 'polished';
 import { padding } from 'styled-system';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import type { PaddingProps } from 'styled-system';
+
+const {
+  productBarRoot: productBarRootToken,
+  productBarListItem: productBarListItemToken,
+  productBarListItemLink: productBarListItemLinkToken,
+} = getToken('navbar');
 
 export const ProductNavBar = styled.nav`
   display: none;
+  background-color: ${productBarRootToken._base.backgroundColor};
 
   @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
     display: block;
-    background-color: ${({ theme }) => theme.color.primary};
   }
 `;
 
 export const ProductNavLink = styled.a<PaddingProps>`
   display: inline-block;
   text-decoration: none;
-  color: ${({ theme }) => theme.color.background};
-  font-size: 1.6rem;
-  line-height: 3.2rem;
+  color: ${productBarListItemLinkToken.default.initial.color};
   padding: 2rem 4rem;
   vertical-align: middle;
   ${padding};
 
-  :hover,
-  :focus {
-    color: ${({ theme }) =>
-      helper.transparentize(0.25, theme.color.background)};
+  &:hover,
+  &:focus {
+    color: ${productBarListItemLinkToken.default.interact.color};
   }
 `;
 
 export const ProductNavItem = styled.li`
   display: inline-block;
+  color: ${productBarListItemToken._base.color};
+  font-family: ${productBarListItemToken._base.fontFamily};
+  font-size: ${productBarListItemToken._base.fontSize};
+  line-height: ${productBarListItemToken._base.lineHeight};
+  font-weight: ${productBarListItemToken._base.fontWeight};
 `;
 
 export const ProductNavList = styled.ul`
