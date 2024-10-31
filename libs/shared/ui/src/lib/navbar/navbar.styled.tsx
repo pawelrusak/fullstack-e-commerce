@@ -13,7 +13,7 @@ export const barContainerCss = css`
   justify-content: space-between;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
-    max-width: 158rem;
+    max-width: 156rem;
     padding: 0 2rem;
     margin: 0 auto;
   }
