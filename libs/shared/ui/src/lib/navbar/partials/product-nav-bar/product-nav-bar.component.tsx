@@ -47,42 +47,42 @@ const productNavBarLinks: ProductNavBarLinks = {
 
 export function ProductNavBar() {
   return (
-    <Styled.ProductNavBar data-testid="navbar-product-nav-bar">
+    <Styled.RootNav data-testid="navbar-product-nav-bar">
       <SharedStyled.BarContainer>
-        <Styled.ProductNavList>
-          <Styled.ProductNavItem>
-            <Styled.HamburgerButton
+        <Styled.List>
+          <Styled.ListItem>
+            <Styled.ListItemHamburgerRoot
               as="button"
               pl={0}
               data-testid="products-hamburger"
             >
               <Hamburger />
               {EN.NAV_BAR.MENU_BAR.CATEGORIES_HAMBURGER}
-            </Styled.HamburgerButton>
-          </Styled.ProductNavItem>
+            </Styled.ListItemHamburgerRoot>
+          </Styled.ListItem>
           {productNavBarLinks.left.map((link, index) => (
-            <Styled.ProductNavItem key={index}>
-              <Styled.ProductNavLink href={link.href}>
+            <Styled.ListItem key={index}>
+              <Styled.ListItemLink href={link.href}>
                 {link.label}
-              </Styled.ProductNavLink>
-            </Styled.ProductNavItem>
+              </Styled.ListItemLink>
+            </Styled.ListItem>
           ))}
-        </Styled.ProductNavList>
+        </Styled.List>
 
-        <Styled.ProductNavList>
+        <Styled.List>
           {productNavBarLinks.right.map((link, index, arr) => (
-            <Styled.ProductNavItem key={index}>
-              <Styled.ProductNavLink
+            <Styled.ListItem key={index}>
+              <Styled.ListItemLink
                 href={link.href}
                 pr={index === arr.length - 1 ? 0 : undefined}
               >
                 {link.label}
-              </Styled.ProductNavLink>
-            </Styled.ProductNavItem>
+              </Styled.ListItemLink>
+            </Styled.ListItem>
           ))}
-        </Styled.ProductNavList>
+        </Styled.List>
       </SharedStyled.BarContainer>
-    </Styled.ProductNavBar>
+    </Styled.RootNav>
   );
 }
 

@@ -11,7 +11,7 @@ const {
   productBarListItemLink: productBarListItemLinkToken,
 } = getToken('navbar');
 
-export const ProductNavBar = styled.nav`
+export const RootNav = styled.nav`
   display: none;
   background-color: ${productBarRootToken._base.backgroundColor};
 
@@ -20,7 +20,20 @@ export const ProductNavBar = styled.nav`
   }
 `;
 
-export const ProductNavLink = styled.a<PaddingProps>`
+export const List = styled.ul`
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+`;
+
+export const ListItem = styled.li`
+  display: inline-block;
+  color: ${productBarListItemToken._base.color};
+  font-family: ${productBarListItemToken._base.fontFamily};
+  font-size: ${productBarListItemToken._base.fontSize};
+  line-height: ${productBarListItemToken._base.lineHeight};
+  font-weight: ${productBarListItemToken._base.fontWeight};
+`;
+
+export const ListItemLink = styled.a<PaddingProps>`
   display: inline-block;
   text-decoration: none;
   color: ${productBarListItemLinkToken.default.initial.color};
@@ -34,20 +47,7 @@ export const ProductNavLink = styled.a<PaddingProps>`
   }
 `;
 
-export const ProductNavItem = styled.li`
-  display: inline-block;
-  color: ${productBarListItemToken._base.color};
-  font-family: ${productBarListItemToken._base.fontFamily};
-  font-size: ${productBarListItemToken._base.fontSize};
-  line-height: ${productBarListItemToken._base.lineHeight};
-  font-weight: ${productBarListItemToken._base.fontWeight};
-`;
-
-export const ProductNavList = styled.ul`
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
-`;
-
-export const HamburgerButton = styled(ProductNavLink)`
+export const ListItemHamburgerRoot = styled(ListItemLink)`
   display: inline-flex;
   align-items: center;
   font-weight: ${({ theme }) => theme.fontWeight.semiBold};
