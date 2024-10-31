@@ -1,6 +1,6 @@
 'use client';
 
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { padding } from 'styled-system';
 import { getComponentThemeToken as getToken } from '@e-shop/theme';
 import type { PaddingProps } from 'styled-system';
@@ -24,22 +24,27 @@ export const List = styled.ul`
   font-weight: ${({ theme }) => theme.fontWeight.semiBold};
 `;
 
-export const ListItem = styled.li`
-  display: inline-block;
+const listItemTopographyCSS = css`
   color: ${productBarListItemToken._base.color};
   font-family: ${productBarListItemToken._base.fontFamily};
   font-size: ${productBarListItemToken._base.fontSize};
   line-height: ${productBarListItemToken._base.lineHeight};
   font-weight: ${productBarListItemToken._base.fontWeight};
+  text-decoration: none;
+  vertical-align: middle;
 `;
 
-export const ListItemLink = styled.a<PaddingProps>`
+export const ListItem = styled.li`
   display: inline-block;
-  text-decoration: none;
-  color: ${productBarListItemLinkToken.default.initial.color};
+`;
+
+const listItemBoxModelCSS = css`
   padding: 2rem 4rem;
-  vertical-align: middle;
-  ${padding};
+  border: none;
+`;
+
+const listItemLinkInteractEffectCSS = css`
+  color: ${productBarListItemLinkToken.default.initial.color};
 
   &:hover,
   &:focus {
@@ -47,11 +52,27 @@ export const ListItemLink = styled.a<PaddingProps>`
   }
 `;
 
-export const ListItemHamburgerRoot = styled(ListItemLink)`
+export type StyledListItemLinkProps = PaddingProps;
+
+export const ListItemLink = styled.a<StyledListItemLinkProps>`
+  display: inline-block;
+  ${listItemBoxModelCSS};
+  ${listItemTopographyCSS};
+  ${listItemLinkInteractEffectCSS};
+
+  ${padding};
+`;
+
+export type StyledListItemHamburgerRootProps = PaddingProps;
+
+export const ListItemHamburgerRoot = styled.button<StyledListItemHamburgerRootProps>`
+  ${listItemBoxModelCSS};
+  ${listItemTopographyCSS};
+  ${listItemLinkInteractEffectCSS};
   display: inline-flex;
   align-items: center;
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
-  border: 0;
   background: transparent;
   cursor: pointer;
+
+  ${padding};
 `;

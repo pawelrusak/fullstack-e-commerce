@@ -1,7 +1,10 @@
+import React from 'react';
 import { EN } from '@e-shop/i18n';
 import * as Styled from './product-nav-bar.styled';
 import * as SharedStyled from '../../navbar.styled';
 import Hamburger from '../hamburger';
+
+import type { StyledListItemHamburgerRootProps } from './product-nav-bar.styled';
 
 type ProductNavBarLink = {
   label: React.ReactNode;
@@ -45,20 +48,33 @@ const productNavBarLinks: ProductNavBarLinks = {
   ],
 };
 
+type ProductNavBarHamburgerButtonProps =
+  React.ComponentPropsWithoutRef<'button'> & StyledListItemHamburgerRootProps;
+
+function ProductNavBarHamburgerButton({
+  children,
+  ...props
+}: ProductNavBarHamburgerButtonProps) {
+  return (
+    <Styled.ListItemHamburgerRoot {...props}>
+      <Hamburger />
+      {children}
+    </Styled.ListItemHamburgerRoot>
+  );
+}
+
 export function ProductNavBar() {
   return (
     <Styled.RootNav data-testid="navbar-product-nav-bar">
       <SharedStyled.BarContainer>
         <Styled.List>
           <Styled.ListItem>
-            <Styled.ListItemHamburgerRoot
-              as="button"
+            <ProductNavBarHamburgerButton
               pl={0}
               data-testid="products-hamburger"
             >
-              <Hamburger />
               {EN.NAV_BAR.MENU_BAR.CATEGORIES_HAMBURGER}
-            </Styled.ListItemHamburgerRoot>
+            </ProductNavBarHamburgerButton>
           </Styled.ListItem>
           {productNavBarLinks.left.map((link, index) => (
             <Styled.ListItem key={index}>
