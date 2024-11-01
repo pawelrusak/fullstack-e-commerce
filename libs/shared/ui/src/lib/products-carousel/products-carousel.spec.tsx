@@ -19,7 +19,7 @@ describe('Carousel', () => {
         <div>1</div>
         <div>2</div>
         <div>3</div>
-      </ProductCarousel>
+      </ProductCarousel>,
     );
     expect(baseElement).toBeTruthy();
   });
