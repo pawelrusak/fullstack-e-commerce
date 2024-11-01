@@ -31,7 +31,7 @@ const contactBarSocialsLinks: ContactBarLink[] = [
 export function ContactBar() {
   return (
     <Styled.Root data-testid="navbar-contact-bar">
-      <SharedStyled.BarContainer>
+      <SharedStyled.SubBarContainer>
         <Styled.List>
           <Styled.ListItem>
             <Styled.ListItemText pl={0}>
@@ -64,7 +64,7 @@ export function ContactBar() {
             ))}
           </Styled.ListItem>
         </Styled.List>
-      </SharedStyled.BarContainer>
+      </SharedStyled.SubBarContainer>
     </Styled.Root>
   );
 }

@@ -23,7 +23,7 @@ export function UserBar({
 }: UserBarProps) {
   return (
     <Styled.UserBarWrapper data-testid="navbar-user-bar" hasBorder={hasBorder}>
-      <SharedStyled.BarContainer>
+      <SharedStyled.SubBarContainer>
         <Styled.BrandHeading>
           <Styled.BrandLink href="/">
             <Brand />
@@ -83,7 +83,7 @@ export function UserBar({
             </Styled.UserItem>
           </Styled.UserList>
         </Styled.UserSection>
-      </SharedStyled.BarContainer>
+      </SharedStyled.SubBarContainer>
     </Styled.UserBarWrapper>
   );
 }

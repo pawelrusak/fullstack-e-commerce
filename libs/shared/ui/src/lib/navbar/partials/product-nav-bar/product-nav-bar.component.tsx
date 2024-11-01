@@ -66,7 +66,7 @@ function ProductNavBarHamburgerButton({
 export function ProductNavBar() {
   return (
     <Styled.RootNav data-testid="navbar-product-nav-bar">
-      <SharedStyled.BarContainer>
+      <SharedStyled.SubBarContainer>
         <Styled.List>
           <Styled.ListItem>
             <ProductNavBarHamburgerButton
@@ -97,7 +97,7 @@ export function ProductNavBar() {
             </Styled.ListItem>
           ))}
         </Styled.List>
-      </SharedStyled.BarContainer>
+      </SharedStyled.SubBarContainer>
     </Styled.RootNav>
   );
 }

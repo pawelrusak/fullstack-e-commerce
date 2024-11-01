@@ -1,13 +1,13 @@
 'use client';
 
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const RootHeader = styled.header`
   color: ${({ theme }) => theme.color.text};
   margin-bottom: 3rem;
 `;
 
-export const barContainerCss = css`
+export const SubBarContainer = styled.div`
   padding: 0 1rem;
   display: flex;
   justify-content: space-between;
@@ -17,8 +17,4 @@ export const barContainerCss = css`
     padding: 0 2rem;
     margin: 0 auto;
   }
-`;
-
-export const BarContainer = styled.div`
-  ${barContainerCss}
 `;
