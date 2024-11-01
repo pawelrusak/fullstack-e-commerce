@@ -830,6 +830,17 @@ exports[`Default Theme should match the specified values 1`] = `
           "backgroundColor": "hsl(7, 100%, 65%)",
         },
       },
+      "root": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+        },
+      },
+      "subBarContainer": {
+        "_base": {
+          "maxWidth": undefined,
+          "smMaxWidth": "156rem",
+        },
+      },
     },
   },
   "fontFamily": {

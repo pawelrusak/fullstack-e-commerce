@@ -1,5 +1,5 @@
 import { transparentize, lighten } from 'polished';
-import { adjustCssUnitValue } from '@e-shop/utils';
+import { adjustCssUnitValue, getCSSValueNumber } from '@e-shop/utils';
 import { colorPalette } from './color-palette.reference.tokens';
 import {
   color,
@@ -11,6 +11,8 @@ import {
 } from './system.tokens';
 
 import type { AppComponent } from './component.tokens.types';
+
+const LAYOUT_WIDTH = '152rem';
 
 const BUTTON_BORDER_WIDTH = 0.1;
 
@@ -775,11 +777,29 @@ export const component: AppComponent = {
          *
          * @layoutWidth + @layoutPaddingLeft + @layoutPaddingRight = 156rem
          */
-        smMaxWidth: '156rem',
+        smMaxWidth: `${getCSSValueNumber(LAYOUT_WIDTH) + 4}rem`,
       },
     },
   },
   navbar: {
+    root: {
+      _base: {
+        color: color.onSurface,
+      },
+    },
+    subBarContainer: {
+      _base: {
+        maxWidth: undefined,
+        /**
+         * @layoutWidth 152rem
+         * @layoutPaddingLeft 2rem (in component)
+         * @layoutPaddingRight 2rem (in component)
+         *
+         * @layoutWidth + @layoutPaddingLeft + @layoutPaddingRight = 156rem
+         */
+        smMaxWidth: `${getCSSValueNumber(LAYOUT_WIDTH) + 4}rem`,
+      },
+    },
     contactBarRoot: {
       _base: {
         mdBorderColor: colorPalette.neutral[300],

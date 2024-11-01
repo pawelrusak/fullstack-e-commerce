@@ -1645,6 +1645,17 @@ describe('Component theme config', () => {
       const { navbar } = component;
 
       expect(navbar).toEqual({
+        root: {
+          _base: {
+            color: expect.any(String),
+          },
+        },
+        subBarContainer: {
+          _base: {
+            maxWidth: undefined,
+            smMaxWidth: expect.any(String),
+          },
+        },
         contactBarRoot: {
           _base: {
             mdBorderColor: expect.any(String),
@@ -1749,6 +1760,17 @@ describe('Component theme config', () => {
           "productBarRoot": {
             "_base": {
               "backgroundColor": "hsl(7, 100%, 65%)",
+            },
+          },
+          "root": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+            },
+          },
+          "subBarContainer": {
+            "_base": {
+              "maxWidth": undefined,
+              "smMaxWidth": "156rem",
             },
           },
         }

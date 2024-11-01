@@ -426,6 +426,8 @@ type NavbarLinkTokenMap = ModifierStateMap<
 
 export type NavbarComponent = {
   navbar: {
+    root: ImmutableBaseToken<'color'>;
+    subBarContainer: ImmutableBaseToken<'maxWidth' | 'smMaxWidth'>;
     contactBarRoot: ImmutableBaseToken<'mdBorderColor'>;
     contactBarListItem: ImmutableBaseToken<
       TopographyBaseProperties | 'borderColor' | 'color'
