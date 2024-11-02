@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import { getComponentThemeToken as getTheme } from '@e-shop/theme';
+
+const { hamburger: hamburgerToken } = getTheme('navbar');
+
 export const Hamburger = styled.div`
   display: inline-block;
 
@@ -10,7 +14,7 @@ export const Hamburger = styled.div`
   div {
     height: 2px;
     width: 100%;
-    background-color: ${({ theme }) => theme.color.background};
+    background-color: ${hamburgerToken._base.backgroundColor};
     margin: 0.3rem 0;
     border-radius: 999px;
   }
