@@ -432,6 +432,7 @@ export type NavbarComponent = {
     contactBarListItem: ImmutableBaseToken<
       TopographyBaseProperties | 'borderColor' | 'color'
     >;
+    hamburger: ImmutableBaseToken<'backgroundColor'>;
     contactBarListItemLink: NavbarLinkTokenMap;
     productBarRoot: ImmutableBaseToken<'backgroundColor'>;
     productBarListItem: ImmutableBaseToken<TopographyBaseProperties | 'color'>;

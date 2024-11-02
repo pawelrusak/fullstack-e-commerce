@@ -1681,6 +1681,11 @@ describe('Component theme config', () => {
             },
           },
         },
+        hamburger: {
+          _base: {
+            backgroundColor: expect.any(String),
+          },
+        },
         productBarRoot: {
           _base: {
             backgroundColor: expect.any(String),
@@ -1736,6 +1741,11 @@ describe('Component theme config', () => {
           "contactBarRoot": {
             "_base": {
               "mdBorderColor": "hsl(0, 0%, 80%)",
+            },
+          },
+          "hamburger": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 100%)",
             },
           },
           "productBarListItem": {

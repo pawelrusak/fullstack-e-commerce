@@ -806,6 +806,11 @@ exports[`Default Theme should match the specified values 1`] = `
           "mdBorderColor": "hsl(0, 0%, 80%)",
         },
       },
+      "hamburger": {
+        "_base": {
+          "backgroundColor": "hsl(0, 0%, 100%)",
+        },
+      },
       "productBarListItem": {
         "_base": {
           "color": "hsl(0, 0%, 100%)",

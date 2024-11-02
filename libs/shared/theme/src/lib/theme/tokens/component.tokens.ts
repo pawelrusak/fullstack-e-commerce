@@ -825,6 +825,11 @@ export const component: AppComponent = {
         },
       },
     },
+    hamburger: {
+      _base: {
+        backgroundColor: colorPalette.neutral[0],
+      },
+    },
     productBarRoot: {
       _base: {
         backgroundColor: color.primary,
