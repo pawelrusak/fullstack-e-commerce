@@ -54,7 +54,7 @@ export const SearchInput = styled.input`
   line-height: 3.8rem;
   border-radius: 10px;
 
-  ::placeholder {
+  &::placeholder {
     color: ${({ theme }) => theme.color.text};
     opacity: 0.75;
   }
@@ -82,7 +82,7 @@ export const UserLoginLink = styled.a`
   position: relative;
   padding-right: 0;
 
-  ::before {
+  &::before {
     content: ' ';
     width: 1px;
     height: 3.2rem;
