@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`English Translation should match the specified values 1`] = `
+{
+  "BREADCRUMB": {
+    "HOME": "Home",
+    "NAV_LABEL": "Breadcrumb",
+  },
+  "CAROUSEL": {
+    "NEXT": "Next",
+    "PREV": "Previous",
+  },
+  "CART_PAGE": {
+    "BREADCRUMB": {
+      "CURRENT": "Cart",
+      "HOME": "Home",
+    },
+    "CTA_BUTTONS": {
+      "CONTINUE_SHOPPING": "Continue Shopping",
+      "PROCEED_TO_CHECKOUT": "Proceed to Checkout",
+    },
+    "TITLE": "Your Cart",
+  },
+  "CART_TABLE": {
+    "EMPTY_CART": {
+      "DESCRIPTION": "Looks like you haven't added any items to the cart yet.",
+      "TITLE": "Your Cart is Empty",
+    },
+    "HEADER": {
+      "ACTION": "Action",
+      "PRICE": "Price",
+      "PRODUCT": "Product",
+      "QUANTITY": "Quantity",
+      "TOTAL": "Total",
+    },
+    "PRODUCT_ITEM": {
+      "ACTION_BUTTON": {
+        "REMOVE_FROM_CART": "Remove :productName: from Cart",
+        "SHARE": "Share :productName: on Social Media",
+      },
+      "DEFAULT_PRODUCT_NAME": "product",
+      "VARIANT_LABEL": "Variant",
+    },
+    "SUMMARY": {
+      "COUPON": {
+        "ACTION_BUTTON": "Apply Code",
+        "LABEL": "Enter coupon code (ex: FIRSTPAY)",
+      },
+      "SUBTOTAL": {
+        "ADDITIONAL_INFO": "excl. shipping fee",
+        "LABEL": "Sub Total",
+      },
+    },
+  },
+  "CHECKOUT": {
+    "BREADCRUMB": {
+      "CART": "Cart",
+      "CURRENT": "Checkout",
+      "HOME": "Home",
+    },
+    "INFORMATION": {
+      "FORM": {
+        "FIELD": {
+          "ADDRESS": {
+            "LABEL": "Address",
+            "PLACEHOLDER": "Home Address, Auxiliary St. 12345, Anywhere State",
+          },
+          "CITY": {
+            "LABEL": "City",
+            "PLACEHOLDER": "Samarinda",
+          },
+          "COUNTRY": {
+            "LABEL": "Country",
+            "PLACEHOLDER": "Indonesia",
+          },
+          "EMAIL_ADDRESS": {
+            "LABEL": "Email Address",
+            "PLACEHOLDER": "amelia.watson@eshop.com",
+          },
+          "FIRST_NAME": {
+            "LABEL": "First Name",
+            "PLACEHOLDER": "Amelia Robert",
+          },
+          "LAST_NAME": {
+            "LABEL": "Last Name",
+            "PLACEHOLDER": "Watson",
+          },
+          "ORDER_NOTES": {
+            "LABEL": "Order Notes",
+            "PLACEHOLDER": "Enter your order notes...",
+          },
+          "PHONE_NUMBER": {
+            "LABEL": "Phone Number",
+            "PLACEHOLDER": "+123 456 7890",
+          },
+          "POSTAL_CODE": {
+            "LABEL": "Postal Code",
+            "PLACEHOLDER": "555555",
+          },
+          "STATE": {
+            "LABEL": "State",
+            "PLACEHOLDER": "Kalimantan Timur",
+          },
+        },
+        "SUBMIT_BUTTON": "Order Now",
+        "TITLE": "Billing Details",
+      },
+    },
+    "PANEL": {
+      "SHIPPING_FEE": "Shipping Fee",
+      "SUBTOTAL": "Subtotal",
+      "TITLE": "Order Summary",
+      "TOTAL": "Total",
+    },
+    "STEPS": {
+      "INFORMATION": "Information",
+      "PAYMENT": "Payment",
+      "SHIPPING": "Shipping",
+    },
+    "TITLE": "Checkout",
+  },
+  "FEATURED_PRODUCTS": {
+    "LINK": "View All",
+    "TITLE": "Featured Products",
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Copyright © :year: E-Shop. All Rights Reserved.",
+    "NAVIGATION": {
+      "CATEGORIES_LIST": {
+        "ITEM": {
+          "AUDIO_HEADPHONES": "Audio & Headphones",
+          "CAMERAS_CAMCORDERS": "Cameras & Camcorders",
+          "COMPUTERS_TABLETS": "Computers & Tablets",
+          "GAMING_EQUIPMENT": "Gaming Equipment",
+          "HOME_APPLIANCES": "Home Appliances",
+          "MOBILE_PHONES_ACCESSORIES": "Mobile Phones & Accessories",
+          "TV_HOME_THEATER": "TV & Home Theater",
+        },
+        "TITLE": "Categories",
+      },
+      "FOLLOW_US_LIST": {
+        "ITEM": {
+          "FACEBOOK": "Facebook",
+          "INSTAGRAM": "Instagram",
+          "TWITTER": "Twitter",
+        },
+        "TITLE": "Follow Us",
+      },
+      "LINKS_LIST": {
+        "ITEM": {
+          "BLOG": "Tech Blog",
+          "CART": "Shopping Cart",
+          "ORDER_TRACKING": "Order Tracking",
+          "PRODUCT_GUIDE": "Products Guide",
+          "PRODUCT_LIST": "Products List",
+        },
+        "TITLE": "Links",
+      },
+      "PAYMENTS_LIST": {
+        "ITEM": {
+          "APPLE_PAY": "Apple Pay",
+          "MASTERCARD": "MasterCard",
+          "PAYPAL": "PayPal",
+          "VISA": "Visa",
+        },
+        "TITLE": "Payments",
+      },
+      "SUPPORTS_LIST": {
+        "ITEM": {
+          "ABOUT": "About Us",
+          "CAREERS": "Careers",
+          "HELP_CENTRE": "Help Centre",
+          "PRIVACY": "Privacy Policy",
+          "RETURN": "Return Policy",
+          "STORE_LOCATIONS": "Store Locations",
+        },
+        "TITLE": "Supports",
+      },
+    },
+    "REST_LIST": {
+      "ITEM": {
+        "PRIVACY": "Privacy Policy",
+        "SITEMAP": "Sitemap",
+        "TERMS": "Terms & Condition",
+      },
+    },
+  },
+  "GLOBAL": {
+    "BRAND_NAME": "e-shop",
+    "CONTACT": {
+      "EMAIL": "information@eshop.com.pl",
+      "PHONE": "+1 (555) 123-4567",
+    },
+    "LOCATION": {
+      "CITY": "Anytown",
+      "COUNTRY": "USA",
+      "STREET": "123 Main Street",
+      "SUITE": "Suite 105",
+    },
+  },
+  "HERO": {
+    "CTA_BUTTON": "Shop Now",
+    "DESCRIPTION": "Welcome to e-shop, a place where you can buy 
+everything about electronics. Sale every day!",
+    "TITLE": "Your One-Stop 
+Electronic Market",
+  },
+  "NAV_BAR": {
+    "ACCOUNT": "User",
+    "CART": "Cart",
+    "DEFAULT_LOGOUT": "Sign In",
+    "FORM": {
+      "SEARCH_BAR": {
+        "LABEL": "Search",
+        "PLACEHOLDER": "Search Products...",
+      },
+    },
+    "MENU_BAR": {
+      "BEST_SELLER": "Best Seller",
+      "BLOG": "Blog",
+      "CATEGORIES_HAMBURGER": "All Categories",
+      "CONTACT": "Contact",
+      "LIMITED_SALE": "Limited Sale",
+      "NEW_ARRIVAL": "New Arrival",
+      "PRODUCTS_DROPDOWN": "Products",
+    },
+    "SOCIAL_MEDIA": {
+      "FACEBOOK": "Facebook",
+      "INSTAGRAM": "Instagram",
+      "TWITTER": "Twitter",
+    },
+  },
+  "PRODUCTS_GRID": {
+    "TITLE": "Products",
+  },
+  "PRODUCT_CARD": {
+    "ADD_TO_CART": "Add to Cart",
+    "SHARE": "Share",
+    "WISHLIST": "Add to wishlist",
+  },
+  "PRODUCT_DETAIL": {
+    "BUYING_FORM": {
+      "ADD_TO_CART": "Add to Cart",
+      "BUY_NOW": "Buy Now",
+    },
+    "VALUES": {
+      "SECURE": {
+        "DESCRIPTION": "Receive product first",
+        "TITLE": "100% Guaranteed",
+      },
+      "SHIPPING": {
+        "DESCRIPTION": "Worldwide available",
+        "TITLE": "Free Shipping",
+      },
+      "TITLE": "Product Values",
+      "TRANSPARENT": {
+        "DESCRIPTION": "See return policy",
+        "TITLE": "Return Available",
+      },
+    },
+  },
+  "QUANTITY_SELECTION": {
+    "DECREASE": "decrease quantity",
+    "FIELDSET": "Product Quantity",
+    "INCREASE": "increase quantity",
+    "INPUT_LABEL": "Quantity",
+  },
+  "RELATED_PRODUCTS": {
+    "LINK": "View All",
+    "TITLE": "Related Products",
+  },
+  "SPECIFICATION": {
+    "PROPERTY": {
+      "BRAND": "Brand",
+      "DELIVERY": "Delivery",
+      "SIZE": "Size",
+      "VARIANT": "Variant",
+      "WEIGHT": "Weight",
+    },
+    "SIZE": {
+      "DIMENSIONS": "W x D x H",
+      "UNIT": "centimeters",
+    },
+    "UNKNOWN_PROPERTY": "Unknown",
+  },
+  "UP_TO_DATE_HERO": {
+    "CTA_BUTTON": "Shop Now",
+    "DESCRIPTION": "Browse our wide selection of electronics and 
+find the perfect promo for you from newsletter.",
+    "TITLE": "Get Up-to-Date 
+Gadget Technology",
+  },
+  "VALUES": {
+    "RESPONSIVE": {
+      "DESCRIPTION": "Customer service available 24/7",
+      "TITLE": "Responsive",
+    },
+    "SECURE": {
+      "DESCRIPTION": "Certified marketplace since 2017",
+      "TITLE": "Secure",
+    },
+    "SHIPPING": {
+      "DESCRIPTION": "Free, fast and reliable worldwide",
+      "TITLE": "Shipping",
+    },
+    "TITLE": "Our Values",
+    "TRANSPARENT": {
+      "DESCRIPTION": "Hassle-free return policy",
+      "TITLE": "Transparent",
+    },
+  },
+}
+`;
