@@ -5,7 +5,7 @@ import { CardIconWithDot, UserIcon } from '@e-shop/icons';
 import { Brand } from '../../../brand';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import * as SharedStyled from '../../navbar.styled';
-import type { HasBorderProps } from './user-bar.styled';
+import type { StyledRootProps } from './user-bar.styled';
 
 export type UserCartButtonProps = {
   cartAmount?: number;
@@ -13,7 +13,7 @@ export type UserCartButtonProps = {
   cartBadgeVariant?: 'dot' | 'number';
 };
 
-export type UserBarProps = HasBorderProps & UserCartButtonProps;
+export type UserBarProps = StyledRootProps & UserCartButtonProps;
 
 export function UserBar({
   hasBorder,
@@ -22,15 +22,15 @@ export function UserBar({
   cartBadgeVariant = 'dot',
 }: UserBarProps) {
   return (
-    <Styled.UserBarWrapper data-testid="navbar-user-bar" hasBorder={hasBorder}>
+    <Styled.Root data-testid="navbar-user-bar" hasBorder={hasBorder}>
       <SharedStyled.SubBarContainer>
         <Styled.BrandHeading>
-          <Styled.BrandLink href="/">
+          <Styled.BrandHeadingLink href="/">
             <Brand />
-          </Styled.BrandLink>
+          </Styled.BrandHeadingLink>
         </Styled.BrandHeading>
 
-        <Styled.UserSection>
+        <Styled.Section>
           <Styled.Search as="search">
             <form action="">
               <p>
@@ -45,11 +45,11 @@ export function UserBar({
               </p>
             </form>
           </Styled.Search>
-          <Styled.UserList>
-            <Styled.UserItem>
+          <Styled.List>
+            <Styled.ListItem>
               <Styled.UserCartButton data-testid="cart-button">
-                <Styled.UserItemCartIconWrapper>
-                  <Styled.UserItemIcon
+                <Styled.ListItemCartIconWrapper>
+                  <Styled.ListItemIcon
                     showIndicator={Boolean(
                       cartBadgeVariant === 'dot' && cartItemsCount,
                     )}
@@ -57,34 +57,34 @@ export function UserBar({
                     as={CardIconWithDot}
                   />
                   {cartBadgeVariant === 'number' && cartItemsCount ? (
-                    <Styled.UserItemCartBadge>
+                    <Styled.ListItemCartBadge>
                       {cartItemsCount}
-                    </Styled.UserItemCartBadge>
+                    </Styled.ListItemCartBadge>
                   ) : null}
-                </Styled.UserItemCartIconWrapper>
-                <Styled.UserItemTextWrapper>
-                  <Styled.UserItemText>{EN.NAV_BAR.CART}</Styled.UserItemText>
-                  <Styled.UserItemStrong>
+                </Styled.ListItemCartIconWrapper>
+                <Styled.ListItemTextWrapper>
+                  <Styled.ListItemText>{EN.NAV_BAR.CART}</Styled.ListItemText>
+                  <Styled.ListItemStrong>
                     {getCurrencyFormat(cartAmount)}
-                  </Styled.UserItemStrong>
-                </Styled.UserItemTextWrapper>
+                  </Styled.ListItemStrong>
+                </Styled.ListItemTextWrapper>
               </Styled.UserCartButton>
-            </Styled.UserItem>
-            <Styled.UserItem>
+            </Styled.ListItem>
+            <Styled.ListItem>
               <Styled.UserLoginLink href="/">
-                <Styled.UserItemIcon as={UserIcon} />
-                <Styled.UserItemTextWrapper>
-                  <Styled.UserItemText>
+                <Styled.ListItemIcon as={UserIcon} />
+                <Styled.ListItemTextWrapper>
+                  <Styled.ListItemText>
                     {EN.NAV_BAR.ACCOUNT}
-                  </Styled.UserItemText>
-                  <Styled.UserItemStrong>Account</Styled.UserItemStrong>
-                </Styled.UserItemTextWrapper>
+                  </Styled.ListItemText>
+                  <Styled.ListItemStrong>Account</Styled.ListItemStrong>
+                </Styled.ListItemTextWrapper>
               </Styled.UserLoginLink>
-            </Styled.UserItem>
-          </Styled.UserList>
-        </Styled.UserSection>
+            </Styled.ListItem>
+          </Styled.List>
+        </Styled.Section>
       </SharedStyled.SubBarContainer>
-    </Styled.UserBarWrapper>
+    </Styled.Root>
   );
 }
 

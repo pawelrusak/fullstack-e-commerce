@@ -4,23 +4,23 @@ import styled, { css } from 'styled-components';
 import * as helper from 'polished';
 import { margin, MarginProps } from 'styled-system';
 
-export type HasBorderProps = {
+export type StyledRootProps = {
   hasBorder?: boolean;
 };
 
-const borderBottomCSS = css<HasBorderProps>`
+const rootBorderBottomCSS = css`
   border-bottom: 1px solid
     ${({ theme }) => helper.transparentize(0.75, theme.color.text)};
 `;
 
-export const UserBarWrapper = styled.div<HasBorderProps>`
+export const Root = styled.div<StyledRootProps>`
   padding: 1.5rem 0;
-  ${borderBottomCSS}
+  ${rootBorderBottomCSS}
 
   @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
     padding: 2.4rem 0;
     border-bottom: none;
-    ${({ hasBorder }) => hasBorder && borderBottomCSS}
+    ${({ hasBorder }) => hasBorder && rootBorderBottomCSS}
   }
 `;
 
@@ -29,9 +29,9 @@ export const BrandHeading = styled.h1`
   align-items: center;
 `;
 
-export const BrandLink = styled.a``;
+export const BrandHeadingLink = styled.a``;
 
-export const UserSection = styled.section`
+export const Section = styled.section`
   display: flex;
 `;
 
@@ -48,23 +48,23 @@ export const SearchInput = styled.input`
   display: block;
   width: 33rem;
   border: 1px solid
-    ${({ theme }) => helper.transparentize(0.5, theme.color.text)};
+    ${({ theme }) => helper.transparentize(0.5, theme.color.onSurface)};
 
   padding: 0.8rem 2.4rem;
   line-height: 3.8rem;
   border-radius: 10px;
 
   &::placeholder {
-    color: ${({ theme }) => theme.color.text};
+    color: ${({ theme }) => theme.color.onSurface};
     opacity: 0.75;
   }
 `;
 
-export const UserList = styled.ul`
+export const List = styled.ul`
   display: flex;
 `;
 
-export const UserItem = styled.li``;
+export const ListItem = styled.li``;
 
 const userElementCss = css`
   all: unset;
@@ -100,25 +100,25 @@ export const UserCartButton = styled.button`
   padding-left: 4.8rem;
 `;
 
-const userItemText = css`
+const listItemTextCss = css`
   display: block;
   line-height: 2.4rem;
 `;
 
-export const UserItemText = styled.div`
-  ${userItemText}
+export const ListItemText = styled.div`
+  ${listItemTextCss}
 `;
 
-export const UserItemStrong = styled.strong`
-  ${userItemText}
+export const ListItemStrong = styled.strong`
+  ${listItemTextCss}
   font-weight: ${({ theme }) => theme.fontWeight.bold};
 `;
 
-type StyledUserItemIconProps = {
+type StyledListItemIconProps = {
   showIndicator?: boolean;
 } & MarginProps;
 
-const isUserItemIconPropForwarded = (prop: string) =>
+const isListItemIconPropForwarded = (prop: string) =>
   ![
     'showIndicator',
     'marginTop',
@@ -129,8 +129,8 @@ const isUserItemIconPropForwarded = (prop: string) =>
     'marginX',
   ].includes(prop);
 
-export const UserItemIcon = styled.svg.withConfig<StyledUserItemIconProps>({
-  shouldForwardProp: isUserItemIconPropForwarded,
+export const ListItemIcon = styled.svg.withConfig<StyledListItemIconProps>({
+  shouldForwardProp: isListItemIconPropForwarded,
 })`
   display: inline-block;
 
@@ -145,7 +145,7 @@ export const UserItemIcon = styled.svg.withConfig<StyledUserItemIconProps>({
   }
 `;
 
-export const UserItemCartIconWrapper = styled.div`
+export const ListItemCartIconWrapper = styled.div`
   position: relative;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
@@ -153,7 +153,7 @@ export const UserItemCartIconWrapper = styled.div`
   }
 `;
 
-export const UserItemCartBadge = styled.strong`
+export const ListItemCartBadge = styled.strong`
   position: absolute;
   top: 0;
   right: 0;
@@ -176,7 +176,7 @@ export const UserItemCartBadge = styled.strong`
   color: ${({ theme }) => theme.color.background};
 `;
 
-export const UserItemTextWrapper = styled.span`
+export const ListItemTextWrapper = styled.span`
   display: none;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
