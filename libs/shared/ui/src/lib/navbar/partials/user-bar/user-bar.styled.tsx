@@ -4,18 +4,31 @@ import styled, { css } from 'styled-components';
 import * as helper from 'polished';
 import { margin, MarginProps } from 'styled-system';
 
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
+
+const {
+  userBarRoot: userBarRootToken,
+  userBarListItem: userBarListItemToken,
+  userBarListItemIcon: userBarListItemIconToken,
+  userListItemCartBadge: userListItemCartBadgeToken,
+  userBarListItemStrong: userBarListItemStrongToken,
+  userBarListItemSeparator: userBarListItemSeparatorToken,
+  userBarListItemInteractive: userBarListItemInteractiveToken,
+} = getToken('navbar');
+
 export type StyledRootProps = {
   hasBorder?: boolean;
 };
 
 const rootBorderBottomCSS = css`
-  border-bottom: 1px solid
-    ${({ theme }) => helper.transparentize(0.75, theme.color.text)};
+  border-bottom: 1px solid ${userBarRootToken._base.borderBottomColor};
 `;
 
 export const Root = styled.div<StyledRootProps>`
   padding: 1.5rem 0;
   ${rootBorderBottomCSS}
+  background-color: ${userBarRootToken._base.backgroundColor};
+  color: ${userBarRootToken._base.color};
 
   @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
     padding: 2.4rem 0;
@@ -74,7 +87,20 @@ const userElementCss = css`
   border: none;
   text-decoration: none;
   padding: 0.4rem 4rem;
-  color: ${({ theme }) => theme.color.text};
+`;
+
+const listItemInteractiveCSS = css`
+  cursor: pointer;
+  color: ${userBarListItemInteractiveToken.default.initial.color};
+
+  &:hover,
+  &:focus {
+    color: ${userBarListItemInteractiveToken.default.interact.color};
+
+    * {
+      color: ${userBarListItemInteractiveToken.default.interact.color};
+    }
+  }
 `;
 
 export const UserLoginLink = styled.a`
@@ -82,12 +108,13 @@ export const UserLoginLink = styled.a`
   position: relative;
   padding-right: 0;
 
+  ${listItemInteractiveCSS};
+
   &::before {
     content: ' ';
     width: 1px;
     height: 3.2rem;
-    background-color: ${({ theme }) =>
-      helper.transparentize(0.75, theme.color.text)};
+    background-color: ${userBarListItemSeparatorToken._base.backgroundColor};
     position: absolute;
     left: 0;
     top: 50%;
@@ -97,12 +124,17 @@ export const UserLoginLink = styled.a`
 
 export const UserCartButton = styled.button`
   ${userElementCss}
+  ${listItemInteractiveCSS};
   padding-left: 4.8rem;
 `;
 
 const listItemTextCss = css`
   display: block;
-  line-height: 2.4rem;
+  color: ${userBarListItemToken._base.color};
+  font-family: ${userBarListItemToken._base.fontFamily};
+  font-size: ${userBarListItemToken._base.fontSize};
+  font-weight: ${userBarListItemToken._base.fontWeight};
+  line-height: ${userBarListItemToken._base.lineHeight};
 `;
 
 export const ListItemText = styled.div`
@@ -111,7 +143,7 @@ export const ListItemText = styled.div`
 
 export const ListItemStrong = styled.strong`
   ${listItemTextCss}
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-weight: ${userBarListItemStrongToken._base.fontWeight};
 `;
 
 type StyledListItemIconProps = {
@@ -133,6 +165,7 @@ export const ListItemIcon = styled.svg.withConfig<StyledListItemIconProps>({
   shouldForwardProp: isListItemIconPropForwarded,
 })`
   display: inline-block;
+  color: ${userBarListItemIconToken._base.color};
 
   @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
     margin-right: 2.4rem;
@@ -154,26 +187,28 @@ export const ListItemCartIconWrapper = styled.div`
 `;
 
 export const ListItemCartBadge = styled.strong`
+  display: flex;
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 1.2rem;
-  line-height: 1;
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-
-  height: 1.8rem;
-  min-width: 1.8rem;
+  height: ${userListItemCartBadgeToken._base.height};
+  min-width: ${userListItemCartBadgeToken._base.maxWidth};
   width: 100%;
   max-width: fit-content;
   padding: 0.2rem 0.5rem;
-  display: flex;
+
+  font-family: ${userListItemCartBadgeToken._base.fontFamily};
+  font-size: ${userListItemCartBadgeToken._base.fontSize};
+  font-weight: ${userListItemCartBadgeToken._base.fontWeight};
+  line-height: ${userListItemCartBadgeToken._base.lineHeight};
+
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.color.primary};
   border-radius: 999px;
   transform: translate(30%, -40%);
 
-  color: ${({ theme }) => theme.color.background};
+  color: ${userListItemCartBadgeToken._base.color} !important;
+  background-color: ${userListItemCartBadgeToken._base.backgroundColor};
 `;
 
 export const ListItemTextWrapper = styled.span`
