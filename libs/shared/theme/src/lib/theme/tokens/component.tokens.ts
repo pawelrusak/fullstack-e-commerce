@@ -854,5 +854,58 @@ export const component: AppComponent = {
         },
       },
     },
+    userBarRoot: {
+      _base: {
+        backgroundColor: color.surface,
+        color: color.onSurface,
+        borderBottomColor: colorPalette.neutral[300],
+      },
+    },
+    userBarListItem: {
+      _base: {
+        color: color.onSurface,
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.h6,
+        lineHeight: lineHeights.h6,
+        fontWeight: fontWeight.regular,
+      },
+    },
+    userBarListItemIcon: {
+      _base: {
+        color: color.onSurface,
+      },
+    },
+    userBarListItemStrong: {
+      _base: {
+        fontWeight: fontWeight.bold,
+      },
+    },
+    userBarListItemSeparator: {
+      _base: {
+        backgroundColor: colorPalette.neutral[300],
+      },
+    },
+    userBarListItemInteractive: {
+      default: {
+        initial: {
+          color: color.onSurface,
+        },
+        interact: {
+          color: color.onSurfaceInteract,
+        },
+      },
+    },
+    userListItemCartBadge: {
+      _base: {
+        fontSize: '1.2rem',
+        lineHeight: 1,
+        fontWeight: fontWeight.bold,
+        fontFamily: fontFamily.primary,
+        height: '1.8rem',
+        maxWidth: '1.8rem',
+        color: color.onPrimary,
+        backgroundColor: color.primary,
+      },
+    },
   },
 };

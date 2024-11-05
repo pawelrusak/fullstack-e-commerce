@@ -846,6 +846,59 @@ exports[`Default Theme should match the specified values 1`] = `
           "smMaxWidth": "156rem",
         },
       },
+      "userBarListItem": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+          "fontFamily": "Montserrat, sans-serif",
+          "fontSize": "1.6rem",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+        },
+      },
+      "userBarListItemIcon": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+        },
+      },
+      "userBarListItemInteractive": {
+        "default": {
+          "initial": {
+            "color": "hsl(0, 0%, 19%)",
+          },
+          "interact": {
+            "color": "hsl(7, 100%, 65%)",
+          },
+        },
+      },
+      "userBarListItemSeparator": {
+        "_base": {
+          "backgroundColor": "hsl(0, 0%, 80%)",
+        },
+      },
+      "userBarListItemStrong": {
+        "_base": {
+          "fontWeight": 700,
+        },
+      },
+      "userBarRoot": {
+        "_base": {
+          "backgroundColor": "hsl(0, 0%, 100%)",
+          "borderBottomColor": "hsl(0, 0%, 80%)",
+          "color": "hsl(0, 0%, 19%)",
+        },
+      },
+      "userListItemCartBadge": {
+        "_base": {
+          "backgroundColor": "hsl(7, 100%, 65%)",
+          "color": "hsl(0, 0%, 100%)",
+          "fontFamily": "Montserrat, sans-serif",
+          "fontSize": "1.2rem",
+          "fontWeight": 700,
+          "height": "1.8rem",
+          "lineHeight": 1,
+          "maxWidth": "1.8rem",
+        },
+      },
     },
   },
   "fontFamily": {

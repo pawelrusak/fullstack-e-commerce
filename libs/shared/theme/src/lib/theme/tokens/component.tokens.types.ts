@@ -437,6 +437,21 @@ export type NavbarComponent = {
     productBarRoot: ImmutableBaseToken<'backgroundColor'>;
     productBarListItem: ImmutableBaseToken<TopographyBaseProperties | 'color'>;
     productBarListItemLink: NavbarLinkTokenMap;
+    userBarRoot: ImmutableBaseToken<
+      'backgroundColor' | 'color' | 'borderBottomColor'
+    >;
+    userBarListItem: ImmutableBaseToken<TopographyBaseProperties | 'color'>;
+    userBarListItemIcon: ImmutableBaseToken<'color'>;
+    userBarListItemStrong: ImmutableBaseToken<'fontWeight'>;
+    userBarListItemSeparator: ImmutableBaseToken<'backgroundColor'>;
+    userBarListItemInteractive: NavbarLinkTokenMap;
+    userListItemCartBadge: ImmutableBaseToken<
+      | TopographyBaseProperties
+      | 'color'
+      | 'backgroundColor'
+      | 'height'
+      | 'maxWidth'
+    >;
   };
 };
 

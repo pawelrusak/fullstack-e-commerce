@@ -1710,6 +1710,59 @@ describe('Component theme config', () => {
             },
           },
         },
+        userBarRoot: {
+          _base: {
+            backgroundColor: expect.any(String),
+            color: expect.any(String),
+            borderBottomColor: expect.any(String),
+          },
+        },
+        userBarListItem: {
+          _base: {
+            color: expect.any(String),
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+          },
+        },
+        userBarListItemIcon: {
+          _base: {
+            color: expect.any(String),
+          },
+        },
+        userBarListItemStrong: {
+          _base: {
+            fontWeight: expect.any(Number),
+          },
+        },
+        userBarListItemSeparator: {
+          _base: {
+            backgroundColor: expect.any(String),
+          },
+        },
+        userBarListItemInteractive: {
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+            },
+          },
+        },
+        userListItemCartBadge: {
+          _base: {
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+            fontFamily: expect.any(String),
+            height: expect.any(String),
+            maxWidth: expect.any(String),
+            color: expect.any(String),
+            backgroundColor: expect.any(String),
+          },
+        },
       });
     });
 
@@ -1781,6 +1834,59 @@ describe('Component theme config', () => {
             "_base": {
               "maxWidth": undefined,
               "smMaxWidth": "156rem",
+            },
+          },
+          "userBarListItem": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 400,
+              "lineHeight": 1.5,
+            },
+          },
+          "userBarListItemIcon": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+            },
+          },
+          "userBarListItemInteractive": {
+            "default": {
+              "initial": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "color": "hsl(7, 100%, 65%)",
+              },
+            },
+          },
+          "userBarListItemSeparator": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 80%)",
+            },
+          },
+          "userBarListItemStrong": {
+            "_base": {
+              "fontWeight": 700,
+            },
+          },
+          "userBarRoot": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 100%)",
+              "borderBottomColor": "hsl(0, 0%, 80%)",
+              "color": "hsl(0, 0%, 19%)",
+            },
+          },
+          "userListItemCartBadge": {
+            "_base": {
+              "backgroundColor": "hsl(7, 100%, 65%)",
+              "color": "hsl(0, 0%, 100%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.2rem",
+              "fontWeight": 700,
+              "height": "1.8rem",
+              "lineHeight": 1,
+              "maxWidth": "1.8rem",
             },
           },
         }
