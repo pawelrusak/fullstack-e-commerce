@@ -8,7 +8,7 @@ import type { InternalPanelTitleProps } from './panel.utils';
 
 const { root: rootToken, title: titleToken } = getToken('panel');
 
-export const SectionWrapper = styled.section`
+export const RootSection = styled.section`
   background-color: ${rootToken._base.backgroundColor};
   border-radius: 2.5rem;
   padding: 4rem;
