@@ -33,4 +33,7 @@ export type {
   HeadingLevel,
   HeadingLevelModifier,
   HeadingLevelNamespaceKey,
+  PanelTitleSize,
+  PanelTitleSizeModifier,
+  PanelTitleSizeNamespaceKey,
 } from './component.tokens.types';

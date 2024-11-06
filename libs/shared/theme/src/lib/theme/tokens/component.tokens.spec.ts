@@ -1618,7 +1618,7 @@ describe('Component theme config', () => {
         root: {
           _base: {
             maxWidth: undefined,
-            smMaxWidth: '156rem',
+            smMaxWidth: expect.any(String),
           },
         },
       });
@@ -1887,6 +1887,76 @@ describe('Component theme config', () => {
               "height": "1.8rem",
               "lineHeight": 1,
               "maxWidth": "1.8rem",
+            },
+          },
+        }
+      `);
+    });
+  });
+
+  describe('Component Panel theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { panel } = component;
+
+      expect(panel).toEqual({
+        root: {
+          _base: {
+            backgroundColor: expect.any(String),
+          },
+        },
+        title: {
+          _base: {
+            color: expect.any(String),
+          },
+          'size-medium': {
+            initial: {
+              fontFamily: expect.any(String),
+              fontSize: expect.any(String),
+              lineHeight: expect.any(Number),
+              fontWeight: expect.any(Number),
+            },
+          },
+          'size-small': {
+            initial: {
+              fontFamily: expect.any(String),
+              fontSize: expect.any(String),
+              lineHeight: expect.any(Number),
+              fontWeight: expect.any(Number),
+            },
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { panel } = component;
+
+      expect(panel).toMatchInlineSnapshot(`
+        {
+          "root": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 96%)",
+            },
+          },
+          "title": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+            },
+            "size-medium": {
+              "initial": {
+                "fontFamily": "Poppins, sans-serif",
+                "fontSize": "2.4rem",
+                "fontWeight": 600,
+                "lineHeight": 1.25,
+              },
+            },
+            "size-small": {
+              "initial": {
+                "fontFamily": "Montserrat, sans-serif",
+                "fontSize": "2.0rem",
+                "fontWeight": 700,
+                "lineHeight": 1.5,
+              },
             },
           },
         }

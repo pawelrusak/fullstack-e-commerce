@@ -908,4 +908,32 @@ export const component: AppComponent = {
       },
     },
   },
+  panel: {
+    root: {
+      _base: {
+        backgroundColor: color.secondarySurface,
+      },
+    },
+    title: {
+      _base: {
+        color: color.onSecondarySurface,
+      },
+      'size-medium': {
+        initial: {
+          fontFamily: fontFamily.secondary,
+          fontSize: fontSizes.h3,
+          lineHeight: lineHeights.h3,
+          fontWeight: fontWeight.semiBold,
+        },
+      },
+      'size-small': {
+        initial: {
+          fontFamily: fontFamily.primary,
+          fontSize: fontSizes.h5,
+          lineHeight: lineHeights.h5,
+          fontWeight: fontWeight.bold,
+        },
+      },
+    },
+  },
 };

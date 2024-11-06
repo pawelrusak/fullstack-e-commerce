@@ -455,6 +455,35 @@ export type NavbarComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                     Panel Component Tokens
+ * **********************************************************************************************
+ */
+// Panel Title Size Tokens
+export type PanelTitleSizeNamespaceKey = 'size';
+
+export type PanelTitleSize = 'small' | 'medium';
+
+export type PanelTitleSizeModifier =
+  `${PanelTitleSizeNamespaceKey}-${PanelTitleSize}`;
+
+type PanelTitleComponentSizeProperty = AvailableComponentToken<
+  'fontSize' | 'fontWeight' | 'fontFamily' | 'lineHeight'
+>;
+
+type PanelTitleRootSizeTokenMap = ModifierStateMap<
+  PanelTitleSizeModifier,
+  StateStyleMap<InitialState, PanelTitleComponentSizeProperty>
+>;
+
+export type PanelComponent = {
+  panel: {
+    root: ImmutableBaseToken<'backgroundColor'>;
+    title: ImmutableBaseToken<'color'> & PanelTitleRootSizeTokenMap;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -469,4 +498,5 @@ export type AppComponent = BrandComponent &
   HeadingComponent &
   HeroSectionComponent &
   LayoutWrapperComponent &
-  NavbarComponent;
+  NavbarComponent &
+  PanelComponent;

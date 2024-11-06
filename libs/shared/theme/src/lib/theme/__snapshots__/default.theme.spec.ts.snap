@@ -900,6 +900,34 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
     },
+    "panel": {
+      "root": {
+        "_base": {
+          "backgroundColor": "hsl(0, 0%, 96%)",
+        },
+      },
+      "title": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+        },
+        "size-medium": {
+          "initial": {
+            "fontFamily": "Poppins, sans-serif",
+            "fontSize": "2.4rem",
+            "fontWeight": 600,
+            "lineHeight": 1.25,
+          },
+        },
+        "size-small": {
+          "initial": {
+            "fontFamily": "Montserrat, sans-serif",
+            "fontSize": "2.0rem",
+            "fontWeight": 700,
+            "lineHeight": 1.5,
+          },
+        },
+      },
+    },
   },
   "fontFamily": {
     "montserrat": "Montserrat, sans-serif",
