@@ -1963,4 +1963,40 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Paragraph theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { paragraph } = component;
+
+      expect(paragraph).toEqual({
+        root: {
+          _base: {
+            color: expect.any(String),
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { paragraph } = component;
+
+      expect(paragraph).toMatchInlineSnapshot(`
+        {
+          "root": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 400,
+              "lineHeight": 1.5,
+            },
+          },
+        }
+      `);
+    });
+  });
 });

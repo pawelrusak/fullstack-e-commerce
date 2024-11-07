@@ -936,4 +936,15 @@ export const component: AppComponent = {
       },
     },
   },
+  paragraph: {
+    root: {
+      _base: {
+        color: color.onBackground,
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.body,
+        lineHeight: lineHeights.body,
+        fontWeight: fontWeight.regular,
+      },
+    },
+  },
 };

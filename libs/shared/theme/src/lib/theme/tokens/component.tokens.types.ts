@@ -483,6 +483,16 @@ export type PanelComponent = {
     title: ImmutableBaseToken<'color'> & PanelTitleRootSizeTokenMap;
   };
 };
+/**
+ * **********************************************************************************************
+ *                                   Paragraph Component Tokens
+ * **********************************************************************************************
+ */
+export type ParagraphComponent = {
+  paragraph: {
+    root: ImmutableBaseToken<'color' | TopographyBaseProperties>;
+  };
+};
 
 export type AppComponent = BrandComponent &
   ButtonComponent &
@@ -499,4 +509,5 @@ export type AppComponent = BrandComponent &
   HeroSectionComponent &
   LayoutWrapperComponent &
   NavbarComponent &
-  PanelComponent;
+  PanelComponent &
+  ParagraphComponent;
