@@ -6,7 +6,7 @@ import { CardIcon, HeartIcon, ShareIcon } from '@e-shop/icons';
 type ProductCardProps = React.ComponentPropsWithRef<'button'>;
 
 export function ProductCard(props: ProductCardProps) {
-  return <Styled.CardArticle {...props} />;
+  return <Styled.RootArticle {...props} />;
 }
 
 type CardActionButton = Omit<

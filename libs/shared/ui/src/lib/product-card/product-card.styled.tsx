@@ -13,7 +13,7 @@ export const ButtonsSection = styled.section`
   visibility: hidden;
 `;
 
-export const CardArticle = styled.article`
+export const RootArticle = styled.article`
   padding: 2.4rem;
   border-radius: 1rem;
   width: fit-content;
