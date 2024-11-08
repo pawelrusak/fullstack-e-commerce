@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import * as polished from 'polished';
 
 export const ButtonsSection = styled.section`
@@ -48,34 +48,6 @@ export const Thumbnail = styled.img`
 export const ThumbnailContainer = styled.div`
   position: relative;
   margin-bottom: 4rem;
-`;
-
-type ButtonProps = {
-  primary?: boolean;
-};
-
-export const Button = styled.button<ButtonProps>`
-  all: unset;
-  border: 1px solid ${({ theme }) => theme.color.primary};
-  color: ${({ theme }) => theme.color.primary};
-  background: ${({ theme }) => theme.color.background};
-  height: 4.8rem;
-  width: 4.8rem;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 999px;
-  cursor: pointer;
-
-  ${({ primary }) =>
-    primary &&
-    css`
-      background: ${({ theme }) => theme.color.primary};
-      color: ${({ theme }) => theme.color.background};
-    `}
-
-  :hover, :focus {
-    opacity: 0.9;
-  }
 `;
 
 export const PriceOffBox = styled.strong`
