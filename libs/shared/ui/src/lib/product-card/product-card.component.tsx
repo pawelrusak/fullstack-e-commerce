@@ -1,6 +1,7 @@
 import { VisuallyHidden } from '@reach/visually-hidden';
 import { EN } from '@e-shop/i18n';
 import * as Styled from './product-card.styled';
+import { IconButton } from '../icon-button';
 import { CardIcon, HeartIcon, ShareIcon } from '@e-shop/icons';
 
 type ProductCardProps = React.ComponentPropsWithRef<'button'>;
@@ -10,48 +11,48 @@ export function ProductCard(props: ProductCardProps) {
 }
 
 type CardActionButton = Omit<
-  React.ComponentPropsWithRef<'button'>,
+  React.ComponentPropsWithoutRef<'button'>,
   'children'
 > & {
   screenReaderText?: string;
   primary?: boolean;
 };
 
-function ShareButton(props: CardActionButton) {
+function ShareButton({ primary, ...props }: CardActionButton) {
   return (
-    <Styled.Button {...props}>
+    <IconButton variant={primary ? 'primary' : 'outline-primary'} {...props}>
       <VisuallyHidden>
         {props.screenReaderText || EN.PRODUCT_CARD.SHARE}
       </VisuallyHidden>
       <ShareIcon aria-hidden />
-    </Styled.Button>
+    </IconButton>
   );
 }
 
 function AddToCartButton({ primary = true, ...props }: CardActionButton = {}) {
   return (
-    <Styled.Button {...props} primary={primary}>
+    <IconButton variant={primary ? 'primary' : 'outline-primary'}>
       <VisuallyHidden>
         {props.screenReaderText || EN.PRODUCT_CARD.ADD_TO_CART}
       </VisuallyHidden>
       <CardIcon aria-hidden />
-    </Styled.Button>
+    </IconButton>
   );
 }
 
-function AddToWishlistButton(props: CardActionButton) {
+function AddToWishlistButton({ primary, ...props }: CardActionButton) {
   return (
-    <Styled.Button {...props}>
+    <IconButton variant={primary ? 'primary' : 'outline-primary'}>
       <VisuallyHidden>
         {props.screenReaderText || EN.PRODUCT_CARD.WISHLIST}
       </VisuallyHidden>
       <HeartIcon aria-hidden />
-    </Styled.Button>
+    </IconButton>
   );
 }
 
 ProductCard.Title = Styled.Title;
-ProductCard.Button = Styled.Button;
+ProductCard.Button = IconButton;
 ProductCard.Header = Styled.Header;
 ProductCard.ShareButton = ShareButton;
 ProductCard.Category = Styled.Category;
