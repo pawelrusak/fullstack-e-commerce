@@ -22,13 +22,13 @@ export const RootArticle = styled.article`
   color: ${({ theme }) => theme.color.text};
   border: 1px solid transparent;
 
-  :hover,
-  :focus {
+  &:hover,
+  &:focus {
     border-color: ${({ theme }) =>
       polished.transparentize(0.75, theme.color.text)};
   }
 
-  :hover ${ButtonsSection}, :focus ${ButtonsSection} {
+  &:hover ${ButtonsSection}, &:focus ${ButtonsSection} {
     visibility: visible;
   }
 `;
