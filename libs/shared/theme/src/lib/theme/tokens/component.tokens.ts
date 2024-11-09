@@ -947,4 +947,16 @@ export const component: AppComponent = {
       },
     },
   },
+  badge: {
+    root: {
+      _base: {
+        backgroundColor: color.primary,
+        color: color.onPrimary,
+        fontFamily: fontFamily.secondary,
+        fontWeight: fontWeight.bold,
+        lineHeight: lineHeights.h6,
+        fontSize: fontSizes.h6,
+      },
+    },
+  },
 };

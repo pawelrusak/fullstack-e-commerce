@@ -1999,4 +1999,42 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Badge theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { badge } = component;
+
+      expect(badge).toEqual({
+        root: {
+          _base: {
+            backgroundColor: expect.any(String),
+            color: expect.any(String),
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+            lineHeight: expect.any(Number),
+            fontSize: expect.any(String),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { badge } = component;
+
+      expect(badge).toMatchInlineSnapshot(`
+        {
+          "root": {
+            "_base": {
+              "backgroundColor": "hsl(7, 100%, 65%)",
+              "color": "hsl(0, 0%, 100%)",
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 700,
+              "lineHeight": 1.5,
+            },
+          },
+        }
+      `);
+    });
+  });
 });

@@ -59,6 +59,18 @@ exports[`Default Theme should match the specified values 1`] = `
     "text": "hsl(0, 0%, 19%)",
   },
   "component": {
+    "badge": {
+      "root": {
+        "_base": {
+          "backgroundColor": "hsl(7, 100%, 65%)",
+          "color": "hsl(0, 0%, 100%)",
+          "fontFamily": "Poppins, sans-serif",
+          "fontSize": "1.6rem",
+          "fontWeight": 700,
+          "lineHeight": 1.5,
+        },
+      },
+    },
     "brand": {
       "svgDot": {
         "primary": {
