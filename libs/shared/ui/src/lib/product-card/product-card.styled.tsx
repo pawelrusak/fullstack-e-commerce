@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import * as polished from 'polished';
+import { Badge } from '../badge';
 
 export const ButtonsSection = styled.section`
   position: absolute;
@@ -50,16 +51,11 @@ export const ThumbnailContainer = styled.div`
   margin-bottom: 4rem;
 `;
 
-export const PriceOffBox = styled.strong`
+export const PriceOffBox = styled(Badge)`
   position: absolute;
   top: 0;
   right: 0;
   transform: translateY(16px) translateX(-16px);
-  background: ${({ theme }) => theme.color.primary};
-  color: ${({ theme }) => theme.color.background};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-  padding: 0.6rem 2rem;
-  border-radius: 0.5rem;
 `;
 
 export const Category = styled.p`
