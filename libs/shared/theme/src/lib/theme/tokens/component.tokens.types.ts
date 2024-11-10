@@ -508,6 +508,33 @@ export type BadgeComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                  Product Card Component Tokens
+ * **********************************************************************************************
+ */
+type ProductCardRootTokenMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<
+    InitialState | InteractState,
+    AvailableComponentToken<'borderColor'>
+  >
+>;
+
+export type ProductCardComponent = {
+  productCard: {
+    root: ImmutableBaseToken<'backgroundColor' | 'color'> &
+      ProductCardRootTokenMap;
+    thumbnail: ImmutableBaseToken<'backgroundColor'>;
+    category: ImmutableBaseToken<
+      TopographyBaseProperties | 'letterSpacing' | 'textTransform'
+    >;
+    title: ImmutableBaseToken<TopographyBaseProperties | 'lineClamp'>;
+    currentPrice: ImmutableBaseToken<TopographyBaseProperties | 'color'>;
+    pastPrice: ImmutableBaseToken<TopographyBaseProperties | 'color'>;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -525,4 +552,5 @@ export type AppComponent = BrandComponent &
   NavbarComponent &
   PanelComponent &
   ParagraphComponent &
-  BadgeComponent;
+  BadgeComponent &
+  ProductCardComponent;

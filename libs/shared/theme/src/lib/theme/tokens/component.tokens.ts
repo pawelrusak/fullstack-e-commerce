@@ -959,4 +959,62 @@ export const component: AppComponent = {
       },
     },
   },
+  productCard: {
+    root: {
+      _base: {
+        color: color.onSurface,
+        backgroundColor: color.surface,
+      },
+      default: {
+        initial: {
+          borderColor: 'transparent',
+        },
+        interact: {
+          borderColor: colorPalette.neutral[300],
+        },
+      },
+    },
+    thumbnail: {
+      _base: {
+        backgroundColor: '#d0d0d0',
+      },
+    },
+    category: {
+      _base: {
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.h8,
+        lineHeight: lineHeights.h8,
+        fontWeight: fontWeight.regular,
+        letterSpacing: '0.3rem',
+        textTransform: 'uppercase',
+      },
+    },
+    title: {
+      _base: {
+        fontFamily: fontFamily.secondary,
+        fontSize: fontSizes.h4,
+        fontWeight: fontWeight.semiBold,
+        lineHeight: lineHeights.h4,
+        lineClamp: 2,
+      },
+    },
+    currentPrice: {
+      _base: {
+        color: color.primary,
+        fontFamily: fontFamily.secondary,
+        fontSize: fontSizes.h3,
+        fontWeight: fontWeight.semiBold,
+        lineHeight: lineHeights.h3,
+      },
+    },
+    pastPrice: {
+      _base: {
+        color: colorPalette.neutral[500],
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.h7,
+        lineHeight: lineHeights.h7,
+        fontWeight: fontWeight.regular,
+      },
+    },
+  },
 };

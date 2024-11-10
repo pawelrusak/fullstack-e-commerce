@@ -2037,4 +2037,134 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Product Card theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { productCard } = component;
+
+      expect(productCard).toEqual({
+        root: {
+          _base: {
+            color: expect.any(String),
+            backgroundColor: expect.any(String),
+          },
+          default: {
+            initial: {
+              borderColor: expect.any(String),
+            },
+            interact: {
+              borderColor: expect.any(String),
+            },
+          },
+        },
+        thumbnail: {
+          _base: {
+            backgroundColor: expect.any(String),
+          },
+        },
+        category: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+            letterSpacing: expect.any(String),
+            textTransform: expect.any(String),
+          },
+        },
+        title: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            fontWeight: expect.any(Number),
+            lineHeight: expect.any(Number),
+            lineClamp: expect.any(Number),
+          },
+        },
+        currentPrice: {
+          _base: {
+            color: expect.any(String),
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            fontWeight: expect.any(Number),
+            lineHeight: expect.any(Number),
+          },
+        },
+        pastPrice: {
+          _base: {
+            color: expect.any(String),
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { productCard } = component;
+
+      expect(productCard).toMatchInlineSnapshot(`
+        {
+          "category": {
+            "_base": {
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.4rem",
+              "fontWeight": 400,
+              "letterSpacing": "0.3rem",
+              "lineHeight": 1.4285714285714286,
+              "textTransform": "uppercase",
+            },
+          },
+          "currentPrice": {
+            "_base": {
+              "color": "hsl(7, 100%, 65%)",
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "2.4rem",
+              "fontWeight": 600,
+              "lineHeight": 1.25,
+            },
+          },
+          "pastPrice": {
+            "_base": {
+              "color": "hsl(0, 0%, 59%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 400,
+              "lineHeight": 1.5,
+            },
+          },
+          "root": {
+            "_base": {
+              "backgroundColor": "hsl(0, 0%, 100%)",
+              "color": "hsl(0, 0%, 19%)",
+            },
+            "default": {
+              "initial": {
+                "borderColor": "transparent",
+              },
+              "interact": {
+                "borderColor": "hsl(0, 0%, 80%)",
+              },
+            },
+          },
+          "thumbnail": {
+            "_base": {
+              "backgroundColor": "#d0d0d0",
+            },
+          },
+          "title": {
+            "_base": {
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 600,
+              "lineClamp": 2,
+              "lineHeight": 1.5,
+            },
+          },
+        }
+      `);
+    });
+  });
 });
