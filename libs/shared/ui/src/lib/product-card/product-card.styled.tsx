@@ -1,6 +1,15 @@
 import styled from 'styled-components';
-import * as polished from 'polished';
 import { Badge } from '../badge';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
+
+const {
+  root: rootToken,
+  thumbnail: thumbnailToken,
+  category: categoryToken,
+  title: titleToken,
+  currentPrice: currentPriceToken,
+  pastPrice: pastPriceToken,
+} = getToken('productCard');
 
 export const ButtonsSection = styled.section`
   position: absolute;
@@ -21,12 +30,13 @@ export const RootArticle = styled.article`
   max-width: 29rem;
   position: relative;
   color: ${({ theme }) => theme.color.text};
-  border: 1px solid transparent;
+  color: ${rootToken._base.color};
+  background-color: ${rootToken._base.backgroundColor};
+  border: 1px solid ${rootToken.default.initial.borderColor};
 
   &:hover,
   &:focus {
-    border-color: ${({ theme }) =>
-      polished.transparentize(0.75, theme.color.text)};
+    border-color: ${rootToken.default.interact.borderColor};
   }
 
   &:hover ${ButtonsSection}, &:focus ${ButtonsSection} {
@@ -41,7 +51,7 @@ export const Thumbnail = styled.img`
   object-fit: contain;
 
   &[src$='placeholder-view.svg'] {
-    background-color: #d0d0d0;
+    background-color: ${thumbnailToken._base.backgroundColor};
     border-radius: 1rem;
   }
 `;
@@ -60,21 +70,24 @@ export const PriceOffBox = styled(Badge)`
 
 export const Category = styled.p`
   display: inline-block;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  line-height: 2rem;
+  text-transform: ${categoryToken._base.textTransform};
+  font-family: ${categoryToken._base.fontFamily};
+  font-size: ${categoryToken._base.fontSize};
+  line-height: ${categoryToken._base.lineHeight};
+  font-weight: ${categoryToken._base.fontWeight};
   margin-bottom: 1.6rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: ${categoryToken._base.letterSpacing};
 `;
 
 export const Header = styled.header``;
 
 export const Title = styled.h3`
-  font-size: 2rem;
-  line-height: 3rem;
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  font-family: ${titleToken._base.fontFamily};
+  font-size: ${titleToken._base.fontSize};
+  line-height: ${titleToken._base.lineHeight};
+  font-weight: ${titleToken._base.fontWeight};
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: ${titleToken._base.lineClamp};
   -webkit-box-orient: vertical;
   overflow: hidden;
 `;
@@ -85,16 +98,19 @@ export const PriceContainer = styled.section`
 
 export const CurrentPrice = styled.strong`
   display: inline-block;
-  font-size: 2.4rem;
-  line-height: 3rem;
-  color: ${({ theme }) => theme.color.primary};
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  color: ${currentPriceToken._base.color};
+  font-family: ${currentPriceToken._base.fontFamily};
+  font-size: ${currentPriceToken._base.fontSize};
+  line-height: ${currentPriceToken._base.lineHeight};
+  font-weight: ${currentPriceToken._base.fontWeight};
   margin-right: 0.8rem;
 `;
 
 export const PastPrice = styled.span`
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  opacity: 0.5;
+  color: ${pastPriceToken._base.color};
+  font-size: ${pastPriceToken._base.fontSize};
+  line-height: ${pastPriceToken._base.lineHeight};
+  font-weight: ${pastPriceToken._base.fontWeight};
+  line-height: ${pastPriceToken._base.lineHeight};
   text-decoration: line-through;
 `;
