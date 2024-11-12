@@ -29,7 +29,6 @@ export const RootArticle = styled.article`
   width: fit-content;
   max-width: 29rem;
   position: relative;
-  color: ${({ theme }) => theme.color.text};
   color: ${rootToken._base.color};
   background-color: ${rootToken._base.backgroundColor};
   border: 1px solid ${rootToken.default.initial.borderColor};
