@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ProgressStepper } from './progress-stepper.component';
-import { EN } from '@e-shop/i18n';
 
 export default {
   component: ProgressStepper,
@@ -10,17 +9,17 @@ export default {
       <ProgressStepper.List>
         <ProgressStepper.ListItem isActive>
           <ProgressStepper.ListItemLink href="#">
-            {EN.CHECKOUT.STEPS.INFORMATION}
+            Information
           </ProgressStepper.ListItemLink>
         </ProgressStepper.ListItem>
         <ProgressStepper.ListItem>
           <ProgressStepper.ListItemLink href="#">
-            {EN.CHECKOUT.STEPS.SHIPPING}
+            Shipping
           </ProgressStepper.ListItemLink>
         </ProgressStepper.ListItem>
         <ProgressStepper.ListItem>
           <ProgressStepper.ListItemLink href="#">
-            {EN.CHECKOUT.STEPS.PAYMENT}
+            Payment
           </ProgressStepper.ListItemLink>
         </ProgressStepper.ListItem>
       </ProgressStepper.List>
