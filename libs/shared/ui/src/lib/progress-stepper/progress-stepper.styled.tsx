@@ -2,12 +2,12 @@
 
 import styled, { css } from 'styled-components';
 
-export const SectionWrapper = styled.section`
+export const RootSection = styled.section`
   display: flex;
   justify-content: center;
 `;
 
-export const Link = styled.a`
+export const ListItemLink = styled.a`
   display: inline-block;
   color: ${({ theme }) => theme.color.text};
   text-decoration: none;
@@ -42,7 +42,7 @@ export const ListItem = styled.li<StyledListItemProps>`
     visibility: ${({ isActive }) => (isActive ? 'visible' : 'hidden')};
   }
 
-  & ${Link} {
+  & ${ListItemLink} {
     color: ${({ isActive, theme }) =>
       isActive ? theme.color.text : '#cbcbcb'};
 
