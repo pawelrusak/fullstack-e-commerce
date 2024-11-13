@@ -9,7 +9,6 @@ export const RootSection = styled.section`
 
 export const ListItemLink = styled.a`
   display: inline-block;
-  color: ${({ theme }) => theme.color.text};
   text-decoration: none;
   font-weight: ${({ theme }) => theme.fontWeight.semiBold};
   font-size: 2.4rem;
@@ -58,6 +57,7 @@ export const ListItem = styled.li<StyledListItemProps>`
     }
 
     &::before {
+      /* link underline */
       visibility: ${({ isActive }) => (isActive ? 'visible' : 'hidden')};
     }
   }
