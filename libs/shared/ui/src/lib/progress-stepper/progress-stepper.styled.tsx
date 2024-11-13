@@ -1,6 +1,13 @@
 'use client';
 
 import styled, { css } from 'styled-components';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
+
+const {
+  listItemLink: listItemLinkToken,
+  listItemLinkUnderline: listItemLinkUnderlineToken,
+  counter: counterToken,
+} = getToken('progressStepper');
 
 export const RootSection = styled.section`
   display: flex;
@@ -10,10 +17,10 @@ export const RootSection = styled.section`
 export const ListItemLink = styled.a`
   display: inline-block;
   text-decoration: none;
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
-  font-size: 2.4rem;
-  line-height: 3rem;
-  font-family: ${({ theme }) => theme.fontFamily.poppins};
+  font-family: ${listItemLinkToken._base.fontFamily};
+  font-weight: ${listItemLinkToken._base.fontWeight};
+  font-size: ${listItemLinkToken._base.fontSize};
+  line-height: ${listItemLinkToken._base.lineHeight};
 
   padding: 1rem 0;
 
@@ -26,7 +33,7 @@ export const ListItemLink = styled.a`
     left: 0;
     right: 0;
     height: 0.4rem;
-    background-color: ${({ theme }) => theme.color.primary};
+    background-color: ${listItemLinkUnderlineToken._base.backgroundColor};
   }
 `;
 
@@ -44,17 +51,19 @@ export const ListItem = styled.li<StyledListItemProps>`
   }
 
   & ${ListItemLink} {
-    color: ${({ isActive, theme }) =>
-      isActive ? theme.color.text : '#cbcbcb'};
+    color: ${({ isActive }) =>
+      isActive
+        ? listItemLinkToken.default.initial.color
+        : listItemLinkToken.default.inactive.color};
 
     &:hover {
-      ${({ isActive, theme }) =>
+      ${({ isActive }) =>
         isActive
           ? css`
               pointer-events: none;
             `
           : css`
-              color: ${theme.color.primary};
+              color: ${listItemLinkToken.default.interact.color};
             `}
     }
 
@@ -79,14 +88,15 @@ export const OrderedList = styled.ol`
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.6rem;
-      line-height: 2.4rem;
-      font-weight: ${({ theme }) => theme.fontWeight.bold};
-      color: ${({ theme }) => theme.color.background};
-      background-color: ${({ theme }) => theme.color.primary};
+      font-family: ${counterToken._base.fontFamily};
+      font-size: ${counterToken._base.fontSize};
+      line-height: ${counterToken._base.lineHeight};
+      font-weight: ${counterToken._base.fontWeight};
+      color: ${counterToken._base.color};
+      background-color: ${counterToken._base.backgroundColor};
       border-radius: 999px;
-      height: 5rem;
-      width: 5rem;
+      height: ${counterToken._base.height};
+      width: ${counterToken._base.width};
       margin-right: 1.6rem;
     }
   }
