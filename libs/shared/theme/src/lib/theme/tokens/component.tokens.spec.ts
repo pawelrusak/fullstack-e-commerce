@@ -2167,4 +2167,94 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Progress Stepper theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { progressStepper } = component;
+
+      expect(progressStepper).toEqual({
+        listItemLink: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+          },
+          default: {
+            initial: {
+              color: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+            },
+            inactive: {
+              color: expect.any(String),
+            },
+          },
+        },
+        counter: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+            backgroundColor: expect.any(String),
+            color: expect.any(String),
+            height: expect.any(String),
+            width: expect.any(String),
+          },
+        },
+        listItemLinkUnderline: {
+          _base: {
+            backgroundColor: expect.any(String),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { progressStepper } = component;
+
+      expect(progressStepper).toMatchInlineSnapshot(`
+        {
+          "counter": {
+            "_base": {
+              "backgroundColor": "hsl(7, 100%, 65%)",
+              "color": "hsl(0, 0%, 100%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 700,
+              "height": "5rem",
+              "lineHeight": 1.5,
+              "width": "5rem",
+            },
+          },
+          "listItemLink": {
+            "_base": {
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "2.4rem",
+              "fontWeight": 600,
+              "lineHeight": 1.25,
+            },
+            "default": {
+              "inactive": {
+                "color": "hsl(0, 0%, 80%)",
+              },
+              "initial": {
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "color": "hsl(7, 100%, 65%)",
+              },
+            },
+          },
+          "listItemLinkUnderline": {
+            "_base": {
+              "backgroundColor": "hsl(7, 100%, 65%)",
+            },
+          },
+        }
+      `);
+    });
+  });
 });

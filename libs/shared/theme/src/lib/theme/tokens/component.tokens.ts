@@ -1017,4 +1017,42 @@ export const component: AppComponent = {
       },
     },
   },
+  progressStepper: {
+    listItemLink: {
+      _base: {
+        fontFamily: fontFamily.secondary,
+        fontSize: fontSizes.h3,
+        lineHeight: lineHeights.h3,
+        fontWeight: fontWeight.semiBold,
+      },
+      default: {
+        initial: {
+          color: color.onBackground,
+        },
+        interact: {
+          color: color.onBackgroundInteract,
+        },
+        inactive: {
+          color: colorPalette.neutral[300],
+        },
+      },
+    },
+    counter: {
+      _base: {
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.h6,
+        lineHeight: lineHeights.h6,
+        fontWeight: fontWeight.bold,
+        backgroundColor: color.primary,
+        color: color.onPrimary,
+        height: '5rem',
+        width: '5rem',
+      },
+    },
+    listItemLinkUnderline: {
+      _base: {
+        backgroundColor: color.primary,
+      },
+    },
+  },
 };

@@ -535,6 +535,35 @@ export type ProductCardComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                Progress Stepper Component Tokens
+ * **********************************************************************************************
+ */
+
+type ProgressStepperCListItemLinkTokenMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<
+    InitialState | InteractState | 'inactive',
+    AvailableComponentToken<'color'>
+  >
+>;
+
+export type ProgressStepperComponent = {
+  progressStepper: {
+    listItemLink: ImmutableBaseToken<TopographyBaseProperties> &
+      ProgressStepperCListItemLinkTokenMap;
+    listItemLinkUnderline: ImmutableBaseToken<'backgroundColor'>;
+    counter: ImmutableBaseToken<
+      | TopographyBaseProperties
+      | 'backgroundColor'
+      | 'color'
+      | 'height'
+      | 'width'
+    >;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -553,4 +582,5 @@ export type AppComponent = BrandComponent &
   PanelComponent &
   ParagraphComponent &
   BadgeComponent &
-  ProductCardComponent;
+  ProductCardComponent &
+  ProgressStepperComponent;
