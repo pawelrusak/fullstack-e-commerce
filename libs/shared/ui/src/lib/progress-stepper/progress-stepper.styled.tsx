@@ -15,7 +15,7 @@ export const ListItemLink = styled.a`
   line-height: 3rem;
   font-family: ${({ theme }) => theme.fontFamily.poppins};
 
-  padding: 1.2rem 0;
+  padding: 1rem 0;
 
   position: relative;
 
@@ -36,6 +36,8 @@ type StyledListItemProps = {
 
 export const ListItem = styled.li<StyledListItemProps>`
   height: 100%;
+  display: flex;
+  align-items: center;
 
   &:before {
     visibility: ${({ isActive }) => (isActive ? 'visible' : 'hidden')};
