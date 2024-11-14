@@ -1055,4 +1055,39 @@ export const component: AppComponent = {
       },
     },
   },
+  quantitySelection: {
+    input: {
+      _base: {
+        fontFamily: fontFamily.secondary,
+        fontSize: fontSizes.h2,
+        lineHeight: lineHeights.h2,
+        fontWeight: fontWeight.semiBold,
+        color: color.onBackground,
+      },
+      default: {
+        initial: {
+          borderColor: undefined,
+        },
+        interact: {
+          borderColor: colorPalette.neutral[300],
+        },
+      },
+    },
+    button: {
+      default: {
+        initial: {
+          backgroundColor: 'transparent',
+          color: color.onBackground,
+        },
+        'initial-alter': {
+          color: color.onBackground,
+          backgroundColor: colorPalette.neutral[300],
+        },
+        interact: {
+          backgroundColor: color.primary,
+          color: color.onPrimary,
+        },
+      },
+    },
+  },
 };

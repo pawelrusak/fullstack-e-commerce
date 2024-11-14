@@ -2257,4 +2257,88 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Quantity Selection theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { quantitySelection } = component;
+
+      expect(quantitySelection).toEqual({
+        input: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+            color: expect.any(String),
+          },
+          default: {
+            initial: {
+              borderColor: undefined,
+            },
+            interact: {
+              borderColor: expect.any(String),
+            },
+          },
+        },
+        button: {
+          default: {
+            initial: {
+              color: expect.any(String),
+              backgroundColor: 'transparent',
+            },
+            'initial-alter': {
+              color: expect.any(String),
+              backgroundColor: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+              backgroundColor: expect.any(String),
+            },
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { quantitySelection } = component;
+
+      expect(quantitySelection).toMatchInlineSnapshot(`
+        {
+          "button": {
+            "default": {
+              "initial": {
+                "backgroundColor": "transparent",
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "initial-alter": {
+                "backgroundColor": "hsl(0, 0%, 80%)",
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "backgroundColor": "hsl(7, 100%, 65%)",
+                "color": "hsl(0, 0%, 100%)",
+              },
+            },
+          },
+          "input": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "3.6rem",
+              "fontWeight": 600,
+              "lineHeight": 1.2777777777777777,
+            },
+            "default": {
+              "initial": {
+                "borderColor": undefined,
+              },
+              "interact": {
+                "borderColor": "hsl(0, 0%, 80%)",
+              },
+            },
+          },
+        }
+      `);
+    });
+  });
 });

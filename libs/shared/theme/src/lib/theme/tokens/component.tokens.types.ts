@@ -540,7 +540,6 @@ export type ProductCardComponent = {
  *                                Progress Stepper Component Tokens
  * **********************************************************************************************
  */
-
 type ProgressStepperCListItemLinkTokenMap = ModifierStateMap<
   DefaultModifier,
   StateStyleMap<
@@ -564,6 +563,35 @@ export type ProgressStepperComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                               Quantity Selection Component Tokens
+ * **********************************************************************************************
+ */
+type QuantitySelectionButtonTokenMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<
+    InitialState | 'initial-alter' | InteractState,
+    AvailableComponentToken<'backgroundColor' | 'color'>
+  >
+>;
+
+type QuantitySelectionInputTokenMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<
+    InitialState | InteractState,
+    AvailableComponentToken<'borderColor'>
+  >
+>;
+
+export type QuantitySelectionComponent = {
+  quantitySelection: {
+    button: QuantitySelectionButtonTokenMap;
+    input: ImmutableBaseToken<TopographyBaseProperties | 'color'> &
+      QuantitySelectionInputTokenMap;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -583,4 +611,5 @@ export type AppComponent = BrandComponent &
   ParagraphComponent &
   BadgeComponent &
   ProductCardComponent &
-  ProgressStepperComponent;
+  ProgressStepperComponent &
+  QuantitySelectionComponent;

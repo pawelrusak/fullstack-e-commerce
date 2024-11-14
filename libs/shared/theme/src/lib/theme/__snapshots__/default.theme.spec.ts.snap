@@ -1047,6 +1047,41 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
     },
+    "quantitySelection": {
+      "button": {
+        "default": {
+          "initial": {
+            "backgroundColor": "transparent",
+            "color": "hsl(0, 0%, 19%)",
+          },
+          "initial-alter": {
+            "backgroundColor": "hsl(0, 0%, 80%)",
+            "color": "hsl(0, 0%, 19%)",
+          },
+          "interact": {
+            "backgroundColor": "hsl(7, 100%, 65%)",
+            "color": "hsl(0, 0%, 100%)",
+          },
+        },
+      },
+      "input": {
+        "_base": {
+          "color": "hsl(0, 0%, 19%)",
+          "fontFamily": "Poppins, sans-serif",
+          "fontSize": "3.6rem",
+          "fontWeight": 600,
+          "lineHeight": 1.2777777777777777,
+        },
+        "default": {
+          "initial": {
+            "borderColor": undefined,
+          },
+          "interact": {
+            "borderColor": "hsl(0, 0%, 80%)",
+          },
+        },
+      },
+    },
   },
   "fontFamily": {
     "montserrat": "Montserrat, sans-serif",
