@@ -1055,7 +1055,7 @@ exports[`Default Theme should match the specified values 1`] = `
             "color": "hsl(0, 0%, 19%)",
           },
           "initial-alter": {
-            "backgroundColor": "hsl(0, 0%, 80%)",
+            "backgroundColor": "hsl(0, 0%, 96%)",
             "color": "hsl(0, 0%, 19%)",
           },
           "interact": {
@@ -1074,7 +1074,7 @@ exports[`Default Theme should match the specified values 1`] = `
         },
         "default": {
           "initial": {
-            "borderColor": undefined,
+            "borderColor": "transparent",
           },
           "interact": {
             "borderColor": "hsl(0, 0%, 80%)",

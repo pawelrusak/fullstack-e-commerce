@@ -2273,7 +2273,7 @@ describe('Component theme config', () => {
           },
           default: {
             initial: {
-              borderColor: undefined,
+              borderColor: expect.any(String),
             },
             interact: {
               borderColor: expect.any(String),
@@ -2284,7 +2284,7 @@ describe('Component theme config', () => {
           default: {
             initial: {
               color: expect.any(String),
-              backgroundColor: 'transparent',
+              backgroundColor: expect.any(String),
             },
             'initial-alter': {
               color: expect.any(String),
@@ -2311,7 +2311,7 @@ describe('Component theme config', () => {
                 "color": "hsl(0, 0%, 19%)",
               },
               "initial-alter": {
-                "backgroundColor": "hsl(0, 0%, 80%)",
+                "backgroundColor": "hsl(0, 0%, 96%)",
                 "color": "hsl(0, 0%, 19%)",
               },
               "interact": {
@@ -2330,7 +2330,7 @@ describe('Component theme config', () => {
             },
             "default": {
               "initial": {
-                "borderColor": undefined,
+                "borderColor": "transparent",
               },
               "interact": {
                 "borderColor": "hsl(0, 0%, 80%)",

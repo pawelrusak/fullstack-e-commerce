@@ -1066,7 +1066,7 @@ export const component: AppComponent = {
       },
       default: {
         initial: {
-          borderColor: undefined,
+          borderColor: 'transparent',
         },
         interact: {
           borderColor: colorPalette.neutral[300],
@@ -1081,7 +1081,7 @@ export const component: AppComponent = {
         },
         'initial-alter': {
           color: color.onBackground,
-          backgroundColor: colorPalette.neutral[300],
+          backgroundColor: colorPalette.neutral[50],
         },
         interact: {
           backgroundColor: color.primary,
