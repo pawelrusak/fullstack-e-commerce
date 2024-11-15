@@ -45,8 +45,7 @@ export function QuantitySelection({
         </Styled.Button>
         <Styled.Button
           type="button"
-          // TODO remove this hart code color
-          backgroundColor="#f4f4f4"
+          isAlter
           order="3"
           onClick={handleIncrease}
           aria-controls={inputId}

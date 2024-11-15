@@ -2,6 +2,10 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
+
+const { button: buttonToken, input: inputToken } =
+  getToken('quantitySelection');
 
 export const Fieldset = styled.fieldset`
   max-width: 31rem;
@@ -17,6 +21,7 @@ export const Wrapper = styled.div`
 type StyledButtonProps = {
   backgroundColor?: React.CSSProperties['backgroundColor'];
   order?: React.CSSProperties['order'];
+  isAlter?: boolean;
 };
 
 export const Button = styled.button<StyledButtonProps>`
@@ -31,15 +36,21 @@ export const Button = styled.button<StyledButtonProps>`
   max-width: 5.6rem;
   cursor: pointer;
   order: ${({ order }) => order || 0};
-  background-color: ${({ backgroundColor }) =>
-    backgroundColor || 'transparent'};
+  color: ${({ isAlter }) =>
+    isAlter
+      ? buttonToken.default['initial-alter'].color
+      : buttonToken.default.initial.color};
+  background-color: ${({ isAlter }) =>
+    isAlter
+      ? buttonToken.default['initial-alter'].backgroundColor
+      : buttonToken.default.initial.backgroundColor};
 
   transition: all 0.2s ease-in;
 
   &:hover:enabled,
   &:focus:enabled {
-    background-color: ${({ theme }) => theme.color.primary};
-    color: ${({ theme }) => theme.color.background};
+    background-color: ${buttonToken.default.interact.backgroundColor};
+    color: ${buttonToken.default.interact.color};
   }
 
   &:disabled {
@@ -50,21 +61,22 @@ export const Button = styled.button<StyledButtonProps>`
 export const Input = styled.input`
   all: unset;
   appearance: textfield;
-  font-size: 3.6rem;
-  line-height: 4.6rem;
+  color: ${inputToken._base.color};
+  font-family: ${inputToken._base.fontFamily};
+  font-size: ${inputToken._base.fontSize};
+  line-height: ${inputToken._base.lineHeight};
+  font-weight: ${inputToken._base.fontWeight};
   width: 4ch;
   margin: 0 1rem;
   text-align: center;
   padding: 0.2rem;
   height: 100%;
-  border: 1px solid transparent;
+  border: 1px solid ${inputToken.default.initial.borderColor};
   border-radius: 1rem;
   cursor: text;
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
-  font-family: ${({ theme }) => theme.fontFamily.poppins};
 
   &:hover,
   &:focus {
-    border-color: #cbcbcb;
+    border-color: ${inputToken.default.interact.borderColor};
   }
 `;
