@@ -7,12 +7,12 @@ import { getComponentThemeToken as getToken } from '@e-shop/theme';
 const { button: buttonToken, input: inputToken } =
   getToken('quantitySelection');
 
-export const Fieldset = styled.fieldset`
+export const RootFieldset = styled.fieldset`
   max-width: 31rem;
   width: 100%;
 `;
 
-export const Wrapper = styled.div`
+export const ControlsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

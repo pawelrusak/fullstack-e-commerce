@@ -28,11 +28,11 @@ export function QuantitySelection({
     });
 
   return (
-    <Styled.Fieldset>
+    <Styled.RootFieldset>
       <VisuallyHidden as="legend">
         {EN.QUANTITY_SELECTION.FIELDSET}
       </VisuallyHidden>
-      <Styled.Wrapper>
+      <Styled.ControlsWrapper>
         <Styled.Button
           type="button"
           onClick={handleDecrease}
@@ -70,8 +70,8 @@ export function QuantitySelection({
             data-testid={DATA_TEST_ID.INPUT}
           />
         </div>
-      </Styled.Wrapper>
-    </Styled.Fieldset>
+      </Styled.ControlsWrapper>
+    </Styled.RootFieldset>
   );
 }
 
