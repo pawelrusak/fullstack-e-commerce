@@ -7,12 +7,12 @@ import type { FindAllResponseBody } from '@e-shop/types/response';
 
 export default {
   /**
-   * his action returns all shipping methods
+   * This action returns all shipping methods
    *
    * @route GET /api/v1/shippings
    * @access Public
    */
-  async findAll(request, response: Response<FindAllResponseBody>) {
+  async findAll(_, response: Response<FindAllResponseBody>) {
     const shippingMethods = await ShippingMethod.find();
 
     response.status(STATUS_CODE.OK).send({
