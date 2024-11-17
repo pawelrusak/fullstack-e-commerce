@@ -38,7 +38,7 @@ export function RadioGroupTiles(props: RadioGroupTilesProps) {
 
   return (
     <RadioGroupTilesProvider radioGroupName={props.radioGroupName}>
-      <Styled.FieldsetWrapper
+      <Styled.RootFieldset
         aria-required={ariaRequired}
         aria-invalid={invalid}
         role={role}

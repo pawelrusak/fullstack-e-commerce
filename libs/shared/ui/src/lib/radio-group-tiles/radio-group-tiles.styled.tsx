@@ -63,7 +63,7 @@ export const Image = styled.img`
   margin: 0.5rem 0;
 `;
 
-export const FieldsetWrapper = styled.fieldset`
+export const RootFieldset = styled.fieldset`
   display: flex;
   flex-wrap: wrap;
   gap: 2.2rem;
