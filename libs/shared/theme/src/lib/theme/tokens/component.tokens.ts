@@ -1090,4 +1090,46 @@ export const component: AppComponent = {
       },
     },
   },
+  radioGroupTiles: {
+    tile: {
+      default: {
+        initial: {
+          color: color.onSurface,
+          backgroundColor: color.surface,
+          borderColor: colorPalette.neutral[300],
+        },
+        interact: {
+          color: color.onSurface,
+          backgroundColor: color.primary,
+          borderColor: color.primary,
+        },
+        invalid: {
+          color: color.onSurface,
+          backgroundColor: lighten(0.45, color.error),
+          borderColor: color.error,
+        },
+        checked: {
+          color: color.onSurface,
+          backgroundColor: lighten(0.3, color.primary),
+          borderColor: color.primary,
+        },
+      },
+    },
+    label: {
+      _base: {
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.h5,
+        lineHeight: lineHeights.h5,
+        fontWeight: fontWeight.bold,
+      },
+    },
+    additionalText: {
+      _base: {
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.h5,
+        lineHeight: lineHeights.h5,
+        fontWeight: fontWeight.regular,
+      },
+    },
+  },
 };

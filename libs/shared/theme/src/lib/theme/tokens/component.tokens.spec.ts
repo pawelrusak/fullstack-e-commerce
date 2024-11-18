@@ -2341,4 +2341,102 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Radio Group Tiles theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { radioGroupTiles } = component;
+
+      expect(radioGroupTiles).toEqual({
+        tile: {
+          default: {
+            initial: {
+              color: expect.any(String),
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+            },
+            interact: {
+              color: expect.any(String),
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+            },
+            invalid: {
+              color: expect.any(String),
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+            },
+            checked: {
+              color: expect.any(String),
+              backgroundColor: expect.any(String),
+              borderColor: expect.any(String),
+            },
+          },
+        },
+        label: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+          },
+        },
+        additionalText: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { radioGroupTiles } = component;
+
+      expect(radioGroupTiles).toMatchInlineSnapshot(`
+        {
+          "additionalText": {
+            "_base": {
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 400,
+              "lineHeight": 1.5,
+            },
+          },
+          "label": {
+            "_base": {
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 700,
+              "lineHeight": 1.5,
+            },
+          },
+          "tile": {
+            "default": {
+              "checked": {
+                "backgroundColor": "#ffe9e6",
+                "borderColor": "hsl(7, 100%, 65%)",
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "initial": {
+                "backgroundColor": "hsl(0, 0%, 100%)",
+                "borderColor": "hsl(0, 0%, 80%)",
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "interact": {
+                "backgroundColor": "hsl(7, 100%, 65%)",
+                "borderColor": "hsl(7, 100%, 65%)",
+                "color": "hsl(0, 0%, 19%)",
+              },
+              "invalid": {
+                "backgroundColor": "#fcd9e0",
+                "borderColor": "hsl(348, 83%, 47%)",
+                "color": "hsl(0, 0%, 19%)",
+              },
+            },
+          },
+        }
+      `);
+    });
+  });
 });

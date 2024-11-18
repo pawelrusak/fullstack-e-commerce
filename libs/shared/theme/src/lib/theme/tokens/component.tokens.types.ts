@@ -5,6 +5,7 @@ import type {
   ModifierStateMap,
   DefaultModifier,
   InteractState,
+  CheckedState,
   InitialState,
   StateStyleMap,
   Size,
@@ -148,7 +149,7 @@ export type CheckboxComponentPalette = AvailableComponentToken<
 type CheckboxRootTokenMap = ModifierStateMap<
   DefaultModifier,
   StateStyleMap<
-    InitialState | InteractState | 'checked',
+    InitialState | InteractState | CheckedState,
     CheckboxComponentPalette
   >
 >;
@@ -592,6 +593,27 @@ export type QuantitySelectionComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                               Radio Group Tiles Component Tokens
+ * **********************************************************************************************
+ */
+type RadioGroupTilesTileTokenMap = ModifierStateMap<
+  DefaultModifier,
+  StateStyleMap<
+    InitialState | InteractState | CheckedState | 'invalid',
+    AvailableComponentToken<'color' | 'backgroundColor' | 'borderColor'>
+  >
+>;
+
+export type RadioGroupTilesComponent = {
+  radioGroupTiles: {
+    tile: RadioGroupTilesTileTokenMap;
+    label: ImmutableBaseToken<TopographyBaseProperties>;
+    additionalText: ImmutableBaseToken<TopographyBaseProperties>;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -612,4 +634,5 @@ export type AppComponent = BrandComponent &
   BadgeComponent &
   ProductCardComponent &
   ProgressStepperComponent &
-  QuantitySelectionComponent;
+  QuantitySelectionComponent &
+  RadioGroupTilesComponent;
