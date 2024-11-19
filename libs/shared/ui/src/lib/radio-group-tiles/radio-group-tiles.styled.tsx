@@ -72,9 +72,6 @@ export const RootFieldset = styled.fieldset`
     border-color: ${({ theme }) => theme.color.error};
     background-color: ${({ theme }) =>
       polished.lighten(0.45, theme.color.error)};
-  }
-
-  &[aria-invalid='true'] :is(${Label}, ${AdditionalText}) {
     color: ${({ theme }) => theme.color.error};
   }
 `;
