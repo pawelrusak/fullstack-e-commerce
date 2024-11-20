@@ -57,6 +57,8 @@ export type InitialState = 'initial';
 
 export type InteractState = 'interact';
 
+export type CheckedState = 'checked';
+
 export type StateStyleMap<
   TState extends string = InitialState,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
