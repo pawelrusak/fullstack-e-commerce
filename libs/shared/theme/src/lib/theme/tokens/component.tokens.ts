@@ -1099,17 +1099,17 @@ export const component: AppComponent = {
           borderColor: colorPalette.neutral[300],
         },
         interact: {
-          color: color.onSurface,
-          backgroundColor: color.primary,
+          color: undefined,
+          backgroundColor: undefined,
           borderColor: color.primary,
         },
         invalid: {
-          color: color.onSurface,
+          color: color.error,
           backgroundColor: lighten(0.45, color.error),
           borderColor: color.error,
         },
         checked: {
-          color: color.onSurface,
+          color: undefined,
           backgroundColor: lighten(0.3, color.primary),
           borderColor: color.primary,
         },

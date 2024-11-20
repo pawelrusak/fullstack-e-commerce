@@ -1104,7 +1104,7 @@ exports[`Default Theme should match the specified values 1`] = `
           "checked": {
             "backgroundColor": "#ffe9e6",
             "borderColor": "hsl(7, 100%, 65%)",
-            "color": "hsl(0, 0%, 19%)",
+            "color": undefined,
           },
           "initial": {
             "backgroundColor": "hsl(0, 0%, 100%)",
@@ -1112,14 +1112,14 @@ exports[`Default Theme should match the specified values 1`] = `
             "color": "hsl(0, 0%, 19%)",
           },
           "interact": {
-            "backgroundColor": "hsl(7, 100%, 65%)",
+            "backgroundColor": undefined,
             "borderColor": "hsl(7, 100%, 65%)",
-            "color": "hsl(0, 0%, 19%)",
+            "color": undefined,
           },
           "invalid": {
             "backgroundColor": "#fcd9e0",
             "borderColor": "hsl(348, 83%, 47%)",
-            "color": "hsl(0, 0%, 19%)",
+            "color": "hsl(348, 83%, 47%)",
           },
         },
       },

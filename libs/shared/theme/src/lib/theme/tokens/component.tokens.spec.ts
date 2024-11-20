@@ -2355,8 +2355,8 @@ describe('Component theme config', () => {
               borderColor: expect.any(String),
             },
             interact: {
-              color: expect.any(String),
-              backgroundColor: expect.any(String),
+              color: undefined,
+              backgroundColor: undefined,
               borderColor: expect.any(String),
             },
             invalid: {
@@ -2365,7 +2365,7 @@ describe('Component theme config', () => {
               borderColor: expect.any(String),
             },
             checked: {
-              color: expect.any(String),
+              color: undefined,
               backgroundColor: expect.any(String),
               borderColor: expect.any(String),
             },
@@ -2416,7 +2416,7 @@ describe('Component theme config', () => {
               "checked": {
                 "backgroundColor": "#ffe9e6",
                 "borderColor": "hsl(7, 100%, 65%)",
-                "color": "hsl(0, 0%, 19%)",
+                "color": undefined,
               },
               "initial": {
                 "backgroundColor": "hsl(0, 0%, 100%)",
@@ -2424,14 +2424,14 @@ describe('Component theme config', () => {
                 "color": "hsl(0, 0%, 19%)",
               },
               "interact": {
-                "backgroundColor": "hsl(7, 100%, 65%)",
+                "backgroundColor": undefined,
                 "borderColor": "hsl(7, 100%, 65%)",
-                "color": "hsl(0, 0%, 19%)",
+                "color": undefined,
               },
               "invalid": {
                 "backgroundColor": "#fcd9e0",
                 "borderColor": "hsl(348, 83%, 47%)",
-                "color": "hsl(0, 0%, 19%)",
+                "color": "hsl(348, 83%, 47%)",
               },
             },
           },
