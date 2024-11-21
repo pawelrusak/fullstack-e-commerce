@@ -7,7 +7,7 @@ import image3 from './storybook-assets/gallery-image-3.png';
 export default {
   component: Gallery,
   title: 'Gallery',
-  render: (args) => <Gallery images={[image1, image2, image3]} />,
+  render: () => <Gallery images={[image1, image2, image3]} />,
 } satisfies Meta<typeof Gallery>;
 
 type Story = StoryObj<typeof Gallery>;
