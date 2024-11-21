@@ -1,9 +1,13 @@
 'use client';
 
-import styled, { css } from 'styled-components';
-import * as polished from 'polished';
+import styled from 'styled-components';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
 
-const borderColor = '#cbcbcb';
+const {
+  tile: tileToken,
+  label: labelToken,
+  additionalText: additionalTextToken,
+} = getToken('radioGroupTiles');
 
 export const Input = styled.input`
   position: absolute;
@@ -18,7 +22,9 @@ export const Tile = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 1px solid ${borderColor};
+  color: ${tileToken.default.initial.color};
+  background-color: ${tileToken.default.initial.backgroundColor};
+  border: 1px solid ${tileToken.default.initial.borderColor};
   width: 19rem;
   min-height: 19rem;
   border-radius: 1rem;
@@ -26,13 +32,15 @@ export const Tile = styled.div`
   padding: 2rem;
 
   &:has(${Input}:checked) {
-    background-color: ${({ theme }) =>
-      polished.lighten(0.3, theme.color.primary)};
-    border-color: ${({ theme }) => theme.color.primary};
+    color: ${tileToken.default.checked.color};
+    background-color: ${tileToken.default.checked.backgroundColor};
+    border-color: ${tileToken.default.checked.borderColor};
   }
 
   &:has(${Input}:hover) {
-    border-color: ${({ theme }) => theme.color.primary};
+    color: ${tileToken.default.interact.color};
+    background-color: ${tileToken.default.interact.backgroundColor};
+    border-color: ${tileToken.default.interact.borderColor};
   }
 
   &:has(${Input}:focus) {
@@ -40,19 +48,20 @@ export const Tile = styled.div`
   }
 `;
 
-const textStyles = css`
-  font-size: 2rem;
-  line-height: 3rem;
-`;
-
 export const Label = styled.label`
   display: block;
   font-weight: ${({ theme }) => theme.fontWeight.bold};
-  ${textStyles}
+  font-family: ${labelToken._base.fontFamily};
+  font-size: ${labelToken._base.fontSize};
+  line-height: ${labelToken._base.lineHeight};
+  font-weight: ${labelToken._base.fontWeight};
 `;
 
 export const AdditionalText = styled.p`
-  ${textStyles}
+  font-family: ${additionalTextToken._base.fontFamily};
+  font-size: ${additionalTextToken._base.fontSize};
+  line-height: ${additionalTextToken._base.lineHeight};
+  font-weight: ${additionalTextToken._base.fontWeight};
 `;
 
 export const Image = styled.img`
@@ -69,9 +78,8 @@ export const RootFieldset = styled.fieldset`
   gap: 2.2rem;
 
   &[aria-invalid='true'] ${Tile} {
-    border-color: ${({ theme }) => theme.color.error};
-    background-color: ${({ theme }) =>
-      polished.lighten(0.45, theme.color.error)};
-    color: ${({ theme }) => theme.color.error};
+    color: ${tileToken.default.invalid.color};
+    background-color: ${tileToken.default.invalid.backgroundColor};
+    border-color: ${tileToken.default.invalid.borderColor};
   }
 `;
