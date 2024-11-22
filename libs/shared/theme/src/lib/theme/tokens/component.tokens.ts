@@ -821,7 +821,7 @@ export const component: AppComponent = {
           color: color.onSurface,
         },
         interact: {
-          color: lighten(0.4, color.onSurface),
+          color: color.onSurfaceInteract,
         },
       },
     },

@@ -1787,7 +1787,7 @@ describe('Component theme config', () => {
                 "color": "hsl(0, 0%, 19%)",
               },
               "interact": {
-                "color": "#969696",
+                "color": "hsl(7, 100%, 65%)",
               },
             },
           },
