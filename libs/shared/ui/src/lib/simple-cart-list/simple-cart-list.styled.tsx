@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const List = styled.ul`
+export const RootList = styled.ul`
   list-style: none;
 `;
 
@@ -21,13 +21,13 @@ const itemTextCss = css`
   line-height: 3rem;
 `;
 
-export const ItemName = styled.p`
+export const ListItemName = styled.p`
   grid-area: name;
 
   ${itemTextCss}
 `;
 
-export const ItemQuantity = styled.strong`
+export const ListItemQuantity = styled.strong`
   grid-area: quantity;
 
   text-align: center;
@@ -36,7 +36,7 @@ export const ItemQuantity = styled.strong`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
 `;
 
-export const ItemPrice = styled.strong`
+export const ListItemPrice = styled.strong`
   grid-area: price;
   margin-left: 0.5rem;
 
