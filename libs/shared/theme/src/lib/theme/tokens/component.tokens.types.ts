@@ -614,6 +614,22 @@ export type RadioGroupTilesComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                Simple Cart List Component Tokens
+ * **********************************************************************************************
+ */
+
+export type SimpleCartListComponent = {
+  simpleCartList: {
+    root: ImmutableBaseToken<'color'>;
+    listItem: ImmutableBaseToken<'borderColor'>;
+    listItemName: ImmutableBaseToken<TopographyBaseProperties>;
+    listItemPrice: ImmutableBaseToken<TopographyBaseProperties>;
+    listItemQuantity: ImmutableBaseToken<TopographyBaseProperties>;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -635,4 +651,5 @@ export type AppComponent = BrandComponent &
   ProductCardComponent &
   ProgressStepperComponent &
   QuantitySelectionComponent &
-  RadioGroupTilesComponent;
+  RadioGroupTilesComponent &
+  SimpleCartListComponent;

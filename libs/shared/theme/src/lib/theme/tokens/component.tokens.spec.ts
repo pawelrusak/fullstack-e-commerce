@@ -2439,4 +2439,90 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Simple Cart List theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { simpleCartList } = component;
+
+      expect(simpleCartList).toEqual({
+        root: {
+          _base: {
+            color: expect.any(String),
+          },
+        },
+        listItem: {
+          _base: {
+            borderColor: expect.any(String),
+          },
+        },
+        listItemName: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+          },
+        },
+        listItemQuantity: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+          },
+        },
+        listItemPrice: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { simpleCartList } = component;
+
+      expect(simpleCartList).toMatchInlineSnapshot(`
+        {
+          "listItem": {
+            "_base": {
+              "borderColor": "#c3c3c3",
+            },
+          },
+          "listItemName": {
+            "_base": {
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 400,
+              "lineHeight": 1.5,
+            },
+          },
+          "listItemPrice": {
+            "_base": {
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 600,
+              "lineHeight": 1.5,
+            },
+          },
+          "listItemQuantity": {
+            "_base": {
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 700,
+              "lineHeight": 1.5,
+            },
+          },
+          "root": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+            },
+          },
+        }
+      `);
+    });
+  });
 });

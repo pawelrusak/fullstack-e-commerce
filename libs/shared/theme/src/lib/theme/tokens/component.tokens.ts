@@ -1132,4 +1132,40 @@ export const component: AppComponent = {
       },
     },
   },
+  simpleCartList: {
+    root: {
+      _base: {
+        color: color.onSurface,
+      },
+    },
+    listItem: {
+      _base: {
+        borderColor: '#c3c3c3',
+      },
+    },
+    listItemName: {
+      _base: {
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.body,
+        lineHeight: lineHeights.body,
+        fontWeight: fontWeight.regular,
+      },
+    },
+    listItemQuantity: {
+      _base: {
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.h5,
+        lineHeight: lineHeights.h5,
+        fontWeight: fontWeight.bold,
+      },
+    },
+    listItemPrice: {
+      _base: {
+        fontFamily: fontFamily.secondary,
+        fontSize: fontSizes.h4,
+        lineHeight: lineHeights.h4,
+        fontWeight: fontWeight.semiBold,
+      },
+    },
+  },
 };
