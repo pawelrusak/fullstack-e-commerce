@@ -1,7 +1,17 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
+
+const {
+  root: rootToken,
+  listItem: listItemToken,
+  listItemName: listItemNameToken,
+  listItemPrice: listItemPriceToken,
+  listItemQuantity: listItemQuantityToken,
+} = getToken('simpleCartList');
 
 export const RootList = styled.ul`
   list-style: none;
+  color: ${rootToken._base.color};
 `;
 
 export const ListItem = styled.li`
@@ -12,34 +22,34 @@ export const ListItem = styled.li`
   padding: 2rem 0;
 
   & + & {
-    border-top: 1px solid #c3c3c3;
+    border-top: 1px solid ${listItemToken._base.borderColor};
   }
-`;
-
-const itemTextCss = css`
-  font-size: 2rem;
-  line-height: 3rem;
 `;
 
 export const ListItemName = styled.p`
   grid-area: name;
 
-  ${itemTextCss}
+  font-family: ${listItemNameToken._base.fontFamily};
+  font-weight: ${listItemNameToken._base.fontWeight};
+  font-size: ${listItemNameToken._base.fontSize};
+  line-height: ${listItemNameToken._base.lineHeight};
 `;
 
 export const ListItemQuantity = styled.strong`
   grid-area: quantity;
-
   text-align: center;
-
-  ${itemTextCss}
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-family: ${listItemQuantityToken._base.fontFamily};
+  font-weight: ${listItemQuantityToken._base.fontWeight};
+  font-size: ${listItemQuantityToken._base.fontSize};
+  line-height: ${listItemQuantityToken._base.lineHeight};
 `;
 
 export const ListItemPrice = styled.strong`
   grid-area: price;
   margin-left: 0.5rem;
 
-  ${itemTextCss}
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  font-family: ${listItemPriceToken._base.fontFamily};
+  font-weight: ${listItemPriceToken._base.fontWeight};
+  font-size: ${listItemPriceToken._base.fontSize};
+  line-height: ${listItemPriceToken._base.lineHeight};
 `;
