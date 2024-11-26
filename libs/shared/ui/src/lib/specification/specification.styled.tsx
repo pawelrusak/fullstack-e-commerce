@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-export const Container = styled.dl`
+export const RootDescriptionList = styled.dl`
   font-family: ${({ theme }) => theme.fontFamily.poppins};
 
   & dd {
@@ -20,7 +20,7 @@ export const Container = styled.dl`
   }
 `;
 
-export const Property = styled.dt`
+export const DescriptionProperty = styled.dt`
   padding-right: 1rem;
 
   font-weight: ${({ theme }) => theme.fontWeight.bold};
@@ -29,7 +29,7 @@ export const Property = styled.dt`
   line-height: 3rem;
 `;
 
-export const Details = styled.dd`
+export const DescriptionDetails = styled.dd`
   font-size: 2rem;
   line-height: 3rem;
   display: flex;

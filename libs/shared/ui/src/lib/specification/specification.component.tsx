@@ -3,10 +3,10 @@ import * as Styled from './specification.styled';
 export type SpecificationProps = React.ComponentPropsWithRef<'dl'>;
 
 export function Specification(props: SpecificationProps) {
-  return <Styled.Container {...props} />;
+  return <Styled.RootDescriptionList {...props} />;
 }
 
-Specification.Property = Styled.Property;
-Specification.Details = Styled.Details;
+Specification.Property = Styled.DescriptionProperty;
+Specification.Details = Styled.DescriptionDetails;
 
 export default Specification;
