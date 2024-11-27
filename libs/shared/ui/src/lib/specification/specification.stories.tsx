@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import type { Meta, StoryObj } from '@storybook/react';
-import { EN } from '@e-shop/i18n';
 import { Specification } from './specification.component';
 import { Button } from '../button';
 
-// @todo add sizes to the button component
+// TODO add sizes to the button component
 const SmallButton = styled(Button)`
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -23,34 +22,24 @@ export default {
   title: 'Specification',
   render: () => (
     <Specification>
-      <Specification.Property>
-        {EN.SPECIFICATION.PROPERTY.BRAND}
-      </Specification.Property>
+      <Specification.Property>Brand</Specification.Property>
       <Specification.Details>NexSUS Tech Company</Specification.Details>
 
-      <Specification.Property>
-        {EN.SPECIFICATION.PROPERTY.SIZE}
-      </Specification.Property>
+      <Specification.Property>Size</Specification.Property>
       <Specification.Details>
-        15.7 x 11.1 x 1.0 inches ({EN.SPECIFICATION.SIZE.DIMENSIONS})
+        15.7 x 11.1 x 1.0 inches (W x D x H)
       </Specification.Details>
 
-      <Specification.Property>
-        {EN.SPECIFICATION.PROPERTY.WEIGHT}
-      </Specification.Property>
+      <Specification.Property>Weight</Specification.Property>
       <Specification.Details>6.28 pounds</Specification.Details>
 
-      <Specification.Property>
-        {EN.SPECIFICATION.PROPERTY.DELIVERY}
-      </Specification.Property>
+      <Specification.Property>Delivery</Specification.Property>
       <Specification.Details>Worldwide</Specification.Details>
 
-      <Specification.Property>
-        {EN.SPECIFICATION.PROPERTY.VARIANT}
-      </Specification.Property>
+      <Specification.Property>Variant</Specification.Property>
       <Specification.Details>
         {BUTTONS.map(({ label, ...args }) => (
-          <SmallButton key={label} variant="outline" {...args}>
+          <SmallButton size="medium" key={label} variant="outline" {...args}>
             {label}
           </SmallButton>
         ))}
