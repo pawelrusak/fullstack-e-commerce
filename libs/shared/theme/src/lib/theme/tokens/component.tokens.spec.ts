@@ -2525,4 +2525,58 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Specification theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { specification } = component;
+
+      expect(specification).toEqual({
+        property: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+            color: expect.any(String),
+          },
+        },
+        details: {
+          _base: {
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+            fontWeight: expect.any(Number),
+            color: expect.any(String),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { specification } = component;
+
+      expect(specification).toMatchInlineSnapshot(`
+        {
+          "details": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 400,
+              "lineHeight": 1.5,
+            },
+          },
+          "property": {
+            "_base": {
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Poppins, sans-serif",
+              "fontSize": "2.0rem",
+              "fontWeight": 600,
+              "lineHeight": 1.5,
+            },
+          },
+        }
+      `);
+    });
+  });
 });

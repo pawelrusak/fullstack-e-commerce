@@ -1168,4 +1168,24 @@ export const component: AppComponent = {
       },
     },
   },
+  specification: {
+    property: {
+      _base: {
+        fontFamily: fontFamily.secondary,
+        fontSize: fontSizes.h4,
+        lineHeight: lineHeights.h4,
+        fontWeight: fontWeight.semiBold,
+        color: color.onBackground,
+      },
+    },
+    details: {
+      _base: {
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.body,
+        lineHeight: lineHeights.body,
+        fontWeight: fontWeight.regular,
+        color: color.onBackground,
+      },
+    },
+  },
 };
