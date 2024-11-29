@@ -1,6 +1,10 @@
 'use client';
 
 import styled from 'styled-components';
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
+
+const { property: propertyToken, details: detailsToken } =
+  getToken('specification');
 
 export const RootDescriptionList = styled.dl`
   font-family: ${({ theme }) => theme.fontFamily.poppins};
@@ -23,16 +27,20 @@ export const RootDescriptionList = styled.dl`
 export const DescriptionProperty = styled.dt`
   padding-right: 1rem;
 
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-
-  font-size: 2rem;
-  line-height: 3rem;
+  font-family: ${propertyToken._base.fontFamily};
+  font-size: ${propertyToken._base.fontSize};
+  line-height: ${propertyToken._base.lineHeight};
+  font-weight: ${propertyToken._base.fontWeight};
+  color: ${propertyToken._base.color};
 `;
 
 export const DescriptionDetails = styled.dd`
-  font-size: 2rem;
-  line-height: 3rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem 0.4rem;
+  font-family: ${detailsToken._base.fontFamily};
+  font-size: ${detailsToken._base.fontSize};
+  line-height: ${detailsToken._base.lineHeight};
+  font-weight: ${detailsToken._base.fontWeight};
+  color: ${detailsToken._base.color};
 `;
