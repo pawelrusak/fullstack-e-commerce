@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
+// TODO: [breakpoint] [screen]
 const XSM_BREAKPOINT = '550px';
 
 export const ContainerSection = styled.section`
   margin-bottom: 8rem;
+  background-color: transparent;
 `;
 
 export const List = styled.ul`
@@ -18,6 +20,8 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   margin: 1.5rem;
+  color: ${({ theme }) => theme.color.onBackground};
+  background-color: transparent;
 
   @media screen and (min-width: ${XSM_BREAKPOINT}) {
     margin-bottom: 0;
@@ -42,6 +46,8 @@ export const ArticleIconContainer = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 0.8rem;
+  color: ${({ theme }) => theme.color.onBackground};
+  background-color: transparent;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
     margin-top: 0.2rem;
@@ -54,7 +60,10 @@ export const ArticleTitle = styled.h3`
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-family: ${({ theme }) => theme.fontFamily.primary};
   margin-bottom: 0.2rem;
+  color: ${({ theme }) => theme.color.onBackground};
+  background-color: transparent;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
     grid-row: 1;
@@ -65,7 +74,10 @@ export const ArticleTitle = styled.h3`
 export const ArticleDescription = styled.p`
   text-align: center;
   font-size: 1.6rem;
+  font-family: ${({ theme }) => theme.fontFamily.primary};
   line-height: 2.4rem;
+  color: ${({ theme }) => theme.color.onBackground};
+  background-color: transparent;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
     text-align: left;
