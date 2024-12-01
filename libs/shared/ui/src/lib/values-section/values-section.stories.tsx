@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ValuesSection } from './values-section.component';
-import { EN } from '@e-shop/i18n';
 import {
   HeadphoneIcon,
   SecurityIcon,
@@ -15,41 +14,33 @@ export default {
     <ValuesSection {...args}>
       <ValuesSection.Item>
         <ValuesSection.ItemIcon icon={<HeadphoneIcon />} />
-        <ValuesSection.ItemTitle>
-          {EN.VALUES.RESPONSIVE.TITLE}
-        </ValuesSection.ItemTitle>
+        <ValuesSection.ItemTitle>Responsive</ValuesSection.ItemTitle>
         <ValuesSection.ItemDescription>
-          {EN.VALUES.RESPONSIVE.DESCRIPTION}
+          Customer service available 24/7
         </ValuesSection.ItemDescription>
       </ValuesSection.Item>
 
       <ValuesSection.Item>
         <ValuesSection.ItemIcon icon={<SecurityIcon />} />
-        <ValuesSection.ItemTitle>
-          {EN.VALUES.SECURE.TITLE}
-        </ValuesSection.ItemTitle>
+        <ValuesSection.ItemTitle>Secure</ValuesSection.ItemTitle>
         <ValuesSection.ItemDescription>
-          {EN.VALUES.SECURE.DESCRIPTION}
+          Certified marketplace since 2017
         </ValuesSection.ItemDescription>
       </ValuesSection.Item>
 
       <ValuesSection.Item>
         <ValuesSection.ItemIcon icon={<DeliveryIcon />} />
-        <ValuesSection.ItemTitle>
-          {EN.VALUES.SHIPPING.TITLE}
-        </ValuesSection.ItemTitle>
+        <ValuesSection.ItemTitle>Shipping</ValuesSection.ItemTitle>
         <ValuesSection.ItemDescription>
-          {EN.VALUES.SHIPPING.DESCRIPTION}
+          Free, fast and reliable worldwide
         </ValuesSection.ItemDescription>
       </ValuesSection.Item>
 
       <ValuesSection.Item>
         <ValuesSection.ItemIcon icon={<ReturnIcon />} />
-        <ValuesSection.ItemTitle>
-          {EN.VALUES.TRANSPARENT.TITLE}
-        </ValuesSection.ItemTitle>
+        <ValuesSection.ItemTitle>Transparent</ValuesSection.ItemTitle>
         <ValuesSection.ItemDescription>
-          {EN.VALUES.TRANSPARENT.DESCRIPTION}
+          Hassle-free return policy
         </ValuesSection.ItemDescription>
       </ValuesSection.Item>
     </ValuesSection>
