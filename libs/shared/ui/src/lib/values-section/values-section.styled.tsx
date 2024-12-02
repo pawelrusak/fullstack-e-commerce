@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // TODO: [breakpoint] [screen]
 const XSM_BREAKPOINT = '550px';
 
-export const ContainerSection = styled.section`
+export const RootSection = styled.section`
   margin-bottom: 8rem;
   background-color: transparent;
 `;
@@ -42,7 +42,7 @@ export const Article = styled.article`
   }
 `;
 
-export const ArticleIconContainer = styled.div`
+export const ListItemArticleIconContainer = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 0.8rem;
@@ -56,7 +56,7 @@ export const ArticleIconContainer = styled.div`
   }
 `;
 
-export const ArticleTitle = styled.h3`
+export const ListItemArticleTitle = styled.h3`
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: ${({ theme }) => theme.fontWeight.bold};
@@ -71,7 +71,7 @@ export const ArticleTitle = styled.h3`
   }
 `;
 
-export const ArticleDescription = styled.p`
+export const ListItemArticleDescription = styled.p`
   text-align: center;
   font-size: 1.6rem;
   font-family: ${({ theme }) => theme.fontFamily.primary};

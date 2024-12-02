@@ -13,10 +13,10 @@ export function ValuesSection({
   ...props
 }: ValuesSectionProps) {
   return (
-    <Styled.ContainerSection {...props}>
+    <Styled.RootSection {...props}>
       <VisuallyHidden as="h2">{screenReaderLabel}</VisuallyHidden>
       <Styled.List>{children}</Styled.List>
-    </Styled.ContainerSection>
+    </Styled.RootSection>
   );
 }
 
@@ -26,9 +26,9 @@ export type ValuesSectionItemIconProps = {
 
 function ValuesSectionItemIcon({ icon }: ValuesSectionItemIconProps) {
   return (
-    <Styled.ArticleIconContainer aria-hidden>
+    <Styled.ListItemArticleIconContainer aria-hidden>
       {icon}
-    </Styled.ArticleIconContainer>
+    </Styled.ListItemArticleIconContainer>
   );
 }
 
@@ -46,7 +46,7 @@ function ValuesSectionItem({ children }: ValuesSectionItemProps) {
 
 ValuesSection.Item = ValuesSectionItem;
 ValuesSection.ItemIcon = ValuesSectionItemIcon;
-ValuesSection.ItemTitle = Styled.ArticleTitle;
-ValuesSection.ItemDescription = Styled.ArticleDescription;
+ValuesSection.ItemTitle = Styled.ListItemArticleTitle;
+ValuesSection.ItemDescription = Styled.ListItemArticleDescription;
 
 export default ValuesSection;
