@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-// TODO: [breakpoint] [screen]
+// TODO: Create a new screen breakpoint or use an existing one
 const XSM_BREAKPOINT = '550px';
 
 export const RootSection = styled.section`
