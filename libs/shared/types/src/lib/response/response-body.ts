@@ -55,3 +55,5 @@ export type ErrorsResponseBody<TErrors = unknown, TMeta = unknown> = Prettify<
       meta?: TMeta;
     }
 >;
+
+export type InformationResponseBody = Prettify<Message & Partial<Status>>;
