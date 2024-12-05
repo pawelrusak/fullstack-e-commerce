@@ -4,10 +4,39 @@ import { runInTransaction } from '@e-shop/database/utils';
 
 import type { Response } from 'express';
 import type { Controller } from '@e-shop/types';
-import type { CreateResponseBody } from '@e-shop/types/response';
+import type {
+  CreateResponseBody,
+  InformationResponseBody,
+} from '@e-shop/types/response';
 import type { OrderPostRequestBody } from '@e-shop/types/request';
 
 export default {
+  /**
+   * This action returns a orders by id
+   *
+   * @route GET /api/v1/orders/:slug
+   * @access Private/Admin
+   */
+  async findOne(request, response: Response<InformationResponseBody>) {
+    response.status(STATUS_CODE.NOT_IMPLEMENTED).send({
+      message: `This action returns a order #${request.params.id}`,
+      status: STATUS_CODE.NOT_IMPLEMENTED,
+    });
+  },
+
+  /**
+   * This action returns all orders
+   *
+   * @route GET /api/v1/orders
+   * @access Private/Admin
+   */
+  async findAll(_, response: Response<InformationResponseBody>) {
+    response.status(STATUS_CODE.NOT_IMPLEMENTED).send({
+      message: 'This action returns all orders',
+      status: STATUS_CODE.NOT_IMPLEMENTED,
+    });
+  },
+
   /**
    * This action registers a new order before payment is made
    *
@@ -18,7 +47,6 @@ export default {
   async register(request, response: Response<CreateResponseBody>) {
     await runInTransaction(async (session) => {
       const { body: orderBody }: { body: OrderPostRequestBody } = request;
-      // TODO use transactions
 
       const order = await Order.register(
         {
@@ -45,6 +73,20 @@ export default {
           order,
         },
       });
+    });
+  },
+
+  /**
+   * This action registers the payment for an order.
+   *  * It processes the payment information and updates the order status accordingly.
+   *
+   * @route POST /api/v1/orders/:id/pay
+   * @access Public/Private
+   */
+  async pay(_, response: Response<InformationResponseBody>) {
+    response.status(STATUS_CODE.NOT_IMPLEMENTED).send({
+      message: 'Payment processing is not implemented yet',
+      status: STATUS_CODE.NOT_IMPLEMENTED,
     });
   },
 } satisfies Controller;
