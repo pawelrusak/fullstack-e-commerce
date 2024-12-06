@@ -2579,4 +2579,74 @@ describe('Component theme config', () => {
       `);
     });
   });
+
+  describe('Component Values Section theme config', () => {
+    it('should have the correct structure and types', () => {
+      const { valuesSection } = component;
+
+      expect(valuesSection).toEqual({
+        articleIcon: {
+          _base: {
+            color: expect.any(String),
+            backgroundColor: undefined,
+          },
+        },
+        articleTitle: {
+          _base: {
+            color: expect.any(String),
+            backgroundColor: undefined,
+            fontWeight: expect.any(Number),
+            fontFamily: expect.any(String),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+          },
+        },
+        articleDescription: {
+          _base: {
+            color: expect.any(String),
+            backgroundColor: undefined,
+            fontFamily: expect.any(String),
+            fontWeight: expect.any(Number),
+            fontSize: expect.any(String),
+            lineHeight: expect.any(Number),
+          },
+        },
+      });
+    });
+
+    it('should match the specified values', () => {
+      const { valuesSection } = component;
+
+      expect(valuesSection).toMatchInlineSnapshot(`
+        {
+          "articleDescription": {
+            "_base": {
+              "backgroundColor": undefined,
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 400,
+              "lineHeight": 1.5,
+            },
+          },
+          "articleIcon": {
+            "_base": {
+              "backgroundColor": undefined,
+              "color": "hsl(0, 0%, 19%)",
+            },
+          },
+          "articleTitle": {
+            "_base": {
+              "backgroundColor": undefined,
+              "color": "hsl(0, 0%, 19%)",
+              "fontFamily": "Montserrat, sans-serif",
+              "fontSize": "1.6rem",
+              "fontWeight": 700,
+              "lineHeight": 1.5,
+            },
+          },
+        }
+      `);
+    });
+  });
 });

@@ -1180,6 +1180,34 @@ exports[`Default Theme should match the specified values 1`] = `
         },
       },
     },
+    "valuesSection": {
+      "articleDescription": {
+        "_base": {
+          "backgroundColor": undefined,
+          "color": "hsl(0, 0%, 19%)",
+          "fontFamily": "Montserrat, sans-serif",
+          "fontSize": "1.6rem",
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+        },
+      },
+      "articleIcon": {
+        "_base": {
+          "backgroundColor": undefined,
+          "color": "hsl(0, 0%, 19%)",
+        },
+      },
+      "articleTitle": {
+        "_base": {
+          "backgroundColor": undefined,
+          "color": "hsl(0, 0%, 19%)",
+          "fontFamily": "Montserrat, sans-serif",
+          "fontSize": "1.6rem",
+          "fontWeight": 700,
+          "lineHeight": 1.5,
+        },
+      },
+    },
   },
   "fontFamily": {
     "montserrat": "Montserrat, sans-serif",

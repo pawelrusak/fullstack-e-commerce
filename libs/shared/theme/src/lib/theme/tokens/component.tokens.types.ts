@@ -641,6 +641,23 @@ export type SpecificationComponent = {
   };
 };
 
+/**
+ * **********************************************************************************************
+ *                                 Values Section Component Tokens
+ * **********************************************************************************************
+ */
+export type ValuesSectionComponent = {
+  valuesSection: {
+    articleIcon: ImmutableBaseToken<'color' | 'backgroundColor'>;
+    articleTitle: ImmutableBaseToken<
+      TopographyBaseProperties | 'color' | 'backgroundColor'
+    >;
+    articleDescription: ImmutableBaseToken<
+      TopographyBaseProperties | 'color' | 'backgroundColor'
+    >;
+  };
+};
+
 export type AppComponent = BrandComponent &
   ButtonComponent &
   BreadcrumbComponent &
@@ -664,4 +681,5 @@ export type AppComponent = BrandComponent &
   QuantitySelectionComponent &
   RadioGroupTilesComponent &
   SimpleCartListComponent &
-  SpecificationComponent;
+  SpecificationComponent &
+  ValuesSectionComponent;

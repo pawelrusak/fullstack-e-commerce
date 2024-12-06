@@ -1188,4 +1188,32 @@ export const component: AppComponent = {
       },
     },
   },
+  valuesSection: {
+    articleIcon: {
+      _base: {
+        color: color.onBackground,
+        backgroundColor: undefined,
+      },
+    },
+    articleTitle: {
+      _base: {
+        color: color.onBackground,
+        backgroundColor: undefined,
+        fontWeight: fontWeight.bold,
+        fontFamily: fontFamily.primary,
+        fontSize: fontSizes.h6,
+        lineHeight: lineHeights.h6,
+      },
+    },
+    articleDescription: {
+      _base: {
+        color: color.onBackground,
+        backgroundColor: undefined,
+        fontFamily: fontFamily.primary,
+        fontWeight: fontWeight.regular,
+        fontSize: fontSizes.h7,
+        lineHeight: lineHeights.h7,
+      },
+    },
+  },
 };
