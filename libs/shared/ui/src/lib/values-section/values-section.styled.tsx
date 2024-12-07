@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+import { getComponentThemeToken as getToken } from '@e-shop/theme';
+
+const {
+  articleIcon: articleIconToken,
+  articleTitle: articleTitleToken,
+  articleDescription: articleDescriptionToken,
+} = getToken('valuesSection');
+
 // TODO: Create a new screen breakpoint or use an existing one
 const XSM_BREAKPOINT = '550px';
 
@@ -46,8 +54,8 @@ export const ListItemArticleIconContainer = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 0.8rem;
-  color: ${({ theme }) => theme.color.onBackground};
-  background-color: transparent;
+  color: ${articleIconToken._base.color};
+  background-color: ${articleIconToken._base.backgroundColor};
 
   @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
     margin-top: 0.2rem;
@@ -57,13 +65,13 @@ export const ListItemArticleIconContainer = styled.div`
 `;
 
 export const ListItemArticleTitle = styled.h3`
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-  font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-size: ${articleTitleToken._base.fontSize};
+  line-height: ${articleTitleToken._base.lineHeight};
+  font-weight: ${articleTitleToken._base.fontWeight};
+  font-family: ${articleTitleToken._base.fontFamily};
+  color: ${articleTitleToken._base.color};
+  background-color: ${articleTitleToken._base.backgroundColor};
   margin-bottom: 0.2rem;
-  color: ${({ theme }) => theme.color.onBackground};
-  background-color: transparent;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
     grid-row: 1;
@@ -73,11 +81,12 @@ export const ListItemArticleTitle = styled.h3`
 
 export const ListItemArticleDescription = styled.p`
   text-align: center;
-  font-size: 1.6rem;
-  font-family: ${({ theme }) => theme.fontFamily.primary};
-  line-height: 2.4rem;
-  color: ${({ theme }) => theme.color.onBackground};
-  background-color: transparent;
+  font-size: ${articleDescriptionToken._base.fontSize};
+  font-family: ${articleDescriptionToken._base.fontFamily};
+  line-height: ${articleDescriptionToken._base.lineHeight};
+  font-weight: ${articleDescriptionToken._base.fontWeight};
+  color: ${articleDescriptionToken._base.color};
+  background-color: ${articleDescriptionToken._base.backgroundColor};
 
   @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
     text-align: left;
