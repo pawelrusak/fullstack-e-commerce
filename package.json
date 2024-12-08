@@ -6,7 +6,7 @@
     "prepare": "husky",
     "commit": "cz",
     "start": "npx nx run-many --parallel --target=dev,serve --projects=frontend,backend",
-    "seed": "npx nx run seed:serve"
+    "seed": "npx nx run seed:serve --no-watch"
   },
   "private": false,
   "dependencies": {
