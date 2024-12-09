@@ -21,7 +21,7 @@
 > [!WARNING]
 > This project is currently being refactored. The main goals include:
 >
-> - [ ] Improving the UI library with a complete theme so that all colors and related elements come from one source.
+> - [x] Improving the UI library with a complete theme so that all colors and related elements come from one source.
 > - [ ] Adding full end-to-end (e2e) tests (right now, only some integration tests are available).
 > - [ ] Using a layered or hexagonal architecture for both the backend and frontend.
 > - [ ] Refactoring the frontend to organize components better, using route groups for domain separation and splitting components into presentation and container types.
