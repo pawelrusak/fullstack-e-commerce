@@ -8,7 +8,7 @@ function getMaxWidthFeatures(maxWidth: string) {
   return `(max-width: ${maxWidth})`;
 }
 
-export const device: Partial<Device> = {
+export const device = {
   sm: getMaxWidthFeatures(screens.sm),
   md: getMaxWidthFeatures(screens.md),
   lg: getMaxWidthFeatures(screens.lg),
