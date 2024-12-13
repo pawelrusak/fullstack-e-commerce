@@ -209,9 +209,24 @@ export type AppFontSizes = Record<TypographyVariant, string>;
 export type AppLineHeights = Record<TypographyVariant, number>;
 
 export type AppScreens = {
+  /**
+   * @screen 640px
+   */
   sm: string;
+  /**
+   * @screen 768px
+   */
   md: string;
+  /**
+   * @screen 1024px
+   */
   lg: string;
+  /**
+   * @screen 1280px
+   */
   xl: string;
+  /**
+   * @screen 1536px
+   */
   xxl: string;
 };
