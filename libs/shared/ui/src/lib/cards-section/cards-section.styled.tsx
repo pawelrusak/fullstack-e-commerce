@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { margin } from 'styled-system';
-import { getComponentThemeToken as getToken } from '@e-shop/theme';
+import { getComponentThemeToken as getToken, device } from '@e-shop/theme';
 
 import type { MarginProps } from 'styled-system';
 
@@ -25,7 +25,7 @@ export const Header = styled.header`
   gap: 1.6rem;
   margin-bottom: 3.2rem;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     flex-direction: row;
     gap: 0;
     justify-content: space-between;
@@ -57,7 +57,7 @@ export const Link = styled.a`
     color: ${readMoreLinkToken.default.interact.color};
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     align-self: auto;
   }
 `;
