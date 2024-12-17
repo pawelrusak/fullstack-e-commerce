@@ -5,7 +5,7 @@ import type { AppScreens } from '../theme/tokens/types';
 type Device = AppScreens;
 
 function getMaxWidthFeatures(maxWidth: string) {
-  return `max-width: ${maxWidth}`;
+  return `min-width: ${maxWidth}`;
 }
 
 export const device = {
