@@ -85,8 +85,6 @@ export const color: AppColor = {
 export const fontFamily: AppFontFamily = {
   // TODO: Remove deprecated "poppins" font family after refactoring
   poppins: ['Poppins', 'sans-serif'].join(', '),
-  // TODO: Remove deprecated "montserrat" font family after refactoring
-  montserrat: ['Montserrat', 'sans-serif'].join(', '),
   primary: ['Montserrat', 'sans-serif'].join(', '),
   secondary: ['Poppins', 'sans-serif'].join(', '),
 };

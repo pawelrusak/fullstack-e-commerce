@@ -1210,7 +1210,6 @@ exports[`Default Theme should match the specified values 1`] = `
     },
   },
   "fontFamily": {
-    "montserrat": "Montserrat, sans-serif",
     "poppins": "Poppins, sans-serif",
     "primary": "Montserrat, sans-serif",
     "secondary": "Poppins, sans-serif",

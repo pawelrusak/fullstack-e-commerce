@@ -164,10 +164,6 @@ export type AppColor = {
 
 export type AppFontFamily = {
   /**
-   * @deprecated Use "primary" instead
-   */
-  montserrat: string;
-  /**
    * @deprecated Use "secondary" instead.
    */
   poppins: string;
