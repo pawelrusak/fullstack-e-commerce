@@ -7,8 +7,6 @@ const { property: propertyToken, details: detailsToken } =
   getToken('specification');
 
 export const RootDescriptionList = styled.dl`
-  font-family: ${({ theme }) => theme.fontFamily.poppins};
-
   & dd {
     margin-bottom: 1.6rem;
   }
