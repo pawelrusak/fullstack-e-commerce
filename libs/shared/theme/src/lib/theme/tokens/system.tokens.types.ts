@@ -164,10 +164,6 @@ export type AppColor = {
 
 export type AppFontFamily = {
   /**
-   * @deprecated Use "secondary" instead.
-   */
-  poppins: string;
-  /**
    * For body text, forms, etc.
    *
    * @warning Use only for headings at level H5 or lower.

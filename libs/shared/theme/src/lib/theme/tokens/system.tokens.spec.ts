@@ -80,7 +80,6 @@ describe('Base Theme', () => {
 
     it('should have the correct font family structure and types', () => {
       expect(fontFamily).toEqual({
-        poppins: expect.any(String),
         primary: expect.any(String),
         secondary: expect.any(String),
       });
@@ -215,7 +214,6 @@ describe('Base Theme', () => {
     it('should match the font family specified values', () => {
       expect(fontFamily).toMatchInlineSnapshot(`
         {
-          "poppins": "Poppins, sans-serif",
           "primary": "Montserrat, sans-serif",
           "secondary": "Poppins, sans-serif",
         }
