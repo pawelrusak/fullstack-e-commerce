@@ -7,18 +7,10 @@ const { property: propertyToken, details: detailsToken } =
   getToken('specification');
 
 export const RootDescriptionList = styled.dl`
-  & dd {
-    margin-bottom: 1.6rem;
-  }
-
   @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
     display: grid;
     gap: 1.6rem 0;
     grid-template-columns: 17rem 1fr;
-
-    & dd {
-      margin-bottom: 0;
-    }
   }
 `;
 
@@ -41,4 +33,9 @@ export const DescriptionDetails = styled.dd`
   line-height: ${detailsToken._base.lineHeight};
   font-weight: ${detailsToken._base.fontWeight};
   color: ${detailsToken._base.color};
+  margin-bottom: 1.6rem;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+    margin-bottom: 0;
+  }
 `;
