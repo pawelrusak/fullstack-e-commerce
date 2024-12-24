@@ -39,7 +39,6 @@ exports[`Default Theme should match the specified values 1`] = `
     "primaryOutlineBorderInteract": "hsl(7, 100%, 59%)",
     "primaryOutlineDisabled": "transparent",
     "primaryOutlineInteract": "hsl(7, 100%, 59%)",
-    "secondBackground": "hsl(0, 0%, 96%)",
     "secondary": "hsl(0, 0%, 19%)",
     "secondaryBorder": "hsl(0, 0%, 19%)",
     "secondaryBorderDisabled": "hsl(0, 0%, 80%)",

@@ -155,11 +155,6 @@ export type AppColor = {
    * TODO: Remove this in future.
    */
   text: string;
-  /**
-   * @deprecated Use "secondarySurface" instead.
-   * TODO: Rename this to "secondarySurface" to align with naming conventions.
-   */
-  secondBackground: string;
 };
 
 export type AppFontFamily = {

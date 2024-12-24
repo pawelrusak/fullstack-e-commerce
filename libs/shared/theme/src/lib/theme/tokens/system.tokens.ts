@@ -76,11 +76,6 @@ export const color: AppColor = {
   border: colorPalette.neutral[50],
   error: 'hsl(348, 83%, 47%)',
 
-  // TODO: Remove deprecated "secondBackground" color after refactoring
-  /**
-   * @deprecated Use `secondarySurface` instead.
-   */
-  secondBackground: colorPalette.neutral[50],
   // TODO: Remove deprecated "text" color after replacing with "onBackground" or "onSurface"'
   /**
    * @deprecated Use `onBackground` or `onSurface` instead.

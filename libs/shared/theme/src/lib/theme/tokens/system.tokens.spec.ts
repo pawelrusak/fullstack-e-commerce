@@ -73,7 +73,6 @@ describe('Base Theme', () => {
 
         border: expect.any(String),
         error: expect.any(String),
-        secondBackground: expect.any(String),
         text: expect.any(String),
       });
     });
@@ -189,7 +188,6 @@ describe('Base Theme', () => {
           "primaryOutlineBorderInteract": "hsl(7, 100%, 59%)",
           "primaryOutlineDisabled": "transparent",
           "primaryOutlineInteract": "hsl(7, 100%, 59%)",
-          "secondBackground": "hsl(0, 0%, 96%)",
           "secondary": "hsl(0, 0%, 19%)",
           "secondaryBorder": "hsl(0, 0%, 19%)",
           "secondaryBorderDisabled": "hsl(0, 0%, 80%)",
