@@ -5,7 +5,7 @@ import {
   ICON_BUTTON_VARIANT,
 } from '../icon-button';
 
-import { getComponentThemeToken as getToken } from '@e-shop/theme';
+import { getComponentThemeToken as getToken, device } from '@e-shop/theme';
 
 const {
   tableBody: tableBodyToken,
@@ -306,7 +306,7 @@ export const SummarySection = styled.section`
   align-items: end;
   gap: 1.6rem;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     display: flex;
     flex-direction: row;
   }
@@ -317,7 +317,7 @@ const subSummarySectionCss = css`
   width: 100%;
   padding: 2.4rem 1.6rem;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     padding: 3.2rem 3.6rem;
   }
 
@@ -339,7 +339,7 @@ export const CouponSection = styled.section`
   align-items: center;
   gap: 1.2rem;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
@@ -380,7 +380,7 @@ export const SubtotalSection = styled.section`
   gap: 0.8rem;
   align-items: center;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 13.8rem auto;
