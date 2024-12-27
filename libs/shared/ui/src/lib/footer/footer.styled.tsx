@@ -1,7 +1,7 @@
 'uce client';
 
 import styled, { css } from 'styled-components';
-import { getComponentThemeToken as getToken } from '@e-shop/theme';
+import { getComponentThemeToken as getToken, device } from '@e-shop/theme';
 import { layoutWrapperCss } from '../layout-wrapper/layout-wrapper.styled';
 
 const {
@@ -22,11 +22,11 @@ export const RootFooter = styled.footer`
 
   border-top: 1px solid ${rootToken._base.borderTopColor};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
+  @media screen and (${device.lg}) {
     border-top: none;
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     padding: 8rem 0;
   }
 `;
@@ -37,7 +37,7 @@ export const NavSection = styled.section`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     display: block;
     align-items: normal;
     flex-direction: row;
@@ -56,12 +56,13 @@ export const Nav = styled.nav`
   margin-bottom: 2.4rem;
   ${layoutWrapperCss}
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.4rem;
   }
 
+  // TODO: Create a constant for the breakpoint
   @media screen and (min-width: 1150px) {
     display: flex;
     justify-content: end;
@@ -104,7 +105,7 @@ export const NavSectionList = styled.ul`
   gap: 1.2rem;
   align-items: center;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     align-items: normal;
   }
 `;
@@ -153,12 +154,12 @@ export const CopyrightBar = styled.section`
     border-top: 1px solid ${copyrightBarToken._base.borderTopColor};
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     margin-top: 4rem;
     padding: 0.8rem;
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+  @media screen and (${device.md}) {
     flex-direction: row;
     justify-content: space-between;
     align-items: normal;
