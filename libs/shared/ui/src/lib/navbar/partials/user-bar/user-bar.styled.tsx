@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 import * as helper from 'polished';
 import { margin, MarginProps } from 'styled-system';
 
-import { getComponentThemeToken as getToken } from '@e-shop/theme';
+import { getComponentThemeToken as getToken, device } from '@e-shop/theme';
 
 const {
   userBarRoot: userBarRootToken,
@@ -30,7 +30,7 @@ export const Root = styled.div<StyledRootProps>`
   background-color: ${userBarRootToken._base.backgroundColor};
   color: ${userBarRootToken._base.color};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+  @media screen and (${device.md}) {
     padding: 2.4rem 0;
     border-bottom: none;
     ${({ hasBorder }) => hasBorder && rootBorderBottomCSS}
@@ -51,7 +51,7 @@ export const Section = styled.section`
 export const Search = styled.div`
   display: none;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+  @media screen and (${device.md}) {
     display: block;
   }
 `;
@@ -167,7 +167,7 @@ export const ListItemIcon = styled.svg.withConfig<StyledListItemIconProps>({
   display: inline-block;
   color: ${userBarListItemIconToken._base.color};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+  @media screen and (${device.md}) {
     margin-right: 2.4rem;
     ${margin}
   }
@@ -181,7 +181,7 @@ export const ListItemIcon = styled.svg.withConfig<StyledListItemIconProps>({
 export const ListItemCartIconWrapper = styled.div`
   position: relative;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+  @media screen and (${device.md}) {
     margin-right: 2.4rem;
   }
 `;
@@ -214,7 +214,7 @@ export const ListItemCartBadge = styled.strong`
 export const ListItemTextWrapper = styled.span`
   display: none;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+  @media screen and (${device.md}) {
     display: initial;
   }
 `;
