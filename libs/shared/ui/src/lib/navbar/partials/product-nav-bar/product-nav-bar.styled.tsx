@@ -2,7 +2,8 @@
 
 import styled, { css } from 'styled-components';
 import { padding } from 'styled-system';
-import { getComponentThemeToken as getToken } from '@e-shop/theme';
+import { getComponentThemeToken as getToken, device } from '@e-shop/theme';
+
 import type { PaddingProps } from 'styled-system';
 
 const {
@@ -15,7 +16,7 @@ export const RootNav = styled.nav`
   display: none;
   background-color: ${productBarRootToken._base.backgroundColor};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+  @media screen and (${device.md}) {
     display: block;
   }
 `;
