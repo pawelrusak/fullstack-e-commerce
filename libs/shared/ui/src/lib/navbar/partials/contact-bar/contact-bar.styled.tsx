@@ -6,7 +6,8 @@ import {
   PhoneIcon as RawPhoneIcon,
 } from '@e-shop/icons';
 import { padding } from 'styled-system';
-import { getComponentThemeToken as getToken } from '@e-shop/theme';
+import { getComponentThemeToken as getToken, device } from '@e-shop/theme';
+
 import type { PaddingProps } from 'styled-system';
 
 const {
@@ -18,7 +19,7 @@ const {
 export const Root = styled.div`
   display: none;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.md}) {
+  @media screen and (${device.md}) {
     display: block;
     border-bottom: 1px solid ${contactBarRootToken._base.mdBorderColor};
     padding: 1.6rem 0 1.5rem;
