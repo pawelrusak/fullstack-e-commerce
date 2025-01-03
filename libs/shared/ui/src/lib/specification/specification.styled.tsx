@@ -1,13 +1,13 @@
 'use client';
 
 import styled from 'styled-components';
-import { getComponentThemeToken as getToken } from '@e-shop/theme';
+import { getComponentThemeToken as getToken, device } from '@e-shop/theme';
 
 const { property: propertyToken, details: detailsToken } =
   getToken('specification');
 
 export const RootDescriptionList = styled.dl`
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     display: grid;
     gap: 1.6rem 0;
     grid-template-columns: 17rem 1fr;
@@ -35,7 +35,7 @@ export const DescriptionDetails = styled.dd`
   color: ${detailsToken._base.color};
   margin-bottom: 1.6rem;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     margin-bottom: 0;
   }
 `;
