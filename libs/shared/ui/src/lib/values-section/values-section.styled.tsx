@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { getComponentThemeToken as getToken } from '@e-shop/theme';
+import { getComponentThemeToken as getToken, device } from '@e-shop/theme';
 
 const {
   articleIcon: articleIconToken,
@@ -41,7 +41,7 @@ export const Article = styled.article`
   align-items: center;
   flex-direction: column;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
+  @media screen and (${device.lg}) {
     display: grid;
     grid-template-columns: fit-content fit-content;
     grid-template-rows: auto auto;
@@ -57,7 +57,7 @@ export const ListItemArticleIconContainer = styled.div`
   color: ${articleIconToken._base.color};
   background-color: ${articleIconToken._base.backgroundColor};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
+  @media screen and (${device.lg}) {
     margin-top: 0.2rem;
     grid-row: 1 / 3;
     grid-column: 1;
@@ -73,7 +73,7 @@ export const ListItemArticleTitle = styled.h3`
   background-color: ${articleTitleToken._base.backgroundColor};
   margin-bottom: 0.2rem;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
+  @media screen and (${device.lg}) {
     grid-row: 1;
     grid-column: 2;
   }
@@ -88,7 +88,7 @@ export const ListItemArticleDescription = styled.p`
   color: ${articleDescriptionToken._base.color};
   background-color: ${articleDescriptionToken._base.backgroundColor};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
+  @media screen and (${device.lg}) {
     text-align: left;
     grid-row: 2;
     grid-column: 2;
