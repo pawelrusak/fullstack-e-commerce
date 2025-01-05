@@ -5,9 +5,11 @@ import { Product } from '@e-shop/types';
 import NextLink from 'next/link';
 import styled from 'styled-components';
 import { CardsSection as CardsSectionEl, ProductCard } from '@e-shop/ui';
+import { device } from '@e-shop/theme';
 import { EN } from '@e-shop/i18n';
 import { getCurrencyFormat } from '@e-shop/utils';
 
+// TODO: improve spaces in this grid
 const CardsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
@@ -16,7 +18,7 @@ const CardsGrid = styled.div`
 const CardsSection = styled(CardsSectionEl)`
   margin-top: 3.2rem;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     margin-top: 6.4rem;
     margin-bottom: 0;
   }
