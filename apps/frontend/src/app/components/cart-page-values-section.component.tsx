@@ -2,14 +2,16 @@
 
 import styled from 'styled-components';
 import ValuesSection from './values-section.component';
+import { device } from '@e-shop/theme';
 import { LayoutWrapper } from '@e-shop/ui';
 
+// TODO: replace colors with theme references
 const Wrapper = styled.div`
   border-top: 1px solid #cbcbcb;
   padding-top: clamp(2rem, 10vw + -3rem, 8rem);
   padding-bottom: clamp(2rem, 10vw + -3rem, 8rem);
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
+  @media screen and (${device.lg}) {
     border-bottom: 1px solid #cbcbcb;
   }
 `;
