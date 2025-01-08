@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -86,6 +87,7 @@ const SummaryBoxValue = styled.div`
 // TODO Improve layout for mobile devices
 function BillingDetailsForm() {
   const { cartStore, isHydrated } = useHydrationCartStore();
+  const router = useRouter();
 
   const {
     register,
@@ -98,6 +100,7 @@ function BillingDetailsForm() {
   const handleCheckoutFormSubmit = (data: CheckoutInformationFrom) => {
     console.log(data);
     console.error('@@@ error: ', errors);
+    router.push('/checkout/shipping');
   };
 
   return (
@@ -236,6 +239,7 @@ function BillingDetailsForm() {
             </Field.Label>
             <Field.Input
               rows="4"
+              // TODO Remove this comment when <Field.Input/> type issue is resolved
               // eslint-disable-next-line
               // @ts-ignore
               as="textarea"
