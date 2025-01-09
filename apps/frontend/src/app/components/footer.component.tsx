@@ -18,10 +18,11 @@ type ListItem = {
   label: string;
 };
 
+// TODO complete href attributes
 const ListItems: Record<string, ListItem[]> = {
   linksList: [
     {
-      href: '/',
+      href: '/products',
       label: EN.FOOTER.NAVIGATION.LINKS_LIST.ITEM.PRODUCT_LIST,
     },
     {
@@ -33,7 +34,7 @@ const ListItems: Record<string, ListItem[]> = {
       label: EN.FOOTER.NAVIGATION.LINKS_LIST.ITEM.PRODUCT_GUIDE,
     },
     {
-      href: '/',
+      href: '/cart',
       label: EN.FOOTER.NAVIGATION.LINKS_LIST.ITEM.CART,
     },
     {
