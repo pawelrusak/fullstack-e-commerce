@@ -7,6 +7,7 @@ import { QuantitySelection, Button } from '@e-shop/ui';
 import { CardIcon } from '@e-shop/icons';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import { EN } from '@e-shop/i18n';
+import { device } from '@e-shop/theme';
 import { Product } from '@e-shop/types';
 import { useCartStore, withStore, CartItem } from '@e-shop/store';
 
@@ -16,7 +17,7 @@ const ControlsContainer = styled.div`
   gap: 2.4rem;
   align-items: center;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     justify-content: space-between;
     flex-direction: row;
   }
