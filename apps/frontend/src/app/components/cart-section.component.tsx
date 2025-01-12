@@ -2,6 +2,7 @@
 
 import styled from 'styled-components';
 import Link from 'next/link';
+import { device } from '@e-shop/theme';
 import { Heading, Cart, Button } from '@e-shop/ui';
 import { withStore, useHydrationCartStore } from '@e-shop/store';
 import { getCurrencyFormat } from '@e-shop/utils';
@@ -21,7 +22,7 @@ const CTAButtonsWrapper = styled.div`
   margin-top: clamp(1.6rem, 2.667vw + 0.267rem, 3.2rem);
   margin-bottom: clamp(3.2rem, 11.333vw + -2.467rem, 10rem);
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     justify-content: flex-end;
     flex-direction: row;
   }
