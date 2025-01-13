@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
+import { device } from '@e-shop/theme';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { EN } from '@e-shop/i18n';
 import { Field, Panel, Heading, SimpleCartList, Button } from '@e-shop/ui';
@@ -18,12 +19,12 @@ const Form = styled.form`
   gap: 3.2rem;
   grid-template-columns: 1fr;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
+  @media screen and (${device.lg}) {
     grid-template-columns: 2fr 1fr;
     gap: 5.6rem;
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     grid-template-columns: 1fr 59.4rem;
     gap: 5.6rem;
   }
@@ -34,7 +35,7 @@ const FormTitle = styled(Heading)`
 `;
 
 const InformationFields = styled.div`
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 3.2rem;
