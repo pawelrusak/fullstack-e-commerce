@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '@e-shop/theme';
 import { Divider } from '@e-shop/ui';
 
 const LayoutArticle = styled.article`
@@ -11,7 +12,7 @@ const LayoutArticle = styled.article`
 const SummaryContainer = styled.div`
   margin-bottom: 2.4rem;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     margin-bottom: 1.6rem;
     display: grid;
     grid-template-columns: 54.8% 41.5%;
@@ -31,13 +32,13 @@ const BreadcrumbWrapper = styled.div`
   margin-bottom: 1.6rem;
   overflow-y: scroll;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     margin-bottom: 4.8rem;
   }
 `;
 
 const LayoutHeader = styled.header`
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     grid-area: header;
   }
 `;
@@ -45,14 +46,14 @@ const LayoutHeader = styled.header`
 const PriceWrapper = styled.div`
   margin-bottom: 2.4rem;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     margin-bottom: 4.8rem;
     grid-area: price;
   }
 `;
 
 const SpecificationWrapper = styled.div`
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     grid-area: specification;
   }
 `;
@@ -62,7 +63,7 @@ const GalleryWrapper = styled.div`
   display: flex;
   justify-content: center;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     display: block;
     grid-area: gallery;
     margin-bottom: 0;
@@ -72,7 +73,7 @@ const GalleryWrapper = styled.div`
 const MiddleContainer = styled.div`
   margin-bottom: 2.4rem;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     display: grid;
     grid-template-columns: 50% 47%;
     grid-template-areas: 'values  form';
@@ -81,7 +82,7 @@ const MiddleContainer = styled.div`
     margin-bottom: 10rem;
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xxl}) {
+  @media screen and (${device.xxl}) {
     grid-template-columns: 51.25% 42.57%;
   }
 `;
@@ -90,18 +91,18 @@ const ValuesWrapper = styled.div`
   display: none;
   margin-bottom: 2.4rem;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (${device.sm}) {
     display: block;
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     grid-area: values;
     margin-bottom: 0;
   }
 `;
 
 const FormWrapper = styled.div`
-  @media screen and (min-width: ${({ theme }) => theme.screens.xl}) {
+  @media screen and (${device.xl}) {
     grid-area: form;
   }
 `;
