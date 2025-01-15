@@ -15,6 +15,9 @@ const {
   navSectionTitle: navSectionTitleToken,
 } = getToken('footer');
 
+// TODO: Create a new screen breakpoint or use an existing one
+const XM_BREAKPOINT = '550px';
+
 export const RootFooter = styled.footer`
   margin-top: 2rem;
   padding: 4rem 0;
@@ -62,8 +65,7 @@ export const Nav = styled.nav`
     gap: 2.4rem;
   }
 
-  // TODO: Create a constant for the breakpoint
-  @media screen and (min-width: 1150px) {
+  @media screen and (min-width: ${XM_BREAKPOINT}) {
     display: flex;
     justify-content: end;
     margin-bottom: 8rem;
