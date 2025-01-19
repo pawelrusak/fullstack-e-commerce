@@ -2,6 +2,7 @@ export { default as ArrowLongRightIcon } from './arrow-long-right.svg';
 export { default as CardIconWithDot } from './card-icon-with-dot.svg';
 export { default as MinusSmallButton } from './minus-small-icon.svg';
 export { default as ArrowShortRight } from './arrow-short-right.svg';
+export { default as ChevronDownIcon } from './chevron-down-icon.svg';
 export { default as ArrowShortLeft } from './arrow-short-left.svg';
 export { default as CheckSmallIcon } from './check-small-icon.svg';
 export { default as EmailSolidIcon } from './email-solid-icon.svg';
