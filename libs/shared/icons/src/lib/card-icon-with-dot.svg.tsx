@@ -1,4 +1,4 @@
-export default function CardIconWithDot(props: React.SVGProps<SVGSVGElement>) {
+export default function CartIconWithDot(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="32"
