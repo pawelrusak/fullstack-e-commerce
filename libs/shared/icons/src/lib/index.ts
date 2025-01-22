@@ -26,5 +26,5 @@ export { default as ShareIcon } from './share-icon.svg';
 export { default as HeartIcon } from './heart-icon.svg';
 export { default as MinusIcon } from './minus-icon.svg';
 export { default as UserIcon } from './user-icon.svg';
-export { default as CardIcon } from './card-icon.svg';
+export { default as CardIcon } from './cart-icon.svg';
 export { default as PlusIcon } from './plus-icon.svg';

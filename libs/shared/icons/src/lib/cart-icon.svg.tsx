@@ -1,3 +1,4 @@
+// TODO rename this to CartIcon
 export default function CartIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
