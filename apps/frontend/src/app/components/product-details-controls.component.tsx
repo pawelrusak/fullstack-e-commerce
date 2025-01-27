@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/navigation';
 import { QuantitySelection, Button } from '@e-shop/ui';
-import { CardIcon } from '@e-shop/icons';
+import { CartIcon } from '@e-shop/icons';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import { EN } from '@e-shop/i18n';
 import { device } from '@e-shop/theme';
@@ -96,7 +96,7 @@ function ProductDetailsControls({ product }: ProductDetailsControlsProps) {
           onClick={() => handleClickAddToCart(quantity)}
           disabled={quantity === 0}
         >
-          <CardIcon />
+          <CartIcon />
           <VisuallyHidden>
             {EN.PRODUCT_DETAIL.BUYING_FORM.ADD_TO_CART}
           </VisuallyHidden>
