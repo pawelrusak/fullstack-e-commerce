@@ -2,7 +2,7 @@ import { VisuallyHidden } from '@reach/visually-hidden';
 import { EN } from '@e-shop/i18n';
 import * as Styled from './product-card.styled';
 import { IconButton } from '../icon-button';
-import { CardIcon, HeartIcon, ShareIcon } from '@e-shop/icons';
+import { CartIcon, HeartIcon, ShareIcon } from '@e-shop/icons';
 
 type ProductCardProps = React.ComponentPropsWithRef<'button'>;
 
@@ -35,7 +35,7 @@ function AddToCartButton({ primary = true, ...props }: CardActionButton = {}) {
       <VisuallyHidden>
         {props.screenReaderText || EN.PRODUCT_CARD.ADD_TO_CART}
       </VisuallyHidden>
-      <CardIcon aria-hidden />
+      <CartIcon aria-hidden />
     </IconButton>
   );
 }
