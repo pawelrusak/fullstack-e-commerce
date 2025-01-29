@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { CardIcon } from '@e-shop/icons';
+import { CartIcon } from '@e-shop/icons';
 import {
   IconButton as BaseIconButton,
   ICON_BUTTON_VARIANT,
@@ -439,7 +439,7 @@ export const EmptyStateHeader = styled.header`
   height: 100%;
 `;
 
-export const EmptyStateCartIcon = styled(CardIcon)`
+export const EmptyStateCartIcon = styled(CartIcon)`
   scale: ${emptyStateIconToken._base.scale};
   height: ${emptyStateIconToken._base.height};
   width: ${emptyStateIconToken._base.width};
