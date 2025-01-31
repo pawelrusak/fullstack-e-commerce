@@ -1,7 +1,7 @@
 import * as Styled from './user-bar.styled';
 import { EN } from '@e-shop/i18n';
 import { getCurrencyFormat } from '@e-shop/utils';
-import { CardIconWithDot, UserIcon } from '@e-shop/icons';
+import { CartIconWithDot, UserIcon } from '@e-shop/icons';
 import { Brand } from '../../../brand';
 import { VisuallyHidden } from '@reach/visually-hidden';
 import * as SharedStyled from '../../navbar.styled';
@@ -54,7 +54,7 @@ export function UserBar({
                       cartBadgeVariant === 'dot' && cartItemsCount,
                     )}
                     marginRight={0}
-                    as={CardIconWithDot}
+                    as={CartIconWithDot}
                   />
                   {cartBadgeVariant === 'number' && cartItemsCount ? (
                     <Styled.ListItemCartBadge>
