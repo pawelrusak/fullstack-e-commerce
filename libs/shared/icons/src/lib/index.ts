@@ -1,5 +1,4 @@
 export { default as ArrowLongRightIcon } from './arrow-long-right.svg';
-export { default as CardIconWithDot } from './cart-icon-with-dot.svg';
 export { default as CartIconWithDot } from './cart-icon-with-dot.svg';
 export { default as MinusSmallButton } from './minus-small-icon.svg';
 export { default as ArrowShortRight } from './arrow-short-right.svg';
