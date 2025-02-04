@@ -11,7 +11,7 @@ type TmpProduct = Partial<
     _id: `product-${number}`;
     __regular_price: number;
     __discount_price: undefined | number;
-    review_count: number;
+    __review_count: number;
     isNewSection: boolean;
     delivery: string[];
     specification: ProductSpecification[];
@@ -25,7 +25,7 @@ export default [
     price: 999.0,
     __regular_price: 999.0,
     __discount_price: undefined,
-    review_count: 50,
+    __review_count: 50,
     isFeatured: true,
     thumbnail: 'product-001',
     subCategory: {
@@ -45,7 +45,7 @@ export default [
     price: 118.0,
     __regular_price: 118.0,
     __discount_price: 59.0,
-    review_count: 120,
+    __review_count: 120,
     isFeatured: true,
     thumbnail: 'product-002',
     subCategory: {
@@ -65,7 +65,7 @@ export default [
     price: 1199.0,
     __regular_price: 1199.0,
     __discount_price: undefined,
-    review_count: 100,
+    __review_count: 100,
     isFeatured: true,
     thumbnail: 'product-003',
     subCategory: {
@@ -85,7 +85,7 @@ export default [
     price: 79.0,
     __regular_price: 79.0,
     __discount_price: undefined,
-    review_count: 70,
+    __review_count: 70,
     isFeatured: true,
     thumbnail: 'product-004',
     subCategory: {
@@ -105,7 +105,7 @@ export default [
     price: 2799.0,
     __regular_price: 2799.0,
     __discount_price: undefined,
-    review_count: 20,
+    __review_count: 20,
     isFeatured: true,
     thumbnail: 'product-005',
     subCategory: {
@@ -125,7 +125,7 @@ export default [
     price: 1919.99,
     __regular_price: 1919.99,
     __discount_price: 959.99,
-    review_count: 120,
+    __review_count: 120,
     isFeatured: false,
     isNewSection: true,
     thumbnail: 'product-006',
@@ -146,7 +146,7 @@ export default [
     price: 799.0,
     __regular_price: 799.0,
     __discount_price: undefined,
-    review_count: 100,
+    __review_count: 100,
     isFeatured: false,
     isNewSection: true,
     thumbnail: 'product-007',
@@ -167,7 +167,7 @@ export default [
     price: 329.99,
     __regular_price: 329.99,
     __discount_price: undefined,
-    review_count: 120,
+    __review_count: 120,
     isFeatured: false,
     isNewSection: true,
     thumbnail: 'product-008',
@@ -188,7 +188,7 @@ export default [
     price: 2878.0,
     __regular_price: 2878.0,
     __discount_price: 2399.99,
-    review_count: 120,
+    __review_count: 120,
     isFeatured: false,
     isNewSection: true,
     thumbnail: 'product-009',
@@ -209,7 +209,7 @@ export default [
     price: 1499.99,
     __regular_price: 1499.99,
     __discount_price: undefined,
-    review_count: 20,
+    __review_count: 20,
     isFeatured: false,
     isNewSection: true,
     thumbnail: 'product-010',
@@ -230,7 +230,7 @@ export default [
     price: 5058.0,
     __regular_price: 5058.0,
     __discount_price: 4599.0,
-    review_count: 100,
+    __review_count: 100,
     isFeatured: true,
     isNewSection: false,
     thumbnail: 'product-011',
@@ -252,7 +252,7 @@ export default [
     price: 1638.0,
     __regular_price: 1638.0,
     __discount_price: 819.0,
-    review_count: 100,
+    __review_count: 100,
     isFeatured: true,
     isNewSection: false,
     thumbnail: 'product-012',
@@ -273,7 +273,7 @@ export default [
     price: 1199.0,
     __regular_price: 1199.0,
     __discount_price: undefined,
-    review_count: 100,
+    __review_count: 100,
     isFeatured: false,
     thumbnail: 'product-013',
     subCategory: {
@@ -293,7 +293,7 @@ export default [
     price: 167.0,
     __regular_price: 167.0,
     __discount_price: 129.0,
-    review_count: 120,
+    __review_count: 120,
     isFeatured: false,
     thumbnail: 'product-014',
     subCategory: {
@@ -313,7 +313,7 @@ export default [
     price: 999.0,
     __regular_price: 999.0,
     __discount_price: undefined,
-    review_count: 50,
+    __review_count: 50,
     isFeatured: false,
     thumbnail: 'product-015',
     subCategory: {
@@ -333,7 +333,7 @@ export default [
     price: 999.0,
     __regular_price: 999.0,
     __discount_price: undefined,
-    review_count: 50,
+    __review_count: 50,
     isFeatured: false,
     thumbnail: 'product-016',
     subCategory: {
@@ -353,7 +353,7 @@ export default [
     price: 1659.0,
     __regular_price: 1659.0,
     __discount_price: undefined,
-    review_count: 120,
+    __review_count: 120,
     isFeatured: false,
     thumbnail: 'product-017',
     subCategory: {
@@ -373,7 +373,7 @@ export default [
     price: 6268.0,
     __regular_price: 6268.0,
     __discount_price: 5699.0,
-    review_count: 120,
+    __review_count: 120,
     isFeatured: false,
     thumbnail: 'product-018',
     subCategory: {
@@ -393,7 +393,7 @@ export default [
     price: 2099.99,
     __regular_price: 2099.99,
     __discount_price: undefined,
-    review_count: 20,
+    __review_count: 20,
     isFeatured: false,
     thumbnail: 'product-019',
     subCategory: {
@@ -413,7 +413,7 @@ export default [
     price: 899.0,
     __regular_price: 899.0,
     __discount_price: undefined,
-    review_count: 20,
+    __review_count: 20,
     isFeatured: false,
     thumbnail: 'product-020',
     subCategory: {
@@ -433,7 +433,7 @@ export default [
     price: 119.9,
     __regular_price: 119.9,
     __discount_price: 109.0,
-    review_count: 120,
+    __review_count: 120,
     isFeatured: false,
     thumbnail: 'product-021',
     subCategory: {
@@ -453,7 +453,7 @@ export default [
     price: 9018.0,
     __regular_price: 9018.0,
     __discount_price: 8199.0,
-    review_count: 120,
+    __review_count: 120,
     isFeatured: false,
     thumbnail: 'product-022',
     subCategory: {
@@ -473,7 +473,7 @@ export default [
     price: 259.0,
     __regular_price: 259.0,
     __discount_price: undefined,
-    review_count: 120,
+    __review_count: 120,
     isFeatured: false,
     thumbnail: 'product-023',
     subCategory: {
@@ -493,7 +493,7 @@ export default [
     price: 29.0,
     __regular_price: 29.0,
     __discount_price: undefined,
-    review_count: 50,
+    __review_count: 50,
     isFeatured: false,
     thumbnail: 'product-024',
     subCategory: {
@@ -513,7 +513,7 @@ export default [
     price: 6358.0,
     __regular_price: 6358.0,
     __discount_price: 5299.0,
-    review_count: 120,
+    __review_count: 120,
     isFeatured: false,
     thumbnail: 'product-025',
     subCategory: {
@@ -533,7 +533,7 @@ export default [
     price: 49.0,
     __regular_price: 49.0,
     __discount_price: undefined,
-    review_count: 50,
+    __review_count: 50,
     isFeatured: false,
     thumbnail: 'product-026',
     subCategory: {
@@ -553,7 +553,7 @@ export default [
     price: 5499.99,
     __regular_price: 5499.99,
     __discount_price: 2999.99,
-    review_count: 142,
+    __review_count: 142,
     thumbnail: 'product-027',
     images: ['product-027-1', 'product-027-2'],
     delivery: ['Worldwide'],
@@ -640,7 +640,7 @@ export default [
     price: 1519.99,
     __regular_price: 1519.99,
     __discount_price: undefined,
-    review_count: 20,
+    __review_count: 20,
     thumbnail: 'product-028',
     subCategory: {
       _id: null,
