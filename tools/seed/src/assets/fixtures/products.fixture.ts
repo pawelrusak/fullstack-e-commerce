@@ -13,7 +13,7 @@ type TmpProduct = Partial<
     __discount_price: undefined | number;
     __review_count: number;
     isNewSection: boolean;
-    delivery: string[];
+    __delivery: string[];
     specification: ProductSpecification[];
   }
 >;
@@ -556,7 +556,7 @@ export default [
     __review_count: 142,
     thumbnail: 'product-027',
     images: ['product-027-1', 'product-027-2'],
-    delivery: ['Worldwide'],
+    __delivery: ['Worldwide'],
     specification: [
       {
         label: 'Brand',
