@@ -349,7 +349,7 @@ export default [
   },
   {
     _id: 'product-017',
-    name: 'Gaming Laptop ZDY 15.6 Inch 512 GB VGA HD CPU Core i7 SSD TUF Force GL533 ...',
+    name: 'Gaming Laptop ZDY 15.6 Inch 512 GB VGA HD CPU Core i7 SSD TUF Force GL533 RGB Light Extended Battery',
     price: 1659.0,
     __regular_price: 1659.0,
     __discount_price: undefined,
@@ -389,7 +389,7 @@ export default [
   },
   {
     _id: 'product-019',
-    name: '2019 Smart Laptop 256 GB 13 inch Pro Chip ...',
+    name: '2019 Smart Laptop 256 GB 13 inch Pro Chip M2 Turbo Enhanced Performance',
     price: 2099.99,
     __regular_price: 2099.99,
     __discount_price: undefined,
@@ -409,7 +409,7 @@ export default [
   },
   {
     _id: 'product-020',
-    name: 'Hero Watch SU Series 8 Lilac Rubber Band 40 ...',
+    name: 'Hero Watch SU Series 8 Lilac Rubber Band 40 mm GPS + Cellular',
     price: 899.0,
     __regular_price: 899.0,
     __discount_price: undefined,
@@ -429,7 +429,7 @@ export default [
   },
   {
     _id: 'product-021',
-    name: 'Console Game Stick HD Wireless Bluetoo...',
+    name: 'Console Game Stick HD Wireless Bluetooth 5.0 Built-in 500 Games',
     price: 119.9,
     __regular_price: 119.9,
     __discount_price: 109.0,
@@ -449,7 +449,7 @@ export default [
   },
   {
     _id: 'product-022',
-    name: 'Crystal 4K Smart 50” Black LED TV HD Quali...',
+    name: 'Crystal 4K Smart 50” Black LED TV HD Quality Ultra HDR Dolby Audio',
     price: 9018.0,
     __regular_price: 9018.0,
     __discount_price: 8199.0,
@@ -469,7 +469,7 @@ export default [
   },
   {
     _id: 'product-023',
-    name: 'Mini Tablet Pro 16 inch HD Pencil 128 GB Sys...',
+    name: 'Mini Tablet Pro 16 inch HD Pencil 128 GB System Wifi Cellular 2024 Model',
     price: 259.0,
     __regular_price: 259.0,
     __discount_price: undefined,
@@ -489,7 +489,7 @@ export default [
   },
   {
     _id: 'product-024',
-    name: '134S Wireless Max Hifi Stereo Headphone Be...',
+    name: '134S Wireless Max Hifi Stereo Headphone Best Bass Sound Experience',
     price: 29.0,
     __regular_price: 29.0,
     __discount_price: undefined,
@@ -509,7 +509,7 @@ export default [
   },
   {
     _id: 'product-025',
-    name: 'Game Station 15 Disc Edition with Console ...',
+    name: 'Game Station 15 Disc Edition with Console 4K VR Support Wireless Controllers',
     price: 6358.0,
     __regular_price: 6358.0,
     __discount_price: 5299.0,
@@ -529,7 +529,7 @@ export default [
   },
   {
     _id: 'product-026',
-    name: 'Retro Portable Speaker HQ Wireless FT-12 Ori...',
+    name: 'Retro Portable Speaker HQ Wireless FT-12 Original Design Clear Sound',
     price: 49.0,
     __regular_price: 49.0,
     __discount_price: undefined,
@@ -636,7 +636,7 @@ export default [
   },
   {
     _id: 'product-028',
-    name: 'Sleek Laptop HQ 256 GB SSD 8 GB Intel iCor...',
+    name: 'Sleek Laptop HQ 256 GB SSD 8 GB Intel iCore 11th Gen Windows 11',
     price: 1519.99,
     __regular_price: 1519.99,
     __discount_price: undefined,
