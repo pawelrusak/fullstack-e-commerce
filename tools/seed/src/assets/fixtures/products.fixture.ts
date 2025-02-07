@@ -12,7 +12,7 @@ type TmpProduct = Partial<
     __regular_price: number;
     __discount_price: undefined | number;
     __review_count: number;
-    isNewSection: boolean;
+    __isNewSection: boolean;
     __delivery: string[];
     specification: ProductSpecification[];
   }
@@ -127,7 +127,7 @@ export default [
     __discount_price: 959.99,
     __review_count: 120,
     isFeatured: false,
-    isNewSection: true,
+    __isNewSection: true,
     thumbnail: 'product-006',
     subCategory: {
       _id: null,
@@ -148,7 +148,7 @@ export default [
     __discount_price: undefined,
     __review_count: 100,
     isFeatured: false,
-    isNewSection: true,
+    __isNewSection: true,
     thumbnail: 'product-007',
     subCategory: {
       _id: null,
@@ -169,7 +169,7 @@ export default [
     __discount_price: undefined,
     __review_count: 120,
     isFeatured: false,
-    isNewSection: true,
+    __isNewSection: true,
     thumbnail: 'product-008',
     subCategory: {
       _id: null,
@@ -190,7 +190,7 @@ export default [
     __discount_price: 2399.99,
     __review_count: 120,
     isFeatured: false,
-    isNewSection: true,
+    __isNewSection: true,
     thumbnail: 'product-009',
     subCategory: {
       _id: null,
@@ -211,7 +211,7 @@ export default [
     __discount_price: undefined,
     __review_count: 20,
     isFeatured: false,
-    isNewSection: true,
+    __isNewSection: true,
     thumbnail: 'product-010',
     subCategory: {
       _id: null,
@@ -232,7 +232,7 @@ export default [
     __discount_price: 4599.0,
     __review_count: 100,
     isFeatured: true,
-    isNewSection: false,
+    __isNewSection: false,
     thumbnail: 'product-011',
     stock: 50,
     subCategory: {
@@ -254,7 +254,7 @@ export default [
     __discount_price: 819.0,
     __review_count: 100,
     isFeatured: true,
-    isNewSection: false,
+    __isNewSection: false,
     thumbnail: 'product-012',
     subCategory: {
       _id: null,
