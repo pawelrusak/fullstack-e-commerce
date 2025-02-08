@@ -14,7 +14,7 @@ type TmpProduct = Partial<
     __review_count: number;
     __isNewSection: boolean;
     __delivery: string[];
-    specification: ProductSpecification[];
+    __specification: ProductSpecification[];
   }
 >;
 
@@ -557,7 +557,7 @@ export default [
     thumbnail: 'product-027',
     images: ['product-027-1', 'product-027-2'],
     __delivery: ['Worldwide'],
-    specification: [
+    __specification: [
       {
         label: 'Brand',
         value: 'NexSUS Tech Company',
