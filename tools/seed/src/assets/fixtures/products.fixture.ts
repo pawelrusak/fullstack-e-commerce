@@ -22,6 +22,7 @@ export default [
   {
     _id: 'product-001',
     name: 'JPhone 13 High Quality Value Buy Best Camera Performance',
+    slug: 'jphone-13-high-quality-value-buy-best-camera-performance',
     price: 999.0,
     __regular_price: 999.0,
     __discount_price: undefined,
@@ -42,6 +43,7 @@ export default [
   {
     _id: 'product-002',
     name: 'WH-1000XM4 Wireless Headphones High Quality',
+    slug: 'wh-1000xm4-wireless-headphones-high-quality',
     price: 118.0,
     __regular_price: 118.0,
     __discount_price: 59.0,
@@ -62,6 +64,7 @@ export default [
   {
     _id: 'product-003',
     name: 'S21 Laptop Ultra HD LED Screen Feature 2023 Latest Model',
+    slug: 's21-laptop-ultra-hd-led-screen-feature-2023-latest-model',
     price: 1199.0,
     __regular_price: 1199.0,
     __discount_price: undefined,
@@ -82,6 +85,7 @@ export default [
   {
     _id: 'product-004',
     name: 'Mini Polaroid Camera for Girls with Flash Light',
+    slug: 'mini-polaroid-camera-for-girls-with-flash-light',
     price: 79.0,
     __regular_price: 79.0,
     __discount_price: undefined,
@@ -102,6 +106,7 @@ export default [
   {
     _id: 'product-005',
     name: 'AG OLED65CXPUA 4K Smart OLED TV New Model',
+    slug: 'ag-oled65cxpua-4k-smart-oled-tv-new-model',
     price: 2799.0,
     __regular_price: 2799.0,
     __discount_price: undefined,
@@ -122,6 +127,7 @@ export default [
   {
     _id: 'product-006',
     name: 'Orange Watch 12 High Quality Health Sensors',
+    slug: 'orange-watch-12-high-quality-health-sensors',
     price: 1919.99,
     __regular_price: 1919.99,
     __discount_price: 959.99,
@@ -143,6 +149,7 @@ export default [
   {
     _id: 'product-007',
     name: 'Ultra Tablet Qwerty HD 10765 Series Low Price',
+    slug: 'ultra-tablet-qwerty-hd-10765-series-low-price',
     price: 799.0,
     __regular_price: 799.0,
     __discount_price: undefined,
@@ -164,6 +171,7 @@ export default [
   {
     _id: 'product-008',
     name: 'QuietComfort 45 Wireless Headphones Advanced Noise Cancelling',
+    slug: 'quietcomfort-45-wireless-headphones-advanced-noise-cancelling',
     price: 329.99,
     __regular_price: 329.99,
     __discount_price: undefined,
@@ -185,6 +193,7 @@ export default [
   {
     _id: 'product-009',
     name: 'Surface Laptop 4 XPS 13 Plus 64GB i7 Touch Screen',
+    slug: 'surface-laptop-4-xps-13-plus-64gb-i7-touch-screen',
     price: 2878.0,
     __regular_price: 2878.0,
     __discount_price: 2399.99,
@@ -206,6 +215,7 @@ export default [
   {
     _id: 'product-010',
     name: 'CamPro HERO10 Black Sleek Design 2023 4K Video',
+    slug: 'campro-hero10-black-sleek-design-2023-4k-video',
     price: 1499.99,
     __regular_price: 1499.99,
     __discount_price: undefined,
@@ -227,6 +237,7 @@ export default [
   {
     _id: 'product-011',
     name: 'LP78245 Smart TV OLED 43 Inch 4K HD Dynamic Color Enhancer USB Movie Playback',
+    slug: 'lp78245-smart-tv-oled-43-inch-4k-hd-dynamic-color-enhancer-usb-movie-playback',
     price: 5058.0,
     __regular_price: 5058.0,
     __discount_price: 4599.0,
@@ -249,6 +260,7 @@ export default [
   {
     _id: 'product-012',
     name: 'VBI Mini 2 Fly More Combo Drone Sjrc F22S 4K Pro Ptz 5 Km Version Alpha Edition',
+    slug: 'vbi-mini-2-fly-more-combo-drone-sjrc-f22s-4k-pro-ptz-5-km-version-alpha-edition',
     price: 1638.0,
     __regular_price: 1638.0,
     __discount_price: 819.0,
@@ -270,6 +282,7 @@ export default [
   {
     _id: 'product-013',
     name: 'Wireless Bluetooth Speaker Portable Sound System',
+    slug: 'wireless-bluetooth-speaker-portable-sound-system',
     price: 1199.0,
     __regular_price: 1199.0,
     __discount_price: undefined,
@@ -290,6 +303,7 @@ export default [
   {
     _id: 'product-014',
     name: 'Tablet Pro 128 GB HD RAM 8 GB i8 1080P 4K Display',
+    slug: 'tablet-pro-128-gb-hd-ram-8-gb-i8-1080p-4k-display',
     price: 167.0,
     __regular_price: 167.0,
     __discount_price: 129.0,
@@ -310,6 +324,7 @@ export default [
   {
     _id: 'product-015',
     name: 'Mobile Watch A Series GPS 7/144 45mm Red Rubber Case Loop Series 7 Wi-Fi',
+    slug: 'mobile-watch-a-series-gps-7/144-45mm-red-rubber-case-loop-series-7-wi-fi',
     price: 999.0,
     __regular_price: 999.0,
     __discount_price: undefined,
@@ -330,6 +345,7 @@ export default [
   {
     _id: 'product-016',
     name: 'LT Phone RAM 16/256 GB Rose Gold Guaranteed Quality',
+    slug: 'lt-phone-ram-16/256-gb-rose-gold-guaranteed-quality',
     price: 999.0,
     __regular_price: 999.0,
     __discount_price: undefined,
@@ -350,6 +366,7 @@ export default [
   {
     _id: 'product-017',
     name: 'Gaming Laptop ZDY 15.6 Inch 512 GB VGA HD CPU Core i7 SSD TUF Force GL533 RGB Light Extended Battery',
+    slug: 'gaming-laptop-zdy-15.6-inch-512-gb-vga-hd-cpu-core-i7-ssd-tuf-force-gl533-rgb-light-extended-battery',
     price: 1659.0,
     __regular_price: 1659.0,
     __discount_price: undefined,
@@ -370,6 +387,7 @@ export default [
   {
     _id: 'product-018',
     name: 'Wash Machine 11 KG Front Loading Steam Cycle Feature',
+    slug: 'wash-machine-11-kg-front-loading-steam-cycle-feature',
     price: 6268.0,
     __regular_price: 6268.0,
     __discount_price: 5699.0,
@@ -390,6 +408,7 @@ export default [
   {
     _id: 'product-019',
     name: '2019 Smart Laptop 256 GB 13 inch Pro Chip M2 Turbo Enhanced Performance',
+    slug: '2019-smart-laptop-256-gb-13-inch-pro-chip-m2-turbo-enhanced-performance',
     price: 2099.99,
     __regular_price: 2099.99,
     __discount_price: undefined,
@@ -410,6 +429,7 @@ export default [
   {
     _id: 'product-020',
     name: 'Hero Watch SU Series 8 Lilac Rubber Band 40 mm GPS + Cellular',
+    slug: 'hero-watch-su-series-8-lilac-rubber-band-40-mm-gps-+-cellular',
     price: 899.0,
     __regular_price: 899.0,
     __discount_price: undefined,
@@ -430,6 +450,7 @@ export default [
   {
     _id: 'product-021',
     name: 'Console Game Stick HD Wireless Bluetooth 5.0 Built-in 500 Games',
+    slug: 'console-game-stick-hd-wireless-bluetooth-5.0-built-in-500-games',
     price: 119.9,
     __regular_price: 119.9,
     __discount_price: 109.0,
@@ -450,6 +471,7 @@ export default [
   {
     _id: 'product-022',
     name: 'Crystal 4K Smart 50” Black LED TV HD Quality Ultra HDR Dolby Audio',
+    slug: 'crystal-4k-smart-50”-black-led-tv-hd-quality-ultra-hdr-dolby-audio',
     price: 9018.0,
     __regular_price: 9018.0,
     __discount_price: 8199.0,
@@ -470,6 +492,7 @@ export default [
   {
     _id: 'product-023',
     name: 'Mini Tablet Pro 16 inch HD Pencil 128 GB System Wifi Cellular 2024 Model',
+    slug: 'mini-tablet-pro-16-inch-hd-pencil-128-gb-system-wifi-cellular-2024-model',
     price: 259.0,
     __regular_price: 259.0,
     __discount_price: undefined,
@@ -490,6 +513,7 @@ export default [
   {
     _id: 'product-024',
     name: '134S Wireless Max Hifi Stereo Headphone Best Bass Sound Experience',
+    slug: '134s-wireless-max-hifi-stereo-headphone-best-bass-sound-experience',
     price: 29.0,
     __regular_price: 29.0,
     __discount_price: undefined,
@@ -510,6 +534,7 @@ export default [
   {
     _id: 'product-025',
     name: 'Game Station 15 Disc Edition with Console 4K VR Support Wireless Controllers',
+    slug: 'game-station-15-disc-edition-with-console-4k-vr-support-wireless-controllers',
     price: 6358.0,
     __regular_price: 6358.0,
     __discount_price: 5299.0,
@@ -530,6 +555,7 @@ export default [
   {
     _id: 'product-026',
     name: 'Retro Portable Speaker HQ Wireless FT-12 Original Design Clear Sound',
+    slug: 'retro-portable-speaker-hq-wireless-ft-12-original-design-clear-sound',
     price: 49.0,
     __regular_price: 49.0,
     __discount_price: undefined,
@@ -550,6 +576,7 @@ export default [
   {
     _id: 'product-027',
     name: 'NexSUS ROCK Strix Scar 17 Gaming Laptop 15.7” 1TB SSD 16GB RAM Pro',
+    slug: 'nexus-rock-strix-scar-17-gaming-laptop-15.7”-1tb-ssd-16gb-ram-pro',
     price: 5499.99,
     __regular_price: 5499.99,
     __discount_price: 2999.99,
@@ -637,6 +664,7 @@ export default [
   {
     _id: 'product-028',
     name: 'Sleek Laptop HQ 256 GB SSD 8 GB Intel iCore 11th Gen Windows 11',
+    slug: 'sleek-laptop-hq-256-gb-ssd-8-gb-intel-icore-11th-gen-windows-11',
     price: 1519.99,
     __regular_price: 1519.99,
     __discount_price: undefined,
