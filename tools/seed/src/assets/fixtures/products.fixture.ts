@@ -29,6 +29,7 @@ export default [
     thumbnail: 'product-028',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Laptop',
@@ -141,6 +142,7 @@ export default [
     thumbnail: 'product-026',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Audio',
@@ -165,6 +167,7 @@ export default [
     thumbnail: 'product-025',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Gaming',
@@ -188,6 +191,7 @@ export default [
     thumbnail: 'product-024',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Audio',
@@ -211,6 +215,7 @@ export default [
     thumbnail: 'product-023',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Tablet',
@@ -235,6 +240,7 @@ export default [
     thumbnail: 'product-022',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: '5f43ba27320000271ced05',
       name: 'Television',
@@ -259,6 +265,7 @@ export default [
     thumbnail: 'product-021',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Gaming',
@@ -282,6 +289,7 @@ export default [
     thumbnail: 'product-020',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Watch',
@@ -305,6 +313,7 @@ export default [
     thumbnail: 'product-019',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Laptop',
@@ -329,6 +338,7 @@ export default [
     thumbnail: 'product-018',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Home',
@@ -352,6 +362,7 @@ export default [
     thumbnail: 'product-017',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Laptop',
@@ -375,6 +386,7 @@ export default [
     thumbnail: 'product-016',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Phone',
@@ -398,6 +410,7 @@ export default [
     thumbnail: 'product-015',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Watch',
@@ -422,6 +435,7 @@ export default [
     thumbnail: 'product-014',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Tablet',
@@ -445,6 +459,7 @@ export default [
     thumbnail: 'product-013',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Audio',
@@ -470,6 +485,7 @@ export default [
     thumbnail: 'product-012',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Camera',
@@ -495,6 +511,7 @@ export default [
     thumbnail: 'product-011',
     images: [],
     __delivery: [],
+    __specification: [],
     stock: 50,
     subCategory: {
       _id: null,
@@ -519,6 +536,7 @@ export default [
     thumbnail: 'product-005',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Television',
@@ -542,6 +560,7 @@ export default [
     thumbnail: 'product-004',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Camera',
@@ -565,6 +584,7 @@ export default [
     thumbnail: 'product-003',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Laptop',
@@ -589,6 +609,7 @@ export default [
     thumbnail: 'product-002',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Audio',
@@ -612,6 +633,7 @@ export default [
     thumbnail: 'product-001',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Phone',
@@ -636,6 +658,7 @@ export default [
     thumbnail: 'product-010',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Camera',
@@ -661,6 +684,7 @@ export default [
     thumbnail: 'product-009',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Laptop',
@@ -685,6 +709,7 @@ export default [
     thumbnail: 'product-008',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Audio',
@@ -709,6 +734,7 @@ export default [
     thumbnail: 'product-007',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Tablet',
@@ -734,6 +760,7 @@ export default [
     thumbnail: 'product-006',
     images: [],
     __delivery: [],
+    __specification: [],
     subCategory: {
       _id: null,
       name: 'Watch',
