@@ -28,6 +28,7 @@ export default [
     __review_count: 20,
     thumbnail: 'product-028',
     images: [],
+    stock: 18,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -52,6 +53,7 @@ export default [
     __review_count: 142,
     thumbnail: 'product-027',
     images: ['product-027-1', 'product-027-2'],
+    stock: 7,
     __delivery: ['Worldwide'],
     __specification: [
       {
@@ -141,6 +143,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-026',
     images: [],
+    stock: 74,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -166,6 +169,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-025',
     images: [],
+    stock: 9,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -190,6 +194,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-024',
     images: [],
+    stock: 64,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -214,6 +219,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-023',
     images: [],
+    stock: 54,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -239,6 +245,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-022',
     images: [],
+    stock: 10,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -264,6 +271,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-021',
     images: [],
+    stock: 68,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -288,6 +296,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-020',
     images: [],
+    stock: 45,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -312,6 +321,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-019',
     images: [],
+    stock: 17,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -337,6 +347,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-018',
     images: [],
+    stock: 6,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -361,6 +372,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-017',
     images: [],
+    stock: 19,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -385,6 +397,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-016',
     images: [],
+    stock: 55,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -409,6 +422,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-015',
     images: [],
+    stock: 49,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -434,6 +448,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-014',
     images: [],
+    stock: 72,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -458,6 +473,7 @@ export default [
     isFeatured: false,
     thumbnail: 'product-013',
     images: [],
+    stock: 35,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -484,6 +500,7 @@ export default [
     __isNewSection: false,
     thumbnail: 'product-012',
     images: [],
+    stock: 21,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -510,9 +527,9 @@ export default [
     __isNewSection: false,
     thumbnail: 'product-011',
     images: [],
+    stock: 8,
     __delivery: [],
     __specification: [],
-    stock: 50,
     subCategory: {
       _id: null,
       name: 'Television',
@@ -535,6 +552,7 @@ export default [
     isFeatured: true,
     thumbnail: 'product-005',
     images: [],
+    stock: 12,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -559,6 +577,7 @@ export default [
     isFeatured: true,
     thumbnail: 'product-004',
     images: [],
+    stock: 59,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -583,6 +602,7 @@ export default [
     isFeatured: true,
     thumbnail: 'product-003',
     images: [],
+    stock: 30,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -608,6 +628,7 @@ export default [
     isFeatured: true,
     thumbnail: 'product-002',
     images: [],
+    stock: 66,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -632,6 +653,7 @@ export default [
     isFeatured: true,
     thumbnail: 'product-001',
     images: [],
+    stock: 63,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -657,6 +679,7 @@ export default [
     __isNewSection: true,
     thumbnail: 'product-010',
     images: [],
+    stock: 28,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -683,6 +706,7 @@ export default [
     __isNewSection: true,
     thumbnail: 'product-009',
     images: [],
+    stock: 11,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -708,6 +732,7 @@ export default [
     __isNewSection: true,
     thumbnail: 'product-008',
     images: [],
+    stock: 60,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -733,6 +758,7 @@ export default [
     __isNewSection: true,
     thumbnail: 'product-007',
     images: [],
+    stock: 42,
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -759,6 +785,7 @@ export default [
     __isNewSection: true,
     thumbnail: 'product-006',
     images: [],
+    stock: 20,
     __delivery: [],
     __specification: [],
     subCategory: {
