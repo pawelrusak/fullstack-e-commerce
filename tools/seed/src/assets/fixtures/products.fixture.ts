@@ -54,6 +54,11 @@ export default [
     thumbnail: 'product-027',
     images: ['product-027-1', 'product-027-2'],
     stock: 7,
+    size: {
+      depth: 11.1,
+      height: 1.0,
+      width: 15.7,
+    },
     __delivery: ['Worldwide'],
     __specification: [
       {
