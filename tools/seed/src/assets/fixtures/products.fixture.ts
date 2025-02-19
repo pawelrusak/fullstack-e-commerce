@@ -29,6 +29,11 @@ export default [
     thumbnail: 'product-028',
     images: [],
     stock: 18,
+    size: {
+      depth: 9,
+      height: 0.7,
+      width: 14,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -149,6 +154,11 @@ export default [
     thumbnail: 'product-026',
     images: [],
     stock: 74,
+    size: {
+      depth: 4,
+      height: 3,
+      width: 6,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -175,6 +185,11 @@ export default [
     thumbnail: 'product-025',
     images: [],
     stock: 9,
+    size: {
+      depth: 10.2,
+      height: 3.6,
+      width: 15.4,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -200,6 +215,11 @@ export default [
     thumbnail: 'product-024',
     images: [],
     stock: 64,
+    size: {
+      depth: 3.3,
+      height: 7.2,
+      width: 6.7,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -225,6 +245,11 @@ export default [
     thumbnail: 'product-023',
     images: [],
     stock: 54,
+    size: {
+      depth: 9,
+      height: 0.3,
+      width: 14,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -251,6 +276,11 @@ export default [
     thumbnail: 'product-022',
     images: [],
     stock: 10,
+    size: {
+      depth: 10,
+      height: 28,
+      width: 44,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -277,6 +307,11 @@ export default [
     thumbnail: 'product-021',
     images: [],
     stock: 68,
+    size: {
+      depth: 1,
+      height: 0.5,
+      width: 3,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -302,6 +337,11 @@ export default [
     thumbnail: 'product-020',
     images: [],
     stock: 45,
+    size: {
+      depth: 1.8,
+      height: 0.45,
+      width: 1.6,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -327,6 +367,11 @@ export default [
     thumbnail: 'product-019',
     images: [],
     stock: 17,
+    size: {
+      depth: 8.36,
+      height: 0.63,
+      width: 11.97,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -353,6 +398,11 @@ export default [
     thumbnail: 'product-018',
     images: [],
     stock: 6,
+    size: {
+      depth: 30.4,
+      height: 39,
+      width: 27,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -378,6 +428,11 @@ export default [
     thumbnail: 'product-017',
     images: [],
     stock: 19,
+    size: {
+      depth: 9.6,
+      height: 0.9,
+      width: 14.2,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -403,6 +458,11 @@ export default [
     thumbnail: 'product-016',
     images: [],
     stock: 55,
+    size: {
+      depth: 2.8,
+      height: 0.3,
+      width: 5.8,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -428,6 +488,11 @@ export default [
     thumbnail: 'product-015',
     images: [],
     stock: 49,
+    size: {
+      depth: 1.6,
+      height: 0.45,
+      width: 1.8,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -454,6 +519,11 @@ export default [
     thumbnail: 'product-014',
     images: [],
     stock: 72,
+    size: {
+      depth: 6.6,
+      height: 0.3,
+      width: 10.2,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -479,6 +549,11 @@ export default [
     thumbnail: 'product-013',
     images: [],
     stock: 35,
+    size: {
+      depth: 4,
+      height: 3.5,
+      width: 8,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -505,6 +580,11 @@ export default [
     thumbnail: 'product-012',
     images: [],
     stock: 21,
+    size: {
+      depth: 3.1,
+      height: 2.2,
+      width: 5.6,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -531,6 +611,11 @@ export default [
     thumbnail: 'product-011',
     images: [],
     stock: 8,
+    size: {
+      depth: 8,
+      height: 24,
+      width: 38,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -556,6 +641,11 @@ export default [
     thumbnail: 'product-005',
     images: [],
     stock: 12,
+    size: {
+      depth: 9,
+      height: 33,
+      width: 57,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -581,6 +671,11 @@ export default [
     thumbnail: 'product-004',
     images: [],
     stock: 59,
+    size: {
+      depth: 2.8,
+      height: 2.4,
+      width: 4,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -606,6 +701,11 @@ export default [
     thumbnail: 'product-003',
     images: [],
     stock: 30,
+    size: {
+      depth: 9.3,
+      height: 0.8,
+      width: 14.1,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -632,6 +732,11 @@ export default [
     thumbnail: 'product-002',
     images: [],
     stock: 66,
+    size: {
+      depth: 3,
+      height: 9.6,
+      width: 7.3,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -657,6 +762,11 @@ export default [
     thumbnail: 'product-001',
     images: [],
     stock: 63,
+    size: {
+      depth: 2.8,
+      height: 0.3,
+      width: 5.8,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -682,6 +792,11 @@ export default [
     thumbnail: 'product-010',
     images: [],
     stock: 28,
+    size: {
+      depth: 1.8,
+      height: 1.4,
+      width: 2.6,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -708,6 +823,11 @@ export default [
     thumbnail: 'product-009',
     images: [],
     stock: 11,
+    size: {
+      depth: 8.5,
+      height: 0.57,
+      width: 12.1,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -733,6 +853,11 @@ export default [
     thumbnail: 'product-008',
     images: [],
     stock: 60,
+    size: {
+      depth: 3,
+      height: 9.5,
+      width: 7.3,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -758,6 +883,11 @@ export default [
     thumbnail: 'product-007',
     images: [],
     stock: 42,
+    size: {
+      depth: 6.5,
+      height: 0.35,
+      width: 10,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -784,6 +914,11 @@ export default [
     thumbnail: 'product-006',
     images: [],
     stock: 20,
+    size: {
+      depth: 1.6,
+      height: 0.45,
+      width: 1.7,
+    },
     __delivery: [],
     __specification: [],
     subCategory: {
