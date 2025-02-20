@@ -6,6 +6,17 @@ type ProductSpecification = {
   highlighted: boolean;
 };
 
+//  Apple
+//  Samsung
+//  ASUS
+//  Dell
+//  Lenovo
+//  HP
+//  Panasonic
+//  LG
+//  Sony
+//  Toshiba
+
 type TmpProduct = Partial<
   Product & {
     _id: `product-${number}`;
@@ -34,6 +45,7 @@ export default [
       height: 0.7,
       width: 14,
     },
+    brand: 'Dell',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -64,6 +76,7 @@ export default [
       height: 1.0,
       width: 15.7,
     },
+    brand: 'ASUS',
     __delivery: ['Worldwide'],
     __specification: [
       {
@@ -159,6 +172,7 @@ export default [
       height: 3,
       width: 6,
     },
+    brand: 'Panasonic',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -190,6 +204,7 @@ export default [
       height: 3.6,
       width: 15.4,
     },
+    brand: 'Sony',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -220,6 +235,7 @@ export default [
       height: 7.2,
       width: 6.7,
     },
+    brand: 'LG',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -250,6 +266,7 @@ export default [
       height: 0.3,
       width: 14,
     },
+    brand: 'Apple',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -281,6 +298,7 @@ export default [
       height: 28,
       width: 44,
     },
+    brand: 'Samsung',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -312,6 +330,7 @@ export default [
       height: 0.5,
       width: 3,
     },
+    brand: 'Toshiba',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -342,6 +361,7 @@ export default [
       height: 0.45,
       width: 1.6,
     },
+    brand: 'Apple',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -372,6 +392,7 @@ export default [
       height: 0.63,
       width: 11.97,
     },
+    brand: 'Apple',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -403,6 +424,7 @@ export default [
       height: 39,
       width: 27,
     },
+    brand: 'LG',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -433,6 +455,7 @@ export default [
       height: 0.9,
       width: 14.2,
     },
+    brand: 'ASUS',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -463,6 +486,7 @@ export default [
       height: 0.3,
       width: 5.8,
     },
+    brand: 'Samsung',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -493,6 +517,7 @@ export default [
       height: 0.45,
       width: 1.8,
     },
+    brand: 'Apple',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -524,6 +549,7 @@ export default [
       height: 0.3,
       width: 10.2,
     },
+    brand: 'Lenovo',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -554,6 +580,7 @@ export default [
       height: 3.5,
       width: 8,
     },
+    brand: 'Panasonic',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -585,6 +612,7 @@ export default [
       height: 2.2,
       width: 5.6,
     },
+    brand: 'Sony',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -616,6 +644,7 @@ export default [
       height: 24,
       width: 38,
     },
+    brand: 'LG',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -646,6 +675,7 @@ export default [
       height: 33,
       width: 57,
     },
+    brand: 'Toshiba',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -676,6 +706,7 @@ export default [
       height: 2.4,
       width: 4,
     },
+    brand: 'Sony',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -706,6 +737,7 @@ export default [
       height: 0.8,
       width: 14.1,
     },
+    brand: 'Samsung',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -737,6 +769,7 @@ export default [
       height: 9.6,
       width: 7.3,
     },
+    brand: 'Sony',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -767,6 +800,7 @@ export default [
       height: 0.3,
       width: 5.8,
     },
+    brand: 'Apple',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -797,6 +831,7 @@ export default [
       height: 1.4,
       width: 2.6,
     },
+    brand: 'Panasonic',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -828,6 +863,7 @@ export default [
       height: 0.57,
       width: 12.1,
     },
+    brand: 'Dell',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -858,6 +894,7 @@ export default [
       height: 9.5,
       width: 7.3,
     },
+    brand: 'Sony',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -888,6 +925,7 @@ export default [
       height: 0.35,
       width: 10,
     },
+    brand: 'HP',
     __delivery: [],
     __specification: [],
     subCategory: {
@@ -919,6 +957,7 @@ export default [
       height: 0.45,
       width: 1.7,
     },
+    brand: 'Samsung',
     __delivery: [],
     __specification: [],
     subCategory: {
