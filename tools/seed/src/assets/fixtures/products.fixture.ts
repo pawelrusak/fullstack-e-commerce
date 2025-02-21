@@ -34,6 +34,8 @@ export default [
     _id: 'product-028',
     name: 'Sleek Laptop HQ 256 GB SSD 8 GB Intel iCore 11th Gen Windows 11',
     slug: 'sleek-laptop-hq-256-gb-ssd-8-gb-intel-icore-11th-gen-windows-11',
+    description:
+      'Experience seamless productivity and entertainment with this Dell laptop. Powered by an 11th Gen Intel iCore processor, 8 GB of RAM, and a fast 256 GB SSD, it easily handles multitasking and quick boot-ups. The sleek chassis and Windows 11 interface ensure you can work, stream, and browse with style and speed.',
     price: 1519.99,
     __regular_price: 1519.99,
     __review_count: 20,
@@ -64,6 +66,8 @@ export default [
     _id: 'product-027',
     name: 'NexSUS ROCK Strix Scar 17 Gaming Laptop 15.7” 1TB SSD 16GB RAM Pro',
     slug: 'nexus-rock-strix-scar-17-gaming-laptop-15.7”-1tb-ssd-16gb-ram-pro',
+    description:
+      'Designed for dedicated gamers, this ASUS NexSUS ROCK Strix Scar 17 laptop packs cutting-edge hardware, including a 10th Gen Intel Core i9 processor, NVIDIA GeForce RTX 3080 graphics, and 32GB of DDR4 RAM (per the specs). Its high-refresh 17.3" display ensures fluid visuals, while advanced cooling technology keeps performance reliable during intense sessions.',
     price: 5499.99,
     __regular_price: 5499.99,
     __discount_price: 2999.99,
@@ -160,6 +164,8 @@ export default [
     _id: 'product-026',
     name: 'Retro Portable Speaker HQ Wireless FT-12 Original Design Clear Sound',
     slug: 'retro-portable-speaker-hq-wireless-ft-12-original-design-clear-sound',
+    description:
+      'Channel vintage vibes with this retro-style Panasonic wireless speaker. The FT-12 combines a classic look with modern Bluetooth connectivity, delivering crisp audio quality and convenient portability. Perfect for small gatherings or personal listening, it offers long battery life and a conversation-starting design.',
     price: 49,
     __regular_price: 49,
     __review_count: 50,
@@ -191,6 +197,8 @@ export default [
     _id: 'product-025',
     name: 'Game Station 15 Disc Edition with Console 4K VR Support Wireless Controllers',
     slug: 'game-station-15-disc-edition-with-console-4k-vr-support-wireless-controllers',
+    description:
+      'Experience next-level gaming with the Sony Game Station 15 Disc Edition. This console supports 4K resolution, VR compatibility, and comes with wireless controllers for a seamless multiplayer experience. Whether you’re into high-speed racing or action-packed adventures, the powerful hardware and quick load times deliver immersive gameplay.',
     price: 6358,
     __regular_price: 6358,
     __discount_price: 5299,
@@ -223,6 +231,8 @@ export default [
     _id: 'product-024',
     name: '134S Wireless Max Hifi Stereo Headphone Best Bass Sound Experience',
     slug: '134s-wireless-max-hifi-stereo-headphone-best-bass-sound-experience',
+    description:
+      'Immerse yourself in rich audio with the LG 134S Wireless Max Hifi Stereo Headphones. Designed for comfort, these headphones deliver powerful bass, balanced mids, and crisp highs for a captivating listening experience. With long battery life and easy Bluetooth connectivity, it’s the perfect headset for music lovers on the move.',
     price: 29,
     __regular_price: 29,
     __review_count: 50,
@@ -254,6 +264,8 @@ export default [
     _id: 'product-023',
     name: 'Mini Tablet Pro 16 inch HD Pencil 128 GB System Wifi Cellular 2024 Model',
     slug: 'mini-tablet-pro-16-inch-hd-pencil-128-gb-system-wifi-cellular-2024-model',
+    description:
+      'Unleash your creativity with this Apple Mini Tablet Pro. Featuring a spacious 16-inch HD display, stylus (Pencil) support, and 128 GB of storage, this 2024 model seamlessly handles both work and entertainment. With Wi-Fi and cellular connectivity, stay productive anywhere you go.',
     price: 259,
     __regular_price: 259,
     __review_count: 120,
@@ -285,6 +297,8 @@ export default [
     _id: 'product-022',
     name: 'Crystal 4K Smart 50” Black LED TV HD Quality Ultra HDR Dolby Audio',
     slug: 'crystal-4k-smart-50”-black-led-tv-hd-quality-ultra-hdr-dolby-audio',
+    description:
+      'Elevate your viewing experience with this Samsung Crystal 4K Smart TV. Boasting a 50-inch LED display, Ultra HDR support, and Dolby Audio, it provides immersive visuals and rich sound. Whether you’re streaming movies or gaming, the sleek black design and intuitive smart features make home entertainment effortless.',
     price: 9018,
     __regular_price: 9018,
     __discount_price: 8199,
@@ -317,6 +331,8 @@ export default [
     _id: 'product-021',
     name: 'Console Game Stick HD Wireless Bluetooth 5.0 Built-in 500 Games',
     slug: 'console-game-stick-hd-wireless-bluetooth-5.0-built-in-500-games',
+    description:
+      'Turn any TV into a retro arcade with this Toshiba console game stick. Featuring Bluetooth 5.0 and 500 pre-installed games, it offers a nostalgic gaming experience in a compact design. Simply plug it in, pair your wireless controllers, and enjoy a wide variety of classic titles without hassle.',
     price: 119.9,
     __regular_price: 119.9,
     __discount_price: 109,
@@ -349,6 +365,8 @@ export default [
     _id: 'product-020',
     name: 'Hero Watch SU Series 8 Lilac Rubber Band 40 mm GPS + Cellular',
     slug: 'hero-watch-su-series-8-lilac-rubber-band-40-mm-gps-+-cellular',
+    description:
+      'Stay connected in style with this Apple Hero Watch SU Series 8. Sporting a lilac rubber band and a 40 mm case, it offers GPS + Cellular connectivity, allowing you to track fitness, take calls, and receive notifications on the go. Its sleek design and robust health features make daily activities simpler and more fashionable.',
     price: 899,
     __regular_price: 899,
     __review_count: 20,
@@ -380,6 +398,8 @@ export default [
     _id: 'product-019',
     name: '2019 Smart Laptop 256 GB 13 inch Pro Chip M2 Turbo Enhanced Performance',
     slug: '2019-smart-laptop-256-gb-13-inch-pro-chip-m2-turbo-enhanced-performance',
+    description:
+      'Harness the power of Apple’s M2 Turbo chip with this 2019 Smart Laptop. Designed with a 13-inch Retina display and 256 GB of fast storage, it delivers speedy performance for both work and play. Lightweight and ultra-portable, it’s perfect for students, professionals, and anyone who values sleek design paired with dependable power.',
     price: 2099.99,
     __regular_price: 2099.99,
     __review_count: 20,
@@ -411,6 +431,8 @@ export default [
     _id: 'product-018',
     name: 'Wash Machine 11 KG Front Loading Steam Cycle Feature',
     slug: 'wash-machine-11-kg-front-loading-steam-cycle-feature',
+    description:
+      'Simplify laundry day with this 11 KG front-loading washing machine by LG. Equipped with a powerful steam cycle, it efficiently removes stubborn stains while being gentle on fabrics. The spacious drum lets you wash larger loads, saving time and energy for busy households.',
     price: 6268,
     __regular_price: 6268,
     __discount_price: 5699,
@@ -443,6 +465,8 @@ export default [
     _id: 'product-017',
     name: 'Gaming Laptop ZDY 15.6 Inch 512 GB VGA HD CPU Core i7 SSD TUF Force GL533 RGB Light Extended Battery',
     slug: 'gaming-laptop-zdy-15.6-inch-512-gb-vga-hd-cpu-core-i7-ssd-tuf-force-gl533-rgb-light-extended-battery',
+    description:
+      'Gear up for high-performance gaming sessions with this ASUS ZDY 15.6-inch laptop. Powered by a Core i7 processor, 512 GB SSD, and dedicated graphics, it ensures smooth visuals and swift load times. With TUF Force GL533’s robust build, customizable RGB lighting, and an extended battery, it’s built to last long gaming marathons in style.',
     price: 1659,
     __regular_price: 1659,
     __review_count: 120,
@@ -474,6 +498,8 @@ export default [
     _id: 'product-016',
     name: 'LT Phone RAM 16/256 GB Rose Gold Guaranteed Quality',
     slug: 'lt-phone-ram-16/256-gb-rose-gold-guaranteed-quality',
+    description:
+      'Stay connected and capture stunning photos with this Samsung LT Phone. Featuring 16 GB of RAM and 256 GB of storage, it keeps your apps running smoothly and stores your media with ease. The eye-catching rose gold finish and reliable hardware ensure a polished look and performance for daily tasks.',
     price: 999,
     __regular_price: 999,
     __review_count: 50,
@@ -505,6 +531,8 @@ export default [
     _id: 'product-015',
     name: 'Mobile Watch A Series GPS 7/144 45mm Red Rubber Case Loop Series 7 Wi-Fi',
     slug: 'mobile-watch-a-series-gps-7/144-45mm-red-rubber-case-loop-series-7-wi-fi',
+    description:
+      'Elevate your wearable game with the Apple Mobile Watch A Series. This 45mm smartwatch features a bold red rubber case loop, GPS, and Wi-Fi connectivity, making it effortless to stay on top of notifications, track fitness goals, and access apps. Its user-friendly interface and stylish design add functionality and flair to your everyday routine.',
     price: 999,
     __regular_price: 999,
     __review_count: 50,
@@ -536,6 +564,8 @@ export default [
     _id: 'product-014',
     name: 'Tablet Pro 128 GB HD RAM 8 GB i8 1080P 4K Display',
     slug: 'tablet-pro-128-gb-hd-ram-8-gb-i8-1080p-4k-display',
+    description:
+      'Upgrade your mobile computing with this Lenovo Tablet Pro. Boasting 8 GB of RAM, 128 GB of storage, and an i8 processor, it handles multitasking and entertainment with ease. Its 1080P 4K display offers crisp visuals for gaming, streaming, or working on the go.',
     price: 167,
     __regular_price: 167,
     __discount_price: 129,
@@ -568,6 +598,8 @@ export default [
     _id: 'product-013',
     name: 'Wireless Bluetooth Speaker Portable Sound System',
     slug: 'wireless-bluetooth-speaker-portable-sound-system',
+    description:
+      'Bring your favorite tracks anywhere with this Panasonic Wireless Bluetooth Speaker. Compact yet powerful, it delivers balanced audio for small gatherings or personal use. With easy Bluetooth pairing and a durable build, this speaker is your go-to companion for on-the-move music playback.',
     price: 1199,
     __regular_price: 1199,
     __review_count: 100,
@@ -599,6 +631,8 @@ export default [
     _id: 'product-012',
     name: 'VBI Mini 2 Fly More Combo Drone Sjrc F22S 4K Pro Ptz 5 Km Version Alpha Edition',
     slug: 'vbi-mini-2-fly-more-combo-drone-sjrc-f22s-4k-pro-ptz-5-km-version-alpha-edition',
+    description:
+      'Capture the skies with this Sony VBI Mini 2 Fly More Combo Drone. Equipped with a 4K Pro PTZ camera, it provides sharp aerial footage and stills, while its 5 km range offers extended exploration. Perfect for beginners and enthusiasts alike, the Alpha Edition includes extra accessories for a complete flight experience.',
     price: 1638,
     __regular_price: 1638,
     __discount_price: 819,
@@ -631,6 +665,8 @@ export default [
     _id: 'product-011',
     name: 'LP78245 Smart TV OLED 43 Inch 4K HD Dynamic Color Enhancer USB Movie Playback',
     slug: 'lp78245-smart-tv-oled-43-inch-4k-hd-dynamic-color-enhancer-usb-movie-playback',
+    description:
+      'Transform your home entertainment with this LG LP78245 Smart TV. The 43-inch OLED screen delivers deep blacks, vibrant colors, and 4K HD clarity, while the Dynamic Color Enhancer optimizes visuals for lifelike images. USB Movie Playback and built-in smart features make streaming and file viewing simple and intuitive.',
     price: 5058,
     __regular_price: 5058,
     __discount_price: 4599,
@@ -663,6 +699,8 @@ export default [
     _id: 'product-005',
     name: 'AG OLED65CXPUA 4K Smart OLED TV New Model',
     slug: 'ag-oled65cxpua-4k-smart-oled-tv-new-model',
+    description:
+      'Immerse yourself in stunning picture quality with this Toshiba AG OLED65CXPUA 4K Smart OLED TV. The latest model offers an ultra-thin design, vibrant colors, and an intuitive smart platform for seamless streaming. Enjoy lifelike clarity and contrast that bring movies, sports, and games to life in your living room.',
     price: 2799,
     __regular_price: 2799,
     __review_count: 20,
@@ -694,6 +732,8 @@ export default [
     _id: 'product-004',
     name: 'Mini Polaroid Camera for Girls with Flash Light',
     slug: 'mini-polaroid-camera-for-girls-with-flash-light',
+    description:
+      'Capture unforgettable moments instantly with this Sony mini polaroid camera. Its fun, compact design includes a built-in flash for bright, clear photos even in low light. Easy to operate, it’s perfect for parties, scrapbooking, and spontaneous photography, adding charm to every shot.',
     price: 79,
     __regular_price: 79,
     __review_count: 70,
@@ -725,6 +765,8 @@ export default [
     _id: 'product-003',
     name: 'S21 Laptop Ultra HD LED Screen Feature 2023 Latest Model',
     slug: 's21-laptop-ultra-hd-led-screen-feature-2023-latest-model',
+    description:
+      'Maximize productivity with this Samsung S21 Laptop. The 2023 latest model features an Ultra HD LED display for clear, vivid visuals, combined with reliable hardware for smooth multitasking. Whether you’re working from home or streaming on the go, this laptop delivers performance and style in one sleek package.',
     price: 1199,
     __regular_price: 1199,
     __review_count: 100,
@@ -756,6 +798,8 @@ export default [
     _id: 'product-002',
     name: 'WH-1000XM4 Wireless Headphones High Quality',
     slug: 'wh-1000xm4-wireless-headphones-high-quality',
+    description:
+      'Immerse yourself in superior sound with these Sony WH-1000XM4 Wireless Headphones. Renowned for top-tier noise cancellation, they provide crystal-clear audio for music, calls, and media. With comfortable ear cushions and long battery life, they’re ideal for travel, work, or simply enjoying uninterrupted listening at home.',
     price: 118,
     __regular_price: 118,
     __discount_price: 59,
@@ -788,6 +832,8 @@ export default [
     _id: 'product-001',
     name: 'JPhone 13 High Quality Value Buy Best Camera Performance',
     slug: 'jphone-13-high-quality-value-buy-best-camera-performance',
+    description:
+      'Discover cutting-edge performance and impressive camera capabilities with this Apple JPhone 13. Engineered for speed and efficiency, it effortlessly handles gaming, streaming, and multitasking. The advanced camera system captures vibrant photos and videos, offering an exceptional smartphone experience for everyday users and tech enthusiasts alike.',
     price: 999,
     __regular_price: 999,
     __review_count: 50,
@@ -819,6 +865,8 @@ export default [
     _id: 'product-010',
     name: 'CamPro HERO10 Black Sleek Design 2023 4K Video',
     slug: 'campro-hero10-black-sleek-design-2023-4k-video',
+    description:
+      'Record your adventures in stunning detail with the Panasonic CamPro HERO10 Black. Its sleek 2023 design is compact yet durable, offering 4K video capability for crisp footage. Ideal for action sports, travel vlogs, or everyday filming, its advanced stabilization and user-friendly interface make capturing memories a breeze.',
     price: 1499.99,
     __regular_price: 1499.99,
     __review_count: 20,
@@ -850,6 +898,8 @@ export default [
     _id: 'product-009',
     name: 'Surface Laptop 4 XPS 13 Plus 64GB i7 Touch Screen',
     slug: 'surface-laptop-4-xps-13-plus-64gb-i7-touch-screen',
+    description:
+      'Combine sleek design and robust performance with this Dell device, blending elements of the Surface Laptop 4 and XPS 13 Plus. Powered by an Intel i7 processor and boasting 64 GB of memory, it delivers speedy multitasking. The responsive touchscreen enhances productivity, making it an excellent choice for creative professionals and everyday users alike.',
     price: 2878,
     __regular_price: 2878,
     __discount_price: 2399.99,
@@ -882,6 +932,8 @@ export default [
     _id: 'product-008',
     name: 'QuietComfort 45 Wireless Headphones Advanced Noise Cancelling',
     slug: 'quietcomfort-45-wireless-headphones-advanced-noise-cancelling',
+    description:
+      'Block out distractions and enjoy every detail of your music with these Sony QuietComfort 45 Wireless Headphones. Their advanced noise-cancelling technology and comfortable over-ear design ensure a relaxing listening experience. With a long-lasting battery and quick pairing, they’re perfect for commutes, travel, and everyday use.',
     price: 329.99,
     __regular_price: 329.99,
     __review_count: 120,
@@ -913,6 +965,8 @@ export default [
     _id: 'product-007',
     name: 'Ultra Tablet Qwerty HD 10765 Series Low Price',
     slug: 'ultra-tablet-qwerty-hd-10765-series-low-price',
+    description:
+      'Enjoy a balance of performance and affordability with this HP Ultra Tablet. Its QWERTY-compatible setup, HD display, and 10765 Series processor make it suitable for browsing, multimedia, or light productivity. Portable and user-friendly, it’s an excellent choice for students or casual tablet users seeking a cost-effective device.',
     price: 799,
     __regular_price: 799,
     __review_count: 100,
@@ -944,6 +998,8 @@ export default [
     _id: 'product-006',
     name: 'Orange Watch 12 High Quality Health Sensors',
     slug: 'orange-watch-12-high-quality-health-sensors',
+    description:
+      'Monitor your well-being and stay connected with this Samsung Orange Watch 12. Featuring advanced health sensors for tracking heart rate, sleep, and more, it provides comprehensive fitness insights on a stylish interface. The bright orange band and modern design complement a range of looks, making it a functional fashion accessory.',
     price: 1919.99,
     __regular_price: 1919.99,
     __discount_price: 959.99,
