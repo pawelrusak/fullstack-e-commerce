@@ -20,7 +20,7 @@ type ProductSpecification = {
 type TmpProduct = Partial<
   Product & {
     _id: `product-${number}`;
-    __regular_price: number;
+    __regularPrice: number;
     __discountPrice: undefined | number;
     __reviewCount: number;
     __isNewSection: boolean;
@@ -37,7 +37,7 @@ export default [
     description:
       'Experience seamless productivity and entertainment with this Dell laptop. Powered by an 11th Gen Intel iCore processor, 8 GB of RAM, and a fast 256 GB SSD, it easily handles multitasking and quick boot-ups. The sleek chassis and Windows 11 interface ensure you can work, stream, and browse with style and speed.',
     price: 1519.99,
-    __regular_price: 1519.99,
+    __regularPrice: 1519.99,
     __discountPrice: null,
     __reviewCount: 20,
     isFeatured: false,
@@ -71,7 +71,7 @@ export default [
     description:
       'Designed for dedicated gamers, this ASUS NexSUS ROCK Strix Scar 17 laptop packs cutting-edge hardware, including a 10th Gen Intel Core i9 processor, NVIDIA GeForce RTX 3080 graphics, and 32GB of DDR4 RAM (per the specs). Its high-refresh 17.3" display ensures fluid visuals, while advanced cooling technology keeps performance reliable during intense sessions.',
     price: 5499.99,
-    __regular_price: 5499.99,
+    __regularPrice: 5499.99,
     __discountPrice: 2999.99,
     __reviewCount: 142,
     isFeatured: true,
@@ -170,7 +170,7 @@ export default [
     description:
       'Channel vintage vibes with this retro-style Panasonic wireless speaker. The FT-12 combines a classic look with modern Bluetooth connectivity, delivering crisp audio quality and convenient portability. Perfect for small gatherings or personal listening, it offers long battery life and a conversation-starting design.',
     price: 49,
-    __regular_price: 49,
+    __regularPrice: 49,
     __discountPrice: null,
     __reviewCount: 50,
     isFeatured: false,
@@ -204,7 +204,7 @@ export default [
     description:
       'Experience next-level gaming with the Sony Game Station 15 Disc Edition. This console supports 4K resolution, VR compatibility, and comes with wireless controllers for a seamless multiplayer experience. Whether you’re into high-speed racing or action-packed adventures, the powerful hardware and quick load times deliver immersive gameplay.',
     price: 6358,
-    __regular_price: 6358,
+    __regularPrice: 6358,
     __discountPrice: 5299,
     __reviewCount: 120,
     isFeatured: false,
@@ -238,7 +238,7 @@ export default [
     description:
       'Immerse yourself in rich audio with the LG 134S Wireless Max Hifi Stereo Headphones. Designed for comfort, these headphones deliver powerful bass, balanced mids, and crisp highs for a captivating listening experience. With long battery life and easy Bluetooth connectivity, it’s the perfect headset for music lovers on the move.',
     price: 29,
-    __regular_price: 29,
+    __regularPrice: 29,
     __discountPrice: null,
     __reviewCount: 50,
     isFeatured: false,
@@ -272,7 +272,7 @@ export default [
     description:
       'Unleash your creativity with this Apple Mini Tablet Pro. Featuring a spacious 16-inch HD display, stylus (Pencil) support, and 128 GB of storage, this 2024 model seamlessly handles both work and entertainment. With Wi-Fi and cellular connectivity, stay productive anywhere you go.',
     price: 259,
-    __regular_price: 259,
+    __regularPrice: 259,
     __discountPrice: null,
     __reviewCount: 120,
     isFeatured: true,
@@ -306,7 +306,7 @@ export default [
     description:
       'Elevate your viewing experience with this Samsung Crystal 4K Smart TV. Boasting a 50-inch LED display, Ultra HDR support, and Dolby Audio, it provides immersive visuals and rich sound. Whether you’re streaming movies or gaming, the sleek black design and intuitive smart features make home entertainment effortless.',
     price: 9018,
-    __regular_price: 9018,
+    __regularPrice: 9018,
     __discountPrice: 8199,
     __reviewCount: 120,
     isFeatured: false,
@@ -340,7 +340,7 @@ export default [
     description:
       'Turn any TV into a retro arcade with this Toshiba console game stick. Featuring Bluetooth 5.0 and 500 pre-installed games, it offers a nostalgic gaming experience in a compact design. Simply plug it in, pair your wireless controllers, and enjoy a wide variety of classic titles without hassle.',
     price: 119.9,
-    __regular_price: 119.9,
+    __regularPrice: 119.9,
     __discountPrice: 109,
     __reviewCount: 120,
     isFeatured: false,
@@ -374,7 +374,7 @@ export default [
     description:
       'Stay connected in style with this Apple Hero Watch SU Series 8. Sporting a lilac rubber band and a 40 mm case, it offers GPS + Cellular connectivity, allowing you to track fitness, take calls, and receive notifications on the go. Its sleek design and robust health features make daily activities simpler and more fashionable.',
     price: 899,
-    __regular_price: 899,
+    __regularPrice: 899,
     __discountPrice: null,
     __reviewCount: 20,
     isFeatured: false,
@@ -408,7 +408,7 @@ export default [
     description:
       'Harness the power of Apple’s M2 Turbo chip with this 2019 Smart Laptop. Designed with a 13-inch Retina display and 256 GB of fast storage, it delivers speedy performance for both work and play. Lightweight and ultra-portable, it’s perfect for students, professionals, and anyone who values sleek design paired with dependable power.',
     price: 2099.99,
-    __regular_price: 2099.99,
+    __regularPrice: 2099.99,
     __discountPrice: null,
     __reviewCount: 20,
     isFeatured: false,
@@ -442,7 +442,7 @@ export default [
     description:
       'Simplify laundry day with this 11 KG front-loading washing machine by LG. Equipped with a powerful steam cycle, it efficiently removes stubborn stains while being gentle on fabrics. The spacious drum lets you wash larger loads, saving time and energy for busy households.',
     price: 6268,
-    __regular_price: 6268,
+    __regularPrice: 6268,
     __discountPrice: 5699,
     __reviewCount: 120,
     isFeatured: false,
@@ -476,7 +476,7 @@ export default [
     description:
       'Gear up for high-performance gaming sessions with this ASUS ZDY 15.6-inch laptop. Powered by a Core i7 processor, 512 GB SSD, and dedicated graphics, it ensures smooth visuals and swift load times. With TUF Force GL533’s robust build, customizable RGB lighting, and an extended battery, it’s built to last long gaming marathons in style.',
     price: 1659,
-    __regular_price: 1659,
+    __regularPrice: 1659,
     __discountPrice: null,
     __reviewCount: 120,
     isFeatured: false,
@@ -510,7 +510,7 @@ export default [
     description:
       'Stay connected and capture stunning photos with this Samsung LT Phone. Featuring 16 GB of RAM and 256 GB of storage, it keeps your apps running smoothly and stores your media with ease. The eye-catching rose gold finish and reliable hardware ensure a polished look and performance for daily tasks.',
     price: 999,
-    __regular_price: 999,
+    __regularPrice: 999,
     __discountPrice: null,
     __reviewCount: 50,
     isFeatured: true,
@@ -544,7 +544,7 @@ export default [
     description:
       'Elevate your wearable game with the Apple Mobile Watch A Series. This 45mm smartwatch features a bold red rubber case loop, GPS, and Wi-Fi connectivity, making it effortless to stay on top of notifications, track fitness goals, and access apps. Its user-friendly interface and stylish design add functionality and flair to your everyday routine.',
     price: 999,
-    __regular_price: 999,
+    __regularPrice: 999,
     __discountPrice: null,
     __reviewCount: 50,
     isFeatured: false,
@@ -578,7 +578,7 @@ export default [
     description:
       'Upgrade your mobile computing with this Lenovo Tablet Pro. Boasting 8 GB of RAM, 128 GB of storage, and an i8 processor, it handles multitasking and entertainment with ease. Its 1080P 4K display offers crisp visuals for gaming, streaming, or working on the go.',
     price: 167,
-    __regular_price: 167,
+    __regularPrice: 167,
     __discountPrice: 129,
     __reviewCount: 120,
     isFeatured: false,
@@ -612,7 +612,7 @@ export default [
     description:
       'Bring your favorite tracks anywhere with this Panasonic Wireless Bluetooth Speaker. Compact yet powerful, it delivers balanced audio for small gatherings or personal use. With easy Bluetooth pairing and a durable build, this speaker is your go-to companion for on-the-move music playback.',
     price: 1199,
-    __regular_price: 1199,
+    __regularPrice: 1199,
     __discountPrice: null,
     __reviewCount: 100,
     isFeatured: false,
@@ -646,7 +646,7 @@ export default [
     description:
       'Capture the skies with this Sony VBI Mini 2 Fly More Combo Drone. Equipped with a 4K Pro PTZ camera, it provides sharp aerial footage and stills, while its 5 km range offers extended exploration. Perfect for beginners and enthusiasts alike, the Alpha Edition includes extra accessories for a complete flight experience.',
     price: 1638,
-    __regular_price: 1638,
+    __regularPrice: 1638,
     __discountPrice: 819,
     __reviewCount: 100,
     isFeatured: true,
@@ -680,7 +680,7 @@ export default [
     description:
       'Transform your home entertainment with this LG LP78245 Smart TV. The 43-inch OLED screen delivers deep blacks, vibrant colors, and 4K HD clarity, while the Dynamic Color Enhancer optimizes visuals for lifelike images. USB Movie Playback and built-in smart features make streaming and file viewing simple and intuitive.',
     price: 5058,
-    __regular_price: 5058,
+    __regularPrice: 5058,
     __discountPrice: 4599,
     __reviewCount: 100,
     isFeatured: true,
@@ -714,7 +714,7 @@ export default [
     description:
       'Immerse yourself in stunning picture quality with this Toshiba AG OLED65CXPUA 4K Smart OLED TV. The latest model offers an ultra-thin design, vibrant colors, and an intuitive smart platform for seamless streaming. Enjoy lifelike clarity and contrast that bring movies, sports, and games to life in your living room.',
     price: 2799,
-    __regular_price: 2799,
+    __regularPrice: 2799,
     __discountPrice: null,
     __reviewCount: 20,
     isFeatured: true,
@@ -748,7 +748,7 @@ export default [
     description:
       'Capture unforgettable moments instantly with this Sony mini polaroid camera. Its fun, compact design includes a built-in flash for bright, clear photos even in low light. Easy to operate, it’s perfect for parties, scrapbooking, and spontaneous photography, adding charm to every shot.',
     price: 79,
-    __regular_price: 79,
+    __regularPrice: 79,
     __discountPrice: null,
     __reviewCount: 70,
     isFeatured: true,
@@ -782,7 +782,7 @@ export default [
     description:
       'Maximize productivity with this Samsung S21 Laptop. The 2023 latest model features an Ultra HD LED display for clear, vivid visuals, combined with reliable hardware for smooth multitasking. Whether you’re working from home or streaming on the go, this laptop delivers performance and style in one sleek package.',
     price: 1199,
-    __regular_price: 1199,
+    __regularPrice: 1199,
     __discountPrice: null,
     __reviewCount: 100,
     isFeatured: true,
@@ -816,7 +816,7 @@ export default [
     description:
       'Immerse yourself in superior sound with these Sony WH-1000XM4 Wireless Headphones. Renowned for top-tier noise cancellation, they provide crystal-clear audio for music, calls, and media. With comfortable ear cushions and long battery life, they’re ideal for travel, work, or simply enjoying uninterrupted listening at home.',
     price: 118,
-    __regular_price: 118,
+    __regularPrice: 118,
     __discountPrice: 59,
     __reviewCount: 120,
     isFeatured: true,
@@ -850,7 +850,7 @@ export default [
     description:
       'Discover cutting-edge performance and impressive camera capabilities with this Apple JPhone 13. Engineered for speed and efficiency, it effortlessly handles gaming, streaming, and multitasking. The advanced camera system captures vibrant photos and videos, offering an exceptional smartphone experience for everyday users and tech enthusiasts alike.',
     price: 999,
-    __regular_price: 999,
+    __regularPrice: 999,
     __discountPrice: null,
     __reviewCount: 50,
     isFeatured: true,
@@ -884,7 +884,7 @@ export default [
     description:
       'Record your adventures in stunning detail with the Panasonic CamPro HERO10 Black. Its sleek 2023 design is compact yet durable, offering 4K video capability for crisp footage. Ideal for action sports, travel vlogs, or everyday filming, its advanced stabilization and user-friendly interface make capturing memories a breeze.',
     price: 1499.99,
-    __regular_price: 1499.99,
+    __regularPrice: 1499.99,
     __discountPrice: null,
     __reviewCount: 20,
     isFeatured: false,
@@ -918,7 +918,7 @@ export default [
     description:
       'Combine sleek design and robust performance with this Dell device, blending elements of the Surface Laptop 4 and XPS 13 Plus. Powered by an Intel i7 processor and boasting 64 GB of memory, it delivers speedy multitasking. The responsive touchscreen enhances productivity, making it an excellent choice for creative professionals and everyday users alike.',
     price: 2878,
-    __regular_price: 2878,
+    __regularPrice: 2878,
     __discountPrice: 2399.99,
     __reviewCount: 120,
     isFeatured: false,
@@ -952,7 +952,7 @@ export default [
     description:
       'Block out distractions and enjoy every detail of your music with these Sony QuietComfort 45 Wireless Headphones. Their advanced noise-cancelling technology and comfortable over-ear design ensure a relaxing listening experience. With a long-lasting battery and quick pairing, they’re perfect for commutes, travel, and everyday use.',
     price: 329.99,
-    __regular_price: 329.99,
+    __regularPrice: 329.99,
     __discountPrice: null,
     __reviewCount: 120,
     isFeatured: false,
@@ -986,7 +986,7 @@ export default [
     description:
       'Enjoy a balance of performance and affordability with this HP Ultra Tablet. Its QWERTY-compatible setup, HD display, and 10765 Series processor make it suitable for browsing, multimedia, or light productivity. Portable and user-friendly, it’s an excellent choice for students or casual tablet users seeking a cost-effective device.',
     price: 799,
-    __regular_price: 799,
+    __regularPrice: 799,
     __discountPrice: null,
     __reviewCount: 100,
     isFeatured: false,
@@ -1020,7 +1020,7 @@ export default [
     description:
       'Monitor your well-being and stay connected with this Samsung Orange Watch 12. Featuring advanced health sensors for tracking heart rate, sleep, and more, it provides comprehensive fitness insights on a stylish interface. The bright orange band and modern design complement a range of looks, making it a functional fashion accessory.',
     price: 1919.99,
-    __regular_price: 1919.99,
+    __regularPrice: 1919.99,
     __discountPrice: 959.99,
     __reviewCount: 120,
     isFeatured: false,
