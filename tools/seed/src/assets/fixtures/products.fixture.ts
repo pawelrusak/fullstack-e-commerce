@@ -17,17 +17,20 @@ type ProductSpecification = {
 //  Sony
 //  Toshiba
 
+type SalePrices = {
+  __regularPrice: number;
+  // __discountPrice: number | null;
+  __salePrice: undefined | number;
+};
+
 type TmpProduct = Partial<
   Product & {
     _id: `product-${number}`;
-    __regularPrice: number;
-    // __discountPrice: number | null;
-    __salePrice: undefined | number;
     __reviewCount: number;
     __isNewSection: boolean;
     __delivery: string[];
     __specification: ProductSpecification[];
-  }
+  } & SalePrices
 >;
 
 export default [
