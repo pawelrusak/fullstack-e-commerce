@@ -23,14 +23,18 @@ type SalePrices = {
   __salePrice: undefined | number;
 };
 
+type TmpReviewCount = {
+  __reviewCount: number;
+};
+
 type TmpProduct = Partial<
   Product & {
     _id: `product-${number}`;
-    __reviewCount: number;
     __isNewSection: boolean;
     __delivery: string[];
     __specification: ProductSpecification[];
-  } & SalePrices
+  } & SalePrices &
+    TmpReviewCount
 >;
 
 export default [
