@@ -27,6 +27,10 @@ type TmpReviewCount = {
   __reviewCount: number;
 };
 
+type TmpDelivery = {
+  __delivery: string[];
+};
+
 type TmpProduct = Partial<
   Product & {
     _id: `product-${number}`;
@@ -34,7 +38,8 @@ type TmpProduct = Partial<
     __delivery: string[];
     __specification: ProductSpecification[];
   } & SalePrices &
-    TmpReviewCount
+    TmpReviewCount &
+    TmpDelivery
 >;
 
 export default [
