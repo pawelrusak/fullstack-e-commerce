@@ -31,15 +31,19 @@ type TmpDelivery = {
   __delivery: string[];
 };
 
+type TmpSpecification = {
+  __specification: ProductSpecification[];
+};
+
 type TmpProduct = Partial<
   Product & {
     _id: `product-${number}`;
     __isNewSection: boolean;
     __delivery: string[];
-    __specification: ProductSpecification[];
   } & SalePrices &
     TmpReviewCount &
-    TmpDelivery
+    TmpDelivery &
+    TmpSpecification
 >;
 
 export default [
