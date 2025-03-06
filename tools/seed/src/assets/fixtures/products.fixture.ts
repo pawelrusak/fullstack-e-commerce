@@ -42,7 +42,6 @@ type TmpIsNewSection = {
 type TmpProduct = Partial<
   Product & {
     _id: `product-${number}`;
-    __delivery: string[];
   } & SalePrices &
     TmpReviewCount &
     TmpDelivery &
