@@ -39,14 +39,16 @@ type TmpIsNewSection = {
   __isNewSection: boolean;
 };
 
+type TmpAdditionally = SalePrices &
+  TmpReviewCount &
+  TmpDelivery &
+  TmpSpecification &
+  TmpIsNewSection;
+
 type TmpProduct = Partial<
   Product & {
     _id: `product-${number}`;
-  } & SalePrices &
-    TmpReviewCount &
-    TmpDelivery &
-    TmpSpecification &
-    TmpIsNewSection
+  } & TmpAdditionally
 >;
 
 export default [
