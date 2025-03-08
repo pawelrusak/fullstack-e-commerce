@@ -23,7 +23,7 @@ type SalePrices = {
   __salePrice: undefined | number;
 };
 
-type TmpReviewCount = {
+type ReviewCount = {
   __reviewCount: number;
 };
 
@@ -40,7 +40,7 @@ type TmpIsNewSection = {
 };
 
 type TmpAdditionally = SalePrices &
-  TmpReviewCount &
+  ReviewCount &
   TmpDelivery &
   TmpSpecification &
   TmpIsNewSection;
