@@ -27,7 +27,7 @@ type ReviewCount = {
   __reviewCount: number;
 };
 
-type TmpDelivery = {
+type Delivery = {
   __delivery: string[];
 };
 
@@ -41,7 +41,7 @@ type TmpIsNewSection = {
 
 type TmpAdditionally = SalePrices &
   ReviewCount &
-  TmpDelivery &
+  Delivery &
   TmpSpecification &
   TmpIsNewSection;
 
