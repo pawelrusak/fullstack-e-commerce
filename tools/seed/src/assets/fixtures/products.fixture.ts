@@ -31,7 +31,7 @@ type Delivery = {
   __delivery: string[];
 };
 
-type TmpSpecification = {
+type Specification = {
   __specification: ProductSpecification[];
 };
 
@@ -42,7 +42,7 @@ type TmpIsNewSection = {
 type TmpAdditionally = SalePrices &
   ReviewCount &
   Delivery &
-  TmpSpecification &
+  Specification &
   TmpIsNewSection;
 
 type TmpProduct = Partial<
