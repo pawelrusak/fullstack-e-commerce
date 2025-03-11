@@ -35,7 +35,7 @@ type Specification = {
   __specification: ProductSpecification[];
 };
 
-type TmpIsNewSection = {
+type IsNewSection = {
   __isNewSection: boolean;
 };
 
@@ -43,7 +43,7 @@ type TmpAdditionally = SalePrices &
   ReviewCount &
   Delivery &
   Specification &
-  TmpIsNewSection;
+  IsNewSection;
 
 type TmpProduct = Partial<
   Product & {
