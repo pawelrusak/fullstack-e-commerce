@@ -39,7 +39,7 @@ type IsNewSection = {
   __isNewSection: boolean;
 };
 
-type Additionally = SalePrices &
+type SeederAdditionallyFields = SalePrices &
   ReviewCount &
   Delivery &
   Specification &
@@ -48,7 +48,7 @@ type Additionally = SalePrices &
 type TmpProduct = Partial<
   Product & {
     _id: `product-${number}`;
-  } & Additionally
+  } & SeederAdditionallyFields
 >;
 
 export default [
