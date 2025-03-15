@@ -49,7 +49,7 @@ type SeederAdditionallyFields = SalePrices &
   Specification &
   IsNewSection;
 
-type TmpProduct = Partial<BaseProduct & SeederAdditionallyFields>;
+type SeederProduct = Partial<BaseProduct & SeederAdditionallyFields>;
 
 export default [
   {
@@ -1069,4 +1069,4 @@ export default [
     },
     createdAt: '2025-02-05T00:00:00.000Z',
   },
-] satisfies TmpProduct[];
+] satisfies SeederProduct[];
