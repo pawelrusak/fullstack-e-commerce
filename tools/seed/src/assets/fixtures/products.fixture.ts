@@ -39,9 +39,11 @@ type IsNewSection = {
   __isNewSection: boolean;
 };
 
-type BaseProduct = Product & {
-  _id: `product-${number}`;
-};
+type BaseProduct = Partial<
+  Product & {
+    _id: `product-${number}`;
+  }
+>;
 
 type SeederAdditionallyFields = SalePrices &
   ReviewCount &
