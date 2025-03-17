@@ -45,11 +45,9 @@ type BaseProduct = Partial<
   }
 >;
 
-type SeederAdditionallyFields = SalePrices &
-  ReviewCount &
-  Delivery &
-  Specification &
-  IsNewSection;
+type SeederAdditionallyFields = Partial<
+  SalePrices & ReviewCount & Delivery & Specification & IsNewSection
+>;
 
 type SeederProduct = Partial<BaseProduct & SeederAdditionallyFields>;
 
