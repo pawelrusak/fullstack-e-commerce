@@ -35,10 +35,6 @@ type Specification = {
   __specification: ProductSpecification[];
 };
 
-type IsNewSection = {
-  __isNewSection: boolean;
-};
-
 type BaseProduct = Partial<
   Product & {
     _id: `product-${number}`;
@@ -46,7 +42,7 @@ type BaseProduct = Partial<
 >;
 
 type SeederAdditionallyFields = Partial<
-  SalePrices & ReviewCount & Delivery & Specification & IsNewSection
+  SalePrices & ReviewCount & Delivery & Specification
 >;
 
 type SeederProduct = Partial<BaseProduct & SeederAdditionallyFields>;
