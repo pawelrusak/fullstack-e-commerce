@@ -45,7 +45,7 @@ type SeederAdditionallyFields = Partial<
   SalePrices & ReviewCount & Delivery & Specification
 >;
 
-type SeederProduct = Partial<BaseProduct & SeederAdditionallyFields>;
+type SeederProduct = BaseProduct & SeederAdditionallyFields;
 
 export default [
   {
