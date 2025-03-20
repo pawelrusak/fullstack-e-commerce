@@ -1,4 +1,4 @@
-import { Product } from '@e-shop/types';
+import { Product, Modify } from '@e-shop/types';
 
 type ProductSpecification = {
   label: string;
@@ -35,11 +35,7 @@ type Specification = {
   __specification: ProductSpecification[];
 };
 
-type BaseProduct = Partial<
-  Product & {
-    _id: `product-${number}`;
-  }
->;
+type BaseProduct = Modify<Partial<Product>, { _id: `product-${number}` }>;
 
 type SeederAdditionallyFields = Partial<
   SalePrices & ReviewCount & Delivery & Specification
