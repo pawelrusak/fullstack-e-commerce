@@ -35,7 +35,13 @@ type Specification = {
   __specification: ProductSpecification[];
 };
 
-type BaseProduct = Modify<Partial<Product>, { _id: `product-${number}` }>;
+type BaseProduct = Modify<
+  Product,
+  {
+    _id: `product-${number}`;
+    updatedAt?: string;
+  }
+>;
 
 type SeederAdditionallyFields = Partial<
   SalePrices & ReviewCount & Delivery & Specification
