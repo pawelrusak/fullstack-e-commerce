@@ -24,7 +24,7 @@ type SalePrices = {
 };
 
 type ReviewCount = {
-  __reviewCount: number;
+  __reviewCount?: number;
 };
 
 type Delivery = {
