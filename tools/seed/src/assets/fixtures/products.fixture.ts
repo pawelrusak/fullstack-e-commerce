@@ -28,7 +28,7 @@ type ReviewCount = {
 };
 
 type Delivery = {
-  __delivery: string[];
+  __delivery?: string[];
 };
 
 type Specification = {
