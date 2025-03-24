@@ -32,7 +32,7 @@ type Delivery = {
 };
 
 type Specification = {
-  __specification: ProductSpecification[];
+  __specification?: ProductSpecification[];
 };
 
 type BaseProduct = Modify<
