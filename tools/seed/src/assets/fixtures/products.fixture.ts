@@ -20,7 +20,7 @@ type ProductSpecification = {
 type SalePrices = {
   __regularPrice?: number;
   // __discountPrice: number | null;
-  __salePrice: null | number;
+  __salePrice?: null | number;
 };
 
 type ReviewCount = {
