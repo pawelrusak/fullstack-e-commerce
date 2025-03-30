@@ -23,6 +23,9 @@ type SalePrices = {
 };
 
 type ReviewCount = {
+  /**
+   * The number of reviews associated with the product.
+   */
   __reviewCount?: number;
 };
 
