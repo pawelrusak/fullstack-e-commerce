@@ -40,6 +40,9 @@ type Delivery = {
 };
 
 type Specification = {
+  /**
+   * An array of detailed product specifications.
+   */
   __specification?: ProductSpecification[];
 };
 
