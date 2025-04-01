@@ -54,9 +54,10 @@ type BaseProduct = Modify<
   }
 >;
 
-type SeederAdditionallyFields = Partial<
-  SalePrices & ReviewCount & Delivery & Specification
->;
+type SeederAdditionallyFields = SalePrices &
+  ReviewCount &
+  Delivery &
+  Specification;
 
 type SeederProduct = BaseProduct & SeederAdditionallyFields;
 
