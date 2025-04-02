@@ -18,6 +18,9 @@ type ProductSpecification = {
 //  Toshiba
 
 type SalePrices = {
+  /**
+   * The original, non-discounted price of the product.
+   */
   __regularPrice?: number;
   __salePrice?: null | number;
 };
