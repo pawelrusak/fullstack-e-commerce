@@ -1,6 +1,9 @@
 import { Product, Modify } from '@e-shop/types';
 
 type ProductSpecification = {
+  /**
+   * The name of the product attribute, e.g. "Brand", "Display", "Battery".
+   */
   label: string;
   value: string;
   highlighted: boolean;
