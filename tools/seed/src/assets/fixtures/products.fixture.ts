@@ -5,6 +5,9 @@ type ProductSpecification = {
    * The name of the product attribute, e.g. "Brand", "Display", "Battery".
    */
   label: string;
+  /**
+   * The detailed description or value of the specification.
+   */
   value: string;
   highlighted: boolean;
 };
