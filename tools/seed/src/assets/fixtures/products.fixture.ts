@@ -9,6 +9,10 @@ type ProductSpecification = {
    * The detailed description or value of the specification.
    */
   value: string;
+
+  /**
+   * If true, this specification is shown next to the product image on the detail product page.
+   */
   highlighted: boolean;
 };
 
