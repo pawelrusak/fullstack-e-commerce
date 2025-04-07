@@ -112,6 +112,7 @@ export default [
       },
     },
     createdAt: '2025-01-01T00:00:00.000Z',
+    updatedAt: '2025-01-01T00:00:00.000Z',
   },
   {
     _id: 'product-027',
@@ -211,6 +212,7 @@ export default [
       },
     },
     createdAt: '2025-01-02T00:00:00.000Z',
+    updatedAt: '2025-01-02T00:00:00.000Z',
   },
   {
     _id: 'product-026',
@@ -245,6 +247,7 @@ export default [
       },
     },
     createdAt: '2025-01-03T00:00:00.000Z',
+    updatedAt: '2025-01-03T00:00:00.000Z',
   },
   {
     _id: 'product-025',
@@ -279,6 +282,7 @@ export default [
       },
     },
     createdAt: '2025-01-04T00:00:00.000Z',
+    updatedAt: '2025-01-04T00:00:00.000Z',
   },
   {
     _id: 'product-024',
@@ -313,6 +317,7 @@ export default [
       },
     },
     createdAt: '2025-01-05T00:00:00.000Z',
+    updatedAt: '2025-01-05T00:00:00.000Z',
   },
   {
     _id: 'product-023',
@@ -347,6 +352,7 @@ export default [
       },
     },
     createdAt: '2025-01-06T00:00:00.000Z',
+    updatedAt: '2025-01-06T00:00:00.000Z',
   },
   {
     _id: 'product-022',
@@ -381,6 +387,7 @@ export default [
       },
     },
     createdAt: '2025-01-07T00:00:00.000Z',
+    updatedAt: '2025-01-07T00:00:00.000Z',
   },
   {
     _id: 'product-021',
@@ -415,6 +422,7 @@ export default [
       },
     },
     createdAt: '2025-01-08T00:00:00.000Z',
+    updatedAt: '2025-01-08T00:00:00.000Z',
   },
   {
     _id: 'product-020',
@@ -449,6 +457,7 @@ export default [
       },
     },
     createdAt: '2025-01-09T00:00:00.000Z',
+    updatedAt: '2025-01-09T00:00:00.000Z',
   },
   {
     _id: 'product-019',
@@ -483,6 +492,7 @@ export default [
       },
     },
     createdAt: '2025-01-10T00:00:00.000Z',
+    updatedAt: '2025-01-10T00:00:00.000Z',
   },
   {
     _id: 'product-018',
@@ -517,6 +527,7 @@ export default [
       },
     },
     createdAt: '2025-01-11T00:00:00.000Z',
+    updatedAt: '2025-01-11T00:00:00.000Z',
   },
   {
     _id: 'product-017',
@@ -551,6 +562,7 @@ export default [
       },
     },
     createdAt: '2025-01-12T00:00:00.000Z',
+    updatedAt: '2025-01-12T00:00:00.000Z',
   },
   {
     _id: 'product-016',
@@ -585,6 +597,7 @@ export default [
       },
     },
     createdAt: '2025-01-13T00:00:00.000Z',
+    updatedAt: '2025-01-13T00:00:00.000Z',
   },
   {
     _id: 'product-015',
@@ -619,6 +632,7 @@ export default [
       },
     },
     createdAt: '2025-01-14T00:00:00.000Z',
+    updatedAt: '2025-01-14T00:00:00.000Z',
   },
   {
     _id: 'product-014',
@@ -653,6 +667,7 @@ export default [
       },
     },
     createdAt: '2025-01-15T00:00:00.000Z',
+    updatedAt: '2025-01-15T00:00:00.000Z',
   },
   {
     _id: 'product-013',
@@ -687,6 +702,7 @@ export default [
       },
     },
     createdAt: '2025-01-16T00:00:00.000Z',
+    updatedAt: '2025-01-16T00:00:00.000Z',
   },
   {
     _id: 'product-012',
@@ -721,6 +737,7 @@ export default [
       },
     },
     createdAt: '2025-01-17T00:00:00.000Z',
+    updatedAt: '2025-01-17T00:00:00.000Z',
   },
   {
     _id: 'product-011',
@@ -755,6 +772,7 @@ export default [
       },
     },
     createdAt: '2025-01-18T00:00:00.000Z',
+    updatedAt: '2025-01-18T00:00:00.000Z',
   },
   {
     _id: 'product-005',
@@ -789,6 +807,7 @@ export default [
       },
     },
     createdAt: '2025-01-19T00:00:00.000Z',
+    updatedAt: '2025-01-19T00:00:00.000Z',
   },
   {
     _id: 'product-004',
@@ -823,6 +842,7 @@ export default [
       },
     },
     createdAt: '2025-01-20T00:00:00.000Z',
+    updatedAt: '2025-01-20T00:00:00.000Z',
   },
   {
     _id: 'product-003',
@@ -857,6 +877,7 @@ export default [
       },
     },
     createdAt: '2025-01-21T00:00:00.000Z',
+    updatedAt: '2025-01-21T00:00:00.000Z',
   },
   {
     _id: 'product-002',
@@ -891,6 +912,7 @@ export default [
       },
     },
     createdAt: '2025-01-22T00:00:00.000Z',
+    updatedAt: '2025-01-22T00:00:00.000Z',
   },
   {
     _id: 'product-001',
@@ -925,6 +947,7 @@ export default [
       },
     },
     createdAt: '2025-01-23T00:00:00.000Z',
+    updatedAt: '2025-01-23T00:00:00.000Z',
   },
   {
     _id: 'product-010',
@@ -959,6 +982,7 @@ export default [
       },
     },
     createdAt: '2025-02-01T00:00:00.000Z',
+    updatedAt: '2025-02-01T00:00:00.000Z',
   },
   {
     _id: 'product-009',
@@ -993,6 +1017,7 @@ export default [
       },
     },
     createdAt: '2025-02-02T00:00:00.000Z',
+    updatedAt: '2025-02-02T00:00:00.000Z',
   },
   {
     _id: 'product-008',
@@ -1027,6 +1052,7 @@ export default [
       },
     },
     createdAt: '2025-02-03T00:00:00.000Z',
+    updatedAt: '2025-02-03T00:00:00.000Z',
   },
   {
     _id: 'product-007',
@@ -1061,6 +1087,7 @@ export default [
       },
     },
     createdAt: '2025-02-04T00:00:00.000Z',
+    updatedAt: '2025-02-04T00:00:00.000Z',
   },
   {
     _id: 'product-006',
@@ -1095,5 +1122,6 @@ export default [
       },
     },
     createdAt: '2025-02-05T00:00:00.000Z',
+    updatedAt: '2025-02-05T00:00:00.000Z',
   },
 ] satisfies SeederProduct[];
