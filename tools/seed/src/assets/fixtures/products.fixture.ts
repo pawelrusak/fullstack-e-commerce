@@ -67,7 +67,6 @@ type BaseProduct = Modify<
   Product,
   {
     _id: `product-${number}`;
-    updatedAt?: string;
   }
 >;
 
