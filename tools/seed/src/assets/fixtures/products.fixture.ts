@@ -63,7 +63,7 @@ type Specification = {
   __specification?: ProductSpecification[];
 };
 
-type BaseProduct = Modify<
+type BaseSeederProduct = Modify<
   Product,
   {
     _id: `product-${number}`;
@@ -75,7 +75,7 @@ type SeederAdditionallyFields = SalePrices &
   Delivery &
   Specification;
 
-type SeederProduct = BaseProduct & SeederAdditionallyFields;
+type SeederProduct = BaseSeederProduct & SeederAdditionallyFields;
 
 export default [
   {
