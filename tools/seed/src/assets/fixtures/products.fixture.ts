@@ -70,12 +70,12 @@ type BaseSeederProduct = Modify<
   }
 >;
 
-type SeederAdditionallyFields = SalePrices &
+type ProductSeederAdditional = SalePrices &
   ReviewCount &
   Delivery &
   Specification;
 
-type SeederProduct = BaseSeederProduct & SeederAdditionallyFields;
+type SeederProduct = BaseSeederProduct & ProductSeederAdditional;
 
 export default [
   {
