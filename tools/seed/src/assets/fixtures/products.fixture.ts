@@ -1,4 +1,4 @@
-import { Product, Modify } from '@e-shop/types';
+import { Product } from '@e-shop/types';
 
 type ProductSpecification = {
   /**
@@ -63,12 +63,7 @@ type Specification = {
   __specification?: ProductSpecification[];
 };
 
-type BaseSeederProduct = Modify<
-  Product,
-  {
-    _id: `product-${number}`;
-  }
->;
+type BaseSeederProduct = Product;
 
 type ProductSeederAdditional = SalePrices &
   ReviewCount &
