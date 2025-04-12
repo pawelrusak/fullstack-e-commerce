@@ -63,6 +63,10 @@ type Specification = {
   __specification?: ProductSpecification[];
 };
 
+/**
+ * The base product type used when seeding product data.
+ * Typically this comes from the main `Product` schema.
+ */
 type BaseSeederProduct = Product;
 
 type ProductSeederAdditional = SalePrices &
