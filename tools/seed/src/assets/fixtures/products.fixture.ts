@@ -74,6 +74,10 @@ type ProductSeederAdditional = SalePrices &
   Delivery &
   Specification;
 
+/**
+ * Full product seed type combining base product data with additional
+ * fields like pricing, reviews, delivery, and specifications.
+ */
 type SeederProduct = BaseSeederProduct & ProductSeederAdditional;
 
 export default [
