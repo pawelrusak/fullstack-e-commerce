@@ -56,6 +56,9 @@ type Delivery = {
   __delivery?: string[];
 };
 
+/**
+ * Includes optional product specifications like brand, display, or battery.
+ */
 type Specification = {
   /**
    * An array of detailed product specifications.
