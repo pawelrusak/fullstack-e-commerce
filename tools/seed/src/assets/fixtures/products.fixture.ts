@@ -46,6 +46,9 @@ type ReviewCount = {
   __reviewCount?: number;
 };
 
+/**
+ * Defines delivery options for a product.
+ */
 type Delivery = {
   /**
    * An array of delivery types associated with the product.
