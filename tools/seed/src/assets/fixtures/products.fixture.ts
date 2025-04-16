@@ -75,6 +75,9 @@ type Specification = {
  */
 type BaseSeederProduct = Product;
 
+/**
+ * Additional product metadata used specifically for seeding purposes.
+ */
 type ProductSeederAdditional = SalePrices &
   ReviewCount &
   Delivery &
