@@ -39,6 +39,9 @@ type SalePrices = {
   __salePrice?: null | number;
 };
 
+/**
+ * Represents the number of reviews a product has received.
+ */
 type ReviewCount = {
   /**
    * The number of reviews associated with the product.
