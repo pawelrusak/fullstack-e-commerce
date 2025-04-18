@@ -27,6 +27,10 @@ type ProductSpecification = {
 //  Sony
 //  Toshiba
 
+/**
+ * Contains pricing details for a product, including both regular
+ * and sale prices. Used to indicate discounts or promotional pricing.
+ */
 type SalePrices = {
   /**
    * The original, non-discounted price of the product.
