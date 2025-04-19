@@ -664,6 +664,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Heading component tokens
+   */
   heading: {
     root: {
       _base: {
@@ -735,6 +738,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Hero section component tokens
+   */
   heroSection: {
     root: {
       _base: {
@@ -766,6 +772,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Layout component tokens
+   */
   layoutWrapper: {
     root: {
       _base: {
@@ -781,6 +790,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Navbar component tokens
+   */
   navbar: {
     root: {
       _base: {
@@ -908,6 +920,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Pagination component tokens
+   */
   panel: {
     root: {
       _base: {
@@ -936,6 +951,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Pagination component tokens
+   */
   paragraph: {
     root: {
       _base: {
@@ -947,6 +965,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Product card component tokens
+   */
   badge: {
     root: {
       _base: {
@@ -959,6 +980,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Product card component tokens
+   */
   productCard: {
     root: {
       _base: {
@@ -1017,6 +1041,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Product card component tokens
+   */
   progressStepper: {
     listItemLink: {
       _base: {
@@ -1055,6 +1082,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Quantity selection component tokens
+   */
   quantitySelection: {
     input: {
       _base: {
@@ -1090,6 +1120,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Radio component tokens
+   */
   radioGroupTiles: {
     tile: {
       default: {
@@ -1132,6 +1165,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Simple cart list component tokens
+   */
   simpleCartList: {
     root: {
       _base: {
@@ -1168,6 +1204,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Specification component tokens
+   */
   specification: {
     property: {
       _base: {
@@ -1188,6 +1227,9 @@ export const component: AppComponent = {
       },
     },
   },
+  /**
+   * Values section component tokens
+   */
   valuesSection: {
     articleIcon: {
       _base: {
