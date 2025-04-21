@@ -2,9 +2,6 @@ import { Product } from '@e-shop/types';
 
 /**
  * Represents a single specification or attribute of a product.
- *
- * Common examples include brand, display size, battery capacity, etc.
- * These are typically shown in the product details section.
  */
 type ProductSpecification = {
   /**
