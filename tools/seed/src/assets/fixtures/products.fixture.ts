@@ -94,8 +94,7 @@ type ProductSeederAdditional = SalePrices &
   Specification;
 
 /**
- * Full product seed type combining base product data with additional
- * fields like pricing, reviews, delivery, and specifications.
+ * Full product seed type combining base product data with additional fields.
  */
 type SeederProduct = BaseSeederProduct & ProductSeederAdditional;
 
