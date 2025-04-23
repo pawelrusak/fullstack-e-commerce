@@ -5,7 +5,7 @@ import { Product } from '@e-shop/types';
  */
 type ProductSpecification = {
   /**
-   * The name of the product attribute, e.g. "Brand", "Display", "Battery".
+   * The name of the product attribute, e.g. "Brand", "Display", "Battery", "Dimensions".
    */
   label: string;
   /**
