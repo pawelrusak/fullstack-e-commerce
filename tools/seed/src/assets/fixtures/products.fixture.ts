@@ -63,7 +63,7 @@ type Delivery = {
   /**
    * An array of delivery types associated with the product.
    *
-   * Examples include "Worldwide", "EU", "Poland", etc.
+   * Examples include "Worldwide", "EU", "United Kingdom", etc.
    * Used to define where the product can be delivered.
    */
   __delivery?: string[];
