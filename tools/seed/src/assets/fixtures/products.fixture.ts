@@ -1,4 +1,4 @@
-import { Product } from '@e-shop/types';
+import { BaseSeederProduct } from '../types';
 
 /**
  * Represents a single specification or attribute of a product.
@@ -78,12 +78,6 @@ type Specification = {
    */
   __specification?: ProductSpecification[];
 };
-
-/**
- * The base product type used when seeding product data.
- * Typically this comes from the main `Product` schema.
- */
-type BaseSeederProduct = Product;
 
 /**
  * Additional product metadata used specifically for seeding purposes.
