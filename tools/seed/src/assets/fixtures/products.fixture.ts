@@ -1,23 +1,4 @@
-import { BaseSeederProduct } from '../types';
-
-/**
- * Represents a single specification or attribute of a product.
- */
-type ProductSpecification = {
-  /**
-   * The name of the product attribute, e.g. "Brand", "Display", "Battery", "Dimensions".
-   */
-  label: string;
-  /**
-   * The detailed description or value of the specification.
-   */
-  value: string;
-
-  /**
-   * If true, this specification is shown next to the product image on the detail product page.
-   */
-  highlighted: boolean;
-};
+import { BaseSeederProduct, ProductSpecification } from '../types';
 
 //  Apple
 //  Samsung
