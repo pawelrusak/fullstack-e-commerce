@@ -24,3 +24,19 @@ export type ProductSpecification = {
    */
   highlighted: boolean;
 };
+
+/**
+ * Contains pricing details for a product, including both regular
+ * and sale prices. Used to indicate discounts or promotional pricing.
+ */
+export type SalePrices = {
+  /**
+   * The original, non-discounted price of the product.
+   */
+  __regularPrice?: number;
+  /**
+   * The discounted sale price of the product, if applicable.
+   * A `null` value indicates that the product is not currently on sale.
+   */
+  __salePrice?: null | number;
+};

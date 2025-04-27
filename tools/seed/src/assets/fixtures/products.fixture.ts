@@ -1,4 +1,4 @@
-import { BaseSeederProduct, ProductSpecification } from '../types';
+import { BaseSeederProduct, ProductSpecification, SalePrices } from '../types';
 
 //  Apple
 //  Samsung
@@ -10,22 +10,6 @@ import { BaseSeederProduct, ProductSpecification } from '../types';
 //  LG
 //  Sony
 //  Toshiba
-
-/**
- * Contains pricing details for a product, including both regular
- * and sale prices. Used to indicate discounts or promotional pricing.
- */
-type SalePrices = {
-  /**
-   * The original, non-discounted price of the product.
-   */
-  __regularPrice?: number;
-  /**
-   * The discounted sale price of the product, if applicable.
-   * A `null` value indicates that the product is not currently on sale.
-   */
-  __salePrice?: null | number;
-};
 
 /**
  * Represents the number of reviews a product has received.
