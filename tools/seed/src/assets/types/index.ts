@@ -40,3 +40,16 @@ export type SalePrices = {
    */
   __salePrice?: null | number;
 };
+
+/**
+ * Defines delivery options for a product.
+ */
+export type Delivery = {
+  /**
+   * An array of delivery types associated with the product.
+   *
+   * Examples include "Worldwide", "EU", "United Kingdom", etc.
+   * Used to define where the product can be delivered.
+   */
+  __delivery?: string[];
+};

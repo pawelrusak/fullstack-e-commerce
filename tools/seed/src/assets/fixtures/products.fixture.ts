@@ -1,4 +1,9 @@
-import { BaseSeederProduct, ProductSpecification, SalePrices } from '../types';
+import {
+  BaseSeederProduct,
+  ProductSpecification,
+  SalePrices,
+  Delivery,
+} from '../types';
 
 //  Apple
 //  Samsung
@@ -19,19 +24,6 @@ type ReviewCount = {
    * The number of reviews associated with the product.
    */
   __reviewCount?: number;
-};
-
-/**
- * Defines delivery options for a product.
- */
-type Delivery = {
-  /**
-   * An array of delivery types associated with the product.
-   *
-   * Examples include "Worldwide", "EU", "United Kingdom", etc.
-   * Used to define where the product can be delivered.
-   */
-  __delivery?: string[];
 };
 
 /**
