@@ -3,6 +3,7 @@ import {
   ProductSpecification,
   SalePrices,
   Delivery,
+  ReviewCount,
 } from '../types';
 
 //  Apple
@@ -15,16 +16,6 @@ import {
 //  LG
 //  Sony
 //  Toshiba
-
-/**
- * Represents the number of reviews a product has received.
- */
-type ReviewCount = {
-  /**
-   * The number of reviews associated with the product.
-   */
-  __reviewCount?: number;
-};
 
 /**
  * Includes optional product specifications like brand, display, or battery.

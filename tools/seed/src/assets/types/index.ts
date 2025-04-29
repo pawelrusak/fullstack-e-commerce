@@ -53,3 +53,13 @@ export type Delivery = {
    */
   __delivery?: string[];
 };
+
+/**
+ * Represents the number of reviews a product has received.
+ */
+export type ReviewCount = {
+  /**
+   * The number of reviews associated with the product.
+   */
+  __reviewCount?: number;
+};
