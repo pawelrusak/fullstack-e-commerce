@@ -63,3 +63,13 @@ export type ReviewCount = {
    */
   __reviewCount?: number;
 };
+
+/**
+ * Includes optional product specifications like brand, display, or battery.
+ */
+export type Specification = {
+  /**
+   * An array of detailed product specifications.
+   */
+  __specification?: ProductSpecification[];
+};

@@ -1,9 +1,9 @@
 import {
   BaseSeederProduct,
-  ProductSpecification,
   SalePrices,
   Delivery,
   ReviewCount,
+  Specification,
 } from '../types';
 
 //  Apple
@@ -16,16 +16,6 @@ import {
 //  LG
 //  Sony
 //  Toshiba
-
-/**
- * Includes optional product specifications like brand, display, or battery.
- */
-type Specification = {
-  /**
-   * An array of detailed product specifications.
-   */
-  __specification?: ProductSpecification[];
-};
 
 /**
  * Additional product metadata used specifically for seeding purposes.
