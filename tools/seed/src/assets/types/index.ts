@@ -73,3 +73,11 @@ export type Specification = {
    */
   __specification?: ProductSpecification[];
 };
+
+/**
+ * Additional product metadata used specifically for seeding purposes.
+ */
+export type ProductSeederAdditional = SalePrices &
+  ReviewCount &
+  Delivery &
+  Specification;

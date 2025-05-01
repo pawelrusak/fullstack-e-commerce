@@ -1,10 +1,4 @@
-import {
-  BaseSeederProduct,
-  SalePrices,
-  Delivery,
-  ReviewCount,
-  Specification,
-} from '../types';
+import { BaseSeederProduct, ProductSeederAdditional } from '../types';
 
 //  Apple
 //  Samsung
@@ -16,14 +10,6 @@ import {
 //  LG
 //  Sony
 //  Toshiba
-
-/**
- * Additional product metadata used specifically for seeding purposes.
- */
-type ProductSeederAdditional = SalePrices &
-  ReviewCount &
-  Delivery &
-  Specification;
 
 /**
  * Full product seed type combining base product data with additional fields.
