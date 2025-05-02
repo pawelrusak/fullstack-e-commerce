@@ -1,4 +1,4 @@
-import { BaseSeederProduct, ProductSeederAdditional } from '../types';
+import { SeederProduct } from '../types';
 
 //  Apple
 //  Samsung
@@ -10,11 +10,6 @@ import { BaseSeederProduct, ProductSeederAdditional } from '../types';
 //  LG
 //  Sony
 //  Toshiba
-
-/**
- * Full product seed type combining base product data with additional fields.
- */
-type SeederProduct = BaseSeederProduct & ProductSeederAdditional;
 
 export default [
   {

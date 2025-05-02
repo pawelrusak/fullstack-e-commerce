@@ -81,3 +81,8 @@ export type ProductSeederAdditional = SalePrices &
   ReviewCount &
   Delivery &
   Specification;
+
+/**
+ * Full product seed type combining base product data with additional fields.
+ */
+export type SeederProduct = BaseSeederProduct & ProductSeederAdditional;
