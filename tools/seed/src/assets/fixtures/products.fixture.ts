@@ -1,4 +1,4 @@
-import { SeederProduct } from '../types';
+import type { SeederProduct } from '../types';
 
 //  Apple
 //  Samsung
