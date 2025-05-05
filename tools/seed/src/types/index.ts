@@ -14,6 +14,7 @@ export type ProductSpecification = {
    * The name of the product attribute, e.g. "Brand", "Display", "Battery", "Dimensions".
    */
   label: string;
+
   /**
    * The detailed description or value of the specification.
    */
@@ -34,6 +35,7 @@ export type SalePrices = {
    * The original, non-discounted price of the product.
    */
   __regularPrice?: number;
+
   /**
    * The discounted sale price of the product, if applicable.
    * A `null` value indicates that the product is not currently on sale.
