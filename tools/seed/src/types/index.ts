@@ -1,4 +1,4 @@
-import { Product } from '@e-shop/types';
+import { Product, Modify, SubCategory } from '@e-shop/types';
 
 /**
  * The base product type used when seeding product data.
@@ -88,3 +88,10 @@ export type ProductSeederAdditional = SalePrices &
  * Full product seed type combining base product data with additional fields.
  */
 export type SeederProduct = BaseSeederProduct & ProductSeederAdditional;
+
+export type SeederSubCategory = Modify<
+  SubCategory,
+  {
+    category: string;
+  }
+>;

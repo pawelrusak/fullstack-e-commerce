@@ -1,11 +1,4 @@
-import { SubCategory, Modify } from '@e-shop/types';
-
-type SeederSubCategory = Modify<
-  SubCategory,
-  {
-    category: string;
-  }
->;
+import { SeederSubCategory } from '../../types';
 
 export default [
   {
