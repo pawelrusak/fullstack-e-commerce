@@ -1,4 +1,4 @@
-import { SeederSubCategory } from '../../types';
+import type { SeederSubCategory } from '../../types';
 
 export default [
   {
