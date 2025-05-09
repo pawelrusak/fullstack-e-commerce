@@ -89,9 +89,11 @@ export type ProductSeederAdditional = SalePrices &
  */
 export type SeederProduct = BaseSeederProduct & ProductSeederAdditional;
 
+type CategoryId = string;
+
 export type SeederSubCategory = Modify<
   SubCategory,
   {
-    category: string;
+    category: CategoryId;
   }
 >;
