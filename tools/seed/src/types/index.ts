@@ -91,6 +91,9 @@ export type SeederProduct = BaseSeederProduct & ProductSeederAdditional;
 
 type CategoryId = string;
 
+/**
+ * Subcategory type for seeding, using a string ID for "category" instead of a full object.
+ */
 export type SeederSubCategory = Modify<
   SubCategory,
   {
