@@ -89,6 +89,11 @@ export type ProductSeederAdditional = SalePrices &
  */
 export type SeederProduct = BaseSeederProduct & ProductSeederAdditional;
 
+/**
+ * MongoDB ObjectId (as a string) that references the parent
+ * Category document. Stored as a plain string to keep the
+ * seeder types lightweight and database-agnostic.
+ */
 type CategoryId = string;
 
 /**
