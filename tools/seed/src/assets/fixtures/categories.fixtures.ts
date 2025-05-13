@@ -1,3 +1,5 @@
+import { Category } from '@e-shop/types';
+
 export default [
   {
     _id: '673292d0e7d109c007c4507c',
@@ -34,4 +36,4 @@ export default [
     name: 'Computers & Tablets',
     slug: 'computers-tablets',
   },
-];
+] satisfies Category[];
