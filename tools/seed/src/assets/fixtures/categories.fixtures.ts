@@ -1,6 +1,6 @@
 import { Category } from '@e-shop/types';
 
-type SeederSubCategory = Category;
+type SeederCategory = Category;
 
 export default [
   {
@@ -38,4 +38,4 @@ export default [
     name: 'Computers & Tablets',
     slug: 'computers-tablets',
   },
-] satisfies SeederSubCategory[];
+] satisfies SeederCategory[];
