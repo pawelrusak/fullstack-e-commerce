@@ -1,6 +1,4 @@
-import { Category } from '@e-shop/types';
-
-type SeederCategory = Category;
+import { SeederCategory } from '../../types';
 
 export default [
   {
