@@ -106,4 +106,7 @@ export type SeederSubCategory = Modify<
   }
 >;
 
+/**
+ * Category type used for product seeding.
+ */
 export type SeederCategory = Category;
