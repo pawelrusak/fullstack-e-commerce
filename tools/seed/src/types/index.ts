@@ -1,4 +1,4 @@
-import { Product, Modify, SubCategory, Category } from '@e-shop/types';
+import type { Product, Modify, SubCategory, Category } from '@e-shop/types';
 
 /**
  * The base product type used when seeding product data.
