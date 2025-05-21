@@ -41,7 +41,6 @@ export default [
     slug: 'home',
     category: '5f43ba27320000271ced105',
   },
-
   {
     _id: '5f43ba27320000271ced02',
     name: 'Audio',
