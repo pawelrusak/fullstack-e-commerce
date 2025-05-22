@@ -1,4 +1,5 @@
-import type { Product, Modify, SubCategory, Category } from '@e-shop/types';
+import type { Product, Modify, SubCategory } from '@e-shop/types';
+export { SeederCategory } from './category.types';
 
 /**
  * The base product type used when seeding product data.
@@ -105,8 +106,3 @@ export type SeederSubCategory = Modify<
     category: CategoryId;
   }
 >;
-
-/**
- * Category type used for product seeding.
- */
-export type SeederCategory = Category;
