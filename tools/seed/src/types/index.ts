@@ -1,5 +1,5 @@
 import type { Product, Modify, SubCategory } from '@e-shop/types';
-export { SeederCategory } from './category.types';
+export type { SeederCategory } from './category.types';
 
 /**
  * The base product type used when seeding product data.
