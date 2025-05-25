@@ -1,6 +1,6 @@
 import type { Product } from '@e-shop/types';
 export type { SeederCategory } from './category.types';
-export { SeederSubCategory } from './sub-category.types';
+export type { SeederSubCategory } from './sub-category.types';
 
 /**
  * The base product type used when seeding product data.
