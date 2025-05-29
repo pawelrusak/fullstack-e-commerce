@@ -22,6 +22,17 @@ export type OrderProduct = {
   productsTotalPrice: number;
 };
 
+/**
+ * Represents the possible statuses of an order in the system.
+ *
+ * - `'pending'`: Order received but not yet processed.
+ * - `'on-hold'`: Awaiting payment confirmation or manual review.
+ * - `'failed'`: Payment failed or order was declined.
+ * - `'processing'`: Payment received and order is being prepared.
+ * - `'cancelled'`: Order was cancelled by the customer or admin.
+ * - `'completed'`: Order has been fulfilled and shipped/delivered.
+ * - `'refunded'`: Payment was refunded to the customer.
+ */
 export type OrderStatus =
   | 'pending'
   | 'on-hold'
