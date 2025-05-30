@@ -64,11 +64,6 @@ export type OrderContact = Required<
   UserName & UserContactPhone & UserContactEmail
 >;
 
-/**
- * @deprecated use OrderContact instead
- */
-export type CustomerContact = OrderContact;
-
 export type PaymentMethod = 'paypal' | 'stripe' | 'cash';
 
 export type OrderCustomerNote = {
