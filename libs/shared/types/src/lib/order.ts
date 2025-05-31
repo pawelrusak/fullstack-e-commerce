@@ -64,6 +64,14 @@ export type OrderContact = Required<
   UserName & UserContactPhone & UserContactEmail
 >;
 
+/**
+ * Represents the available payment methods that a customer can choose
+ * when placing an order.
+ *
+ * - `'paypal'`: Payment processed via PayPal.
+ * - `'stripe'`: Payment processed via Stripe.
+ * - `'cash'`: Payment made with cash, typically on delivery.
+ */
 export type PaymentMethod = 'paypal' | 'stripe' | 'cash';
 
 export type OrderCustomerNote = {
