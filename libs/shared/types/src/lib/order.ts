@@ -74,6 +74,9 @@ export type OrderContact = Required<
  */
 export type PaymentMethod = 'paypal' | 'stripe' | 'cash';
 
+/**
+ * Represents an optional note provided by the customer during checkout.
+ */
 export type OrderCustomerNote = {
   customerNote?: string;
 };
