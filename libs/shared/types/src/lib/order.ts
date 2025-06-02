@@ -60,6 +60,9 @@ export const ORDER_STATUS_CODE = Object.freeze({
  */
 export type OrderStatusCode = (typeof ORDER_STATUS_CODE)[OrderStatus];
 
+/**
+ * Required customer name, phone, and email.
+ */
 export type OrderContact = Required<
   UserName & UserContactPhone & UserContactEmail
 >;
