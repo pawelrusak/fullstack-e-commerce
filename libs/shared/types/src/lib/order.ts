@@ -84,6 +84,9 @@ export type OrderCustomerNote = {
   customerNote?: string;
 };
 
+/**
+ * Represents the monetary cost of a particular {@link ShippingMethod}.
+ */
 export type OrderShippingMethodCost = ShippingMethod['cost'];
 
 export type OrderShippingMethod = {
