@@ -126,6 +126,9 @@ export type Order = Id & {
 } & OrderCustomerNote &
   Timestamp;
 
+/**
+ * A Mongoose-compatible version of {@link OrderProduct}.
+ */
 export type OrderProductSchema = Prettify<
   Modify<
     OrderProduct,
