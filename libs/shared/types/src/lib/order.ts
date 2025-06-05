@@ -138,6 +138,9 @@ export type OrderProductSchema = Prettify<
   >
 >;
 
+/**
+ * A Mongoose-compatible version of {@link OrderShippingMethod}.
+ */
 export type OrderShippingMethodSchema = Prettify<
   Modify<
     OrderShippingMethod,
