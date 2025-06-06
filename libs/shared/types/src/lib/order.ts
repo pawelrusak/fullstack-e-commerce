@@ -12,6 +12,11 @@ import type { Product } from './product';
 import type { Address, AddressSchema } from './address';
 import type { ShippingMethod } from './shipping-method';
 
+/**
+ * A snapshot of a product line in an order, including quantity and price at checkout.
+ *
+ * `productsTotalPrice` = `quantity * currentProductPrice`.
+ */
 export type OrderProduct = {
   product: Product;
   quantity: number;
