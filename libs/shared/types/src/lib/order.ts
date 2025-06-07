@@ -94,6 +94,9 @@ export type OrderCustomerNote = {
  */
 export type OrderShippingMethodCost = ShippingMethod['cost'];
 
+/**
+ * Shipping option snapshot saved with the order.
+ */
 export type OrderShippingMethod = {
   method: ShippingMethod;
   costAtTimeOfOrder: OrderShippingMethodCost;
