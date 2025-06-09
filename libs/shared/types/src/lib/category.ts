@@ -23,6 +23,9 @@ export type CategorySchema = Prettify<
   >
 >;
 
+/**
+ * A Mongoose-compatible version of {@link SubCategorySchema}.
+ */
 export type SubCategorySchema = Prettify<
   CategorySchema & {
     /**
