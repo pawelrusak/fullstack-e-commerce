@@ -14,6 +14,9 @@ export type SubCategory = Category & {
   category: Category;
 };
 
+/**
+ * A Mongoose-compatible version of {@link Category}.
+ */
 export type CategorySchema = Prettify<
   Modify<
     Category,
