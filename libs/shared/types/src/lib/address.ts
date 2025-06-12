@@ -6,4 +6,7 @@ export type Address = {
   postalCode: string;
 };
 
+/**
+ * A Mongoose-compatible version of {@link Address}.
+ */
 export type AddressSchema = Address;
