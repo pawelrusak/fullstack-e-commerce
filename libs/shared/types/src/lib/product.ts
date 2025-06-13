@@ -32,6 +32,9 @@ export type Product = Id &
     isFeatured: boolean;
   };
 
+/**
+ * A Mongoose-compatible version of {@link Product}.
+ */
 export type ProductSchema = Prettify<
   Modify<
     Product,
