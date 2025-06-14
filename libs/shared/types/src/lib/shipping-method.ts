@@ -8,6 +8,9 @@ export type ShippingMethod = Id & {
   image?: string;
 } & Timestamp;
 
+/**
+ * A Mongoose-compatible version of {@link ShippingMethod}.
+ */
 export type ShippingMethodSchema = Prettify<
   Modify<
     ShippingMethod,
