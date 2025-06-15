@@ -13,6 +13,9 @@ export type Timestamp = {
   updatedAt: string;
 };
 
+/**
+ * A Mongoose-compatible version of {@link Timestamp}.
+ */
 export type TimestampSchema = {
   createdAt: Date;
   updatedAt: Date;
