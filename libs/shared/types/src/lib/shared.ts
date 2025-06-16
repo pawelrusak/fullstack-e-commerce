@@ -4,6 +4,9 @@ export type Id = {
   _id: string;
 };
 
+/**
+ * A Mongoose-compatible version of {@link Id}.
+ */
 export type IdSchema = {
   _id: mongoose.Types.ObjectId;
 };
