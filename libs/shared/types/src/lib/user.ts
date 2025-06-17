@@ -68,6 +68,9 @@ export type User = Id &
  * ------------------------------------------------------------------------------------
  */
 
+/**
+ * A Mongoose-compatible version.
+ */
 export type UserBanStatusTimestampSchema = {
   /**
    * Date the user was banned. Mongoose-compatible
