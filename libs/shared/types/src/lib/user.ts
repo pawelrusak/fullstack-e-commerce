@@ -79,6 +79,9 @@ export type UserBanStatusSchema = UserBanStatusTimestampSchema &
   UserBanStatusFlag;
 
 // TODO: Rename to UserEntitySchema
+/**
+ * A Mongoose-compatible version of {@link User}.
+ */
 export type UserSchema = IdSchema &
   UserAccountName &
   UserName &
