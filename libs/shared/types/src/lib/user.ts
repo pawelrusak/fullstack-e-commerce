@@ -78,6 +78,9 @@ export type UserBanStatusTimestampSchema = {
   bannedAt?: Date;
 };
 
+/**
+ * A Mongoose-compatible version.
+ */
 export type UserBanStatusSchema = UserBanStatusTimestampSchema &
   UserBanStatusFlag;
 
