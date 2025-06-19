@@ -1,3 +1,6 @@
+/**
+ * Internal type for representing location address data.
+ */
 export type Address = {
   address: string;
   country: string;
