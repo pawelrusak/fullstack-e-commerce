@@ -2,6 +2,9 @@ import type { Id } from './shared';
 import type mongoose from 'mongoose';
 import type { Modify, Prettify } from './utils';
 
+/**
+ * Top-level category of products in the shop.
+ */
 export type Category = Id & {
   name: string;
   slug?: string;
