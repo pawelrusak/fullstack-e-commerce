@@ -6,6 +6,9 @@ import type { Modify, Prettify } from './utils';
  * Top-level category of products in the shop.
  */
 export type Category = Id & {
+  /**
+   * Display name, e.g. "Laptop", "Television".
+   */
   name: string;
   slug?: string;
 };
