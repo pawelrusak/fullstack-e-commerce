@@ -10,6 +10,9 @@ export type Category = Id & {
    * Display name, e.g. "Laptop", "Television".
    */
   name: string;
+  /**
+   * Optional URL-friendly identifier (auto-generated from `name` if omitted).
+   * */
   slug?: string;
 };
 
