@@ -16,6 +16,9 @@ export type Category = Id & {
   slug?: string;
 };
 
+/**
+ * Sub‑level category that belongs to a {@link Category}.
+ */
 export type SubCategory = Category & {
   /**
    * The category to which the sub-category belongs.
