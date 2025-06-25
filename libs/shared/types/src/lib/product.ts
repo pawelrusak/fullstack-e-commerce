@@ -17,6 +17,9 @@ export type Size = {
   depth: number;
 };
 
+/**
+ * Represents a single product that can be purchased in the store.
+ */
 export type Product = Id &
   Timestamp & {
     name: string;
