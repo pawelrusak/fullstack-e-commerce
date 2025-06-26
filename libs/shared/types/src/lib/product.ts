@@ -22,6 +22,9 @@ export type Size = {
  */
 export type Product = Id &
   Timestamp & {
+    /**
+     *  Human‑readable product name displayed in listings and detail pages.
+     */
     name: string;
     description: string;
     slug?: string;
