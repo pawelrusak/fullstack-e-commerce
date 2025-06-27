@@ -27,6 +27,9 @@ export type Product = Id &
      */
     name: string;
     description: string;
+    /**
+     * SEO‑friendly slug derived from the product name.
+     */
     slug?: string;
     brand: string;
     price: number;
