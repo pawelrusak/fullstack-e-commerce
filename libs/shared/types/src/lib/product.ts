@@ -26,6 +26,9 @@ export type Product = Id &
      *  Human‑readable product name displayed in listings and detail pages.
      */
     name: string;
+    /**
+     * Detailed description or marketing copy shown on the product detail page.
+     */
     description: string;
     /**
      * SEO‑friendly slug derived from the product name.
