@@ -34,6 +34,9 @@ export type Product = Id &
      * SEO‑friendly slug derived from the product name.
      */
     slug?: string;
+    /**
+     *  Brand or manufacturer of the product.
+     */
     brand: string;
     price: number;
     stock: number;
