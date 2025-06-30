@@ -39,6 +39,9 @@ export type Product = Id &
      */
     brand: string;
     price: number;
+    /**
+     * Number of units currently available for purchase.
+     */
     stock: number;
     thumbnail?: string;
     images: string[];
