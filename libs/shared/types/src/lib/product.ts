@@ -43,6 +43,9 @@ export type Product = Id &
      * Number of units currently available for purchase.
      */
     stock: number;
+    /**
+     *  URL of the primary product image.
+     */
     thumbnail?: string;
     images: string[];
     size: Size;
