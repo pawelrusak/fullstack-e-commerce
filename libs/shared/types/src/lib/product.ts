@@ -49,6 +49,9 @@ export type Product = Id &
     thumbnail?: string;
     images: string[];
     size: Size;
+    /**
+     * Leaf sub‑category that the product belongs to.
+     */
     subCategory: SubCategory;
     isFeatured: boolean;
   };
