@@ -53,6 +53,9 @@ export type Product = Id &
      * Leaf sub‑category that the product belongs to.
      */
     subCategory: SubCategory;
+    /**
+     * Indicates whether the product should be highlighted in “Featured” lists.
+     */
     isFeatured: boolean;
   };
 
