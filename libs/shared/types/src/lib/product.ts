@@ -47,6 +47,9 @@ export type Product = Id &
      *  URL of the primary product image.
      */
     thumbnail?: string;
+    /**
+     *  URLs of all images associated with the product.
+     */
     images: string[];
     size: Size;
     /**
