@@ -38,6 +38,12 @@ export type Product = Id &
      *  Brand or manufacturer of the product.
      */
     brand: string;
+    /**
+     * Unit price in the smallest currency unit (e.g., cents).
+     *
+     * @example
+     * `1999` // represents 19.99 in the storefront’s default currency
+     */
     price: number;
     /**
      * Number of units currently available for purchase.
