@@ -57,6 +57,9 @@ export type Product = Id &
      *  URLs of all images associated with the product.
      */
     images: string[];
+    /**
+     *  Physical dimensions of the product.
+     */
     size: Size;
     /**
      * Leaf sub‑category that the product belongs to.
