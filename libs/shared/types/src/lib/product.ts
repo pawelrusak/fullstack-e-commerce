@@ -7,13 +7,17 @@ import type { Modify, Prettify } from './utils';
  * Represents the physical dimensions of a product.
  */
 export type Size = {
-  /** Width of the product in appropriate units (e.g., centimeters or inches). */
+  /**
+   * Width of the product in appropriate units (e.g., centimeters or inches).
+   */
   width: number;
-
-  /** Height of the product in appropriate units. */
+  /**
+   * Height of the product in appropriate units.
+   */
   height: number;
-
-  /** Depth of the product in appropriate units. */
+  /**
+   * Depth of the product in appropriate units.
+   */
   depth: number;
 };
 
