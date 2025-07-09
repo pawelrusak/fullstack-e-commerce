@@ -86,6 +86,9 @@ export type ProductSchema = Prettify<
        * Mongoose’s ObjectId replacement for the generic {@link Id._id} field.
        */
       _id: Types.ObjectId;
+      /**
+       * Embedded sub‑category document instead of the plain `SubCategory` type.
+       */
       subCategory: Types.Subdocument<SubCategorySchema>;
       images: Types.Array<string>;
     }
