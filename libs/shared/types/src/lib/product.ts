@@ -90,6 +90,9 @@ export type ProductSchema = Prettify<
        * Embedded sub‑category document instead of the plain `SubCategory` type.
        */
       subCategory: Types.Subdocument<SubCategorySchema>;
+      /**
+       *  Mongoose array wrapper enabling atomic update operators.
+       */
       images: Types.Array<string>;
     }
   >
