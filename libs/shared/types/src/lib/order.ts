@@ -18,6 +18,9 @@ import type { ShippingMethod } from './shipping-method';
  * `productsTotalPrice` = `quantity * currentProductPrice`.
  */
 export type OrderProduct = {
+  /**
+   * The product as it existed when the customer checked out.
+   */
   product: Product;
   quantity: number;
   /**
