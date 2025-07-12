@@ -22,6 +22,9 @@ export type OrderProduct = {
    * The product as it existed when the customer checked out.
    */
   product: Product;
+  /**
+   * Number of units purchased for this line item.
+   */
   quantity: number;
   /**
    * The price of the product at the time of the order. This property will be useful when the discounted price functionality is implemented.
