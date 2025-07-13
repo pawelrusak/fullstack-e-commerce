@@ -30,6 +30,9 @@ export type OrderProduct = {
    * The price of the product at the time of the order. This property will be useful when the discounted price functionality is implemented.
    */
   currentProductPrice: number;
+  /**
+   * `quantity × currentProductPrice` at checkout time.
+   */
   productsTotalPrice: number;
 };
 
