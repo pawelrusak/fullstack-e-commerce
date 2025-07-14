@@ -111,6 +111,9 @@ export type OrderShippingMethod = {
   costAtTimeOfOrder: OrderShippingMethodCost;
 };
 
+/**
+ * Top‑level document representing a single customer order.
+ */
 export type Order = Id & {
   /**
    * This will be set when the order is created by the registered user.
