@@ -119,6 +119,9 @@ export type Order = Id & {
    * This will be set when the order is created by the registered user.
    */
   customer?: User;
+  /**
+   * Minimal contact details used for fulfilment and notifications.
+   */
   contact: OrderContact;
   products: OrderProduct[];
   status: OrderStatus;
