@@ -123,6 +123,9 @@ export type Order = Id & {
    * Minimal contact details used for fulfilment and notifications.
    */
   contact: OrderContact;
+  /**
+   * All product line items captured at checkout.
+   */
   products: OrderProduct[];
   status: OrderStatus;
   productsCount: number;
