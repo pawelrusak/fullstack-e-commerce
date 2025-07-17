@@ -127,6 +127,9 @@ export type Order = Id & {
    * All product line items captured at checkout.
    */
   products: OrderProduct[];
+  /**
+   * Current lifecycle state of the order.
+   */
   status: OrderStatus;
   productsCount: number;
   productsKindCount: number;
