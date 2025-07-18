@@ -131,6 +131,9 @@ export type Order = Id & {
    * Current lifecycle state of the order.
    */
   status: OrderStatus;
+  /**
+   *  Total number of units across **all** line items.
+   */
   productsCount: number;
   productsKindCount: number;
   statusCode: OrderStatusCode;
