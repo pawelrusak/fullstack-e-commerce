@@ -135,6 +135,9 @@ export type Order = Id & {
    *  Total number of units across **all** line items.
    */
   productsCount: number;
+  /**
+   * Number of **distinct** product lines in the order.
+   */
   productsKindCount: number;
   statusCode: OrderStatusCode;
   shippingAddress: Address;
