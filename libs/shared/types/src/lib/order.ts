@@ -139,6 +139,9 @@ export type Order = Id & {
    * Number of **distinct** product lines in the order.
    */
   productsKindCount: number;
+  /**
+   * Numeric analogue of {@link status} for efficient DB sorting.
+   */
   statusCode: OrderStatusCode;
   shippingAddress: Address;
   shippingMethod: OrderShippingMethod;
