@@ -143,6 +143,9 @@ export type Order = Id & {
    * Numeric analogue of {@link status} for efficient DB sorting.
    */
   statusCode: OrderStatusCode;
+  /**
+   * Destination address.
+   */
   shippingAddress: Address;
   shippingMethod: OrderShippingMethod;
   // TODO: Add productsTotalPrice
