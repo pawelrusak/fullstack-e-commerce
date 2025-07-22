@@ -154,6 +154,9 @@ export type Order = Id & {
    * This will be set after a successful payment and status change to "On Hold".
    */
   paymentAt?: string;
+  /**
+   * Customer or admin cancelled the order.
+   */
   cancelledAt?: string;
   refundedAt?: string;
   completedAt?: string;
