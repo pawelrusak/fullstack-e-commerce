@@ -158,6 +158,9 @@ export type Order = Id & {
    * Customer or admin cancelled the order.
    */
   cancelledAt?: string;
+  /**
+   * Payment fully refunded to customer.
+   */
   refundedAt?: string;
   completedAt?: string;
   processingAt?: string;
