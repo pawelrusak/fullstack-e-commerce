@@ -162,6 +162,9 @@ export type Order = Id & {
    * Payment fully refunded to customer.
    */
   refundedAt?: string;
+  /**
+   * Order fulfilled and delivered.
+   */
   completedAt?: string;
   processingAt?: string;
   failedAt?: string;
