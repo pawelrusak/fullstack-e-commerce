@@ -149,6 +149,9 @@ export type Order = Id & {
   shippingAddress: Address;
   shippingMethod: OrderShippingMethod;
   // TODO: Add productsTotalPrice
+  /**
+   * Grand total (shipping + products ± discounts) captured at checkout.
+   */
   totalPrice: number;
   /**
    * This will be set after a successful payment and status change to "On Hold".
