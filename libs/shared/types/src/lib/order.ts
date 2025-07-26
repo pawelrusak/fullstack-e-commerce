@@ -147,6 +147,9 @@ export type Order = Id & {
    * Destination address.
    */
   shippingAddress: Address;
+  /**
+   * Shipping option chosen at checkout.
+   */
   shippingMethod: OrderShippingMethod;
   // TODO: Add productsTotalPrice
   /**
