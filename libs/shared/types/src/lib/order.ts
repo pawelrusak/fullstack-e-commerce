@@ -172,6 +172,9 @@ export type Order = Id & {
    * Order fulfilled and delivered.
    */
   completedAt?: string;
+  /**
+   * Order is being prepared by the warehouse.
+   */
   processingAt?: string;
   failedAt?: string;
   /**
