@@ -176,6 +176,9 @@ export type Order = Id & {
    * Order is being prepared by the warehouse.
    */
   processingAt?: string;
+  /**
+   * Payment failed or was declined.
+   */
   failedAt?: string;
   /**
    * This will be set during the order creation.
