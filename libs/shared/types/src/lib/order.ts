@@ -107,6 +107,9 @@ export type OrderShippingMethodCost = ShippingMethod['cost'];
  * Shipping option snapshot saved with the order.
  */
 export type OrderShippingMethod = {
+  /**
+   * The method as configured when the order was placed.
+   */
   method: ShippingMethod;
   costAtTimeOfOrder: OrderShippingMethodCost;
 };
