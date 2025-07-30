@@ -111,6 +111,9 @@ export type OrderShippingMethod = {
    * The method as configured when the order was placed.
    */
   method: ShippingMethod;
+  /**
+   * The method’s cost at the moment of purchase.
+   */
   costAtTimeOfOrder: OrderShippingMethodCost;
 };
 
