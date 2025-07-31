@@ -190,6 +190,9 @@ export type Order = Id & {
    * This will be set during the order creation.
    */
   pendingAt?: string;
+  /**
+   * How the customer chose to pay.
+   */
   paymentMethod: PaymentMethod;
 } & OrderCustomerNote &
   Timestamp;
