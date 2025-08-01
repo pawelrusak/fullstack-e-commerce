@@ -228,6 +228,9 @@ export type OrderSchema = Prettify<
   Modify<
     Order,
     {
+      /**
+       * MongoDB internal document ID replaces generic {@link Id._id}.
+       */
       _id: Types.ObjectId;
       customer?: Types.Subdocument<UserSchema>;
       products: OrderProductSchema[];
