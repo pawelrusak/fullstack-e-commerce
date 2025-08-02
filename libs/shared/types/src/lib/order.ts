@@ -232,6 +232,9 @@ export type OrderSchema = Prettify<
        * MongoDB internal document ID replaces generic {@link Id._id}.
        */
       _id: Types.ObjectId;
+      /**
+       * Embedded snapshot of the user at order time.
+       */
       customer?: Types.Subdocument<UserSchema>;
       products: OrderProductSchema[];
       shippingAddress: AddressSchema;
