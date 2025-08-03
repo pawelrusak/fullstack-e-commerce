@@ -236,6 +236,9 @@ export type OrderSchema = Prettify<
        * Embedded snapshot of the user at order time.
        */
       customer?: Types.Subdocument<UserSchema>;
+      /**
+       * Typed array of line‑item sub‑documents.
+       */
       products: OrderProductSchema[];
       shippingAddress: AddressSchema;
       shippingMethod?: OrderShippingMethodSchema;
