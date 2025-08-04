@@ -240,6 +240,9 @@ export type OrderSchema = Prettify<
        * Typed array of line‑item sub‑documents.
        */
       products: OrderProductSchema[];
+      /**
+       * Embedded shipping address document.
+       */
       shippingAddress: AddressSchema;
       shippingMethod?: OrderShippingMethodSchema;
       paymentAt?: Date;
